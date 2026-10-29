@@ -1,0 +1,53 @@
+{
+ "id": "APD_2016_0001193125-16-773346__row0496",
+ "format": "dgml",
+ "key": "APD_2016_0001193125-16-773346",
+ "question": "considering the year 2016 , what is the short-term debt as a percent of total debt?",
+ "gold": "21%",
+ "finqa_id": "APD/2016/page_96.pdf-2",
+ "source_page": "page_96",
+ "ticker": "APD",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/dgml/APD_2016_0001193125-16-773346.dgml.xml",
+ "doc_chars": 924924,
+ "prompt_chars": 925096,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 924924,
+ "original_chars": 924924,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 222653,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 183,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "21.0%",
+ "reasoning": "We need to find short-term debt and total debt for 2016. Short-term debt likely includes short-term borrowings and current portion of long-term debt. Total debt is $6,225.2 million. Short-term borrowings = $935.8 million, current portion of long-term debt = $371.3 million. Sum = 1307.1 million. Percent = 1307.1 / 6225.2 * 100 = 21.0% approximately. Let's compute: 1307.1 / 6225.2 = 0.20997 -> 21.0%. The document also mentions \"of which $1,307.1 million (including Versum debt of $5.8 million) will mature in the next twelve months.\" That matches. So answer 21.0%.",
+ "raw_content": "<answer>21.0%</answer>",
+ "usage": {
+  "prompt_tokens": 222801,
+  "completion_tokens": 183,
+  "total_tokens": 222984,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 222720
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.08,
+ "answer_tag_found": true,
+ "docfinqa_row": 496
+}

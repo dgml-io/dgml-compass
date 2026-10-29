@@ -1,0 +1,72 @@
+{
+ "id": "CMCSA_2015_0001193125-16-452423__row0908",
+ "format": "markdown_pdf_plumber",
+ "key": "CMCSA_2015_0001193125-16-452423",
+ "question": "based on the review of the reconciliation of unrecognized tax benefits what was the change in 2014",
+ "gold": "530",
+ "finqa_id": "CMCSA/2015/page_112.pdf-3",
+ "source_page": "page_112",
+ "ticker": "CMCSA",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_plumber/CMCSA_2015_0001193125-16-452423.md",
+ "doc_chars": 544523,
+ "prompt_chars": 544710,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 544523,
+ "original_chars": 544523,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 120058,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 174,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-530",
+ "reasoning": "We need answer change in 2014 reconciliation of unrecognized tax benefits. Need find table. In Comcast Note 15: Reconciliation of Unrecognized Tax Benefits. Balance Jan 1 2014 = 1,701, Dec 31 2014 = 1,171. Change = -530. Or question \"what was the change in 2014\" likely net decrease. Need provide value. Evidence: 1,701 | Balance, January 1; 1,171 | Balance, December 31. Program subtract(1171,1701) = -530. Answer -530.",
+ "raw_content": "<evidence>1,701 | Balance, January 1\n1,171 | Balance, December 31</evidence>\n<program>subtract(1171, 1701)</program>\n<answer>-530</answer>",
+ "usage": {
+  "prompt_tokens": 120367,
+  "completion_tokens": 174,
+  "total_tokens": 120541,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.98,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,701",
+   "element": "Balance, January 1",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1,171",
+   "element": "Balance, December 31",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(1171, 1701)",
+ "answer_model": "-530",
+ "program_value": -530.0,
+ "docfinqa_row": 908
+}

@@ -1,0 +1,74 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0468",
+ "format": "markdown_pdf_rules",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "in november 2015 what was the percent of the discounts and debt issuance costs to the long-term debt november 2015 notes in millions",
+ "gold": "1.42%",
+ "finqa_id": "LMT/2015/page_99.pdf-4",
+ "source_page": "page_99",
+ "ticker": "LMT",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_rules/LMT_2015_0001193125-16-476010.md",
+ "doc_chars": 501601,
+ "prompt_chars": 501822,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 501601,
+ "original_chars": 501601,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 108718,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 545,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "142.8571%",
+ "reasoning": "We need answer: \"in november 2015 what was the percent of the discounts and debt issuance costs to the long-term debt november 2015 notes in millions\". Need parse. The November 2015 Notes issued $7.0 billion, net proceeds $6.9 billion, so discounts and debt issuance costs = $0.1 billion = $100 million. Percent of discounts and debt issuance costs to the long-term debt (principal) = 100/7000 = 1.428571...%. Question asks \"what was the percent ... in millions\" maybe percent. Need compute. Evidence: \"On November 23, 2015, we issued $7.0 billion of notes ... received net proceeds of $6.9 billion ... after deducting discounts and debt issuance costs\". So costs = 7.0 - 6.9 = 0.1 billion = 100 million. Percent = 100/7000*100 = 1.4286%. Need answer inside tags. Also evidence list figures. Use program divide(100, 7000) maybe multiply by 100? The program should compute percent. Use divide(100, 7000) gives 0.0142857, but percent is 1.4286. Better program multiply(divide(100, 7000), 100). But figures as printed: $7.0 billion and $6.9 billion. Need use those. Costs = subtract(7.0, 6.9) = 0.1 billion. Percent = divide(0.1, 7.0)*100 = 1.4286. But question says \"in millions\" maybe costs in millions = 100. Use evidence: \"7.0 billion\" and \"6.9 billion\". Program: multiply(divide(subtract(7.0, 6.9), 7.0), 100). Answer 1.428571...%. Provide final answer with value only? \"1.43%\" maybe. The instruction: final answer inside <answer> tags containing only the value itself with no explanation or units unless question asks. Question asks percent, so include %? It says no units unless asks. It asks percent, so include % sign. I'll put 1.43%.",
+ "raw_content": "<evidence>\n7.0 billion | November 2015 Notes issued\n6.9 billion | net proceeds from November 2015 Notes\n</evidence>\n<program>multiply(divide(subtract(7.0, 6.9), 7.0), 100)</program>\n<answer>1.43%</answer>",
+ "usage": {
+  "prompt_tokens": 109034,
+  "completion_tokens": 545,
+  "total_tokens": 109579,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.26,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "7.0 billion",
+   "element": "November 2015 Notes issued",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "6.9 billion",
+   "element": "net proceeds from November 2015 Notes",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(subtract(7.0, 6.9), 7.0), 100)",
+ "answer_model": "1.43%",
+ "program_value": 1.4285714285714235,
+ "docfinqa_row": 468
+}

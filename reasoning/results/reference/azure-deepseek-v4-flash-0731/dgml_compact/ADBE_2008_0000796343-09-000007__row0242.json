@@ -1,0 +1,50 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0242",
+ "format": "dgml_compact",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "is the weighted average useful life ( years ) for purchased technology greater than localization?",
+ "gold": "yes",
+ "finqa_id": "ADBE/2008/page_74.pdf-2",
+ "source_page": "page_74",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml_compact/ADBE_2008_0000796343-09-000007.dgml.txt",
+ "doc_chars": 545889,
+ "prompt_chars": 546075,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 545889,
+ "original_chars": 545889,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 114389,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 217,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "Yes",
+ "reasoning": "The question asks: \"is the weighted average useful life (years) for purchased technology greater than localization?\"\n\nFrom the document, in the \"Intangible Assets Policy\" section:\n\"Intangible assets are amortized over their estimated useful lives of 1 to 13 years as shown in the table below. Amortization is based on the pattern in which the economic benefits of the intangible asset will be consumed.\ntable:\nIntangibleAssetUsefulLife: Weighted Average Useful Life (Years)\nIntangibleAssetUsefulLife: Purchased technology | 4\nIntangibleAssetUsefulLife: Localization | 1\n...\"\n\nSo purchased technology weighted average useful life = 4 years, localization = 1 year. 4 > 1, so yes.\n\nThe question asks \"is the weighted average useful life (years) for purchased technology greater than localization?\" Answer: yes.\n\nThe final answer should be inside <answer> tags, containing only the value itself. The question is a yes/no question, so answer \"Yes\".",
+ "raw_content": "<answer>Yes</answer>",
+ "usage": {
+  "prompt_tokens": 114533,
+  "completion_tokens": 217,
+  "total_tokens": 114750,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.89,
+ "answer_tag_found": true,
+ "docfinqa_row": 242
+}

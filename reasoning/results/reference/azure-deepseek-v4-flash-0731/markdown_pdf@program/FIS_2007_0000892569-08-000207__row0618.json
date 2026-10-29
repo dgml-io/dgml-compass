@@ -1,0 +1,72 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0618",
+ "format": "markdown_pdf",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what percentage of total future minimum operating lease payments for leases with remaining terms greater than one year are due in 2010?",
+ "gold": "14%",
+ "finqa_id": "FIS/2007/page_94.pdf-4",
+ "source_page": "page_94",
+ "ticker": "FIS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf/FIS_2007_0000892569-08-000207.md",
+ "doc_chars": 370864,
+ "prompt_chars": 371088,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 370864,
+ "original_chars": 370864,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 86409,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 184,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "14.1621%",
+ "reasoning": "We need percentage of total future minimum operating lease payments due in 2010. From note 16 Leases: future minimum operating lease payments: 2008 83,382; 2009 63,060; 2010 35,269; 2011 21,598; 2012 14,860; Thereafter 30,869; Total 249,038. All in thousands. Percentage = 35,269 / 249,038 * 100. Compute: 35269/249038 = 0.14162... = 14.16%. Need answer. Evidence: values.",
+ "raw_content": "<evidence>\n35,269 | Future minimum operating lease payments 2010\n249,038 | Future minimum operating lease payments Total\n</evidence>\n\n<program>divide(35269, 249038)</program>\n\n<answer>14.16%</answer>",
+ "usage": {
+  "prompt_tokens": 86721,
+  "completion_tokens": 184,
+  "total_tokens": 86905,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 86272
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.49,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "35,269",
+   "element": "Future minimum operating lease payments 2010",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "249,038",
+   "element": "Future minimum operating lease payments Total",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(35269, 249038)",
+ "answer_model": "14.16%",
+ "program_value": 0.14162095744424547,
+ "docfinqa_row": 618
+}

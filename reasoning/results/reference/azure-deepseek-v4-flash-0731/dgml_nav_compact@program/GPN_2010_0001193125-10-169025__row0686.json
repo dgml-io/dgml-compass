@@ -1,0 +1,84 @@
+{
+ "id": "GPN_2010_0001193125-10-169025__row0686",
+ "key": "GPN_2010_0001193125-10-169025",
+ "question": "what is the percentage change in the after-tax share-based compensation cost from 2009 to 2010?",
+ "gold": "25.5%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "GPN_2010_0001193125-10-169025.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/EquityCompensationExpense",
+  "/chunk/EquityCompensationExpense/table"
+ ],
+ "r1_reasoning_chars": 2875,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 22309,
+  "completion_tokens": 744,
+  "total_tokens": 23053,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/EquityCompensationExpense",
+  "/chunk/EquityCompensationExpense/table"
+ ],
+ "content_chars": 47806,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "25.531915",
+ "reasoning": "We need percentage change in after-tax share-based compensation cost from 2009 to 2010. The table gives share-based compensation cost and income tax benefit. After-tax cost = cost - tax benefit. For 2010: 18.1 - 6.3 = 11.8. For 2009: 14.6 - 5.2 = 9.4. Percentage change = (11.8 - 9.4)/9.4 * 100 = 2.4/9.4 = 0.255319... = 25.53%. Need compute. Figures: $18.1, $6.3, $14.6, $5.2. Use subtract and divide. Program: divide(subtract(subtract(18.1, 6.3), subtract(14.6, 5.2)), subtract(14.6, 5.2)) * 100? But program should output percentage? The question asks percentage change. Usually answer as number like 25.53. We can compute multiply by 100. But program can include multiply. Let's do: multiply(divide(subtract(subtract(18.1, 6.3), subtract(14.6, 5.2)), subtract(14.6, 5.2)), 100). Need evidence.",
+ "raw_content": "<evidence>\n$18.1 | EquityCompensationExpense: Share-based compensation cost (2010)\n$6.3 | IncomeTaxBenefitShareBased: Income tax benefit (2010)\n$14.6 | EquityCompensationExpense: Share-based compensation cost (2009)\n$5.2 | IncomeTaxBenefitShareBased: Income tax benefit (2009)\n</evidence>\n<program>\nmultiply(divide(subtract(subtract(18.1, 6.3), subtract(14.6, 5.2)), subtract(14.6, 5.2)), 100)\n</program>\n<answer>25.53</answer>",
+ "r2_usage": {
+  "prompt_tokens": 12398,
+  "completion_tokens": 428,
+  "total_tokens": 12826,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$18.1",
+   "element": "EquityCompensationExpense: Share-based compensation cost (2010)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$6.3",
+   "element": "IncomeTaxBenefitShareBased: Income tax benefit (2010)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$14.6",
+   "element": "EquityCompensationExpense: Share-based compensation cost (2009)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$5.2",
+   "element": "IncomeTaxBenefitShareBased: Income tax benefit (2009)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(subtract(18.1, 6.3), subtract(14.6, 5.2)), subtract(14.6, 5.2)), 100)",
+ "answer_model": "25.53",
+ "program_value": 25.531914893617046,
+ "elapsed_s": 7.49,
+ "outline_source": "GPN_2010_0001193125-10-169025.outline.txt",
+ "outline_chars": 88725
+}

@@ -1,0 +1,73 @@
+{
+ "id": "CMCSA_2015_0001193125-16-452423__row0908",
+ "format": "markdown_pdf",
+ "key": "CMCSA_2015_0001193125-16-452423",
+ "question": "based on the review of the reconciliation of unrecognized tax benefits what was the change in 2014",
+ "gold": "530",
+ "finqa_id": "CMCSA/2015/page_112.pdf-3",
+ "source_page": "page_112",
+ "ticker": "CMCSA",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf/CMCSA_2015_0001193125-16-452423.md",
+ "doc_chars": 580377,
+ "prompt_chars": 580564,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 580377,
+ "original_chars": 580377,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 134778,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 259,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-530",
+ "reasoning": "We need answer question: \"based on the review of the reconciliation of unrecognized tax benefits what was the change in 2014\". Need find reconciliation of unrecognized tax benefits. In Comcast notes Note 15 Income Taxes, there is \"Reconciliation of Unrecognized Tax Benefits\" table with Balance Jan 1, additions, reductions, settlements, Balance Dec 31. For 2014: Balance Jan 1 $1,701, Balance Dec 31 $1,171. Change = 1,171 - 1,701 = -530. Or maybe \"change\" means net decrease. Need provide value. The question: \"what was the change in 2014\" likely the change in unrecognized tax benefits during 2014. So answer -530 (or decrease of 530). Need evidence: figures 1,701 and 1,171 from table. Program subtract(1171,1701) = -530. Final answer inside <answer>-530</answer>.",
+ "raw_content": "<evidence>\n1,701 | Balance, January 1 (2014)\n1,171 | Balance, December 31 (2014)\n</evidence>\n<program>subtract(1171, 1701)</program>\n<answer>-530</answer>",
+ "usage": {
+  "prompt_tokens": 135086,
+  "completion_tokens": 259,
+  "total_tokens": 135345,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 12.94,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,701",
+   "element": "Balance, January 1 (2014)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1,171",
+   "element": "Balance, December 31 (2014)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "subtract(1171, 1701)",
+ "answer_model": "-530",
+ "program_value": -530.0,
+ "docfinqa_row": 908
+}

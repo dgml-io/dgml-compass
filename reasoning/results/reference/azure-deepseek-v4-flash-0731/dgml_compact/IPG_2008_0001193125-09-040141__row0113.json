@@ -1,0 +1,50 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0113",
+ "format": "dgml_compact",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "what is the change in the balance of liability for all restructuring from 2006 to 2008 , ( in millions ) ?",
+ "gold": "-19",
+ "finqa_id": "IPG/2008/page_62.pdf-2",
+ "source_page": "page_62",
+ "ticker": "IPG",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml_compact/IPG_2008_0001193125-09-040141.dgml.txt",
+ "doc_chars": 458082,
+ "prompt_chars": 458277,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 458082,
+ "original_chars": 458082,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 105374,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 274,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-19.0",
+ "reasoning": "The question asks for the change in the balance of liability for all restructuring from 2006 to 2008, in millions.\n\nFrom the document, in Note 2: Restructuring and Other Reorganization-Related Charges, there is a table \"A summary of the remaining liability for the 2007, 2003 and 2001 restructuring programs is as follows:\"\n\nThe table shows:\nLiability at December 31, 2006: $31.8 (Total)\nLiability at December 31, 2007: $29.6 (Total)\nLiability at December 31, 2008: $12.8 (Total)\n\nSo the change from 2006 to 2008 is 12.8 - 31.8 = -19.0.\n\nThe question asks for the change, so it's -19.0 million. Or perhaps they want the absolute change? The question says \"change in the balance of liability for all restructuring from 2006 to 2008\". Usually change means final - initial, so -19.0. But maybe they want the decrease amount? Let me just provide -19.0 or 19.0? The question says \"in millions\" so I'll provide the number. I'll say -19.0.",
+ "raw_content": "<answer>-19.0</answer>",
+ "usage": {
+  "prompt_tokens": 105528,
+  "completion_tokens": 274,
+  "total_tokens": 105802,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.89,
+ "answer_tag_found": true,
+ "docfinqa_row": 113
+}

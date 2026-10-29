@@ -1,0 +1,74 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0379",
+ "format": "dgml",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "in 2004 what was the ratio of the snap-on incorporated to the peer group perfomance",
+ "gold": "0.86",
+ "finqa_id": "SNA/2007/page_29.pdf-1",
+ "source_page": "page_29",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml/SNA_2007_0001104659-08-011401.dgml.xml",
+ "doc_chars": 646204,
+ "prompt_chars": 646376,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 646204,
+ "original_chars": 646204,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 157120,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 128,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.857237",
+ "reasoning": "We need answer ratio of Snap-on to peer group performance in 2004. From total shareholder return table: December 31, 2004 Snap-on 130.66, Peer Group 152.42. Ratio = 130.66/152.42. Compute.",
+ "raw_content": "<evidence>130.66 | TotalShareholderReturnRecord December 31, 2004 Snap-on Incorporated\n152.42 | TotalShareholderReturnRecord December 31, 2004 Peer Group</evidence>\n<program>divide(130.66, 152.42)</program>\n<answer>0.8572</answer>",
+ "usage": {
+  "prompt_tokens": 157428,
+  "completion_tokens": 128,
+  "total_tokens": 157556,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 157184
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.85,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "130.66",
+   "element": "TotalShareholderReturnRecord December 31, 2004 Snap-on Incorporated",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "152.42",
+   "element": "TotalShareholderReturnRecord December 31, 2004 Peer Group",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(130.66, 152.42)",
+ "answer_model": "0.8572",
+ "program_value": 0.8572365831255742,
+ "docfinqa_row": 379
+}

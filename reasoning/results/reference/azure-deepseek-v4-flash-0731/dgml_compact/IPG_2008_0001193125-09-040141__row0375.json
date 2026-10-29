@@ -1,0 +1,53 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0375",
+ "format": "dgml_compact",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "what is the total percentage decrease in future contingent acquisition obligations payable in cash from 2009-2013?",
+ "gold": "1.56%",
+ "finqa_id": "IPG/2008/page_93.pdf-3",
+ "source_page": "page_93",
+ "ticker": "IPG",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml_compact/IPG_2008_0001193125-09-040141.dgml.txt",
+ "doc_chars": 458082,
+ "prompt_chars": 458285,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 458082,
+ "original_chars": 458082,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 105374,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 542,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "4.29%",
+ "reasoning": "We need to find the total percentage decrease in future contingent acquisition obligations payable in cash from 2009-2013. The table in Note 16 shows contingent acquisition payments for 2009, 2010, 2011, 2012, 2013, Thereafter, Total. The question asks for the total percentage decrease from 2009 to 2013. That is, compare the 2009 amount to the 2013 amount. The table shows: 2009: 79.3, 2010: 66.4, 2011: 103.7, 2012: 75.3, 2013: 75.9. So from 2009 to 2013, the amount goes from 79.3 to 75.9. The percentage decrease = (79.3 - 75.9)/79.3 * 100 = 3.4/79.3 ≈ 4.2875%. But the question says \"total percentage decrease in future contingent acquisition obligations payable in cash from 2009-2013\". That could mean the total decrease over that period, i.e., from the first year to the last year. Alternatively, it might mean the cumulative decrease? But \"total percentage decrease\" likely means the percentage change from 2009 to 2013. Let's compute: (79.3 - 75.9)/79.3 = 3.4/79.3 = 0.042875... = 4.29% approximately. But we should check if the question expects a specific number. The document gives exact numbers. Let's compute precisely: 3.4/79.3 = 0.042875... = 4.2875%. So answer: 4.29% or 4.3%? The question asks for the total percentage decrease. We'll provide the value. However, note that the table also has a \"Total\" row, but that includes Thereafter. The question specifically says \"from 2009-2013\", so we compare 2009 and 2013. So answer: 4.29% (or 4.3%). We'll put the number without units? The question asks for the percentage, so we can put 4.29% or 4.3%. Let's compute exactly: 3.4/79.3 = 0.042875... = 4.2875%. So we can put 4.29% or 4.3%. I'll put 4.29%.",
+ "raw_content": "<answer>4.29%</answer>",
+ "usage": {
+  "prompt_tokens": 105524,
+  "completion_tokens": 542,
+  "total_tokens": 106066,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 105472
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.23,
+ "answer_tag_found": true,
+ "docfinqa_row": 375
+}

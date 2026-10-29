@@ -1,0 +1,72 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0480",
+ "format": "markdown_pdf",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what percentage of the total cash purchase price net of cash acquired was represented by goodwill?",
+ "gold": "81%",
+ "finqa_id": "EW/2016/page_79.pdf-1",
+ "source_page": "page_79",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf/EW_2016_0001099800-17-000008.md",
+ "doc_chars": 319199,
+ "prompt_chars": 319386,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 319199,
+ "original_chars": 319199,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 73274,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 164,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "80.880975",
+ "reasoning": "We need to find total cash purchase price net of cash acquired and goodwill from CardiAQ acquisition. In Note 7, table: Goodwill 258.9, Total cash purchase price net of cash acquired $320.1. So percentage = 258.9/320.1 * 100. Compute: 258.9/320.1 = 0.8088... ~80.9%. Use exact figures.",
+ "raw_content": "<evidence>\n258.9 | Goodwill (Note 7 CardiAQ acquisition table)\n320.1 | Total cash purchase price, net of cash acquired (Note 7 CardiAQ acquisition table)\n</evidence>\n<program>multiply(divide(258.9, 320.1), 100)</program>\n<answer>80.9%</answer>",
+ "usage": {
+  "prompt_tokens": 73578,
+  "completion_tokens": 164,
+  "total_tokens": 73742,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 73472
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 1.79,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "258.9",
+   "element": "Goodwill (Note 7 CardiAQ acquisition table)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "320.1",
+   "element": "Total cash purchase price, net of cash acquired (Note 7 CardiAQ acquisition table)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(258.9, 320.1), 100)",
+ "answer_model": "80.9%",
+ "program_value": 80.88097469540767,
+ "docfinqa_row": 480
+}

@@ -1,0 +1,72 @@
+{
+ "id": "MRO_2009_0001193125-10-042898__row0516",
+ "format": "markdown_pdf_rules",
+ "key": "MRO_2009_0001193125-10-042898",
+ "question": "by what percentage did the average wti crude oil benchmark decrease from 2007 to 2009?",
+ "gold": "-14.3%",
+ "finqa_id": "MRO/2009/page_56.pdf-1",
+ "source_page": "page_56",
+ "ticker": "MRO",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/markdown_pdf_rules/MRO_2009_0001193125-10-042898.md",
+ "doc_chars": 527380,
+ "prompt_chars": 527555,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 527380,
+ "original_chars": 527380,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 119001,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 341,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "14.252175",
+ "reasoning": "We need answer percentage decrease average WTI crude oil benchmark from 2007 to 2009. Document gives WTI crude oil benchmark: 2009 $62.09, 2008 $99.75, 2007 $72.41. Need percentage decrease from 2007 to 2009: (72.41 - 62.09)/72.41 *100 = 10.32/72.41 = 0.1425... = 14.25%. Compute precisely: 10.32/72.41 = 0.14252... 14.25%. Need answer. Evidence: WTI crude oil (Dollars per barrel) 2009 $62.09, 2007 $72.41. Program: divide(subtract(72.41, 62.09), 72.41) gives 0.1425... but question asks percentage, so multiply by 100? Program should output value? The benchmark executes program, so need final answer as percentage. Use multiply(divide(subtract(72.41, 62.09), 72.41), 100) = 14.25... Provide answer with maybe 14.25%.",
+ "raw_content": "<evidence>\n$62.09 | WTI crude oil (Dollars per barrel) 2009\n$72.41 | WTI crude oil (Dollars per barrel) 2007\n</evidence>\n<program>\nmultiply(divide(subtract(72.41, 62.09), 72.41), 100)\n</program>\n<answer>14.25%</answer>",
+ "usage": {
+  "prompt_tokens": 119309,
+  "completion_tokens": 341,
+  "total_tokens": 119650,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 119040
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.32,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$62.09",
+   "element": "WTI crude oil (Dollars per barrel) 2009",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$72.41",
+   "element": "WTI crude oil (Dollars per barrel) 2007",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(72.41, 62.09), 72.41), 100)",
+ "answer_model": "14.25%",
+ "program_value": 14.252175113934532,
+ "docfinqa_row": 516
+}

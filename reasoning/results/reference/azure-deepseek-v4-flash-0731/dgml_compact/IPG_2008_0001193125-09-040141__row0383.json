@@ -1,0 +1,53 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0383",
+ "format": "dgml_compact",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "what portion of the total estimated future contingent acquisition obligation is due in the 12 months?",
+ "gold": "19.3%",
+ "finqa_id": "IPG/2008/page_93.pdf-1",
+ "source_page": "page_93",
+ "ticker": "IPG",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml_compact/IPG_2008_0001193125-09-040141.dgml.txt",
+ "doc_chars": 458082,
+ "prompt_chars": 458272,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 458082,
+ "original_chars": 458082,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 105374,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 343,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "19.7%",
+ "reasoning": "We need to find the total estimated future contingent acquisition obligations and the portion due in the 12 months (i.e., 2009). From the document, in Note 16: Commitments and Contingencies, there is a table \"Contingent acquisition payments\" with years 2009, 2010, 2011, 2012, 2013, Thereafter, Total. The total is $402.8 million. The 2009 amount is $79.3 million. So the portion due in the 12 months is $79.3 / $402.8 = 0.1969... or about 19.7%. The question asks \"what portion\" - likely a percentage. We can compute: 79.3 / 402.8 = 0.1969... = 19.69%. Alternatively, they might want the fraction. The answer should be a value. The question says \"what portion of the total estimated future contingent acquisition obligation is due in the 12 months?\" So we can give the percentage. Let's compute precisely: 79.3 / 402.8 = 0.19687... = 19.687%. Round to maybe 19.7%. But the answer should be just the value. The instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what portion\" - so we can give a percentage. I'll give 19.7% or 0.197. I'll give 19.7%.",
+ "raw_content": "<answer>19.7%</answer>",
+ "usage": {
+  "prompt_tokens": 105520,
+  "completion_tokens": 343,
+  "total_tokens": 105863,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 105472
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.24,
+ "answer_tag_found": true,
+ "docfinqa_row": 383
+}

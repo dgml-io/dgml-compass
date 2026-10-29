@@ -1,0 +1,45 @@
+[project]
+name = "dgml-compass-reasoning"
+version = "1.0.0"
+description = "Can a model's answer be traced back to the figure it used? DGML vs markdown converted from the same PDFs, on 233 DocFinQA questions over 30 SEC filings."
+readme = "README.md"
+requires-python = ">=3.12"
+# Scoring and the renderings are pure standard library. The tokenizer packages count prompt tokens
+# with the model's own tokenizer, as the recorded runs did. The converters that build the markdown
+# renderings are pinned in scripts/build_renderings.sh and run there with `uv run --with`: two of
+# them need different PyMuPDF versions, so they cannot share this environment.
+dependencies = [
+    "tokenizers",
+    "huggingface_hub",
+]
+
+[project.optional-dependencies]
+litellm = ["litellm>=1.40"]
+
+[project.scripts]
+dgr = "dgml_reasoning.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "ruff>=0.8",
+]
+
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dgml_reasoning"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 130
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E4", "E9", "F"]
+ignore = ["E402"]

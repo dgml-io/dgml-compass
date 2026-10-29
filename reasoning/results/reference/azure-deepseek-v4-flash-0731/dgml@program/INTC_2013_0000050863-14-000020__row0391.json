@@ -1,0 +1,76 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0391",
+ "format": "dgml",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "of the square feet in the us what was the percent of the owned facility of the us total",
+ "gold": "92.8%",
+ "finqa_id": "INTC/2013/page_29.pdf-4",
+ "source_page": "page_29",
+ "ticker": "INTC",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/dgml/INTC_2013_0000050863-14-000020.dgml.xml",
+ "doc_chars": 868384,
+ "prompt_chars": 868560,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 868384,
+ "original_chars": 868384,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 202403,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 345,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "92.857143",
+ "reasoning": "We need answer question: \"of the square feet in the us what was the percent of the owned facility of the us total\". From properties table: Owned facilities US 29.9, Leased US 2.3, Total US 32.2. Percent owned of US total = 29.9 / 32.2 * 100. Compute: 29.9/32.2 = 0.92857... = 92.857%. So answer 92.9% maybe. Need evidence figures. Use values as printed: 29.9, 32.2. Program divide(29.9, 32.2) maybe multiply by 100? The question asks percent, so answer should be percentage value. Program: multiply(divide(29.9, 32.2), 100). But instructions: \"Give final answer inside <answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what was the percent\" so answer numeric percent. We'll output 92.9 maybe. Let's compute exactly: 29.9/32.2 = 0.9285714286, *100 = 92.85714286. Round to one decimal 92.9%. Evidence: 29.9 | Owned facilities US, 32.2 | Total facilities US.",
+ "raw_content": "<evidence>\n29.9 | Owned facilities United States\n32.2 | Total facilities United States\n</evidence>\n<program>multiply(divide(29.9, 32.2), 100)</program>\n<answer>92.9</answer>",
+ "usage": {
+  "prompt_tokens": 202710,
+  "completion_tokens": 345,
+  "total_tokens": 203055,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 15.28,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "29.9",
+   "element": "Owned facilities United States",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "32.2",
+   "element": "Total facilities United States",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(29.9, 32.2), 100)",
+ "answer_model": "92.9",
+ "program_value": 92.85714285714285,
+ "docfinqa_row": 391
+}

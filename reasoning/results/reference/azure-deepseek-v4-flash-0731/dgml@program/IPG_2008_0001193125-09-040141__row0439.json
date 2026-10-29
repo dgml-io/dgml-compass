@@ -1,0 +1,88 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0439",
+ "format": "dgml",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "how much more , in percent , was spent on october shares than november shares?",
+ "gold": "1229%",
+ "finqa_id": "IPG/2008/page_21.pdf-1",
+ "source_page": "page_21",
+ "ticker": "IPG",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml/IPG_2008_0001193125-09-040141.dgml.xml",
+ "doc_chars": 742193,
+ "prompt_chars": 742360,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 742193,
+ "original_chars": 742193,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 181438,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 917,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1129.089713",
+ "reasoning": "We need answer question: \"how much more, in percent, was spent on october shares than november shares?\" Need find October and November share purchases. In document, ShareRepurchaseActivity table: October 1-31: Total Number of Shares Purchased 29,704, Average Price Paid per Share $5.99. November: 4,468 shares, $3.24. \"spent\" means total cost = shares * price. October spent = 29,704 * 5.99. November spent = 4,468 * 3.24. How much more in percent? Percent more = (Oct - Nov)/Nov * 100. Compute.\n\nOctober: 29,704 * 5.99 = 29,704*6 - 29,704*0.01 = 178,224 - 297.04 = 177,926.96.\nNovember: 4,468 * 3.24 = 4,468*3 + 4,468*0.24 = 13,404 + 1,072.32 = 14,476.32.\nDifference = 177,926.96 - 14,476.32 = 163,450.64.\nPercent more = 163,450.64 / 14,476.32 * 100 = ? 14,476.32 * 11 = 159,239.52, remainder 4,211.12, /14,476.32 = 0.2909, so 11.2909? Actually 163,450.64 / 14,476.32 = 11.2909. Times 100 = 1129.09%. So about 1129.1%.\n\nNeed evidence: figures as printed: 29,704 | ShareRepurchaseVolume October; $5.99 | SharePurchasePrice October; 4,468 | ShareRepurchaseVolume November; $3.24 | SharePurchasePrice November. Program: multiply(29704, 5.99), multiply(4468, 3.24), then divide(subtract(...), ...) *100? Program should be exact. Use divide(subtract(multiply(29704,5.99), multiply(4468,3.24)), multiply(4468,3.24)) then multiply by 100? The program can be multiply(divide(...), 100). But the answer should be percent value. We'll provide program.\n\nNeed final answer inside <answer> tags only value. Probably 1129.1% or 1129.09%. Let's compute precisely: 29704*5.99 = 29704*599/100 = (29704*599)/100. 29704*600=17,822,400 minus 29,704 = 17,792,696 /100 = 177,926.96. 4468*3.24 = 4468*324/100 = (4468*324)/100. 4468*300=1,340,400; *24=107,232; sum=1,447,632/100=14,476.32. Difference=163,450.64. Divide by 14,476.32 = 11.2909... multiply 100 = 1129.09%. Let's compute more: 14,476.32 * 11.29 = 14,476.32*11 + 14,476.32*0.29 = 159,239.52 + 4,198.13 = 163,437.65, remainder 12.99, /14,476.32=0.000897, so 11.290897. So 1129.09%. Answer 1129.09% (or 1129.1%). We'll put 1129.09%.\n\nNeed evidence lines.",
+ "raw_content": "<evidence>\n29,704 | ShareRepurchaseVolume October\n$ 5.99 | SharePurchasePrice October\n4,468 | ShareRepurchaseVolume November\n$ 3.24 | SharePurchasePrice November\n</evidence>\n<program>multiply(divide(subtract(multiply(29704, 5.99), multiply(4468, 3.24)), multiply(4468, 3.24)), 100)</program>\n<answer>1129.09%</answer>",
+ "usage": {
+  "prompt_tokens": 181742,
+  "completion_tokens": 917,
+  "total_tokens": 182659,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 181504
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.49,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "29,704",
+   "element": "ShareRepurchaseVolume October",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$ 5.99",
+   "element": "SharePurchasePrice October",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "4,468",
+   "element": "ShareRepurchaseVolume November",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$ 3.24",
+   "element": "SharePurchasePrice November",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(multiply(29704, 5.99), multiply(4468, 3.24)), multiply(4468, 3.24)), 100)",
+ "answer_model": "1129.09%",
+ "program_value": 1129.089713407827,
+ "docfinqa_row": 439
+}

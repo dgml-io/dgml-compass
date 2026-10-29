@@ -1,0 +1,50 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0074",
+ "format": "markdown_pdf_plumber",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what portion of the adjusted consolidated cash flow for the twelve months ended december 31 , 2005 is related to tower cash flow?",
+ "gold": "105.0%",
+ "finqa_id": "AMT/2005/page_54.pdf-2",
+ "source_page": "page_54",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/markdown_pdf_plumber/AMT_2005_0001193125-06-054224.md",
+ "doc_chars": 493545,
+ "prompt_chars": 493763,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 493545,
+ "original_chars": 493545,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 121512,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 634,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.9868",
+ "reasoning": "We need to find adjusted consolidated cash flow and tower cash flow for twelve months ended Dec 31, 2005. From the document, in \"Information Presented Pursuant to the Indentures...\" section, we have:\n\nTower Cash Flow, for the three months ended December 31, 2005 $139,590\nConsolidated Cash Flow, for the twelve months ended December 31, 2005 $498,266\nLess: Tower Cash Flow, for the twelve months ended December 31, 2005 (524,804)\nPlus: four times Tower Cash Flow, for the three months ended December 31, 2005 558,360\nAdjusted Consolidated Cash Flow, for the twelve months ended December 31, 2005 $531,822\nNon-Tower Cash Flow, for the twelve months ended December 31, 2005 $(30,584)\n\nSo adjusted consolidated cash flow = 531,822. Tower cash flow for twelve months is 524,804. The question: \"what portion of the adjusted consolidated cash flow for the twelve months ended december 31 , 2005 is related to tower cash flow?\" That is the ratio of tower cash flow to adjusted consolidated cash flow. So 524,804 / 531,822 = approximately 0.9868 or 98.68%. But the question might be asking for the portion, i.e., the fraction or percentage. We'll compute: 524804/531822 = 0.9868. So answer as a percentage? The question says \"what portion\" - could be a fraction. Usually they want a number. We'll give the ratio as a decimal or percentage. Since the document gives numbers in thousands, we can compute exactly. Let's compute: 524804 / 531822 = 0.9868... Let's do precise: 531822 - 524804 = 7018, so ratio = 1 - 7018/531822 = 1 - 0.0132 = 0.9868. So about 98.68%. We'll put that in the answer. The instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So we can put 0.9868 or 98.68%? The question asks \"what portion\" - typically a fraction. I'll put 0.9868. But to be safe, maybe they want the ratio as a decimal. I'll put 0.9868. Alternatively, they might want the percentage. I'll put 98.68%? The instruction says no units unless asked. The question doesn't specify units. I'll put the decimal. Let's see if there is any other interpretation. The adjusted consolidated cash flow is 531,822, and tower cash flow is 524,804. So portion = 524,804/531,822 = 0.9868. I'll put that.",
+ "raw_content": "<answer>0.9868</answer>",
+ "usage": {
+  "prompt_tokens": 121668,
+  "completion_tokens": 634,
+  "total_tokens": 122302,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.75,
+ "answer_tag_found": true,
+ "docfinqa_row": 74
+}

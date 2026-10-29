@@ -1,0 +1,60 @@
+{
+  "counts": {
+    "single_docset": 1,
+    "too_few_docsets": 2
+  },
+  "min_docsets": 3,
+  "n_comparable": 1,
+  "n_incomparable": 2,
+  "results": [
+    {
+      "codes": [
+        "too_few_docsets"
+      ],
+      "comparable": false,
+      "detail": {
+        "n_docsets": "2 < 3"
+      },
+      "key": {
+        "config_tier": "haiku",
+        "doc_type": "form",
+        "model": "anthropic/claude-haiku-4-5",
+        "schema_tier": "none",
+        "shape": "form",
+        "unit": "docset"
+      }
+    },
+    {
+      "codes": [
+        "single_docset",
+        "too_few_docsets"
+      ],
+      "comparable": false,
+      "detail": {
+        "n_docsets": "1 < 3"
+      },
+      "key": {
+        "config_tier": "haiku",
+        "doc_type": "hybrid_composite",
+        "model": "anthropic/claude-haiku-4-5",
+        "schema_tier": "none",
+        "shape": "hybrid_composite",
+        "unit": "docset"
+      }
+    },
+    {
+      "codes": [],
+      "comparable": true,
+      "detail": {},
+      "key": {
+        "config_tier": "haiku",
+        "doc_type": "prose_narrative",
+        "model": "anthropic/claude-haiku-4-5",
+        "schema_tier": "none",
+        "shape": "prose_narrative",
+        "unit": "docset"
+      }
+    }
+  ],
+  "run_id": "20260925-200000-transcr3"
+}

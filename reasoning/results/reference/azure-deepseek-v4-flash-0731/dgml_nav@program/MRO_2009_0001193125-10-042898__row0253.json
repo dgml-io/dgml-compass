@@ -1,0 +1,61 @@
+{
+ "id": "MRO_2009_0001193125-10-042898__row0253",
+ "key": "MRO_2009_0001193125-10-042898",
+ "question": "what was highest net rental expense in millions?",
+ "gold": "267",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "MRO_2009_0001193125-10-042898.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/NoteReferenceNumber/Leases/table/NetRentalExpense"
+ ],
+ "r1_reasoning_chars": 1625,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 38617,
+  "completion_tokens": 422,
+  "total_tokens": 39039,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/NoteReferenceNumber/Leases/table/NetRentalExpense"
+ ],
+ "content_chars": 2657,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "267",
+ "reasoning": "We need answer highest net rental expense in millions. Table shows net rental expense: 257, 267, 242 for 2009, 2008, 2007. Highest is 267. Need evidence and program.",
+ "raw_content": "<evidence>\n$ 267 | NetRentalExpense/RentalExpenseAmount (2008)\n</evidence>\n<program>267</program>\n<answer>267</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1099,
+  "completion_tokens": 87,
+  "total_tokens": 1186,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 267",
+   "element": "NetRentalExpense/RentalExpenseAmount (2008)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "267",
+ "answer_model": "267",
+ "program_value": 267.0,
+ "elapsed_s": 5.01,
+ "outline_source": "MRO_2009_0001193125-10-042898.outline.txt",
+ "outline_chars": 149285
+}

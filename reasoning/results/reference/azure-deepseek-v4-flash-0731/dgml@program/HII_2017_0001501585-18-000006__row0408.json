@@ -1,0 +1,67 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0408",
+ "format": "dgml",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what portion of the equity compensation plan approved by security holders remains available for future issuance?",
+ "gold": "90.1%",
+ "finqa_id": "HII/2017/page_124.pdf-2",
+ "source_page": "page_124",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/dgml/HII_2017_0001501585-18-000006.dgml.xml",
+ "doc_chars": 733855,
+ "prompt_chars": 734056,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 733855,
+ "original_chars": 733855,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 164566,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 445,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "4087587",
+ "reasoning": "We need answer portion of equity compensation plan approved by security holders remains available for future issuance. Need find table in Item 12. It shows equity compensation plans approved by security holders: Number of securities to be issued upon exercise of outstanding options, warrants and rights = 448,859; weighted-average exercise price $0.00; Number of securities remaining available for future issuance = 4,087,587. Question \"what portion ... remains available for future issuance?\" Could be asking fraction? \"portion\" maybe number of shares? Or percentage? Need interpret. It asks \"what portion of the equity compensation plan approved by security holders remains available for future issuance?\" The table gives number remaining available for future issuance under equity compensation plans approved by security holders: 4,087,587. But \"portion\" might mean fraction of total authorized? Need see if there is total authorized? The plan authorized 3.4 million new shares plus carryover, and as of Dec 31, 2017 remaining aggregate number authorized for issuance under 2012 Plan was 4.1 million. But the question likely from table: \"Number of Securities Remaining Available for Future Issuance Under Equity Compensation Plans (Excluding Securities Reflected in Column (a))\" for approved plans = 4,087,587. So answer is 4,087,587 shares. But \"portion\" could be percentage? Let's read question: \"what portion of the equity compensation plan approved by security holders remains available for future issuance?\" It might ask for the number, not percentage. The table has column (c) \"Number of Securities Remaining Available for Future Issuance Under Equity Compensation Plans (Excluding Securities Reflected in Column (a))\" for approved plans = 4,087,587. So answer 4,087,587. Need provide evidence and program. Evidence: 4,087,587 | EquityPlanSharesAvailable (in table). Program: 4087587. Final answer inside tags.",
+ "raw_content": "<evidence>\n4,087,587 | EquityPlanSharesAvailable\n</evidence>\n<program>4087587</program>\n<answer>4,087,587</answer>",
+ "usage": {
+  "prompt_tokens": 164870,
+  "completion_tokens": 445,
+  "total_tokens": 165315,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 26.01,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "4,087,587",
+   "element": "EquityPlanSharesAvailable",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "4087587",
+ "answer_model": "4,087,587",
+ "program_value": 4087587.0,
+ "docfinqa_row": 408
+}

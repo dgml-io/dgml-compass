@@ -1,0 +1,64 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0273",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what was the return on total assets during 2014?",
+ "gold": "5.4%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "HII_2017_0001501585-18-000006.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/Financial/table/TotalAssetsAmount",
+  "/chunk/SegmentInformationDisclosure/SegmentFinancialInformation/table/TotalAssets",
+  "/chunk/SegmentInformationDisclosure/SegmentFinancialInformation/table/TotalAssets/TotalAssetsAmount"
+ ],
+ "r1_reasoning_chars": 0,
+ "r1_retried": true,
+ "r1_usage": {
+  "prompt_tokens": 22174,
+  "completion_tokens": 20,
+  "total_tokens": 22194,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 22016
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/Financial/table/TotalAssetsAmount",
+  "/chunk/SegmentInformationDisclosure/SegmentFinancialInformation/table/TotalAssets",
+  "/chunk/SegmentInformationDisclosure/SegmentFinancialInformation/table/TotalAssets/TotalAssetsAmount"
+ ],
+ "content_chars": 3701,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer: return on total assets during 2014. Need find net income and total assets for 2014. Document excerpts given include balance sheet for 2017/2016, segment assets for 2017/2016/2015. No 2014 data. Also no income statement. So NOT_FOUND.",
+ "raw_content": "<evidence></evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1361,
+  "completion_tokens": 93,
+  "total_tokens": 1454,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 93.63,
+ "outline_source": "HII_2017_0001501585-18-000006.outline.txt",
+ "outline_chars": 86768
+}

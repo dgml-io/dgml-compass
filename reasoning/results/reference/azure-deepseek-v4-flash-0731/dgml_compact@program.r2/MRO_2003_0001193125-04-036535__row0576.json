@@ -1,0 +1,78 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0576",
+ "format": "dgml_compact",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "what were total asphalt sales in millions for the three year period?",
+ "gold": "227",
+ "finqa_id": "MRO/2003/page_45.pdf-1",
+ "source_page": "page_45",
+ "ticker": "MRO",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/dgml_compact/MRO_2003_0001193125-04-036535.dgml.txt",
+ "doc_chars": 625257,
+ "prompt_chars": 625414,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 625257,
+ "original_chars": 625257,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 138745,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1185,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "82.855",
+ "reasoning": "We need answer total asphalt sales in millions for three year period. Need find asphalt sales volumes? The question: \"total asphalt sales in millions for the three year period?\" Likely from refined product sales table: Asphalt sales volumes in thousands barrels per day for 2003, 2002, 2001? But \"in millions\" maybe dollars? Need interpret. Document has \"Refined Product Sales\" table with Asphalt volumes: 74, 75, 78 (thousands of barrels per day). Also \"Refined Product Yields\" has Asphalt 72,72,76. But question says \"total asphalt sales in millions\" - maybe sales revenue? There is no explicit asphalt sales dollars. Could be asking total asphalt sales volumes in millions of barrels? Need compute from daily volumes over years? Let's examine.\n\nQuestion: \"what were total asphalt sales in millions for the three year period?\" Likely from table \"Refined Product Sales\" with Asphalt row: 74, 75, 78 (thousands of barrels per day). To get total sales in millions of barrels for three years, sum daily volumes * 365 days / 1000? But \"in millions\" maybe barrels. Need compute: 2003 74,000 bpd *365 = 27,010,000 barrels = 27.01 million. 2002 75,000*365=27.375 million. 2001 78,000*365=28.47 million. Sum = 82.855 million barrels. But question says \"in millions\" without units. Could be \"total asphalt sales in millions\" meaning dollars? There is no dollar figure. Maybe they want total asphalt sales volumes in millions of barrels? Let's see if any table gives asphalt sales in dollars? No.\n\nAlternatively, \"total asphalt sales in millions\" could refer to \"Refined Product Sales\" table where values are thousands of barrels per day. Sum of 74+75+78 = 227 thousand barrels per day? But \"for the three year period\" suggests sum over years. Need convert to millions of barrels? The table header says \"(Thousands of Barrels per Day)\" so each year's value is daily rate. To get total for period, multiply by days. But question says \"in millions\" maybe they expect sum of daily rates? No, \"total asphalt sales in millions\" likely in barrels. Let's compute carefully.\n\nNeed evidence: values from table: Asphalt | 74 | 75 | 78. Also maybe \"Refined Product Sales\" table. Use those.\n\nCompute: 74*365 = 27,010 (thousand barrels? Actually 74 thousand bpd * 365 days = 27,010 thousand barrels = 27.01 million barrels). Similarly 75*365=27,375 thousand = 27.375 million. 78*365=28,470 thousand = 28.47 million. Sum = 82.855 million barrels. But maybe use 365 days per year. Could also use 365.25? Usually 365. The question says \"in millions\" so answer 82.855.\n\nBut check if there is any other \"asphalt sales\" in dollars? In MD&A, \"MAP markets asphalt...\" no dollar. So likely volume.\n\nLet's confirm table: In \"Refined Product Sales\" table: Asphalt | 74 | 75 | 78. Yes.\n\nThus answer 82.855. Need provide evidence and program.\n\nEvidence: 74 | RefinedProductSalesVolume (Asphalt row) ; 75 | RefinedProductSalesVolume ; 78 | RefinedProductSalesVolume. Program: add(multiply(74,365), multiply(75,365), multiply(78,365))? But program syntax only add(a,b) with two args? The instruction says nested calls over figures as printed, using add(a,b), subtract, multiply, divide, exp. So can do add(add(multiply(74,365), multiply(75,365)), multiply(78,365)). But figures as printed are 74, 75, 78. Multiply by 365. Then sum. Result in thousands of barrels? Actually 74*365 = 27,010 thousand barrels? Wait 74 is thousands of barrels per day. So 74 * 365 = 27,010 thousand barrels = 27.01 million barrels. So the program result is in thousand barrels? Let's compute: 74*365 = 27,010 (thousand barrels). To get millions, divide by 1000. So need divide by 1000. But question asks \"in millions\" so answer 82.855. Program: divide(add(add(multiply(74,365), multiply(75,365)), multiply(78,365)), 1000). That yields 82.855.\n\nBut maybe they want sum of daily rates? No.\n\nLet's produce final answer with <answer>82.855</answer>. But ensure no units. The question says \"in millions\" so answer numeric.\n\nLet's write evidence lines with values and element names. The element names in document: RefinedProductSalesVolume for each row. Use \"RefinedProductSalesVolume\" as element. Also maybe \"Asphalt\" row label. We'll cite.\n\nFinal answer.",
+ "raw_content": "<evidence>74 | RefinedProductSalesVolume (Asphalt row)\n75 | RefinedProductSalesVolume (Asphalt row)\n78 | RefinedProductSalesVolume (Asphalt row)</evidence>\n<program>divide(add(add(multiply(74,365), multiply(75,365)), multiply(78,365)), 1000)</program>\n<answer>82.855</answer>",
+ "usage": {
+  "prompt_tokens": 139045,
+  "completion_tokens": 1185,
+  "total_tokens": 140230,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 14.75,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "74",
+   "element": "RefinedProductSalesVolume (Asphalt row)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "75",
+   "element": "RefinedProductSalesVolume (Asphalt row)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "78",
+   "element": "RefinedProductSalesVolume (Asphalt row)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(add(multiply(74,365), multiply(75,365)), multiply(78,365)), 1000)",
+ "answer_model": "82.855",
+ "program_value": 82.855,
+ "docfinqa_row": 576
+}

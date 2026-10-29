@@ -1,0 +1,74 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0507",
+ "format": "dgml",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what is the percentage change in the balance of the minority interests in consolidated subsidiaries from 2006 to 2007?",
+ "gold": "3.0%",
+ "finqa_id": "SNA/2007/page_69.pdf-2",
+ "source_page": "page_69",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml/SNA_2007_0001104659-08-011401.dgml.xml",
+ "doc_chars": 646204,
+ "prompt_chars": 646411,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 646204,
+ "original_chars": 646204,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 157120,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 229,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "2.97619",
+ "reasoning": "We need percentage change in balance of minority interests in consolidated subsidiaries from 2006 to 2007. The document says: \"Minority interests in consolidated subsidiaries of $17.3 million as of December 29, 2007, and $16.8 million as of December 30, 2006, are included in 'Other long-term liabilities'...\" So balance 2006 = 16.8, 2007 = 17.3. Percentage change = (17.3 - 16.8)/16.8 * 100 = 0.5/16.8 = 0.0297619... = 2.97619%. So answer ~2.98%. Need evidence and program.",
+ "raw_content": "<evidence>\n$17.3 million | Minority interests in consolidated subsidiaries (Note 1)\n$16.8 million | Minority interests in consolidated subsidiaries (Note 1)\n</evidence>\n<program>multiply(divide(subtract(17.3, 16.8), 16.8), 100)</program>\n<answer>2.98%</answer>",
+ "usage": {
+  "prompt_tokens": 157431,
+  "completion_tokens": 229,
+  "total_tokens": 157660,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 13.62,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$17.3 million",
+   "element": "Minority interests in consolidated subsidiaries (Note 1)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$16.8 million",
+   "element": "Minority interests in consolidated subsidiaries (Note 1)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(17.3, 16.8), 16.8), 100)",
+ "answer_model": "2.98%",
+ "program_value": 2.976190476190476,
+ "docfinqa_row": 507
+}

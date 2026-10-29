@@ -1,0 +1,50 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0475",
+ "format": "dgml",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what is the net change in the total investment from 2010 to 2011?",
+ "gold": "17720",
+ "finqa_id": "ADI/2011/page_81.pdf-2",
+ "source_page": "page_81",
+ "ticker": "ADI",
+ "fiscal_year": "2011",
+ "source_file": "data/docs/dgml/ADI_2011_0000950123-11-099928.dgml.xml",
+ "doc_chars": 682519,
+ "prompt_chars": 682673,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 682519,
+ "original_chars": 682519,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 156936,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 668,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "904.7",
+ "reasoning": "The question asks: \"what is the net change in the total investment from 2010 to 2011?\"\n\nI need to find \"total investment\" figures. The document mentions \"cash and cash equivalents and short-term investments\" as principal source of liquidity. Let me look for total investment.\n\nIn the balance sheet, there are \"Cash and cash equivalents\" and \"Short-term investments\". Also \"Other investments\". But \"total investment\" might refer to cash + short-term investments.\n\nFrom the balance sheet:\n2011: Cash and cash equivalents = $1,405,100; Short-term investments = $2,187,362. Total = $3,592,462.\n2010: Cash and cash equivalents = $1,070,000; Short-term investments = $1,617,768. Total = $2,687,768.\n\nNet change = 3,592,462 - 2,687,768 = 904,694 (in thousands).\n\nBut wait, the document says \"At October 29, 2011, our principal source of liquidity was $3,592.5 million of cash and cash equivalents and short-term investments.\" So total investment = $3,592.5 million in 2011.\n\nFor 2010, the same figure? The document says \"As of October 29, 2011, approximately $1,170.5 million of our cash and cash equivalents and short-term investments was held in the United States...\" but doesn't give 2010 total.\n\nActually, let me check the balance sheet: 2010 cash = 1,070,000, short-term = 1,617,768, total = 2,687,768.\n\nNet change = 3,592,462 - 2,687,768 = 904,694 thousand = $904.7 million.\n\nAlternatively, maybe \"total investment\" refers to something else. Let me check if there's a line item \"Total investments\". The balance sheet has \"Other investments\" but that's small.\n\nActually, the question might be about \"total investment\" as in cash + short-term investments. The net change is $904.7 million.\n\nLet me compute precisely: 1,405,100 + 2,187,362 = 3,592,462. 1,070,000 + 1,617,768 = 2,687,768. Difference = 904,694 (thousands) = $904.694 million.\n\nThe document states \"These factors contributed to the net increase in cash and cash equivalents of $335.1 million in fiscal 2011.\" But that's just cash, not total investments.\n\nSo the answer is $904.7 million (or 904,694 thousand). I'll provide the value in millions: 904.7.\n\nActually, let me be careful. The question says \"total investment\". Could it be \"total assets\"? No, that's different.\n\nI'll go with cash + short-term investments. Net change = 904,694 thousand = $904.7 million.\n\nFinal answer: 904.7 (in millions) or 904,694 (in thousands). I'll put 904.7.",
+ "raw_content": "<answer>904.7</answer>",
+ "usage": {
+  "prompt_tokens": 157082,
+  "completion_tokens": 668,
+  "total_tokens": 157750,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.8,
+ "answer_tag_found": true,
+ "docfinqa_row": 475
+}

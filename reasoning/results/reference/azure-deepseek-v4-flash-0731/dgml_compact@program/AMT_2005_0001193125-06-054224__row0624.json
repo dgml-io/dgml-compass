@@ -1,0 +1,72 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0624",
+ "format": "dgml_compact",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "in 2005 what was the percentage of the federal nol set to expire between 2016 to 2020",
+ "gold": "18.4%",
+ "finqa_id": "AMT/2005/page_105.pdf-1",
+ "source_page": "page_105",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/dgml_compact/AMT_2005_0001193125-06-054224.dgml.txt",
+ "doc_chars": 570128,
+ "prompt_chars": 570302,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 570128,
+ "original_chars": 570128,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 127365,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 910,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "18.432929",
+ "reasoning": "We need to find the federal NOL expirations. In the document, under Income Taxes note 13, there is a table \"Net operating loss carryforwards expire as follows (in thousands):\" with Federal and State columns. For 2016 to 2020, Federal is $397,691. Total Federal is $2,157,503. So percentage = 397,691 / 2,157,503 * 100. Compute.\n\n397,691 / 2,157,503 ≈ 0.1843... = 18.43%. Let's compute precisely: 2,157,503 * 0.18 = 388,350.54, remainder 9,340.46, /2,157,503 ≈ 0.00433, so 0.18433 = 18.433%. So about 18.4%.\n\nWe need to cite figures: 397,691 and 2,157,503. The element names? The table is in \"NetOperatingLossExpiration\" rows. We'll cite as \"397,691 | NetOperatingLossExpiration: 2016 to 2020 Federal\" and \"2,157,503 | NetOperatingLossExpirationTotal: Total Federal\". But the document shows the table with rows \"2016 to 2020 | 397,691 | 777,707\" and total \"Total | $ 2,157,503 | $ 2,418,012\". So we can cite.\n\nCompute: divide(397691, 2157503) = 0.18433... multiply by 100? The question asks percentage, so we can output 18.4% or 18.43%. The answer should be a number, likely percentage. We'll output 18.4% or 18.43%. Let's compute exactly: 397691 / 2157503 = 0.184329... so 18.4329%. Round to one decimal? The question doesn't specify. We'll give 18.4% or 18.43%. I'll give 18.4% as a reasonable rounding. But to be precise, we can give 18.43%. The benchmark likely expects a numeric value. I'll output 18.4% or 18.43? Let's compute more precisely: 2157503 * 0.1843 = 397, 2157503*0.18=388350.54, difference 9340.46, /2157503=0.00433, so 0.18433. So 18.433%. I'll output 18.4% or 18.43%. I'll output 18.4% as a percentage. But the instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what was the percentage\", so we can include % sign? Usually they want numeric value. I'll output 18.4% or 18.43. I'll output 18.4% but to be safe, I'll output 18.43%? Let's see typical benchmark expects a number like 18.4. I'll output 18.4.\n\nBut we need to provide evidence and program. Let's do that.\n\nEvidence:\n397,691 | NetOperatingLossExpiration: 2016 to 2020 Federal\n2,157,503 | NetOperatingLossExpirationTotal: Total Federal\n\nProgram: multiply(divide(397691, 2157503), 100) = 18.4329... So program: multiply(divide(397691, 2157503), 100)\n\nAnswer: 18.4 (or 18.43). I'll put 18.4% inside answer? The instruction says \"containing only the value itself\" - so I'll put 18.4. But if they want percentage, they might accept 18.4. I'll put 18.4.\n\nLet's finalize.",
+ "raw_content": "<evidence>\n397,691 | NetOperatingLossExpiration: 2016 to 2020 Federal\n2,157,503 | NetOperatingLossExpirationTotal: Total Federal\n</evidence>\n\n<program>\nmultiply(divide(397691, 2157503), 100)\n</program>\n\n<answer>18.4</answer>",
+ "usage": {
+  "prompt_tokens": 127677,
+  "completion_tokens": 910,
+  "total_tokens": 128587,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 127488
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.03,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "397,691",
+   "element": "NetOperatingLossExpiration: 2016 to 2020 Federal",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "2,157,503",
+   "element": "NetOperatingLossExpirationTotal: Total Federal",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(397691, 2157503), 100)",
+ "answer_model": "18.4",
+ "program_value": 18.432929177850507,
+ "docfinqa_row": 624
+}

@@ -1,0 +1,53 @@
+{
+ "id": "CMCSA_2015_0001193125-16-452423__row0908",
+ "format": "dgml_compact",
+ "key": "CMCSA_2015_0001193125-16-452423",
+ "question": "based on the review of the reconciliation of unrecognized tax benefits what was the change in 2014",
+ "gold": "530",
+ "finqa_id": "CMCSA/2015/page_112.pdf-3",
+ "source_page": "page_112",
+ "ticker": "CMCSA",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml_compact/CMCSA_2015_0001193125-16-452423.dgml.txt",
+ "doc_chars": 713665,
+ "prompt_chars": 713852,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 713665,
+ "original_chars": 713665,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 152405,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 632,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-530",
+ "reasoning": "We need to find the reconciliation of unrecognized tax benefits. In the document, under Note 15: Income Taxes, there is a table \"Reconciliation of Unrecognized Tax Benefits\" with columns 2015, 2014, 2013. The question asks: \"based on the review of the reconciliation of unrecognized tax benefits what was the change in 2014\". That likely means the net change in unrecognized tax benefits during 2014. The table shows balance at beginning and end. For 2014, beginning balance (January 1, 2014) is $1,171 million? Actually the table shows: Balance, January 1 | $1,171 | $1,701 | $1,573. So for 2014, beginning is $1,701? Wait, the columns are 2015, 2014, 2013. So for 2014, beginning balance is $1,701? Let's read: The table header: (in millions) | 2015 | 2014 | 2013. Then rows: Balance, January 1 | $1,171 | $1,701 | $1,573. So for 2014, beginning is $1,701. Then additions and reductions, ending balance December 31 is $1,171? Actually the last row: Balance, December 31 | $1,136 | $1,171 | $1,701. So for 2014, ending is $1,171. So change in 2014 = ending - beginning = 1,171 - 1,701 = -530 million. But the question says \"what was the change in 2014\" - could be net change. Alternatively, they might ask for the change in the balance, which is -530. But let's verify: The table shows for 2014: beginning 1,701, ending 1,171, so decrease of 530. However, the question might be asking for the change in the unrecognized tax benefits during 2014, which is the net change. So answer: -530 (or decrease of 530). But we need to provide just the value. The question says \"what was the change in 2014\" - likely the net change. So we can put -530 or 530 decrease. Since they ask for the change, we can give -530. But let's check if there is any other interpretation. The reconciliation shows additions and reductions, but the net change is simply ending minus beginning. So answer: -530. However, the document also mentions that in 2014 they reduced accruals by $759 million, but that is a different thing. The reconciliation table is the one to use. So final answer: -530. But we need to be careful: The table shows for 2014: Balance, January 1 = $1,701, Balance, December 31 = $1,171. So change = -530. So answer: -530.",
+ "raw_content": "<answer>-530</answer>",
+ "usage": {
+  "prompt_tokens": 152554,
+  "completion_tokens": 632,
+  "total_tokens": 153186,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 152320
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.32,
+ "answer_tag_found": true,
+ "docfinqa_row": 908
+}

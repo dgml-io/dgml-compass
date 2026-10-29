@@ -1,0 +1,53 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0312",
+ "format": "dgml_compact",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what portion of the future minimum lease payments are due in the next 12 months?",
+ "gold": "19.4%",
+ "finqa_id": "GPN/2013/page_92.pdf-3",
+ "source_page": "page_92",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/dgml_compact/GPN_2013_0001123360-13-000025.dgml.txt",
+ "doc_chars": 440691,
+ "prompt_chars": 440860,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 440691,
+ "original_chars": 440691,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93128,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 276,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "11057",
+ "reasoning": "We need to find future minimum lease payments and the portion due in next 12 months. In Note 15, there is a table: Future minimum lease payments for all non-cancelable operating leases at May 31, 2013: 2014 $11,057, 2015 $8,985, etc. Total $57,096. The next 12 months is fiscal 2014, which is $11,057. The question asks \"what portion of the future minimum lease payments are due in the next 12 months?\" That is $11,057 thousand. But the question might want a fraction or percentage? It says \"what portion\" - could be the amount. The document gives the amount. So answer: 11057 (in thousands). But the question doesn't specify units. The table is in thousands. So answer $11,057 thousand. But the instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So we should output the number. Probably 11057. But check if they want a percentage? The phrase \"what portion\" could be interpreted as fraction. But the document directly gives the amount due in 2014. So answer is 11057.",
+ "raw_content": "<answer>11057</answer>",
+ "usage": {
+  "prompt_tokens": 93273,
+  "completion_tokens": 276,
+  "total_tokens": 93549,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 93184
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.42,
+ "answer_tag_found": true,
+ "docfinqa_row": 312
+}

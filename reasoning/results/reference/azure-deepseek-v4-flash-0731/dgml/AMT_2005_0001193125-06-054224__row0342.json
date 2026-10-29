@@ -1,0 +1,50 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0342",
+ "format": "dgml",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what percentage of long-term financing was classified as current at the end of 2005?",
+ "gold": "4%",
+ "finqa_id": "AMT/2005/page_85.pdf-2",
+ "source_page": "page_85",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/dgml/AMT_2005_0001193125-06-054224.dgml.xml",
+ "doc_chars": 790211,
+ "prompt_chars": 790384,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 790211,
+ "original_chars": 790211,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 189615,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 134,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "4.49%",
+ "reasoning": "We need to find the percentage of long-term financing classified as current at end of 2005. From balance sheet: Current portion of long-term obligations = $162,153 thousand. Long-term obligations (including current portion) = $3,613,429 thousand (from note 7 total). Or from balance sheet: current portion 162,153, long-term 3,451,276, total 3,613,429. Percentage = 162,153 / 3,613,429 = 0.04488... = 4.49%. So answer 4.49%.",
+ "raw_content": "<answer>4.49%</answer>",
+ "usage": {
+  "prompt_tokens": 189761,
+  "completion_tokens": 134,
+  "total_tokens": 189895,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 13.52,
+ "answer_tag_found": true,
+ "docfinqa_row": 342
+}

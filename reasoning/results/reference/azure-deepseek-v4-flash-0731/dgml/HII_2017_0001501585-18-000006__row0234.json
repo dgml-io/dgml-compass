@@ -1,0 +1,50 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0234",
+ "format": "dgml",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what was the return on total assets during 2013?",
+ "gold": "4.2%",
+ "finqa_id": "HII/2017/page_47.pdf-1",
+ "source_page": "page_47",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/dgml/HII_2017_0001501585-18-000006.dgml.xml",
+ "doc_chars": 733855,
+ "prompt_chars": 733992,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 733855,
+ "original_chars": 733855,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 164566,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 239,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "4.22%",
+ "reasoning": "We need return on total assets during 2013. ROA = Net earnings / Total assets. For 2013, from selected financial data: Net earnings 2013 = $261 million. Total assets 2013 = $6,190 million. ROA = 261/6190 = 0.04216... = 4.22%. But careful: return on total assets might use average total assets? Usually ROA = net income / average total assets. But question says \"return on total assets during 2013\" - could be net income / total assets at end of year. The document gives total assets for each year. We can compute using end-of-year total assets. Alternatively average of beginning and end? We have 2012 total assets? Not given. So use end-of-year. 261/6190 = 0.04216 = 4.22%. Answer as percentage? The question asks \"what was the return on total assets during 2013?\" So provide value. Probably 4.2% or 0.042. We'll give 4.22%.",
+ "raw_content": "<answer>4.22%</answer>",
+ "usage": {
+  "prompt_tokens": 164706,
+  "completion_tokens": 239,
+  "total_tokens": 164945,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 12.72,
+ "answer_tag_found": true,
+ "docfinqa_row": 234
+}

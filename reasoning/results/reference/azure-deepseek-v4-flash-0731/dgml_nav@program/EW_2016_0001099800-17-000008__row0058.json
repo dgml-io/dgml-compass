@@ -1,0 +1,57 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0058",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what percentage of the total cash purchase price net of cash acquired was represented by ipr&d?",
+ "gold": "59%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "EW_2016_0001099800-17-000008.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/SpecialCharges/AcquiredInProcessResearchDevelopmentCharge",
+  "/chunk/SpecialCharges/AcquiredInProcessResearchDevelopmentCharge/AcquiredInProcessResearchDevelopmentCharge",
+  "/chunk/SpecialCharges/AcquiredInProcessResearchDevelopmentCharge/AcquiredInProcessResearchDevelopmentCharge/AcquiredInProcessResearchDevelopmentAmount"
+ ],
+ "r1_reasoning_chars": 0,
+ "r1_retried": true,
+ "r1_usage": {
+  "prompt_tokens": 17174,
+  "completion_tokens": 20,
+  "total_tokens": 17194,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/SpecialCharges/AcquiredInProcessResearchDevelopmentCharge",
+  "/chunk/SpecialCharges/AcquiredInProcessResearchDevelopmentCharge/AcquiredInProcessResearchDevelopmentCharge",
+  "/chunk/SpecialCharges/AcquiredInProcessResearchDevelopmentCharge/AcquiredInProcessResearchDevelopmentCharge/AcquiredInProcessResearchDevelopmentAmount"
+ ],
+ "content_chars": 10451,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer percentage of total cash purchase price net of cash acquired represented by IPR&D. Need find total cash purchase price net of cash acquired. Document excerpts only special charges, no cash purchase price. Maybe not enough. Need check if any mention. The question likely from 10-K, IPR&D charges vs purchase price. But excerpts don't include purchase price. So NOT_FOUND. But let's be careful: maybe \"total cash purchase price net of cash acquired\" appears elsewhere not in excerpt. We only have given excerpts. No such figure. So answer NOT_FOUND.",
+ "raw_content": "<evidence>No figure for total cash purchase price net of cash acquired found in the provided excerpts.</evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2603,
+  "completion_tokens": 161,
+  "total_tokens": 2764,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 44.54,
+ "outline_source": "EW_2016_0001099800-17-000008.outline.txt",
+ "outline_chars": 67317
+}

@@ -1,0 +1,72 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0312",
+ "format": "markdown_pdf_rules",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what portion of the future minimum lease payments are due in the next 12 months?",
+ "gold": "19.4%",
+ "finqa_id": "GPN/2013/page_92.pdf-3",
+ "source_page": "page_92",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/markdown_pdf_rules/GPN_2013_0001123360-13-000025.md",
+ "doc_chars": 352179,
+ "prompt_chars": 352348,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 352179,
+ "original_chars": 352179,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 76901,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1463,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.193656",
+ "reasoning": "We need to find future minimum lease payments and the portion due in next 12 months. In Note 15, future minimum lease payments for all non-cancelable operating leases at May 31, 2013: 2014 $11,057, 2015 $8,985, etc. Total future minimum lease payments $57,096. The next 12 months is fiscal 2014, which is $11,057. The question asks \"what portion\" - likely fraction or percentage. Portion = 11,057 / 57,096. Compute. 11057/57096 ≈ 0.1937, about 19.4%. Or maybe they want the amount? \"what portion\" could be the amount due in next 12 months. But \"portion\" suggests fraction. Let's compute exactly. 11057/57096 = 0.19365... So answer as percentage? The question: \"what portion of the future minimum lease payments are due in the next 12 months?\" Could be fraction. We'll provide the fraction or percentage. The instruction: \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what portion\" - likely a fraction or percentage. We'll give the decimal or percentage. Let's compute: 11057/57096 = 0.19365... Multiply by 100 = 19.365%. We'll give 0.1937 or 19.4%? The benchmark expects exact value? They said \"The program is executed by the benchmark, so it must be exact.\" So we need to provide the exact fraction? The program will compute. We need to list evidence and program. The program should be divide(11057, 57096). The answer will be the result. So we put that in <answer> as the computed value? The instruction: \"Give your final answer inside <answer></answer> tags, containing only the value itself\" - so we put the numeric result. We'll compute: 11057/57096 = 0.19365... Let's do exact division: 11057/57096 = 0.19365... We'll put 0.19365? But they want exact? The program will compute, so the answer should be the result of the program. We'll put the decimal. But maybe they want percentage? The question says \"portion\" - could be fraction. We'll put the decimal. Let's check if there is any other interpretation: \"future minimum lease payments\" total is $57,096, due in next 12 months is $11,057. So portion = 11,057/57,096. We'll provide that.\n\nEvidence: 11,057 | Future minimum lease payments 2014; 57,096 | Total future minimum lease payments.\n\nProgram: divide(11057, 57096)\n\nAnswer: 0.19365... We'll put 0.19365? But the benchmark will compute exactly, so we can put the expression? No, the answer tag should contain the value. The program is separate. The benchmark executes the program to get the answer, so the answer tag should contain the result. We'll put the decimal with enough precision. Let's compute: 11057/57096 = 0.19365... Actually 57096*0.1936 = 11053.8, so 0.19365 gives 11057.0? Let's do: 57096*0.19365 = 11057.0? 57096*0.19365 = 57096*0.19 = 10848.24, plus 57096*0.00365 = 208.4, total 11056.64, so 0.19365 gives 11056.64, need 11057, so 0.19366 gives 11057.2. So 0.19365... Let's compute exactly: 11057/57096 = 0.19365... I'll just put 0.19365? But the benchmark will compute the program, so the answer will be the exact decimal. We'll put the result as computed by the program. Since we don't have a calculator, we'll put the fraction? The instruction says \"containing only the value itself\" - so a number. We'll put 0.19365? But to be safe, we can put the fraction? No, they want value. We'll put 0.19365. But the benchmark will compute the program and compare to the answer? The program is executed by the benchmark, so the answer tag should contain the result of the program. We'll put the result as a decimal. Let's compute more precisely: 11057/57096 = 0.19365... Actually 57096*0.19365 = 11056.64, so 0.19365 is slightly low. 0.19366 gives 11057.2, so 0.19365... Let's do long division: 11057/57096 = 0.19365... I'll just put 0.19365. But the benchmark will compute exactly, so the answer should match. We'll put 0.19365? Alternatively, we can put the fraction as a decimal with many digits. I'll put 0.19365. But to be exact, we can put 11057/57096? No, they want value. I'll put 0.19365. Let's check if they want percentage? The question \"what portion\" - could be fraction. We'll put the decimal. I'll put 0.19365. But let's compute using a quick mental: 57096*0.19365 = 11056.64, so 0.19365 is 0.00036 off. 0.19365 + 0.0000063 = 0.1936563 gives 11057.0? 57096*0.0000063 = 0.36, so 0.1936563 gives 11057.0. So 0.193656. I'll put 0.193656. But the benchmark will compute exactly, so we can put the exact decimal. I'll put 0.193656. Actually, let's just put the fraction as a decimal with enough precision. I'll put 0.193656. But the answer tag should contain the value. I'll put 0.193656. Alternatively, we can put 19.37%? The question doesn't ask for percentage, just portion. I'll put the decimal.\n\nLet's write evidence and program.",
+ "raw_content": "<evidence>\n11,057 | Future minimum lease payments 2014\n57,096 | Total future minimum lease payments\n</evidence>\n\n<program>\ndivide(11057, 57096)\n</program>\n\n<answer>0.193656</answer>",
+ "usage": {
+  "prompt_tokens": 77205,
+  "completion_tokens": 1463,
+  "total_tokens": 78668,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.64,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "11,057",
+   "element": "Future minimum lease payments 2014",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "57,096",
+   "element": "Total future minimum lease payments",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(11057, 57096)",
+ "answer_model": "0.193656",
+ "program_value": 0.1936562981644949,
+ "docfinqa_row": 312
+}

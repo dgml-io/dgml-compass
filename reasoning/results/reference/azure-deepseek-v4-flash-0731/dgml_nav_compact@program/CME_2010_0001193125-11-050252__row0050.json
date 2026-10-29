@@ -1,0 +1,71 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0050",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "what percentage of the outstanding options were from plans approved by security holders?",
+ "gold": "99.5%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "CME_2010_0001193125-11-050252.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/Part/SecurityOwnership/EquityCompensationPlanInformation"
+ ],
+ "r1_reasoning_chars": 2046,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 22560,
+  "completion_tokens": 458,
+  "total_tokens": 23018,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/Part/SecurityOwnership/EquityCompensationPlanInformation"
+ ],
+ "content_chars": 3631,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "99.508841",
+ "reasoning": "We need percentage of outstanding options from approved plans. Outstanding options total = 1,217,121. Approved = 1,211,143. Percentage = 1,211,143 / 1,217,121 * 100. Compute.",
+ "raw_content": "<evidence>\n1,211,143 | Equity compensation plans approved by security holders (column a)\n1,217,121 | Total (column a)\n</evidence>\n\n<program>multiply(divide(1211143, 1217121), 100)</program>",
+ "r2_usage": {
+  "prompt_tokens": 1079,
+  "completion_tokens": 109,
+  "total_tokens": 1188,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,211,143",
+   "element": "Equity compensation plans approved by security holders (column a)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1,217,121",
+   "element": "Total (column a)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "multiply(divide(1211143, 1217121), 100)",
+ "answer_model": null,
+ "program_value": 99.50884094514842,
+ "elapsed_s": 4.86,
+ "outline_source": "CME_2010_0001193125-11-050252.outline.txt",
+ "outline_chars": 87444
+}

@@ -1,0 +1,74 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0700",
+ "format": "markdown_pdf_plumber",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "in 2006 what was percentage change in the employee separations liabilities",
+ "gold": "-65.1%",
+ "finqa_id": "AMT/2008/page_107.pdf-2",
+ "source_page": "page_107",
+ "ticker": "AMT",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_plumber/AMT_2008_0001193125-09-039177.md",
+ "doc_chars": 448607,
+ "prompt_chars": 448770,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 448607,
+ "original_chars": 448607,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 105711,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 360,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-65.0479%",
+ "reasoning": "We need answer: \"in 2006 what was percentage change in the employee separations liabilities\". Need find data. The document has a table in note 14: \"Employee separations\" liability activity. It shows columns for years 2006, 2007, 2008. The table: Liability as of Dec 31, 2005 $20,963; 2006 Expense $496; 2006 Cash Payments $(12,389); 2006 Other $(1,743); Liability as of Dec 31, 2006 $7,327. So percentage change in 2006 = (7,327 - 20,963)/20,963 = -13,636/20,963 = -65.05% approximately. Need compute. Use figures as printed. Program: divide(subtract(7327, 20963), 20963). Answer as percentage? The question asks \"percentage change\" so give value maybe -65.05% or -65.0%. Need exact? We'll compute. 20963-7327=13636. 13636/20963=0.6505. So -65.05%. Provide inside answer. Evidence: 20,963 | Liability as of December 31, 2005; 7,327 | Liability as of December 31, 2006. Also maybe 2006 expense etc not needed.",
+ "raw_content": "<evidence>\n20,963 | Liability as of December 31, 2005\n7,327 | Liability as of December 31, 2006\n</evidence>\n<program>divide(subtract(7327, 20963), 20963)</program>\n<answer>-65.05%</answer>",
+ "usage": {
+  "prompt_tokens": 106014,
+  "completion_tokens": 360,
+  "total_tokens": 106374,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.5,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "20,963",
+   "element": "Liability as of December 31, 2005",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "7,327",
+   "element": "Liability as of December 31, 2006",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(subtract(7327, 20963), 20963)",
+ "answer_model": "-65.05%",
+ "program_value": -0.6504794161141058,
+ "docfinqa_row": 700
+}

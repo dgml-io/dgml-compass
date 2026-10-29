@@ -1,0 +1,65 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0372",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what is the combined number of equity compensation plans approved by security holders",
+ "gold": "4536446",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "HII_2017_0001501585-18-000006.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation"
+ ],
+ "r1_reasoning_chars": 4281,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 22159,
+  "completion_tokens": 1000,
+  "total_tokens": 23159,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation"
+ ],
+ "content_chars": 2621,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "448859",
+ "reasoning": "We need answer combined number of equity compensation plans approved by security holders. The table shows \"Equity compensation plans approved by security holders\" row with number of securities to be issued upon exercise 448,859, weighted avg exercise price $0.00, remaining available 4,087,587. The question asks \"combined number of equity compensation plans approved by security holders\" - ambiguous. Could be number of plans? But table row is category, not count. The question likely from standard 10-K item: \"Equity compensation plans approved by security holders\" - the combined number of securities to be issued? Or number of plans? The phrase \"combined number of equity compensation plans approved by security holders\" might be asking for the number of plans, but table doesn't list count of plans. It lists securities. The row \"Equity compensation plans approved by security holders\" has values. The question says \"combined number of equity compensation plans approved by security holders\" - maybe they want the number of securities to be issued under those plans? Or the number of plans? The table has \"Total\" row. The question wording: \"what is the combined number of equity compensation plans approved by security holders\" - In SEC filings, there is a table with \"Equity compensation plans approved by security holders\" and \"Equity compensation plans not approved by security holders\". The \"combined number\" might refer to the number of securities to be issued upon exercise? But \"number of equity compensation plans\" is not given. However, the row label itself is \"Equity compensation plans approved by security holders\" and the number in column (a) is 448,859. The question might be from a dataset where they ask for the value in that row. The phrase \"combined number\" could mean the total number of securities to be issued under approved plans. The table shows 448,859. Also total row same. So answer likely 448859.\n\nNeed provide evidence and program. Evidence: 448,859 | Equity compensation plans approved by security holders (column (a)). Program: 448859.\n\nBut let's be careful: The question says \"combined number of equity compensation plans approved by security holders\" - could be asking for the number of plans, not securities. The table doesn't list number of plans. But the row is \"Equity compensation plans approved by security holders\" and the value in column (a) is \"Number of Securities to be Issued Upon Exercise of Outstanding Options, Warrants and Rights\". The question might be misphrased. In many financial QA tasks, they ask \"what is the combined number of equity compensation plans approved by security holders\" meaning the number of securities to be issued under those plans. The answer is 448,859. Also the total row has same. So answer 448859.\n\nI'll provide evidence and program.",
+ "raw_content": "<evidence>448,859 | Equity compensation plans approved by security holders (column (a))</evidence>\n<program>448859</program>\n<answer>448859</answer>",
+ "r2_usage": {
+  "prompt_tokens": 920,
+  "completion_tokens": 620,
+  "total_tokens": 1540,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "448,859",
+   "element": "Equity compensation plans approved by security holders (column (a))",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "448859",
+ "answer_model": "448859",
+ "program_value": 448859.0,
+ "elapsed_s": 9.79,
+ "outline_source": "HII_2017_0001501585-18-000006.outline.txt",
+ "outline_chars": 86768
+}

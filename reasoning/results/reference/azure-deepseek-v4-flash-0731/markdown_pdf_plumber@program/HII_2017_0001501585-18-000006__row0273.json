@@ -1,0 +1,72 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0273",
+ "format": "markdown_pdf_plumber",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what was the return on total assets during 2014?",
+ "gold": "5.4%",
+ "finqa_id": "HII/2017/page_47.pdf-2",
+ "source_page": "page_47",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/markdown_pdf_plumber/HII_2017_0001501585-18-000006.md",
+ "doc_chars": 479340,
+ "prompt_chars": 479477,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 479340,
+ "original_chars": 479340,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 106334,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 124,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.054175",
+ "reasoning": "We need answer: return on total assets during 2014. Need compute net earnings / total assets for 2014. From selected financial data: 2014 net earnings 338, total assets 6,239. Return on total assets = 338/6239 = 0.05417... = 5.42%. Need evidence figures.",
+ "raw_content": "<evidence>\n338 | Net earnings (loss) 2014\n6,239 | Total assets 2014\n</evidence>\n<program>divide(338, 6239)</program>\n<answer>0.0542</answer>",
+ "usage": {
+  "prompt_tokens": 106634,
+  "completion_tokens": 124,
+  "total_tokens": 106758,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.59,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "338",
+   "element": "Net earnings (loss) 2014",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6,239",
+   "element": "Total assets 2014",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(338, 6239)",
+ "answer_model": "0.0542",
+ "program_value": 0.05417534861355987,
+ "docfinqa_row": 273
+}

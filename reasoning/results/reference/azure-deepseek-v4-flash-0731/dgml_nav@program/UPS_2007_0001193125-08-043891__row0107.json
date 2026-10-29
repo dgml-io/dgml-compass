@@ -1,0 +1,61 @@
+{
+ "id": "UPS_2007_0001193125-08-043891__row0107",
+ "key": "UPS_2007_0001193125-08-043891",
+ "question": "what is the total cash inflow from the stock purchases of employees in 2007 , ( in millions ) ?",
+ "gold": "115.6",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "UPS_2007_0001193125-08-043891.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/RegistrantName/CashFlowAmount"
+ ],
+ "r1_reasoning_chars": 6996,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 19643,
+  "completion_tokens": 1747,
+  "total_tokens": 21390,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/RegistrantName/CashFlowAmount"
+ ],
+ "content_chars": 62455,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "174",
+ "reasoning": "We need the total cash inflow from stock purchases of employees in 2007. In cash flow statement, there is \"Issuances of common stock\" which likely includes employee stock purchases. The line \"Issuances of common stock\" shows 174 164 164 for 2007, 2006, 2005. That is the cash inflow from issuing common stock, which includes employee stock purchases. The question says \"stock purchases of employees\" - that is the cash received from employees buying stock, typically under employee stock purchase plans. The line \"Issuances of common stock\" is the total cash inflow from issuing shares, which includes employee purchases. So answer is 174.\n\nBut let's verify if there is any other line. The cash flow statement has \"Issuances of common stock\" under financing activities. That is the only line. So answer 174.\n\nEvidence: 174 | Issuances of common stock (2007) from Cash Flows From Financing Activities.\n\nProgram: 174.",
+ "raw_content": "<evidence>174 | Issuances of common stock (2007)</evidence>\n<program>174</program>\n<answer>174</answer>",
+ "r2_usage": {
+  "prompt_tokens": 15010,
+  "completion_tokens": 241,
+  "total_tokens": 15251,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "174",
+   "element": "Issuances of common stock (2007)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "174",
+ "answer_model": "174",
+ "program_value": 174.0,
+ "elapsed_s": 14.04,
+ "outline_source": "UPS_2007_0001193125-08-043891.outline.txt",
+ "outline_chars": 77634
+}

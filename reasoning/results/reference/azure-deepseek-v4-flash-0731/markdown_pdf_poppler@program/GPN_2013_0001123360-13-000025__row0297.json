@@ -1,0 +1,74 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0297",
+ "format": "markdown_pdf_poppler",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what is the total fair value of the granted shares in 2013 , ( in thousands ) ?",
+ "gold": "24684",
+ "finqa_id": "GPN/2013/page_87.pdf-1",
+ "source_page": "page_87",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/markdown_pdf_poppler/GPN_2013_0001123360-13-000025.md",
+ "doc_chars": 447391,
+ "prompt_chars": 447559,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 447391,
+ "original_chars": 447391,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 78474,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 287,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "24684",
+ "reasoning": "We need answer: \"total fair value of the granted shares in 2013, (in thousands)\". Need find in document. There is restricted stock table: Granted 472 shares in 2012, 561 in 2013? Wait table shows non-vested restricted stock awards: Granted 472 (2012), 561 (2013). Weighted average grant-date fair value: 48 for 2012, 44 for 2013. Total fair value of granted shares in 2013 = 561 * 44 = 24,684 thousand? But question says \"total fair value of the granted shares in 2013\" maybe refers to restricted stock granted. Need check if there are other grants? Stock options granted none in 2013. Employee stock purchase plan? Not \"granted shares\". So answer 24,684 (in thousands). But need evidence: 561 | Granted (restricted stock table), 44 | Weighted Average Grant-Date Fair Value. Compute multiply(561, 44) = 24684. Ensure units thousands. Final answer inside tags.",
+ "raw_content": "<evidence>\n561 | Granted (restricted stock table, fiscal 2013)\n44 | Weighted Average Grant-Date Fair Value (fiscal 2013)\n</evidence>\n<program>\nmultiply(561, 44)\n</program>\n<answer>24684</answer>",
+ "usage": {
+  "prompt_tokens": 78782,
+  "completion_tokens": 287,
+  "total_tokens": 79069,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.3,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "561",
+   "element": "Granted (restricted stock table, fiscal 2013)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "44",
+   "element": "Weighted Average Grant-Date Fair Value (fiscal 2013)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(561, 44)",
+ "answer_model": "24684",
+ "program_value": 24684.0,
+ "docfinqa_row": 297
+}

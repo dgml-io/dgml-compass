@@ -1,0 +1,50 @@
+{
+ "id": "GPN_2010_0001193125-10-169025__row0265",
+ "format": "dgml_compact",
+ "key": "GPN_2010_0001193125-10-169025",
+ "question": "what is the total fair value of non-vested shares as of may 31 , 2010?",
+ "gold": "29946",
+ "finqa_id": "GPN/2010/page_89.pdf-2",
+ "source_page": "page_89",
+ "ticker": "GPN",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/dgml_compact/GPN_2010_0001193125-10-169025.dgml.txt",
+ "doc_chars": 408017,
+ "prompt_chars": 408176,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 408017,
+ "original_chars": 408017,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 87247,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 386,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "$29,946,000",
+ "reasoning": "The question asks for the total fair value of non-vested shares as of May 31, 2010.\n\nLooking at the document, in the \"Restricted Stock\" section under Note 11—SHARE-BASED AWARDS AND OPTIONS, there's a table showing non-vested restricted stock awards.\n\nThe table shows:\n- Non-vested at May 31, 2010 | 713 | $42\n\nThe columns are \"Shares\" and \"Weighted Average Grant-Date Fair Value\". So the total fair value would be 713 thousand shares × $42 per share = $29,946 thousand, or approximately $29.9 million.\n\nWait, let me re-read. The table says:\n\"RestrictedStock: Non-vested at May 31, 2010 | 713 | 42\"\n\nSo 713 thousand shares with a weighted average grant-date fair value of $42. Total fair value = 713,000 × $42 = $29,946,000 ≈ $29.9 million.\n\nBut the question asks for \"total fair value of non-vested shares\". This could mean the total fair value, which would be 713 × $42 = $29,946 thousand.\n\nLet me check if there's any other mention. The document also says \"As of May 31, 2010, there was $21.1 million of total unrecognized compensation cost related to unvested restricted stock awards\" - but that's unrecognized compensation cost, not total fair value.\n\nSo the total fair value of non-vested shares as of May 31, 2010 = 713 thousand shares × $42 = $29,946 thousand = $29.9 million.\n\nThe answer should be $29,946,000 or approximately $29.9 million.",
+ "raw_content": "<answer>$29,946,000</answer>",
+ "usage": {
+  "prompt_tokens": 87397,
+  "completion_tokens": 386,
+  "total_tokens": 87783,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.77,
+ "answer_tag_found": true,
+ "docfinqa_row": 265
+}

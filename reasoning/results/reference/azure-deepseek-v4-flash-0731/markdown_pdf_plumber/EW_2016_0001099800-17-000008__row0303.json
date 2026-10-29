@@ -1,0 +1,50 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0303",
+ "format": "markdown_pdf_plumber",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what is the percentage difference in the fair value per share between 2014 and 2015?",
+ "gold": "54%",
+ "finqa_id": "EW/2016/page_94.pdf-2",
+ "source_page": "page_94",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf_plumber/EW_2016_0001099800-17-000008.md",
+ "doc_chars": 348684,
+ "prompt_chars": 348857,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 348684,
+ "original_chars": 348684,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 82552,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 351,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "54.3%",
+ "reasoning": "We need to find fair value per share for 2014 and 2015. The document mentions \"Fair value, per share\" for option awards and ESPP. The question likely refers to the fair value per share of stock options granted. In Note 13, there is a table for Option Awards with \"Fair value, per share\" for 2016, 2015, 2014: $31.00, $18.13, $11.75 respectively. So 2014: $11.75, 2015: $18.13. Percentage difference from 2014 to 2015: (18.13 - 11.75)/11.75 * 100 = 6.38/11.75 = 0.54298... = 54.3% approximately. The question asks \"percentage difference\" - could be interpreted as percentage change. Usually \"percentage difference\" might mean absolute difference relative to average, but in financial context, it's likely percentage change. The question says \"between 2014 and 2015\" - so from 2014 to 2015. So answer: 54.3% (or 54.3). We'll put the value without units? The question asks for percentage difference, so we can give the number. We'll compute exactly: (18.13-11.75)/11.75 = 6.38/11.75 = 0.542978... = 54.2978% -> 54.3%. So answer: 54.3% or 54.3. We'll put 54.3% inside tags.",
+ "raw_content": "<answer>54.3%</answer>",
+ "usage": {
+  "prompt_tokens": 82701,
+  "completion_tokens": 351,
+  "total_tokens": 83052,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.65,
+ "answer_tag_found": true,
+ "docfinqa_row": 303
+}

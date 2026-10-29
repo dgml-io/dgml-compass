@@ -1,0 +1,72 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0242",
+ "format": "dgml_compact",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "is the weighted average useful life ( years ) for purchased technology greater than localization?",
+ "gold": "yes",
+ "finqa_id": "ADBE/2008/page_74.pdf-2",
+ "source_page": "page_74",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml_compact/ADBE_2008_0000796343-09-000007.dgml.txt",
+ "doc_chars": 545889,
+ "prompt_chars": 546075,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 545889,
+ "original_chars": 545889,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 114389,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 335,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "3",
+ "reasoning": "We need answer question: \"is the weighted average useful life (years) for purchased technology greater than localization?\" From document, in Note 1 Intangible Assets table: Weighted Average Useful Life (Years): Purchased technology | 4; Localization | 1. So 4 > 1, yes. Need answer inside <answer> tags, value only? The question asks yes/no. So <answer>Yes</answer>. Need evidence and program. Evidence: \"Purchased technology | 4\" and \"Localization | 1\". Program: compare? We can use greater? The program format only add/subtract/multiply/divide/exp. We can just output \"Yes\" as answer? The program must be exact. Since answer is boolean, maybe program is \"Yes\" itself? The instructions: \"A figure that is itself the answer is its own program.\" But here answer is derived from comparison. We can use subtract(4,1) >0? But program only nested calls over figures as printed. We can do subtract(4,1) and then answer Yes. But the program is executed by benchmark, so it must be exact. Probably they expect program to compute something? The question is boolean, so program can be \"Yes\" or \"No\"? Let's follow: evidence lines, then program: subtract(4, 1) (positive means yes). But final answer inside <answer>Yes</answer>.",
+ "raw_content": "<evidence>4 | Purchased technology\n1 | Localization</evidence>\n<program>subtract(4, 1)</program>\n<answer>Yes</answer>",
+ "usage": {
+  "prompt_tokens": 114692,
+  "completion_tokens": 335,
+  "total_tokens": 115027,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.82,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "4",
+   "element": "Purchased technology",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1",
+   "element": "Localization",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(4, 1)",
+ "answer_model": "Yes",
+ "program_value": 3.0,
+ "docfinqa_row": 242
+}

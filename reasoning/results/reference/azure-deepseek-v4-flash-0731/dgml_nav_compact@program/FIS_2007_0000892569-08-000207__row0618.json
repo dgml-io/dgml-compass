@@ -1,0 +1,70 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0618",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what percentage of total future minimum operating lease payments for leases with remaining terms greater than one year are due in 2010?",
+ "gold": "14%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "FIS_2007_0000892569-08-000207.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/RegistrantName/ContingentLiabilityAmount/ConsolidatedFinancial/OperatingLeaseCommitmentAmount"
+ ],
+ "r1_reasoning_chars": 1179,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 23045,
+  "completion_tokens": 280,
+  "total_tokens": 23325,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/RegistrantName/ContingentLiabilityAmount/ConsolidatedFinancial/OperatingLeaseCommitmentAmount"
+ ],
+ "content_chars": 3081,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "14.162096",
+ "reasoning": "We need answer percentage. Need figures: 2010 payment 35,269 and total 249,038. Compute percentage = 35269 / 249038 * 100. Need exact. Let's compute. 35269 / 249038 = 0.14162? 249038*0.14=34865.32, remainder 403.68, /249038=0.001621, total 0.141621 = 14.1621%. So 14.16%. Need evidence lines.",
+ "raw_content": "<evidence>35,269 | OperatingLeaseCommitmentAmount: 2010\n249,038 | OperatingLeaseCommitmentAmount: Total</evidence>\n<program>multiply(divide(35269, 249038), 100)</program>\n<answer>14.16</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1037,
+  "completion_tokens": 173,
+  "total_tokens": 1210,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "35,269",
+   "element": "OperatingLeaseCommitmentAmount: 2010",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "249,038",
+   "element": "OperatingLeaseCommitmentAmount: Total",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(35269, 249038), 100)",
+ "answer_model": "14.16",
+ "program_value": 14.162095744424546,
+ "elapsed_s": 5.24,
+ "outline_source": "FIS_2007_0000892569-08-000207.outline.txt",
+ "outline_chars": 91339
+}

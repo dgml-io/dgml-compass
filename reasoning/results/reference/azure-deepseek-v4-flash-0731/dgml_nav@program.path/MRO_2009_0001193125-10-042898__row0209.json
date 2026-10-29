@@ -1,0 +1,68 @@
+{
+ "id": "MRO_2009_0001193125-10-042898__row0209",
+ "key": "MRO_2009_0001193125-10-042898",
+ "question": "what was the spread between the high and low henry hub natural gas ( dollars per mcf ) in 2009?",
+ "gold": "45.38",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "MRO_2009_0001193125-10-042898.outline.txt",
+ "doc_source": "MRO_2009_0001193125-10-042898.dgml.xml",
+ "outline_chars": 149285,
+ "predicted_xpaths": [
+  "/chunk/ManagementDiscussionAndAnalysis/MdaOverview/SegmentDescription/NaturalGasPricing",
+  "/chunk/ManagementDiscussionAndAnalysis/MdaOverview/SegmentDescription/BenchmarkPrice"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 12227,
+ "r1_usage": {
+  "prompt_tokens": 38649,
+  "completion_tokens": 3198,
+  "total_tokens": 41847,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ManagementDiscussionAndAnalysis/MdaOverview/SegmentDescription/NaturalGasPricing",
+  "/chunk/ManagementDiscussionAndAnalysis/MdaOverview/SegmentDescription/BenchmarkPrice"
+ ],
+ "content_chars": 9016,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer: spread between high and low Henry Hub natural gas in 2009. But document only gives average benchmark prices for 2009, 2008, 2007. No high/low. So NOT_FOUND.",
+ "raw_content": "<evidence></evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2514,
+  "completion_tokens": 72,
+  "total_tokens": 2586,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 2514,
+   "completion_tokens": 72,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 17.54
+}

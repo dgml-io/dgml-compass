@@ -1,0 +1,53 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0576",
+ "format": "markdown_pdf_plumber",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "what were total asphalt sales in millions for the three year period?",
+ "gold": "227",
+ "finqa_id": "MRO/2003/page_45.pdf-1",
+ "source_page": "page_45",
+ "ticker": "MRO",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/markdown_pdf_plumber/MRO_2003_0001193125-04-036535.md",
+ "doc_chars": 570022,
+ "prompt_chars": 570179,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 570022,
+ "original_chars": 570022,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 146581,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 544,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need to find total asphalt sales in millions for the three year period. The document has \"Refined Product Sales\" table with Asphalt volumes in thousands of barrels per day for 2003, 2002, 2001: 74, 75, 78. But that's volumes, not sales in millions. The question asks \"total asphalt sales in millions\" - likely refers to revenue? But the document does not provide asphalt sales revenue directly. It provides refined product sales volumes and yields. There is no explicit asphalt sales dollar amount. The question might be asking for total asphalt sales volume? But it says \"in millions\" - could be millions of dollars? Or millions of barrels? The table shows \"Refined Product Sales (Thousands of Barrels per Day)\" with Asphalt row: 74, 75, 78. That's thousands of barrels per day. To get total for three years, we would need to multiply by days. But the question says \"total asphalt sales in millions\" - ambiguous. Possibly they want the sum of the daily volumes? But that would be in thousands of barrels per day, not millions. Alternatively, there is a \"Refined Product Yields\" table with Asphalt: 72, 72, 76. But that's yields, not sales.\n\nMaybe the question refers to \"asphalt sales\" in the context of the Five-Year Operating Summary? There is \"Refined Product Sales Volumes\" with Asphalt: 74, 75, 78. But again volumes.\n\nThe question might be from a financial analysis perspective: \"total asphalt sales in millions\" could be revenue. But the document does not break out revenue by product for asphalt. It has \"Revenues by product\" in the Five-Year Selected Financial Data: Refined products, Merchandise, Liquid hydrocarbons, Natural gas, Transportation and other products. No asphalt separately.\n\nThus, the document does not contain enough information to answer. So answer NOT_FOUND.\n\nBut let's double-check: There is a table \"Refined Product Sales\" with Asphalt row: 74, 75, 78 (thousands of barrels per day). If we sum them: 74+75+78 = 227 thousand barrels per day. But that's not \"millions\". Could be interpreted as total for three years? But it's per day average. To get total for three years, we would need to multiply by 365*3? But the question says \"total asphalt sales in millions\" - likely they want a dollar amount. No dollar amount given.\n\nThus, NOT_FOUND.",
+ "raw_content": "<answer>NOT_FOUND</answer>",
+ "usage": {
+  "prompt_tokens": 146723,
+  "completion_tokens": 544,
+  "total_tokens": 147267,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 146688
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.74,
+ "answer_tag_found": true,
+ "docfinqa_row": 576
+}

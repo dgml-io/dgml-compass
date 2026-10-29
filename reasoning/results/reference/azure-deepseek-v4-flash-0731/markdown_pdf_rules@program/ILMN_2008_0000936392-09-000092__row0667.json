@@ -1,0 +1,72 @@
+{
+ "id": "ILMN_2008_0000936392-09-000092__row0667",
+ "format": "markdown_pdf_rules",
+ "key": "ILMN_2008_0000936392-09-000092",
+ "question": "what was the percent of the growth in the company made matching contributions from 2007 to 2008",
+ "gold": "85.7%",
+ "finqa_id": "ILMN/2008/page_86.pdf-2",
+ "source_page": "page_86",
+ "ticker": "ILMN",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_rules/ILMN_2008_0000936392-09-000092.md",
+ "doc_chars": 312711,
+ "prompt_chars": 312895,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 312711,
+ "original_chars": 312711,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 69101,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 339,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.857143",
+ "reasoning": "We need answer percent growth in company matching contributions from 2007 to 2008. From document: \"During the years ended December 28, 2008, December 30, 2007 and December 31, 2006, the Company made matching contributions of $2.6 million, $1.4 million and $0.4 million, respectively.\" So 2008 $2.6M, 2007 $1.4M. Growth = (2.6-1.4)/1.4 = 1.2/1.4 = 0.857142857 = 85.7142857%. Percent growth = 85.7% approximately. Need answer value only. Evidence: $2.6 million | matching contributions 2008; $1.4 million | matching contributions 2007. Program: divide(subtract(2.6,1.4),1.4) = 0.857142857. But question asks percent, so answer 85.7%? The instruction says no units unless asked. It asks percent, so include %? \"containing only the value itself\" but percent is unit? Usually answer numeric. I'll put 85.7. But maybe they expect 85.7142857. I'll put 85.7.",
+ "raw_content": "<evidence>\n$2.6 million | matching contributions 2008\n$1.4 million | matching contributions 2007\n</evidence>\n<program>divide(subtract(2.6, 1.4), 1.4)</program>\n<answer>85.7</answer>",
+ "usage": {
+  "prompt_tokens": 69410,
+  "completion_tokens": 339,
+  "total_tokens": 69749,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 69376
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.25,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$2.6 million",
+   "element": "matching contributions 2008",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$1.4 million",
+   "element": "matching contributions 2007",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(2.6, 1.4), 1.4)",
+ "answer_model": "85.7",
+ "program_value": 0.8571428571428573,
+ "docfinqa_row": 667
+}

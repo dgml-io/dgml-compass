@@ -1,0 +1,73 @@
+{
+ "id": "CMCSA_2015_0001193125-16-452423__row0912",
+ "key": "CMCSA_2015_0001193125-16-452423",
+ "question": "what was the percentage of the capital expenditures incurred in our cable communications for customer premise equipment in 2015",
+ "gold": "52.6%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "CMCSA_2015_0001193125-16-452423.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/CableNetworksOperatingCostsDiscussion/LiquidityAndCapitalResources/InvestingActivities/CapitalExpenditures/CableCapitalExpenditures",
+  "/chunk/CableNetworksOperatingCostsDiscussion/LiquidityAndCapitalResources/InvestingActivities/CapitalExpenditures/CableCapitalExpendituresChangeDrivers",
+  "/chunk/CableNetworksOperatingCostsDiscussion/LiquidityAndCapitalResources/InvestingActivities/CapitalExpenditures"
+ ],
+ "r1_reasoning_chars": 1241,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 34062,
+  "completion_tokens": 328,
+  "total_tokens": 34390,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/CableNetworksOperatingCostsDiscussion/LiquidityAndCapitalResources/InvestingActivities/CapitalExpenditures/CableCapitalExpenditures",
+  "/chunk/CableNetworksOperatingCostsDiscussion/LiquidityAndCapitalResources/InvestingActivities/CapitalExpenditures/CableCapitalExpendituresChangeDrivers",
+  "/chunk/CableNetworksOperatingCostsDiscussion/LiquidityAndCapitalResources/InvestingActivities/CapitalExpenditures"
+ ],
+ "content_chars": 13852,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "52.573216",
+ "reasoning": "We need percentage of capital expenditures for customer premise equipment in 2015. From table: Customer premise equipment 2015 = 3,698; Total 2015 = 7,034. Percentage = 3698/7034 * 100. Compute.",
+ "raw_content": "<evidence>\n3,698 | Customer premise equipment 2015\n7,034 | Total 2015\n</evidence>\n<program>multiply(divide(3698, 7034), 100)</program>\n<answer>52.57</answer>",
+ "r2_usage": {
+  "prompt_tokens": 3325,
+  "completion_tokens": 111,
+  "total_tokens": 3436,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "3,698",
+   "element": "Customer premise equipment 2015",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "7,034",
+   "element": "Total 2015",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "multiply(divide(3698, 7034), 100)",
+ "answer_model": "52.57",
+ "program_value": 52.57321580892806,
+ "elapsed_s": 5.6,
+ "outline_source": "CMCSA_2015_0001193125-16-452423.outline.txt",
+ "outline_chars": 134140
+}

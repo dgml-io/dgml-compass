@@ -1,0 +1,50 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0863",
+ "format": "markdown_pdf_poppler",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "what was the sum of the temporary differences between 2007 and 2009 in billions",
+ "gold": "9.8",
+ "finqa_id": "IP/2009/page_84.pdf-4",
+ "source_page": "page_84",
+ "ticker": "IP",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/markdown_pdf_poppler/IP_2009_0001193125-10-040916.md",
+ "doc_chars": 625466,
+ "prompt_chars": 625634,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 625466,
+ "original_chars": 625466,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 105142,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 314,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "9.8",
+ "reasoning": "We need answer question: \"what was the sum of the temporary differences between 2007 and 2009 in billions\"\n\nNeed find relevant figures. Document mentions deferred income taxes not provided for temporary differences of approximately $3.5 billion, $2.6 billion and $3.7 billion as of December 31, 2009, 2008 and 2007, respectively. So temporary differences: 2007 $3.7B, 2008 $2.6B, 2009 $3.5B. Sum between 2007 and 2009? Likely sum of 2007, 2008, 2009? \"between 2007 and 2009\" could mean sum of those three years? Or sum of differences between years? The phrase \"sum of the temporary differences between 2007 and 2009\" ambiguous. But likely they want sum of the temporary differences for 2007, 2008, 2009? The document says \"Deferred income taxes are not provided for temporary differences of approximately $3.5 billion, $2.6 billion and $3.7 billion as of December 31, 2009, 2008 and 2007, respectively.\" So sum = 3.5+2.6+3.7 = 9.8 billion. But question says \"between 2007 and 2009\" maybe sum of the three years. Answer 9.8.",
+ "raw_content": "<answer>9.8</answer>",
+ "usage": {
+  "prompt_tokens": 105290,
+  "completion_tokens": 314,
+  "total_tokens": 105604,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.07,
+ "answer_tag_found": true,
+ "docfinqa_row": 863
+}

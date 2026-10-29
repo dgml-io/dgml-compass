@@ -1,0 +1,76 @@
+{
+ "id": "MRO_2009_0001193125-10-042898__row0427",
+ "key": "MRO_2009_0001193125-10-042898",
+ "question": "what was the change in receivables for recoverable costs from certain states , under programs to assist companies in clean-up efforts related to underground storage tanks between december 31 , 2009 and 2008 , in millions?",
+ "gold": "-1",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "MRO_2009_0001193125-10-042898.outline.txt",
+ "doc_source": "MRO_2009_0001193125-10-042898.dgml.xml",
+ "outline_chars": 149285,
+ "predicted_xpaths": [
+  "/chunk/NoteReferenceNumber/CommitmentsAndContingencies/EnvironmentalRemediationLiability",
+  "/chunk/NoteReferenceNumber/CommitmentsAndContingencies/EnvironmentalRemediationLiability/RecoverableRemediationCostAmount"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 4117,
+ "r1_usage": {
+  "prompt_tokens": 38689,
+  "completion_tokens": 1013,
+  "total_tokens": 39702,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/NoteReferenceNumber/CommitmentsAndContingencies/EnvironmentalRemediationLiability",
+  "/chunk/NoteReferenceNumber/CommitmentsAndContingencies/EnvironmentalRemediationLiability/RecoverableRemediationCostAmount"
+ ],
+ "content_chars": 6387,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "-1",
+ "reasoning": "We need the change: 2009 receivable minus 2008 receivable. Document says \"$59 and $60 million\" at Dec 31, 2009 and 2008. So 2009 = 59, 2008 = 60. Change = 59 - 60 = -1. In millions, so -1. Need answer as value only. Evidence: cite the figure. The figure is printed as \"$59 and $60 million\" in one element. We can cite that. Program: subtract(59, 60).",
+ "raw_content": "<evidence>$59 and $60 million | /chunk/NoteReferenceNumber/CommitmentsAndContingencies/EnvironmentalRemediationLiability/RecoverableRemediationCostAmount</evidence>\n<program>subtract(59, 60)</program>\n<answer>-1</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1761,
+  "completion_tokens": 176,
+  "total_tokens": 1937,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 1761,
+   "completion_tokens": 176,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "$59 and $60 million",
+   "element": "chunk/NoteReferenceNumber/CommitmentsAndContingencies/EnvironmentalRemediationLiability/RecoverableRemediationCostAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(59, 60)",
+ "answer_model": "-1",
+ "program_value": -1.0,
+ "elapsed_s": 10.44
+}

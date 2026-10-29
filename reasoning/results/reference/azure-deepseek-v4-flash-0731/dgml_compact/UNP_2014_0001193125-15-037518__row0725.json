@@ -1,0 +1,53 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0725",
+ "format": "dgml_compact",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "what was the percentage change in total expense for repairs and maintenance from 2012 to 2013?",
+ "gold": "10%",
+ "finqa_id": "UNP/2014/page_75.pdf-3",
+ "source_page": "page_75",
+ "ticker": "UNP",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/dgml_compact/UNP_2014_0001193125-15-037518.dgml.txt",
+ "doc_chars": 412541,
+ "prompt_chars": 412724,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 412541,
+ "original_chars": 412541,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 89337,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 168,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "9.5%",
+ "reasoning": "The question asks for the percentage change in total expense for repairs and maintenance from 2012 to 2013.\n\nFrom the document, in the \"PropertiesDisclosure\" section (Note 12), it states:\n\"Total expense for repairs and maintenance incurred was $2.4 billion for 2014, $2.3 billion for 2013, and $2.1 billion for 2012.\"\n\nSo repairs and maintenance expense:\n2012: $2.1 billion\n2013: $2.3 billion\n\nPercentage change = (2.3 - 2.1) / 2.1 * 100 = 0.2 / 2.1 * 100 = 9.5238...%\n\nSo approximately 9.5%.",
+ "raw_content": "<answer>9.5%</answer>",
+ "usage": {
+  "prompt_tokens": 89486,
+  "completion_tokens": 168,
+  "total_tokens": 89654,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 89344
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 6.0,
+ "answer_tag_found": true,
+ "docfinqa_row": 725
+}

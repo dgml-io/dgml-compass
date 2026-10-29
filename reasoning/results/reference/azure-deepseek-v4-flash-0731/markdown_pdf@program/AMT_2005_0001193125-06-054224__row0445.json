@@ -1,0 +1,74 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0445",
+ "format": "markdown_pdf",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what portion of total value of net operating loss carryforwards is related to state?",
+ "gold": "52.8%",
+ "finqa_id": "AMT/2005/page_105.pdf-4",
+ "source_page": "page_105",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/markdown_pdf/AMT_2005_0001193125-06-054224.md",
+ "doc_chars": 443446,
+ "prompt_chars": 443619,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 443446,
+ "original_chars": 443446,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 103998,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 535,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.528468",
+ "reasoning": "We need answer: portion of total value of net operating loss carryforwards related to state. Need figures. Document note 13: At December 31, 2005, Company had net federal and state operating loss carryforwards available to reduce future taxable income of approximately $2.2 billion and $2.4 billion, respectively. But \"total value\" maybe deferred tax asset? The question: \"what portion of total value of net operating loss carryforwards is related to state?\" Could be state NOL carryforwards as portion of total NOL carryforwards. Total = federal + state = 2,157,503 + 2,418,012 = 4,575,515 (in thousands). State portion = 2,418,012 / 4,575,515 = 0.5285... = 52.85%. But \"value\" might refer to deferred tax asset values? In table: Net operating loss carryforwards $888,826 (long-term items) but that's combined? Actually deferred tax asset components: Net operating loss carryforwards $888,826, but not split federal/state. The question says \"total value of net operating loss carryforwards\" - likely the amounts in note 13: federal $2,157,503 and state $2,418,012. So portion = state / (federal+state). Need compute. Use figures as printed: 2,418,012 and 2,157,503. Program: divide(2418012, add(2157503, 2418012)). Answer as decimal or percentage? Question \"what portion\" - give fraction maybe 0.5285 or 52.85%. The instruction: final answer only value, no units unless asked. We'll put 0.5285? Better as percentage? \"portion\" could be ratio. We'll provide 0.5285. But need evidence: list figures. Evidence: \"2,418,012 | State NOL carryforwards\" and \"2,157,503 | Federal NOL carryforwards\". Also maybe \"approximately $2.2 billion and $2.4 billion\" but exact table. Use exact.\n\nLet's craft.",
+ "raw_content": "<evidence>\n2,418,012 | State operating loss carryforwards (note 13)\n2,157,503 | Federal operating loss carryforwards (note 13)\n</evidence>\n\n<program>\ndivide(2418012, add(2157503, 2418012))\n</program>\n\n<answer>0.5285</answer>",
+ "usage": {
+  "prompt_tokens": 104302,
+  "completion_tokens": 535,
+  "total_tokens": 104837,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 104192
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.43,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "2,418,012",
+   "element": "State operating loss carryforwards (note 13)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "2,157,503",
+   "element": "Federal operating loss carryforwards (note 13)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(2418012, add(2157503, 2418012))",
+ "answer_model": "0.5285",
+ "program_value": 0.5284677243982372,
+ "docfinqa_row": 445
+}

@@ -1,0 +1,50 @@
+{
+ "id": "UPS_2007_0001193125-08-043891__row0080",
+ "format": "dgml_compact",
+ "key": "UPS_2007_0001193125-08-043891",
+ "question": "what is the total in millions of expected cash outflow to satisfy contractual obligations and commitments as of december 31 , 2007?",
+ "gold": "28809",
+ "finqa_id": "UPS/2007/page_49.pdf-1",
+ "source_page": "page_49",
+ "ticker": "UPS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml_compact/UPS_2007_0001193125-08-043891.dgml.txt",
+ "doc_chars": 424830,
+ "prompt_chars": 425050,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 424830,
+ "original_chars": 424830,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93585,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 270,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "28809",
+ "reasoning": "The question asks for the total expected cash outflow to satisfy contractual obligations and commitments as of December 31, 2007, in millions.\n\nLooking at the document, in the \"Contractual ObligationsCommitments\" section, there is a table:\n\"Year | Capital Leases | Operating Leases | Debt Principal | Debt Interest | Purchase Commitments | Pension Fundings | Other Liabilities\"\n...\n\"ContractualObligationsByYear: Total | $ 619 | $ 1,782 | $10,527 | $8,026 | $ 3,828 | $ 3,465 | $ 562\"\n\nThe total row shows: 619 + 1,782 + 10,527 + 8,026 + 3,828 + 3,465 + 562.\n\nLet me sum these: 619 + 1,782 = 2,401; + 10,527 = 12,928; + 8,026 = 20,954; + 3,828 = 24,782; + 3,465 = 28,247; + 562 = 28,809.\n\nSo the total is $28,809 million.\n\nThe question asks for the total in millions. So answer: 28809.",
+ "raw_content": "<answer>28809</answer>",
+ "usage": {
+  "prompt_tokens": 93739,
+  "completion_tokens": 270,
+  "total_tokens": 94009,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.13,
+ "answer_tag_found": true,
+ "docfinqa_row": 80
+}

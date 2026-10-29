@@ -1,0 +1,50 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0311",
+ "format": "markdown_pdf_plumber",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "what was the total reclassification of oci into income , in millions , during the years ended december 31 , 2012 , 2011 and 2010?",
+ "gold": "0.7",
+ "finqa_id": "AMT/2012/page_144.pdf-2",
+ "source_page": "page_144",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/markdown_pdf_plumber/AMT_2012_0001193125-13-077821.md",
+ "doc_chars": 584045,
+ "prompt_chars": 584263,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 584045,
+ "original_chars": 584045,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 138337,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 805,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1.97",
+ "reasoning": "We need to find total reclassification of OCI into income for 2012, 2011, 2010. Look at consolidated statements of comprehensive income. It shows reclassification of unrealized losses on cash flow hedges to net income, net of taxes: 2012: 1,132; 2011: 225; 2010: 118. Also reclassification of unrealized losses on available-for-sale securities to net income: 2012: 495; 2011: 0; 2010: 0. Also reclassifications due to REIT Conversion: 2011: (1,752) but that's not into income? Actually it's a reclassification within OCI. The question asks \"total reclassification of OCI into income\" so sum the reclassifications to net income. For 2012: 1,132 + 495 = 1,627. For 2011: 225 + 0 = 225. For 2010: 118 + 0 = 118. But also there is reclassification of unrealized losses on available-for-sale securities to net income in 2012 only. Also note that the statement shows \"Reclassification of unrealized losses on cash flow hedges to net income, net of taxes\" and \"Reclassification of unrealized losses on available-for-sale securities to net income\". So total reclassification into income for each year: 2012: 1,132+495=1,627; 2011: 225; 2010: 118. But the question says \"in millions\" so we need to express in millions. The numbers are in thousands, so 1,627 thousand = 1.627 million, but likely they want the sum across all three years? The question: \"what was the total reclassification of oci into income , in millions , during the years ended december 31 , 2012 , 2011 and 2010?\" That could mean the total across all three years. Sum: 1,627 + 225 + 118 = 1,970 thousand = 1.97 million. But careful: The statement also has \"Reclassifications due to REIT Conversion\" which is not into income but a reclassification within OCI. So we ignore that. Also there is \"Reclassification of unrealized losses on available-for-sale securities to net income\" only in 2012. So total reclassification into income across three years = 1,970 thousand = 1.97 million. But the question might ask for each year separately? It says \"during the years ended december 31 , 2012 , 2011 and 2010\" which could be the total across those years. I'll answer with the total in millions: 1.97. But let's double-check the numbers: In the consolidated statements of comprehensive income, we have:\n\n2012: Reclassification of unrealized losses on cash flow hedges to net income, net of taxes: 1,132; Reclassification of unrealized losses on available-for-sale securities to net income: 495. So total 1,627.\n\n2011: Reclassification of unrealized losses on cash flow hedges to net income: 225; no available-for-sale reclassification. So 225.\n\n2010: Reclassification of unrealized losses on cash flow hedges to net income: 118; no available-for-sale. So 118.\n\nSum = 1,970 thousand = 1.97 million. So answer: 1.97. But the question says \"in millions\" so we give 1.97. However, the numbers are in thousands, so 1,970 thousand = 1.97 million. I'll put <answer>1.97</answer>.",
+ "raw_content": "<answer>1.97</answer>",
+ "usage": {
+  "prompt_tokens": 138501,
+  "completion_tokens": 805,
+  "total_tokens": 139306,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 19.56,
+ "answer_tag_found": true,
+ "docfinqa_row": 311
+}

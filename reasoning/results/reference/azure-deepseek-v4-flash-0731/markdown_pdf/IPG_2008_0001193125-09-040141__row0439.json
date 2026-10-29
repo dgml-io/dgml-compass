@@ -1,0 +1,53 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0439",
+ "format": "markdown_pdf",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "how much more , in percent , was spent on october shares than november shares?",
+ "gold": "1229%",
+ "finqa_id": "IPG/2008/page_21.pdf-1",
+ "source_page": "page_21",
+ "ticker": "IPG",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf/IPG_2008_0001193125-09-040141.md",
+ "doc_chars": 368715,
+ "prompt_chars": 368882,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 368715,
+ "original_chars": 368715,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 91399,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 458,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1129.09%",
+ "reasoning": "We need answer: \"how much more, in percent, was spent on october shares than november shares?\" Need find October and November share purchases from repurchase table. October: 29,704 shares at $5.99 average price. November: 4,468 shares at $3.24. \"spent\" means total cost? October spent = 29,704 * 5.99 = 177,? 29,704*5.99 = 29,704*6 - 29,704*0.01 = 178,224 - 297.04 = 177,926.96. November = 4,468*3.24 = 4,468*3 + 4,468*0.24 = 13,404 + 1,072.32 = 14,476.32. Difference = 163,450.64. Percent more = difference / November *100 = 163,450.64 / 14,476.32 *100 = 11.29? Let's compute: 14,476.32 * 11 = 159,239.52, remainder 4,211.12, /14,476 = 0.2909, so 11.29. So about 1129%? Wait 163,450/14,476 = 11.29, so 1129% more. Alternatively \"spent\" could be average price? But question says \"spent on october shares than november shares\" likely total cost. Need answer in percent. Could also be \"how much more, in percent, was spent\" = (Oct - Nov)/Nov *100 = 1129.0%. Let's compute precisely: 29,704*5.99 = 177,926.96. 4,468*3.24 = 14,476.32. Difference = 163,450.64. Divide by 14,476.32 = 11.2909... *100 = 1129.09%. So answer 1129.09% or 1129%. Need final inside <answer> tags only value.",
+ "raw_content": "<answer>1129.09%</answer>",
+ "usage": {
+  "prompt_tokens": 91544,
+  "completion_tokens": 458,
+  "total_tokens": 92002,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 91392
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.89,
+ "answer_tag_found": true,
+ "docfinqa_row": 439
+}

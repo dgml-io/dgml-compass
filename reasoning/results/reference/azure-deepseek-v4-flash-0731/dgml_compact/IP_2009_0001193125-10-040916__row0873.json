@@ -1,0 +1,50 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0873",
+ "format": "dgml_compact",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "considering the years 2011-2012 , what is the variation observed in the lease obligations?",
+ "gold": "24",
+ "finqa_id": "IP/2009/page_45.pdf-3",
+ "source_page": "page_45",
+ "ticker": "IP",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/dgml_compact/IP_2009_0001193125-10-040916.dgml.txt",
+ "doc_chars": 600076,
+ "prompt_chars": 600255,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 600076,
+ "original_chars": 600076,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 131401,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 415,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-24",
+ "reasoning": "The question asks: \"considering the years 2011-2012, what is the variation observed in the lease obligations?\"\n\nI need to find lease obligations for 2011 and 2012. Looking at the document, there is a \"Contractual Obligations\" table in the Management Discussion section:\n\n\"Contractual obligations for future payments under existing debt and lease commitments and purchase obligations at December 31, 2009, were as follows:\nIn millions | 2010 | 2011 | 2012 | 2013 | 2014 | Thereafter\nMaturities of long-term debt (a) | $ 304 | $ 574 | $199 | $131 | $ 562 | $ 7,263\nDebt obligations with right of offset (b) | 519 | 28 | – | – | – | 5,108\nLease obligations | 177 | 148 | 124 | 96 | 79 | 184\nPurchase obligations (c) | 2,262 | 657 | 623 | 556 | 532 | 3,729\nTotal (d) | $3,262 | $1,407 | $946 | $783 | $1,173 | $ 16,284\"\n\nSo lease obligations: 2011 = $148 million, 2012 = $124 million.\n\nVariation from 2011 to 2012 = 124 - 148 = -24 million. So a decrease of $24 million.\n\nThe question asks \"what is the variation observed in the lease obligations?\" - likely the change. So -24 million, or a decrease of 24 million.\n\nI'll answer with the value. The question doesn't specify units, but the table is in millions. I'll put -24 or \"decrease of $24 million\". The instructions say \"containing only the value itself with no explanation or units unless the question asks for them.\" So I'll put -24.",
+ "raw_content": "<answer>-24</answer>",
+ "usage": {
+  "prompt_tokens": 131549,
+  "completion_tokens": 415,
+  "total_tokens": 131964,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.52,
+ "answer_tag_found": true,
+ "docfinqa_row": 873
+}

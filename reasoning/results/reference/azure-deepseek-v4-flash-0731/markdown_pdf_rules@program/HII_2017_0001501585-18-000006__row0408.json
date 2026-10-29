@@ -1,0 +1,67 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0408",
+ "format": "markdown_pdf_rules",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what portion of the equity compensation plan approved by security holders remains available for future issuance?",
+ "gold": "90.1%",
+ "finqa_id": "HII/2017/page_124.pdf-2",
+ "source_page": "page_124",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/markdown_pdf_rules/HII_2017_0001501585-18-000006.md",
+ "doc_chars": 465382,
+ "prompt_chars": 465583,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 465382,
+ "original_chars": 465382,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 102037,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 374,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "4087587",
+ "reasoning": "We need answer: \"what portion of the equity compensation plan approved by security holders remains available for future issuance?\" From Item 12 equity compensation plan table: Number of securities remaining available for future issuance under equity compensation plans (excluding securities reflected in column (a)) for approved plans: 4,087,587. Also total securities to be issued upon exercise outstanding options etc: 448,859. The question asks \"what portion ... remains available for future issuance?\" Could be fraction? \"portion\" might mean number of shares available. The table shows column (c) 4,087,587. But \"portion\" could be ratio of available to total authorized? Need parse. The question: \"what portion of the equity compensation plan approved by security holders remains available for future issuance?\" In the table, there is \"Number of Securities Remaining Available for Future Issuance Under Equity Compensation Plans (Excluding Securities Reflected in Column (a))\" for approved plans: 4,087,587. So answer is 4,087,587. But \"portion\" might ask as a fraction? The table gives number. The question likely expects the number. Let's check document: \"Equity compensation plans approved by security holders 448,859 $0.00 4,087,587\". So available for future issuance is 4,087,587. The answer should be that number. No units. So <answer>4,087,587</answer>. Need evidence: value | element. The element is table row \"Equity compensation plans approved by security holders\" column (c). We'll cite.",
+ "raw_content": "<evidence>4,087,587 | Equity compensation plans approved by security holders, column (c)</evidence>\n<program>4087587</program>\n<answer>4,087,587</answer>",
+ "usage": {
+  "prompt_tokens": 102341,
+  "completion_tokens": 374,
+  "total_tokens": 102715,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 102144
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.37,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "4,087,587",
+   "element": "Equity compensation plans approved by security holders, column (c)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "4087587",
+ "answer_model": "4,087,587",
+ "program_value": 4087587.0,
+ "docfinqa_row": 408
+}

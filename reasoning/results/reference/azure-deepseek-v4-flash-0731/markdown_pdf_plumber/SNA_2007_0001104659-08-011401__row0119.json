@@ -1,0 +1,50 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0119",
+ "format": "markdown_pdf_plumber",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what was the percentage change in the minority interest from 2005 to 2006",
+ "gold": "-32.4%",
+ "finqa_id": "SNA/2007/page_69.pdf-3",
+ "source_page": "page_69",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_plumber/SNA_2007_0001104659-08-011401.md",
+ "doc_chars": 371934,
+ "prompt_chars": 372096,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 371934,
+ "original_chars": 371934,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 94563,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 867,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-164.3%",
+ "reasoning": "We need percentage change in minority interest from 2005 to 2006. Minority interests and equity earnings (loss), net of tax: 2005 -1.4, 2006 -3.7. Percentage change = ( -3.7 - (-1.4) ) / | -1.4 | *100 = (-2.3)/1.4 *100 = -164.2857%? But note it's a negative number. Usually percentage change from -1.4 to -3.7 is ( -3.7 - (-1.4) ) / | -1.4 | = -2.3/1.4 = -164.3% (i.e., more negative). But question asks \"percentage change in the minority interest\" - likely they want the change in the value. Could be interpreted as ( -3.7 - (-1.4) ) / (-1.4) = 1.642857? Actually if you treat as change relative to original negative, it's -164.3%. But often they might want absolute change? Let's see. The document shows minority interests and equity earnings (loss) net of tax. For 2005 -1.4, 2006 -3.7. The change is -2.3. Percentage change = ( -2.3 / -1.4 ) *100 = 164.3%? Wait careful: (new - old)/old = (-3.7 - (-1.4)) / (-1.4) = (-2.3)/(-1.4) = 1.642857 = 164.3% increase? But that's weird because it went from -1.4 to -3.7, which is a more negative number. The percentage change formula gives +164.3% if you use old as negative. But typically percentage change with negative base is ambiguous. The question likely expects the simple calculation: ( -3.7 - (-1.4) ) / | -1.4 | *100 = -164.3%? Or maybe they want the change in absolute terms? Let's read the question: \"what was the percentage change in the minority interest from 2005 to 2006\" - they likely refer to the line item \"Minority interests and equity earnings (loss), net of tax\" which is -1.4 in 2005 and -3.7 in 2006. The percentage change is ( -3.7 - (-1.4) ) / (-1.4) *100 = 164.3%? But that would be an increase in magnitude. Alternatively, they might want the change in the value as a percentage of the 2005 value, which is -164.3% (since it decreased by 2.3 relative to 1.4). I think the standard interpretation: percentage change = (new - old)/|old| *100 = (-3.7 - (-1.4))/1.4 *100 = -2.3/1.4 *100 = -164.2857% ≈ -164.3%. But note that the line item is \"Minority interests and equity earnings (loss), net of tax\" which is a negative number. The question says \"minority interest\" - maybe they mean the minority interest component? But the line item includes equity earnings. However, the document shows \"Minority interests and equity earnings (loss), net of tax\" as a single line. The question likely refers to that. I'll compute -164.3%. But let's check if there is any other mention. In the MD&A, they say \"Minority interests and equity earnings (loss), net of tax (2.5) (3.7) (1.4)\" for 2007, 2006, 2005. So from 2005 to 2006: -1.4 to -3.7. Percentage change = ( -3.7 - (-1.4) ) / | -1.4 | *100 = -164.3%. I'll answer that.",
+ "raw_content": "<answer>-164.3%</answer>",
+ "usage": {
+  "prompt_tokens": 94710,
+  "completion_tokens": 867,
+  "total_tokens": 95577,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.93,
+ "answer_tag_found": true,
+ "docfinqa_row": 119
+}

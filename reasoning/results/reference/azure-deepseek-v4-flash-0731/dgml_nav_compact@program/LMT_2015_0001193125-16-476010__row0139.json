@@ -1,0 +1,76 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0139",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was average net sales for space systems in millions from 2013 to 2015?",
+ "gold": "9198",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "LMT_2015_0001193125-16-476010.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/FilingPartDesignation/CostOfSalesAnalysis/BusinessSegmentResults/SegmentSummaryOperatingResults"
+ ],
+ "r1_reasoning_chars": 3715,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 28884,
+  "completion_tokens": 863,
+  "total_tokens": 29747,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/FilingPartDesignation/CostOfSalesAnalysis/BusinessSegmentResults/SegmentSummaryOperatingResults"
+ ],
+ "content_chars": 8052,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "9198.333333",
+ "reasoning": "We need average net sales for Space Systems from 2013 to 2015. Figures: 2015: 9,105; 2014: 9,202; 2013: 9,288. Average = (9105+9202+9288)/3. Compute: 9105+9202=18307; +9288=27595; /3=9198.333... So answer 9198.33? The question says \"in millions\" so likely 9198.33. But maybe they want rounded? Usually average. We'll provide value.",
+ "raw_content": "<evidence>9,105 | SegmentNetSales: Space Systems (2015)\n9,202 | SegmentNetSales: Space Systems (2014)\n9,288 | SegmentNetSales: Space Systems (2013)</evidence>\n<program>divide(add(add(9105, 9202), 9288), 3)</program>\n<answer>9198.33</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2224,
+  "completion_tokens": 206,
+  "total_tokens": 2430,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "9,105",
+   "element": "SegmentNetSales: Space Systems (2015)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "9,202",
+   "element": "SegmentNetSales: Space Systems (2014)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "9,288",
+   "element": "SegmentNetSales: Space Systems (2013)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(add(9105, 9202), 9288), 3)",
+ "answer_model": "9198.33",
+ "program_value": 9198.333333333334,
+ "elapsed_s": 9.5,
+ "outline_source": "LMT_2015_0001193125-16-476010.outline.txt",
+ "outline_chars": 116705
+}

@@ -1,0 +1,88 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0439",
+ "format": "markdown_pdf_rules",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "how much more , in percent , was spent on october shares than november shares?",
+ "gold": "1229%",
+ "finqa_id": "IPG/2008/page_21.pdf-1",
+ "source_page": "page_21",
+ "ticker": "IPG",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_rules/IPG_2008_0001193125-09-040141.md",
+ "doc_chars": 363361,
+ "prompt_chars": 363528,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 363361,
+ "original_chars": 363361,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 87507,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 601,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "11.290897",
+ "reasoning": "We need answer: \"how much more, in percent, was spent on october shares than november shares?\" Need interpret: October shares purchased 29,704 at avg price $5.99; November 4,468 at $3.24. \"spent\" = total cost = shares * price. October spent = 29,704 * 5.99 = 177,? Compute: 29,704*5.99 = 29,704*6 - 29,704*0.01 = 178,224 - 297.04 = 177,926.96. November = 4,468*3.24 = 4,468*3 + 4,468*0.24 = 13,404 + 1,072.32 = 14,476.32. Difference = 163,450.64. Percent more = difference / November *100 = 163,450.64 / 14,476.32 *100 ≈ 1129.1%. Alternatively \"how much more in percent\" could mean October spending as percent of November? \"how much more ... than\" = percentage increase = (Oct - Nov)/Nov *100. Need compute exactly. Use figures as printed: 29,704 shares, $5.99, 4,468 shares, $3.24. Program: multiply(29704, 5.99) etc. Need evidence list. Answer inside tags only value. Let's compute precisely: 29,704*5.99 = 177,926.96. 4,468*3.24 = 14,476.32. Difference = 163,450.64. Divide by 14,476.32 = 11.290? 14,476.32*11 = 159,239.52, remainder 4,211.12, /14,476.32=0.2909. So 1129.09%. Round? Probably 1129.1%. Need final answer with no units? Question asks percent, so include %? Instructions: \"containing only the value itself with no explanation or units unless the question asks for them.\" It asks \"in percent\" so include % sign? Usually value with % sign. I'll put 1129.1%.",
+ "raw_content": "<evidence>\n29,704 | October 1-31 Total Number of Shares Purchased\n$5.99 | October 1-31 Average Price Paid per Share\n4,468 | November 1-30 Total Number of Shares Purchased\n$3.24 | November 1-30 Average Price Paid per Share\n</evidence>\n\n<program>\ndivide(subtract(multiply(29704, 5.99), multiply(4468, 3.24)), multiply(4468, 3.24))\n</program>\n\n<answer>1129.1%</answer>",
+ "usage": {
+  "prompt_tokens": 87811,
+  "completion_tokens": 601,
+  "total_tokens": 88412,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.6,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "29,704",
+   "element": "October 1-31 Total Number of Shares Purchased",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$5.99",
+   "element": "October 1-31 Average Price Paid per Share",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "4,468",
+   "element": "November 1-30 Total Number of Shares Purchased",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$3.24",
+   "element": "November 1-30 Average Price Paid per Share",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(subtract(multiply(29704, 5.99), multiply(4468, 3.24)), multiply(4468, 3.24))",
+ "answer_model": "1129.1%",
+ "program_value": 11.290897134078271,
+ "docfinqa_row": 439
+}

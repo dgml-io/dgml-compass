@@ -1,0 +1,71 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0108",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "what is the percent of the square feet in owned facilities in other countries?",
+ "gold": "35.8%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "INTC_2013_0000050863-14-000020.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/Report/UnresolvedStaffCommentsStatus/Report/FacilitySquareFootage"
+ ],
+ "r1_reasoning_chars": 1877,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 25706,
+  "completion_tokens": 411,
+  "total_tokens": 26117,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/Report/UnresolvedStaffCommentsStatus/Report/FacilitySquareFootage"
+ ],
+ "content_chars": 1114,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "30.418944",
+ "reasoning": "We need percent of square feet in owned facilities in other countries. Owned facilities other countries = 16.7 (millions). Total owned facilities = 46.6. Percent = 16.7 / 46.6 * 100. Need compute. Also maybe percent of total square feet? Question says \"percent of the square feet in owned facilities in other countries\" - likely owned facilities in other countries as a percentage of total owned facilities. Or could be percentage of total square feet? Wording: \"percent of the square feet in owned facilities in other countries\" - ambiguous. Usually \"what is the percent of the square feet in owned facilities in other countries\" means owned facilities in other countries as a share of total owned facilities? Or share of total facilities? Let's parse: \"the square feet in owned facilities in other countries\" - the amount is 16.7. Percent of what? The question likely asks: what percent of total square feet (all facilities) is in owned facilities in other countries? Or what percent of owned facilities is in other countries? The phrase \"percent of the square feet in owned facilities in other countries\" could be \"what is the percent [of total square feet] that are in owned facilities in other countries?\" But the table has total facilities 54.9. Let's see typical question: \"what is the percent of the square feet in owned facilities in other countries?\" It might be asking: among owned facilities, what percentage is in other countries? Or among all facilities, what percentage is owned and in other countries? The wording \"the square feet in owned facilities in other countries\" - the numerator is 16.7. Denominator could be total owned (46.6) or total all (54.9). The question says \"percent of the square feet in owned facilities in other countries\" - not \"percent of total square feet\". It might be \"what is the percent of the square feet [that are] in owned facilities in other countries?\" That would be 16.7 / 54.9. But \"owned facilities in other countries\" is a subset of total. Let's examine: The table has rows: Owned facilities, Leased facilities, Total facilities. Columns: US, Other Countries, Total. The question: \"what is the percent of the square feet in owned facilities in other countries?\" Could be asking: what percentage of total square feet is in owned facilities in other countries? That is 16.7 / 54.9. Or what percentage of owned facilities is in other countries? That is 16.7 / 46.6. The phrase \"percent of the square feet in owned facilities in other countries\" - if you say \"percent of the square feet\" you need a base. Usually \"what percent of X is Y\" means Y/X. Here \"the square feet in owned facilities in other countries\" is Y. The base might be \"total square feet\" implied. But the question doesn't say \"of total\". It says \"what is the percent of the square feet in owned facilities in other countries?\" That could be interpreted as \"what percent of the total square feet is accounted for by owned facilities in other countries?\" I think the intended answer is 16.7 / 54.9 * 100 = 30.4% approximately. But let's check: 16.7/54.9 = 0.3042 -> 30.4%. 16.7/46.6 = 0.3584 -> 35.8%. Which is more likely? The question asks \"percent of the square feet in owned facilities in other countries\" - if you want the share of owned facilities that are in other countries, you'd say \"what percent of owned facilities are in other countries?\" The given wording \"percent of the square feet in owned facilities in other countries\" might be a direct extraction: the value 16.7 is the square feet in owned facilities in other countries. The percent of that relative to total? The question likely from a dataset where they ask \"what is the percent of the square feet in owned facilities in other countries?\" meaning the percentage that owned facilities in other countries represent of total square feet. I'll go with 16.7 / 54.9. But let's see if there is any other clue. The table has \"Total facilities\" row. The question says \"owned facilities in other countries\" - that's a cell. The percent could be of total facilities. I'll compute both? The answer must be one. I'll reason: The question asks \"what is the percent of the square feet in owned facilities in other countries?\" It doesn't specify \"of total square feet\" but typically when asking \"what is the percent of X\" you need a base. The base could be the total square feet (all facilities) because that's the overall total. Also the phrase \"the square feet in owned facilities in other countries\" is a subset of total square feet. So percent = (owned other countries) / (total all) * 100. I'll use 16.7 / 54.9.\n\nLet's compute exactly: 16.7 / 54.9 = 0.304189... *100 = 30.4189... So 30.4% if rounding to one decimal. The question doesn't specify rounding. I'll give 30.4% or 30.42%. The program should output the value. I'll use divide(16.7, 54.9) then multiply by 100? The program can be multiply(divide(16.7, 54.9), 100). But the answer should be a number, likely percentage. I'll output 30.4 (or 30.42). The benchmark expects a numeric value. I'll output 30.4.\n\nBut let's double-check: The table says \"Square Feet in Millions\" so values are in millions. The percent is unitless. So 16.7/54.9*100 = 30.4.\n\nI'll list evidence: 16.7 | Owned facilities Other Countries; 54.9 | Total facilities Total. Then program multiply(divide(16.7, 54.9), 100).",
+ "raw_content": "<evidence>16.7 | Owned facilities Other Countries\n54.9 | Total facilities Total</evidence>\n<program>multiply(divide(16.7, 54.9), 100)</program>\n<answer>30.4</answer>",
+ "r2_usage": {
+  "prompt_tokens": 631,
+  "completion_tokens": 1347,
+  "total_tokens": 1978,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "16.7",
+   "element": "Owned facilities Other Countries",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "54.9",
+   "element": "Total facilities Total",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "multiply(divide(16.7, 54.9), 100)",
+ "answer_model": "30.4",
+ "program_value": 30.41894353369763,
+ "elapsed_s": 21.39,
+ "outline_source": "INTC_2013_0000050863-14-000020.outline.txt",
+ "outline_chars": 102835
+}

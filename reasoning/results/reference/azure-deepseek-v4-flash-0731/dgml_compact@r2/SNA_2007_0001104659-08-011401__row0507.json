@@ -1,0 +1,53 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0507",
+ "format": "dgml_compact",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what is the percentage change in the balance of the minority interests in consolidated subsidiaries from 2006 to 2007?",
+ "gold": "3.0%",
+ "finqa_id": "SNA/2007/page_69.pdf-2",
+ "source_page": "page_69",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml_compact/SNA_2007_0001104659-08-011401.dgml.txt",
+ "doc_chars": 428718,
+ "prompt_chars": 428925,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 428718,
+ "original_chars": 428718,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 97509,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 187,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "2.98%",
+ "reasoning": "We need to find minority interests in consolidated subsidiaries balance from 2006 to 2007. The document mentions \"Minority interests in consolidated subsidiaries of $17.3 million as of December 29, 2007, and $16.8 million as of December 30, 2006, are included in 'Other long-term liabilities'\". So we have balances: 2007: 17.3, 2006: 16.8. Percentage change = (17.3 - 16.8)/16.8 * 100 = 0.5/16.8 * 100 ≈ 2.976% ≈ 2.98%. The question asks \"percentage change in the balance of the minority interests in consolidated subsidiaries from 2006 to 2007\". So answer is approximately 2.98%. We'll put that.",
+ "raw_content": "<answer>2.98%</answer>",
+ "usage": {
+  "prompt_tokens": 97661,
+  "completion_tokens": 187,
+  "total_tokens": 97848,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 97536
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.42,
+ "answer_tag_found": true,
+ "docfinqa_row": 507
+}

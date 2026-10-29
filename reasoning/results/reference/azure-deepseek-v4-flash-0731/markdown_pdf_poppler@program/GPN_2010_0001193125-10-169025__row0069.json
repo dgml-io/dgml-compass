@@ -1,0 +1,84 @@
+{
+ "id": "GPN_2010_0001193125-10-169025__row0069",
+ "format": "markdown_pdf_poppler",
+ "key": "GPN_2010_0001193125-10-169025",
+ "question": "what is the percentage change in the total fair value of non-vested shares from 2009 to 2010?",
+ "gold": "-4.1%",
+ "finqa_id": "GPN/2010/page_89.pdf-4",
+ "source_page": "page_89",
+ "ticker": "GPN",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/markdown_pdf_poppler/GPN_2010_0001193125-10-169025.md",
+ "doc_chars": 416799,
+ "prompt_chars": 416981,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 416799,
+ "original_chars": 416799,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 71861,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1149,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-6.430446",
+ "reasoning": "We need to find the total fair value of non-vested shares at 2009 and 2010. The table shows non-vested shares and weighted average grant-date fair value. For 2009: shares 762, weighted average fair value $42. For 2010: shares 713, weighted average fair value $42. Total fair value = shares * fair value. 2009: 762*42 = 32,004 (in thousands? Actually shares in thousands, fair value in dollars, so total in thousands of dollars). 2010: 713*42 = 29,946. Percentage change = (29,946 - 32,004)/32,004 = -2,058/32,004 = -0.0643 = -6.43%. So answer -6.43% or -6.4%. Need to provide evidence: figures from the table. The table shows \"Non-vested at May 31, 2009 762 $42\" and \"Non-vested at May 31, 2010 713 $42\". Also note that the weighted average grant-date fair value is given as $42 for both. So compute.\n\nWe need to list evidence: value | element. The element is the row label or heading. So we can cite \"762 | Non-vested at May 31, 2009\" and \"$42 | Weighted Average Grant-Date Fair Value\" but careful: the table has columns Shares and Weighted Average Grant-Date Fair Value. So we can cite \"762 | Non-vested at May 31, 2009\" and \"42 | Weighted Average Grant-Date Fair Value\" but we need to be precise. The question asks for percentage change in total fair value. So we need to compute multiply(762,42) and multiply(713,42) then percentage change. Program: divide(subtract(multiply(713,42), multiply(762,42)), multiply(762,42)) * 100? But the program should be exact. The answer is a percentage. We can output the numeric value. The program should be nested calls. So program: multiply(divide(subtract(multiply(713,42), multiply(762,42)), multiply(762,42)), 100) but that gives -6.43... Actually we can just output the percentage as a number. The instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So we output -6.43 or -6.4? We'll compute exactly: 713*42 = 29946, 762*42 = 32004, difference = -2058, divide by 32004 = -0.064304... times 100 = -6.4304%. So answer -6.43% or -6.4%. We'll put -6.43.\n\nNow evidence: we need to list figures used. We use 762, 42, 713, 42. But we need to cite them as value | element. The element is the row label or heading. The table has rows \"Non-vested at May 31, 2009\" and \"Non-vested at May 31, 2010\". The columns are \"Shares\" and \"Weighted Average Grant-Date Fair Value\". So we can cite \"762 | Non-vested at May 31, 2009\" and \"42 | Weighted Average Grant-Date Fair Value\" but that is ambiguous. Better to cite \"762 | Non-vested at May 31, 2009 (Shares)\" and \"42 | Non-vested at May 31, 2009 (Weighted Average Grant-Date Fair Value)\" etc. But the instruction says \"value exactly as printed\" and \"element is the name of the DGML element it sits in (for a document without element names, the row label or heading next to it)\". So we can use the row label. We'll list four lines: 762 | Non-vested at May 31, 2009, 42 | Non-vested at May 31, 2009, 713 | Non-vested at May 31, 2010, 42 | Non-vested at May 31, 2010. But that duplicates. Actually we need to list each figure we read. We read 762 and 42 from the 2009 row, and 713 and 42 from 2010 row. So we can list them as such.\n\nNow program: multiply(divide(subtract(multiply(713,42), multiply(762,42)), multiply(762,42)), 100) but that gives a number. Alternatively we can just output the percentage. The program is executed by the benchmark, so it must be exact. We'll write that.\n\nLet's produce answer.",
+ "raw_content": "<evidence>\n762 | Non-vested at May 31, 2009\n42 | Non-vested at May 31, 2009\n713 | Non-vested at May 31, 2010\n42 | Non-vested at May 31, 2010\n</evidence>\n<program>\nmultiply(divide(subtract(multiply(713,42), multiply(762,42)), multiply(762,42)), 100)\n</program>\n<answer>-6.43</answer>",
+ "usage": {
+  "prompt_tokens": 72174,
+  "completion_tokens": 1149,
+  "total_tokens": 73323,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 19.36,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "762",
+   "element": "Non-vested at May 31, 2009",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "42",
+   "element": "Non-vested at May 31, 2009",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "713",
+   "element": "Non-vested at May 31, 2010",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "42",
+   "element": "Non-vested at May 31, 2010",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(multiply(713,42), multiply(762,42)), multiply(762,42)), 100)",
+ "answer_model": "-6.43",
+ "program_value": -6.4304461942257225,
+ "docfinqa_row": 69
+}

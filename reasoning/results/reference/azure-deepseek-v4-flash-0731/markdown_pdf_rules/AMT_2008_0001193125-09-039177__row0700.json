@@ -1,0 +1,50 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0700",
+ "format": "markdown_pdf_rules",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "in 2006 what was percentage change in the employee separations liabilities",
+ "gold": "-65.1%",
+ "finqa_id": "AMT/2008/page_107.pdf-2",
+ "source_page": "page_107",
+ "ticker": "AMT",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_rules/AMT_2008_0001193125-09-039177.md",
+ "doc_chars": 413481,
+ "prompt_chars": 413644,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 413481,
+ "original_chars": 413481,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93036,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 372,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-65.05%",
+ "reasoning": "We need to find the employee separations liability in 2006 and the percentage change. The table in note 14 shows activity for employee separations. It shows liability as of Dec 31, 2005: $20,963 (in thousands). Then expense 2006: $496, cash payments 2006: $(12,389), other 2006: $(1,743). So liability as of Dec 31, 2006 = 20,963 + 496 - 12,389 - 1,743 = 7,327. The question asks \"in 2006 what was percentage change in the employee separations liabilities\" - likely from 2005 to 2006. So percentage change = (7,327 - 20,963)/20,963 * 100 = (-13,636)/20,963 ≈ -65.05%. So answer -65.05% or approximately -65%. The question says \"percentage change\" so we give the number. Probably -65.05% or -65.1%. Let's compute precisely: 20,963 - 7,327 = 13,636. 13,636/20,963 = 0.6505... so -65.05%. We'll put -65.05% or -65.1%. The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for percentage change, so we can include % sign? It says \"no explanation or units unless the question asks for them.\" The question asks for percentage change, so we should include the % sign. So answer -65.05% or -65.1%. I'll put -65.05%.",
+ "raw_content": "<answer>-65.05%</answer>",
+ "usage": {
+  "prompt_tokens": 93179,
+  "completion_tokens": 372,
+  "total_tokens": 93551,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 6.92,
+ "answer_tag_found": true,
+ "docfinqa_row": 700
+}

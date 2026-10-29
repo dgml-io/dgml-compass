@@ -1,0 +1,90 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0119",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what was the percentage change in the minority interest from 2005 to 2006",
+ "gold": "-32.4%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "SNA_2007_0001104659-08-011401.outline.txt",
+ "doc_source": "SNA_2007_0001104659-08-011401.dgml.xml",
+ "outline_chars": 89754,
+ "predicted_xpaths": [
+  "/chunk/ManagementDiscussion/FourthQuarterResults/FiscalYearComparison",
+  "/chunk/ManagementDiscussion/FourthQuarterResults/FiscalYearComparison/table/MinorityInterestsAndEquityEarnings"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 3051,
+ "r1_usage": {
+  "prompt_tokens": 22366,
+  "completion_tokens": 753,
+  "total_tokens": 23119,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ManagementDiscussion/FourthQuarterResults/FiscalYearComparison",
+  "/chunk/ManagementDiscussion/FourthQuarterResults/FiscalYearComparison/table/MinorityInterestsAndEquityEarnings"
+ ],
+ "content_chars": 31303,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "1.642857",
+ "reasoning": "The question asks for the percentage change in minority interest from 2005 to 2006. The document shows \"Minority interests and equity earnings (loss), net of tax\" with values (3.7) for 2006 and (1.4) for 2005. However, this line combines minority interests and equity earnings. The question specifically asks about \"minority interest\" - the document doesn't separate minority interest from equity earnings in this line. But the question might be interpreted as this combined line. Let me check if there's a separate minority interest figure. The line is \"Minority interests and equity earnings (loss), net of tax\" - it's combined. The percentage change from (1.4) to (3.7) would be (3.7 - 1.4)/1.4 = 2.3/1.4 = 164.3% increase. But wait, the question asks \"percentage change in the minority interest\" - perhaps they mean this combined line. The document doesn't have a separate minority interest line. I'll use the combined line. Percentage change = (3.7 - 1.4)/1.4 = 2.3/1.4 = 1.642857... = 164.3%. But the values are negative (losses), so the change is from -1.4 to -3.7, which is an increase in the loss. Percentage change = (-3.7 - (-1.4))/(-1.4) = (-2.3)/(-1.4) = 1.642857 = 164.3% increase. Hmm, but the question might expect the percentage change in the minority interest figure itself. Let me just compute it. Actually, the question says \"minority interest\" - the line is \"Minority interests and equity earnings (loss)\". I'll use that. Percentage change = (3.7 - 1.4)/1.4 = 1.642857... = 164.3%. But wait, the values are negative. Let me be careful. The change amount is (2.3) - the difference. The percentage change is typically (new - old)/old. Using absolute values? The document shows \"Change\" as (2.3) and \"NM\" for percentage. So the percentage change is not meaningful (NM) because the base is negative. But the question asks for it. I'll compute (3.7 - 1.4)/1.4 = 1.642857 = 164.3%. But since the values are negative, the percentage change is ambiguous. The document says NM (not meaningful). However, the question asks for the percentage change. I'll compute it as (3.7 - 1.4)/1.4 = 164.3%. But actually, the standard formula for percentage change with negative numbers is tricky. Let me just use the absolute values? Or the signed values? The question likely expects a numeric answer. I'll compute (3.7 - 1.4)/1.4 = 1.642857... = 164.3%. But wait, the values are negative: -3.7 and -1.4. The change is -3.7 - (-1.4) = -2.3. Percentage change = (-2.3)/(-1.4) = 1.642857 = 164.3% increase. So the answer is 164.3%. But the document says NM. Hmm. Let me check if there's a separate minority interest figure elsewhere. The question specifically says \"minority interest\" - maybe there's a line item. In the income statement table, there's \"Earnings before minority interests and equity earnings (loss)\" and \"Net earnings from continuing operations\" - the difference is minority interests and equity earnings. But the line \"Minority interests and equity earnings (loss), net of tax\" is the combined. I'll use that. I'll compute the percentage change. Since the question asks for percentage change, I'll compute (3.7 - 1.4)/1.4 = 1.642857... = 164.3%. But let me double-check: the values are in millions, negative. The percentage change is (new - old)/old * 100. Using signed values: (-3.7 - (-1.4))/(-1.4) = (-2.3)/(-1.4) = 1.642857 = 164.3%. So the answer is 164.3%. I'll provide that.",
+ "raw_content": "<evidence>-3.7 | /chunk/ManagementDiscussion/FourthQuarterResults/FiscalYearComparison/table/MinorityInterestsAndEquityEarnings/MonetaryAmount\n-1.4 | /chunk/ManagementDiscussion/FourthQuarterResults/FiscalYearComparison/table/MinorityInterestsAndEquityEarnings/MonetaryAmount</evidence>\n\n<program>divide(subtract(-3.7, -1.4), -1.4)</program>\n\n<answer>164.3%</answer>",
+ "r2_usage": {
+  "prompt_tokens": 8256,
+  "completion_tokens": 1068,
+  "total_tokens": 9324,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "prompt_tokens": 8256,
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "stop",
+   "prompt_tokens": 8256,
+   "completion_tokens": 1068,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 1,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "3.7",
+   "element": "chunk/ManagementDiscussion/FourthQuarterResults/FiscalYearComparison/table/MinorityInterestsAndEquityEarnings/MonetaryAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "1.4",
+   "element": "chunk/ManagementDiscussion/FourthQuarterResults/FiscalYearComparison/table/MinorityInterestsAndEquityEarnings/MonetaryAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(-3.7, -1.4), -1.4)",
+ "answer_model": "164.3%",
+ "program_value": 1.6428571428571432,
+ "elapsed_s": 37.66
+}

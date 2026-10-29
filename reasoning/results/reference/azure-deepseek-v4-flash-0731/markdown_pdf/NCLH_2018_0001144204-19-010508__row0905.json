@@ -1,0 +1,53 @@
+{
+ "id": "NCLH_2018_0001144204-19-010508__row0905",
+ "format": "markdown_pdf",
+ "key": "NCLH_2018_0001144204-19-010508",
+ "question": "what percent of long-term debt was paid off in 2021?",
+ "gold": "38.6%",
+ "finqa_id": "NCLH/2018/page_97.pdf-3",
+ "source_page": "page_97",
+ "ticker": "NCLH",
+ "fiscal_year": "2018",
+ "source_file": "data/docs/markdown_pdf/NCLH_2018_0001144204-19-010508.md",
+ "doc_chars": 382420,
+ "prompt_chars": 382561,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 382420,
+ "original_chars": 382420,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 88879,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1315,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "38.6%",
+ "reasoning": "We need to find what percent of long-term debt was paid off in 2021. The question likely refers to scheduled principal repayments on long-term debt as of Dec 31, 2018. In the document, there is a table \"The following are scheduled principal repayments on long-term debt including capital lease obligations as of December 31, 2018 for each of the next five years\". It shows for 2021: $2,549,621 (in thousands). Total long-term debt as of Dec 31, 2018 is $6,492,091 (from balance sheet or note). But the question asks \"what percent of long-term debt was paid off in 2021?\" That could be the scheduled repayment in 2021 divided by total long-term debt. However, note that the scheduled principal repayments table includes capital lease obligations and total is $6,609,866, which is slightly different from the debt balance of $6,492,091 (which excludes deferred financing fees etc). But the question likely expects using the scheduled repayment amount for 2021 relative to the total debt. Alternatively, it might ask about the percentage of long-term debt that matures in 2021. Let's compute: 2,549,621 / 6,492,091 = 0.3927... = 39.27%. But we need to check if the question is about \"paid off\" meaning principal repayment scheduled. The document also mentions that in 2021 there is a large amount due because of the term loans and notes. So answer is approximately 39.3%. But let's be precise: 2,549,621 / 6,492,091 = 0.3927... = 39.27%. Alternatively, using total scheduled repayments of 6,609,866, the percentage would be 2,549,621/6,609,866 = 0.3857 = 38.57%. Which one is correct? The question says \"long-term debt\" - the balance sheet shows long-term debt including current portion of $6,492,091. The scheduled repayments table is for long-term debt including capital lease obligations, and the total there is $6,609,866. But the question likely refers to the debt balance. However, the table is explicitly \"scheduled principal repayments on long-term debt including capital lease obligations\". So the denominator should be the total scheduled repayments, which is $6,609,866. But the question says \"what percent of long-term debt was paid off in 2021?\" That could be interpreted as the portion of the total debt that is due in 2021. Typically, one would use the total debt outstanding. The balance sheet shows total debt of $6,492,091. But the scheduled repayments table sums to $6,609,866 because it includes capital lease obligations and maybe other items. The difference is $117,775. The note says \"Long-term debt includes discount and premiums aggregating $0.4 million and capital leases.\" So the scheduled repayments include capital leases. The balance sheet includes capital leases as well. Actually, the balance sheet line \"Long-term debt\" includes current portion and long-term, total $6,492,091. The scheduled repayments table total is $6,609,866, which is higher. That might be because the scheduled repayments include interest? No, it says principal repayments. Possibly the difference is due to unamortized discounts and deferred financing fees. The note says \"Long-term debt includes discount and premiums aggregating $0.4 million and capital leases.\" So the carrying value is $6,492,091, but the face value of debt is $6,609,866? Actually, the scheduled repayments are based on contractual principal amounts, not carrying value. So the question likely expects using the contractual principal. But the question says \"long-term debt\" which is the carrying amount. However, in common parlance, \"long-term debt\" might refer to the total debt obligations. I think the intended answer is the scheduled repayment in 2021 divided by total scheduled repayments, which is 2,549,621 / 6,609,866 = 38.57%. But let's see if there is any other mention. The document also has a table of contractual obligations that includes long-term debt of $6,609,866 (the same as scheduled repayments). So that is the total contractual debt. So the percentage of long-term debt paid off in 2021 is 2,549,621 / 6,609,866 = 0.3857 = 38.57%. I'll compute exactly: 2,549,621 / 6,609,866 = 0.3857... Let's do division: 6,609,866 * 0.385 = 2,544,798, remainder 4,823, so 0.3857 gives 2,549,? Actually 6,609,866 * 0.3857 = 2,549,? 6,609,866 * 0.3857 = 2,549,? Let's calculate: 6,609,866 * 0.3857 = 6,609,866 * 0.38 = 2,511,749.08, plus 0.0057*6,609,866 = 37,676.2, total 2,549,425.3, close to 2,549,621, so about 0.3857. So 38.57%. I'll round to 38.6% or 38.57%. The question asks for percent, so I'll give 38.6% or 38.57%. I'll put 38.6% as a reasonable answer. But let's check if there is any other interpretation. The question might be about the actual debt paid off in 2021 based on the cash flow statement? No, that's historical. The document is for fiscal year 2018, so it's forward-looking. So it's the scheduled repayment. So answer is 38.6% (or 38.57%). I'll put 38.6% inside the answer tags.",
+ "raw_content": "<answer>38.6%</answer>",
+ "usage": {
+  "prompt_tokens": 89021,
+  "completion_tokens": 1315,
+  "total_tokens": 90336,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 88832
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 6.24,
+ "answer_tag_found": true,
+ "docfinqa_row": 905
+}

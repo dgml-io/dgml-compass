@@ -1,0 +1,78 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0119",
+ "format": "dgml_compact",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what was the percentage change in the minority interest from 2005 to 2006",
+ "gold": "-32.4%",
+ "finqa_id": "SNA/2007/page_69.pdf-3",
+ "source_page": "page_69",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml_compact/SNA_2007_0001104659-08-011401.dgml.txt",
+ "doc_chars": 428718,
+ "prompt_chars": 428880,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 428718,
+ "original_chars": 428718,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 97509,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 986,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "5.7143%",
+ "reasoning": "We need percentage change in minority interest from 2005 to 2006. Minority interests figures: In Note 1, minority interests and equity earnings table: 2007 (4.9), 2006 (3.7), 2005 (3.5). But question says \"minority interest\" - likely the minority interests line item. In Selected Financial Data, \"Minority interests and equity earnings (loss), net of tax\" is (2.5), (3.7), (1.4) for 2007, 2006, 2005. But that includes equity earnings. The question specifically \"minority interest\" - maybe the component \"Minority interests\" from Note 1: 2006 $3.7, 2005 $3.5. Percentage change from 2005 to 2006: (3.7-3.5)/3.5 = 0.2/3.5 = 5.7142857% ~ 5.7%. But note the sign: minority interests are expenses (negative). The percentage change in the absolute value? Usually percentage change in the amount. The question says \"minority interest\" singular. In the income statement, \"Minority interests and equity earnings (loss), net of tax\" is a line. But the component \"Minority interests\" is given in Note 1. The question likely expects the change in the minority interest component. Let's check the document: In Note 1, table: Minority interests | $ (4.9) | $ (3.7) | $ (3.5) for 2007, 2006, 2005. So from 2005 to 2006: (3.7 - 3.5)/3.5 = 0.2/3.5 = 0.057142857 = 5.7142857%. If we consider the negative sign, the change is ( -3.7 - (-3.5) ) / (-3.5) = (-0.2)/(-3.5) = 0.05714 same. So answer 5.7% (or 5.71%). The question asks \"percentage change\" - likely positive. We'll provide 5.7% or 5.71%. Use exact: 0.2/3.5 = 0.057142857 = 5.7142857%. We'll output 5.7% or 5.71%. The instruction: \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So just the number, maybe 5.7. But they might expect percentage. We'll put 5.7%? The question asks \"what was the percentage change\" - so include % sign? Usually they want the value. We'll put 5.7% or 5.71%. Let's compute exactly: 3.7/3.5 = 1.057142857, so change 5.7142857%. We'll put 5.7% or 5.71%. I'll put 5.7% but to be precise 5.71%. Let's see if there is any other interpretation: The line \"Minority interests and equity earnings (loss), net of tax\" in Selected Financial Data: 2006 (3.7), 2005 (1.4). That would be a huge change. But the question says \"minority interest\" not \"minority interests and equity earnings\". So the component is correct.\n\nEvidence: Minority interests | $ (4.9) | $ (3.7) | $ (3.5) from Note 1. Also maybe the line in Selected Financial Data. We'll cite that.\n\nProgram: divide(subtract(3.7, 3.5), 3.5) = 0.057142857. But the figures are printed as (3.7) and (3.5) with parentheses. We'll use 3.7 and 3.5.\n\nAnswer: 5.7% or 0.057? The question asks percentage change, so we give 5.7% or 5.71%. I'll put 5.7% inside tags.",
+ "raw_content": "<evidence>\n$ (4.9) | Minority interests (Note 1)\n$ (3.7) | Minority interests (Note 1)\n$ (3.5) | Minority interests (Note 1)\n</evidence>\n<program>divide(subtract(3.7, 3.5), 3.5)</program>\n<answer>5.7%</answer>",
+ "usage": {
+  "prompt_tokens": 97814,
+  "completion_tokens": 986,
+  "total_tokens": 98800,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 94464
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.4,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ (4.9)",
+   "element": "Minority interests (Note 1)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ (3.7)",
+   "element": "Minority interests (Note 1)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ (3.5)",
+   "element": "Minority interests (Note 1)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(3.7, 3.5), 3.5)",
+ "answer_model": "5.7%",
+ "program_value": 0.0571428571428572,
+ "docfinqa_row": 119
+}

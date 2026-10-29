@@ -1,0 +1,48 @@
+# Does the labeler ranking hold under another transcriber? Six label models with the
+# transcriber held at Gemini 3.6 Flash; includes Gemini 3.6 Flash in both roles.
+#
+# The reference for this spec is the earlier implementation's run 20260925-200002-labelgm3,
+# imported scoped to the bundled corpus (scripts/import_mca_run.py). Its Haiku labeler
+# is Haiku 4.5 -- the run predates Haiku 5.5 -- so the arm list keeps it for the cell ids to
+# match the reference. compass-label-gemini-haiku55 is the Haiku 5.5 counterpart.
+#
+# Runs over the 9 bundled docsets (data/corpus), 6 documents each, 3 draws.
+# Price it first: dgc plan -e specs/compass-label-gemini.yaml
+name: compass-label-gemini
+description: 'Labeler sweep: generation.label_model varies, generation.model held at Gemini 3.6 Flash.'
+corpus:
+  docsets:
+    include:
+    - z4ervk9ic0oo/8frgx7rlbew3
+    - z4ervk9ic0oo/hcqfkilviuq3
+    - z4ervk9ic0oo/i0ycfsrfx0av
+    - z4ervk9ic0oo/nqkh1hkhhkaf
+    - z4ervk9ic0oo/qve3rqreikmn
+    - z4ervk9ic0oo/uzruqpzkyugz
+    - z4ervk9ic0oo/vg52pfjb0wbf
+    - z4ervk9ic0oo/yrrrq1d5kili
+    - z4ervk9ic0oo/o9dmulfkp0ii
+  max_files_per_docset: 6
+  sampling: fixed
+  require_gold: false
+axes:
+  generation.label_model:
+  - anthropic/claude-haiku-4-5
+  - anthropic/claude-opus-5
+  - anthropic/claude-sonnet-5
+  - gemini/gemini-3.6-flash
+  - gemini/gemini-3.1-flash-lite
+  - openai/gpt-5.5
+fixed:
+  generation.model: gemini/gemini-3.6-flash
+  schema_tier: none
+  window_size: 10
+  text_mode: digital
+draws: 3
+metrics:
+- extraction
+- reference_free
+- economics
+- tree
+budget_usd: 150
+seed: 20260917

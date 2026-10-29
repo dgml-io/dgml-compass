@@ -1,0 +1,76 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0149",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "what was the percent of the impairment charges to the net revenue in 2013",
+ "gold": "0.5%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "INTC_2013_0000050863-14-000020.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/ManagementDiscussionAnalysis/ManagementDiscussionAnalysis/TableOfContentsIndex/ResultsOfOperations/ConsolidatedIncome"
+ ],
+ "r1_reasoning_chars": 4387,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 25709,
+  "completion_tokens": 1039,
+  "total_tokens": 26748,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ManagementDiscussionAnalysis/ManagementDiscussionAnalysis/TableOfContentsIndex/ResultsOfOperations/ConsolidatedIncome"
+ ],
+ "content_chars": 3956,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "50.0000%",
+ "reasoning": "We need answer percent of impairment charges to net revenue in 2013. From table: Restructuring and asset impairment charges 240, % of Net Revenue 0.5%. Net revenue 52,708. So percent is 0.5% as printed. Need evidence and program.",
+ "raw_content": "<evidence>240 | RestructuringAssetImpairment: Restructuring and asset impairment charges (2013 Dollars)\n0.5 % | RestructuringAssetImpairment: 2013 % of Net Revenue\n52,708 | NetRevenue: Net revenue (2013 Dollars)</evidence>\n<program>0.5</program>\n<answer>0.5%</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1480,
+  "completion_tokens": 139,
+  "total_tokens": 1619,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "240",
+   "element": "RestructuringAssetImpairment: Restructuring and asset impairment charges (2013 Dollars)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "0.5 %",
+   "element": "RestructuringAssetImpairment: 2013 % of Net Revenue",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "52,708",
+   "element": "NetRevenue: Net revenue (2013 Dollars)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "0.5",
+ "answer_model": "0.5%",
+ "program_value": 0.5,
+ "elapsed_s": 12.72,
+ "outline_source": "INTC_2013_0000050863-14-000020.outline.txt",
+ "outline_chars": 102835
+}

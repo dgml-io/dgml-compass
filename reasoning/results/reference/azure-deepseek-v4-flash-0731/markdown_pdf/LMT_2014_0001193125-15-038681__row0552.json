@@ -1,0 +1,53 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0552",
+ "format": "markdown_pdf",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "in 2014 what was the ratio of the estimated future benefit payments due in 2015 compared to the amount after 2020",
+ "gold": "0.15",
+ "finqa_id": "LMT/2014/page_91.pdf-4",
+ "source_page": "page_91",
+ "ticker": "LMT",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf/LMT_2014_0001193125-15-038681.md",
+ "doc_chars": 433601,
+ "prompt_chars": 433803,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 433601,
+ "original_chars": 433601,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 92728,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1004,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.1564",
+ "reasoning": "We need ratio of estimated future benefit payments due in 2015 compared to amount after 2020. From Note 9, table: Qualified defined benefit pension plans: 2015 $2,070, 2020-2024 $13,430. Retiree medical and life insurance: 2015 $190, 2020-2024 $1,020. The question says \"estimated future benefit payments\" - likely total? The table shows both plans. The question: \"in 2014 what was the ratio of the estimated future benefit payments due in 2015 compared to the amount after 2020\" - probably for qualified defined benefit pension plans? Or total? The document says \"The following table presents estimated future benefit payments, which reflect expected future employee service, as of December 31, 2014\" and lists two rows. The question doesn't specify which plan. Could be total? But \"the amount after 2020\" is the 2020-2024 column. So ratio = 2015 / (2020-2024). For qualified: 2070/13430 = 0.1541. For retiree medical: 190/1020 = 0.1863. For total: (2070+190)/(13430+1020) = 2260/14450 = 0.1564. The question says \"the estimated future benefit payments\" - likely refers to the table as a whole? But it might be asking for the qualified defined benefit pension plans because that's the main one. However, the question says \"in 2014 what was the ratio\" - the table is as of Dec 31, 2014. The ratio is 2015 amount divided by after 2020 amount. I'll compute for qualified defined benefit pension plans because that's the primary. But the question doesn't specify. Let's read: \"in 2014 what was the ratio of the estimated future benefit payments due in 2015 compared to the amount after 2020\" - The table has two categories. The phrase \"estimated future benefit payments\" might refer to the total of both. But the question says \"the amount after 2020\" - that is the 2020-2024 column. I'll compute for qualified defined benefit pension plans because that's the main one. But to be safe, I'll compute both and see which is more likely. The question says \"the estimated future benefit payments\" - singular? Actually it says \"the estimated future benefit payments\" - could be the total. But the table shows two rows. The question might be asking for the ratio for the qualified defined benefit pension plans because that's the main. However, the question doesn't specify. Let's see if there is any other context. The question: \"in 2014 what was the ratio of the estimated future benefit payments due in 2015 compared to the amount after 2020\" - I think it's asking for the qualified defined benefit pension plans because that's the primary. But the table also includes retiree medical. The question says \"the estimated future benefit payments\" - could be the total. I'll compute both and see which is more likely. The ratio for qualified: 2070/13430 = 0.1541. For total: 2260/14450 = 0.1564. They are close. But the question might expect a specific number. Let's read the document: The table is in Note 9 under \"Contributions and Expected Benefit Payments\". It says \"The following table presents estimated future benefit payments, which reflect expected future employee service, as of December 31, 2014 (in millions):\" and then two rows. So the table includes both. The question says \"the estimated future benefit payments\" - could be the total. But the question says \"due in 2015 compared to the amount after 2020\" - that is the 2015 column and the 2020-2024 column. So ratio = (sum of 2015) / (sum of 2020-2024) = (2070+190)/(13430+1020) = 2260/14450 = 0.1564. I'll go with that. But let's check if the question might be asking for the qualified defined benefit pension plans only. The question says \"in 2014\" - the table is as of Dec 31, 2014. I'll compute the ratio for the total. I'll answer with the ratio. The question asks \"what was the ratio\" - so a number. I'll give the ratio as a decimal or fraction. I'll compute: 2260/14450 = 0.1564 (approximately). I'll put that in the answer.",
+ "raw_content": "<answer>0.1564</answer>",
+ "usage": {
+  "prompt_tokens": 92884,
+  "completion_tokens": 1004,
+  "total_tokens": 93888,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 92672
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.45,
+ "answer_tag_found": true,
+ "docfinqa_row": 552
+}

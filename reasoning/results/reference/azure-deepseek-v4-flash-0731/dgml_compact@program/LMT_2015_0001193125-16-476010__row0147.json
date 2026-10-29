@@ -1,0 +1,79 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0147",
+ "format": "dgml_compact",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was the average backlog at year-end from 2013 to 2015",
+ "gold": "197000",
+ "finqa_id": "LMT/2015/page_56.pdf-3",
+ "source_page": "page_56",
+ "ticker": "LMT",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml_compact/LMT_2015_0001193125-16-476010.dgml.txt",
+ "doc_chars": 620939,
+ "prompt_chars": 621086,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 620939,
+ "original_chars": 620939,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 127470,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 296,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "87.566667",
+ "reasoning": "We need average backlog at year-end 2013-2015. Backlog figures: 2013 $82.6 billion, 2014 $80.5 billion, 2015 $99.6 billion. Average = (82.6+80.5+99.6)/3 = 262.7/3 = 87.566666... So answer 87.566666... billion. Need exact? The question asks average backlog at year-end from 2013 to 2015. Use figures as printed: $82.6, $80.5, $99.6. Compute average. Provide answer as number? Probably in billions. The document uses $99.6 billion etc. So answer 87.566666... We'll output 87.5666666667. But maybe they want in billions. We'll put 87.5666666667.",
+ "raw_content": "<evidence>\n$82.6 billion | Backlog at December 31, 2013 (BacklogSelectedData)\n$80.5 billion | Backlog at December 31, 2014 (BacklogSelectedData)\n$99.6 billion | Backlog at December 31, 2015 (BacklogSelectedData)\n</evidence>\n<program>divide(add(add(82.6, 80.5), 99.6), 3)</program>\n<answer>87.5666666667</answer>",
+ "usage": {
+  "prompt_tokens": 127774,
+  "completion_tokens": 296,
+  "total_tokens": 128070,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.93,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$82.6 billion",
+   "element": "Backlog at December 31, 2013 (BacklogSelectedData)",
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$80.5 billion",
+   "element": "Backlog at December 31, 2014 (BacklogSelectedData)",
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$99.6 billion",
+   "element": "Backlog at December 31, 2015 (BacklogSelectedData)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(add(add(82.6, 80.5), 99.6), 3)",
+ "answer_model": "87.5666666667",
+ "program_value": 87.56666666666666,
+ "docfinqa_row": 147
+}

@@ -1,0 +1,50 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0202",
+ "format": "dgml_compact",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "as a result of the sales of certain non-core towers and other assets what was the percent of the change in the recorded net losses from 2007 to 2008",
+ "gold": "47.9%",
+ "finqa_id": "AMT/2008/page_107.pdf-1",
+ "source_page": "page_107",
+ "ticker": "AMT",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml_compact/AMT_2008_0001193125-09-039177.dgml.txt",
+ "doc_chars": 530448,
+ "prompt_chars": 530685,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 530448,
+ "original_chars": 530448,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 114721,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 335,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "47.9%",
+ "reasoning": "We need to find the recorded net losses from sales of non-core towers and other assets for 2007 and 2008, then compute percent change.\n\nFrom the document, in note 14 (Impairments, Net Loss on Sale of Long-Lived Assets, Restructuring and Merger Related Expense), it says:\n\n\"During the years ended December 31, 2008, 2007 and 2006 respectively, the Company recorded net losses associated with the sales of certain non-core towers and other assets, as well as impairment charges to write-down certain assets to net realizable value after an indicator of impairment had been identified. As a result, the Company recorded net losses and impairments of approximately $10.5 million, $7.1 million and $2.0 million for the years ended December 31, 2008, 2007 and 2006, respectively.\"\n\nSo net losses: 2008 = $10.5M, 2007 = $7.1M.\n\nPercent change from 2007 to 2008 = (10.5 - 7.1)/7.1 * 100 = 3.4/7.1 * 100 ≈ 47.8873% ≈ 47.9%.\n\nBut careful: The question says \"as a result of the sales of certain non-core towers and other assets what was the percent of the change in the recorded net losses from 2007 to 2008\". That matches.\n\nSo answer: 47.9% (or 47.89%). We'll put the value.",
+ "raw_content": "<answer>47.9%</answer>",
+ "usage": {
+  "prompt_tokens": 114884,
+  "completion_tokens": 335,
+  "total_tokens": 115219,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.76,
+ "answer_tag_found": true,
+ "docfinqa_row": 202
+}

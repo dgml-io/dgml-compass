@@ -1,0 +1,75 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0700",
+ "format": "dgml",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "what was the percentage change in fuel surcharge program freight revenue from 2012 to 2013?",
+ "gold": "0%",
+ "finqa_id": "UNP/2014/page_25.pdf-3",
+ "source_page": "page_25",
+ "ticker": "UNP",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/dgml/UNP_2014_0001193125-15-037518.dgml.xml",
+ "doc_chars": 655633,
+ "prompt_chars": 655813,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 655633,
+ "original_chars": 655633,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 153615,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 188,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.0000%",
+ "reasoning": "We need percentage change in fuel surcharge program freight revenue from 2012 to 2013. Document: \"Our fuel surcharge programs generated freight revenues of $2.8 billion, $2.6 billion, and $2.6 billion in 2014, 2013, and 2012, respectively.\" So 2013 = 2.6, 2012 = 2.6. Change = 0%. Also text says \"Fuel surcharge in 2013 essentially was flat versus 2012\". So answer 0%. Need evidence and program.",
+ "raw_content": "<evidence>$2.6 billion | FinancialAmount (fuel surcharge 2013)\n$2.6 billion | span (fuel surcharge 2012)</evidence>\n<program>divide(subtract(2.6, 2.6), 2.6)</program>\n<answer>0%</answer>",
+ "usage": {
+  "prompt_tokens": 153923,
+  "completion_tokens": 188,
+  "total_tokens": 154111,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 153856
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.69,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$2.6 billion",
+   "element": "FinancialAmount (fuel surcharge 2013)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$2.6 billion",
+   "element": "span (fuel surcharge 2012)",
+   "element_found": true,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(subtract(2.6, 2.6), 2.6)",
+ "answer_model": "0%",
+ "program_value": 0.0,
+ "docfinqa_row": 700
+}

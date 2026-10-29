@@ -1,0 +1,72 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0517",
+ "format": "markdown_pdf_plumber",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "what is the change in the balance of liability for restructuring 2003 program from 2006 to 2008 , ( in millions ) ?",
+ "gold": "-6.9",
+ "finqa_id": "IPG/2008/page_62.pdf-3",
+ "source_page": "page_62",
+ "ticker": "IPG",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_plumber/IPG_2008_0001193125-09-040141.md",
+ "doc_chars": 407053,
+ "prompt_chars": 407257,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 407053,
+ "original_chars": 407053,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 104214,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 201,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-6.9",
+ "reasoning": "We need answer change in balance of liability for restructuring 2003 program from 2006 to 2008. Need find figures. In Note 2, table shows liability at Dec 31, 2006 for 2003 program $12.6, and liability at Dec 31, 2008 for 2003 program $5.7. Change = 5.7 - 12.6 = -6.9. Question asks \"change in the balance of liability for restructuring 2003 program from 2006 to 2008\" likely decrease of 6.9. Need provide evidence and program. Use figures.",
+ "raw_content": "<evidence>\n12.6 | Liability at December 31, 2006 (2003 Program)\n5.7 | Liability at December 31, 2008 (2003 Program)\n</evidence>\n<program>subtract(5.7, 12.6)</program>\n<answer>-6.9</answer>",
+ "usage": {
+  "prompt_tokens": 104531,
+  "completion_tokens": 201,
+  "total_tokens": 104732,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 104448
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 1.84,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "12.6",
+   "element": "Liability at December 31, 2006 (2003 Program)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "5.7",
+   "element": "Liability at December 31, 2008 (2003 Program)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(5.7, 12.6)",
+ "answer_model": "-6.9",
+ "program_value": -6.8999999999999995,
+ "docfinqa_row": 517
+}

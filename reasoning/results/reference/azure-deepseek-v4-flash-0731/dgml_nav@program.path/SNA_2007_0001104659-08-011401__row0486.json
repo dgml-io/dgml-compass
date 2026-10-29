@@ -1,0 +1,81 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0486",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what is the roi in snap-on if the investment was made at the end of 2005 and sold at the end of 2007?",
+ "gold": "34.8%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "SNA_2007_0001104659-08-011401.outline.txt",
+ "doc_source": "SNA_2007_0001104659-08-011401.dgml.xml",
+ "outline_chars": 89754,
+ "predicted_xpaths": [
+  "/chunk/MarketForCommonEquity/TotalShareholderReturn"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 1397,
+ "r1_usage": {
+  "prompt_tokens": 22389,
+  "completion_tokens": 322,
+  "total_tokens": 22711,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/MarketForCommonEquity/TotalShareholderReturn"
+ ],
+ "content_chars": 11244,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "0.347554",
+ "reasoning": "We need ROI from end of 2005 to end of 2007. The table gives cumulative total shareholder return index values assuming $100 invested Dec 31, 2002 with dividends reinvested. At Dec 31, 2005: 146.97. At Dec 31, 2007: 198.05. ROI = (198.05 - 146.97)/146.97 = 51.08/146.97 = 0.34755... = 34.76%. Need compute. Use figures as printed.",
+ "raw_content": "<evidence>146.97 | /chunk/MarketForCommonEquity/TotalShareholderReturn/TotalShareholderReturn/TotalShareholderReturnRecord[5]/ShareholderReturnIndex[1]\n198.05 | /chunk/MarketForCommonEquity/TotalShareholderReturn/TotalShareholderReturn/TotalShareholderReturnRecord[7]/ShareholderReturnIndex[1]</evidence>\n<program>divide(subtract(198.05, 146.97), 146.97)</program>\n<answer>0.3476</answer>",
+ "r2_usage": {
+  "prompt_tokens": 3056,
+  "completion_tokens": 234,
+  "total_tokens": 3290,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 3056,
+   "completion_tokens": 234,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "146.97",
+   "element": "chunk/MarketForCommonEquity/TotalShareholderReturn/TotalShareholderReturn/TotalShareholderReturnRecord[5]/ShareholderReturnIndex[1]",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "198.05",
+   "element": "chunk/MarketForCommonEquity/TotalShareholderReturn/TotalShareholderReturn/TotalShareholderReturnRecord[7]/ShareholderReturnIndex[1]",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(198.05, 146.97), 146.97)",
+ "answer_model": "0.3476",
+ "program_value": 0.3475539225692319,
+ "elapsed_s": 4.37
+}

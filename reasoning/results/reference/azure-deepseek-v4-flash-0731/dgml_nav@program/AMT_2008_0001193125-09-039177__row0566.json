@@ -1,0 +1,68 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0566",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "as of december 31 , 2008 , what was the percent of the maturities in 2012 of the aggregate carrying value of long-term debt , including capital leases",
+ "gold": "45.3%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "AMT_2008_0001193125-09-039177.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/NotesToFinancialStatementsContinuation/ConvertibleNoteDebtInstrument/DebtMaturitySchedule"
+ ],
+ "r1_reasoning_chars": 3161,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 24141,
+  "completion_tokens": 789,
+  "total_tokens": 24930,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/NotesToFinancialStatementsContinuation/ConvertibleNoteDebtInstrument/DebtMaturitySchedule"
+ ],
+ "content_chars": 4530,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "45.297851",
+ "reasoning": "We need answer percent of maturities in 2012 of aggregate carrying value long-term debt. Need compute 2012 maturity / balance as of Dec 31 2008. Table: 2012 amount 1,962,822 (in thousands). Balance as of Dec 31 2008 $4,333,146. Percent = 1,962,822 / 4,333,146 * 100. Need compute. Let's calculate. 1,962,822 / 4,333,146 ≈ 0.4529? 4,333,146 * 0.45 = 1,949,915.7. Difference 12,906.3 / 4,333,146 = 0.002978. So 0.452978 = 45.2978%. So 45.3%. Need evidence figures. Use exact printed values. Program divide(1962822, 4333146) then multiply by 100? The question asks percent, so answer value 45.2978... Need output maybe 45.3. But program must be exact. Use multiply(divide(1962822, 4333146), 100). But figures printed with commas and $ signs. Use numbers as printed? \"1,962,822\" and \"4,333,146\". In program use 1962822 and 4333146. Evidence list values exactly as printed: $ 1,962,822? Actually table has MaturityAmount r=\"td\">1,962,822</MaturityAmount> no $ for that row? It shows \"1,962,822\" without $? The row has no $ sign, but table header? It's in thousands. Balance row has \"$ 4,333,146\". Use as printed. Evidence: 1,962,822 | MaturityAmount (2012); $ 4,333,146 | DebtCarryingValue (Balance as of December 31, 2008). Need answer inside tags only value.",
+ "raw_content": "<evidence>1,962,822 | MaturityAmount (2012)\n$ 4,333,146 | DebtCarryingValue (Balance as of December 31, 2008)</evidence>\n<program>multiply(divide(1962822, 4333146), 100)</program>\n<answer>45.3</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1544,
+  "completion_tokens": 495,
+  "total_tokens": 2039,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,962,822",
+   "element": "MaturityAmount (2012)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$ 4,333,146",
+   "element": "DebtCarryingValue (Balance as of December 31, 2008)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(1962822, 4333146), 100)",
+ "answer_model": "45.3",
+ "program_value": 45.29785056861689,
+ "elapsed_s": 11.03,
+ "outline_source": "AMT_2008_0001193125-09-039177.outline.txt",
+ "outline_chars": 96437
+}

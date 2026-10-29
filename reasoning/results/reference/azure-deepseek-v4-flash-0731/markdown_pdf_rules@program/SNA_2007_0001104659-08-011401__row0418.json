@@ -1,0 +1,72 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0418",
+ "format": "markdown_pdf_rules",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what is the roi in s&p500 if the investment was made at the end of 2005 and sold at the end of 2007?",
+ "gold": "22.2%",
+ "finqa_id": "SNA/2007/page_29.pdf-3",
+ "source_page": "page_29",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_rules/SNA_2007_0001104659-08-011401.md",
+ "doc_chars": 336027,
+ "prompt_chars": 336216,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 336027,
+ "original_chars": 336027,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 81193,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 193,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "22.1576%",
+ "reasoning": "We need ROI in S&P 500 from end of 2005 to end of 2007. From five-year stock performance graph: S&P 500 values: Dec 31, 2005: 149.70; Dec 31, 2007: 182.87. ROI = (182.87 - 149.70)/149.70 = 33.17/149.70 = 0.2216... = 22.16%. Need answer as value, likely percentage. Use figures exactly.",
+ "raw_content": "<evidence>\n149.70 | S&P 500 (Fiscal Year Ended December 31, 2005)\n182.87 | S&P 500 (Fiscal Year Ended December 31, 2007)\n</evidence>\n<program>divide(subtract(182.87, 149.70), 149.70)</program>\n<answer>22.16%</answer>",
+ "usage": {
+  "prompt_tokens": 81511,
+  "completion_tokens": 193,
+  "total_tokens": 81704,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.55,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "149.70",
+   "element": "S&P 500 (Fiscal Year Ended December 31, 2005)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "182.87",
+   "element": "S&P 500 (Fiscal Year Ended December 31, 2007)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(182.87, 149.70), 149.70)",
+ "answer_model": "22.16%",
+ "program_value": 0.22157648630594534,
+ "docfinqa_row": 418
+}

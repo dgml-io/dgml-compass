@@ -1,0 +1,53 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0527",
+ "format": "dgml",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "what was the percent of the change in the net revenues from dec . 282012 dec . 29 2013",
+ "gold": "-1.2%",
+ "finqa_id": "INTC/2013/page_33.pdf-1",
+ "source_page": "page_33",
+ "ticker": "INTC",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/dgml/INTC_2013_0000050863-14-000020.dgml.xml",
+ "doc_chars": 868384,
+ "prompt_chars": 868559,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 868384,
+ "original_chars": 868384,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 202403,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 456,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-1%",
+ "reasoning": "We need to find the percent change in net revenues from Dec 29, 2012 to Dec 28, 2013. The document gives net revenue for 2013: $52,708 million, and 2012: $53,341 million. The change is (52,708 - 53,341)/53,341 = -633/53,341 ≈ -1.187%. So about -1.2%. The question asks \"what was the percent of the change in the net revenues from dec . 282012 dec . 29 2013\" - likely means from 2012 to 2013. The document says \"Net revenue for 2013 decreased by $633 million, or 1%, compared to 2012.\" So the answer is 1% decrease, or -1%. The question asks \"percent of the change\" - probably the absolute percent change? It says \"percent of the change\" - likely the percentage change. The document states \"decreased by ... or 1%\". So answer is 1% (decrease). But the question might want the signed value? It says \"percent of the change\" - could be -1% or 1%. The document says \"or 1%\". I'll put -1% or 1%? The question: \"what was the percent of the change in the net revenues from dec . 282012 dec . 29 2013\" - that's ambiguous. But the document explicitly says \"decreased by $633 million, or 1%\". So the percent change is -1% (or 1% decrease). I'll answer -1% or 1%? The instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So I'll put -1% or 1%? The question asks \"percent of the change\" - likely the magnitude. But to be safe, I'll put -1%? Actually the document says \"or 1%\" meaning the percentage decrease. So the change is -1%. I'll put -1%.",
+ "raw_content": "<answer>-1%</answer>",
+ "usage": {
+  "prompt_tokens": 202556,
+  "completion_tokens": 456,
+  "total_tokens": 203012,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 202496
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.04,
+ "answer_tag_found": true,
+ "docfinqa_row": 527
+}

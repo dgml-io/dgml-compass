@@ -1,0 +1,69 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0095",
+ "format": "markdown_pdf_plumber",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what was the increase in long-term debt between 2004 and 2005 in thousands?",
+ "gold": "296048",
+ "finqa_id": "AMT/2005/page_85.pdf-1",
+ "source_page": "page_85",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/markdown_pdf_plumber/AMT_2005_0001193125-06-054224.md",
+ "doc_chars": 493545,
+ "prompt_chars": 493709,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 493545,
+ "original_chars": 493545,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 121512,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 441,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "319815",
+ "reasoning": "We need answer increase in long-term debt between 2004 and 2005 in thousands. Need find long-term obligations figures. In balance sheet: Long-term obligations 2005: 3,451,276; 2004: 3,155,228. Also current portion of long-term obligations 2005: 162,153; 2004: 138,386. Question \"long-term debt\" likely total long-term obligations including current portion? In selected financial data: Long-term obligations, including current portion 2005: 3,613,429; 2004: 3,293,614. Increase = 3,613,429 - 3,293,614 = 319,815. But question says \"long-term debt\" maybe from balance sheet \"LONG-TERM OBLIGATIONS\" (non-current) increase = 3,451,276 - 3,155,228 = 296,048. Need determine. The document has \"Long-term obligations, including current portion\" in selected financial data. The question: \"what was the increase in long-term debt between 2004 and 2005 in thousands?\" Likely refers to long-term debt total. In financial statements, \"Long-term obligations\" line in balance sheet is non-current. But \"long-term debt\" often includes current portion. The selected financial data explicitly says \"Long-term obligations, including current portion\" with values 3,613,429 and 3,293,614. Increase = 319,815. Let's compute. Evidence: 3,613,429 | Long-term obligations, including current portion (2005); 3,293,614 | same (2004). Program subtract(3613429, 3293614) = 319815. Answer 319815.",
+ "raw_content": "<evidence>\n3,613,429 | Long-term obligations, including current portion (2005)\n3,293,614 | Long-term obligations, including current portion (2004)\n</evidence>\n<program>subtract(3613429, 3293614)</program>\n<answer>319815</answer>",
+ "usage": {
+  "prompt_tokens": 121819,
+  "completion_tokens": 441,
+  "total_tokens": 122260,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 14.93,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "3,613,429",
+   "element": "Long-term obligations, including current portion (2005)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "3,293,614",
+   "element": "Long-term obligations, including current portion (2004)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(3613429, 3293614)",
+ "answer_model": "319815",
+ "program_value": 319815.0,
+ "docfinqa_row": 95
+}

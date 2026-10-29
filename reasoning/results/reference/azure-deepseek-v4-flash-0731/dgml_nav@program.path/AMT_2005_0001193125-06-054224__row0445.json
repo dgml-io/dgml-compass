@@ -1,0 +1,81 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0445",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what portion of total value of net operating loss carryforwards is related to state?",
+ "gold": "52.8%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "AMT_2005_0001193125-06-054224.outline.txt",
+ "doc_source": "AMT_2005_0001193125-06-054224.dgml.xml",
+ "outline_chars": 112419,
+ "predicted_xpaths": [
+  "/chunk/IncomeTaxes/FinancialStatementHeader/NetOperatingLossCarryforwards"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 2094,
+ "r1_usage": {
+  "prompt_tokens": 28590,
+  "completion_tokens": 503,
+  "total_tokens": 29093,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/IncomeTaxes/FinancialStatementHeader/NetOperatingLossCarryforwards"
+ ],
+ "content_chars": 5275,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "0.528468",
+ "reasoning": "We need answer portion of total value of NOL carryforwards related to state. Need identify total value of NOL carryforwards. The document gives federal and state operating loss carryforwards: approximately $2.2 billion federal and $2.4 billion state. Also table totals: Federal $2,157,503 (thousands) and State $2,418,012 (thousands). Total = sum = 4,575,515 thousands. State portion = 2,418,012 / 4,575,515 = 0.5285... Let's compute. Need use figures as printed. The question \"what portion of total value of net operating loss carryforwards is related to state?\" Likely state NOL / total NOL. Use table totals. Compute divide(2418012, add(2157503, 2418012)). Let's calculate: 2,418,012 / (2,157,503+2,418,012=4,575,515) = 0.52846. So answer 0.5285 or 52.85%. Need provide evidence figures. Also note text says approximately $2.2 billion and $2.4 billion, but table exact. Use table totals.",
+ "raw_content": "<evidence>\n$ 2,418,012 | /chunk/IncomeTaxes/FinancialStatementHeader/NetOperatingLossCarryforwards/table/NetOperatingLossExpirationTotal/StateNetOperatingLossExpirationTotal\n$ 2,157,503 | /chunk/IncomeTaxes/FinancialStatementHeader/NetOperatingLossCarryforwards/table/NetOperatingLossExpirationTotal/FederalNetOperatingLossExpirationTotal\n</evidence>\n\n<program>divide(2418012, add(2157503, 2418012))</program>\n\n<answer>0.5285</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1560,
+  "completion_tokens": 390,
+  "total_tokens": 1950,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 1560,
+   "completion_tokens": 390,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "$ 2,418,012",
+   "element": "chunk/IncomeTaxes/FinancialStatementHeader/NetOperatingLossCarryforwards/table/NetOperatingLossExpirationTotal/StateNetOperatingLossExpirationTotal",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$ 2,157,503",
+   "element": "chunk/IncomeTaxes/FinancialStatementHeader/NetOperatingLossCarryforwards/table/NetOperatingLossExpirationTotal/FederalNetOperatingLossExpirationTotal",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(2418012, add(2157503, 2418012))",
+ "answer_model": "0.5285",
+ "program_value": 0.5284677243982372,
+ "elapsed_s": 8.27
+}

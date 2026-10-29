@@ -1,0 +1,62 @@
+{
+ "id": "MRO_2009_0001193125-10-042898__row0253",
+ "format": "dgml",
+ "key": "MRO_2009_0001193125-10-042898",
+ "question": "what was highest net rental expense in millions?",
+ "gold": "267",
+ "finqa_id": "MRO/2009/page_139.pdf-2",
+ "source_page": "page_139",
+ "ticker": "MRO",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/dgml/MRO_2009_0001193125-10-042898.dgml.xml",
+ "doc_chars": 905450,
+ "prompt_chars": 905587,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": true,
+ "truncation": "head",
+ "kept_chars": 905340,
+ "original_chars": 1110151,
+ "kept_fraction": 0.8155,
+ "est_doc_tokens": 264731,
+ "est_kept_tokens": 212186,
+ "budget_tokens": 240000,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 400,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer question: \"what was highest net rental expense in millions?\" Need find in document. Search for \"rental expense\" or \"net rental\". Document truncated, but maybe contains. Need look. I see leases section at end truncated. There may be rental expense figures. Need find. In document, there is \"Leases\" section with future minimum commitments, but not net rental expense. Maybe elsewhere. Search text: \"rental\" appears? I see \"rental\" maybe not. The document is huge. Need find \"net rental expense\" or \"rental expense\". I'll scan. There is \"Lease\" section at end but truncated. No explicit \"net rental expense\" visible. Could be in \"Leases\" note with table of rental expense for years. But truncated before that. The question asks \"highest net rental expense in millions\" - likely from note 25 Leases, which typically has \"Rental expense\" for 2009, 2008, 2007. But document truncated. Need see if any figures. The excerpt ends at \"FutureLeasePaymentSchedule\" with 2010 capital lease 46, operating 165. No rental expense. So NOT_FOUND.\n\nBut maybe there is \"rental\" elsewhere? Search in text: \"rental\" appears in \"rental\" maybe not. I see \"rental\" in \"rental\" no. The document has \"rental\" in \"rental\" maybe \"rental\" in \"rental\" no. I'll answer NOT_FOUND.\n\nNeed provide evidence? If not found, no evidence. But instructions: \"Before the answer, list every figure you use inside <evidence></evidence>\". If no figures, empty. Then program? If NOT_FOUND, program? Probably just answer. We'll do.\n\nFinal answer: <answer>NOT_FOUND</answer>",
+ "raw_content": "<answer>NOT_FOUND</answer>",
+ "usage": {
+  "prompt_tokens": 212504,
+  "completion_tokens": 400,
+  "total_tokens": 212904,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 16.06,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": null,
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "docfinqa_row": 253
+}

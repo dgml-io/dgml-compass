@@ -1,0 +1,72 @@
+{
+ "id": "NCLH_2018_0001144204-19-010508__row0887",
+ "format": "dgml_compact",
+ "key": "NCLH_2018_0001144204-19-010508",
+ "question": "how much did interest with libor change from year 1 to years 3-5?",
+ "gold": "the interest decreased 25.7% from year 1 to years 3-5",
+ "finqa_id": "NCLH/2018/page_64.pdf-4",
+ "source_page": "page_64",
+ "ticker": "NCLH",
+ "fiscal_year": "2018",
+ "source_file": "data/docs/dgml_compact/NCLH_2018_0001144204-19-010508.dgml.txt",
+ "doc_chars": 467893,
+ "prompt_chars": 468047,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 467893,
+ "original_chars": 467893,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 101327,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 559,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "57255",
+ "reasoning": "We need answer question: \"how much did interest with libor change from year 1 to years 3-5?\" Need parse. Likely from contractual obligations table: Interest (5) with amounts: Total 974,444; Less than 1 year 222,427; 1-3 years 404,380; 3-5 years 165,172; More than 5 years 182,465. \"interest with libor\" maybe interest expense? The question: \"how much did interest with libor change from year 1 to years 3-5?\" Could be asking difference between interest in less than 1 year and interest in 3-5 years? Or \"interest with libor\" maybe \"interest\" line in contractual obligations. Year 1 = less than 1 year = 222,427. Years 3-5 = 3-5 years = 165,172. Change = subtract? 222,427 - 165,172 = 57,255. Or maybe \"change\" means increase/decrease? It decreased by 57,255. But question says \"how much did interest with libor change from year 1 to years 3-5?\" Might be asking difference. Need check if \"libor\" appears? There is LIBOR transition risk, but interest with libor? The contractual obligations table has \"Interest (5)\" footnote: Interest includes fixed and variable rates with LIBOR held constant as of December 31, 2018. So \"interest with libor\" refers to that line. So year 1 = less than 1 year = 222,427. Years 3-5 = 3-5 years = 165,172. Change = 222,427 - 165,172 = 57,255. Or maybe \"years 3-5\" means 3-5 years bucket. So answer 57,255 (in thousands). The question asks \"how much did interest with libor change\" - likely decrease by 57,255. Need provide value only. Evidence: 222,427 | ContractualObligationAmount (Interest less than 1 year), 165,172 | ContractualObligationAmount (Interest 3-5 years). Program subtract(222427, 165172) = 57255. Final answer inside <answer>57255</answer>.",
+ "raw_content": "<evidence>\n222,427 | ContractualObligationAmount (Interest less than 1 year)\n165,172 | ContractualObligationAmount (Interest 3-5 years)\n</evidence>\n<program>\nsubtract(222427, 165172)\n</program>\n<answer>57255</answer>",
+ "usage": {
+  "prompt_tokens": 101633,
+  "completion_tokens": 559,
+  "total_tokens": 102192,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 101376
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.39,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "222,427",
+   "element": "ContractualObligationAmount (Interest less than 1 year)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "165,172",
+   "element": "ContractualObligationAmount (Interest 3-5 years)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(222427, 165172)",
+ "answer_model": "57255",
+ "program_value": 57255.0,
+ "docfinqa_row": 887
+}

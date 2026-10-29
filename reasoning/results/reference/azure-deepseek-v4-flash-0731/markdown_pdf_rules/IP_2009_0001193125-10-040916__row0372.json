@@ -1,0 +1,53 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0372",
+ "format": "markdown_pdf_rules",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "what percentage of contractual obligations for future payments under existing debt and lease commitments and purchase obligations at december 31 , 2009 due in 2011 are maturities of long-term debt?",
+ "gold": "41%",
+ "finqa_id": "IP/2009/page_45.pdf-1",
+ "source_page": "page_45",
+ "ticker": "IP",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/markdown_pdf_rules/IP_2009_0001193125-10-040916.md",
+ "doc_chars": 436761,
+ "prompt_chars": 437047,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 436761,
+ "original_chars": 436761,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 103607,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 215,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "40.8%",
+ "reasoning": "We need to find the contractual obligations table. It shows for 2011: Maturities of long-term debt $574, Debt obligations with right of offset $28, Lease obligations $148, Purchase obligations $657, Total $1,407. The question asks: what percentage of contractual obligations for future payments under existing debt and lease commitments and purchase obligations at Dec 31, 2009 due in 2011 are maturities of long-term debt? So we take 574 / 1407 = 0.4080... = 40.8%. But careful: The table includes \"Debt obligations with right of offset\" as well. The question says \"contractual obligations for future payments under existing debt and lease commitments and purchase obligations\" - that is the total of the table. So percentage = 574/1407 = 40.8%. Let's compute: 574/1407 = 0.4080, so 40.8%. Answer as a percentage.",
+ "raw_content": "<answer>40.8%</answer>",
+ "usage": {
+  "prompt_tokens": 103773,
+  "completion_tokens": 215,
+  "total_tokens": 103988,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 103680
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.58,
+ "answer_tag_found": true,
+ "docfinqa_row": 372
+}

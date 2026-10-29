@@ -1,0 +1,53 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0418",
+ "format": "markdown_pdf_rules",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what is the roi in s&p500 if the investment was made at the end of 2005 and sold at the end of 2007?",
+ "gold": "22.2%",
+ "finqa_id": "SNA/2007/page_29.pdf-3",
+ "source_page": "page_29",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_rules/SNA_2007_0001104659-08-011401.md",
+ "doc_chars": 336027,
+ "prompt_chars": 336216,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 336027,
+ "original_chars": 336027,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 81193,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 156,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "22.16%",
+ "reasoning": "We need ROI in S&P 500 from end of 2005 to end of 2007. The stock performance graph gives cumulative total shareholder return assuming $100 invested on Dec 31, 2002. For S&P 500: Dec 31, 2005 value = 149.70, Dec 31, 2007 = 182.87. ROI = (182.87 - 149.70)/149.70 = 33.17/149.70 = 0.2216 = 22.16%. But question says \"roi\" maybe total return including dividends? The graph assumes dividends reinvested. So ROI = 22.16%. Answer as percentage.",
+ "raw_content": "<answer>22.16%</answer>",
+ "usage": {
+  "prompt_tokens": 81352,
+  "completion_tokens": 156,
+  "total_tokens": 81508,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 81152
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.07,
+ "answer_tag_found": true,
+ "docfinqa_row": 418
+}

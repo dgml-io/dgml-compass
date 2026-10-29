@@ -1,0 +1,53 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0624",
+ "format": "dgml_compact",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "in 2005 what was the percentage of the federal nol set to expire between 2016 to 2020",
+ "gold": "18.4%",
+ "finqa_id": "AMT/2005/page_105.pdf-1",
+ "source_page": "page_105",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/dgml_compact/AMT_2005_0001193125-06-054224.dgml.txt",
+ "doc_chars": 570128,
+ "prompt_chars": 570302,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 570128,
+ "original_chars": 570128,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 127365,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 343,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "18.4%",
+ "reasoning": "The question asks: \"in 2005 what was the percentage of the federal nol set to expire between 2016 to 2020\"\n\nI need to find the federal NOL (net operating loss) carryforwards and the amounts expiring in different periods.\n\nFrom the document, in the Income Taxes section (note 13), there's a table:\n\n\"NetOperatingLossExpiration: Years ended December 31, | Federal | State\nNetOperatingLossExpiration: 2006 to 2010 | $ 5,248 | $ 469,747\nNetOperatingLossExpiration: 2011 to 2015 | 10,012 | 272,662\nNetOperatingLossExpiration: 2016 to 2020 | 397,691 | 777,707\nNetOperatingLossExpiration: 2021 to 2025 | 1,744,552 | 897,896\nNetOperatingLossExpirationTotal: Total | $ 2,157,503 | $ 2,418,012\"\n\nSo federal NOL expiring 2016-2020 is $397,691 (thousands). Total federal is $2,157,503 (thousands).\n\nPercentage = 397,691 / 2,157,503 * 100 = 18.43%\n\nLet me calculate: 397,691 / 2,157,503 = 0.18433... so approximately 18.4%.\n\nThe question asks for the percentage. So answer: 18.4% (or approximately 18.43%).\n\nI'll provide the value.",
+ "raw_content": "<answer>18.4%</answer>",
+ "usage": {
+  "prompt_tokens": 127518,
+  "completion_tokens": 343,
+  "total_tokens": 127861,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 127232
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.83,
+ "answer_tag_found": true,
+ "docfinqa_row": 624
+}

@@ -1,0 +1,74 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0247",
+ "format": "markdown_pdf_poppler",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the percentage increase in total accumulated other comprehensive losses from 2013 to 2014?",
+ "gold": "62.9%",
+ "finqa_id": "PM/2015/page_127.pdf-2",
+ "source_page": "page_127",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_poppler/PM_2015_0001413329-16-000076.md",
+ "doc_chars": 669314,
+ "prompt_chars": 669501,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 669314,
+ "original_chars": 669314,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 116308,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 657,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "62.911695",
+ "reasoning": "We need to find accumulated other comprehensive losses at 2013 and 2014. From the balance sheet or statement of equity. In the consolidated balance sheets, at December 31, 2015 and 2014, accumulated other comprehensive losses are given: 2015: (9,402), 2014: (6,826). For 2013, we need from the statement of stockholders' equity: balances at December 31, 2013: accumulated other comprehensive losses = (4,190). So from 2013 to 2014: from -4,190 to -6,826. Percentage increase? Typically percentage change = (new - old)/|old| * 100. Since it's a loss (negative), the magnitude increased. The question says \"percentage increase in total accumulated other comprehensive losses\" - likely the increase in the absolute value of the losses. So from 4,190 to 6,826. Increase = 6,826 - 4,190 = 2,636. Percentage increase = 2,636 / 4,190 * 100 = 62.91% approx. Let's compute exactly: 2636/4190 = 0.6291... so 62.9%. Alternatively, if they mean the change in the negative number, that would be a decrease? But \"increase in losses\" means the magnitude increased. So answer 62.9% or 62.91%. We'll compute precisely: 2636/4190 = 0.629117... so 62.91%. We'll give as 62.9% or 62.91%. The question asks for percentage increase, so we give the number. We'll use evidence: 4,190 and 6,826. Program: divide(subtract(6826, 4190), 4190) * 100? But the program should be nested calls. We can do multiply(divide(subtract(6826, 4190), 4190), 100). But the instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So we put the numeric value, e.g., 62.91. But we need to be careful: the question asks \"what is the percentage increase\" so we give the number without % sign? Usually they want the percentage value. We'll put 62.91. Let's compute exactly: 2636/4190 = 0.629117... so 62.9117%. We'll round to 62.9% or 62.91%. I'll put 62.91.",
+ "raw_content": "<evidence>\n4,190 | Accumulated other comprehensive losses at December 31, 2013 (from Consolidated Statements of Stockholders' (Deficit) Equity)\n6,826 | Accumulated other comprehensive losses at December 31, 2014 (from Consolidated Balance Sheets)\n</evidence>\n\n<program>multiply(divide(subtract(6826, 4190), 4190), 100)</program>\n\n<answer>62.91</answer>",
+ "usage": {
+  "prompt_tokens": 116616,
+  "completion_tokens": 657,
+  "total_tokens": 117273,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.45,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "4,190",
+   "element": "Accumulated other comprehensive losses at December 31, 2013 (from Consolidated Statements of Stockholders' (Deficit) Equity)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "6,826",
+   "element": "Accumulated other comprehensive losses at December 31, 2014 (from Consolidated Balance Sheets)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(subtract(6826, 4190), 4190), 100)",
+ "answer_model": "62.91",
+ "program_value": 62.911694510739856,
+ "docfinqa_row": 247
+}

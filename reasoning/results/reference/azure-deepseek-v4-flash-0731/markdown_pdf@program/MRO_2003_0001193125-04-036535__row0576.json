@@ -1,0 +1,59 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0576",
+ "format": "markdown_pdf",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "what were total asphalt sales in millions for the three year period?",
+ "gold": "227",
+ "finqa_id": "MRO/2003/page_45.pdf-1",
+ "source_page": "page_45",
+ "ticker": "MRO",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/markdown_pdf/MRO_2003_0001193125-04-036535.md",
+ "doc_chars": 465533,
+ "prompt_chars": 465690,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 465533,
+ "original_chars": 465533,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 115045,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 312,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer: total asphalt sales in millions for three year period. Need find figures. Document has refined product sales volumes by product group, but sales volumes in thousands barrels per day, not dollars. Also refined product sales by product group table: Asphalt volumes 74,75,78 mbpd for 2003,2002,2001. But question asks \"total asphalt sales in millions\" - likely dollar sales? Need find asphalt sales revenue? There is no explicit asphalt sales dollars. Maybe \"Refined Product Sales\" table gives volumes, not dollars. Could be \"Refined Products Sales Volumes by Class of Trade\" no. Maybe \"Refined product sales\" in five-year summary gives volumes. No dollar sales for asphalt. Could be \"asphalt\" in refined product yields? No.\n\nQuestion: \"what were total asphalt sales in millions for the three year period?\" Could be asking sum of asphalt sales volumes? But \"in millions\" suggests dollars. Document does not provide asphalt sales in dollars. Maybe there is a table with \"Refined Product Sales\" volumes in thousands barrels per day, not millions. Could convert? No price. So NOT_FOUND.\n\nBut let's check if any mention of asphalt sales dollars. In marketing section: \"MAP markets asphalt through owned and leased terminals... customer base...\" No dollar. No.\n\nThus answer NOT_FOUND.",
+ "raw_content": "<evidence>No figure for asphalt sales in dollars found.</evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "usage": {
+  "prompt_tokens": 115345,
+  "completion_tokens": 312,
+  "total_tokens": 115657,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 115200
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.61,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "docfinqa_row": 576
+}

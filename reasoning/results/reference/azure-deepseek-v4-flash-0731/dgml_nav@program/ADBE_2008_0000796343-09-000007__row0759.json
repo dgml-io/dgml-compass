@@ -1,0 +1,107 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0759",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "what is the net change in the gross liability for unrecognized tax benefits during 2008?",
+ "gold": "-62259",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "ADBE_2008_0000796343-09-000007.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/TableOfContentsMarker/IncomeTaxes/FIN48Rollforward",
+  "/chunk/TableOfContentsMarker/IncomeTaxes/FIN48Rollforward/table/UnrecognizedTaxBenefitRollforward"
+ ],
+ "r1_reasoning_chars": 1580,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 25374,
+  "completion_tokens": 432,
+  "total_tokens": 25806,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/TableOfContentsMarker/IncomeTaxes/FIN48Rollforward",
+  "/chunk/TableOfContentsMarker/IncomeTaxes/FIN48Rollforward/table/UnrecognizedTaxBenefitRollforward"
+ ],
+ "content_chars": 26998,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "-62259",
+ "reasoning": "We need net change = ending - beginning = 139,549 - 201,808 = -62,259. Or sum of changes: 14,009+11,350-81,213-3,512-2,893 = -62,259. The question asks net change, so negative. Provide value.",
+ "raw_content": "<evidence>139,549 | Ending balance as of November 28, 2008\n201,808 | Beginning balance as of December 1, 2007\n14,009 | Gross increases in unrecognized tax benefits – prior year tax positions\n11,350 | Gross increases in unrecognized tax benefits – current year tax positions\n(81,213) | Settlements with taxing authorities\n(3,512) | Lapse of statute of limitations\n(2,893) | Foreign exchange gains and losses</evidence>\n<program>subtract(139549, 201808)</program>\n<answer>-62,259</answer>",
+ "r2_usage": {
+  "prompt_tokens": 6799,
+  "completion_tokens": 201,
+  "total_tokens": 7000,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "139,549",
+   "element": "Ending balance as of November 28, 2008",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "201,808",
+   "element": "Beginning balance as of December 1, 2007",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "14,009",
+   "element": "Gross increases in unrecognized tax benefits – prior year tax positions",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "11,350",
+   "element": "Gross increases in unrecognized tax benefits – current year tax positions",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "(81,213)",
+   "element": "Settlements with taxing authorities",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "(3,512)",
+   "element": "Lapse of statute of limitations",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "(2,893)",
+   "element": "Foreign exchange gains and losses",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 0.7142857142857143,
+ "program_model": "subtract(139549, 201808)",
+ "answer_model": "-62,259",
+ "program_value": -62259.0,
+ "elapsed_s": 5.28,
+ "outline_source": "ADBE_2008_0000796343-09-000007.outline.txt",
+ "outline_chars": 99180
+}

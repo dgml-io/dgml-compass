@@ -1,0 +1,50 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0234",
+ "format": "markdown_pdf",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what was the return on total assets during 2013?",
+ "gold": "4.2%",
+ "finqa_id": "HII/2017/page_47.pdf-1",
+ "source_page": "page_47",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/markdown_pdf/HII_2017_0001501585-18-000006.md",
+ "doc_chars": 458663,
+ "prompt_chars": 458800,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 458663,
+ "original_chars": 458663,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 99639,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 282,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "4.22%",
+ "reasoning": "We need to find return on total assets during 2013. Return on total assets = Net earnings / Total assets. But typically ROA uses average total assets. The question says \"return on total assets during 2013\". We have selected financial data for 2013: Net earnings $261 million, Total assets $6,190 million. But we need to compute ROA. Usually ROA = Net income / Average total assets. However, the question might expect net earnings / total assets at end of year? Or average? The document provides total assets for each year. For 2013, total assets = $6,190 million. Net earnings = $261 million. So ROA = 261/6190 = 0.04216... = 4.22%. But if using average total assets, we need 2012 total assets, which is not provided. The selected financial data only shows 2013-2017. So we cannot compute average. The question likely expects net earnings / total assets at end of 2013. So answer 4.2% or 0.042. The question asks \"what was the return on total assets during 2013?\" So we compute 261/6190 = 0.04216 = 4.22%. We'll provide the value.",
+ "raw_content": "<answer>4.22%</answer>",
+ "usage": {
+  "prompt_tokens": 99779,
+  "completion_tokens": 282,
+  "total_tokens": 100061,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.5,
+ "answer_tag_found": true,
+ "docfinqa_row": 234
+}

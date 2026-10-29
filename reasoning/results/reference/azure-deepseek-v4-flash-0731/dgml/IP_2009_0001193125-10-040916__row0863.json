@@ -1,0 +1,53 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0863",
+ "format": "dgml",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "what was the sum of the temporary differences between 2007 and 2009 in billions",
+ "gold": "9.8",
+ "finqa_id": "IP/2009/page_84.pdf-4",
+ "source_page": "page_84",
+ "ticker": "IP",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/dgml/IP_2009_0001193125-10-040916.dgml.xml",
+ "doc_chars": 908141,
+ "prompt_chars": 908309,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 908141,
+ "original_chars": 908141,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 216559,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 418,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "7.2",
+ "reasoning": "The question asks: \"what was the sum of the temporary differences between 2007 and 2009 in billions\"\n\nI need to find \"temporary differences\" in the document. The document mentions \"Deferred income taxes are not provided for temporary differences of approximately $3.5 billion, $2.6 billion and $3.7 billion as of December 31, 2009, 2008 and 2007, respectively, representing earnings of non-U.S. subsidiaries intended to be permanently reinvested.\"\n\nSo temporary differences for 2009 = $3.5 billion, 2008 = $2.6 billion, 2007 = $3.7 billion.\n\nThe question asks \"the sum of the temporary differences between 2007 and 2009\" - this likely means the sum of the temporary differences for 2007 and 2009, i.e., 3.7 + 3.5 = 7.2 billion.\n\nAlternatively, it could mean the difference between 2007 and 2009, i.e., 3.7 - 3.5 = 0.2 billion. But \"sum\" suggests addition. \"between 2007 and 2009\" could mean the values in those years. Let me re-read: \"what was the sum of the temporary differences between 2007 and 2009 in billions\" - I think it means the sum of the temporary differences for 2007 and 2009. So 3.7 + 3.5 = 7.2.\n\nLet me confirm the exact text: \"Deferred income taxes are not provided for temporary differences of approximately $3.5 billion, $2.6 billion and $3.7 billion as of December 31, 2009, 2008 and 2007, respectively\"\n\nSo 2009: 3.5, 2007: 3.7. Sum = 7.2 billion.\n\nAnswer: 7.2",
+ "raw_content": "<answer>7.2</answer>",
+ "usage": {
+  "prompt_tokens": 216706,
+  "completion_tokens": 418,
+  "total_tokens": 217124,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 216576
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.52,
+ "answer_tag_found": true,
+ "docfinqa_row": 863
+}

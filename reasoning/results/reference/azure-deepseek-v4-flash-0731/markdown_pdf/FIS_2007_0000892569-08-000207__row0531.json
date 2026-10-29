@@ -1,0 +1,50 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0531",
+ "format": "markdown_pdf",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what is the percentage change in rent expense from 2006 yo 2007?",
+ "gold": "30.6%",
+ "finqa_id": "FIS/2007/page_94.pdf-3",
+ "source_page": "page_94",
+ "ticker": "FIS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf/FIS_2007_0000892569-08-000207.md",
+ "doc_chars": 370864,
+ "prompt_chars": 371017,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 370864,
+ "original_chars": 370864,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 86409,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 146,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "30.55%",
+ "reasoning": "We need percentage change in rent expense from 2006 to 2007. From document: \"Rent expense incurred under all operating leases during the years ended December 31, 2007, 2006 and 2005 was $106.4 million, $81.5 million and $61.1 million, respectively.\" So 2007=106.4, 2006=81.5. Change = (106.4-81.5)/81.5 = 24.9/81.5 = 0.3055... = 30.55%. So answer 30.55% or 30.6%.",
+ "raw_content": "<answer>30.55%</answer>",
+ "usage": {
+  "prompt_tokens": 86554,
+  "completion_tokens": 146,
+  "total_tokens": 86700,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 6.04,
+ "answer_tag_found": true,
+ "docfinqa_row": 531
+}

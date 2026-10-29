@@ -1,0 +1,73 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0058",
+ "format": "dgml_compact",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what percentage of the total cash purchase price net of cash acquired was represented by ipr&d?",
+ "gold": "59%",
+ "finqa_id": "EW/2016/page_79.pdf-4",
+ "source_page": "page_79",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/dgml_compact/EW_2016_0001099800-17-000008.dgml.txt",
+ "doc_chars": 387281,
+ "prompt_chars": 387465,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 387281,
+ "original_chars": 387281,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 83222,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 261,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "59.356451",
+ "reasoning": "We need to find the total cash purchase price net of cash acquired and IPR&D. From CardiAQ acquisition: total cash purchase price net of cash acquired = $320.1 million. IPR&D = $190.0 million. Percentage = 190.0 / 320.1 * 100. Compute: 190/320.1 = 0.59356... *100 = 59.356...%. Let's compute precisely: 190 / 320.1 = 0.59356... 320.1 * 0.5935 = 190.0 approx. So ~59.4%. We'll give answer as 59.4% or 59.36%. The question asks \"what percentage\" so answer with number. Use evidence: IPR&D $190.0 million, total cash purchase price net of cash acquired $320.1 million.",
+ "raw_content": "<evidence>\n$190.0 | IPR&D (CardiAQ purchase price allocation)\n$320.1 | Total cash purchase price, net of cash acquired (CardiAQ purchase price allocation)\n</evidence>\n<program>multiply(divide(190.0, 320.1), 100)</program>\n<answer>59.4%</answer>",
+ "usage": {
+  "prompt_tokens": 83529,
+  "completion_tokens": 261,
+  "total_tokens": 83790,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 13.22,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$190.0",
+   "element": "IPR&D (CardiAQ purchase price allocation)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$320.1",
+   "element": "Total cash purchase price, net of cash acquired (CardiAQ purchase price allocation)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "multiply(divide(190.0, 320.1), 100)",
+ "answer_model": "59.4%",
+ "program_value": 59.35645110902843,
+ "docfinqa_row": 58
+}

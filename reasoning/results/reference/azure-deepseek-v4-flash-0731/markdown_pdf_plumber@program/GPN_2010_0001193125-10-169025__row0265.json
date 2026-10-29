@@ -1,0 +1,73 @@
+{
+ "id": "GPN_2010_0001193125-10-169025__row0265",
+ "format": "markdown_pdf_plumber",
+ "key": "GPN_2010_0001193125-10-169025",
+ "question": "what is the total fair value of non-vested shares as of may 31 , 2010?",
+ "gold": "29946",
+ "finqa_id": "GPN/2010/page_89.pdf-2",
+ "source_page": "page_89",
+ "ticker": "GPN",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/markdown_pdf_plumber/GPN_2010_0001193125-10-169025.md",
+ "doc_chars": 354710,
+ "prompt_chars": 354869,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 354710,
+ "original_chars": 354710,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 83792,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 242,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "29946",
+ "reasoning": "We need total fair value of non-vested shares as of May 31, 2010. From Note 11 restricted stock table: Non-vested at May 31, 2010: 713 shares (in thousands) with weighted average grant-date fair value $42. So total fair value = 713 * 42 = 29,946 (in thousands). But question asks \"total fair value\" - likely in dollars? The table shows shares in thousands and fair value per share. So total = 713,000 * $42 = $29,946,000. But the document says \"shares in thousands\" - the table header says \"(share awards in thousands)\" so 713 thousand shares. Weighted average grant-date fair value $42. So total = 713 * 42 = 29,946 thousand dollars = $29,946,000. We'll answer with value.",
+ "raw_content": "<evidence>\n713 | Non-vested at May 31, 2010\n42 | Weighted Average Grant-Date Fair Value\n</evidence>\n<program>multiply(713, 42)</program>\n<answer>29946</answer>",
+ "usage": {
+  "prompt_tokens": 84102,
+  "completion_tokens": 242,
+  "total_tokens": 84344,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 83968
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.0,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "713",
+   "element": "Non-vested at May 31, 2010",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "42",
+   "element": "Weighted Average Grant-Date Fair Value",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "multiply(713, 42)",
+ "answer_model": "29946",
+ "program_value": 29946.0,
+ "docfinqa_row": 265
+}

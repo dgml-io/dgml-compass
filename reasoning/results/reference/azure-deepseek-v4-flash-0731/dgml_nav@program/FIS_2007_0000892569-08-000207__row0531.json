@@ -1,0 +1,68 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0531",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what is the percentage change in rent expense from 2006 yo 2007?",
+ "gold": "30.6%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "FIS_2007_0000892569-08-000207.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/section/RelatedPartyTransactions/RelatedPartyExpense"
+ ],
+ "r1_reasoning_chars": 4601,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 23029,
+  "completion_tokens": 1129,
+  "total_tokens": 24158,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/section/RelatedPartyTransactions/RelatedPartyExpense"
+ ],
+ "content_chars": 6749,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need percentage change in rent expense from 2006 to 2007. From table: Rent expense row: 2007: \"—\" (dash, likely zero or not applicable), 2006: \"—\", 2005: 5.0. So both 2006 and 2007 are dash, meaning zero or not disclosed. Percentage change from 0 to 0 is undefined. The question asks percentage change from 2006 to 2007. Since both are dash, likely no rent expense in those years. Could be 0%? But percentage change from 0 to 0 is not defined. The document shows \"—\" for both, so no change? But typically \"—\" means zero or not applicable. If both are zero, percentage change is undefined. The question might expect NOT_FOUND because no numeric values. But maybe \"—\" means zero, and percentage change from 0 to 0 is 0%? However, standard percentage change formula (new-old)/old, if old=0, undefined. So answer should be NOT_FOUND. But let's check if there is any other mention of rent expense. The table is related party rent expense. The question says \"rent expense\" without specifying related party, but the excerpt is from related party transactions. The table shows rent expense under related party items. It shows 2007: —, 2006: —, 2005: 5.0. So no values for 2006 and 2007. So cannot compute percentage change. So answer NOT_FOUND.\n\nBut maybe the dash means zero, and percentage change from 0 to 0 is 0%? But the question asks \"percentage change\", and if both are zero, the change is 0, but percentage change is undefined. Usually in financial analysis, if base is zero, percentage change is not meaningful. The document does not provide numeric values. So NOT_FOUND.\n\nI'll output NOT_FOUND. But need evidence: list figures used. I see \"—\" for 2007 and 2006. I'll cite them as \"—\" | Rent expense row. But the instruction says \"value exactly as printed\". So \"—\" is a value. But it's not a number. I'll list them.\n\nThen program: cannot compute, so NOT_FOUND.\n\nLet's craft evidence: \n— | Rent expense (2007)\n— | Rent expense (2006)\n\nThen answer NOT_FOUND.",
+ "raw_content": "<evidence>\n— | Rent expense (2007)\n— | Rent expense (2006)\n</evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1945,
+  "completion_tokens": 555,
+  "total_tokens": 2500,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "—",
+   "element": "Rent expense (2007)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "—",
+   "element": "Rent expense (2006)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 12.06,
+ "outline_source": "FIS_2007_0000892569-08-000207.outline.txt",
+ "outline_chars": 91339
+}

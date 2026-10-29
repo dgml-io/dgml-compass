@@ -1,0 +1,53 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0423",
+ "format": "dgml",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "was was the total amount spent on stock repurchases in december 2012?",
+ "gold": "7662592",
+ "finqa_id": "AMT/2012/page_50.pdf-2",
+ "source_page": "page_50",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/dgml/AMT_2012_0001193125-13-077821.dgml.xml",
+ "doc_chars": 945867,
+ "prompt_chars": 946025,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 945867,
+ "original_chars": 945867,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 220539,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 929,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "7,662,592",
+ "reasoning": "We need to find total amount spent on stock repurchases in December 2012. The document has a table for issuer purchases of equity securities for the three months ended December 31, 2012. It shows monthly repurchases: October, November, December. For December 2012, it shows 102,400 shares purchased, average price $74.83, and the approximate dollar value of shares that may yet be purchased under the plans or programs is $1,256.1 million. But the question asks \"total amount spent on stock repurchases in december 2012\". The table gives the number of shares and average price, but not the aggregate amount spent for December. However, the text says \"During the three months ended December 31, 2012, we repurchased 619,314 shares of our common stock for an aggregate of approximately $46.0 million, including commissions and fees\". That is for the whole quarter. But the question specifically asks for December 2012. The table shows for December: 102,400 shares at average price $74.83. So the amount spent would be 102,400 * $74.83 = approximately $7.66 million. But the table does not explicitly give the aggregate amount for December. However, the question might be asking for the total amount spent on stock repurchases in December 2012, which can be computed from the shares and average price. Alternatively, the document might have a line for \"Total Fourth Quarter\" which gives 619,314 shares and average price $74.25, and the aggregate amount is $46.0 million. But that is for the quarter. The question says \"in december 2012\" so we need December only. The table gives for December: 102,400 shares, average price $74.83. So the amount is 102,400 * 74.83 = 7,662,592, approximately $7.7 million. But the question might expect the exact figure from the table? The table does not have a column for aggregate amount for each month, only the remaining program value. So we have to compute. Alternatively, the text says \"During the three months ended December 31, 2012, we repurchased 619,314 shares ... for an aggregate of approximately $46.0 million\". That is the total for the quarter. The question specifically asks for December, so we need to compute from the monthly data. The monthly data gives shares and average price. So the answer is 102,400 * $74.83 = $7,662,592, approximately $7.7 million. But the question might be looking for the exact number? The document does not give the exact aggregate for December, but we can compute. However, the question might be a trick: maybe the total amount spent on stock repurchases in December 2012 is not directly given, but we can compute. Alternatively, the question might be asking for the total amount spent on stock repurchases in the fourth quarter? But it says \"in december 2012\". So I'll compute.\n\nLet's compute: 102,400 * 74.83 = 7,662,592. So approximately $7.7 million. But the question asks \"total amount spent on stock repurchases in december 2012?\" So answer: $7.7 million (or 7,662,592). I'll put the value without units? The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for the amount, so we can put the number. I'll put 7,662,592 or 7.7 million? Since the document gives average price and shares, the exact product is 7,662,592. But the question might expect the figure from the table? The table does not have that column. So I'll put 7,662,592. However, the question might be asking for the total amount spent on stock repurchases in December 2012, which is the product. I'll put that.\n\nBut wait: the table also shows \"Total Fourth Quarter\" with 619,314 shares and average price $74.25, and the text says aggregate $46.0 million. That is for the quarter. So December is separate. So answer: 7,662,592.\n\nI'll put that.",
+ "raw_content": "<answer>7,662,592</answer>",
+ "usage": {
+  "prompt_tokens": 220684,
+  "completion_tokens": 929,
+  "total_tokens": 221613,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 220416
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.4,
+ "answer_tag_found": true,
+ "docfinqa_row": 423
+}

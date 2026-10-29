@@ -1,0 +1,75 @@
+# Docset -> shape for the corpus in models/data/corpus.
+#
+# Each docset is assigned one of five shapes: form, prose_narrative, hybrid_composite,
+# table_dense, complex_layout. Results are broken down by shape.
+#
+# `basis` records how the assignment was decided:
+#   docx_table        assigned in the original shapes table
+#   inspected_sample  someone opened documents and looked
+#   name_only         a guess from the docset's name; excluded from anything fitted
+#
+# A docset absent from this file has NO shape: ShapeMap.get() raises UnmappedDocset rather
+# than guess, so a new docset must be added here before it can be loaded.
+not_a_docset:
+- UNASSIGNED
+- NO_REF
+- Schemas
+- field_name_check
+docsets:
+- docset_id: o9dmulfkp0ii
+  display_name: Cruise Itineraries
+  org: z4ervk9ic0oo
+  shape: complex_layout
+  basis: inspected_sample
+  note: 'Marketing brochure: multi-column itinerary spreads, pull-quotes, price callouts, day-by-day panels.
+    The only complex_layout docset with gold refs.'
+- docset_id: 8frgx7rlbew3
+  display_name: Sample NTSB Aviation Incident Reports
+  org: z4ervk9ic0oo
+  shape: form
+  basis: docx_table
+  note: 'Cleanest pure-form example in the corpus: label/value fields across multiple pages, no narrative
+    body.'
+- docset_id: hcqfkilviuq3
+  display_name: Sample Master Services Agreements
+  org: z4ervk9ic0oo
+  shape: prose_narrative
+  basis: docx_table
+  note: MSA boilerplate; rate schedules and SOWs are separate attachments.
+- docset_id: i0ycfsrfx0av
+  display_name: Sample Safety Data Sheets
+  org: z4ervk9ic0oo
+  shape: form
+  basis: docx_table
+  note: Standardized 16-section GHS layout, identical across every SDS.
+- docset_id: nqkh1hkhhkaf
+  display_name: Sample Commercial Leases
+  org: z4ervk9ic0oo
+  shape: hybrid_composite
+  basis: docx_table
+  note: Basic Lease Information defined-terms block, then prose clauses, then exhibits (floor plans, rent
+    schedules).
+- docset_id: qve3rqreikmn
+  display_name: Sample Medical Notes (UNC)
+  org: z4ervk9ic0oo
+  shape: prose_narrative
+  basis: docx_table
+  note: Free-text clinical narrative with light section labels (CC/HPI/PMHx).
+- docset_id: uzruqpzkyugz
+  display_name: Sample Clinical Trial Protocols
+  org: z4ervk9ic0oo
+  shape: prose_narrative
+  basis: docx_table
+  note: Long regulatory/scientific narrative; dosing and visit-schedule sections lean tabular.
+- docset_id: vg52pfjb0wbf
+  display_name: Sample Transport Agreements
+  org: z4ervk9ic0oo
+  shape: prose_narrative
+  basis: docx_table
+  note: Standard prose shipper-carrier contract.
+- docset_id: yrrrq1d5kili
+  display_name: Sample Supplier Agreements
+  org: z4ervk9ic0oo
+  shape: prose_narrative
+  basis: docx_table
+  note: Prose contract; pricing mechanics in running text, exhibits referenced but not inline.

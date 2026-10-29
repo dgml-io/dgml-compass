@@ -1,0 +1,53 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0366",
+ "format": "markdown_pdf_poppler",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what was the percentage change in the in pretax losses related to foreign exchange transactions in 2007",
+ "gold": "41.7%",
+ "finqa_id": "SNA/2007/page_69.pdf-1",
+ "source_page": "page_69",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_poppler/SNA_2007_0001104659-08-011401.md",
+ "doc_chars": 416845,
+ "prompt_chars": 417037,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 416845,
+ "original_chars": 416845,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 79065,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 419,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "41.67%",
+ "reasoning": "We need to find the pretax losses related to foreign exchange transactions in 2007 and compare to 2006. The document says: \"Foreign exchange transactions resulted in pretax losses of $1.7 million in 2007 and $1.2 million in 2006, and a pretax gain of $0.7 million in 2005.\" So the change from 2006 to 2007: from -1.2 to -1.7 (losses). Percentage change = (new - old)/|old| *100 = (-1.7 - (-1.2))/1.2 *100 = (-0.5)/1.2 *100 = -41.67%? But careful: losses increased, so the loss amount increased by 0.5 million, which is 41.67% increase in the loss. The question asks \"percentage change in the in pretax losses\" - so it's the change in the magnitude of losses. So from 1.2 to 1.7, that's an increase of 0.5, which is 41.67% increase. But if we consider signed values, it's -41.67%? Typically percentage change in losses would be (1.7-1.2)/1.2 = 0.4167 = 41.67% increase. The question says \"percentage change in the in pretax losses\" - likely they want the percentage change in the loss amount. So answer: 41.67% or 41.7%. But let's check if they want the change in the loss figure itself. The document states \"pretax losses of $1.7 million in 2007 and $1.2 million in 2006\". So the loss increased by 0.5 million, which is 41.67% of 1.2. So answer: 41.67% (or 41.7%). I'll put that.",
+ "raw_content": "<answer>41.67%</answer>",
+ "usage": {
+  "prompt_tokens": 79215,
+  "completion_tokens": 419,
+  "total_tokens": 79634,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 79104
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.13,
+ "answer_tag_found": true,
+ "docfinqa_row": 366
+}

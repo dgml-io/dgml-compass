@@ -1,0 +1,56 @@
+{
+ "id": "CMCSA_2015_0001193125-16-452423__row0908",
+ "format": "dgml",
+ "key": "CMCSA_2015_0001193125-16-452423",
+ "question": "based on the review of the reconciliation of unrecognized tax benefits what was the change in 2014",
+ "gold": "530",
+ "finqa_id": "CMCSA/2015/page_112.pdf-3",
+ "source_page": "page_112",
+ "ticker": "CMCSA",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml/CMCSA_2015_0001193125-16-452423.dgml.xml",
+ "doc_chars": 907858,
+ "prompt_chars": 908045,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": true,
+ "truncation": "head",
+ "kept_chars": 907748,
+ "original_chars": 1078239,
+ "kept_fraction": 0.8419,
+ "est_doc_tokens": 250309,
+ "est_kept_tokens": 210513,
+ "budget_tokens": 240000,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 428,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-530",
+ "reasoning": "The question asks: \"based on the review of the reconciliation of unrecognized tax benefits what was the change in 2014\"\n\nI need to find the reconciliation of unrecognized tax benefits. The document contains a table \"Reconciliation of Unrecognized Tax Benefits\" with columns 2015, 2014, 2013.\n\nThe table shows:\nBalance, January 1: 2015: $1,171; 2014: $1,701; 2013: $1,573\nAdditions based on tax positions related to the current year: 67, 63, 90\nAdditions based on tax positions related to prior years: 98, 111, 201\nAdditions from acquired subsidiaries: —, —, 268\nReductions for tax positions of prior years: (84), (220), (141)\nReductions due to expiration of statutes of limitations: (41), (448), (3)\nSettlements with tax authorities: (75), (36), (287)\nBalance, December 31: $1,136, $1,171, $1,701\n\nThe question asks \"what was the change in 2014\". The change in 2014 would be the difference between the balance at December 31, 2014 and January 1, 2014. January 1, 2014 = $1,701 (which is the balance at December 31, 2013). December 31, 2014 = $1,171. So the change = 1,171 - 1,701 = -530.\n\nAlternatively, the question might be asking for the net change during 2014. The balance went from $1,701 to $1,171, a decrease of $530.\n\nLet me verify: Balance January 1, 2014 = $1,701. Balance December 31, 2014 = $1,171. Change = -$530.\n\nSo the answer is -530 (or a decrease of 530).",
+ "raw_content": "<answer>-530</answer>",
+ "usage": {
+  "prompt_tokens": 210684,
+  "completion_tokens": 428,
+  "total_tokens": 211112,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 210432
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.27,
+ "answer_tag_found": true,
+ "docfinqa_row": 908
+}

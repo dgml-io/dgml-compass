@@ -1,0 +1,74 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0126",
+ "format": "markdown_pdf_rules",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "if the total fin 48 gross liability for unrecognized tax benefits at november 28 , 2008 were recognized in the future , is the amount of unrecognized tax benefits that would decrease the effective tax rate greater than the amount that would decrease goodwill?",
+ "gold": "no",
+ "finqa_id": "ADBE/2008/page_89.pdf-4",
+ "source_page": "page_89",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_rules/ADBE_2008_0000796343-09-000007.md",
+ "doc_chars": 443328,
+ "prompt_chars": 443676,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 443328,
+ "original_chars": 443328,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 95226,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 353,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-11.2",
+ "reasoning": "We need answer question: if total FIN 48 gross liability for unrecognized tax benefits at Nov 28 2008 were recognized in future, is amount that would decrease effective tax rate greater than amount that would decrease goodwill? Need compare figures. From document: \"If the total FIN 48 gross liability for unrecognized tax benefits at November 28, 2008 were recognized in the future, the following amounts, net of an estimated $12.9 million benefit related to deducting such payments on future tax returns, would result: $57.7 million of unrecognized tax benefits would decrease the effective tax rate and $68.9 million would decrease goodwill.\" So 57.7 vs 68.9. 57.7 < 68.9, so no, not greater. Answer: No. Need provide evidence and program. Evidence: $57.7 million | Note 8; $68.9 million | Note 8. Program: compare? The program expects nested calls? We can use subtract(57.7, 68.9) negative, but answer is boolean? The question asks \"is ... greater than ...?\" So answer should be \"No\" or \"NOT_FOUND\"? We can output \"No\" inside answer. Program: subtract(57.7, 68.9) gives negative, indicating not greater. But program must be exact. Use subtract(57.7, 68.9).",
+ "raw_content": "<evidence>\n$57.7 million | Note 8 - Income Taxes\n$68.9 million | Note 8 - Income Taxes\n</evidence>\n<program>\nsubtract(57.7, 68.9)\n</program>\n<answer>No</answer>",
+ "usage": {
+  "prompt_tokens": 95564,
+  "completion_tokens": 353,
+  "total_tokens": 95917,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 93184
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 12.05,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$57.7 million",
+   "element": "Note 8 - Income Taxes",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$68.9 million",
+   "element": "Note 8 - Income Taxes",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "subtract(57.7, 68.9)",
+ "answer_model": "No",
+ "program_value": -11.200000000000003,
+ "docfinqa_row": 126
+}

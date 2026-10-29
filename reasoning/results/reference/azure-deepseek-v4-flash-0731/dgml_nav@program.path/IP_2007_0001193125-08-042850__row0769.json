@@ -1,0 +1,86 @@
+{
+ "id": "IP_2007_0001193125-08-042850__row0769",
+ "key": "IP_2007_0001193125-08-042850",
+ "question": "in 2005 what was industrial packaging the profit margin",
+ "gold": "4.74%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "IP_2007_0001193125-08-042850.outline.txt",
+ "doc_source": "IP_2007_0001193125-08-042850.dgml.xml",
+ "outline_chars": 139969,
+ "predicted_xpaths": [
+  "/chunk/ManagementDiscussionAndAnalysis/IndustrySegmentResults/IndustrialPackagingSegment",
+  "/chunk/ManagementDiscussionAndAnalysis/IndustrySegmentResults/IndustrialPackagingSegment/table"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 3710,
+ "r1_usage": {
+  "prompt_tokens": 35261,
+  "completion_tokens": 905,
+  "total_tokens": 36166,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 35072
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/ManagementDiscussionAndAnalysis/IndustrySegmentResults/IndustrialPackagingSegment",
+  "/chunk/ManagementDiscussionAndAnalysis/IndustrySegmentResults/IndustrialPackagingSegment/table"
+ ],
+ "content_chars": 43952,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "0.047351",
+ "reasoning": "We need answer profit margin for industrial packaging in 2005. Need compute operating profit / sales. From table: 2005 sales $4,625 million, operating profit $219 million. Profit margin = 219/4625 = 0.047351... = 4.735%. Need provide evidence and program.",
+ "raw_content": "<evidence>$4,625 | /chunk/ManagementDiscussionAndAnalysis/IndustrySegmentResults/IndustrialPackagingSegment/table/IndustrialPackagingSalesByYear/SegmentSalesAmount\n$ 219 | /chunk/ManagementDiscussionAndAnalysis/IndustrySegmentResults/IndustrialPackagingSegment/table/IndustrialPackagingOperatingProfitByYear/SegmentOperatingProfitAmount</evidence>\n<program>divide(219, 4625)</program>\n<answer>0.04735135135135135</answer>",
+ "r2_usage": {
+  "prompt_tokens": 10100,
+  "completion_tokens": 174,
+  "total_tokens": 10274,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 10100,
+   "completion_tokens": 174,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "$4,625",
+   "element": "chunk/ManagementDiscussionAndAnalysis/IndustrySegmentResults/IndustrialPackagingSegment/table/IndustrialPackagingSalesByYear/SegmentSalesAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$ 219",
+   "element": "chunk/ManagementDiscussionAndAnalysis/IndustrySegmentResults/IndustrialPackagingSegment/table/IndustrialPackagingOperatingProfitByYear/SegmentOperatingProfitAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(219, 4625)",
+ "answer_model": "0.04735135135135135",
+ "program_value": 0.04735135135135135,
+ "elapsed_s": 6.04
+}

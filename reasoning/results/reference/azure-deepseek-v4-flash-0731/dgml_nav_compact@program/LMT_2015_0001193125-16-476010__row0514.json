@@ -1,0 +1,64 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0514",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was the change in the total long-term debt net from 2014 to 2015 in millions",
+ "gold": "9119",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "LMT_2015_0001193125-16-476010.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/ConsolidatedBalanceSheets/table/LongTermDebtNetBalance"
+ ],
+ "r1_reasoning_chars": 2071,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 28889,
+  "completion_tokens": 531,
+  "total_tokens": 29420,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ConsolidatedBalanceSheets/table/LongTermDebtNetBalance"
+ ],
+ "content_chars": 1696,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "8163",
+ "reasoning": "We need answer change in total long-term debt net from 2014 to 2015. Need identify figures. Region LongTermDebtNetBalance has two DebtPrincipalAmount: 14,305 and 6,142. Need know which year. Typically balance sheet has two columns: current year and prior year. Question asks change from 2014 to 2015. Need determine order. The document likely has 2015 and 2014. The first amount might be 2015, second 2014? Need infer. The question: \"change in the total long-term debt net from 2014 to 2015\" means 2015 minus 2014. If first is 2015, second 2014, change = 14,305 - 6,142 = 8,163. But need verify. The region label LongTermDebtNetBalance has two amounts. Usually in financial statements, current year first, prior year second. So 14,305 is 2015, 6,142 is 2014. Change = 8,163. Need evidence figures. Also note \"in millions\" - amounts are in millions? The figures likely in millions. So answer 8163.\n\nNeed produce evidence lines with value | element. Element names? The region has element names? The XML shows LongTermDebtNetBalance with DebtPrincipalAmount. We can cite \"Long-term debt, net\" and amounts. Need list figures used: 14,305 and 6,142. Then program subtract(14305, 6142). Answer inside <answer>8163</answer>.\n\nBut let's be careful: The question says \"total long-term debt net\" - the label is \"Long-term debt, net\". So yes.\n\nNeed ensure no units? The question asks \"in millions\" so answer just number.",
+ "raw_content": "<evidence>14,305 | Long-term debt, net (DebtPrincipalAmount)</evidence>\n<evidence>6,142 | Long-term debt, net (DebtPrincipalAmount)</evidence>\n<program>subtract(14305, 6142)</program>\n<answer>8163</answer>",
+ "r2_usage": {
+  "prompt_tokens": 792,
+  "completion_tokens": 445,
+  "total_tokens": 1237,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "14,305",
+   "element": "Long-term debt, net (DebtPrincipalAmount)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(14305, 6142)",
+ "answer_model": "8163",
+ "program_value": 8163.0,
+ "elapsed_s": 7.77,
+ "outline_source": "LMT_2015_0001193125-16-476010.outline.txt",
+ "outline_chars": 116705
+}

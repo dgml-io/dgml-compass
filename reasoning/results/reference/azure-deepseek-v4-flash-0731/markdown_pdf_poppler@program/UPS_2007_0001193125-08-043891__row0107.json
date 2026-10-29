@@ -1,0 +1,74 @@
+{
+ "id": "UPS_2007_0001193125-08-043891__row0107",
+ "format": "markdown_pdf_poppler",
+ "key": "UPS_2007_0001193125-08-043891",
+ "question": "what is the total cash inflow from the stock purchases of employees in 2007 , ( in millions ) ?",
+ "gold": "115.6",
+ "finqa_id": "UPS/2007/page_98.pdf-1",
+ "source_page": "page_98",
+ "ticker": "UPS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_poppler/UPS_2007_0001193125-08-043891.md",
+ "doc_chars": 420536,
+ "prompt_chars": 420720,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 420536,
+ "original_chars": 420536,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 75577,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 578,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "115.56",
+ "reasoning": "We need answer: total cash inflow from stock purchases of employees in 2007, in millions. Need find in document. There is \"Issuances of common stock\" in cash flows financing activities: 174 million for 2007. Also \"We received cash of $52, $30, and $21 million during 2007, 2006, and 2005, respectively, from option holders resulting from the exercise of stock options.\" And employee stock purchase plan: \"Employees purchased 1.8, 1.9, and 2.0 million shares at average prices of $64.20, $66.64, and $64.54 per share during 2007, 2006, and 2005, respectively.\" That gives cash inflow from employee stock purchases? Question: \"total cash inflow from the stock purchases of employees in 2007\" Could be from employee stock purchase plan: 1.8 million shares * $64.20 = $115.56 million. Plus option exercises cash received $52 million? But \"stock purchases of employees\" might refer to employee stock purchase plan specifically. Need parse. The question says \"stock purchases of employees\" - likely the employee stock purchase plan. In document: \"Employees purchased 1.8, 1.9, and 2.0 million shares at average prices of $64.20, $66.64, and $64.54 per share during 2007, 2006, and 2005, respectively.\" So cash inflow = 1.8 * 64.20 = 115.56 million. But also \"Issuances of common stock\" in cash flow statement is 174 million, which includes employee stock purchases and option exercises? The question specifically \"stock purchases of employees\" - could be the employee stock purchase plan. Need compute. Let's check: 1.8 million shares * $64.20 = 115.56. In millions, $115.56. But maybe they ask \"total cash inflow from the stock purchases of employees\" meaning from employee stock purchase plan. The document also says \"We received cash of $52 million from option holders\" - that's not \"stock purchases\" but option exercises. So answer 115.56. Need evidence: \"1.8\" and \"$64.20\" from Note 11. Program multiply(1.8, 64.20) = 115.56. Final answer inside <answer>115.56</answer>.",
+ "raw_content": "<evidence>1.8 | Note 11 Discounted Employee Stock Purchase Plan\n$64.20 | Note 11 Discounted Employee Stock Purchase Plan</evidence>\n<program>multiply(1.8, 64.20)</program>\n<answer>115.56</answer>",
+ "usage": {
+  "prompt_tokens": 75887,
+  "completion_tokens": 578,
+  "total_tokens": 76465,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.36,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1.8",
+   "element": "Note 11 Discounted Employee Stock Purchase Plan",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$64.20",
+   "element": "Note 11 Discounted Employee Stock Purchase Plan",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(1.8, 64.20)",
+ "answer_model": "115.56",
+ "program_value": 115.56,
+ "docfinqa_row": 107
+}

@@ -1,0 +1,72 @@
+{
+ "id": "ZBH_2003_0000950137-04-001881__row0042",
+ "key": "ZBH_2003_0000950137-04-001881",
+ "question": "what percent increase did inventories receive between 2002 and 2003?",
+ "gold": "104.85%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "ZBH_2003_0000950137-04-001881.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/FilingHeader/Inventories",
+  "/chunk/Inventories",
+  "/chunk/FilingComplianceStatus/LiquidityAndCapitalResources/WorkingCapitalManagement"
+ ],
+ "r1_reasoning_chars": 4703,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 13263,
+  "completion_tokens": 1165,
+  "total_tokens": 14428,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/FilingHeader/Inventories",
+  "/chunk/Inventories",
+  "/chunk/FilingComplianceStatus/LiquidityAndCapitalResources/WorkingCapitalManagement"
+ ],
+ "content_chars": 146194,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "104.852484",
+ "reasoning": "We need percent increase in inventories between 2002 and 2003. From table: Inventories, net 2003 $527.7, 2002 $257.6. Percent increase = (527.7 - 257.6)/257.6 * 100. Compute.",
+ "raw_content": "<evidence>527.7 | Inventories, net 2003\n257.6 | Inventories, net 2002</evidence>\n<program>multiply(divide(subtract(527.7, 257.6), 257.6), 100)</program>",
+ "r2_usage": {
+  "prompt_tokens": 35438,
+  "completion_tokens": 121,
+  "total_tokens": 35559,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "527.7",
+   "element": "Inventories, net 2003",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "257.6",
+   "element": "Inventories, net 2002",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(527.7, 257.6), 257.6), 100)",
+ "answer_model": null,
+ "program_value": 104.8524844720497,
+ "elapsed_s": 7.58,
+ "outline_source": "ZBH_2003_0000950137-04-001881.outline.txt",
+ "outline_chars": 52082
+}

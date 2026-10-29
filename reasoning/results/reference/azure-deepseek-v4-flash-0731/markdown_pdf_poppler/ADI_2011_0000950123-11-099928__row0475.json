@@ -1,0 +1,50 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0475",
+ "format": "markdown_pdf_poppler",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what is the net change in the total investment from 2010 to 2011?",
+ "gold": "17720",
+ "finqa_id": "ADI/2011/page_81.pdf-2",
+ "source_page": "page_81",
+ "ticker": "ADI",
+ "fiscal_year": "2011",
+ "source_file": "data/docs/markdown_pdf_poppler/ADI_2011_0000950123-11-099928.md",
+ "doc_chars": 465742,
+ "prompt_chars": 465896,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 465742,
+ "original_chars": 465742,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 78562,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 355,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "904,694",
+ "reasoning": "We need answer net change in total investment from 2010 to 2011. Need identify \"total investment\" likely cash and cash equivalents + short-term investments? Or total investments? The document mentions cash and cash equivalents and short-term investments. At Oct 29 2011: cash and cash equivalents $1,405,100; short-term investments $2,187,362. At Oct 30 2010: cash $1,070,000; short-term investments $1,617,768. Total 2011 = 3,592,462; 2010 = 2,687,768. Net change = 904,694 (in thousands). But question says \"total investment\" maybe \"total investments\" from balance sheet? There is \"Short-term investments\" and \"Other investments\". Also \"Deferred compensation plan investments\". But likely \"total investment\" refers to cash and cash equivalents and short-term investments? The document says \"principal source of liquidity was $3,592.5 million of cash and cash equivalents and short-term investments.\" So net change = 3,592.5 - 2,687.8 = 904.7 million. But need exact from table: 2011: 1,405,100 + 2,187,362 = 3,592,462; 2010: 1,070,000 + 1,617,768 = 2,687,768; difference = 904,694 (thousands). So answer 904,694 (in thousands) or $904.7 million. The question asks \"net change in the total investment\" - likely in dollars. Provide value only.",
+ "raw_content": "<answer>904,694</answer>",
+ "usage": {
+  "prompt_tokens": 78709,
+  "completion_tokens": 355,
+  "total_tokens": 79064,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 12.4,
+ "answer_tag_found": true,
+ "docfinqa_row": 475
+}

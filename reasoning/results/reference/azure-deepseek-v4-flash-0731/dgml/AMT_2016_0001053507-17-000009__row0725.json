@@ -1,0 +1,53 @@
+{
+ "id": "AMT_2016_0001053507-17-000009__row0725",
+ "format": "dgml",
+ "key": "AMT_2016_0001053507-17-000009",
+ "question": "what is the net change in the balance of unrecognized tax benefits during 2016?",
+ "gold": "79437",
+ "finqa_id": "AMT/2016/page_125.pdf-1",
+ "source_page": "page_125",
+ "ticker": "AMT",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/dgml/AMT_2016_0001053507-17-000009.dgml.xml",
+ "doc_chars": 929244,
+ "prompt_chars": 929412,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 929244,
+ "original_chars": 929244,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 223326,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 234,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "79,437",
+ "reasoning": "The question asks for the net change in the balance of unrecognized tax benefits during 2016.\n\nFrom the document, in the \"UnrecognizedTaxBenefitRollforward\" table:\n- Balance at January 1: $28,114\n- Additions based on tax positions related to the current year: $82,912\n- Additions for tax positions of prior years: $0\n- Foreign currency: $(307)\n- Reduction as a result of the lapse of statute of limitations and effective settlements: $(3,168)\n- Balance at December 31: $107,551\n\nNet change = 107,551 - 28,114 = 79,437 (in thousands).\n\nAlternatively, sum of changes: 82,912 - 307 - 3,168 = 79,437.\n\nSo the net change is $79,437 thousand, or $79.4 million. The question asks for the net change, so answer 79,437 (in thousands) or 79.4 million. I'll provide the value in thousands as it appears in the table.",
+ "raw_content": "<answer>79,437</answer>",
+ "usage": {
+  "prompt_tokens": 223472,
+  "completion_tokens": 234,
+  "total_tokens": 223706,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 223232
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.4,
+ "answer_tag_found": true,
+ "docfinqa_row": 725
+}

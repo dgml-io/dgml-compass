@@ -1,0 +1,53 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0630",
+ "format": "dgml",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "whats is the percentage of equity compensation plans that were not approved by security holders?",
+ "gold": "0.491%",
+ "finqa_id": "CME/2010/page_123.pdf-1",
+ "source_page": "page_123",
+ "ticker": "CME",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/dgml/CME_2010_0001193125-11-050252.dgml.xml",
+ "doc_chars": 731824,
+ "prompt_chars": 732009,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 731824,
+ "original_chars": 731824,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 170125,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 598,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.49%",
+ "reasoning": "We need to find the percentage of equity compensation plans not approved by security holders. The document has a table in Item 12: Equity Compensation Plan Information. It shows:\n\nPlan category: Equity compensation plans approved by security holders: number of securities to be issued upon exercise of outstanding options: 1,211,143; weighted-average exercise price: $308.10; number remaining available: 5,156,223.\n\nEquity compensation plans not approved by security holders: outstanding options: 5,978; weighted-average exercise price: $22.00; remaining available: —.\n\nTotal: 1,217,121 outstanding options.\n\nThe question asks: \"whats is the percentage of equity compensation plans that were not approved by security holders?\" This could be interpreted as the percentage of outstanding options that are under plans not approved by security holders. Or the percentage of plans? The table gives numbers of securities to be issued upon exercise of outstanding options. So the percentage of outstanding options not approved = 5,978 / 1,217,121 * 100 ≈ 0.491%. Alternatively, if they mean the percentage of plans (categories) not approved, there are 2 categories, one not approved, so 50%? But that seems unlikely. The question likely refers to the proportion of equity compensation (shares) not approved. The table shows total outstanding options 1,217,121, of which 5,978 are not approved. So percentage = 5,978 / 1,217,121 * 100 ≈ 0.491%. Let's compute precisely: 5,978 / 1,217,121 = 0.004911... so 0.4911%. The answer should be a percentage. The question says \"percentage of equity compensation plans\" but the data is about shares. I'll answer with the percentage of outstanding options under plans not approved. So 0.49% approximately. I'll put 0.49% or 0.491%. The instruction says give the value itself without explanation or units unless asked. The question asks for percentage, so include % sign? It says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"whats is the percentage\" so units are percentage, so include % sign. I'll put 0.49% or 0.491%. Let's compute exactly: 5978 / 1217121 = 0.004911... so 0.4911%. I'll put 0.49% as rounded. But to be precise, I'll put 0.49%. Alternatively, if they want the percentage of plans (categories) not approved, that would be 50% but that seems too trivial. The table clearly shows the number of securities. So I'll go with 0.49%.",
+ "raw_content": "<answer>0.49%</answer>",
+ "usage": {
+  "prompt_tokens": 170269,
+  "completion_tokens": 598,
+  "total_tokens": 170867,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 167936
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.55,
+ "answer_tag_found": true,
+ "docfinqa_row": 630
+}

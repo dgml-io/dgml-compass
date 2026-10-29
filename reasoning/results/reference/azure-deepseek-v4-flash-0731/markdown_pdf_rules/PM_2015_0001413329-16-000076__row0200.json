@@ -1,0 +1,53 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0200",
+ "format": "markdown_pdf_rules",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the interest expense in 2015 assuming that all the debt is interest bearing debt , ( in billions ) ?",
+ "gold": "0.86",
+ "finqa_id": "PM/2015/page_85.pdf-3",
+ "source_page": "page_85",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_rules/PM_2015_0001413329-16-000076.md",
+ "doc_chars": 492980,
+ "prompt_chars": 493177,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 492980,
+ "original_chars": 492980,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 115067,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 252,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1.132",
+ "reasoning": "We need answer interest expense in 2015 assuming all debt is interest bearing debt, in billions. From document: Interest expense, net for 2015 is $1,008 million. But question asks \"interest expense in 2015 assuming that all the debt is interest bearing debt\" - maybe they want interest expense gross? The document has \"Interest expense\" $1,132 million and \"Interest expense, net\" $1,008 million. The question says \"interest expense\" not net. So use $1,132 million = $1.132 billion. But check: \"assuming that all the debt is interest bearing debt\" - maybe they want to compute from total debt? Actually the document gives interest expense directly. The phrase \"assuming that all the debt is interest bearing debt\" might be a trick: total debt includes short-term borrowings and long-term debt, all are interest bearing. But interest expense is given. So answer $1.132 billion. However, the question says \"in billions\" so $1.132. Let's confirm: In Note 14 Additional Information: Interest expense $1,132 million for 2015. So answer 1.132.",
+ "raw_content": "<answer>1.132</answer>",
+ "usage": {
+  "prompt_tokens": 115219,
+  "completion_tokens": 252,
+  "total_tokens": 115471,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 114944
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.17,
+ "answer_tag_found": true,
+ "docfinqa_row": 200
+}

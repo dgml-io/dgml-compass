@@ -1,0 +1,53 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0094",
+ "format": "dgml",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "by what percentage did protect carrying values of excess inventories increase from 2002 to 2003?",
+ "gold": "39.0%",
+ "finqa_id": "MRO/2003/page_84.pdf-3",
+ "source_page": "page_84",
+ "ticker": "MRO",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/dgml/MRO_2003_0001193125-04-036535.dgml.xml",
+ "doc_chars": 894793,
+ "prompt_chars": 894978,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": true,
+ "truncation": "head",
+ "kept_chars": 894683,
+ "original_chars": 1111982,
+ "kept_fraction": 0.8046,
+ "est_doc_tokens": 266687,
+ "est_kept_tokens": 211360,
+ "budget_tokens": 240000,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 462,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "39.02%",
+ "reasoning": "The question asks: \"by what percentage did protect carrying values of excess inventories increase from 2002 to 2003?\"\n\nI need to find the values for \"Protect carrying values of excess inventories\" for 2003 and 2002.\n\nLooking at the document, in the RM&T segment derivatives section, there's a table:\n\n```\n<RMTDerivativeGainLoss r=\"tr\">\n  <td>Protect carrying values of excess inventories</td>\n  <DerivativeGainLossAmount r=\"td\">(57)</DerivativeGainLossAmount>\n  <DerivativeGainLossAmount r=\"td\">(41)</DerivativeGainLossAmount>\n</RMTDerivativeGainLoss>\n```\n\nSo 2003 = -57, 2002 = -41.\n\nThe question asks \"by what percentage did protect carrying values of excess inventories increase from 2002 to 2003?\"\n\nThese are losses. The values are -57 and -41. The change from -41 to -57 is an increase in the loss (more negative). But \"increase\" in percentage terms: from -41 to -57, the change is -16. Percentage change = (-57 - (-41)) / |-41| * 100 = (-16)/41 * 100 = -39.02%. That's a decrease if we treat the numbers as losses. But if we interpret \"increase\" as the magnitude of the loss increasing, then it's 39% increase.\n\nAlternatively, maybe the question means the absolute value? Let me re-read: \"by what percentage did protect carrying values of excess inventories increase from 2002 to 2003?\"\n\nThe values are losses: 2003: -57, 2002: -41. The loss increased from 41 to 57, which is an increase of 16, or 16/41 = 39.02%.\n\nSo the percentage increase is approximately 39%.\n\nLet me compute: (57-41)/41 = 16/41 = 0.39024 = 39.02%.\n\nSo answer: 39.02% or approximately 39%.\n\nI'll put 39.02% inside the answer tags.",
+ "raw_content": "<answer>39.02%</answer>",
+ "usage": {
+  "prompt_tokens": 211530,
+  "completion_tokens": 462,
+  "total_tokens": 211992,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 18.35,
+ "answer_tag_found": true,
+ "docfinqa_row": 94
+}

@@ -1,0 +1,81 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0416",
+ "format": "markdown_pdf_plumber",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was average net sales for space systems in millions from 2013 to 2015?",
+ "gold": "9198",
+ "finqa_id": "LMT/2015/page_56.pdf-4",
+ "source_page": "page_56",
+ "ticker": "LMT",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_plumber/LMT_2015_0001193125-16-476010.md",
+ "doc_chars": 537327,
+ "prompt_chars": 537491,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 537327,
+ "original_chars": 537327,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 120906,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 152,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "9198.333333",
+ "reasoning": "We need average net sales for Space Systems 2013-2015. From segment data: 2015 9,105; 2014 9,202; 2013 9,288. Average = (9105+9202+9288)/3 = 27595/3 = 9198.333... So 9198.33.",
+ "raw_content": "<evidence>9,105 | Space Systems net sales 2015\n9,202 | Space Systems net sales 2014\n9,288 | Space Systems net sales 2013</evidence>\n<program>divide(add(add(9105, 9202), 9288), 3)</program>\n<answer>9198.33</answer>",
+ "usage": {
+  "prompt_tokens": 121212,
+  "completion_tokens": 152,
+  "total_tokens": 121364,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.18,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "9,105",
+   "element": "Space Systems net sales 2015",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "9,202",
+   "element": "Space Systems net sales 2014",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "9,288",
+   "element": "Space Systems net sales 2013",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(add(add(9105, 9202), 9288), 3)",
+ "answer_model": "9198.33",
+ "program_value": 9198.333333333334,
+ "docfinqa_row": 416
+}

@@ -1,0 +1,84 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0744",
+ "format": "markdown_pdf_plumber",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "what was the difference in operating margin between 2012 and 2013?",
+ "gold": ".1%",
+ "finqa_id": "LMT/2014/page_50.pdf-3",
+ "source_page": "page_50",
+ "ticker": "LMT",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf_plumber/LMT_2014_0001193125-15-038681.md",
+ "doc_chars": 462533,
+ "prompt_chars": 462688,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 462533,
+ "original_chars": 462533,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 103588,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 755,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.005344",
+ "reasoning": "We need answer difference in operating margin between 2012 and 2013. Need identify operating margin. Likely consolidated operating profit / net sales? Or segment? Question ambiguous. \"operating margin\" likely from Selected Financial Data? In document, operating profit and net sales. For 2012: operating profit 4,434, net sales 47,182. 2013: operating profit 4,505, net sales 45,358. Operating margin = operating profit / net sales. Compute 2013 margin - 2012 margin. Or maybe they ask difference in operating margin between 2012 and 2013, perhaps from business segment? But no specific segment. Likely consolidated. Let's compute.\n\n2012: 4434/47182 = 0.09398? 2013: 4505/45358 = 0.09932. Difference = 0.00534 = 0.534 percentage points. Or maybe they want percentage points. Let's compute precisely.\n\n4434/47182 = 0.093977... 4505/45358 = 0.099321... difference = 0.005344 = 0.5344 percentage points. Could be expressed as 0.53% or 0.5 percentage points. Need answer value only. But question \"difference in operating margin between 2012 and 2013\" could be 2013 minus 2012. Let's use figures.\n\nEvidence: Operating profit 2012 4,434, 2013 4,505; Net sales 2012 47,182, 2013 45,358. Program: subtract(divide(4505,45358), divide(4434,47182)). Need exact? The benchmark executes program, so answer should be numeric. Let's compute more precisely.\n\n4505/45358 = 0.099321... 4434/47182 = 0.093977... difference = 0.005344. So answer 0.005344? Or as percentage 0.5344%. The question asks \"difference in operating margin\" - typically margin is percentage. So answer could be 0.53% or 0.5344 percentage points. The instruction says no units unless asked. They ask difference, so value. I'll put 0.005344? But margin is ratio. Usually operating margin expressed as percent. The difference in percentage points is 0.53. Let's see if they expect decimal. The document gives operating margins for segments as percentages. For consolidated, not given. But question likely from financial data. I'll provide 0.0053? Better to give exact decimal difference. The program will compute. The answer should be the value. I'll put 0.005344 (or 0.53%). Since no units, I'll put 0.005344. But maybe they want percentage points: 0.53. Hmm.\n\nLet's read question: \"what was the difference in operating margin between 2012 and 2013?\" Operating margin = operating profit / net sales. Difference = 2013 margin - 2012 margin. So answer is a ratio. I'll output 0.005344.",
+ "raw_content": "<evidence>\n4,505 | Operating profit 2013\n45,358 | Net sales 2013\n4,434 | Operating profit 2012\n47,182 | Net sales 2012\n</evidence>\n<program>\nsubtract(divide(4505, 45358), divide(4434, 47182))\n</program>\n<answer>0.005344</answer>",
+ "usage": {
+  "prompt_tokens": 103891,
+  "completion_tokens": 755,
+  "total_tokens": 104646,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 103680
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.83,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "4,505",
+   "element": "Operating profit 2013",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "45,358",
+   "element": "Net sales 2013",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "4,434",
+   "element": "Operating profit 2012",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "47,182",
+   "element": "Net sales 2012",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(divide(4505, 45358), divide(4434, 47182))",
+ "answer_model": "0.005344",
+ "program_value": 0.005344441246040305,
+ "docfinqa_row": 744
+}

@@ -1,0 +1,74 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0759",
+ "format": "dgml",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "what is the net change in the gross liability for unrecognized tax benefits during 2008?",
+ "gold": "-62259",
+ "finqa_id": "ADBE/2008/page_89.pdf-1",
+ "source_page": "page_89",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml/ADBE_2008_0000796343-09-000007.dgml.xml",
+ "doc_chars": 800179,
+ "prompt_chars": 800356,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 800179,
+ "original_chars": 800179,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 183166,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 236,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-62259",
+ "reasoning": "We need the net change in gross liability for unrecognized tax benefits during 2008. From Note 8, FIN 48 rollforward: beginning balance Dec 1, 2007 = $201,808 thousand, ending Nov 28, 2008 = $139,549 thousand. Net change = 139,549 - 201,808 = -62,259 thousand. But question asks \"net change\" - likely the change amount. Could be -62,259 (in thousands). The document gives figures in thousands. The answer should be the value. We'll provide -62,259. But check if they want in dollars? The question doesn't specify units. The figures are in thousands. We'll output -62,259.",
+ "raw_content": "<evidence>\n201,808 | UnrecognizedTaxBenefitRollforward (beginning balance as of December 1, 2007)\n139,549 | UnrecognizedTaxBenefitRollforward (ending balance as of November 28, 2008)\n</evidence>\n<program>subtract(139549, 201808)</program>\n<answer>-62,259</answer>",
+ "usage": {
+  "prompt_tokens": 183472,
+  "completion_tokens": 236,
+  "total_tokens": 183708,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 183296
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 6.77,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "201,808",
+   "element": "UnrecognizedTaxBenefitRollforward (beginning balance as of December 1, 2007)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "139,549",
+   "element": "UnrecognizedTaxBenefitRollforward (ending balance as of November 28, 2008)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(139549, 201808)",
+ "answer_model": "-62,259",
+ "program_value": -62259.0,
+ "docfinqa_row": 759
+}

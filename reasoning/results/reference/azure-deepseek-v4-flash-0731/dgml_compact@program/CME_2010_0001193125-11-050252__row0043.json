@@ -1,0 +1,72 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0043",
+ "format": "dgml_compact",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "assuming all options in the compensation plans approved by security holders were exercised , what would be the deemed proceeds to the company?",
+ "gold": "373153150",
+ "finqa_id": "CME/2010/page_123.pdf-2",
+ "source_page": "page_123",
+ "ticker": "CME",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/dgml_compact/CME_2010_0001193125-11-050252.dgml.txt",
+ "doc_chars": 521543,
+ "prompt_chars": 521774,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 521543,
+ "original_chars": 521543,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 112341,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 416,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "373153158.3",
+ "reasoning": "We need answer question: \"assuming all options in the compensation plans approved by security holders were exercised , what would be the deemed proceeds to the company?\" Need find relevant figures. In document, there is table in Item 12 Equity Compensation Plan Information. It shows \"Number of Securities to be Issued Upon Exercise of Outstanding Options (a)\" and \"Weighted-Average Exercise Price of Outstanding Options (b)\" for plans approved by security holders: 1,211,143 options, weighted-average exercise price $308.10. Deemed proceeds = number * weighted average exercise price = 1,211,143 * 308.10. Compute. 1,211,143 * 308.10 = ? Let's calculate: 1,211,143 * 300 = 363,342,900; *8.10 = 1,211,143*8 = 9,689,144; *0.10=121,114.3; sum = 363,342,900 + 9,689,144 + 121,114.3 = 373,153,158.3. So approximately $373.2 million. Need answer value only. But question asks \"deemed proceeds to the company\" - likely proceeds from exercise = shares * exercise price. Use figures. Evidence: 1,211,143 | EquityCompensation table; $308.10 | EquityCompensation table. Program multiply(1211143, 308.10). Final answer inside <answer>373,153,158.3</answer> maybe with no units. But check if there are also options not approved? Question specifically \"in the compensation plans approved by security holders\" so use that row. Yes.\n\nNeed include evidence and program.",
+ "raw_content": "<evidence>\n1,211,143 | EquityCompensation\n$308.10 | EquityCompensation\n</evidence>\n\n<program>multiply(1211143, 308.10)</program>\n\n<answer>373,153,158.3</answer>",
+ "usage": {
+  "prompt_tokens": 112652,
+  "completion_tokens": 416,
+  "total_tokens": 113068,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.97,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,211,143",
+   "element": "EquityCompensation",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$308.10",
+   "element": "EquityCompensation",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(1211143, 308.10)",
+ "answer_model": "373,153,158.3",
+ "program_value": 373153158.3,
+ "docfinqa_row": 43
+}

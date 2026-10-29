@@ -1,0 +1,69 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0069",
+ "format": "markdown_pdf_rules",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what portion of the total investment is allocated to mutual funds in 2011?",
+ "gold": "65.1%",
+ "finqa_id": "ADI/2011/page_81.pdf-1",
+ "source_page": "page_81",
+ "ticker": "ADI",
+ "fiscal_year": "2011",
+ "source_file": "data/docs/markdown_pdf_rules/ADI_2011_0000950123-11-099928.md",
+ "doc_chars": 345770,
+ "prompt_chars": 345933,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 345770,
+ "original_chars": 345770,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 77039,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 231,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.349224",
+ "reasoning": "We need answer: \"what portion of the total investment is allocated to mutual funds in 2011?\" Need find relevant figures. Document has Deferred Compensation Plan investments: 2011 money market funds $17,187, mutual funds $9,223, total $26,410. Also other investments? The question says \"total investment\" likely refers to deferred compensation plan investments? Need parse. In Note 7: \"Investments in The Analog Devices, Inc. Deferred Compensation Plan ... components ... 2011: Money market funds $17,187, Mutual funds $9,223, Total Deferred Compensation Plan investments $26,410.\" So portion allocated to mutual funds = 9,223 / 26,410 = 0.3492... = 34.92%. Need answer as portion maybe 34.9%. Use evidence.",
+ "raw_content": "<evidence>\n9,223 | Deferred Compensation Plan investments - Mutual funds\n26,410 | Deferred Compensation Plan investments - Total\n</evidence>\n\n<program>divide(9223, 26410)</program>\n\n<answer>0.3492</answer>",
+ "usage": {
+  "prompt_tokens": 77342,
+  "completion_tokens": 231,
+  "total_tokens": 77573,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.71,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "9,223",
+   "element": "Deferred Compensation Plan investments - Mutual funds",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "26,410",
+   "element": "Deferred Compensation Plan investments - Total",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(9223, 26410)",
+ "answer_model": "0.3492",
+ "program_value": 0.3492237788716395,
+ "docfinqa_row": 69
+}

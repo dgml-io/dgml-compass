@@ -1,0 +1,53 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0451",
+ "format": "dgml_compact",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "what was the percent of the total number of securities to be issued upon exercise of outstanding options that was securities to be issued upon exercise of outstanding options",
+ "gold": "99.5%",
+ "finqa_id": "CME/2010/page_123.pdf-3",
+ "source_page": "page_123",
+ "ticker": "CME",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/dgml_compact/CME_2010_0001193125-11-050252.dgml.txt",
+ "doc_chars": 521543,
+ "prompt_chars": 521806,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 521543,
+ "original_chars": 521543,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 112341,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 655,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "100%",
+ "reasoning": "We need to find the percent of the total number of securities to be issued upon exercise of outstanding options that was securities to be issued upon exercise of outstanding options. That sounds like a trick: the question asks \"what was the percent of the total number of securities to be issued upon exercise of outstanding options that was securities to be issued upon exercise of outstanding options\" - that is essentially 100% because it's the same thing. But maybe they want the breakdown from the equity compensation plan table: there are two categories: approved by security holders and not approved. The total is 1,217,121. The approved is 1,211,143, not approved is 5,978. The question might be asking: what percent of the total was securities to be issued upon exercise of outstanding options that was securities to be issued upon exercise of outstanding options? That is redundant. Possibly they meant to ask what percent was from approved plans? Or maybe they want the percentage of the total that is from the approved category? The phrasing is odd. Let's read the question: \"what was the percent of the total number of securities to be issued upon exercise of outstanding options that was securities to be issued upon exercise of outstanding options\" - it's self-referential. It might be a trick: the answer is 100% because it's the same quantity. But let's check the document: In the table under Item 12, we have:\n\nPlan category | Number of Securities to be Issued Upon Exercise of Outstanding Options (a) | Weighted-Average Exercise Price | Number Remaining Available\nEquity compensation plans approved by security holders | 1,211,143 | $308.10 | 5,156,223\nEquity compensation plans not approved by security holders | 5,978 | $22.00 | —\nTotal | 1,217,121 | | 5,156,223\n\nSo the total number of securities to be issued upon exercise of outstanding options is 1,217,121. The question asks: \"what was the percent of the total number of securities to be issued upon exercise of outstanding options that was securities to be issued upon exercise of outstanding options\" - that is literally the total divided by itself times 100 = 100%. But maybe they meant to ask what percent of the total was from approved plans? Or from non-approved? The phrasing is ambiguous. However, the question says \"that was securities to be issued upon exercise of outstanding options\" - it's the same category. So it's 100%. But let's see if there is any other interpretation. Perhaps they want the percentage of the total that is from the approved category? The question might be a typo. But as written, it's asking for the percent of the total that is the total itself, so 100%. I'll answer 100%.\n\nBut let's double-check: The question: \"what was the percent of the total number of securities to be issued upon exercise of outstanding options that was securities to be issued upon exercise of outstanding options\" - it's like \"what percent of X is X?\" Answer: 100%. So I'll put 100%.",
+ "raw_content": "<answer>100%</answer>",
+ "usage": {
+  "prompt_tokens": 112499,
+  "completion_tokens": 655,
+  "total_tokens": 113154,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 112384
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.56,
+ "answer_tag_found": true,
+ "docfinqa_row": 451
+}

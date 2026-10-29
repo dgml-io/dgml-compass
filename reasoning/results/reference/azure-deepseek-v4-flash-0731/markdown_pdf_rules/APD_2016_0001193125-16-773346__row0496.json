@@ -1,0 +1,53 @@
+{
+ "id": "APD_2016_0001193125-16-773346__row0496",
+ "format": "markdown_pdf_rules",
+ "key": "APD_2016_0001193125-16-773346",
+ "question": "considering the year 2016 , what is the short-term debt as a percent of total debt?",
+ "gold": "21%",
+ "finqa_id": "APD/2016/page_96.pdf-2",
+ "source_page": "page_96",
+ "ticker": "APD",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf_rules/APD_2016_0001193125-16-773346.md",
+ "doc_chars": 420525,
+ "prompt_chars": 420697,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 420525,
+ "original_chars": 420525,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 98472,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 408,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "21.0%",
+ "reasoning": "We need to find short-term debt and total debt for 2016. From balance sheet: short-term borrowings $935.8, current portion of long-term debt $371.3. Total debt is $6,225.2 (from selected financial data or note 15). Short-term debt typically includes short-term borrowings and current portion of long-term debt? The question says \"short-term debt\" - likely short-term borrowings plus current portion? Or just short-term borrowings? In the document, \"Total debt\" includes long-term debt, current portion of long-term debt, and short-term borrowings. Short-term debt could be short-term borrowings + current portion. Let's compute: 935.8 + 371.3 = 1307.1. As percent of total debt: 1307.1 / 6225.2 = 0.2100 = 21.0%. Alternatively, if only short-term borrowings: 935.8/6225.2 = 15.03%. But the question says \"short-term debt\" - in the context, they might mean short-term borrowings. However, the balance sheet has \"Short-term borrowings\" and \"Current portion of long-term debt\". Typically short-term debt includes both. The document mentions \"total consolidated debt of $6,225.2 million (including Versum debt of $997.2 million), of which $1,307.1 million (including Versum debt of $5.8 million) will mature in the next twelve months.\" That $1,307.1 is exactly short-term borrowings + current portion. So that is the short-term debt. So percent = 1307.1/6225.2 = 21.0%. Let's compute precisely: 1307.1/6225.2 = 0.2100 -> 21.0%. So answer 21.0%.",
+ "raw_content": "<answer>21.0%</answer>",
+ "usage": {
+  "prompt_tokens": 98620,
+  "completion_tokens": 408,
+  "total_tokens": 99028,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 98560
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 15.49,
+ "answer_tag_found": true,
+ "docfinqa_row": 496
+}

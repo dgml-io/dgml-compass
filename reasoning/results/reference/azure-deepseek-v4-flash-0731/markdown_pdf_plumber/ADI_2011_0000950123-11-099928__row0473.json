@@ -1,0 +1,50 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0473",
+ "format": "markdown_pdf_plumber",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what is the yearly interest expense incurred from the $ 375 million note with a fixed rate?",
+ "gold": "11.3",
+ "finqa_id": "ADI/2011/page_50.pdf-2",
+ "source_page": "page_50",
+ "ticker": "ADI",
+ "fiscal_year": "2011",
+ "source_file": "data/docs/markdown_pdf_plumber/ADI_2011_0000950123-11-099928.md",
+ "doc_chars": 392657,
+ "prompt_chars": 392837,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 392657,
+ "original_chars": 392657,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93158,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 751,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "11,250,000",
+ "reasoning": "We need to find the yearly interest expense from the $375 million note with a fixed rate. There are two notes: 5.0% senior unsecured notes due 2014 and 3.0% senior unsecured notes due 2016. The question says \"the $375 million note with a fixed rate\" - both are fixed rate. But likely they mean the 5.0% note? Or the 3.0%? The question says \"the $375 million note with a fixed rate\" - both are fixed. But maybe they refer to the 5.0% note because it's mentioned earlier? Actually, the 5.0% note is swapped to variable, so its interest expense is not fixed. The 3.0% note is fixed. So the yearly interest expense from the 3.0% note is 3% of $375 million = $11.25 million. But check: the 5.0% note is hedged, so its interest expense is variable. The question says \"with a fixed rate\" - so it's the 3.0% note. So yearly interest = 0.03 * 375,000,000 = 11,250,000. But the document shows interest expense for fiscal 2011 was $19,146 thousand? Actually that's total interest expense. But the question asks specifically for the $375 million note with a fixed rate. So answer is $11.25 million. However, we need to confirm if there is any discount amortization? The note was issued at a discount, but the interest expense includes amortization of discount. But the question says \"yearly interest expense incurred from the $375 million note with a fixed rate\" - likely the coupon interest. But the document says \"interest expense\" in the income statement includes amortization. But the question might be asking for the cash interest or the expense? Usually interest expense includes amortization. But the note has a fixed rate of 3.0%, so the interest expense is 3% of the carrying amount? But the carrying amount is close to $375 million. The note was issued at a discount, but the discount is amortized over the term. However, the question might be simpler: the fixed rate is 3.0%, so yearly interest = 3% * 375M = 11.25M. But let's check the document: In the MD&A, they mention interest expense increased due to issuance of 3.0% notes. But they don't give a breakdown. The question asks \"what is the yearly interest expense incurred from the $375 million note with a fixed rate?\" So we need to compute it. The note has a fixed rate of 3.0% (as stated). So yearly interest = 0.03 * 375,000,000 = 11,250,000. But note that the 5.0% note is also fixed but it's swapped, so its interest expense is variable. So the answer is $11.25 million. However, the question might be ambiguous. But the document says \"3.0% senior unsecured notes\" - so that's the fixed rate. So answer is 11,250,000. But we need to output just the value. So <answer>11,250,000</answer> or maybe in millions? The question doesn't specify units. Usually in financial documents, they use thousands. But the question asks \"yearly interest expense\" - we can give in dollars. I'll give 11,250,000.",
+ "raw_content": "<answer>11,250,000</answer>",
+ "usage": {
+  "prompt_tokens": 93305,
+  "completion_tokens": 751,
+  "total_tokens": 94056,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.28,
+ "answer_tag_found": true,
+ "docfinqa_row": 473
+}

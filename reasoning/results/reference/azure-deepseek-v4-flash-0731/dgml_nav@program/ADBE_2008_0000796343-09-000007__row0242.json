@@ -1,0 +1,61 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0242",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "is the weighted average useful life ( years ) for purchased technology greater than localization?",
+ "gold": "yes",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "ADBE_2008_0000796343-09-000007.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/ConsolidatedCashFlow/IntangibleAssetsPolicy/table/IntangibleAssetUsefulLife"
+ ],
+ "r1_reasoning_chars": 3210,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 25368,
+  "completion_tokens": 778,
+  "total_tokens": 26146,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ConsolidatedCashFlow/IntangibleAssetsPolicy/table/IntangibleAssetUsefulLife"
+ ],
+ "content_chars": 1493,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "3",
+ "reasoning": "We need answer yes/no. Figures: purchased technology 4, localization 1. 4 > 1. Need final answer inside tags only value? Question asks \"is ... greater than ...?\" So answer yes. Evidence list. Program maybe compare? We can output yes. But instructions: give computation inside program. For boolean, maybe use greater? Not defined. Could just answer yes. But they want program exact. We can use subtract(4,1) positive? But answer should be yes. Maybe program: 4 > 1 not in functions. We can use subtract(4,1) and answer yes. But benchmark expects value? Let's follow: evidence lines. Then program: subtract(4, 1) maybe indicates positive. But final answer \"yes\". Need inside <answer>yes</answer>.",
+ "raw_content": "<evidence>4 | Purchased technology</evidence>\n<evidence>1 | Localization</evidence>\n<program>subtract(4, 1)</program>\n<answer>yes</answer>",
+ "r2_usage": {
+  "prompt_tokens": 724,
+  "completion_tokens": 211,
+  "total_tokens": 935,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "4",
+   "element": "Purchased technology",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(4, 1)",
+ "answer_model": "yes",
+ "program_value": 3.0,
+ "elapsed_s": 9.29,
+ "outline_source": "ADBE_2008_0000796343-09-000007.outline.txt",
+ "outline_chars": 99180
+}

@@ -1,0 +1,50 @@
+{
+ "id": "ZBH_2003_0000950137-04-001881__row0021",
+ "format": "dgml_compact",
+ "key": "ZBH_2003_0000950137-04-001881",
+ "question": "what percent of inventory is ready for liquidation ( sale ) in 2003?",
+ "gold": "72.83%",
+ "finqa_id": "ZBH/2003/page_58.pdf-3",
+ "source_page": "page_58",
+ "ticker": "ZBH",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/dgml_compact/ZBH_2003_0000950137-04-001881.dgml.txt",
+ "doc_chars": 355371,
+ "prompt_chars": 355528,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 355371,
+ "original_chars": 355371,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 75978,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 250,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "72.8",
+ "reasoning": "The question asks: \"what percent of inventory is ready for liquidation (sale) in 2003?\"\n\nI need to find inventory data. The document provides inventory details in Note 5. INVENTORIES.\n\nFrom the document:\n\"Inventories at December 31, 2003 and 2002, consist of the following (in millions):\nFinished goods | $ 384.3 | $ 206.7\nRaw materials and work in progress | 90.8 | 50.9\nInventory step-up | 52.6 | –\nInventories, net | $ 527.7 | $ 257.6\"\n\n\"Ready for liquidation (sale)\" likely means finished goods. So finished goods = $384.3 million, total inventory = $527.7 million.\n\nPercentage = 384.3 / 527.7 * 100 = 72.8% approximately.\n\nLet me compute: 384.3 / 527.7 = 0.7282... so 72.8%.\n\nThe question asks \"what percent of inventory is ready for liquidation (sale) in 2003?\" So answer is 72.8%.",
+ "raw_content": "<answer>72.8</answer>",
+ "usage": {
+  "prompt_tokens": 76122,
+  "completion_tokens": 250,
+  "total_tokens": 76372,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 6.08,
+ "answer_tag_found": true,
+ "docfinqa_row": 21
+}

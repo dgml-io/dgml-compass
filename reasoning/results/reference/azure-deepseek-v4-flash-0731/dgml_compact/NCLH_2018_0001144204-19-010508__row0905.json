@@ -1,0 +1,53 @@
+{
+ "id": "NCLH_2018_0001144204-19-010508__row0905",
+ "format": "dgml_compact",
+ "key": "NCLH_2018_0001144204-19-010508",
+ "question": "what percent of long-term debt was paid off in 2021?",
+ "gold": "38.6%",
+ "finqa_id": "NCLH/2018/page_97.pdf-3",
+ "source_page": "page_97",
+ "ticker": "NCLH",
+ "fiscal_year": "2018",
+ "source_file": "data/docs/dgml_compact/NCLH_2018_0001144204-19-010508.dgml.txt",
+ "doc_chars": 467893,
+ "prompt_chars": 468034,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 467893,
+ "original_chars": 467893,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 101327,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 236,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "39.3%",
+ "reasoning": "We need to find what percent of long-term debt was paid off in 2021. The question likely refers to scheduled principal repayments on long-term debt as of Dec 31, 2018. The table \"Scheduled principal repayments on long-term debt including capital lease obligations as of December 31, 2018\" shows amounts for each year. For 2021, the amount is $2,549,621 (in thousands). Total long-term debt is $6,492,091 (in thousands) as of Dec 31, 2018. So percent = 2,549,621 / 6,492,091 * 100 ≈ 39.27%. But the question says \"paid off in 2021\" - that is the scheduled principal repayment for 2021. So answer is approximately 39.3%. Let's compute precisely: 2,549,621 / 6,492,091 = 0.3927... so 39.27%. Round to one decimal? The question doesn't specify. I'll give 39.3%.",
+ "raw_content": "<answer>39.3%</answer>",
+ "usage": {
+  "prompt_tokens": 101469,
+  "completion_tokens": 236,
+  "total_tokens": 101705,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 101376
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.31,
+ "answer_tag_found": true,
+ "docfinqa_row": 905
+}

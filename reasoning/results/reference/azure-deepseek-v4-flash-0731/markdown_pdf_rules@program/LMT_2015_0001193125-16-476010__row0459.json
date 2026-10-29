@@ -1,0 +1,72 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0459",
+ "format": "markdown_pdf_rules",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was the percentage change in total long-term debt net from 2014 to 2015?",
+ "gold": "148%",
+ "finqa_id": "LMT/2015/page_99.pdf-2",
+ "source_page": "page_99",
+ "ticker": "LMT",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_rules/LMT_2015_0001193125-16-476010.md",
+ "doc_chars": 501601,
+ "prompt_chars": 501767,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 501601,
+ "original_chars": 501601,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 108718,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 334,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "148.469554",
+ "reasoning": "We need percentage change in total long-term debt net from 2014 to 2015. From balance sheet: long-term debt, net 2015 = 14,305? Wait balance sheet shows \"Long-term debt, net\" 14,305 and current maturities 956. But total debt, net in selected financial data is 15,261 for 2015 and 6,142 for 2014. The question says \"total long-term debt net\" likely refers to total debt, net from selected financial data. In selected financial data: Total debt, net 2015 = 15,261, 2014 = 6,142. Percentage change = (15261-6142)/6142 = 9119/6142 = 1.4847... = 148.47%. Alternatively from balance sheet: long-term debt net 14,305 vs 6,142? But current maturities added? The question says \"total long-term debt net\" - in the document, \"Total debt, net\" is the line. So use that. Compute: 15261-6142=9119, divide by 6142 = 1.4847, so 148.5% increase. Answer as percentage.",
+ "raw_content": "<evidence>15,261 | Total debt, net (Selected Financial Data 2015)\n6,142 | Total debt, net (Selected Financial Data 2014)</evidence>\n<program>multiply(divide(subtract(15261, 6142), 6142), 100)</program>\n<answer>148.5%</answer>",
+ "usage": {
+  "prompt_tokens": 109025,
+  "completion_tokens": 334,
+  "total_tokens": 109359,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 108800
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.63,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "15,261",
+   "element": "Total debt, net (Selected Financial Data 2015)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6,142",
+   "element": "Total debt, net (Selected Financial Data 2014)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(15261, 6142), 6142), 100)",
+ "answer_model": "148.5%",
+ "program_value": 148.46955389124062,
+ "docfinqa_row": 459
+}

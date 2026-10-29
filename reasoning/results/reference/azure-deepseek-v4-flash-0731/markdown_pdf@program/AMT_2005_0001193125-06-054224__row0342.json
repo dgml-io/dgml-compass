@@ -1,0 +1,72 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0342",
+ "format": "markdown_pdf",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what percentage of long-term financing was classified as current at the end of 2005?",
+ "gold": "4%",
+ "finqa_id": "AMT/2005/page_85.pdf-2",
+ "source_page": "page_85",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/markdown_pdf/AMT_2005_0001193125-06-054224.md",
+ "doc_chars": 443446,
+ "prompt_chars": 443619,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 443446,
+ "original_chars": 443446,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 103998,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 236,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "4.4875%",
+ "reasoning": "We need answer percentage of long-term financing classified as current at end of 2005. Need figures: current portion of long-term obligations and total long-term obligations including current portion. From balance sheet: Current portion of long-term obligations $162,153 (thousands) and Long-term obligations $3,451,276. Total long-term obligations including current portion = 3,613,429 (also given in Selected Financial Data). Percentage = 162,153 / 3,613,429 *100 = 4.487...%. Let's compute precisely. 162,153 / 3,613,429 = 0.044875... 4.49%. Need evidence figures. Use current portion 162,153 and total 3,613,429. Also note long-term obligations line. Answer with percentage.",
+ "raw_content": "<evidence>\n162,153 | Current portion of long-term obligations (Consolidated Balance Sheets)\n3,613,429 | Long-term obligations, including current portion (Selected Financial Data)\n</evidence>\n\n<program>divide(162153, 3613429)</program>\n\n<answer>4.49%</answer>",
+ "usage": {
+  "prompt_tokens": 104303,
+  "completion_tokens": 236,
+  "total_tokens": 104539,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 104192
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.11,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "162,153",
+   "element": "Current portion of long-term obligations (Consolidated Balance Sheets)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "3,613,429",
+   "element": "Long-term obligations, including current portion (Selected Financial Data)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(162153, 3613429)",
+ "answer_model": "4.49%",
+ "program_value": 0.044875103399015175,
+ "docfinqa_row": 342
+}

@@ -1,0 +1,53 @@
+{
+ "id": "GPN_2010_0001193125-10-169025__row0265",
+ "format": "markdown_pdf_rules",
+ "key": "GPN_2010_0001193125-10-169025",
+ "question": "what is the total fair value of non-vested shares as of may 31 , 2010?",
+ "gold": "29946",
+ "finqa_id": "GPN/2010/page_89.pdf-2",
+ "source_page": "page_89",
+ "ticker": "GPN",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/markdown_pdf_rules/GPN_2010_0001193125-10-169025.md",
+ "doc_chars": 316684,
+ "prompt_chars": 316843,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 316684,
+ "original_chars": 316684,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 70390,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 263,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "29946000",
+ "reasoning": "We need to find total fair value of non-vested shares as of May 31, 2010. The document mentions restricted stock awards. In Note 11, there is a table for non-vested restricted stock awards. It shows \"Non-vested at May 31, 2010 713 $ 42\" where shares are in thousands and fair value is weighted average grant-date fair value. So total fair value = 713,000 * $42 = $29,946,000. But the question says \"total fair value of non-vested shares\" - likely referring to restricted stock. Also there are options? But options are not shares. The question says \"non-vested shares\" - probably restricted stock. The table gives weighted average grant-date fair value. So total fair value = 713 * 42 = 29,946 (in thousands) = $29,946,000. But check if there is any other non-vested shares? The document also mentions RSUs but they are not in the table. The table is for restricted stock awards. So answer is $29,946,000. But the question asks for the value, so we put 29946000.",
+ "raw_content": "<answer>29946000</answer>",
+ "usage": {
+  "prompt_tokens": 70540,
+  "completion_tokens": 263,
+  "total_tokens": 70803,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 70400
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.85,
+ "answer_tag_found": true,
+ "docfinqa_row": 265
+}

@@ -1,0 +1,74 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0043",
+ "format": "markdown_pdf_poppler",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "assuming all options in the compensation plans approved by security holders were exercised , what would be the deemed proceeds to the company?",
+ "gold": "373153150",
+ "finqa_id": "CME/2010/page_123.pdf-2",
+ "source_page": "page_123",
+ "ticker": "CME",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/markdown_pdf_poppler/CME_2010_0001193125-11-050252.md",
+ "doc_chars": 524138,
+ "prompt_chars": 524369,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 524138,
+ "original_chars": 524138,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93767,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 448,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "373153158.3",
+ "reasoning": "We need answer question: \"assuming all options in the compensation plans approved by security holders were exercised , what would be the deemed proceeds to the company?\" Need find relevant figures. In Item 12 Equity Compensation Plan Information table: Number of securities to be issued upon exercise of outstanding options (a) and weighted-average exercise price (b). For approved plans: 1,211,143 options, weighted-average exercise price $308.10. Deemed proceeds = number * exercise price = 1,211,143 * 308.10 = ? Compute: 1,211,143 * 308.10 = 1,211,143 * 308 + 1,211,143 * 0.10? Actually 308.10 = 308 + 0.1. 1,211,143*308 = 1,211,143*300=363,342,900; *8=9,689,144; sum=373,032,044. Plus *0.1=121,114.3. Total=373,153,158.3. But note options exercise price in dollars, proceeds in dollars. Need answer value. Could be $373,153,158.3. But check if there are also unapproved plan options? Question says \"all options in the compensation plans approved by security holders\" - so only approved plans. Use table. Also note there may be tax benefits? No, deemed proceeds from exercise = shares * exercise price. So answer 373,153,158.3. Need evidence: value 1,211,143 | Number of securities to be issued upon exercise of outstanding options (approved) ; 308.10 | Weighted-Average Exercise Price. Program multiply(1211143, 308.10). Final answer inside tags.",
+ "raw_content": "<evidence>1,211,143 | Number of Securities to be Issued Upon Exercise of Outstanding Options (approved by security holders)\n308.10 | Weighted-Average Exercise Price of Outstanding Options (approved by security holders)</evidence>\n<program>multiply(1211143, 308.10)</program>\n<answer>373153158.3</answer>",
+ "usage": {
+  "prompt_tokens": 94079,
+  "completion_tokens": 448,
+  "total_tokens": 94527,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 93952
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.36,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,211,143",
+   "element": "Number of Securities to be Issued Upon Exercise of Outstanding Options (approved by security holders)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "308.10",
+   "element": "Weighted-Average Exercise Price of Outstanding Options (approved by security holders)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(1211143, 308.10)",
+ "answer_model": "373153158.3",
+ "program_value": 373153158.3,
+ "docfinqa_row": 43
+}

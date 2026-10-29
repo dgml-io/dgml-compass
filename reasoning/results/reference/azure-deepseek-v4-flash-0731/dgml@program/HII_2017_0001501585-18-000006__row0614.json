@@ -1,0 +1,67 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0614",
+ "format": "dgml",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what portion of the equity compensation plan approved by security holders is to be issued upon the exercise of options warrants and rights?",
+ "gold": "9.9%",
+ "finqa_id": "HII/2017/page_124.pdf-1",
+ "source_page": "page_124",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/dgml/HII_2017_0001501585-18-000006.dgml.xml",
+ "doc_chars": 733855,
+ "prompt_chars": 734083,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 733855,
+ "original_chars": 733855,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 164566,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 399,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "448859",
+ "reasoning": "We need answer: portion of equity compensation plan approved by security holders to be issued upon exercise of options warrants and rights. From table: Equity compensation plans approved by security holders: Number of Securities to be Issued Upon Exercise of Outstanding Options, Warrants and Rights = 448,859. Also total shares available? The question asks \"what portion\" maybe fraction? It says \"what portion of the equity compensation plan approved by security holders is to be issued upon the exercise of options warrants and rights?\" Could be the number of securities to be issued upon exercise. The table has column (a) number of securities to be issued upon exercise. For approved plans: 448,859. Also remaining available 4,087,587. \"portion\" might mean ratio? Let's parse: \"what portion of the equity compensation plan approved by security holders is to be issued upon the exercise of options warrants and rights?\" The table shows for approved plans: 448,859 to be issued upon exercise, and 4,087,587 remaining available. The \"portion\" could be the number 448,859. But \"portion\" might ask for fraction of total? The question wording: \"what portion of the equity compensation plan approved by security holders is to be issued upon the exercise of options warrants and rights?\" In the table, the row \"Equity compensation plans approved by security holders\" has column (a) \"Number of Securities to be Issued Upon Exercise of Outstanding Options, Warrants and Rights\" = 448,859. So answer is 448,859. But \"portion\" could be \"what portion\" meaning what amount. We'll answer 448,859. Need evidence: value 448,859 | EquityPlanSharesToBeIssued. Program: 448859.",
+ "raw_content": "<evidence>\n448,859 | EquityPlanSharesToBeIssued\n</evidence>\n<program>448859</program>\n<answer>448,859</answer>",
+ "usage": {
+  "prompt_tokens": 164877,
+  "completion_tokens": 399,
+  "total_tokens": 165276,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 18.76,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "448,859",
+   "element": "EquityPlanSharesToBeIssued",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "448859",
+ "answer_model": "448,859",
+ "program_value": 448859.0,
+ "docfinqa_row": 614
+}

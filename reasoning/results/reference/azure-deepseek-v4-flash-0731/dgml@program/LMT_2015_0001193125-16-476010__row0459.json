@@ -1,0 +1,74 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0459",
+ "format": "dgml",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was the percentage change in total long-term debt net from 2014 to 2015?",
+ "gold": "148%",
+ "finqa_id": "LMT/2015/page_99.pdf-2",
+ "source_page": "page_99",
+ "ticker": "LMT",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml/LMT_2015_0001193125-16-476010.dgml.xml",
+ "doc_chars": 868444,
+ "prompt_chars": 868610,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 868444,
+ "original_chars": 868444,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 194482,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1116,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "148.469554",
+ "reasoning": "We need percentage change in total long-term debt net from 2014 to 2015. From Selected Financial Data: Total debt, net (e): 2015 15,261, 2014 6,142. Also balance sheet long-term debt net: 2015 14,305, 2014 6,142? Wait balance sheet shows Long-term debt, net 14,305 in 2015 and 6,142 in 2014. But Selected Financial Data says Total debt, net 15,261 in 2015, 6,142 in 2014. The question says \"total long-term debt net\" - likely the line \"Total debt, net\" from Selected Financial Data. Or \"Long-term debt, net\" from balance sheet. The question says \"total long-term debt net\" - probably the \"Total debt, net\" line. Let's compute percentage change: (15261-6142)/6142 = 9119/6142 = 1.4847... = 148.47%. Alternatively using balance sheet long-term debt net: 14305 vs 6142? But 2014 balance sheet long-term debt net is 6,142, 2015 is 14,305. That would be (14305-6142)/6142 = 8163/6142 = 1.329 = 132.9%. Which one is \"total long-term debt net\"? The Selected Financial Data line is \"Total debt, net (e)\" with values 15,261 and 6,142. The balance sheet line is \"Long-term debt, net\" with 14,305 and 6,142. The question says \"total long-term debt net\" - likely the \"Total debt, net\" from Selected Financial Data. But the phrase \"total long-term debt net\" might refer to the balance sheet line \"Long-term debt, net\" but they said \"total\". Let's read the question: \"what was the percentage change in total long-term debt net from 2014 to 2015?\" The document has \"Total debt, net\" in Selected Financial Data. Also \"Long-term debt, net\" in balance sheet. The word \"total\" suggests the \"Total debt, net\" line. I'll use that. Compute percentage change: (15261-6142)/6142 = 9119/6142 = 1.4847... = 148.47%. Round to maybe 148.5% or 148.47%. The answer should be a percentage. I'll provide 148.5% or 148.47%. Let's compute exactly: 9119/6142 = 1.4847... 6142*1.48=9089.16, remainder 29.84, /6142=0.00486, so 1.48486. So 148.49%. Let's do precise: 9119/6142 = 1.4847... Actually 6142*1.4847 = 6142*1.48=9089.16, plus 6142*0.0047=28.87, total 9118.03, so 1.4847 gives 9118.03, need 9119, so 1.4847+0.00016=1.48486. So 148.486%. I'll answer 148.5% or 148.49%. The question asks \"percentage change\" - typically (new-old)/old *100. So 148.5%. I'll put 148.5% inside answer. But need evidence and program. Evidence: 15,261 | Total debt, net (e) 2015; 6,142 | Total debt, net (e) 2014. Program: multiply(divide(subtract(15261, 6142), 6142), 100) but the program should be exact. The instruction says \"Give your final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So answer should be 148.5 or 148.5%? The question asks \"what was the percentage change\" so answer should be a percentage. I'll put 148.5% inside. But the program should compute the value. I'll use multiply(divide(subtract(15261, 6142), 6142), 100) which yields 148.486... I'll put 148.5% in answer. But the benchmark might expect exact number. I'll put 148.5% or 148.49%. Let's compute exactly: 9119/6142 = 1.48486... so 148.486%. I'll put 148.5% as rounded. But the instruction says \"containing only the value itself\" - so maybe 148.5. I'll put 148.5% inside. Let's do evidence.",
+ "raw_content": "<evidence>\n15,261 | Total debt, net (e) 2015\n6,142 | Total debt, net (e) 2014\n</evidence>\n<program>multiply(divide(subtract(15261, 6142), 6142), 100)</program>\n<answer>148.5%</answer>",
+ "usage": {
+  "prompt_tokens": 194789,
+  "completion_tokens": 1116,
+  "total_tokens": 195905,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 20.1,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "15,261",
+   "element": "Total debt, net (e) 2015",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6,142",
+   "element": "Total debt, net (e) 2014",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(15261, 6142), 6142), 100)",
+ "answer_model": "148.5%",
+ "program_value": 148.46955389124062,
+ "docfinqa_row": 459
+}

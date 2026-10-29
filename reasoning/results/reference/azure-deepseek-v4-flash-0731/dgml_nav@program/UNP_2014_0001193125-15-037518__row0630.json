@@ -1,0 +1,68 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0630",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "what was the percentage growth from 2013 to 2014 in the total accounts payable and other current liabilities",
+ "gold": "7.03%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "UNP_2014_0001193125-15-037518.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/RetirementPlans/AccountsPayableAndCurrentLiabilities/AccountsPayableAndCurrentLiabilities"
+ ],
+ "r1_reasoning_chars": 3880,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 19894,
+  "completion_tokens": 985,
+  "total_tokens": 20879,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/RetirementPlans/AccountsPayableAndCurrentLiabilities/AccountsPayableAndCurrentLiabilities"
+ ],
+ "content_chars": 3530,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "7.031756",
+ "reasoning": "We need percentage growth from 2013 to 2014: (2014-2013)/2013 *100. Totals: 3303 and 3086. Compute.",
+ "raw_content": "<evidence>3303 | AccountsPayableTotalAmount (Dec. 31, 2014)\n3086 | AccountsPayableTotalAmount (Dec. 31, 2013)\n</evidence>\n<program>multiply(divide(subtract(3303, 3086), 3086), 100)</program>",
+ "r2_usage": {
+  "prompt_tokens": 1199,
+  "completion_tokens": 109,
+  "total_tokens": 1308,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "3303",
+   "element": "AccountsPayableTotalAmount (Dec. 31, 2014)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "3086",
+   "element": "AccountsPayableTotalAmount (Dec. 31, 2013)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(3303, 3086), 3086), 100)",
+ "answer_model": null,
+ "program_value": 7.031756318859365,
+ "elapsed_s": 11.98,
+ "outline_source": "UNP_2014_0001193125-15-037518.outline.txt",
+ "outline_chars": 77599
+}

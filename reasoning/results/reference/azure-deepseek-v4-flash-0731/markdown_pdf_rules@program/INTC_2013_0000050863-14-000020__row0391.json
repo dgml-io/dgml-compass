@@ -1,0 +1,74 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0391",
+ "format": "markdown_pdf_rules",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "of the square feet in the us what was the percent of the owned facility of the us total",
+ "gold": "92.8%",
+ "finqa_id": "INTC/2013/page_29.pdf-4",
+ "source_page": "page_29",
+ "ticker": "INTC",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/markdown_pdf_rules/INTC_2013_0000050863-14-000020.md",
+ "doc_chars": 419421,
+ "prompt_chars": 419597,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 419421,
+ "original_chars": 419421,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 94700,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 162,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "92.857143",
+ "reasoning": "We need answer question: \"of the square feet in the us what was the percent of the owned facility of the us total\". From properties table: United States owned facilities 29.9, leased 2.3, total 32.2. Percent owned of US total = 29.9 / 32.2 * 100. Compute. 29.9/32.2 = 0.92857... = 92.857%. Need answer maybe 92.9%. Use figures.",
+ "raw_content": "<evidence>29.9 | Owned facilities United States\n32.2 | Total facilities United States</evidence>\n<program>multiply(divide(29.9, 32.2), 100)</program>\n<answer>92.9%</answer>",
+ "usage": {
+  "prompt_tokens": 95007,
+  "completion_tokens": 162,
+  "total_tokens": 95169,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 6.48,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "29.9",
+   "element": "Owned facilities United States",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "32.2",
+   "element": "Total facilities United States",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(29.9, 32.2), 100)",
+ "answer_model": "92.9%",
+ "program_value": 92.85714285714285,
+ "docfinqa_row": 391
+}

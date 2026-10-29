@@ -1,0 +1,53 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0014",
+ "format": "markdown_pdf_rules",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "the combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable was what percent of the total ending balance as of november 28 2008?",
+ "gold": "11.0%",
+ "finqa_id": "ADBE/2008/page_89.pdf-3",
+ "source_page": "page_89",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_rules/ADBE_2008_0000796343-09-000007.md",
+ "doc_chars": 443328,
+ "prompt_chars": 443638,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 443328,
+ "original_chars": 443328,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 95226,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1353,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "12.42%",
+ "reasoning": "We need to find the combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable, and the total ending balance as of November 28, 2008. Then compute the percentage.\n\nFrom the document: In Note 8, under \"Summary FIN 48 Changes\", it says: \"As of November 28, 2008, the combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable was approximately $15.3 million.\"\n\nThe total ending balance? The question says \"the total ending balance as of november 28 2008\" - likely referring to the total gross liability for unrecognized tax benefits? Or the non-current income taxes payable? The question: \"the combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable was what percent of the total ending balance as of november 28 2008?\" It might be asking: that amount ($15.3M) as a percentage of the total ending balance of something. The context: In the same note, they mention \"The gross liability for unrecognized tax benefits at November 28, 2008 was $139.5 million, exclusive of interest and penalties.\" Also they mention \"As of November 28, 2008, the combined amount of accrued interest and penalties ... was approximately $15.3 million.\" So the total ending balance might be the sum of the gross liability and interest/penalties? Or maybe the total non-current income taxes payable? The balance sheet shows \"Income taxes payable\" long-term as $123,182 thousand (i.e., $123.182 million) as of Nov 28, 2008. But that includes both the unrecognized tax benefits and interest/penalties? Actually, the note says: \"As a result of adopting FIN 48, we reclassified $197.7 million from current income taxes payable to long-term income taxes payable related to unrecognized tax benefits.\" And later they say \"As of November 28, 2008, the combined amount of accrued interest and penalties ... included in non-current income taxes payable was approximately $15.3 million.\" So the non-current income taxes payable on the balance sheet is $123.182 million. That likely includes the unrecognized tax benefits (gross) plus interest/penalties? But the gross liability for unrecognized tax benefits is $139.5 million, which is larger than $123.182 million. Wait, the balance sheet shows long-term income taxes payable of $123,182 thousand = $123.182 million. But the gross unrecognized tax benefits are $139.5 million. That seems inconsistent. Possibly the $139.5 million is the gross liability before considering the deferred tax asset? Actually, the note says: \"The gross liability for unrecognized tax benefits at November 28, 2008 was $139.5 million, exclusive of interest and penalties.\" And then they say: \"If the total FIN 48 gross liability for unrecognized tax benefits at November 28, 2008 were recognized in the future, the following amounts, net of an estimated $12.9 million benefit related to deducting such payments on future tax returns, would result: $57.7 million of unrecognized tax benefits would decrease the effective tax rate and $68.9 million would decrease goodwill.\" So the gross liability is $139.5M, but the balance sheet liability might be net of something? Actually, the balance sheet shows long-term income taxes payable of $123.182M. That might be the net of the gross liability and the deferred tax asset? Or maybe the $139.5M is the gross unrecognized tax benefits, and the interest/penalties are separate. The question asks: \"the combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable was what percent of the total ending balance as of november 28 2008?\" The \"total ending balance\" likely refers to the total non-current income taxes payable? Or the total unrecognized tax benefits including interest? The phrasing: \"the combined amount ... was what percent of the total ending balance\" - it might be asking: that $15.3M is what percent of the total ending balance of something. The most natural interpretation: the total ending balance of the non-current income taxes payable? But the balance sheet shows $123.182M. However, the note says that the $15.3M is included in non-current income taxes payable. So the total non-current income taxes payable is $123.182M. So the percentage would be 15.3 / 123.182 * 100 = 12.42% approximately.\n\nBut let's check: The note says: \"As of November 28, 2008, the combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable was approximately $15.3 million.\" So that amount is part of the non-current income taxes payable. So the total non-current income taxes payable is $123.182M. So the percentage is 15.3/123.182 = 0.1242 = 12.42%.\n\nAlternatively, if they meant the total ending balance of the gross unrecognized tax benefits plus interest? But the question says \"total ending balance\" without specifying. Given the context, it's likely the non-current income taxes payable balance. The balance sheet shows that as $123,182 thousand. So we compute 15.3 / 123.182 = 0.1242, so 12.42%.\n\nBut let's double-check the numbers: The balance sheet line \"Income taxes payable\" under long-term liabilities is $123,182 (in thousands) = $123.182 million. The note says the combined interest and penalties is $15.3 million. So percentage = 15.3 / 123.182 * 100 = 12.42%.\n\nWe should answer with the percentage. The question asks \"what percent\" so we give the number.\n\nThus final answer: 12.42% (or approximately 12.4%). We'll put inside <answer> tags.\n\nWe'll compute precisely: 15.3 / 123.182 = 0.1242... so 12.42%. We'll round to two decimals.\n\nAnswer: 12.42%",
+ "raw_content": "<answer>12.42%</answer>",
+ "usage": {
+  "prompt_tokens": 95396,
+  "completion_tokens": 1353,
+  "total_tokens": 96749,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 94208
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.86,
+ "answer_tag_found": true,
+ "docfinqa_row": 14
+}

@@ -1,0 +1,50 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0352",
+ "format": "markdown_pdf_plumber",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what is the net change of the total fair value balance of non-vested shares during 2013?",
+ "gold": "6820",
+ "finqa_id": "GPN/2013/page_87.pdf-3",
+ "source_page": "page_87",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/markdown_pdf_plumber/GPN_2013_0001123360-13-000025.md",
+ "doc_chars": 385288,
+ "prompt_chars": 385465,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 385288,
+ "original_chars": 385288,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 88373,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 406,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "6820",
+ "reasoning": "We need to find the net change of the total fair value balance of non-vested shares during 2013. The document has a table \"Non-vested at May 31, 2011\" etc. It shows shares and weighted average grant-date fair value. The total fair value balance is shares * fair value. For 2013, we have non-vested at May 31, 2012: 941 shares, fair value $44, so total = 941*44 = 41,404 (in thousands? Actually shares in thousands, fair value in dollars, so total in thousands of dollars). At May 31, 2013: 1,096 shares, fair value $44, total = 1,096*44 = 48,224. Net change = 48,224 - 41,404 = 6,820 (in thousands). But the question asks \"net change of the total fair value balance\" - likely in dollars? The table shows shares in thousands, so the total fair value is in thousands of dollars. The net change is 6,820 thousand dollars, i.e., $6.82 million. But we need to be careful: the table shows \"Weighted Average Grant-Date Fair Value\" per share. The total fair value balance is the product. So net change = (1,096*44) - (941*44) = (1,096-941)*44 = 155*44 = 6,820. So answer is 6,820 (in thousands) or $6,820,000. The question doesn't specify units, but likely in thousands as the table is in thousands. The document says \"share awards in thousands\" so the numbers are in thousands of shares. So the total fair value is in thousands of dollars. So net change is 6,820 (thousand dollars). I'll put 6820.",
+ "raw_content": "<answer>6820</answer>",
+ "usage": {
+  "prompt_tokens": 88523,
+  "completion_tokens": 406,
+  "total_tokens": 88929,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.1,
+ "answer_tag_found": true,
+ "docfinqa_row": 352
+}

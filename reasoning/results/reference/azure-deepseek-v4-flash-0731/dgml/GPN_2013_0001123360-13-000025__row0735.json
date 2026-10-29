@@ -1,0 +1,53 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0735",
+ "format": "dgml",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what was the total number of grants were forfeited?",
+ "gold": "170 grants",
+ "finqa_id": "GPN/2013/page_87.pdf-4",
+ "source_page": "page_87",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/dgml/GPN_2013_0001123360-13-000025.dgml.xml",
+ "doc_chars": 611417,
+ "prompt_chars": 611557,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 611417,
+ "original_chars": 611417,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 141594,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 734,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "314",
+ "reasoning": "The question asks: \"what was the total number of grants were forfeited?\"\n\nI need to find the number of grants forfeited. The document mentions restricted stock awards and stock options. Let me look for forfeiture numbers.\n\nFor restricted stock:\n- Non-vested at May 31, 2011: 869\n- Granted: 472\n- Vested: (321)\n- Forfeited: (79)\n- Non-vested at May 31, 2012: 941\n\nFor stock options:\n- Forfeited: (72) in 2012, (72) in 2013\n\nThe question asks \"total number of grants were forfeited\" - this is ambiguous. It could be asking for the total forfeited across all plans, or perhaps the total forfeited in a specific year.\n\nLooking at the restricted stock rollforward for 2013:\n- Forfeited: (91)\n\nFor stock options in 2013:\n- Forfeited: (72)\n\nTotal forfeited in fiscal 2013: 91 + 72 = 163\n\nBut the question says \"total number of grants\" - maybe it means the total across all years? Or maybe it's asking for the total forfeited in the most recent year?\n\nActually, let me re-read: \"what was the total number of grants were forfeited?\" This is a bit awkwardly phrased. It might be asking for the total number of forfeited grants in the document.\n\nLooking at the restricted stock table:\n- Forfeited in 2012: (79)\n- Forfeited in 2013: (91)\n\nStock options:\n- Forfeited in 2012: (72)\n- Forfeited in 2013: (72)\n\nTotal forfeited across all: 79 + 91 + 72 + 72 = 314\n\nBut the question is ambiguous. Perhaps it's asking for the total forfeited in the most recent fiscal year (2013)? That would be 91 (restricted) + 72 (options) = 163.\n\nOr maybe it's asking for the total forfeited in the entire document, which would be all of them.\n\nHmm, the question says \"total number of grants were forfeited\" - I think it's asking for the sum of all forfeitures mentioned. Let me add them up:\n- Restricted stock forfeited: 79 (2012) + 91 (2013) = 170\n- Stock options forfeited: 72 (2012) + 72 (2013) = 144\n- Total: 314\n\nWait, but the question might be asking specifically about one type. Let me re-read the question: \"what was the total number of grants were forfeited?\"\n\nGiven the ambiguity, I'll interpret it as the total number of forfeited grants across all plans and years mentioned. That would be 79 + 91 + 72 + 72 = 314.\n\nActually, let me reconsider. The question might be asking for the total forfeited in the most recent period. But \"total\" suggests summing everything.\n\nLet me look at the restricted stock table again:\n- Forfeited in 2012: (79)\n- Forfeited in 2013: (91)\n\nStock options:\n- Forfeited in 2012: (72)\n- Forfeited in 2013: (72)\n\nTotal: 79 + 91 + 72 + 72 = 314\n\nI'll go with 314.",
+ "raw_content": "<answer>314</answer>",
+ "usage": {
+  "prompt_tokens": 141733,
+  "completion_tokens": 734,
+  "total_tokens": 142467,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 141568
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.1,
+ "answer_tag_found": true,
+ "docfinqa_row": 735
+}

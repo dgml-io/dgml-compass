@@ -1,0 +1,50 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0387",
+ "format": "dgml",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what is the percent change in the fair value per share between 2014 and 2016?",
+ "gold": "163%",
+ "finqa_id": "EW/2016/page_94.pdf-4",
+ "source_page": "page_94",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/dgml/EW_2016_0001099800-17-000008.dgml.xml",
+ "doc_chars": 575186,
+ "prompt_chars": 575352,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 575186,
+ "original_chars": 575186,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 133782,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1058,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "163.83%",
+ "reasoning": "We need to find fair value per share for 2014 and 2016. The question asks \"percent change in the fair value per share between 2014 and 2016\". Likely refers to stock option fair value per share? Or maybe ESPP? The document has \"Fair value, per share\" for options and ESPP. For options: 2014 $11.75, 2016 $31.00. For ESPP: 2014 $8.59, 2016 $22.09. The question says \"fair value per share\" without specifying. Could be from the stock option table. Let's check the context: The question is generic. The document has multiple \"fair value per share\" entries. The most prominent is in the option awards table. Also in ESPP. But the question likely refers to the option fair value per share because it's a common metric. However, we need to be careful. The question says \"between 2014 and 2016\" - so percent change = (2016 - 2014)/2014 * 100. For options: (31.00 - 11.75)/11.75 = 19.25/11.75 = 1.6383 = 163.83%. For ESPP: (22.09 - 8.59)/8.59 = 13.5/8.59 = 1.5716 = 157.16%. Which one is intended? The question does not specify. Possibly the question is about the fair value per share of stock options? Or maybe the market price? But the document has \"Fair value, per share\" in the option table. Also there is \"Fair value per share\" in the ESPP table. The question might be ambiguous. But given the context of a financial document, the most likely is the option fair value per share because it's a key metric. However, the question might be from a specific section. Let's see if there is any other \"fair value per share\" - there is also \"Fair value, per share\" in the option table. Also in the ESPP table. The question says \"the fair value per share\" - singular. Could be the option fair value. I'll compute both and see which is more plausible. But the answer should be a single number. The question likely expects the option fair value per share because it's more commonly discussed. Also the document has \"Fair value, per share\" for options and ESPP. The question might be from a test that expects the option one. Let's check the numbers: 2014 $11.75, 2016 $31.00. Percent change = (31-11.75)/11.75 = 19.25/11.75 = 1.6383 = 163.83%. For ESPP: (22.09-8.59)/8.59 = 13.5/8.59 = 1.5716 = 157.16%. Which one is more likely? The question says \"fair value per share\" without specifying. In the document, the option table has \"Fair value, per share\" and the ESPP table has \"Fair value, per share\". Both are present. The question might be ambiguous. But perhaps the question is about the stock price? No, it says \"fair value per share\". The stock price is not called fair value. So it's either option or ESPP. I'll go with option because it's more prominent. Also the option table is under \"Option Awards\" and the ESPP under \"ESPP\". The question might be from a general context. I'll compute both and see if one is a round number? 163.83% vs 157.16%. Neither is round. But the question asks for percent change, so we can give a decimal. I'll answer with the option one. But to be safe, I'll check if there is any other \"fair value per share\" in the document. There is also \"Fair value per share\" in the ESPP table. Also in the market-based RSU? No, that's not per share. So I'll assume option. The answer should be 163.83% or 163.8%? The question says \"percent change\" so we can give a percentage. I'll compute exactly: (31.00 - 11.75) / 11.75 = 19.25 / 11.75 = 1.63829787234 = 163.83% approximately. I'll put 163.83% inside the answer. But the instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for percent change, so we can give a number with % sign? It says \"no explanation or units unless the question asks for them.\" The question asks for percent change, so we should include the % sign. So answer: 163.83% or 163.8%. I'll put 163.83%.",
+ "raw_content": "<answer>163.83%</answer>",
+ "usage": {
+  "prompt_tokens": 133930,
+  "completion_tokens": 1058,
+  "total_tokens": 134988,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.51,
+ "answer_tag_found": true,
+ "docfinqa_row": 387
+}

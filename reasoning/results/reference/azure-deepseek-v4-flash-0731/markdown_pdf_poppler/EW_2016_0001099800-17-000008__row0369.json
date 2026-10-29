@@ -1,0 +1,53 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0369",
+ "format": "markdown_pdf_poppler",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what is the percentage difference in the fair value per share between 2015 and 2016?",
+ "gold": "71%",
+ "finqa_id": "EW/2016/page_94.pdf-3",
+ "source_page": "page_94",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf_poppler/EW_2016_0001099800-17-000008.md",
+ "doc_chars": 414583,
+ "prompt_chars": 414756,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 414583,
+ "original_chars": 414583,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 71165,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 620,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "70.99%",
+ "reasoning": "We need to find fair value per share. The document mentions fair value per share for options granted and ESPP. The question: \"what is the percentage difference in the fair value per share between 2015 and 2016?\" Likely refers to the fair value per share of option awards or ESPP. There are two: Option Awards fair value per share: 2016 $31.00, 2015 $18.13. ESPP: 2016 $22.09, 2015 $15.59. Which one? The question says \"fair value per share\" without specifying. Possibly the option awards. But also could be the stock price? No, fair value per share is given in the stock-based compensation tables. The question likely expects the percentage difference for option awards. Let's compute: (31.00 - 18.13)/18.13 = 12.87/18.13 = 0.7099 = 70.99% increase. Or for ESPP: (22.09-15.59)/15.59 = 6.50/15.59 = 0.4169 = 41.69%. Which one is more likely? The question says \"fair value per share\" without context. In the document, there are two tables. The first one is \"Option Awards\" and the second \"ESPP\". The question might be ambiguous. But typically in such documents, the fair value per share for options is the main one. Also the question says \"between 2015 and 2016\" - both years are given. I'll go with option awards. But let's check if there is any other fair value per share. The market price? No. The question might be from a financial analysis perspective. I'll answer with the percentage difference for option awards. If the question expects a specific one, it might be the one that is more prominent. I'll compute both and see which is more likely. The question says \"the fair value per share\" - singular. In the document, there are two. But the first table is for options, the second for ESPP. The question might be referring to the fair value per share of the company's stock? No, that's not given. Actually, the fair value per share is used for stock-based compensation. I think the intended answer is the option awards. Let me compute the percentage difference: (31.00 - 18.13)/18.13 = 12.87/18.13 = 0.7099 = 70.99%. Round to maybe 71%. I'll put that. If the question expects ESPP, it would be 41.7%. But I'll go with option awards. Alternatively, the question might be about the stock price? No, the stock price high/low is given, but not fair value. So I'll answer 70.99% or 71%. Let me put the exact value.",
+ "raw_content": "<answer>70.99%</answer>",
+ "usage": {
+  "prompt_tokens": 71314,
+  "completion_tokens": 620,
+  "total_tokens": 71934,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 71168
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.21,
+ "answer_tag_found": true,
+ "docfinqa_row": 369
+}

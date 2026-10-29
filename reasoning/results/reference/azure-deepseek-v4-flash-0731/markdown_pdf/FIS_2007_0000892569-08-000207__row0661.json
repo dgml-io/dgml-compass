@@ -1,0 +1,53 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0661",
+ "format": "markdown_pdf",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what percentage of total future minimum operating lease payments for leases with remaining terms greater than one year are due in 2009?",
+ "gold": "25%",
+ "finqa_id": "FIS/2007/page_94.pdf-1",
+ "source_page": "page_94",
+ "ticker": "FIS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf/FIS_2007_0000892569-08-000207.md",
+ "doc_chars": 370864,
+ "prompt_chars": 371088,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 370864,
+ "original_chars": 370864,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 86409,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 354,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "25.32%",
+ "reasoning": "We need to find total future minimum operating lease payments and the amount due in 2009. From the document, in the \"Leases\" section under Commitments and Contingencies (Note 16), there is a table:\n\nFuture minimum operating lease payments for leases with remaining terms greater than one year for each of the years in the five years ending December 31, 2012, and thereafter in the aggregate, are as follows (in thousands):\n\n2008: 83,382\n2009: 63,060\n2010: 35,269\n2011: 21,598\n2012: 14,860\nThereafter: 30,869\nTotal: 249,038\n\nSo total = 249,038 thousand. 2009 = 63,060 thousand. Percentage = 63,060 / 249,038 * 100 = ?\n\nCalculate: 63,060 / 249,038 ≈ 0.2532, so 25.32%. Let's compute precisely: 249,038 * 0.25 = 62,259.5, difference 800.5, so 0.0032*249,038 ≈ 797, so about 0.2532. So 25.32%.\n\nAnswer: 25.32% (or 25.3%). The question asks \"what percentage\", so we give the number. Probably round to two decimals? The document gives exact numbers, so we can compute exactly: 63,060 / 249,038 = 0.253214... So 25.3214%. We'll put 25.32% inside answer tags.",
+ "raw_content": "<answer>25.32%</answer>",
+ "usage": {
+  "prompt_tokens": 86562,
+  "completion_tokens": 354,
+  "total_tokens": 86916,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 86272
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.8,
+ "answer_tag_found": true,
+ "docfinqa_row": 661
+}

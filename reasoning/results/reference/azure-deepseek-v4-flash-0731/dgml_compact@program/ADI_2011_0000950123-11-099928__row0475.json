@@ -1,0 +1,69 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0475",
+ "format": "dgml_compact",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what is the net change in the total investment from 2010 to 2011?",
+ "gold": "17720",
+ "finqa_id": "ADI/2011/page_81.pdf-2",
+ "source_page": "page_81",
+ "ticker": "ADI",
+ "fiscal_year": "2011",
+ "source_file": "data/docs/dgml_compact/ADI_2011_0000950123-11-099928.dgml.txt",
+ "doc_chars": 439213,
+ "prompt_chars": 439367,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 439213,
+ "original_chars": 439213,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 94232,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1088,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "948804",
+ "reasoning": "We need answer question: \"what is the net change in the total investment from 2010 to 2011?\" Need identify total investment? Could be total assets? Or investments? Need parse. Document has balance sheet: cash and cash equivalents, short-term investments, other investments, deferred compensation plan investments. \"total investment\" maybe total assets? Or \"total investment\" in context? Need infer. Question asks net change in total investment from 2010 to 2011. Could be \"total assets\" from balance sheet: 2011 $5,277,635, 2010 $4,328,831. Net change = 948,804. But \"total investment\" might refer to \"total assets\" as investment? Or \"total investments\" line? Let's examine document. There is \"Cash and cash equivalents\", \"Short-term investments\", \"Other investments\", \"Deferred compensation plan investments\". No line \"total investment\". Maybe \"total assets\" is total investment? The question likely from financial data: \"net change in total investment\" maybe \"total assets\" because assets are investments? Need be careful.\n\nLook at Selected Financial Data: Balance Sheet data: Total assets $5,277,635 (2011), $4,328,831 (2010). Net change = 948,804. But question says \"total investment\" not \"total assets\". Could be \"total investments\" in balance sheet? There is \"Short-term investments\" 2,187,362 vs 1,617,768, change 569,594. Plus \"Other investments\" 2,951 vs 1,317, change 1,634. Plus \"Deferred compensation plan investments\" 26,410 vs 8,690, change 17,720. Total investments? But \"total investment\" might be \"cash and cash equivalents and short-term investments\" combined? The document mentions \"principal source of liquidity was $3,592.5 million of cash and cash equivalents and short-term investments\" at Oct 29 2011. In 2010? Cash and equivalents 1,070,000 + short-term investments 1,617,768 = 2,687,768. 2011: 1,405,100 + 2,187,362 = 3,592,462 (approx 3,592.5). Net change = 904,694. But question \"total investment\" maybe \"total assets\"? Need determine from wording.\n\nQuestion: \"what is the net change in the total investment from 2010 to 2011?\" In financial statements, \"total investment\" could be \"total assets\" because assets are investments? But \"total investment\" is not a standard line. Could be \"total assets\" because \"investment\" in company? Hmm.\n\nLet's search document for \"total investment\" phrase. I don't see. There is \"Total assets\" line. There is \"Total assets measured at fair value\" in fair value table. There is \"Total liabilities measured at fair value\". There is \"Total cash and cash equivalents\", \"Total short-term investments\". There is \"Total investments\"? Not present.\n\nMaybe question from a dataset about \"total investment\" meaning \"total assets\" because they ask net change in total investment from 2010 to 2011. In balance sheet, total assets = total liabilities and shareholders' equity. Net change = 5,277,635 - 4,328,831 = 948,804 (in thousands). But \"investment\" could be \"total assets\" as \"total investment\" in company. Need answer with value.\n\nLet's read question: \"what is the net change in the total investment from 2010 to 2011?\" It might refer to \"total investment\" as \"total assets\" because assets represent investment. In many financial analysis, \"total investment\" = total assets. The document has \"Total assets\" line. So net change = 948,804 (thousands). But need ensure units. The financial statements are in thousands. So answer likely 948,804 (thousands). But question asks \"net change\" maybe positive. We'll provide.\n\nNeed evidence: list figures used. Total assets 2011 $5,277,635, 2010 $4,328,831. Compute subtract.\n\nLet's produce final answer inside <answer>948804</answer> (no units). But need include evidence and program. The instruction: \"Before the answer, list every figure you use inside <evidence></evidence>, one per line as `value | element`... Then give computation inside <program></program>... Then final answer inside <answer>\". So we'll do.\n\nEvidence: $5,277,635 | Total assets (Consolidated Balance Sheet) ; $4,328,831 | Total assets (Consolidated Balance Sheet). Program: subtract(5277635, 4328831). Answer: 948804.\n\nNeed ensure no units.",
+ "raw_content": "<evidence>\n$5,277,635 | Total assets (Consolidated Balance Sheet)\n$4,328,831 | Total assets (Consolidated Balance Sheet)\n</evidence>\n<program>subtract(5277635, 4328831)</program>\n<answer>948804</answer>",
+ "usage": {
+  "prompt_tokens": 94537,
+  "completion_tokens": 1088,
+  "total_tokens": 95625,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 16.51,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$5,277,635",
+   "element": "Total assets (Consolidated Balance Sheet)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$4,328,831",
+   "element": "Total assets (Consolidated Balance Sheet)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(5277635, 4328831)",
+ "answer_model": "948804",
+ "program_value": 948804.0,
+ "docfinqa_row": 475
+}

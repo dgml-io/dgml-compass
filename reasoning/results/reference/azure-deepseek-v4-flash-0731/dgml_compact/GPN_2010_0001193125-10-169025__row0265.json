@@ -1,0 +1,50 @@
+{
+ "id": "GPN_2010_0001193125-10-169025__row0265",
+ "format": "dgml_compact",
+ "key": "GPN_2010_0001193125-10-169025",
+ "question": "what is the total fair value of non-vested shares as of may 31 , 2010?",
+ "gold": "29946",
+ "finqa_id": "GPN/2010/page_89.pdf-2",
+ "source_page": "page_89",
+ "ticker": "GPN",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/dgml_compact/GPN_2010_0001193125-10-169025.dgml.txt",
+ "doc_chars": 408017,
+ "prompt_chars": 408176,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 408017,
+ "original_chars": 408017,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 87247,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 346,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "$29,946,000",
+ "reasoning": "The question asks for the total fair value of non-vested shares as of May 31, 2010. In the document, under \"Restricted Stock\" section, there is a table showing non-vested restricted stock awards. The table shows \"Non-vested at May 31, 2010 | 713 | $ 42\". The shares are 713 thousand and weighted average grant-date fair value is $42. So total fair value = 713,000 * $42 = $29,946,000, approximately $29.9 million. But the question asks for \"total fair value of non-vested shares\" - this likely refers to restricted stock. The table gives shares and weighted average fair value. 713 * 42 = 29,946 (in thousands) = $29,946,000. However, the question might be asking for the fair value of non-vested shares, which could be computed as 713,000 * $42 = $29,946,000. But let me check if there's a direct figure. The document says \"As of May 31, 2010, there was $21.1 million of total unrecognized compensation cost related to unvested restricted stock awards\" - that's unrecognized compensation cost, not fair value. The fair value of non-vested shares would be the number of shares times the fair value. 713 thousand shares * $42 = $29,946 thousand = $29.946 million. So answer: $29,946,000 or approximately $29.9 million. I'll provide the value.",
+ "raw_content": "<answer>$29,946,000</answer>",
+ "usage": {
+  "prompt_tokens": 87397,
+  "completion_tokens": 346,
+  "total_tokens": 87743,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 13.04,
+ "answer_tag_found": true,
+ "docfinqa_row": 265
+}

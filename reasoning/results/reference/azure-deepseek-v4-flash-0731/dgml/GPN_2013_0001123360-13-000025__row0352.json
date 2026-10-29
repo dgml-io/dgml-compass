@@ -1,0 +1,50 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0352",
+ "format": "dgml",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what is the net change of the total fair value balance of non-vested shares during 2013?",
+ "gold": "6820",
+ "finqa_id": "GPN/2013/page_87.pdf-3",
+ "source_page": "page_87",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/dgml/GPN_2013_0001123360-13-000025.dgml.xml",
+ "doc_chars": 611417,
+ "prompt_chars": 611594,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 611417,
+ "original_chars": 611417,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 141594,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 385,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "$6,820,000",
+ "reasoning": "We need answer net change of total fair value balance of non-vested shares during 2013. Need find restricted stock rollforward. Non-vested at May 31, 2012: 941 shares, fair value $44? Actually table: Non-vested at May 31, 2012: Shares 941, Weighted Average Grant-Date Fair Value $44. Non-vested at May 31, 2013: 1,096 shares, $44. Total fair value balance = shares * weighted avg fair value. 2012: 941*44 = 41,404 (thousands? shares in thousands, fair value dollars, so $41,404 thousand). 2013: 1,096*44 = 48,224 thousand. Net change = 48,224 - 41,404 = 6,820 thousand = $6.82 million. But question asks \"net change of the total fair value balance of non-vested shares during 2013\" likely in dollars. Need compute. Alternatively could be change in number of shares? But \"total fair value balance\" means shares * fair value. Use weighted average grant-date fair value. 1,096*44 - 941*44 = (155)*44 = 6,820 thousand = $6,820,000. Answer in dollars? The question doesn't specify units. Probably $6.82 million. But check if there is any other interpretation. The table shows shares in thousands, fair value $44. So total fair value balance = 1,096,000 * $44 = $48,224,000; 941,000*44 = $41,404,000; change $6,820,000. So answer $6,820,000.",
+ "raw_content": "<answer>$6,820,000</answer>",
+ "usage": {
+  "prompt_tokens": 141744,
+  "completion_tokens": 385,
+  "total_tokens": 142129,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.08,
+ "answer_tag_found": true,
+ "docfinqa_row": 352
+}

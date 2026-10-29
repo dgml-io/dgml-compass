@@ -1,0 +1,68 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0095",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what was the increase in long-term debt between 2004 and 2005 in thousands?",
+ "gold": "296048",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "AMT_2005_0001193125-06-054224.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/BalanceSheetData/table"
+ ],
+ "r1_reasoning_chars": 5433,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 28594,
+  "completion_tokens": 1352,
+  "total_tokens": 29946,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 28416
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/BalanceSheetData/table"
+ ],
+ "content_chars": 5045,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "319815",
+ "reasoning": "We need answer increase in long-term debt between 2004 and 2005. Need identify long-term debt figures. The table has \"Long-term obligations, including current portion\" with values: 3,613,429; 3,293,614; 3,359,731; 3,448,514; 3,561,960. Need know which years correspond. The table likely columns: 2005, 2004, 2003, 2002, 2001? Need infer from context. The first row cash: 112,701; 215,557; 275,501; 127,292; 130,029. The question asks increase between 2004 and 2005. So need 2005 and 2004 values. Which columns? The table header not shown but likely first column after label is 2005, then 2004, 2003, 2002, 2001. Because in footnote (4) mentions as of Dec 31, 2005 and 2004, no escrows; includes as of Dec 31, 2003 restricted funds; includes as of Dec 31, 2001 restricted funds. So columns are 2005, 2004, 2003, 2002, 2001. So long-term obligations: 2005 = 3,613,429; 2004 = 3,293,614. Increase = 3,613,429 - 3,293,614 = 319,815. Need answer in thousands, so 319815. But question says \"increase in long-term debt between 2004 and 2005 in thousands\" - likely just number. Need evidence: list figures. Use exact printed values. Program subtract(3613429, 3293614).",
+ "raw_content": "<evidence>3,613,429 | Long-term obligations, including current portion (2005 column)\n3,293,614 | Long-term obligations, including current portion (2004 column)</evidence>\n<program>subtract(3613429, 3293614)</program>\n<answer>319815</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1630,
+  "completion_tokens": 448,
+  "total_tokens": 2078,
+  "audio_prompt_tokens": 0
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "3,613,429",
+   "element": "Long-term obligations, including current portion (2005 column)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "3,293,614",
+   "element": "Long-term obligations, including current portion (2004 column)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(3613429, 3293614)",
+ "answer_model": "319815",
+ "program_value": 319815.0,
+ "elapsed_s": 7.38,
+ "outline_source": "AMT_2005_0001193125-06-054224.outline.txt",
+ "outline_chars": 112419
+}

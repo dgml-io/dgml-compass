@@ -1,0 +1,59 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0735",
+ "format": "markdown_pdf_plumber",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what was the total number of grants were forfeited?",
+ "gold": "170 grants",
+ "finqa_id": "GPN/2013/page_87.pdf-4",
+ "source_page": "page_87",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/markdown_pdf_plumber/GPN_2013_0001123360-13-000025.md",
+ "doc_chars": 385288,
+ "prompt_chars": 385428,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 385288,
+ "original_chars": 385288,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 88373,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "stop",
+   "completion_tokens": 351,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 1,
+ "ok": true,
+ "answer": "170",
+ "reasoning": "The question asks: \"what was the total number of grants were forfeited?\"\n\nI need to find forfeiture data in the document. Looking at the restricted stock table:\n\n\"Non-vested at May 31, 2011 869 $ 40\nGranted 472 48\nVested (321) 40\nForfeited (79) 43\nNon-vested at May 31, 2012 941 44\nGranted 561 44\nVested (315) 43\nForfeited (91) 44\nNon-vested at May 31, 2013 1,096 $ 44\"\n\nSo forfeited in fiscal 2012 was 79, and forfeited in fiscal 2013 was 91. Total forfeited = 79 + 91 = 170.\n\nBut wait, the question says \"total number of grants were forfeited\" - could refer to the two years shown in the table. The table covers years ended May 31, 2013 and 2012. So total forfeited = 79 + 91 = 170.\n\nAlternatively, maybe it just asks for the most recent year? But \"total\" suggests adding them. The table shows forfeitures for two years. Total = 170.\n\nLet me check stock options too - forfeited (72) in 2012 and (72) in 2013. But the question likely refers to restricted stock grants. Hmm, \"grants\" - could be restricted stock awards. The table is about restricted stock. Total forfeited = 79 + 91 = 170.\n\nI'll answer 170.",
+ "raw_content": "<answer>170</answer>",
+ "usage": {
+  "prompt_tokens": 88512,
+  "completion_tokens": 351,
+  "total_tokens": 88863,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 88320
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.84,
+ "answer_tag_found": true,
+ "docfinqa_row": 735
+}

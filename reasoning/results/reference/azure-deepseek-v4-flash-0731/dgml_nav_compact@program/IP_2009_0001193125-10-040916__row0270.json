@@ -1,0 +1,76 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0270",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "what was the percentage rent increase between 2007 and 2008?",
+ "gold": "22%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "IP_2009_0001193125-10-040916.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/CommitmentsAndContingencies/RentExpenseNarrative",
+  "/chunk/CommitmentsAndContingencies/LeaseArrangementsNarrative",
+  "/chunk/CommitmentsAndContingencies",
+  "/chunk/CommitmentsAndContingencies/RentExpenseNarrative/RentExpenseAmount"
+ ],
+ "r1_reasoning_chars": 2696,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 33536,
+  "completion_tokens": 724,
+  "total_tokens": 34260,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/CommitmentsAndContingencies/RentExpenseNarrative",
+  "/chunk/CommitmentsAndContingencies/LeaseArrangementsNarrative",
+  "/chunk/CommitmentsAndContingencies",
+  "/chunk/CommitmentsAndContingencies/RentExpenseNarrative/RentExpenseAmount"
+ ],
+ "content_chars": 79053,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "22.02381",
+ "reasoning": "We need percentage rent increase between 2007 and 2008. Rent expense: 2008 = $205 million, 2007 = $168 million. Increase = (205-168)/168 * 100. Compute.",
+ "raw_content": "<evidence>\n$205 million | RentExpenseAmount\n$168 million | RentExpenseAmount\n</evidence>\n<program>multiply(divide(subtract(205, 168), 168), 100)</program>",
+ "r2_usage": {
+  "prompt_tokens": 19144,
+  "completion_tokens": 97,
+  "total_tokens": 19241,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$205 million",
+   "element": "RentExpenseAmount",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$168 million",
+   "element": "RentExpenseAmount",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(205, 168), 168), 100)",
+ "answer_model": null,
+ "program_value": 22.023809523809522,
+ "elapsed_s": 8.42,
+ "outline_source": "IP_2009_0001193125-10-040916.outline.txt",
+ "outline_chars": 127828
+}

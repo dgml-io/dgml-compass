@@ -1,0 +1,72 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0119",
+ "format": "markdown_pdf_plumber",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what was the percentage change in the minority interest from 2005 to 2006",
+ "gold": "-32.4%",
+ "finqa_id": "SNA/2007/page_69.pdf-3",
+ "source_page": "page_69",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_plumber/SNA_2007_0001104659-08-011401.md",
+ "doc_chars": 371934,
+ "prompt_chars": 372096,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 371934,
+ "original_chars": 371934,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 94563,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1041,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-164.285714",
+ "reasoning": "We need percentage change in minority interest from 2005 to 2006. Minority interests and equity earnings (loss), net of tax: 2005 -1.4, 2006 -3.7. Percentage change = ( -3.7 - (-1.4) ) / | -1.4 | *100 = (-2.3)/1.4 = -164.2857%? Or maybe they mean change in absolute? Typically percentage change = (new - old)/old *100. Old = -1.4, new = -3.7. ( -3.7 - (-1.4) ) = -2.3. Divide by -1.4 = 1.642857, times 100 = 164.2857% increase? But since both negative, the change is -164.3%? Actually percentage change formula: (new - old)/|old| *100 = (-2.3)/1.4 = -164.3%. So decrease of 164.3%. But question asks \"percentage change\" likely they expect (new-old)/old *100 = (-2.3)/(-1.4)=1.642857=164.29% increase? But that's weird. Usually percentage change uses absolute value of old. Let's see if they want the change in minority interest from 2005 to 2006. The values are -1.4 and -3.7. The change is -2.3. Percentage change = ( -3.7 - (-1.4) ) / | -1.4 | *100 = -164.3%. Or maybe they want the change in the absolute value? The question says \"percentage change in the minority interest\" - likely they want the percentage change in the line item. I'll compute as (new - old)/|old| *100 = -164.3%. But let's check if they might use old as -1.4, so ( -3.7 - (-1.4) ) / (-1.4) = (-2.3)/(-1.4)=1.642857 = 164.29% increase. That would be a positive percentage change. Which is correct? Typically percentage change is (new - old)/old *100. If old is negative, the sign flips. But many financial analysts use absolute value. The question likely expects a number. Let's see if there is any other interpretation. The line is \"Minority interests and equity earnings (loss), net of tax\" - in 2005 -1.4, 2006 -3.7. The change is -2.3. Percentage change = (-2.3)/1.4 = -164.3% if using absolute. Or if using old as -1.4, it's +164.3%. I'll go with -164.3% because that's the standard percentage change with absolute denominator. But let's see if the document gives any hint. The question: \"what was the percentage change in the minority interest from 2005 to 2006\" - they likely want the percentage change in the value. I'll compute ( -3.7 - (-1.4) ) / | -1.4 | *100 = -164.2857%. Round to -164.3%. I'll provide that.\n\nEvidence: -1.4 from 2005, -3.7 from 2006. Program: multiply(divide(subtract(-3.7, -1.4), 1.4), 100) but careful with signs. Actually subtract(-3.7, -1.4) = -2.3. divide(-2.3, 1.4) = -1.642857. multiply by 100 = -164.2857. So answer -164.3% or -164.29%. I'll put -164.3%.\n\nBut the instruction says \"Give your final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So just -164.3%? Or -164.3? The question asks \"percentage change\" so include %? It says no units unless asked. They ask for percentage change, so include % sign. I'll put -164.3%.\n\nLet me double-check the numbers: In the five-year data, 2005 minority interests and equity earnings (loss), net of tax is (1.4) and 2006 is (3.7). Yes.\n\nI'll write evidence and program.",
+ "raw_content": "<evidence>\n-1.4 | Minority interests and equity earnings (loss), net of tax 2005\n-3.7 | Minority interests and equity earnings (loss), net of tax 2006\n</evidence>\n\n<program>\nmultiply(divide(subtract(-3.7, -1.4), 1.4), 100)\n</program>\n\n<answer>-164.3%</answer>",
+ "usage": {
+  "prompt_tokens": 94869,
+  "completion_tokens": 1041,
+  "total_tokens": 95910,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 92672
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.15,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1.4",
+   "element": "Minority interests and equity earnings (loss), net of tax 2005",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "3.7",
+   "element": "Minority interests and equity earnings (loss), net of tax 2006",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(-3.7, -1.4), 1.4), 100)",
+ "answer_model": "-164.3%",
+ "program_value": -164.28571428571433,
+ "docfinqa_row": 119
+}

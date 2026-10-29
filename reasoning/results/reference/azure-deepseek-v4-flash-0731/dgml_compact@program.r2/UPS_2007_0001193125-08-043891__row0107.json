@@ -1,0 +1,66 @@
+{
+ "id": "UPS_2007_0001193125-08-043891__row0107",
+ "format": "dgml_compact",
+ "key": "UPS_2007_0001193125-08-043891",
+ "question": "what is the total cash inflow from the stock purchases of employees in 2007 , ( in millions ) ?",
+ "gold": "115.6",
+ "finqa_id": "UPS/2007/page_98.pdf-1",
+ "source_page": "page_98",
+ "ticker": "UPS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml_compact/UPS_2007_0001193125-08-043891.dgml.txt",
+ "doc_chars": 424830,
+ "prompt_chars": 425014,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 424830,
+ "original_chars": 424830,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93585,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 553,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "174",
+ "reasoning": "We need answer: total cash inflow from stock purchases of employees in 2007, in millions. Need find in document. There is \"Issuances of common stock\" in cash flow financing activities: $174 million for 2007. Also \"Common stock issuances\" in rollforward? But question \"stock purchases of employees\" likely refers to employee stock purchase plan? In cash flow, \"Issuances of common stock\" $174 million. Also in Note 11, employees purchased 1.8 million shares at average $64.20 = ~$115.6 million? But question says \"total cash inflow from the stock purchases of employees in 2007\" - maybe from statement of cash flows \"Issuances of common stock\" $174 million. Let's check. The document has \"Issuances of common stock | 174 | 164 | 164\" in financing activities. That is cash inflow from stock issuances, including employee stock purchases and option exercises. The question specifically \"stock purchases of employees\" might refer to employee stock purchase plan. But the phrase \"stock purchases of employees\" could be \"Issuances of common stock\" from employees. Need determine. The question: \"what is the total cash inflow from the stock purchases of employees in 2007 , ( in millions ) ?\" Likely from cash flow statement \"Issuances of common stock\" $174 million. Let's verify if there is any other figure. In Note 11, employees purchased 1.8 million shares at average $64.20 = $115.56 million. But that's only employee stock purchase plan, not options. The cash flow \"Issuances of common stock\" includes all stock issuances, including employee stock purchase plan and option exercises. The question says \"stock purchases of employees\" - could be \"Issuances of common stock\" line. I'll answer 174.\n\nNeed evidence: value | element. The element is \"ShareIssuanceAmount\" or \"CashFlowAmount\"? In the cash flow statement, the line \"Issuances of common stock\" has value 174. In the document, it's under CashFlowAmount with header \"Issuances of common stock\". So evidence: 174 | Issuances of common stock (Cash Flows From Financing Activities). Also maybe 1.8 million shares at $64.20? But question asks total cash inflow, so use 174.\n\nProgram: 174.\n\nFinal answer inside <answer>174</answer>.",
+ "raw_content": "<evidence>174 | Issuances of common stock (Cash Flows From Financing Activities)</evidence>\n<program>174</program>\n<answer>174</answer>",
+ "usage": {
+  "prompt_tokens": 93894,
+  "completion_tokens": 553,
+  "total_tokens": 94447,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 93696
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.09,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "174",
+   "element": "Issuances of common stock (Cash Flows From Financing Activities)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "174",
+ "answer_model": "174",
+ "program_value": 174.0,
+ "docfinqa_row": 107
+}

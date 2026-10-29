@@ -1,0 +1,74 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0445",
+ "format": "markdown_pdf_rules",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what portion of total value of net operating loss carryforwards is related to state?",
+ "gold": "52.8%",
+ "finqa_id": "AMT/2005/page_105.pdf-4",
+ "source_page": "page_105",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/markdown_pdf_rules/AMT_2005_0001193125-06-054224.md",
+ "doc_chars": 437061,
+ "prompt_chars": 437234,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 437061,
+ "original_chars": 437061,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 101793,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 383,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.521739",
+ "reasoning": "We need answer: \"what portion of total value of net operating loss carryforwards is related to state?\" Need find figures. Document has income taxes note. At Dec 31 2005, net federal and state operating loss carryforwards available to reduce future taxable income of approximately $2.2 billion and $2.4 billion, respectively. Total = 2.2+2.4=4.6 billion. Portion state = 2.4/4.6 = 0.521739... = 52.17%. But question says \"total value of net operating loss carryforwards\" - likely these are amounts, not tax value? It says \"net federal and state operating loss carryforwards available to reduce future taxable income of approximately $2.2 billion and $2.4 billion, respectively.\" So state portion = 2.4/(2.2+2.4) = 2.4/4.6 = 12/23 ≈ 0.521739. Need answer as portion maybe 52.17% or 0.5217. The question asks \"what portion\" - give fraction or percentage. We'll compute. Evidence: \"approximately $2.2 billion\" federal, \"approximately $2.4 billion\" state. Use exact numbers as printed: 2.2 and 2.4 (in billions). Program divide(2.4, add(2.2,2.4)). Answer inside tags.",
+ "raw_content": "<evidence>\n$2.2 billion | Federal net operating loss carryforwards (Note 13)\n$2.4 billion | State net operating loss carryforwards (Note 13)\n</evidence>\n\n<program>divide(2.4, add(2.2, 2.4))</program>\n\n<answer>0.5217391304</answer>",
+ "usage": {
+  "prompt_tokens": 102097,
+  "completion_tokens": 383,
+  "total_tokens": 102480,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 101888
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.78,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$2.2 billion",
+   "element": "Federal net operating loss carryforwards (Note 13)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$2.4 billion",
+   "element": "State net operating loss carryforwards (Note 13)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(2.4, add(2.2, 2.4))",
+ "answer_model": "0.5217391304",
+ "program_value": 0.5217391304347826,
+ "docfinqa_row": 445
+}

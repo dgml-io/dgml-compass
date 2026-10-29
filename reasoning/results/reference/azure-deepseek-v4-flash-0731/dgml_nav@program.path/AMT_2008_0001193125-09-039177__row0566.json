@@ -1,0 +1,83 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0566",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "as of december 31 , 2008 , what was the percent of the maturities in 2012 of the aggregate carrying value of long-term debt , including capital leases",
+ "gold": "45.3%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "AMT_2008_0001193125-09-039177.outline.txt",
+ "doc_source": "AMT_2008_0001193125-09-039177.dgml.xml",
+ "outline_chars": 96437,
+ "predicted_xpaths": [
+  "/chunk/NotesToFinancialStatementsContinuation/ConvertibleNoteDebtInstrument/DebtMaturitySchedule",
+  "/chunk/NotesToFinancialStatementsContinuation/DocumentRunningHeader/LongTermObligations"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 5831,
+ "r1_usage": {
+  "prompt_tokens": 24141,
+  "completion_tokens": 1436,
+  "total_tokens": 25577,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/NotesToFinancialStatementsContinuation/ConvertibleNoteDebtInstrument/DebtMaturitySchedule",
+  "/chunk/NotesToFinancialStatementsContinuation/DocumentRunningHeader/LongTermObligations"
+ ],
+ "content_chars": 11702,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "45.297851",
+ "reasoning": "We need answer percent of maturities in 2012 of aggregate carrying value long-term debt including capital leases. From table: Maturity 2012 = 1,962,822 (in thousands). Balance as of Dec 31 2008 = 4,333,146. Percent = 1,962,822 / 4,333,146 * 100. Compute.",
+ "raw_content": "<evidence>1,962,822 | /chunk/NotesToFinancialStatementsContinuation/ConvertibleNoteDebtInstrument/DebtMaturitySchedule/table/MaturityScheduleAmount/MaturityAmount\n4,333,146 | /chunk/NotesToFinancialStatementsContinuation/ConvertibleNoteDebtInstrument/DebtMaturitySchedule/table/LongTermDebtBalance/DebtCarryingValue</evidence>\n<program>multiply(divide(1962822, 4333146), 100)</program>\n<answer>45.30</answer>",
+ "r2_usage": {
+  "prompt_tokens": 3333,
+  "completion_tokens": 204,
+  "total_tokens": 3537,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 3333,
+   "completion_tokens": 204,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "1,962,822",
+   "element": "chunk/NotesToFinancialStatementsContinuation/ConvertibleNoteDebtInstrument/DebtMaturitySchedule/table/MaturityScheduleAmount/MaturityAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "4,333,146",
+   "element": "chunk/NotesToFinancialStatementsContinuation/ConvertibleNoteDebtInstrument/DebtMaturitySchedule/table/LongTermDebtBalance/DebtCarryingValue",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(1962822, 4333146), 100)",
+ "answer_model": "45.30",
+ "program_value": 45.29785056861689,
+ "elapsed_s": 7.72
+}

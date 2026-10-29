@@ -1,0 +1,79 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0352",
+ "format": "markdown_pdf_plumber",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what is the net change of the total fair value balance of non-vested shares during 2013?",
+ "gold": "6820",
+ "finqa_id": "GPN/2013/page_87.pdf-3",
+ "source_page": "page_87",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/markdown_pdf_plumber/GPN_2013_0001123360-13-000025.md",
+ "doc_chars": 385288,
+ "prompt_chars": 385465,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 385288,
+ "original_chars": 385288,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 88373,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1124,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "6820",
+ "reasoning": "We need to find the net change of the total fair value balance of non-vested shares during 2013. The document has a table of non-vested restricted stock awards. It shows shares and weighted average grant-date fair value. The \"total fair value balance\" would be shares * fair value. We need net change from May 31, 2012 to May 31, 2013.\n\nFrom the table:\nNon-vested at May 31, 2012: 941 shares, fair value $44 -> total = 941*44 = 41,404 (in thousands? Actually shares in thousands, fair value per share, so total in thousands of dollars? The table says \"share awards in thousands\", so shares are in thousands. So total fair value = 941 * 44 = 41,404 thousand dollars? But the fair value is per share, so total = 941,000 * 44 = $41,404,000. But we need net change.\n\nNon-vested at May 31, 2013: 1,096 shares, fair value $44 -> total = 1,096*44 = 48,224 thousand dollars.\n\nNet change = 48,224 - 41,404 = 6,820 thousand dollars. But the question asks \"net change of the total fair value balance\" - likely in dollars. The table gives shares in thousands, so the total fair value is in thousands of dollars. So net change = 6,820 thousand = $6,820,000. But we need to check if there is any other information. The table also shows granted, vested, forfeited. But the net change in total fair value balance is simply ending balance minus beginning balance. However, the fair value per share might change? The weighted average grant-date fair value is given for each row. For May 31, 2012 it's $44, for May 31, 2013 it's $44. So the total fair value balance is shares * fair value. So net change = (1,096 - 941) * 44 = 155 * 44 = 6,820. Yes.\n\nBut we need to be careful: the table shows \"Weighted Average Grant-Date Fair Value\" for each row. For non-vested at May 31, 2012 it's 44, for May 31, 2013 it's 44. So the total fair value balance is shares * that fair value. So net change = 6,820 (in thousands). The question asks \"net change of the total fair value balance\" - likely in dollars. The document uses thousands for shares, but the fair value is per share. So the total fair value is in thousands of dollars. So answer is 6,820,000? But the question might expect the number as printed? The question says \"net change of the total fair value balance\" - we need to compute. The figures we use: 941, 1,096, 44. So we compute (1096-941)*44 = 155*44 = 6820. So answer is 6820 (in thousands) or 6,820,000? The question doesn't specify units. Usually in such financial documents, amounts are in thousands unless stated. The table says \"share awards in thousands\" so shares are in thousands. The fair value is per share. So total fair value is in thousands of dollars. So net change is 6,820 thousand dollars. But the answer should be a number. I'll put 6820. But to be safe, we can put 6,820,000? The question likely expects the number as computed from the figures. The evidence: 941, 1,096, 44. So program: multiply(subtract(1096, 941), 44) = 6820. So answer 6820.\n\nBut let's double-check if there is any other interpretation. The table also shows granted, vested, forfeited. The net change in total fair value could also be computed as granted*44 - vested*43 - forfeited*44? But the weighted average fair value for vested is 43, for forfeited is 44. But the net change in total fair value balance is simply ending minus beginning. The beginning and ending fair values are both 44, so it's just share change times 44. So 6820.\n\nThus answer: 6820.\n\nWe need to list evidence: 941 | Non-vested at May 31, 2012 (shares), 1,096 | Non-vested at May 31, 2013 (shares), 44 | Weighted Average Grant-Date Fair Value (for both rows). Actually the table has separate rows for each. We'll cite them.\n\nProgram: multiply(subtract(1096, 941), 44)\n\nFinal answer inside <answer>6820</answer>",
+ "raw_content": "<evidence>941 | Non-vested at May 31, 2012 (shares)\n1,096 | Non-vested at May 31, 2013 (shares)\n44 | Weighted Average Grant-Date Fair Value (2012 and 2013)</evidence>\n\n<program>multiply(subtract(1096, 941), 44)</program>\n\n<answer>6820</answer>",
+ "usage": {
+  "prompt_tokens": 88682,
+  "completion_tokens": 1124,
+  "total_tokens": 89806,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 15.31,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "941",
+   "element": "Non-vested at May 31, 2012 (shares)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1,096",
+   "element": "Non-vested at May 31, 2013 (shares)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "44",
+   "element": "Weighted Average Grant-Date Fair Value (2012 and 2013)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.6666666666666666,
+ "program_model": "multiply(subtract(1096, 941), 44)",
+ "answer_model": "6820",
+ "program_value": 6820.0,
+ "docfinqa_row": 352
+}

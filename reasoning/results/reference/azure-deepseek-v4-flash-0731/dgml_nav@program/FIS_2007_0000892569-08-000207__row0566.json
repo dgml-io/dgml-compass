@@ -1,0 +1,65 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0566",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what is the net change in unrecognized tax benefits during 2007?",
+ "gold": "11918",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "FIS_2007_0000892569-08-000207.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/RegistrantName/Financial/Financial/UnrecognizedTaxBenefitRollforward",
+  "/chunk/RegistrantName/Financial/Financial/table",
+  "/chunk/RegistrantName/Financial/Financial/table/UnrecognizedTaxBenefitRollforward"
+ ],
+ "r1_reasoning_chars": 2575,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 23025,
+  "completion_tokens": 643,
+  "total_tokens": 23668,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/RegistrantName/Financial/Financial/UnrecognizedTaxBenefitRollforward",
+  "/chunk/RegistrantName/Financial/Financial/table",
+  "/chunk/RegistrantName/Financial/Financial/table/UnrecognizedTaxBenefitRollforward"
+ ],
+ "content_chars": 8033,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "11918",
+ "reasoning": "We need net change = ending - beginning = 23,743 - 11,825 = 11,918. But note table also has decreases/increases. Net change is simply ending minus beginning. Use figures.",
+ "raw_content": "<evidence>$ 23,743 | Amount of unrecognized tax benefit at December 31, 2007</evidence>\n<evidence>$ 11,825 | Amounts of unrecognized tax benefits at January 1, 2007</evidence>\n<program>subtract(23743, 11825)</program>\n<answer>11918</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2278,
+  "completion_tokens": 120,
+  "total_tokens": 2398,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 23,743",
+   "element": "Amount of unrecognized tax benefit at December 31, 2007",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(23743, 11825)",
+ "answer_model": "11918",
+ "program_value": 11918.0,
+ "elapsed_s": 4.66,
+ "outline_source": "FIS_2007_0000892569-08-000207.outline.txt",
+ "outline_chars": 91339
+}

@@ -1,0 +1,73 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0119",
+ "format": "markdown_pdf_rules",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what was the percentage change in the minority interest from 2005 to 2006",
+ "gold": "-32.4%",
+ "finqa_id": "SNA/2007/page_69.pdf-3",
+ "source_page": "page_69",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_rules/SNA_2007_0001104659-08-011401.md",
+ "doc_chars": 336027,
+ "prompt_chars": 336189,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 336027,
+ "original_chars": 336027,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 81193,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 768,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "5.7143%",
+ "reasoning": "We need percentage change in minority interest from 2005 to 2006. Minority interests and equity earnings (loss), net of tax: 2005 -1.4, 2006 -3.7. But note that line item includes minority interests and equity earnings. The question says \"minority interest\" specifically. In Note 1, minority interests of $3.7 million in 2006 and $3.5 million in 2005, previously included in Other income. But the line item on income statement is \"Minority interests and equity earnings (loss), net of tax\" with values -1.4, -3.7, -2.5. The question might refer to that line. However, the document also gives minority interests separately in Note 1: 2006 $3.7, 2005 $3.5. But the question says \"minority interest\" singular. The line item is \"Minority interests and equity earnings (loss), net of tax\". The percentage change from 2005 to 2006: from -1.4 to -3.7? That is a change of -2.3, percentage change = (-3.7 - (-1.4))/abs(-1.4) = (-2.3)/1.4 = -164.2857%? Or if using the separate minority interests: 3.5 to 3.7, change = 0.2/3.5 = 5.714%. Which is intended? The question says \"minority interest\" not \"minority interests and equity earnings\". The document has a line \"Minority interests and equity earnings (loss), net of tax\" but also in Note 1: \"Minority interests of $3.7 million in 2006 and $3.5 million in 2005\". The question likely refers to that specific component. The percentage change from 2005 to 2006: (3.7-3.5)/3.5 = 0.2/3.5 = 0.057142857 = 5.7142857%. But the question asks \"percentage change\" - typically (new-old)/old *100. So 5.71%. However, the line item on income statement is negative. The question says \"minority interest\" not \"minority interests and equity earnings\". I'll use the Note 1 figures. Evidence: 3.7 | Note 1, 3.5 | Note 1. Program: divide(subtract(3.7, 3.5), 3.5) = 0.057142857. Answer as percentage? The question asks \"what was the percentage change\" so answer should be 5.7% or 5.71%. I'll put 5.7% inside tags. But need to be careful: The document also has \"Minority interests and equity earnings (loss), net of tax\" line with -1.4 and -3.7. If the question meant that, percentage change would be -164.3%. But the phrase \"minority interest\" specifically appears in Note 1. I'll go with that.\n\nFinal answer: 5.7% (or 5.71%). I'll put 5.7% inside.",
+ "raw_content": "<evidence>3.7 | Note 1: Minority interests of $3.7 million in 2006\n3.5 | Note 1: Minority interests of $3.5 million in 2005</evidence>\n<program>divide(subtract(3.7, 3.5), 3.5)</program>\n<answer>5.7%</answer>",
+ "usage": {
+  "prompt_tokens": 81498,
+  "completion_tokens": 768,
+  "total_tokens": 82266,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.95,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "3.7",
+   "element": "Note 1: Minority interests of $3.7 million in 2006",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "3.5",
+   "element": "Note 1: Minority interests of $3.5 million in 2005",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(subtract(3.7, 3.5), 3.5)",
+ "answer_model": "5.7%",
+ "program_value": 0.0571428571428572,
+ "docfinqa_row": 119
+}

@@ -1,0 +1,78 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0722",
+ "format": "markdown_pdf",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "what was map's 3 year growth of gasoline production?",
+ "gold": "3.7%",
+ "finqa_id": "MRO/2003/page_45.pdf-3",
+ "source_page": "page_45",
+ "ticker": "MRO",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/markdown_pdf/MRO_2003_0001193125-04-036535.md",
+ "doc_chars": 465533,
+ "prompt_chars": 465674,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 465533,
+ "original_chars": 465533,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 115045,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 373,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-2.4096%",
+ "reasoning": "We need answer: \"what was map's 3 year growth of gasoline production?\" Need find MAP gasoline production. Likely refined product yields gasoline for 2003, 2002, 2001. Table \"Refined Product Yields\" shows Gasoline: 2003 567, 2002 581, 2001 581 (thousands barrels per day). 3 year growth? Could mean from 2001 to 2003? Or 2003 vs 2001? \"3 year growth\" maybe over three years? Need compute percentage change from 2001 to 2003: (567-581)/581 = -14/581 = -2.4096% decrease. Or maybe from 2000? But table only 2003,2002,2001. Question \"map's 3 year growth of gasoline production\" likely asks growth over the three-year period? Could be CAGR? But \"3 year growth\" often means change from beginning to end of 3-year period. Need compute. Figures: 2001 581, 2003 567. Growth = (567-581)/581 = -2.41%. Or maybe \"3 year growth\" means from 2001 to 2003? Actually 2001,2002,2003 is three years. So answer -2.4%. Need provide evidence and program. Use subtract(567,581)/581.",
+ "raw_content": "<evidence>\n567 | Refined Product Yields - Gasoline 2003\n581 | Refined Product Yields - Gasoline 2002\n581 | Refined Product Yields - Gasoline 2001\n</evidence>\n\n<program>\ndivide(subtract(567, 581), 581)\n</program>\n\n<answer>-2.4%</answer>",
+ "usage": {
+  "prompt_tokens": 115344,
+  "completion_tokens": 373,
+  "total_tokens": 115717,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.96,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "567",
+   "element": "Refined Product Yields - Gasoline 2003",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "581",
+   "element": "Refined Product Yields - Gasoline 2002",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "581",
+   "element": "Refined Product Yields - Gasoline 2001",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(567, 581), 581)",
+ "answer_model": "-2.4%",
+ "program_value": -0.024096385542168676,
+ "docfinqa_row": 722
+}

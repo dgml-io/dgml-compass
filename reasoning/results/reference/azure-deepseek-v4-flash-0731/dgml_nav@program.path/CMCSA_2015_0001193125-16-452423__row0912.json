@@ -1,0 +1,81 @@
+{
+ "id": "CMCSA_2015_0001193125-16-452423__row0912",
+ "key": "CMCSA_2015_0001193125-16-452423",
+ "question": "what was the percentage of the capital expenditures incurred in our cable communications for customer premise equipment in 2015",
+ "gold": "52.6%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "CMCSA_2015_0001193125-16-452423.outline.txt",
+ "doc_source": "CMCSA_2015_0001193125-16-452423.dgml.xml",
+ "outline_chars": 134140,
+ "predicted_xpaths": [
+  "/chunk/CableNetworksOperatingCostsDiscussion/LiquidityAndCapitalResources/InvestingActivities/CapitalExpenditures/CableCapitalExpendituresDescription"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 8762,
+ "r1_usage": {
+  "prompt_tokens": 34062,
+  "completion_tokens": 1934,
+  "total_tokens": 35996,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/CableNetworksOperatingCostsDiscussion/LiquidityAndCapitalResources/InvestingActivities/CapitalExpenditures/CableCapitalExpendituresDescription"
+ ],
+ "content_chars": 4542,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "52.573216",
+ "reasoning": "We need percentage of capital expenditures for customer premise equipment in 2015. From table: customer premise equipment 2015 = 3,698; total 2015 = 7,034. Percentage = 3698/7034 * 100. Compute.",
+ "raw_content": "<evidence>3,698 | /chunk/CableNetworksOperatingCostsDiscussion/LiquidityAndCapitalResources/InvestingActivities/CapitalExpenditures/CableCapitalExpendituresDescription/CableCapitalExpenditures/CableCapitalExpenditures[2]/FinancialAmount[1]\n7,034 | /chunk/CableNetworksOperatingCostsDiscussion/LiquidityAndCapitalResources/InvestingActivities/CapitalExpenditures/CableCapitalExpendituresDescription/CableCapitalExpenditures/CableCapitalExpenditures[5]/FinancialAmount[1]</evidence>\n\n<program>multiply(divide(3698, 7034), 100)</program>",
+ "r2_usage": {
+  "prompt_tokens": 1362,
+  "completion_tokens": 196,
+  "total_tokens": 1558,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 1362,
+   "completion_tokens": 196,
+   "got_answer": false
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "3,698",
+   "element": "chunk/CableNetworksOperatingCostsDiscussion/LiquidityAndCapitalResources/InvestingActivities/CapitalExpenditures/CableCapitalExpendituresDescription/CableCapitalExpenditures/CableCapitalExpenditures[2]/FinancialAmount[1]",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "7,034",
+   "element": "chunk/CableNetworksOperatingCostsDiscussion/LiquidityAndCapitalResources/InvestingActivities/CapitalExpenditures/CableCapitalExpendituresDescription/CableCapitalExpenditures/CableCapitalExpenditures[5]/FinancialAmount[1]",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(3698, 7034), 100)",
+ "answer_model": null,
+ "program_value": 52.57321580892806,
+ "elapsed_s": 11.93
+}

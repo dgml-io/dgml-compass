@@ -1,0 +1,53 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0043",
+ "format": "dgml",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "assuming all options in the compensation plans approved by security holders were exercised , what would be the deemed proceeds to the company?",
+ "gold": "373153150",
+ "finqa_id": "CME/2010/page_123.pdf-2",
+ "source_page": "page_123",
+ "ticker": "CME",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/dgml/CME_2010_0001193125-11-050252.dgml.xml",
+ "doc_chars": 731824,
+ "prompt_chars": 732055,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 731824,
+ "original_chars": 731824,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 170125,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 362,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "373,153,158.3",
+ "reasoning": "We need answer question: \"assuming all options in the compensation plans approved by security holders were exercised , what would be the deemed proceeds to the company?\" Need find relevant figures. In document, there is table in Item 12 Equity Compensation Plan Information. It shows plan category, number of securities to be issued upon exercise of outstanding options (a), weighted-average exercise price (b), number remaining available (c). For approved plans: outstanding options 1,211,143, weighted-average exercise price $308.10. For not approved: 5,978, $22.00. Total 1,217,121. Question: \"assuming all options in the compensation plans approved by security holders were exercised, what would be the deemed proceeds to the company?\" Deemed proceeds = number of options * weighted average exercise price. For approved plans: 1,211,143 * $308.10 = ? Compute. 1,211,143 * 308.10 = 1,211,143*308 + *0.10? Let's calculate precisely. 1,211,143 * 308 = 1,211,143*300=363,342,900; *8=9,689,144; sum=373,032,044. *0.10=121,114.3. Total=373,153,158.3. So approximately $373.2 million. Need answer value only. Probably in dollars. The question asks \"deemed proceeds\" so likely $373,153,158.3. But check if they want in millions? The table gives shares and price. So answer $373,153,158.3. We'll put inside tags.",
+ "raw_content": "<answer>373,153,158.3</answer>",
+ "usage": {
+  "prompt_tokens": 170277,
+  "completion_tokens": 362,
+  "total_tokens": 170639,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 167936
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.08,
+ "answer_tag_found": true,
+ "docfinqa_row": 43
+}

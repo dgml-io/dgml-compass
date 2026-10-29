@@ -1,0 +1,62 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0637",
+ "format": "markdown_pdf",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "as of december 31 , 2010 what was the par value of the debt outstanding for the fixed rate notes due february 2014 compared to term loan due 2011",
+ "gold": "3.2",
+ "finqa_id": "CME/2010/page_69.pdf-4",
+ "source_page": "page_69",
+ "ticker": "CME",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/markdown_pdf/CME_2010_0001193125-11-050252.md",
+ "doc_chars": 417854,
+ "prompt_chars": 418088,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 417854,
+ "original_chars": 417854,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 94816,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.7,
+   "finish_reason": "stop",
+   "completion_tokens": 329,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 2,
+ "ok": true,
+ "answer": "$750.0 million vs $420.5 million",
+ "reasoning": "The question asks for the par value of fixed rate notes due February 2014 compared to term loan due 2011 as of December 31, 2010.\n\nFrom the document, in the \"Debt Instruments\" section (page 59):\n- Term loan due 2011: $420.5 million\n- Fixed rate notes due February 2014: $750.0 million\n\nAlso confirmed in Note 12 (page 87) and the debt table.\n\nThe question asks \"what was the par value of the debt outstanding for the fixed rate notes due february 2014 compared to term loan due 2011\". So it's comparing the two. The fixed rate notes had a par value of $750.0 million, and the term loan had a par value of $420.5 million. So the notes were $329.5 million more than the term loan, or the term loan was $329.5 million less.\n\nThe question likely wants the comparison - perhaps the difference or just stating both. Since it says \"compared to\", it might want a ratio or difference. Let me just state the par values and the comparison.\n\nThe answer should be the values. $750.0 million vs $420.5 million. Difference is $329.5 million.",
+ "raw_content": "The fixed rate notes due February 2014 had a par value of $750.0 million, while the term loan due 2011 had a par value of $420.5 million, making the notes $329.5 million higher.\n\n<answer>$750.0 million vs $420.5 million</answer>",
+ "usage": {
+  "prompt_tokens": 95000,
+  "completion_tokens": 329,
+  "total_tokens": 95329,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.66,
+ "answer_tag_found": true,
+ "docfinqa_row": 637
+}

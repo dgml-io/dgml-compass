@@ -1,0 +1,50 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0352",
+ "format": "markdown_pdf_poppler",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what is the net change of the total fair value balance of non-vested shares during 2013?",
+ "gold": "6820",
+ "finqa_id": "GPN/2013/page_87.pdf-3",
+ "source_page": "page_87",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/markdown_pdf_poppler/GPN_2013_0001123360-13-000025.md",
+ "doc_chars": 447391,
+ "prompt_chars": 447568,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 447391,
+ "original_chars": 447391,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 78474,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 915,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "6,820,000",
+ "reasoning": "We need to find the net change of the total fair value balance of non-vested shares during 2013. The document has a table \"Non-vested at May 31, 2011\" etc. It shows shares and weighted average grant-date fair value. But we need total fair value balance. The table gives shares and weighted average fair value. We can compute total fair value at beginning and end of 2013.\n\nFrom Note 11: \"The following table summarizes the changes in non-vested restricted stock awards for the years ended May 31, 2013 and 2012 (share awards in thousands):\"\n\nTable:\nNon-vested at May 31, 2011: 869 shares, weighted avg fair value $40\nGranted 2012: 472, $48\nVested 2012: (321), $40\nForfeited 2012: (79), $43\nNon-vested at May 31, 2012: 941, $44\nGranted 2013: 561, $44\nVested 2013: (315), $43\nForfeited 2013: (91), $44\nNon-vested at May 31, 2013: 1,096, $44\n\nWe need net change of total fair value balance during 2013. Total fair value = shares * weighted average fair value. But the weighted average fair value is the grant-date fair value, not the current fair value. The \"total fair value balance\" likely means the aggregate fair value of non-vested shares based on grant-date fair value. So we compute beginning balance (May 31, 2012) total = 941 * $44 = $41,404 (in thousands? Actually shares in thousands, so 941,000 shares * $44 = $41,404,000). Ending balance (May 31, 2013) = 1,096 * $44 = $48,224,000. Net change = $48,224 - $41,404 = $6,820 thousand = $6.82 million.\n\nBut we need to be careful: The weighted average fair value at May 31, 2012 is $44, and at May 31, 2013 is also $44. So net change = (1,096 - 941) * $44 = 155 * $44 = $6,820 thousand.\n\nAlternatively, we could compute the change in total fair value by considering grants, vesting, forfeitures. But the question asks \"net change of the total fair value balance of non-vested shares during 2013\" which is simply ending balance minus beginning balance.\n\nSo answer: $6,820,000 or $6.82 million. The document uses thousands, so we can give in thousands? The question doesn't specify units. We'll give the value in dollars: 6,820,000. Or maybe they want in thousands? The table says \"share awards in thousands\" so shares are in thousands. The fair value is per share. So total fair value in thousands of dollars? Actually if shares are in thousands, then total fair value = (shares in thousands) * (fair value per share) = thousands of dollars? For example, 941 * $44 = $41,404 (in thousands of dollars? Because 941 thousand shares * $44 = $41,404 thousand dollars = $41,404,000). So the net change is 155 * $44 = $6,820 thousand dollars = $6,820,000.\n\nWe'll put the answer as 6,820,000. Or maybe they want in millions? The question says \"net change of the total fair value balance\" - we'll give the numeric value.\n\nLet's double-check: The table shows \"Non-vested at May 31, 2012\" 941 shares, weighted average grant-date fair value $44. So total fair value = 941 * 44 = 41,404 (in thousands). At May 31, 2013: 1,096 * 44 = 48,224. Net change = 6,820 (in thousands). So answer: 6,820,000.\n\nWe'll put <answer>6,820,000</answer>.",
+ "raw_content": "<answer>6,820,000</answer>",
+ "usage": {
+  "prompt_tokens": 78625,
+  "completion_tokens": 915,
+  "total_tokens": 79540,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.81,
+ "answer_tag_found": true,
+ "docfinqa_row": 352
+}

@@ -1,0 +1,74 @@
+{
+ "id": "ZBH_2003_0000950137-04-001881__row0035",
+ "format": "dgml",
+ "key": "ZBH_2003_0000950137-04-001881",
+ "question": "what was the difference in operating profit for the americas as a percentage of net sales between 2001 and 2003?",
+ "gold": "3.8%",
+ "finqa_id": "ZBH/2003/page_40.pdf-1",
+ "source_page": "page_40",
+ "ticker": "ZBH",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/dgml/ZBH_2003_0000950137-04-001881.dgml.xml",
+ "doc_chars": 492809,
+ "prompt_chars": 493010,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 492809,
+ "original_chars": 492809,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 114091,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 164,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "3.8",
+ "reasoning": "We need answer difference in operating profit for Americas as % of net sales between 2001 and 2003. From table: Americas operating profit margin 2003 51.2%, 2001 47.4%. Difference = 51.2 - 47.4 = 3.8 percentage points. Need answer value. Evidence: 51.2% | OperatingProfitMarginValue, 47.4% | OperatingProfitMarginValue. Program subtract(51.2, 47.4). Final answer inside tags.",
+ "raw_content": "<evidence>\n51.2% | OperatingProfitMarginValue\n47.4% | OperatingProfitMarginValue\n</evidence>\n<program>subtract(51.2, 47.4)</program>\n<answer>3.8</answer>",
+ "usage": {
+  "prompt_tokens": 114404,
+  "completion_tokens": 164,
+  "total_tokens": 114568,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.83,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "51.2%",
+   "element": "OperatingProfitMarginValue",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "47.4%",
+   "element": "OperatingProfitMarginValue",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(51.2, 47.4)",
+ "answer_model": "3.8",
+ "program_value": 3.8000000000000043,
+ "docfinqa_row": 35
+}

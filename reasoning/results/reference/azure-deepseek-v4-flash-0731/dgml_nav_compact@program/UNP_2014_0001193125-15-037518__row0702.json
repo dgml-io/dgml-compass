@@ -1,0 +1,74 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0702",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "what was the percentage change in cash provided by operating activities from 2012 to 2013?",
+ "gold": "11%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "UNP_2014_0001193125-15-037518.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/LiquidityAndCapitalResources/CashFlow/OperatingActivitiesCashFlow",
+  "/chunk/LiquidityAndCapitalResources/CashFlow",
+  "/chunk/ConsolidatedCashFlow"
+ ],
+ "r1_reasoning_chars": 7614,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 19889,
+  "completion_tokens": 1686,
+  "total_tokens": 21575,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/LiquidityAndCapitalResources/CashFlow/OperatingActivitiesCashFlow",
+  "/chunk/LiquidityAndCapitalResources/CashFlow",
+  "/chunk/ConsolidatedCashFlow"
+ ],
+ "content_chars": 129308,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "10.745009",
+ "reasoning": "We need percentage change in cash provided by operating activities from 2012 to 2013. Figures: 2013: 6,823; 2012: 6,161. Percentage change = (6823-6161)/6161 * 100. Compute.",
+ "raw_content": "<evidence>6,823 | Cash provided by operating activities (2013)\n6,161 | Cash provided by operating activities (2012)\n</evidence>\n<program>multiply(divide(subtract(6823, 6161), 6161), 100)</program>",
+ "r2_usage": {
+  "prompt_tokens": 30556,
+  "completion_tokens": 118,
+  "total_tokens": 30674,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "6,823",
+   "element": "Cash provided by operating activities (2013)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6,161",
+   "element": "Cash provided by operating activities (2012)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(6823, 6161), 6161), 100)",
+ "answer_model": null,
+ "program_value": 10.745008927122221,
+ "elapsed_s": 12.8,
+ "outline_source": "UNP_2014_0001193125-15-037518.outline.txt",
+ "outline_chars": 77599
+}

@@ -1,0 +1,76 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0058",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what percentage of the total cash purchase price net of cash acquired was represented by ipr&d?",
+ "gold": "59%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "EW_2016_0001099800-17-000008.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/SpecialCharges/AcquiredInProcessResearchDevelopmentCharge",
+  "/chunk/FinancialStatementsCompany/Financial/Acquisitions/CardiAQPurchasePriceAllocation",
+  "/chunk/FinancialStatementsCompany/Financial/Acquisitions/CardiAQPurchaseAccounting",
+  "/chunk/FinancialStatementsCompany/Financial/Acquisitions",
+  "/chunk/FinancialStatementsCompany/Financial/Acquisitions/CardiAQAcquisition"
+ ],
+ "r1_reasoning_chars": 8508,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 17156,
+  "completion_tokens": 2081,
+  "total_tokens": 19237,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/SpecialCharges/AcquiredInProcessResearchDevelopmentCharge",
+  "/chunk/FinancialStatementsCompany/Financial/Acquisitions/CardiAQPurchasePriceAllocation",
+  "/chunk/FinancialStatementsCompany/Financial/Acquisitions/CardiAQPurchaseAccounting",
+  "/chunk/FinancialStatementsCompany/Financial/Acquisitions",
+  "/chunk/FinancialStatementsCompany/Financial/Acquisitions/CardiAQAcquisition"
+ ],
+ "content_chars": 20192,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "59.356451",
+ "reasoning": "We need to find the percentage of IPR&D relative to total cash purchase price net of cash acquired. The relevant table is CardiAQPurchasePriceAllocation: IPR&D = 190.0, Total cash purchase price, net of cash acquired = 320.1. Compute 190.0 / 320.1 * 100.",
+ "raw_content": "<evidence>190.0 | IPR&D\n320.1 | Total cash purchase price, net of cash acquired</evidence>\n<program>multiply(divide(190.0, 320.1), 100)</program>\n<answer>59.36</answer>",
+ "r2_usage": {
+  "prompt_tokens": 4589,
+  "completion_tokens": 130,
+  "total_tokens": 4719,
+  "audio_prompt_tokens": 0
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "190.0",
+   "element": "IPR&D",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "320.1",
+   "element": "Total cash purchase price, net of cash acquired",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "multiply(divide(190.0, 320.1), 100)",
+ "answer_model": "59.36",
+ "program_value": 59.35645110902843,
+ "elapsed_s": 11.34,
+ "outline_source": "EW_2016_0001099800-17-000008.outline.txt",
+ "outline_chars": 67317
+}

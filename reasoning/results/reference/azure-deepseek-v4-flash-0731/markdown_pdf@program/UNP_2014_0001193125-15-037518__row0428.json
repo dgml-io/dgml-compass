@@ -1,0 +1,72 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0428",
+ "format": "markdown_pdf",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "what was the cost per car for the buyout of locomotives in 2012?",
+ "gold": "454545",
+ "finqa_id": "UNP/2014/page_35.pdf-2",
+ "source_page": "page_35",
+ "ticker": "UNP",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf/UNP_2014_0001193125-15-037518.md",
+ "doc_chars": 332985,
+ "prompt_chars": 333138,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 332985,
+ "original_chars": 332985,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 78220,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 340,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.454545",
+ "reasoning": "We need answer question: \"what was the cost per car for the buyout of locomotives in 2012?\" Need find in document. It mentions in 2012 capital investments included $75 million for early buyout of 165 locomotives under long-term operating and capital leases during first quarter 2012. So cost per locomotive = 75 million / 165 = 454,545.45... But question says \"cost per car\" maybe typo? It says locomotives. Need compute. Evidence: $75 million, 165 locomotives. Program: divide(75, 165) in millions? 75/165 = 0.454545... million = $454,545.45. But answer likely $454,545.45 per locomotive. Need provide value only. Let's check exact text: \"Included in capital investments in 2012 was $75 million for the early buyout of 165 locomotives under long-term operating and capital leases during the first quarter of 2012\" So cost per locomotive = 75,000,000 / 165 = 454,545.4545. Answer maybe 454,545.45. Need evidence: 75 | cash capital investments table? Actually text says $75 million for early buyout of 165 locomotives. Use those.",
+ "raw_content": "<evidence>\n$75 million | Investing Activities - 2012 early buyout of 165 locomotives\n165 locomotives | Investing Activities - 2012 early buyout of 165 locomotives\n</evidence>\n<program>divide(75, 165)</program>\n<answer>454,545.45</answer>",
+ "usage": {
+  "prompt_tokens": 78525,
+  "completion_tokens": 340,
+  "total_tokens": 78865,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.89,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$75 million",
+   "element": "Investing Activities - 2012 early buyout of 165 locomotives",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "165 locomotives",
+   "element": "Investing Activities - 2012 early buyout of 165 locomotives",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(75, 165)",
+ "answer_model": "454,545.45",
+ "program_value": 0.45454545454545453,
+ "docfinqa_row": 428
+}

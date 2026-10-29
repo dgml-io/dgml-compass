@@ -1,0 +1,50 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0086",
+ "format": "dgml_compact",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "for the quarter december 31 , 2012 what was the percent of the total number of shares purchased in december",
+ "gold": "16.5%",
+ "finqa_id": "AMT/2012/page_50.pdf-1",
+ "source_page": "page_50",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/dgml_compact/AMT_2012_0001193125-13-077821.dgml.txt",
+ "doc_chars": 684819,
+ "prompt_chars": 685015,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 684819,
+ "original_chars": 684819,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 147020,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 176,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "16.53%",
+ "reasoning": "We need to find the percent of total number of shares purchased in December relative to total for the quarter. The table in \"Issuer Purchases of Equity Securities\" shows monthly purchases for Q4 2012: October 27,524; November 489,390; December 102,400; Total 619,314. So December shares = 102,400. Total = 619,314. Percent = (102,400 / 619,314) * 100 ≈ 16.53%. Let's compute precisely: 102400 / 619314 = 0.16534... so 16.53%. The question asks \"for the quarter december 31, 2012 what was the percent of the total number of shares purchased in december\" - so answer is that percentage.",
+ "raw_content": "<answer>16.53%</answer>",
+ "usage": {
+  "prompt_tokens": 147172,
+  "completion_tokens": 176,
+  "total_tokens": 147348,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.51,
+ "answer_tag_found": true,
+ "docfinqa_row": 86
+}

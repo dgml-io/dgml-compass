@@ -1,0 +1,74 @@
+{
+ "id": "IP_2007_0001193125-08-042850__row0699",
+ "format": "dgml_compact",
+ "key": "IP_2007_0001193125-08-042850",
+ "question": "what was the change in net sales in millions in 2007 in billions",
+ "gold": "0.3",
+ "finqa_id": "IP/2007/page_31.pdf-3",
+ "source_page": "page_31",
+ "ticker": "IP",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml_compact/IP_2007_0001193125-08-042850.dgml.txt",
+ "doc_chars": 605788,
+ "prompt_chars": 605941,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 605788,
+ "original_chars": 605788,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 132330,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 367,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-0.105",
+ "reasoning": "We need answer change in net sales in 2007 in millions? Question: \"what was the change in net sales in millions in 2007 in billions\" ambiguous. Likely change from 2006 to 2007. Net sales 2007 $21,890 million, 2006 $21,995 million. Change = -105 million. In billions = -0.105 billion. But question says \"in millions in 2007 in billions\" maybe ask change in net sales in millions? Let's parse: \"what was the change in net sales in millions in 2007 in billions\" Could be asking change in net sales in 2007 (compared to 2006) in billions. Answer -0.105 billion. But maybe they want \"in millions\" value? The phrase \"in millions in 2007 in billions\" contradictory. Let's read: \"what was the change in net sales in millions in 2007 in billions\" Probably they want change in net sales in 2007 in billions. We'll compute.\n\nEvidence: Net sales 2007 $21,890, 2006 $21,995 from Consolidated Statement of Operations. Change = 21,890 - 21,995 = -105 million = -0.105 billion.\n\nProgram: divide(subtract(21890, 21995), 1000) = -0.105.\n\nAnswer -0.105.",
+ "raw_content": "<evidence>\n$21,890 | Net sales 2007 (Consolidated Statement of Operations)\n$21,995 | Net sales 2006 (Consolidated Statement of Operations)\n</evidence>\n<program>divide(subtract(21890, 21995), 1000)</program>\n<answer>-0.105</answer>",
+ "usage": {
+  "prompt_tokens": 132633,
+  "completion_tokens": 367,
+  "total_tokens": 133000,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 131584
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.08,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$21,890",
+   "element": "Net sales 2007 (Consolidated Statement of Operations)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$21,995",
+   "element": "Net sales 2006 (Consolidated Statement of Operations)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(subtract(21890, 21995), 1000)",
+ "answer_model": "-0.105",
+ "program_value": -0.105,
+ "docfinqa_row": 699
+}

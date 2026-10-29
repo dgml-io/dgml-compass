@@ -1,0 +1,74 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0734",
+ "format": "markdown_pdf_poppler",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "what was the percentage rent increase between 2008 and 2009?",
+ "gold": "5%",
+ "finqa_id": "IP/2009/page_84.pdf-2",
+ "source_page": "page_84",
+ "ticker": "IP",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/markdown_pdf_poppler/IP_2009_0001193125-10-040916.md",
+ "doc_chars": 625466,
+ "prompt_chars": 625615,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 625466,
+ "original_chars": 625466,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 105142,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 216,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "5.3659%",
+ "reasoning": "We need answer question: \"what was the percentage rent increase between 2008 and 2009?\" Need find rent expense figures. Document mentions rent expense was $216 million, $205 million and $168 million for 2009, 2008 and 2007 respectively. So percentage increase from 2008 to 2009 = (216-205)/205 = 11/205 ≈ 5.36585%. Need compute. Evidence: rent expense figures. Answer with value only, likely percentage. Need include evidence and program.",
+ "raw_content": "<evidence>\n$216 million | Rent expense was $216 million, $205 million and $168 million for 2009, 2008 and 2007, respectively.\n$205 million | Rent expense was $216 million, $205 million and $168 million for 2009, 2008 and 2007, respectively.\n</evidence>\n\n<program>divide(subtract(216, 205), 205)</program>\n\n<answer>5.365853658536585%</answer>",
+ "usage": {
+  "prompt_tokens": 105445,
+  "completion_tokens": 216,
+  "total_tokens": 105661,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.36,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$216 million",
+   "element": "Rent expense was $216 million, $205 million and $168 million for 2009, 2008 and 2007, respectively.",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$205 million",
+   "element": "Rent expense was $216 million, $205 million and $168 million for 2009, 2008 and 2007, respectively.",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(subtract(216, 205), 205)",
+ "answer_model": "5.365853658536585%",
+ "program_value": 0.05365853658536585,
+ "docfinqa_row": 734
+}

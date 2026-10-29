@@ -1,0 +1,80 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0863",
+ "format": "markdown_pdf_plumber",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "what was the sum of the temporary differences between 2007 and 2009 in billions",
+ "gold": "9.8",
+ "finqa_id": "IP/2009/page_84.pdf-4",
+ "source_page": "page_84",
+ "ticker": "IP",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/markdown_pdf_plumber/IP_2009_0001193125-10-040916.md",
+ "doc_chars": 489910,
+ "prompt_chars": 490078,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 489910,
+ "original_chars": 489910,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 119893,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 671,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "9.8",
+ "reasoning": "We need answer question: \"what was the sum of the temporary differences between 2007 and 2009 in billions\". Need find relevant figures. Document mentions \"Deferred income taxes are not provided for temporary differences of approximately $3.5 billion, $2.6 billion and $3.7 billion as of December 31, 2009, 2008 and 2007, respectively\". So temporary differences: 2009 $3.5B, 2008 $2.6B, 2007 $3.7B. Sum between 2007 and 2009? Likely sum of 2007, 2008, 2009 = 3.7+2.6+3.5 = 9.8 billion. Or \"between 2007 and 2009\" could mean sum of 2007 and 2009? The phrase \"sum of the temporary differences between 2007 and 2009\" ambiguous. Usually \"between 2007 and 2009\" means across those years, sum all three. But question says \"sum of the temporary differences between 2007 and 2009\" - could be sum of 2007 and 2009? Let's parse: \"what was the sum of the temporary differences between 2007 and 2009 in billions\" - likely sum of the temporary differences for years 2007, 2008, 2009? Or \"between 2007 and 2009\" meaning range. The document gives three values. Sum all three = 9.8. If only 2007 and 2009 = 7.2. Need decide. The question says \"the sum of the temporary differences between 2007 and 2009\" - could be \"temporary differences between 2007 and 2009\" meaning the difference between 2007 and 2009? But \"sum\" suggests add. Actually \"sum of the temporary differences between 2007 and 2009\" might mean add the temporary differences for 2007, 2008, 2009. I'll go with 9.8.\n\nEvidence: figures from Note 10: \"approximately $3.5 billion, $2.6 billion and $3.7 billion as of December 31, 2009, 2008 and 2007, respectively\". Use those.\n\nProgram: add(3.5, 2.6, 3.7) but function only add(a,b) two args? We can nest: add(add(3.5,2.6),3.7) = 9.8.\n\nAnswer inside <answer>9.8</answer>",
+ "raw_content": "<evidence>3.5 billion | Deferred income taxes are not provided for temporary differences ... as of December 31, 2009\n2.6 billion | Deferred income taxes are not provided for temporary differences ... as of December 31, 2008\n3.7 billion | Deferred income taxes are not provided for temporary differences ... as of December 31, 2007</evidence>\n<program>add(add(3.5, 2.6), 3.7)</program>\n<answer>9.8</answer>",
+ "usage": {
+  "prompt_tokens": 120199,
+  "completion_tokens": 671,
+  "total_tokens": 120870,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.54,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "3.5 billion",
+   "element": "Deferred income taxes are not provided for temporary differences ... as of December 31, 2009",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "2.6 billion",
+   "element": "Deferred income taxes are not provided for temporary differences ... as of December 31, 2008",
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "3.7 billion",
+   "element": "Deferred income taxes are not provided for temporary differences ... as of December 31, 2007",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "add(add(3.5, 2.6), 3.7)",
+ "answer_model": "9.8",
+ "program_value": 9.8,
+ "docfinqa_row": 863
+}

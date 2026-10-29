@@ -1,0 +1,50 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0473",
+ "format": "markdown_pdf_rules",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what is the yearly interest expense incurred from the $ 375 million note with a fixed rate?",
+ "gold": "11.3",
+ "finqa_id": "ADI/2011/page_50.pdf-2",
+ "source_page": "page_50",
+ "ticker": "ADI",
+ "fiscal_year": "2011",
+ "source_file": "data/docs/markdown_pdf_rules/ADI_2011_0000950123-11-099928.md",
+ "doc_chars": 345770,
+ "prompt_chars": 345950,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 345770,
+ "original_chars": 345770,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 77039,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 910,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "11,250,000",
+ "reasoning": "We need to find the yearly interest expense from the $375 million note with a fixed rate. There are two notes: 5.0% due 2014 and 3.0% due 2016. The question says \"the $375 million note with a fixed rate\" - both are fixed rate. But likely they mean the 5.0% note? Or the 3.0%? The question says \"the $375 million note with a fixed rate\" - both are fixed. But perhaps they refer to the 5.0% note because it is mentioned as fixed rate? Actually the 5.0% note is swapped to variable, but the note itself has a fixed rate. The 3.0% note is also fixed. The question might be ambiguous. However, the document states: \"In fiscal 2009, we issued in a public offering $375 million aggregate principal amount of 5.0% senior unsecured notes due July 1, 2014.\" And \"In April 2011, we issued in a public offering $375 million aggregate principal amount of 3.0% senior unsecured notes due April 15, 2016.\" The question asks \"yearly interest expense incurred from the $375 million note with a fixed rate?\" - both have fixed rates. But perhaps they mean the 5.0% note because it is the one that is swapped? Actually the 5.0% note is swapped to variable, so the interest expense is based on variable rate. The 3.0% note is fixed. The question says \"with a fixed rate\" - so it might be the 3.0% note. But the 5.0% note also has a fixed rate on the note itself, but the interest expense is swapped. The document says: \"We swapped the fixed interest portion of these Notes for a variable interest rate based on the three-month LIBOR plus 2.05% (2.42% as of October 29, 2011).\" So the interest expense on the 5.0% note is variable. The 3.0% note is not hedged, so it has a fixed rate. So the question likely refers to the 3.0% note. The yearly interest expense would be 3.0% of $375 million = $11.25 million. But let's check if there is any discount amortization? The net proceeds were $370.5 million, but the interest expense is based on the stated rate? Actually interest expense includes amortization of discount. But the question asks \"yearly interest expense incurred from the $375 million note with a fixed rate?\" - it might be the contractual interest. The document says: \"The net proceeds of the offering were $370.5 million, after issuing at a discount and deducting expenses, underwriting discounts and commissions, which will be amortized over the term of the 3.0% Notes.\" So the interest expense includes amortization of discount. But the question might be asking for the cash interest or the interest expense? Typically interest expense includes amortization. But the question says \"yearly interest expense incurred\" - likely the contractual interest. However, we need to see if there is any specific figure. The document gives interest expense for the year: total interest expense was $19,146 thousand in 2011. That includes both notes and the term loan. But the question specifically asks for the $375 million note with a fixed rate. So we need to compute 3% of $375 million = $11.25 million. But let's check if there is any mention of the interest rate on the 3.0% note. It says 3.0% senior unsecured notes. So yearly interest = 0.03 * 375,000,000 = 11,250,000. So answer is 11,250,000. But the question might be asking for the 5.0% note? But that is swapped, so the fixed rate is not the actual interest expense. The question says \"with a fixed rate\" - so it's the 3.0% note. Also, the 5.0% note is described as having a fixed rate but then swapped. So the answer is $11.25 million. I'll put that in the answer.",
+ "raw_content": "<answer>11,250,000</answer>",
+ "usage": {
+  "prompt_tokens": 77186,
+  "completion_tokens": 910,
+  "total_tokens": 78096,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 13.98,
+ "answer_tag_found": true,
+ "docfinqa_row": 473
+}

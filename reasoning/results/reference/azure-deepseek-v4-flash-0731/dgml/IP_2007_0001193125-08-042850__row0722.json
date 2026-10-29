@@ -1,0 +1,53 @@
+{
+ "id": "IP_2007_0001193125-08-042850__row0722",
+ "format": "dgml",
+ "key": "IP_2007_0001193125-08-042850",
+ "question": "at december 31 , 2007 , what was the percent of the total future minimum commitments under existing non-cancelable operat- ing leases for purchase obligations",
+ "gold": "72.1%",
+ "finqa_id": "IP/2007/page_75.pdf-3",
+ "source_page": "page_75",
+ "ticker": "IP",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml/IP_2007_0001193125-08-042850.dgml.xml",
+ "doc_chars": 914092,
+ "prompt_chars": 914339,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 914092,
+ "original_chars": 914092,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 217793,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 526,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "88.15%",
+ "reasoning": "The question asks: \"at december 31, 2007, what was the percent of the total future minimum commitments under existing non-cancelable operating leases for purchase obligations\"\n\nThis is a bit ambiguous. It asks for the percent of the total future minimum commitments under existing non-cancelable operating leases for purchase obligations. I think it means: what percentage of the total future minimum commitments (leases + purchase obligations) is represented by purchase obligations?\n\nFrom the document, in Note 10 (Commitments and Contingent Liabilities), there is a table:\n\n\"At December 31, 2007, total future minimum commitments under existing non-cancelable operating leases and purchase obligations were as follows:\"\n\nTable:\nLease obligations: 2008: $136, 2009: $116, 2010: $101, 2011: $84, 2012: $67, Thereafter: $92\nPurchase obligations (a): 2008: 1,953, 2009: 294, 2010: 261, 2011: 235, 2012: 212, Thereafter: 1,480\nTotal: 2008: $2,089, 2009: $410, 2010: $362, 2011: $319, 2012: $279, Thereafter: $1,572\n\nSo total lease obligations = 136+116+101+84+67+92 = 596\nTotal purchase obligations = 1953+294+261+235+212+1480 = 4435\nTotal = 596+4435 = 5031\n\nPercent of total for purchase obligations = 4435/5031 = 0.8815... = 88.15%\n\nAlternatively, maybe the question asks for the percent of the total future minimum commitments that are purchase obligations. Let me compute: 4435/5031 = 88.15%.\n\nLet me double-check the numbers. Lease: 136+116=252, +101=353, +84=437, +67=504, +92=596. Purchase: 1953+294=2247, +261=2508, +235=2743, +212=2955, +1480=4435. Total: 596+4435=5031. 4435/5031 = 0.8815... = 88.15%.\n\nSo the answer is approximately 88.15%.",
+ "raw_content": "<answer>88.15%</answer>",
+ "usage": {
+  "prompt_tokens": 217955,
+  "completion_tokens": 526,
+  "total_tokens": 218481,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 217856
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.9,
+ "answer_tag_found": true,
+ "docfinqa_row": 722
+}

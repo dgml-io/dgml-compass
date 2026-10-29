@@ -1,0 +1,53 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0312",
+ "format": "markdown_pdf_rules",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what portion of the future minimum lease payments are due in the next 12 months?",
+ "gold": "19.4%",
+ "finqa_id": "GPN/2013/page_92.pdf-3",
+ "source_page": "page_92",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/markdown_pdf_rules/GPN_2013_0001123360-13-000025.md",
+ "doc_chars": 352179,
+ "prompt_chars": 352348,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 352179,
+ "original_chars": 352179,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 76901,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 310,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "11057",
+ "reasoning": "We need to find future minimum lease payments and the amount due in next 12 months. In Note 15, there is a table: Future minimum lease payments for all non-cancelable operating leases at May 31, 2013: 2014 $11,057, 2015 $8,985, etc. The next 12 months from May 31, 2013 is fiscal year 2014, so $11,057 thousand. The question asks \"what portion\" - likely the amount or percentage? It says \"what portion of the future minimum lease payments are due in the next 12 months?\" Could be the dollar amount. The total future minimum lease payments is $57,096 thousand. The portion due in next 12 months is $11,057. So answer is $11,057 thousand. But the question might expect a percentage? It says \"what portion\" - could be the amount. Usually in such questions, they ask for the amount. The document gives the table. So answer: 11,057 (in thousands). We'll put the value without units? The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what portion\" - it doesn't specify units. But the table is in thousands. So we can put 11057. Or maybe they want the fraction? But \"portion\" could be the amount. I'll put 11057.",
+ "raw_content": "<answer>11057</answer>",
+ "usage": {
+  "prompt_tokens": 77046,
+  "completion_tokens": 310,
+  "total_tokens": 77356,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 76800
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.21,
+ "answer_tag_found": true,
+ "docfinqa_row": 312
+}

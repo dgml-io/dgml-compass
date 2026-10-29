@@ -1,0 +1,72 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0531",
+ "format": "markdown_pdf",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what is the percentage change in rent expense from 2006 yo 2007?",
+ "gold": "30.6%",
+ "finqa_id": "FIS/2007/page_94.pdf-3",
+ "source_page": "page_94",
+ "ticker": "FIS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf/FIS_2007_0000892569-08-000207.md",
+ "doc_chars": 370864,
+ "prompt_chars": 371017,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 370864,
+ "original_chars": 370864,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 86409,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 245,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "30.552147",
+ "reasoning": "We need percentage change in rent expense from 2006 to 2007. Document: \"Rent expense incurred under all operating leases during the years ended December 31, 2007, 2006 and 2005 was $106.4 million, $81.5 million and $61.1 million, respectively.\" So 2007=106.4, 2006=81.5. Percentage change = (106.4-81.5)/81.5 *100 = 24.9/81.5 = 0.3055... = 30.55%. Need answer as value. Evidence: 106.4 | Rent expense 2007, 81.5 | Rent expense 2006. Program: multiply(divide(subtract(106.4, 81.5), 81.5), 100).",
+ "raw_content": "<evidence>\n106.4 | Rent expense 2007\n81.5 | Rent expense 2006\n</evidence>\n<program>multiply(divide(subtract(106.4, 81.5), 81.5), 100)</program>\n<answer>30.55</answer>",
+ "usage": {
+  "prompt_tokens": 86713,
+  "completion_tokens": 245,
+  "total_tokens": 86958,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.48,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "106.4",
+   "element": "Rent expense 2007",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "81.5",
+   "element": "Rent expense 2006",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(106.4, 81.5), 81.5), 100)",
+ "answer_model": "30.55",
+ "program_value": 30.55214723926381,
+ "docfinqa_row": 531
+}

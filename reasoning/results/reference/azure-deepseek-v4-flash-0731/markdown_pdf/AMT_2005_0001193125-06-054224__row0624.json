@@ -1,0 +1,53 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0624",
+ "format": "markdown_pdf",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "in 2005 what was the percentage of the federal nol set to expire between 2016 to 2020",
+ "gold": "18.4%",
+ "finqa_id": "AMT/2005/page_105.pdf-1",
+ "source_page": "page_105",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/markdown_pdf/AMT_2005_0001193125-06-054224.md",
+ "doc_chars": 443446,
+ "prompt_chars": 443620,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 443446,
+ "original_chars": 443446,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 103998,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 385,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "18.4%",
+ "reasoning": "We need to find the federal NOL carryforwards and the amounts expiring in different periods. From note 13, table: \"At December 31, 2005, the Company had net federal and state operating loss carryforwards available to reduce future taxable income of approximately $2.2 billion and $2.4 billion, respectively. If not utilized, the Company’s net operating loss carryforwards expire as follows (in thousands):\" Then table with years: 2006-2010, 2011-2015, 2016-2020, 2021-2025. Federal amounts: 5,248; 10,012; 397,691; 1,744,552. Total federal = 2,157,503 (sum). The question: \"in 2005 what was the percentage of the federal nol set to expire between 2016 to 2020\" So percentage = 397,691 / 2,157,503 * 100. Compute: 397,691 / 2,157,503 ≈ 0.1843? Let's calculate precisely. 2,157,503 * 0.18 = 388,350.54; difference 9,340.46; /2,157,503 ≈ 0.00433; so 0.18433 = 18.433%. So approximately 18.4%. The question asks for percentage, so answer with number. Probably 18.4% or 18.43%. We'll give 18.4% or 18.43%. The document says \"approximately $2.2 billion\" but the table gives exact. So answer 18.4% (or 18.43%). We'll put 18.4% inside tags.",
+ "raw_content": "<answer>18.4%</answer>",
+ "usage": {
+  "prompt_tokens": 104151,
+  "completion_tokens": 385,
+  "total_tokens": 104536,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 103936
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.28,
+ "answer_tag_found": true,
+ "docfinqa_row": 624
+}

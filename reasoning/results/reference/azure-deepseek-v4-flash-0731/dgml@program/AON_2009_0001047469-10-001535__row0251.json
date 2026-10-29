@@ -1,0 +1,67 @@
+{
+ "id": "AON_2009_0001047469-10-001535__row0251",
+ "format": "dgml",
+ "key": "AON_2009_0001047469-10-001535",
+ "question": "what was the total revenues in 2009 based on the consulting segment generated 17% ( 17 % ) of our consolidated total revenues in millions",
+ "gold": "7452.94",
+ "finqa_id": "AON/2009/page_48.pdf-3",
+ "source_page": "page_48",
+ "ticker": "AON",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/dgml/AON_2009_0001047469-10-001535.dgml.xml",
+ "doc_chars": 815925,
+ "prompt_chars": 816151,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 815925,
+ "original_chars": 815925,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 192351,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 187,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "7595",
+ "reasoning": "We need answer total revenues in 2009 based on consulting segment generated 17% of consolidated total revenues. But question asks \"what was the total revenues in 2009 based on the consulting segment generated 17% (17%) of our consolidated total revenues in millions\". Need find total revenues 2009. Document has Total revenue 2009 = $7,595 million. Also consulting segment generated approximately 17% of consolidated total revenues in 2009. So answer 7,595. Need evidence figures. Use Total revenue 2009 $7,595. Also maybe consulting segment revenue $1,267 and 17% share. But question asks total revenues, so 7,595. Provide evidence.",
+ "raw_content": "<evidence>\n$ 7,595 | Total revenue (Selected Financial Data / Results Summary)\n</evidence>\n<program>7595</program>\n<answer>7,595</answer>",
+ "usage": {
+  "prompt_tokens": 192669,
+  "completion_tokens": 187,
+  "total_tokens": 192856,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 32.4,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 7,595",
+   "element": "Total revenue (Selected Financial Data / Results Summary)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "7595",
+ "answer_model": "7,595",
+ "program_value": 7595.0,
+ "docfinqa_row": 251
+}

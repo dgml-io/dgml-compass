@@ -1,0 +1,68 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0618",
+ "format": "dgml",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "was was the total amount spent on stock repurchases in the fourth quarter?",
+ "gold": "45984064",
+ "finqa_id": "AMT/2012/page_50.pdf-4",
+ "source_page": "page_50",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/dgml/AMT_2012_0001193125-13-077821.dgml.xml",
+ "doc_chars": 945867,
+ "prompt_chars": 946030,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 945867,
+ "original_chars": 945867,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 220539,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 191,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "46",
+ "reasoning": "We need answer: total amount spent on stock repurchases in fourth quarter. Document says during three months ended Dec 31 2012 repurchased 619,314 shares for aggregate approximately $46.0 million including commissions and fees. Also table shows monthly amounts? The question asks total amount spent on stock repurchases in fourth quarter. That is $46.0 million. Evidence: \"During the three months ended December 31, 2012, we repurchased 619,314 shares of our common stock for an aggregate of approximately $46.0 million, including commissions and fees\" element ShareRepurchaseQuantity? Actually text in ShareRepurchaseQuantity section. Use value $46.0 million. Answer 46.0 million.",
+ "raw_content": "<evidence>\napproximately $46.0 million | ShareRepurchaseQuantity\n</evidence>\n<program>46.0</program>\n<answer>46.0</answer>",
+ "usage": {
+  "prompt_tokens": 220842,
+  "completion_tokens": 191,
+  "total_tokens": 221033,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 220672
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.79,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "approximately $46.0 million",
+   "element": "ShareRepurchaseQuantity",
+   "element_found": true,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "46.0",
+ "answer_model": "46.0",
+ "program_value": 46.0,
+ "docfinqa_row": 618
+}

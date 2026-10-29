@@ -1,0 +1,72 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0034",
+ "format": "dgml_compact",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the percentage change in total debt from 2014 to 2015?",
+ "gold": "3.4%",
+ "finqa_id": "PM/2015/page_85.pdf-1",
+ "source_page": "page_85",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml_compact/PM_2015_0001413329-16-000076.dgml.txt",
+ "doc_chars": 654685,
+ "prompt_chars": 654836,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 654685,
+ "original_chars": 654685,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 144584,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 187,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-3.3101%",
+ "reasoning": "We need percentage change in total debt from 2014 to 2015. Total debt 2015 = 28,480, 2014 = 29,455 (from Selected Financial Data). Also balance sheet shows total debt? Actually Selected Financial Data has Total debt: 28,480 (2015), 29,455 (2014). Percentage change = (28,480 - 29,455)/29,455 = -975/29,455 ≈ -3.31%. Need exact. Compute: 975/29455 = 0.0331... So -3.31%. Answer as percentage.",
+ "raw_content": "<evidence>\n28,480 | Total debt (2015)\n29,455 | Total debt (2014)\n</evidence>\n<program>divide(subtract(28480, 29455), 29455)</program>\n<answer>-3.31%</answer>",
+ "usage": {
+  "prompt_tokens": 144888,
+  "completion_tokens": 187,
+  "total_tokens": 145075,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 16.0,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "28,480",
+   "element": "Total debt (2015)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "29,455",
+   "element": "Total debt (2014)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(28480, 29455), 29455)",
+ "answer_model": "-3.31%",
+ "program_value": -0.03310134102868783,
+ "docfinqa_row": 34
+}

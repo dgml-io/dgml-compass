@@ -1,0 +1,75 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0594",
+ "format": "dgml",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what portion of the total interest expense is related to unpaid taxes in 2007?",
+ "gold": "16.7%",
+ "finqa_id": "FIS/2007/page_91.pdf-2",
+ "source_page": "page_91",
+ "ticker": "FIS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml/FIS_2007_0000892569-08-000207.dgml.xml",
+ "doc_chars": 680888,
+ "prompt_chars": 681055,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 680888,
+ "original_chars": 680888,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 160676,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 329,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.006132",
+ "reasoning": "We need answer: portion of total interest expense related to unpaid taxes in 2007. Need find figures. Total interest expense 2007 = $228.3 million (or 228,340 thousand). Interest expense recognized for unpaid taxes = $1.4 million for year ended Dec 31, 2007. Portion = 1.4 / 228.3 = 0.00613... = 0.613%. Need compute. Evidence: Interest expense total $228.3 million (from MD&A or income statement). Interest expense for unpaid taxes $1.4 million (from note 15). Use exact figures: 228,340 and 1,400? The note says $1.4 million. Total interest expense $228.340 million. Portion = 1.4/228.3 = 0.006132... = 0.613%. Answer as decimal or percent? Question \"what portion\" likely fraction. Provide value. We'll give 0.00613 or 0.61%. Need final answer inside tags only value. Probably 0.00613. Let's compute: 1.4/228.3 = 0.006132... 0.6132%. Use 0.00613.",
+ "raw_content": "<evidence>\n$228.3 million | Interest expense (MD&A Interest Expense Discussion)\n$1.4 million | Interest expense recognized for unpaid taxes (Note 15 Income Taxes)\n</evidence>\n<program>divide(1.4, 228.3)</program>\n<answer>0.00613</answer>",
+ "usage": {
+  "prompt_tokens": 160980,
+  "completion_tokens": 329,
+  "total_tokens": 161309,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 160768
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.77,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$228.3 million",
+   "element": "Interest expense (MD&A Interest Expense Discussion)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$1.4 million",
+   "element": "Interest expense recognized for unpaid taxes (Note 15 Income Taxes)",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(1.4, 228.3)",
+ "answer_model": "0.00613",
+ "program_value": 0.0061322820849759084,
+ "docfinqa_row": 594
+}

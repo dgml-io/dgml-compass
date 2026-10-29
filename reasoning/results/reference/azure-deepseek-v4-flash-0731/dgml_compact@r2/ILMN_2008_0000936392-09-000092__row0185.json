@@ -1,0 +1,53 @@
+{
+ "id": "ILMN_2008_0000936392-09-000092__row0185",
+ "format": "dgml_compact",
+ "key": "ILMN_2008_0000936392-09-000092",
+ "question": "what was the percentage change in the uncertain tax positions from 2007 to 2008?",
+ "gold": "11%",
+ "finqa_id": "ILMN/2008/page_86.pdf-3",
+ "source_page": "page_86",
+ "ticker": "ILMN",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml_compact/ILMN_2008_0000936392-09-000092.dgml.txt",
+ "doc_chars": 396158,
+ "prompt_chars": 396327,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 396158,
+ "original_chars": 396158,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 83555,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 166,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "11.24%",
+ "reasoning": "The question asks for the percentage change in uncertain tax positions from 2007 to 2008.\n\nFrom the document, in the \"UncertainTaxPositionRollforward\" section:\n- Balance at December 31, 2007: $21,376 (in thousands)\n- Balance at December 28, 2008: $23,778 (in thousands)\n\nPercentage change = (23,778 - 21,376) / 21,376 * 100 = 2,402 / 21,376 * 100 = 11.236...%\n\nLet me compute: 2402/21376 = 0.11236... so 11.24% approximately.\n\nThe question asks for the percentage change. I'll provide the value.",
+ "raw_content": "<answer>11.24%</answer>",
+ "usage": {
+  "prompt_tokens": 83702,
+  "completion_tokens": 166,
+  "total_tokens": 83868,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 83456
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.28,
+ "answer_tag_found": true,
+ "docfinqa_row": 185
+}

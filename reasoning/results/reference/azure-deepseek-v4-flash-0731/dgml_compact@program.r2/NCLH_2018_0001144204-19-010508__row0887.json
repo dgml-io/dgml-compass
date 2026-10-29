@@ -1,0 +1,72 @@
+{
+ "id": "NCLH_2018_0001144204-19-010508__row0887",
+ "format": "dgml_compact",
+ "key": "NCLH_2018_0001144204-19-010508",
+ "question": "how much did interest with libor change from year 1 to years 3-5?",
+ "gold": "the interest decreased 25.7% from year 1 to years 3-5",
+ "finqa_id": "NCLH/2018/page_64.pdf-4",
+ "source_page": "page_64",
+ "ticker": "NCLH",
+ "fiscal_year": "2018",
+ "source_file": "data/docs/dgml_compact/NCLH_2018_0001144204-19-010508.dgml.txt",
+ "doc_chars": 467893,
+ "prompt_chars": 468047,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 467893,
+ "original_chars": 467893,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 101327,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 290,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "57255",
+ "reasoning": "We need answer question: \"how much did interest with libor change from year 1 to years 3-5?\" Need parse. Likely from contractual obligations table: Interest (5) includes fixed and variable rates with LIBOR held constant as of Dec 31, 2018. Table: Interest: Total $974,444; Less than 1 year $222,427; 1-3 years $404,380; 3-5 years $165,172; More than 5 years $182,465. \"year 1\" = less than 1 year = 222,427. \"years 3-5\" = 3-5 years = 165,172. Change = subtract? \"how much did interest with libor change from year 1 to years 3-5?\" Could be difference = 222,427 - 165,172 = 57,255. Or maybe \"change\" means increase/decrease? It decreased by 57,255. Need answer value. Use evidence.",
+ "raw_content": "<evidence>\n$ 222,427 | ContractualObligationAmount: Interest (5) Less than 1 year\n$ 165,172 | ContractualObligationAmount: Interest (5) 3-5 years\n</evidence>\n<program>subtract(222427, 165172)</program>\n<answer>57,255</answer>",
+ "usage": {
+  "prompt_tokens": 101633,
+  "completion_tokens": 290,
+  "total_tokens": 101923,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 101376
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.66,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 222,427",
+   "element": "ContractualObligationAmount: Interest (5) Less than 1 year",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ 165,172",
+   "element": "ContractualObligationAmount: Interest (5) 3-5 years",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(222427, 165172)",
+ "answer_model": "57,255",
+ "program_value": 57255.0,
+ "docfinqa_row": 887
+}

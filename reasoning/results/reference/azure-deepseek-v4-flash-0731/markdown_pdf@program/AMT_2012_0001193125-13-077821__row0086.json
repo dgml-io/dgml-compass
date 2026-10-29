@@ -1,0 +1,74 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0086",
+ "format": "markdown_pdf",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "for the quarter december 31 , 2012 what was the percent of the total number of shares purchased in december",
+ "gold": "16.5%",
+ "finqa_id": "AMT/2012/page_50.pdf-1",
+ "source_page": "page_50",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/markdown_pdf/AMT_2012_0001193125-13-077821.md",
+ "doc_chars": 534235,
+ "prompt_chars": 534431,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 534235,
+ "original_chars": 534235,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 121639,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 198,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "16.5344%",
+ "reasoning": "We need answer: \"for the quarter december 31, 2012 what was the percent of the total number of shares purchased in december\". Need find in document. There is table \"Issuer Purchases of Equity Securities\" for three months ended December 31, 2012. It shows October 27,524, November 489,390, December 102,400, Total Fourth Quarter 619,314. Question: percent of total number of shares purchased in December = 102,400 / 619,314 * 100. Compute. 102400/619314 = 0.16534... = 16.53%. Need evidence figures. Use exact printed values. Answer with percent.",
+ "raw_content": "<evidence>\n102,400 | December 2012 shares purchased\n619,314 | Total Fourth Quarter shares purchased\n</evidence>\n\n<program>divide(102400, 619314)</program>\n\n<answer>16.53%</answer>",
+ "usage": {
+  "prompt_tokens": 121950,
+  "completion_tokens": 198,
+  "total_tokens": 122148,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.19,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "102,400",
+   "element": "December 2012 shares purchased",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "619,314",
+   "element": "Total Fourth Quarter shares purchased",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(102400, 619314)",
+ "answer_model": "16.53%",
+ "program_value": 0.16534423571887605,
+ "docfinqa_row": 86
+}

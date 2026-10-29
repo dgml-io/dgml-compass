@@ -1,0 +1,74 @@
+{
+ "id": "NCLH_2018_0001144204-19-010508__row0887",
+ "format": "markdown_pdf",
+ "key": "NCLH_2018_0001144204-19-010508",
+ "question": "how much did interest with libor change from year 1 to years 3-5?",
+ "gold": "the interest decreased 25.7% from year 1 to years 3-5",
+ "finqa_id": "NCLH/2018/page_64.pdf-4",
+ "source_page": "page_64",
+ "ticker": "NCLH",
+ "fiscal_year": "2018",
+ "source_file": "data/docs/markdown_pdf/NCLH_2018_0001144204-19-010508.md",
+ "doc_chars": 382420,
+ "prompt_chars": 382574,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 382420,
+ "original_chars": 382420,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 88879,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 607,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-57255",
+ "reasoning": "We need answer question: \"how much did interest with libor change from year 1 to years 3-5?\" Need interpret. Document has contractual obligations table with interest payments: Total, Less than 1 year, 1-3 years, 3-5 years, More than 5 years. Interest (5) row: Total $974,444; Less than 1 year $222,427; 1-3 years $404,380; 3-5 years $165,172; More than 5 years $182,465. Question: \"how much did interest with libor change from year 1 to years 3-5?\" Maybe asks change in interest expense due to LIBOR? There is text: \"Based on our December 31, 2018 outstanding variable rate debt balance, a one percentage point increase in annual LIBOR interest rates would increase our annual interest expense by approximately $18.4 million excluding the effects of capitalization of interest.\" But \"from year 1 to years 3-5\" might refer to contractual obligations interest payments: less than 1 year vs 3-5 years. Difference = 165,172 - 222,427 = -57,255 (in thousands) = -$57.255 million. Or maybe \"interest with libor\" means interest expense? Need parse.\n\nQuestion wording: \"how much did interest with libor change from year 1 to years 3-5?\" Could be from table \"Interest (5)\" includes fixed and variable rates with LIBOR held constant as of Dec 31, 2018. So \"interest with libor\" refers to that row. Year 1 = less than 1 year = $222,427. Years 3-5 = 3-5 years = $165,172. Change = subtract: 165,172 - 222,427 = -57,255 (thousands). So answer -57,255 (in thousands) or -$57.255 million. Need provide value only. Evidence: list figures. Program: subtract(165172, 222427). Note units in thousands. The question asks \"how much did interest with libor change\" likely in thousands? The table amounts in thousands. So answer -57,255 (thousands) or -57,255. We'll put -57,255.\n\nNeed evidence: value | element. Element names? The table row \"Interest (5)\" with columns. We'll cite \"Interest (5) | Contractual Obligations table\" etc. Use exact figures.\n\nFinal answer inside <answer>-57,255</answer> (in thousands).",
+ "raw_content": "<evidence>\n$222,427 | Interest (5) Less than 1 year\n$165,172 | Interest (5) 3-5 years\n</evidence>\n\n<program>\nsubtract(165172, 222427)\n</program>\n\n<answer>-57,255</answer>",
+ "usage": {
+  "prompt_tokens": 89185,
+  "completion_tokens": 607,
+  "total_tokens": 89792,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 89088
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.93,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$222,427",
+   "element": "Interest (5) Less than 1 year",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$165,172",
+   "element": "Interest (5) 3-5 years",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "subtract(165172, 222427)",
+ "answer_model": "-57,255",
+ "program_value": -57255.0,
+ "docfinqa_row": 887
+}

@@ -1,0 +1,69 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0069",
+ "format": "markdown_pdf_poppler",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what portion of the total investment is allocated to mutual funds in 2011?",
+ "gold": "65.1%",
+ "finqa_id": "ADI/2011/page_81.pdf-1",
+ "source_page": "page_81",
+ "ticker": "ADI",
+ "fiscal_year": "2011",
+ "source_file": "data/docs/markdown_pdf_poppler/ADI_2011_0000950123-11-099928.md",
+ "doc_chars": 465742,
+ "prompt_chars": 465905,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 465742,
+ "original_chars": 465742,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 78562,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 302,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.349224",
+ "reasoning": "We need answer question: \"what portion of the total investment is allocated to mutual funds in 2011?\" Need find relevant figures. Document has deferred compensation plan investments: money market funds and mutual funds. Total Deferred Compensation Plan investments $26,410 in 2011, mutual funds $9,223. Also maybe \"total investment\" could refer to deferred compensation plan investments. Portion = 9,223 / 26,410 = 0.3492... = 34.9%. Need evidence. Also maybe other investments? But question says \"total investment\" likely from table \"Deferred Compensation Plan investments\" components. Let's compute. Evidence: 9,223 | Mutual funds (Deferred Compensation Plan investments table), 26,410 | Total Deferred Compensation Plan investments. Program divide(9223, 26410). Answer as percentage? The question asks \"what portion\" - likely give fraction or percent. We'll output 34.9% or 0.349. The instruction says no units unless asked. \"portion\" could be fraction. I'll output 0.3492? But final answer inside tags only value. I'll put 0.3492.",
+ "raw_content": "<evidence>\n9,223 | Mutual funds (Deferred Compensation Plan investments table)\n26,410 | Total Deferred Compensation Plan investments\n</evidence>\n<program>divide(9223, 26410)</program>\n<answer>0.3492</answer>",
+ "usage": {
+  "prompt_tokens": 78866,
+  "completion_tokens": 302,
+  "total_tokens": 79168,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.04,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "9,223",
+   "element": "Mutual funds (Deferred Compensation Plan investments table)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "26,410",
+   "element": "Total Deferred Compensation Plan investments",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(9223, 26410)",
+ "answer_model": "0.3492",
+ "program_value": 0.3492237788716395,
+ "docfinqa_row": 69
+}

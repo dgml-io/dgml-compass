@@ -1,0 +1,53 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0043",
+ "format": "dgml_compact",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "assuming all options in the compensation plans approved by security holders were exercised , what would be the deemed proceeds to the company?",
+ "gold": "373153150",
+ "finqa_id": "CME/2010/page_123.pdf-2",
+ "source_page": "page_123",
+ "ticker": "CME",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/dgml_compact/CME_2010_0001193125-11-050252.dgml.txt",
+ "doc_chars": 521543,
+ "prompt_chars": 521774,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 521543,
+ "original_chars": 521543,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 112341,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 217,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "373,153,158",
+ "reasoning": "We need to find the number of options outstanding under plans approved by security holders and their weighted average exercise price. From the table in Item 12: \"Equity compensation plans approved by security holders\" has number of securities to be issued upon exercise of outstanding options (a) = 1,211,143 and weighted-average exercise price (b) = $308.10. So deemed proceeds = 1,211,143 * $308.10 = compute. 1,211,143 * 308.10 = 1,211,143 * 300 = 363,342,900; plus 1,211,143 * 8.10 = 9,810,258.3; total = 373,153,158.3. So approximately $373.15 million. The question says \"assuming all options in the compensation plans approved by security holders were exercised , what would be the deemed proceeds to the company?\" So answer is that product. We'll put the number.",
+ "raw_content": "<answer>373,153,158</answer>",
+ "usage": {
+  "prompt_tokens": 112493,
+  "completion_tokens": 217,
+  "total_tokens": 112710,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 112384
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.55,
+ "answer_tag_found": true,
+ "docfinqa_row": 43
+}

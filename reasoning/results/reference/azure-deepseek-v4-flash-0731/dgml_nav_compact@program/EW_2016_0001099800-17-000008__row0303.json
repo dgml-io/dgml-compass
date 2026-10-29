@@ -1,0 +1,72 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0303",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what is the percentage difference in the fair value per share between 2014 and 2015?",
+ "gold": "54%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "EW_2016_0001099800-17-000008.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/CommonStock/EmployeeAndDirectorStockPlans/OptionAwardValuationAssumptions/table",
+  "/chunk/CommonStock/EmployeeAndDirectorStockPlans/ESPPValuationAssumptionYears/table"
+ ],
+ "r1_reasoning_chars": 6312,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 17156,
+  "completion_tokens": 1637,
+  "total_tokens": 18793,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/CommonStock/EmployeeAndDirectorStockPlans/OptionAwardValuationAssumptions/table",
+  "/chunk/CommonStock/EmployeeAndDirectorStockPlans/ESPPValuationAssumptionYears/table"
+ ],
+ "content_chars": 6776,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "54.297872",
+ "reasoning": "We need answer percentage difference in fair value per share between 2014 and 2015. Need identify which fair value per share? There are option awards fair value per share: 2015 $18.13, 2014 $11.75. Also ESPP fair value per share: 2015 $15.59, 2014 $8.59. Question ambiguous. \"fair value per share\" likely from option award valuation assumptions table, since it has \"Fair value, per share\" row. The question says \"between 2014 and 2015\" likely percentage difference = (2015-2014)/2014 *100. Need compute. Use figures: 18.13 and 11.75. Percentage difference = (18.13 - 11.75)/11.75 *100 = 6.38/11.75 = 0.5429787 = 54.2979%. Need answer maybe 54.3%. But check if \"percentage difference\" could mean absolute difference divided by average? Usually percentage difference = |V1-V2|/((V1+V2)/2)*100 = 2*6.38/(29.88)=12.76/29.88=42.7%. But in finance \"percentage difference\" often means change from base. The question says \"between 2014 and 2015\" likely percentage change from 2014 to 2015. Need infer. The document has \"Fair value, per share\" for option awards. The question asks \"what is the percentage difference in the fair value per share between 2014 and 2015?\" Could be from option awards table. We need compute. Let's read evidence: OptionFairValuePerShare: Fair value, per share | $ 31.00 | $ 18.13 | $ 11.75. So 2015=18.13, 2014=11.75. Percentage difference = (18.13 - 11.75)/11.75 * 100 = 54.3%. If they wanted absolute percentage difference, same. If they wanted relative to average, 42.7%. But typical \"percentage difference\" in such questions from financial documents means percentage change from earlier year. I'll compute as (18.13-11.75)/11.75. Need provide program. Also evidence lines. Final answer inside <answer>54.3%</answer> maybe with no units? The question asks percentage, so include %? The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" It asks percentage, so include %? Usually value with % sign. I'll put 54.3%. But need exact? Let's compute precisely: 6.38 / 11.75 = 0.5429787234 -> 54.29787234%. Round to one decimal 54.3%. Could also 54.30%. I'll put 54.3%.\n\nNeed evidence: list figures exactly as printed: $ 18.13 | OptionFairValuePerShare (2015) and $ 11.75 | OptionFairValuePerShare (2014). Also maybe $ 31.00 not needed. Program: multiply(divide(subtract(18.13, 11.75), 11.75), 100). But figures as printed include $ and spaces? Use numeric values. Evidence line: `$ 18.13 | OptionFairValuePerShare` and `$ 11.75 | OptionFairValuePerShare`. The program uses 18.13 and 11.75.\n\nNeed ensure no other fair value per share? ESPP has fair value per share too. But question likely from option awards because \"fair value per share\" row. The document has two tables with \"Fair value, per share\". Which one? The question says \"the fair value per share\" without specifying option or ESPP. But the region path first table is OptionAwardValuationAssumptions, and the question likely refers to that. The ESPP table also has \"Fair value, per share\" but labeled ESPPFairValuePerShare. The question says \"fair value per share\" not \"ESPP fair value per share\". So use option awards.\n\nLet's craft final with evidence and program.",
+ "raw_content": "<evidence>$ 18.13 | OptionFairValuePerShare (2015)\n$ 11.75 | OptionFairValuePerShare (2014)</evidence>\n<program>multiply(divide(subtract(18.13, 11.75), 11.75), 100)</program>\n<answer>54.3%</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2220,
+  "completion_tokens": 971,
+  "total_tokens": 3191,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 18.13",
+   "element": "OptionFairValuePerShare (2015)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ 11.75",
+   "element": "OptionFairValuePerShare (2014)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(18.13, 11.75), 11.75), 100)",
+ "answer_model": "54.3%",
+ "program_value": 54.29787234042552,
+ "elapsed_s": 20.58,
+ "outline_source": "EW_2016_0001099800-17-000008.outline.txt",
+ "outline_chars": 67317
+}

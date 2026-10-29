@@ -1,0 +1,71 @@
+{
+ "id": "MRO_2009_0001193125-10-042898__row0516",
+ "key": "MRO_2009_0001193125-10-042898",
+ "question": "by what percentage did the average wti crude oil benchmark decrease from 2007 to 2009?",
+ "gold": "-14.3%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "MRO_2009_0001193125-10-042898.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/ManagementDiscussionAndAnalysis/MdaOverview/SegmentDescription/BenchmarkPrice"
+ ],
+ "r1_reasoning_chars": 3328,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 38641,
+  "completion_tokens": 911,
+  "total_tokens": 39552,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 38400
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/ManagementDiscussionAndAnalysis/MdaOverview/SegmentDescription/BenchmarkPrice"
+ ],
+ "content_chars": 7921,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "14.252175",
+ "reasoning": "We need percentage decrease from 2007 to 2009 for WTI crude oil. Values: 2007 $72.41, 2009 $62.09. Decrease = (72.41 - 62.09)/72.41 * 100. Compute.",
+ "raw_content": "<evidence>\n$72.41 | SalesPricePerUnit (WTI crude oil 2007)\n$62.09 | SalesPricePerUnit (WTI crude oil 2009)\n</evidence>\n<program>\nmultiply(divide(subtract(72.41, 62.09), 72.41), 100)\n</program>\n<answer>14.25</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2252,
+  "completion_tokens": 142,
+  "total_tokens": 2394,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$72.41",
+   "element": "SalesPricePerUnit (WTI crude oil 2007)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$62.09",
+   "element": "SalesPricePerUnit (WTI crude oil 2009)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(72.41, 62.09), 72.41), 100)",
+ "answer_model": "14.25",
+ "program_value": 14.252175113934532,
+ "elapsed_s": 5.92,
+ "outline_source": "MRO_2009_0001193125-10-042898.outline.txt",
+ "outline_chars": 149285
+}

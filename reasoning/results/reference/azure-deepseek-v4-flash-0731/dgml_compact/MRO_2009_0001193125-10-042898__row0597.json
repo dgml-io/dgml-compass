@@ -1,0 +1,53 @@
+{
+ "id": "MRO_2009_0001193125-10-042898__row0597",
+ "format": "dgml_compact",
+ "key": "MRO_2009_0001193125-10-042898",
+ "question": "by what percentage did the average henry hub natural gas benchmark decrease from 2007 to 2009?",
+ "gold": "-41.8%",
+ "finqa_id": "MRO/2009/page_56.pdf-3",
+ "source_page": "page_56",
+ "ticker": "MRO",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/dgml_compact/MRO_2009_0001193125-10-042898.dgml.txt",
+ "doc_chars": 697881,
+ "prompt_chars": 698064,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 697881,
+ "original_chars": 697881,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 153188,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 301,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "41.8%",
+ "reasoning": "The question asks: by what percentage did the average Henry Hub natural gas benchmark decrease from 2007 to 2009?\n\nFrom the document, in the Management's Discussion and Analysis section, there is a table of benchmark prices:\n\nBenchmark | 2009 | 2008 | 2007\nWTI crude oil (Dollars per barrel) | $62.09 | $99.75 | $72.41\nDated Brent crude oil (Dollars per barrel) | $61.67 | $97.26 | $72.39\nHenry Hub natural gas (Dollars per mcf)(a) | $ 3.99 | $ 9.04 | $ 6.86\n\nSo Henry Hub natural gas: 2009 = $3.99, 2007 = $6.86.\n\nDecrease = (6.86 - 3.99) / 6.86 = 2.87 / 6.86 = 0.4184... = 41.84% decrease.\n\nSo the percentage decrease is approximately 41.8%.\n\nLet me compute precisely: 2.87 / 6.86 = 0.418367... ≈ 41.84%.\n\nThe question asks \"by what percentage did the average henry hub natural gas benchmark decrease from 2007 to 2009?\" So answer is about 41.8%.",
+ "raw_content": "<answer>41.8%</answer>",
+ "usage": {
+  "prompt_tokens": 153338,
+  "completion_tokens": 301,
+  "total_tokens": 153639,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 153088
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.43,
+ "answer_tag_found": true,
+ "docfinqa_row": 597
+}

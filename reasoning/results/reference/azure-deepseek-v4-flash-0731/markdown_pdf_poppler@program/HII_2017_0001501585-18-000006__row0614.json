@@ -1,0 +1,67 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0614",
+ "format": "markdown_pdf_poppler",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what portion of the equity compensation plan approved by security holders is to be issued upon the exercise of options warrants and rights?",
+ "gold": "9.9%",
+ "finqa_id": "HII/2017/page_124.pdf-1",
+ "source_page": "page_124",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/markdown_pdf_poppler/HII_2017_0001501585-18-000006.md",
+ "doc_chars": 528384,
+ "prompt_chars": 528612,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 528384,
+ "original_chars": 528384,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 97412,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 549,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "448859",
+ "reasoning": "We need answer portion: \"what portion of the equity compensation plan approved by security holders is to be issued upon the exercise of options warrants and rights?\" Likely from table: Number of securities to be issued upon exercise of outstanding options, warrants and rights = 448,859. Total approved plan? The table has column (a) 448,859, column (c) 4,087,587 remaining available. \"portion\" maybe ratio of (a) to total authorized? Total = 448,859 + 4,087,587 = 4,536,446. Portion = 448,859 / 4,536,446 ≈ 0.09895 = 9.895%. But question wording: \"what portion of the equity compensation plan approved by security holders is to be issued upon the exercise of options warrants and rights?\" Could be asking for the number of securities to be issued upon exercise, i.e., 448,859. \"portion\" might mean fraction. Let's parse: \"what portion of the equity compensation plan approved by security holders is to be issued upon the exercise of options warrants and rights?\" The table row: \"Equity compensation plans approved by security holders\" has column (a) Number of Securities to be Issued Upon Exercise of Outstanding Options, Warrants and Rights = 448,859. So portion = 448,859. But \"portion\" could be ratio. The question asks \"what portion ... is to be issued upon the exercise\" - likely the number. However \"portion\" suggests fraction of plan. Let's see if there is any other info. The table shows total 448,859 and remaining 4,087,587. The plan total authorized? 2012 Plan authorized 3.4 million new shares plus forfeited etc. But table gives total. The \"portion\" of the plan that is to be issued upon exercise is 448,859 out of total? The question might be from a benchmark expecting a number. Let's read exact: \"what portion of the equity compensation plan approved by security holders is to be issued upon the exercise of options warrants and rights?\" In the table, column (a) is \"Number of Securities to be Issued Upon Exercise of Outstanding Options, Warrants and Rights\". So the answer is 448,859. But \"portion\" could be \"448,859\" as a count. I'll provide that. Need evidence: value 448,859 | Equity Compensation Plan Information table. Program: 448859.",
+ "raw_content": "<evidence>448,859 | Equity Compensation Plan Information table</evidence>\n<program>448859</program>\n<answer>448,859</answer>",
+ "usage": {
+  "prompt_tokens": 97724,
+  "completion_tokens": 549,
+  "total_tokens": 98273,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 97536
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.8,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "448,859",
+   "element": "Equity Compensation Plan Information table",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "448859",
+ "answer_model": "448,859",
+ "program_value": 448859.0,
+ "docfinqa_row": 614
+}

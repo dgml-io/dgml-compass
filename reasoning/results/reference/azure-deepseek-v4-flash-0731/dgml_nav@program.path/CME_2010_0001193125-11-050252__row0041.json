@@ -1,0 +1,85 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0041",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "what was the percentage change in receivables from brokers with in other current assets from 2009 to 2010?",
+ "gold": "29%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "CME_2010_0001193125-11-050252.outline.txt",
+ "doc_source": "CME_2010_0001193125-11-050252.dgml.xml",
+ "outline_chars": 87444,
+ "predicted_xpaths": [
+  "/chunk/OtherCurrentAssets",
+  "/chunk/OtherCurrentAssets/OtherCurrentAssetsBreakdown",
+  "/chunk/OtherCurrentAssets/table/ReceivablesFromBrokers"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 3118,
+ "r1_usage": {
+  "prompt_tokens": 22580,
+  "completion_tokens": 853,
+  "total_tokens": 23433,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/OtherCurrentAssets",
+  "/chunk/OtherCurrentAssets/OtherCurrentAssetsBreakdown",
+  "/chunk/OtherCurrentAssets/table/ReceivablesFromBrokers"
+ ],
+ "content_chars": 50160,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "27.272727",
+ "reasoning": "We need percentage change from 2009 to 2010 for receivables from brokers. Values: 2010 = 11.2, 2009 = 8.8. Percentage change = (11.2 - 8.8)/8.8 * 100 = 2.4/8.8 = 0.272727... = 27.27%. Need answer as value, likely 27.27 or 27.3. The question asks \"percentage change\" so answer numeric. We'll provide evidence and program.",
+ "raw_content": "<evidence>\n11.2 | /chunk/OtherCurrentAssets/OtherCurrentAssetsBreakdown/table/ReceivablesFromBrokers/OtherCurrentAssetAmount\n8.8 | /chunk/OtherCurrentAssets/OtherCurrentAssetsBreakdown/table/ReceivablesFromBrokers/OtherCurrentAssetAmount\n</evidence>\n<program>multiply(divide(subtract(11.2, 8.8), 8.8), 100)</program>\n<answer>27.27272727272727</answer>",
+ "r2_usage": {
+  "prompt_tokens": 13422,
+  "completion_tokens": 226,
+  "total_tokens": 13648,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 13422,
+   "completion_tokens": 226,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "11.2",
+   "element": "chunk/OtherCurrentAssets/OtherCurrentAssetsBreakdown/table/ReceivablesFromBrokers/OtherCurrentAssetAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "8.8",
+   "element": "chunk/OtherCurrentAssets/OtherCurrentAssetsBreakdown/table/ReceivablesFromBrokers/OtherCurrentAssetAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(11.2, 8.8), 8.8), 100)",
+ "answer_model": "27.27272727272727",
+ "program_value": 27.272727272727256,
+ "elapsed_s": 6.5
+}

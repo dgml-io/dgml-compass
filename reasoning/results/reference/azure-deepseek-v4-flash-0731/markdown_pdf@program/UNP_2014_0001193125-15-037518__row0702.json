@@ -1,0 +1,72 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0702",
+ "format": "markdown_pdf",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "what was the percentage change in cash provided by operating activities from 2012 to 2013?",
+ "gold": "11%",
+ "finqa_id": "UNP/2014/page_35.pdf-3",
+ "source_page": "page_35",
+ "ticker": "UNP",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf/UNP_2014_0001193125-15-037518.md",
+ "doc_chars": 332985,
+ "prompt_chars": 333164,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 332985,
+ "original_chars": 332985,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 78220,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 204,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "10.7450%",
+ "reasoning": "We need percentage change in cash provided by operating activities from 2012 to 2013. From document: cash provided by operating activities: 2012 $6,161, 2013 $6,823. Percentage change = (6823-6161)/6161 = 662/6161 ≈ 10.745%. Compute exactly: 662/6161 = 0.10745... so 10.7%. Need answer as value. Evidence: 6,823 | Cash provided by operating activities (2013), 6,161 | Cash provided by operating activities (2012). Program: divide(subtract(6823,6161),6161).",
+ "raw_content": "<evidence>6,823 | Cash provided by operating activities (2013)\n6,161 | Cash provided by operating activities (2012)</evidence>\n<program>divide(subtract(6823, 6161), 6161)</program>\n<answer>10.7%</answer>",
+ "usage": {
+  "prompt_tokens": 78527,
+  "completion_tokens": 204,
+  "total_tokens": 78731,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 78336
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 1.6,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "6,823",
+   "element": "Cash provided by operating activities (2013)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6,161",
+   "element": "Cash provided by operating activities (2012)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(6823, 6161), 6161)",
+ "answer_model": "10.7%",
+ "program_value": 0.10745008927122221,
+ "docfinqa_row": 702
+}

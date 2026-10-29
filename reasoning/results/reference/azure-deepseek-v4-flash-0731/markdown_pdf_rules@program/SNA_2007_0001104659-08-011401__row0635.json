@@ -1,0 +1,73 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0635",
+ "format": "markdown_pdf_rules",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "based on the cash dividends paid , how many common stock shares were outstanding?",
+ "gold": "58909091",
+ "finqa_id": "SNA/2007/page_49.pdf-2",
+ "source_page": "page_49",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_rules/SNA_2007_0001104659-08-011401.md",
+ "doc_chars": 336027,
+ "prompt_chars": 336197,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 336027,
+ "original_chars": 336027,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 81193,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 764,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "58.378378",
+ "reasoning": "We need answer based on cash dividends paid. Need find cash dividends paid and per share. Cash dividends paid in 2007 totaled $64.8 million, and dividends paid per common share $1.11. So shares = 64.8 million / 1.11 = 58.378... million. But question: \"based on the cash dividends paid, how many common stock shares were outstanding?\" Likely compute shares = cash dividends paid / dividends per share. Use figures: Cash dividends paid in 2007, 2006 and 2005 totaled $64.8 million, $63.6 million and $57.8 million, respectively. Cash dividends paid per common share 2007 $1.11. So 64.8 / 1.11 = 58.378378... million shares. But note \"common stock shares outstanding\" maybe at year end? The document states at December 29, 2007, 57,429,139 shares outstanding. But question says \"based on the cash dividends paid\" - implies compute from dividends. Need answer value. Let's compute: 64.8 / 1.11 = 58.378378... million = 58,378,378 shares. But actual outstanding at Dec 29, 2007 was 57,429,139. The question specifically says based on cash dividends paid, so use that. Need evidence: cash dividends paid $64.8 million, dividends paid per share $1.11. Program divide(64.8, 1.11). Answer maybe 58.4 million? But exact value? The question asks \"how many common stock shares were outstanding?\" Could be asking number of shares based on dividends paid. We'll provide 58.378 million. But note \"cash dividends paid\" in 2007 totaled $64.8 million, and per share $1.11. So shares = 64.8/1.11 = 58.378... million. However, the document also states \"At December 29, 2007, Snap-on had 57,429,139 shares of common stock outstanding.\" But that's not based on dividends. The question explicitly says \"based on the cash dividends paid\" so use that. Need final answer inside <answer> tags only value. Probably 58.4 million? But exact number? Let's compute precisely: 64.8 / 1.11 = 58.378378378... So answer 58.378 million shares. But maybe they want number of shares outstanding as of year end? The question wording: \"based on the cash dividends paid , how many common stock shares were outstanding?\" It might be a trick: cash dividends paid = $64.8 million, dividends per share = $1.11, so shares = 58.378 million. But actual outstanding shares at year end is 57,429,139. The question says \"based on the cash dividends paid\" so compute. I'll answer 58.378 million. Need evidence: $64.8 million | Cash dividends paid in 2007, 2006 and 2005 totaled...; $1.11 | Cash dividends paid per common share. Program divide(64.8, 1.11).",
+ "raw_content": "<evidence>\n64.8 | Cash dividends paid in 2007, 2006 and 2005 totaled $64.8 million, $63.6 million and $57.8 million, respectively.\n1.11 | Cash dividends paid per common share 2007 $1.11\n</evidence>\n<program>divide(64.8, 1.11)</program>\n<answer>58.378</answer>",
+ "usage": {
+  "prompt_tokens": 81495,
+  "completion_tokens": 764,
+  "total_tokens": 82259,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 14.39,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "64.8",
+   "element": "Cash dividends paid in 2007, 2006 and 2005 totaled $64.8 million, $63.6 million and $57.8 million, respectively.",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1.11",
+   "element": "Cash dividends paid per common share 2007 $1.11",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(64.8, 1.11)",
+ "answer_model": "58.378",
+ "program_value": 58.37837837837837,
+ "docfinqa_row": 635
+}

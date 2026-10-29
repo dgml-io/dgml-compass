@@ -1,0 +1,59 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0670",
+ "format": "markdown_pdf_rules",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what is the percentage change in fair value of forward exchange contracts asset from 2010 to 2011?",
+ "gold": "-65.9%",
+ "finqa_id": "ADI/2011/page_50.pdf-1",
+ "source_page": "page_50",
+ "ticker": "ADI",
+ "fiscal_year": "2011",
+ "source_file": "data/docs/markdown_pdf_rules/ADI_2011_0000950123-11-099928.md",
+ "doc_chars": 345770,
+ "prompt_chars": 345957,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 345770,
+ "original_chars": 345770,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 77039,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "stop",
+   "completion_tokens": 439,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 1,
+ "ok": true,
+ "answer": "-65.9%",
+ "reasoning": "We need to find the fair value of forward exchange contracts asset for 2010 and 2011. From the document, in Item 7A, there is a table:\n\n\"Fair value of forward exchange contracts asset $ 2,472 $ 7,256\" for October 29, 2011 and October 30, 2010 respectively.\n\nSo 2011: 2,472; 2010: 7,256. Percentage change = (2,472 - 7,256)/7,256 * 100 = (-4,784)/7,256 * 100 ≈ -65.93%. So approximately -65.9% or -66%. The question asks \"percentage change\" so we can give negative. The answer should be the value. We'll put -65.9% or -66%? Let's compute exactly: 4784/7256 = 0.6593... so -65.93%. We'll provide -65.9% or -66%? The instruction says \"containing only the value itself\" so we can put -65.9% or -66%? Typically we give a number. I'll put -65.9% but maybe they expect a number without %? The question says \"percentage change\" so we can include % sign. But the instruction says \"no explanation or units unless the question asks for them.\" The question asks for percentage change, so we can include % sign. I'll put -65.9% or -66%? Let's compute precisely: 2,472 - 7,256 = -4,784. -4,784 / 7,256 = -0.6593... so -65.93%. I'll put -65.9% or -66%? I'll put -65.9% but maybe they want a number. I'll put -65.9% inside tags. Alternatively, they might want the absolute change? The question says \"percentage change\" so it's the relative change. I'll put -65.9%.",
+ "raw_content": "<answer>-65.9%</answer>",
+ "usage": {
+  "prompt_tokens": 77189,
+  "completion_tokens": 439,
+  "total_tokens": 77628,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 77056
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.62,
+ "answer_tag_found": true,
+ "docfinqa_row": 670
+}

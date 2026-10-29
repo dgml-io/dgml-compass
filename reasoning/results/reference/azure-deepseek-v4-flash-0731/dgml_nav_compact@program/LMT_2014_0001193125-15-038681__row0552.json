@@ -1,0 +1,82 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0552",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "in 2014 what was the ratio of the estimated future benefit payments due in 2015 compared to the amount after 2020",
+ "gold": "0.15",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "LMT_2014_0001193125-15-038681.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/SegmentFinancial/PostretirementPlans/PlanAssetsOverview/PensionContributionsAndBenefits/ExpectedBenefitPaymentSchedule"
+ ],
+ "r1_reasoning_chars": 1680,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 16133,
+  "completion_tokens": 431,
+  "total_tokens": 16564,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/SegmentFinancial/PostretirementPlans/PlanAssetsOverview/PensionContributionsAndBenefits/ExpectedBenefitPaymentSchedule"
+ ],
+ "content_chars": 1686,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "0.156401",
+ "reasoning": "We need answer ratio of estimated future benefit payments due in 2015 compared to amount after 2020. Need interpret \"amount after 2020\" likely 2020-2024? The table has 2020-2024 amount. For qualified defined benefit pension plans: 2015 = $2,070, 2020-2024 = $13,430. Ratio = 2070 / 13430. But question says \"estimated future benefit payments\" maybe total? The table has two rows: qualified pension and retiree medical. \"estimated future benefit payments\" table presents both. The question \"in 2014 what was the ratio of the estimated future benefit payments due in 2015 compared to the amount after 2020\" Could refer to total estimated future benefit payments? Need determine. The table header: \"The following table presents estimated future benefit payments, which reflect expected future employee service, as of December 31, 2014 (in millions):\" Then table has rows for qualified defined benefit pension plans and retiree medical and life insurance plans. The question says \"estimated future benefit payments\" without specifying plan. Could be total of both? Need compute ratio of total 2015 vs total after 2020 (2020-2024). Total 2015 = 2070+190=2260. Total 2020-2024 = 13430+1020=14450. Ratio = 2260/14450 = 0.1564. But maybe \"amount after 2020\" means \"2020-2024\" column. The question says \"amount after 2020\" not \"2020-2024\"? The table has \"2020 - 2024\" as a column. So yes.\n\nNeed decide which figures. The question: \"in 2014 what was the ratio of the estimated future benefit payments due in 2015 compared to the amount after 2020\" It doesn't specify qualified vs retiree medical. The table presents both. \"estimated future benefit payments\" likely total of all plans. But the table rows are separate. The question might be from a dataset where expected answer uses the row \"Qualified defined benefit pension plans\" because that's the main pension? But the table includes both. Let's examine context: The region is \"PensionContributionsAndBenefits/ExpectedBenefitPaymentSchedule\". The table has two rows. The question says \"estimated future benefit payments\" - the table title says \"estimated future benefit payments\" for both. So total is appropriate. But \"amount after 2020\" could be \"2020-2024\" column. Ratio = 2260/14450. Let's compute exactly: 2260/14450 = simplify divide by 10 = 226/1445. 226/1445 = 0.156401... 1445*0.1564 = 226.0? 1445*0.1564 = 226.0? 1445*0.1564 = 226.0? 1445*0.156 = 225.42, plus 0.0004*1445=0.578, total 225.998. So 0.1564. But maybe they want ratio as fraction? The question \"what was the ratio\" likely decimal. Need provide value.\n\nBut let's be careful: \"amount after 2020\" might mean \"after 2020\" i.e., beyond 2020, which in table is \"2020 - 2024\" (not after 2024). The table only has 2020-2024, no \"thereafter\". So yes.\n\nNeed evidence: list figures used. For total: 2,070 and 190 for 2015; 13,430 and 1,020 for 2020-2024. Element names: ExpectedBenefitPaymentAmount rows. But the table has two rows with same element name. Need distinguish by row label. Evidence lines: \"2,070 | Qualified defined benefit pension plans\" etc. But the instruction says \"value | element\" where element is name of DGML element it sits in (for a document without element names, the row label or heading next to it). The element name is ExpectedBenefitPaymentAmount, but there are multiple. Better use row label. I'll list each figure with row label.\n\nThen program: divide(add(2070, 190), add(13430, 1020)). That yields 2260/14450 = 0.156401... Need output exact? The benchmark likely expects numeric. We'll output decimal maybe 0.1564. But to be safe, maybe fraction? The question asks ratio, so decimal. The program will compute. The final answer inside <answer> tags should contain only value. I'll put 0.1564. But if they expect exact fraction? The program computes decimal. The answer should be the result of program. I'll put 0.1564 (rounded). But maybe they want 2260/14450? The instruction says \"containing only the value itself\" - so numeric. I'll put 0.1564.\n\nLet's double-check if there is any other \"after 2020\" amount. The table has \"2020 - 2024\" only. So yes.\n\nPotential alternative: If only qualified pension plans, ratio = 2070/13430 = 0.1541. Which is more likely? The question says \"estimated future benefit payments\" - the table title \"Contributions and Expected Benefit Payments\" and the table includes both. The question doesn't specify \"qualified defined benefit pension plans\" or \"retiree medical\". So total is correct. But let's examine the wording: \"in 2014 what was the ratio of the estimated future benefit payments due in 2015 compared to the amount after 2020\" The table presents \"estimated future benefit payments\" as of Dec 31, 2014. The rows are separate. The question might be from a QA dataset where the answer is derived from the table. Usually they expect using the row \"Qualified defined benefit pension plans\" because that's the main pension plan? But the table has two rows. The question says \"estimated future benefit payments\" without qualifier, so sum both. I'll go with total.\n\nNeed provide evidence and program.",
+ "raw_content": "<evidence>2,070 | Qualified defined benefit pension plans - 2015\n190 | Retiree medical and life insurance plans - 2015\n13,430 | Qualified defined benefit pension plans - 2020-2024\n1,020 | Retiree medical and life insurance plans - 2020-2024</evidence>\n<program>divide(add(2070, 190), add(13430, 1020))</program>\n<answer>0.1564</answer>",
+ "r2_usage": {
+  "prompt_tokens": 749,
+  "completion_tokens": 1429,
+  "total_tokens": 2178,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "2,070",
+   "element": "Qualified defined benefit pension plans - 2015",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "190",
+   "element": "Retiree medical and life insurance plans - 2015",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "13,430",
+   "element": "Qualified defined benefit pension plans - 2020-2024",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1,020",
+   "element": "Retiree medical and life insurance plans - 2020-2024",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(2070, 190), add(13430, 1020))",
+ "answer_model": "0.1564",
+ "program_value": 0.156401384083045,
+ "elapsed_s": 10.12,
+ "outline_source": "LMT_2014_0001193125-15-038681.outline.txt",
+ "outline_chars": 64445
+}

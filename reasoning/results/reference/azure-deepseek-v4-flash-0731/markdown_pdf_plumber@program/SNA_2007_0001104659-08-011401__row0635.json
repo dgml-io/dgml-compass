@@ -1,0 +1,72 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0635",
+ "format": "markdown_pdf_plumber",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "based on the cash dividends paid , how many common stock shares were outstanding?",
+ "gold": "58909091",
+ "finqa_id": "SNA/2007/page_49.pdf-2",
+ "source_page": "page_49",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_plumber/SNA_2007_0001104659-08-011401.md",
+ "doc_chars": 371934,
+ "prompt_chars": 372104,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 371934,
+ "original_chars": 371934,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 94563,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1139,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "58.378378",
+ "reasoning": "We need answer based on cash dividends paid. Need find cash dividends paid total and per share to compute shares outstanding. Cash dividends paid in 2007 totaled $64.8 million, per share $1.11. So shares = 64.8 million / 1.11 = 58.378... million. But question \"based on the cash dividends paid, how many common stock shares were outstanding?\" Likely weighted average? Cash dividends paid per share $1.11, total $64.8M. Compute 64.8/1.11 = 58.378378... million. But note cash dividends paid per share in 2007 was $1.11, total $64.8M. So shares outstanding ~58.4 million. However actual shares outstanding at Dec 29, 2007 was 57,429,139. But question asks based on cash dividends paid, so compute. Need evidence figures: $64.8 million cash dividends paid, $1.11 per share. Program divide(64.8, 1.11) = 58.378... Answer maybe 58.4 million. But careful: cash dividends paid per share $1.11, total $64.8M. So 64.8/1.11 = 58.378378... million. The question \"how many common stock shares were outstanding?\" Might be asking number of shares outstanding based on dividends paid. Use those. Final answer inside tags with value only. Probably 58.4 million? But need exact? The benchmark expects numeric. We'll provide 58.378378... maybe rounded. The instruction: \"Give final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So answer 58.4? But better exact decimal? 64.8/1.11 = 58.378378378... So answer 58.3783783784. But units? The question asks \"how many common stock shares were outstanding?\" So value in millions? The figures are in millions. So answer 58.378378... million shares. But maybe they want number of shares, not millions. 58,378,378 shares. Let's compute: 64.8 million / 1.11 = 58.378378... million = 58,378,378.4. So answer 58,378,378. But note cash dividends paid per share $1.11, total $64.8M. So shares = 64,800,000 / 1.11 = 58,378,378.378. So answer 58,378,378. But check if there is any other figure? The document also states \"The number of shares of Common Stock ($1.00 par value) of the registrant outstanding as of February 15, 2008, was 57,690,539 shares.\" But question says \"based on the cash dividends paid\" so use that. Also \"At December 29, 2007, Snap-on had 57,429,139 shares of common stock outstanding.\" But that's not based on dividends. So answer computed.\n\nNeed evidence: $64.8 million cash dividends paid in 2007, $1.11 per share. Also maybe \"Cash dividends paid in 2007, 2006 and 2005 totaled $64.8 million, $63.6 million and $57.8 million, respectively.\" And \"Cash dividends paid per common share $1.11\" in table. Use those.\n\nProgram: divide(64.8, 1.11) = 58.378378... But note 64.8 is in millions, 1.11 is per share. So result in millions. To get shares, multiply by 1,000,000? The program uses figures as printed. The question asks \"how many common stock shares were outstanding?\" The figures are in millions. So program divide(64.8, 1.11) gives 58.378... million. But answer should be number of shares? The benchmark likely expects numeric value in millions? The instruction says \"containing only the value itself\" - no units. So we can put 58.3783783784. But if they expect shares count, 58,378,378.4. Hmm.\n\nLook at typical questions: \"based on the cash dividends paid, how many common stock shares were outstanding?\" They might expect 58.4 million. But the document gives \"Cash dividends paid per common share $1.11\" and \"Cash dividends paid $64.8 million\". So compute 64.8/1.11 = 58.378... million. So answer 58.4 (rounded). But to be precise, 58.378378. I'll put 58.3783783784. But the answer tag should contain only value. I'll put 58.3783783784.\n\nNeed evidence lines: \n64.8 | Cash dividends paid in 2007 (MD&A)\n1.11 | Cash dividends paid per common share (Selected Financial Data / Consolidated Statements)\n\nLet's craft final.",
+ "raw_content": "<evidence>\n64.8 | Cash dividends paid in 2007 (MD&A)\n1.11 | Cash dividends paid per common share (Selected Financial Data)\n</evidence>\n<program>divide(64.8, 1.11)</program>\n<answer>58.3783783784</answer>",
+ "usage": {
+  "prompt_tokens": 94866,
+  "completion_tokens": 1139,
+  "total_tokens": 96005,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 94720
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.37,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "64.8",
+   "element": "Cash dividends paid in 2007 (MD&A)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1.11",
+   "element": "Cash dividends paid per common share (Selected Financial Data)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(64.8, 1.11)",
+ "answer_model": "58.3783783784",
+ "program_value": 58.37837837837837,
+ "docfinqa_row": 635
+}

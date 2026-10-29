@@ -1,0 +1,74 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0423",
+ "format": "markdown_pdf_plumber",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "was was the total amount spent on stock repurchases in december 2012?",
+ "gold": "7662592",
+ "finqa_id": "AMT/2012/page_50.pdf-2",
+ "source_page": "page_50",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/markdown_pdf_plumber/AMT_2012_0001193125-13-077821.md",
+ "doc_chars": 584045,
+ "prompt_chars": 584203,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 584045,
+ "original_chars": 584045,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 138337,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 647,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "7662592",
+ "reasoning": "We need answer: total amount spent on stock repurchases in December 2012. From document: Issuer Purchases of Equity Securities table: December 2012: 102,400 shares, average price $74.83, aggregate? The table shows \"Total Number of Shares Purchased\" and \"Average Price Paid per Share\" and \"Approximate Dollar Value of Shares that May Yet be Purchased\" not aggregate purchase amount. But text: \"During the three months ended December 31, 2012, we repurchased 619,314 shares ... for an aggregate of approximately $46.0 million\". That is for quarter. For December specifically, we have shares and average price. Average price per share is calculated using aggregate price excluding commissions and fees. So December repurchase amount = 102,400 * $74.83 = ? Compute: 102,400 * 74.83 = 102,400*70 + 102,400*4.83 = 7,168,000 + 494,? 102,400*4.83 = 102,400*4 + 102,400*0.83 = 409,600 + 84,992 = 494,592. Total 7,662,592. So approximately $7.66 million. But question asks \"total amount spent on stock repurchases in december 2012?\" The table gives average price per share excluding commissions and fees. The text says \"including commissions and fees\" for aggregate. But for December, we only have average price excluding commissions and fees. The question likely expects the amount from the table? The table has \"Total Number of Shares Purchased\" and \"Average Price Paid per Share\" but no aggregate dollar amount for December. However, we can compute. But note the table's \"Approximate Dollar Value of Shares that May Yet be Purchased\" is remaining authorization, not spent. So answer is 102,400 * 74.83 = 7,662,592. But the question says \"total amount spent\" - might include commissions and fees? The document says for quarter total $46.0 million including commissions and fees. For December, we don't have that. But we can compute from average price excluding commissions and fees. The question likely expects the product. Let's check if there is any other figure. The table shows \"December 2012 102,400 $74.83 102,400 $1,256.1\" - the last column is remaining. So no direct. So answer is 7,662,592. But maybe they want in millions? The question doesn't specify units. We'll give number.\n\nEvidence: 102,400 | December 2012 row, 74.83 | December 2012 row. Program: multiply(102400, 74.83) = 7662592.",
+ "raw_content": "<evidence>\n102,400 | December 2012 row\n$74.83 | December 2012 row\n</evidence>\n<program>multiply(102400, 74.83)</program>\n<answer>7662592</answer>",
+ "usage": {
+  "prompt_tokens": 138642,
+  "completion_tokens": 647,
+  "total_tokens": 139289,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 138496
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.46,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "102,400",
+   "element": "December 2012 row",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$74.83",
+   "element": "December 2012 row",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(102400, 74.83)",
+ "answer_model": "7662592",
+ "program_value": 7662592.0,
+ "docfinqa_row": 423
+}

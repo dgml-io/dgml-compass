@@ -1,0 +1,53 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0744",
+ "format": "markdown_pdf_poppler",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "what was the difference in operating margin between 2012 and 2013?",
+ "gold": ".1%",
+ "finqa_id": "LMT/2014/page_50.pdf-3",
+ "source_page": "page_50",
+ "ticker": "LMT",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf_poppler/LMT_2014_0001193125-15-038681.md",
+ "doc_chars": 497433,
+ "prompt_chars": 497588,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 497433,
+ "original_chars": 497433,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 91740,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 900,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.53",
+ "reasoning": "We need to find operating margins for 2012 and 2013. The document provides segment operating margins, but the question likely refers to consolidated operating margin. However, the question says \"operating margin\" without specifying segment. In the MD&A, there is a table of business segment operating profit and margins. But the question might be about the company overall. Let's check: The document has \"Consolidated Results of Operations\" with net sales and operating profit. Operating margin = operating profit / net sales. For 2012: operating profit 4,434, net sales 47,182 => margin = 4434/47182 = 0.0940 (9.40%). For 2013: operating profit 4,505, net sales 45,358 => margin = 4505/45358 = 0.0993 (9.93%). Difference = 0.53 percentage points. But the question asks \"difference in operating margin between 2012 and 2013\" - could be absolute difference. Alternatively, they might refer to segment operating margins? The question is ambiguous. However, the document provides segment operating margins in the segment discussions. For example, Aeronautics: 2012 11.4%, 2013 11.4% difference 0. But the question likely expects a single number. Since the question says \"operating margin\" without specifying segment, it's probably the consolidated operating margin. Let's compute precisely: 2012: 4434/47182 = 0.09398... 2013: 4505/45358 = 0.09932... Difference = 0.00534 = 0.534 percentage points. But the question might ask for the difference in percentage points or as a percentage? Usually \"difference in operating margin\" means the change in margin percentage points. So answer 0.53% or 0.5%? Let's see if there is any explicit mention. The document has a table of segment operating margins but not consolidated. However, the MD&A has \"Consolidated Results of Operations\" with operating profit and net sales. So we can compute. Alternatively, the question might be from a specific context. Since the question is straightforward, I'll compute the difference. Let me do exact: 4434/47182 = 0.09398, 4505/45358 = 0.09932, difference = 0.00534 = 0.534%. So answer 0.53% (or 0.5% if rounding). But the question asks \"what was the difference\" - could be absolute difference in percentage points. I'll provide 0.53 percentage points. However, to be safe, I'll check if the document provides any explicit operating margin for the company. The MD&A says \"We expect 2015 segment operating profit margin will be below the 2014 levels, in the 11.5% to 12.0% range.\" That's segment. But the question is about 2012 and 2013. I think it's the consolidated. So answer: 0.53% (or 0.5%). Let me compute more precisely: 4434/47182 = 0.09398, 4505/45358 = 0.09932, difference = 0.00534 = 0.534%. So I'll put 0.53 percentage points. But the instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what was the difference in operating margin\" - so the value is a percentage difference. I'll put 0.53% or 0.53? Since it's a margin difference, it's typically expressed in percentage points. I'll put 0.53. But to be precise, I'll put 0.53. Let me double-check if there is any other interpretation. The document also has segment operating margins in the segment discussions. For example, Aeronautics: 2012 11.4%, 2013 11.4% difference 0. But the question doesn't specify segment. So I'll go with consolidated.\n\nThus answer: 0.53.",
+ "raw_content": "<answer>0.53</answer>",
+ "usage": {
+  "prompt_tokens": 91885,
+  "completion_tokens": 900,
+  "total_tokens": 92785,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 91648
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 14.77,
+ "answer_tag_found": true,
+ "docfinqa_row": 744
+}

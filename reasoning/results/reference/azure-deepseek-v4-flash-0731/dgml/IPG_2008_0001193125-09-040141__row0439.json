@@ -1,0 +1,59 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0439",
+ "format": "dgml",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "how much more , in percent , was spent on october shares than november shares?",
+ "gold": "1229%",
+ "finqa_id": "IPG/2008/page_21.pdf-1",
+ "source_page": "page_21",
+ "ticker": "IPG",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml/IPG_2008_0001193125-09-040141.dgml.xml",
+ "doc_chars": 742193,
+ "prompt_chars": 742360,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 742193,
+ "original_chars": 742193,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 181438,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "stop",
+   "completion_tokens": 896,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 1,
+ "ok": true,
+ "answer": "1129.1%",
+ "reasoning": "We need to find the amount spent on October shares and November shares. The table in \"Repurchase of Equity Securities\" gives total number of shares purchased and average price paid per share for October and November. October: 29,704 shares at $5.99. November: 4,468 shares at $3.24. We need to compute total spent: October = 29,704 * 5.99 = 177,? Let's compute: 29,704 * 5.99 = 29,704 * 6 - 29,704 * 0.01 = 178,224 - 297.04 = 177,926.96. November = 4,468 * 3.24 = 4,468 * 3 + 4,468 * 0.24 = 13,404 + 1,072.32 = 14,476.32. Difference = 177,926.96 - 14,476.32 = 163,450.64. Percent more = difference / November * 100 = 163,450.64 / 14,476.32 * 100 ≈ 1129.2%? Let's compute: 14,476.32 * 11 = 159,239.52, remainder 4,211.12, so about 11.29 times, so 1129%? Actually 163,450.64 / 14,476.32 = 11.29, so 1129% more. But question asks \"how much more, in percent, was spent on october shares than november shares?\" So answer is 1129% (approx). But we need to be precise. Let's compute exactly: 177,926.96 / 14,476.32 = 12.29? Wait 177,926.96 / 14,476.32 = 12.29? Let's do: 14,476.32 * 12 = 173,715.84, remainder 4,211.12, so 12.29? Actually 4,211.12 / 14,476.32 = 0.291, so 12.291. So October is 12.291 times November, so it's 1129.1% more? Actually \"more than\" means (October - November)/November * 100 = (12.291 - 1)*100 = 1129.1%. So answer ~1129%. But we should check if they want percentage difference relative to November. The question: \"how much more, in percent, was spent on october shares than november shares?\" So yes, (Oct - Nov)/Nov * 100.\n\nBut let's confirm the numbers: October: 29,704 shares, average price $5.99. November: 4,468 shares, average price $3.24. So spent October = 29,704 * 5.99 = 177,926.96. November = 4,468 * 3.24 = 14,476.32. Difference = 163,450.64. Percent more = 163,450.64 / 14,476.32 * 100 = 1129.1% (approx). Let's compute exactly: 163,450.64 / 14,476.32 = 11.291? Actually 14,476.32 * 11 = 159,239.52, remainder 4,211.12, 4,211.12/14,476.32 = 0.291, so 11.291. So 1129.1%. So answer 1129.1% or 1129% if rounding.\n\nBut the question might expect a number without units? It says \"in percent\" so we give the number. I'll put 1129.1% or 1129%? Let's compute more precisely: 177,926.96 / 14,476.32 = 12.291? Wait I did (Oct - Nov)/Nov = 11.291, so percent = 1129.1%. So answer 1129.1%.\n\nI'll put 1129.1% inside answer tags.",
+ "raw_content": "<answer>1129.1%</answer>",
+ "usage": {
+  "prompt_tokens": 181583,
+  "completion_tokens": 896,
+  "total_tokens": 182479,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 181504
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.63,
+ "answer_tag_found": true,
+ "docfinqa_row": 439
+}

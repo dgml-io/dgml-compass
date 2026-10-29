@@ -1,0 +1,72 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0173",
+ "format": "dgml_compact",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what portion of the adjusted consolidated cash flow for the twelve months ended december 31 , 2005 is related to non-tower cash flow?",
+ "gold": "-5.8%",
+ "finqa_id": "AMT/2005/page_54.pdf-1",
+ "source_page": "page_54",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/dgml_compact/AMT_2005_0001193125-06-054224.dgml.txt",
+ "doc_chars": 570128,
+ "prompt_chars": 570350,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 570128,
+ "original_chars": 570128,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 127365,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 824,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-0.057508",
+ "reasoning": "We need to find adjusted consolidated cash flow and non-tower cash flow for twelve months ended Dec 31, 2005. From document: \"Adjusted Consolidated Cash Flow, for the twelve months ended December 31, 2005 | $ 531,822\" and \"Non-Tower Cash Flow, for the twelve months ended December 31, 2005 | $ (30,584)\". The question asks \"what portion of the adjusted consolidated cash flow ... is related to non-tower cash flow?\" That is the ratio of non-tower cash flow to adjusted consolidated cash flow. Non-tower is negative, so portion is -30,584 / 531,822. Compute: 30584/531822 ≈ 0.0575, so -5.75%. But question asks \"portion\" maybe as a percentage. We'll compute exact ratio. Use figures as printed: -30,584 and 531,822. Program: divide(-30584, 531822). But the figures are printed with parentheses? Actually printed as \"$ (30,584)\" and \"$ 531,822\". We'll use -30584 and 531822. Answer as decimal or percentage? The question says \"what portion\" - likely a fraction or percentage. We'll give as a decimal or percentage. The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what portion\" - could be a ratio. We'll give as a decimal, e.g., -0.0575. But maybe they want percentage? The question doesn't specify. Usually \"portion\" could be a fraction. We'll compute exact: -30584/531822 = -0.0575... Let's compute precisely: 531822 * 0.0575 = 30579.765, so about 0.05751. We'll give -0.0575 or -5.75%? The instruction says no units unless asked. \"portion\" is dimensionless. We'll give as a decimal. But to be safe, we can give as a percentage? The question says \"what portion\" - I'll give as a decimal. However, the benchmark might expect a number. Let's compute exact division: 30584/531822 = 0.057508... So -0.0575. We'll provide -0.0575. But maybe they want the absolute value? The question says \"related to non-tower cash flow\" - non-tower is negative, so portion is negative. We'll provide -0.0575. Alternatively, they might want the ratio of non-tower to adjusted, which is -30,584/531,822. We'll do that.\n\nEvidence: list the figures used: \"531,822 | Adjusted Consolidated Cash Flow\" and \"(30,584) | Non-Tower Cash Flow\". The element names are from the document: \"Adjusted Consolidated Cash Flow, for the twelve months ended December 31, 2005\" and \"Non-Tower Cash Flow, for the twelve months ended December 31, 2005\". We'll cite those.\n\nProgram: divide(-30584, 531822)\n\nAnswer: -0.0575 (or -0.0575). We'll put inside <answer> -0.0575 </answer>. But maybe they want percentage? The question says \"portion\" - I'll give as a decimal. Let's compute more precisely: 30584/531822 = 0.057508... So -0.0575. We'll give -0.0575.",
+ "raw_content": "<evidence>\n531,822 | Adjusted Consolidated Cash Flow, for the twelve months ended December 31, 2005\n(30,584) | Non-Tower Cash Flow, for the twelve months ended December 31, 2005\n</evidence>\n<program>\ndivide(-30584, 531822)\n</program>\n<answer>-0.0575</answer>",
+ "usage": {
+  "prompt_tokens": 127681,
+  "completion_tokens": 824,
+  "total_tokens": 128505,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 127488
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 14.92,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "531,822",
+   "element": "Adjusted Consolidated Cash Flow, for the twelve months ended December 31, 2005",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "(30,584)",
+   "element": "Non-Tower Cash Flow, for the twelve months ended December 31, 2005",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(-30584, 531822)",
+ "answer_model": "-0.0575",
+ "program_value": -0.057507963190691624,
+ "docfinqa_row": 173
+}

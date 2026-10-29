@@ -1,0 +1,81 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0076",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the percentage change in the weighted-average discount rate for u.s . pension plans from 2014 to 2015?",
+ "gold": "8.9%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "PM_2015_0001413329-16-000076.outline.txt",
+ "doc_source": "PM_2015_0001413329-16-000076.dgml.xml",
+ "outline_chars": 156714,
+ "predicted_xpaths": [
+  "/chunk/PartII/ManagementDiscussion/AccountingPolicyTopic/table"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 3785,
+ "r1_usage": {
+  "prompt_tokens": 39615,
+  "completion_tokens": 920,
+  "total_tokens": 40535,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/PartII/ManagementDiscussion/AccountingPolicyTopic/table"
+ ],
+ "content_chars": 10913,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "8.860759",
+ "reasoning": "We need percentage change from 2014 to 2015 for U.S. pension plans discount rate. Table shows 2015: 4.30%, 2014: 3.95%. Percentage change = (4.30 - 3.95)/3.95 * 100. Compute.",
+ "raw_content": "<evidence>4.30% | /chunk/PartII/ManagementDiscussion/AccountingPolicyTopic/table/USPensionDiscountRate/PensionDiscountRate\n3.95% | /chunk/PartII/ManagementDiscussion/AccountingPolicyTopic/table/USPensionDiscountRate/PensionDiscountRate</evidence>\n<program>multiply(divide(subtract(4.30, 3.95), 3.95), 100)</program>\n<answer>8.860759493670886</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2504,
+  "completion_tokens": 173,
+  "total_tokens": 2677,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 2504,
+   "completion_tokens": 173,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "4.30%",
+   "element": "chunk/PartII/ManagementDiscussion/AccountingPolicyTopic/table/USPensionDiscountRate/PensionDiscountRate",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "3.95%",
+   "element": "chunk/PartII/ManagementDiscussion/AccountingPolicyTopic/table/USPensionDiscountRate/PensionDiscountRate",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(4.30, 3.95), 3.95), 100)",
+ "answer_model": "8.860759493670886",
+ "program_value": 8.860759493670876,
+ "elapsed_s": 7.56
+}

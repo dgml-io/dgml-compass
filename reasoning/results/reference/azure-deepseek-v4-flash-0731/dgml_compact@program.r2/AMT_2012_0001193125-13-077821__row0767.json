@@ -1,0 +1,73 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0767",
+ "format": "dgml_compact",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "hard assets were what percent of the brazilian purchase price , as finally determined?",
+ "gold": "14.3%",
+ "finqa_id": "AMT/2012/page_118.pdf-3",
+ "source_page": "page_118",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/dgml_compact/AMT_2012_0001193125-13-077821.dgml.txt",
+ "doc_chars": 684819,
+ "prompt_chars": 684994,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 684819,
+ "original_chars": 684819,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 147020,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 300,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "14.2729%",
+ "reasoning": "We need answer question: \"hard assets were what percent of the brazilian purchase price, as finally determined?\" Need find Brazil acquisition purchase price and hard assets (property and equipment?) as finally determined. In document, Brazil Acquisition: purchase price $553.2 million, increased to $585.4, reduced to $585.3 after adjustments. Final purchase price allocation: property and equipment $83,539 (in thousands) = $83.539 million. Hard assets likely property and equipment. Percent = 83,539 / 585,300 *100? But purchase price is $585.3 million (in thousands 585,300). Compute: 83,539 / 585,300 = 0.14273 -> 14.27%. Need exact. Let's verify figures: \"During the year ended December 31, 2012, the purchase price was reduced to $585.3 million after certain post-closing purchase price adjustments.\" Final allocation table: Property and equipment | 83,539. So percent = 83,539 / 585,300 *100 = 14.27%. Answer likely 14.3%. Need evidence.",
+ "raw_content": "<evidence>\n$585.3 million | Brazil Acquisition purchase price (final)\n83,539 | Property and equipment in final purchase price allocation (in thousands)\n</evidence>\n\n<program>divide(83539, 585300)</program>\n\n<answer>14.27%</answer>",
+ "usage": {
+  "prompt_tokens": 147324,
+  "completion_tokens": 300,
+  "total_tokens": 147624,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 147200
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.26,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$585.3 million",
+   "element": "Brazil Acquisition purchase price (final)",
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "83,539",
+   "element": "Property and equipment in final purchase price allocation (in thousands)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(83539, 585300)",
+ "answer_model": "14.27%",
+ "program_value": 0.1427285152913036,
+ "docfinqa_row": 767
+}

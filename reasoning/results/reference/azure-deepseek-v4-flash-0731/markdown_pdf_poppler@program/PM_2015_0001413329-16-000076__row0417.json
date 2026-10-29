@@ -1,0 +1,81 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0417",
+ "format": "markdown_pdf_poppler",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what was the average total accumulated other comprehensive losses from 2013 to 2015 in millions?",
+ "gold": "-6806",
+ "finqa_id": "PM/2015/page_127.pdf-3",
+ "source_page": "page_127",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_poppler/PM_2015_0001413329-16-000076.md",
+ "doc_chars": 669314,
+ "prompt_chars": 669499,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 669314,
+ "original_chars": 669314,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 116308,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 616,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-6806",
+ "reasoning": "We need to find accumulated other comprehensive losses for 2013, 2014, 2015. From balance sheet or statement of equity. In the document, we have:\n\n- At December 31, 2013: from statement of stockholders' equity, balance at Dec 31, 2013 shows Accumulated other comprehensive losses = (4,190) (negative). Actually the line: \"Accumulated other comprehensive losses\" in the equity section for 2013? In the statement of stockholders' equity, the column \"Accumulated Other Comprehensive Losses\" shows balances: Jan 1, 2013: (3,604); Dec 31, 2013: (4,190); Dec 31, 2014: (6,826); Dec 31, 2015: (9,402). Also from Note 17, they list at Dec 31, 2015: (9,402), 2014: (6,826), 2013: (4,190). So we have three values: -4,190, -6,826, -9,402. Average = (-4,190 + -6,826 + -9,402)/3 = sum = -20,418 /3 = -6,806. So answer -6806 (in millions). The question asks \"average total accumulated other comprehensive losses from 2013 to 2015 in millions\" so we give -6806. Ensure we use the values as printed. They are negative. So answer -6806.\n\nWe need to list evidence: values and element. The element names? The document is a 10-K, but we can cite the line items. For evidence, we can list each value with the label \"Accumulated other comprehensive losses\" from the balance sheet or statement of equity. We'll use the statement of stockholders' equity balances. Also Note 17 gives them. We'll cite them.\n\nProgram: average = divide(add(add(-4190, -6826), -9402), 3) but careful with negative numbers. Use add(-4190, -6826) = -11016, add(-11016, -9402) = -20418, divide(-20418, 3) = -6806. So program: divide(add(add(-4190, -6826), -9402), 3)\n\nWe'll output that.",
+ "raw_content": "<evidence>\n-4,190 | Accumulated other comprehensive losses at December 31, 2013 (Statement of Stockholders' Equity)\n-6,826 | Accumulated other comprehensive losses at December 31, 2014 (Statement of Stockholders' Equity)\n-9,402 | Accumulated other comprehensive losses at December 31, 2015 (Statement of Stockholders' Equity)\n</evidence>\n\n<program>\ndivide(add(add(-4190, -6826), -9402), 3)\n</program>\n\n<answer>-6806</answer>",
+ "usage": {
+  "prompt_tokens": 116616,
+  "completion_tokens": 616,
+  "total_tokens": 117232,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 116480
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.95,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "4,190",
+   "element": "Accumulated other comprehensive losses at December 31, 2013 (Statement of Stockholders' Equity)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "6,826",
+   "element": "Accumulated other comprehensive losses at December 31, 2014 (Statement of Stockholders' Equity)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "9,402",
+   "element": "Accumulated other comprehensive losses at December 31, 2015 (Statement of Stockholders' Equity)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(add(add(-4190, -6826), -9402), 3)",
+ "answer_model": "-6806",
+ "program_value": -6806.0,
+ "docfinqa_row": 417
+}

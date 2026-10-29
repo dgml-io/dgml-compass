@@ -1,0 +1,71 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0481",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what was the change in billions of total debt from december 31 , 2014 to 2015?",
+ "gold": "-1",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "PM_2015_0001413329-16-000076.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/DebtAndLiquidity/TotalDebt"
+ ],
+ "r1_reasoning_chars": 1566,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 39607,
+  "completion_tokens": 455,
+  "total_tokens": 40062,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 39424
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/DebtAndLiquidity/TotalDebt"
+ ],
+ "content_chars": 3115,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "-1",
+ "reasoning": "We need answer change in billions total debt from Dec 31 2014 to 2015. Document says total debt was $28.5 billion at Dec 31 2015, and $29.5 billion at Dec 31 2014. Change = 28.5 - 29.5 = -1.0 billion. Need answer likely -1.0 or decrease of 1.0. Question asks \"what was the change in billions\" so value -1.0. Need evidence figures: $28.5 billion, $29.5 billion. Program subtract(28.5, 29.5) = -1.0.",
+ "raw_content": "<evidence>$28.5 billion | DebtAmount at December 31, 2015\n$29.5 billion | DebtAmount at December 31, 2014</evidence>\n<program>subtract(28.5, 29.5)</program>\n<answer>-1.0</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1091,
+  "completion_tokens": 202,
+  "total_tokens": 1293,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$28.5 billion",
+   "element": "DebtAmount at December 31, 2015",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$29.5 billion",
+   "element": "DebtAmount at December 31, 2014",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(28.5, 29.5)",
+ "answer_model": "-1.0",
+ "program_value": -1.0,
+ "elapsed_s": 3.3,
+ "outline_source": "PM_2015_0001413329-16-000076.outline.txt",
+ "outline_chars": 156714
+}

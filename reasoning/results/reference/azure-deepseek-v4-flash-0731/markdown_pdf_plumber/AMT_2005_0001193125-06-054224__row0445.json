@@ -1,0 +1,53 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0445",
+ "format": "markdown_pdf_plumber",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what portion of total value of net operating loss carryforwards is related to state?",
+ "gold": "52.8%",
+ "finqa_id": "AMT/2005/page_105.pdf-4",
+ "source_page": "page_105",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/markdown_pdf_plumber/AMT_2005_0001193125-06-054224.md",
+ "doc_chars": 493545,
+ "prompt_chars": 493718,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 493545,
+ "original_chars": 493545,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 121512,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 266,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "52.17%",
+ "reasoning": "We need to find net operating loss carryforwards total and state portion. From note 13: \"At December 31, 2005, the Company had net federal and state operating loss carryforwards available to reduce future taxable income of approximately $2.2 billion and $2.4 billion, respectively.\" So total = 2.2 + 2.4 = 4.6 billion. State = 2.4 billion. Portion = 2.4 / 4.6 = 0.521739... = 52.17%. But careful: the question says \"total value of net operating loss carryforwards\" - likely the sum of federal and state. So answer as percentage. Or maybe they want fraction? The question: \"what portion of total value of net operating loss carryforwards is related to state?\" So answer as a percentage or decimal. I'll give 52.17% or 0.5217. But the instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for portion, so likely a percentage. I'll put 52.17% or 0.5217. I'll put 52.17%.",
+ "raw_content": "<answer>52.17%</answer>",
+ "usage": {
+  "prompt_tokens": 121658,
+  "completion_tokens": 266,
+  "total_tokens": 121924,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 121600
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.76,
+ "answer_tag_found": true,
+ "docfinqa_row": 445
+}

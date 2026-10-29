@@ -1,0 +1,50 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0126",
+ "format": "markdown_pdf_rules",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "if the total fin 48 gross liability for unrecognized tax benefits at november 28 , 2008 were recognized in the future , is the amount of unrecognized tax benefits that would decrease the effective tax rate greater than the amount that would decrease goodwill?",
+ "gold": "no",
+ "finqa_id": "ADBE/2008/page_89.pdf-4",
+ "source_page": "page_89",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_rules/ADBE_2008_0000796343-09-000007.md",
+ "doc_chars": 443328,
+ "prompt_chars": 443676,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 443328,
+ "original_chars": 443328,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 95226,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 271,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "No",
+ "reasoning": "We need answer question: \"if the total fin 48 gross liability for unrecognized tax benefits at november 28 , 2008 were recognized in the future , is the amount of unrecognized tax benefits that would decrease the effective tax rate greater than the amount that would decrease goodwill?\"\n\nFrom document: \"If the total FIN 48 gross liability for unrecognized tax benefits at November 28, 2008 were recognized in the future, the following amounts, net of an estimated $12.9 million benefit related to deducting such payments on future tax returns, would result: $57.7 million of unrecognized tax benefits would decrease the effective tax rate and $68.9 million would decrease goodwill.\"\n\nSo effective tax rate decrease amount = $57.7 million, goodwill decrease = $68.9 million. Is 57.7 > 68.9? No. So answer is no. Need final answer inside <answer> tags. Probably \"No\" or \"No, $57.7 million is less than $68.9 million.\" But instructions: \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"is ... greater than ...?\" So answer should be \"No\" or \"False\". I'll put \"No\".",
+ "raw_content": "<answer>No</answer>",
+ "usage": {
+  "prompt_tokens": 95405,
+  "completion_tokens": 271,
+  "total_tokens": 95676,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.7,
+ "answer_tag_found": true,
+ "docfinqa_row": 126
+}

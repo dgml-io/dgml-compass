@@ -1,0 +1,74 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0481",
+ "format": "markdown_pdf",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what was the change in billions of total debt from december 31 , 2014 to 2015?",
+ "gold": "-1",
+ "finqa_id": "PM/2015/page_85.pdf-2",
+ "source_page": "page_85",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf/PM_2015_0001413329-16-000076.md",
+ "doc_chars": 504705,
+ "prompt_chars": 504872,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 504705,
+ "original_chars": 504705,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 122013,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 211,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-975",
+ "reasoning": "We need answer change in billions of total debt from Dec 31 2014 to 2015. Document: Selected Financial Data: Total debt 2015 $28,480, 2014 $29,455. Change = 28,480 - 29,455 = -975 million = -0.975 billion. Question asks \"change in billions\" maybe -0.975. Need evidence figures. Also balance sheet total debt? Total debt = short-term borrowings + current portion long-term + long-term debt? 2015: 825+2405+25250=28480. 2014: 1208+1318+26929=29455. Use selected data. Answer -0.975 billion.",
+ "raw_content": "<evidence>\n28,480 | Total debt 2015 (Selected Financial Data)\n29,455 | Total debt 2014 (Selected Financial Data)\n</evidence>\n\n<program>subtract(28480, 29455)</program>\n\n<answer>-0.975</answer>",
+ "usage": {
+  "prompt_tokens": 122322,
+  "completion_tokens": 211,
+  "total_tokens": 122533,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 122112
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.79,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "28,480",
+   "element": "Total debt 2015 (Selected Financial Data)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "29,455",
+   "element": "Total debt 2014 (Selected Financial Data)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "subtract(28480, 29455)",
+ "answer_model": "-0.975",
+ "program_value": -975.0,
+ "docfinqa_row": 481
+}

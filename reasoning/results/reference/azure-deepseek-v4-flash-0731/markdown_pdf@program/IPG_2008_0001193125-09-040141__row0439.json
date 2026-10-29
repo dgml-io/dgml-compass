@@ -1,0 +1,88 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0439",
+ "format": "markdown_pdf",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "how much more , in percent , was spent on october shares than november shares?",
+ "gold": "1229%",
+ "finqa_id": "IPG/2008/page_21.pdf-1",
+ "source_page": "page_21",
+ "ticker": "IPG",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf/IPG_2008_0001193125-09-040141.md",
+ "doc_chars": 368715,
+ "prompt_chars": 368882,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 368715,
+ "original_chars": 368715,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 91399,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 549,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1129.089713",
+ "reasoning": "We need answer question: \"how much more , in percent , was spent on october shares than november shares?\" Need find figures. Document has repurchase table fourth quarter 2008: October 1-31: Total Number of Shares Purchased 29,704, Average Price Paid per Share $5.99. November: 4,468 shares, avg price $3.24. \"spent\" likely total cost = shares * price. October spent = 29,704 * 5.99 = ? November = 4,468 * 3.24 = ? Then percent more = (Oct - Nov)/Nov *100. Compute.\n\nOct: 29,704 * 5.99 = 29,704*6 - 29,704*0.01 = 178,224 - 297.04 = 177,926.96.\nNov: 4,468 * 3.24 = 4,468*3 + 4,468*0.24 = 13,404 + 1,072.32 = 14,476.32.\nDifference = 163,450.64. Divide by Nov = 163,450.64 / 14,476.32 ≈ 11.291? Let's compute precisely. 14,476.32 * 11 = 159,239.52. Remainder 4,211.12. /14,476.32 = 0.2909. So 11.2909. Percent = 1129.09%. So \"how much more, in percent\" = 1129.09% (or about 1129%). Need answer value only. Evidence: figures. Program: divide(subtract(multiply(29704,5.99), multiply(4468,3.24)), multiply(4468,3.24)) *100? Program should be exact nested calls. We can use multiply(...,100). But program executed by benchmark, so use figures as printed. Need include evidence lines.",
+ "raw_content": "<evidence>\n29,704 | October 1-31 Total Number of Shares Purchased\n$5.99 | October 1-31 Average Price Paid per Share\n4,468 | November 1-30 Total Number of Shares Purchased\n$3.24 | November 1-30 Average Price Paid per Share\n</evidence>\n<program>\nmultiply(divide(subtract(multiply(29704, 5.99), multiply(4468, 3.24)), multiply(4468, 3.24)), 100)\n</program>\n<answer>1129.09</answer>",
+ "usage": {
+  "prompt_tokens": 91703,
+  "completion_tokens": 549,
+  "total_tokens": 92252,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 91648
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.4,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "29,704",
+   "element": "October 1-31 Total Number of Shares Purchased",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$5.99",
+   "element": "October 1-31 Average Price Paid per Share",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "4,468",
+   "element": "November 1-30 Total Number of Shares Purchased",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$3.24",
+   "element": "November 1-30 Average Price Paid per Share",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(subtract(multiply(29704, 5.99), multiply(4468, 3.24)), multiply(4468, 3.24)), 100)",
+ "answer_model": "1129.09",
+ "program_value": 1129.089713407827,
+ "docfinqa_row": 439
+}

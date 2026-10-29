@@ -1,0 +1,72 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0459",
+ "format": "markdown_pdf",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was the percentage change in total long-term debt net from 2014 to 2015?",
+ "gold": "148%",
+ "finqa_id": "LMT/2015/page_99.pdf-2",
+ "source_page": "page_99",
+ "ticker": "LMT",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf/LMT_2015_0001193125-16-476010.md",
+ "doc_chars": 503247,
+ "prompt_chars": 503413,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 503247,
+ "original_chars": 503247,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 108132,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 272,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "148.4696%",
+ "reasoning": "We need percentage change in total long-term debt net from 2014 to 2015. From balance sheet: Long-term debt, net 2015 = 14,305? But note 10 says total long-term debt, net = 15,261. Wait balance sheet shows \"Long-term debt, net\" 14,305 and current maturities 956. Total debt net = 15,261. The question says \"total long-term debt net\" - likely total debt net from selected financial data: Total debt, net 2015 = 15,261, 2014 = 6,142. Percentage change = (15261-6142)/6142 = 9119/6142 = 1.4847... = 148.47%. Let's compute exactly: 15261-6142=9119. 9119/6142 = 1.4847... So 148.47%. Use evidence: 15,261 and 6,142 from Selected Financial Data.",
+ "raw_content": "<evidence>15,261 | Total debt, net 2015\n6,142 | Total debt, net 2014</evidence>\n<program>divide(subtract(15261, 6142), 6142)</program>\n<answer>148.47%</answer>",
+ "usage": {
+  "prompt_tokens": 108439,
+  "completion_tokens": 272,
+  "total_tokens": 108711,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 108288
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.36,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "15,261",
+   "element": "Total debt, net 2015",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6,142",
+   "element": "Total debt, net 2014",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(15261, 6142), 6142)",
+ "answer_model": "148.47%",
+ "program_value": 1.4846955389124064,
+ "docfinqa_row": 459
+}

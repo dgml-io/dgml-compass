@@ -1,0 +1,72 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0076",
+ "format": "markdown_pdf_rules",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the percentage change in the weighted-average discount rate for u.s . pension plans from 2014 to 2015?",
+ "gold": "8.9%",
+ "finqa_id": "PM/2015/page_38.pdf-1",
+ "source_page": "page_38",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_rules/PM_2015_0001413329-16-000076.md",
+ "doc_chars": 492980,
+ "prompt_chars": 493179,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 492980,
+ "original_chars": 492980,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 115067,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 326,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "8.860759",
+ "reasoning": "We need answer percentage change in weighted-average discount rate for U.S. pension plans from 2014 to 2015. From document: \"Weighted-average discount rate assumptions for pensions and postretirement plans are as follows: 2015 2014 U.S. pension plans 4.30% 3.95%\". So change from 3.95% to 4.30%. Percentage change = (4.30 - 3.95)/3.95 *100 = 0.35/3.95 = 0.088607... = 8.86% approximately. Need answer value. Evidence: 4.30% | U.S. pension plans 2015; 3.95% | U.S. pension plans 2014. Program: divide(subtract(4.30, 3.95), 3.95) *100? But program only nested calls, no multiply by 100? We can use multiply(divide(subtract(4.30,3.95),3.95),100). But figures as printed are percentages, we can treat as numbers. Answer 8.86%? The question asks percentage change, so answer as percentage.",
+ "raw_content": "<evidence>4.30% | U.S. pension plans 2015\n3.95% | U.S. pension plans 2014</evidence>\n<program>multiply(divide(subtract(4.30, 3.95), 3.95), 100)</program>\n<answer>8.86%</answer>",
+ "usage": {
+  "prompt_tokens": 115380,
+  "completion_tokens": 326,
+  "total_tokens": 115706,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.9,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "4.30%",
+   "element": "U.S. pension plans 2015",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "3.95%",
+   "element": "U.S. pension plans 2014",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(4.30, 3.95), 3.95), 100)",
+ "answer_model": "8.86%",
+ "program_value": 8.860759493670876,
+ "docfinqa_row": 76
+}

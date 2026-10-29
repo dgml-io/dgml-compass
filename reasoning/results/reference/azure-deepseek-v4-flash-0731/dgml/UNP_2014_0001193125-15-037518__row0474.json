@@ -1,0 +1,53 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0474",
+ "format": "dgml",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "if overall freight revenues in 2014 grow as the same rate as agricultural arc growth , what would projected 2015 revenues be in millions?",
+ "gold": "23688",
+ "finqa_id": "UNP/2014/page_25.pdf-2",
+ "source_page": "page_25",
+ "ticker": "UNP",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/dgml/UNP_2014_0001193125-15-037518.dgml.xml",
+ "doc_chars": 655633,
+ "prompt_chars": 655859,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 655633,
+ "original_chars": 655633,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 153615,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 198,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "23,462.4",
+ "reasoning": "We need answer question. Need parse. \"if overall freight revenues in 2014 grow as the same rate as agricultural arc growth , what would projected 2015 revenues be in millions?\"\n\nWe need find agricultural ARC growth rate. From document: Average Revenue per Car table. Agricultural Products ARC 2014 $3,881, 2013 $3,746, % change 4%. So agricultural ARC growth = 4%. Overall freight revenues in 2014 = $22,560 million. If grow at same rate 4%, projected 2015 = 22,560 * 1.04 = 23,462.4 million. Need answer in millions. Probably 23,462.4. Check if \"overall freight revenues in 2014 grow as the same rate as agricultural arc growth\" means use 2014 freight revenues and apply 4%. Yes.\n\nFinal answer inside tags.",
+ "raw_content": "<answer>23,462.4</answer>",
+ "usage": {
+  "prompt_tokens": 153772,
+  "completion_tokens": 198,
+  "total_tokens": 153970,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 151552
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 15.4,
+ "answer_tag_found": true,
+ "docfinqa_row": 474
+}

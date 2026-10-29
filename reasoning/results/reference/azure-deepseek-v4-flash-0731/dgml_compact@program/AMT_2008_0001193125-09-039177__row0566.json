@@ -1,0 +1,73 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0566",
+ "format": "dgml_compact",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "as of december 31 , 2008 , what was the percent of the maturities in 2012 of the aggregate carrying value of long-term debt , including capital leases",
+ "gold": "45.3%",
+ "finqa_id": "AMT/2008/page_94.pdf-1",
+ "source_page": "page_94",
+ "ticker": "AMT",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml_compact/AMT_2008_0001193125-09-039177.dgml.txt",
+ "doc_chars": 530448,
+ "prompt_chars": 530687,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 530448,
+ "original_chars": 530448,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 114721,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 383,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "45.2979%",
+ "reasoning": "We need answer percent of maturities in 2012 of aggregate carrying value of long-term debt including capital leases as of Dec 31 2008. Need find figures. In notes, \"Maturities—As of December 31, 2008, aggregate carrying value of long-term debt, including capital leases, for the next five years and thereafter are estimated to be (in thousands):\" table: 2009 $1,837; 2010 $60,989; 2011 $1,018; 2012 $1,962,822; 2013 $646; Thereafter $2,305,054; Total cash obligations $4,332,366; Unamortized discounts and premiums, net $780; Balance as of December 31, 2008 $4,333,146. So maturities in 2012 = 1,962,822. Aggregate carrying value = 4,333,146. Percent = 1,962,822 / 4,333,146 * 100. Compute. 1,962,822 / 4,333,146 ≈ 0.45298? Let's calculate precisely. 4,333,146 * 0.45 = 1,949,915.7; difference 12,906.3; /4,333,146=0.002978; total 0.452978 -> 45.2978%. So about 45.3%. Need answer value only. Evidence: list figures.",
+ "raw_content": "<evidence>\n1,962,822 | MaturityScheduleAmount 2012\n4,333,146 | LongTermDebtBalance Balance as of December 31, 2008\n</evidence>\n<program>divide(1962822, 4333146)</program>\n<answer>45.3%</answer>",
+ "usage": {
+  "prompt_tokens": 115044,
+  "completion_tokens": 383,
+  "total_tokens": 115427,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 114944
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.37,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,962,822",
+   "element": "MaturityScheduleAmount 2012",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "4,333,146",
+   "element": "LongTermDebtBalance Balance as of December 31, 2008",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(1962822, 4333146)",
+ "answer_model": "45.3%",
+ "program_value": 0.4529785056861689,
+ "docfinqa_row": 566
+}

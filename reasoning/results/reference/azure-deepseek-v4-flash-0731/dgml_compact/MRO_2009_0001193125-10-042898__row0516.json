@@ -1,0 +1,50 @@
+{
+ "id": "MRO_2009_0001193125-10-042898__row0516",
+ "format": "dgml_compact",
+ "key": "MRO_2009_0001193125-10-042898",
+ "question": "by what percentage did the average wti crude oil benchmark decrease from 2007 to 2009?",
+ "gold": "-14.3%",
+ "finqa_id": "MRO/2009/page_56.pdf-1",
+ "source_page": "page_56",
+ "ticker": "MRO",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/dgml_compact/MRO_2009_0001193125-10-042898.dgml.txt",
+ "doc_chars": 697881,
+ "prompt_chars": 698056,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 697881,
+ "original_chars": 697881,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 153188,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 283,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "14.25",
+ "reasoning": "The question asks: \"by what percentage did the average wti crude oil benchmark decrease from 2007 to 2009?\"\n\nI need to find the WTI crude oil benchmark prices for 2007 and 2009.\n\nFrom the document, in the Management's Discussion and Analysis section, there is a table:\n\"Benchmark | 2009 | 2008 | 2007\nWTI crude oil (Dollars per barrel) | $62.09 | $99.75 | $72.41\"\n\nSo WTI crude oil benchmark was $72.41 in 2007 and $62.09 in 2009.\n\nPercentage decrease = (2007 price - 2009 price) / 2007 price * 100\n= (72.41 - 62.09) / 72.41 * 100\n= 10.32 / 72.41 * 100\n= 0.14252... * 100\n= 14.25%\n\nLet me compute: 10.32 / 72.41 = 0.14252... so 14.25%.\n\nThe question asks \"by what percentage did the average wti crude oil benchmark decrease from 2007 to 2009?\" So the answer is approximately 14.25%.\n\nI'll provide the value.",
+ "raw_content": "<answer>14.25</answer>",
+ "usage": {
+  "prompt_tokens": 153337,
+  "completion_tokens": 283,
+  "total_tokens": 153620,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 13.98,
+ "answer_tag_found": true,
+ "docfinqa_row": 516
+}

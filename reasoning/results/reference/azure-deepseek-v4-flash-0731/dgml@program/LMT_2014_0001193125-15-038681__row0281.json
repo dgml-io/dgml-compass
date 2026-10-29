@@ -1,0 +1,76 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0281",
+ "format": "dgml",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "what was the change in millions in backlog at year-end between 2013 and 2014?",
+ "gold": "-1600",
+ "finqa_id": "LMT/2014/page_50.pdf-2",
+ "source_page": "page_50",
+ "ticker": "LMT",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/dgml/LMT_2014_0001193125-15-038681.dgml.xml",
+ "doc_chars": 698763,
+ "prompt_chars": 698929,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 698763,
+ "original_chars": 698763,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 156682,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 229,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-2053",
+ "reasoning": "We need the change in backlog at year-end between 2013 and 2014. The document gives backlog at year-end for segments and total. In the Selected Financial Data table, Backlog: 2014 $80,547, 2013 $82,600. Also in MD&A: backlog was approximately $80.5 billion and $82.6 billion. The question asks \"change in millions\" - likely the difference. 80,547 - 82,600 = -2,053. Or maybe they want absolute change? The question says \"what was the change in millions\" - could be negative. We'll compute subtract(80547, 82600) = -2053. Use figures as printed: $80,547 and $82,600. In evidence, list them.",
+ "raw_content": "<evidence>\n$80,547 | Backlog (Selected Financial Data, 2014)\n$82,600 | Backlog (Selected Financial Data, 2013)\n</evidence>\n<program>\nsubtract(80547, 82600)\n</program>\n<answer>-2053</answer>",
+ "usage": {
+  "prompt_tokens": 156989,
+  "completion_tokens": 229,
+  "total_tokens": 157218,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 156928
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.49,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$80,547",
+   "element": "Backlog (Selected Financial Data, 2014)",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$82,600",
+   "element": "Backlog (Selected Financial Data, 2013)",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "subtract(80547, 82600)",
+ "answer_model": "-2053",
+ "program_value": -2053.0,
+ "docfinqa_row": 281
+}

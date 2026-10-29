@@ -1,0 +1,63 @@
+{
+ "id": "ILMN_2008_0000936392-09-000092__row0185",
+ "key": "ILMN_2008_0000936392-09-000092",
+ "question": "what was the percentage change in the uncertain tax positions from 2007 to 2008?",
+ "gold": "11%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "ILMN_2008_0000936392-09-000092.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/PartDesignation/CriticalAccountingPolicies/ImpairmentOfManufacturingEquipmentDiscussion/IncomeTaxProvisionDiscussion",
+  "/chunk/PartDesignation/CriticalAccountingPolicies/ImpairmentOfManufacturingEquipmentDiscussion/IncomeTaxProvisionDiscussion/UncertainTaxPositionDisclosure"
+ ],
+ "r1_reasoning_chars": 6481,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 19298,
+  "completion_tokens": 1629,
+  "total_tokens": 20927,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/PartDesignation/CriticalAccountingPolicies/ImpairmentOfManufacturingEquipmentDiscussion/IncomeTaxProvisionDiscussion",
+  "/chunk/PartDesignation/CriticalAccountingPolicies/ImpairmentOfManufacturingEquipmentDiscussion/IncomeTaxProvisionDiscussion/UncertainTaxPositionDisclosure"
+ ],
+ "content_chars": 29653,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer percentage change in uncertain tax positions from 2007 to 2008. Document says: \"As of December 28, 2008, no material changes have been made to our uncertain tax positions recorded in accordance with FIN No. 48...\" That implies no material change, so percentage change is 0%? But question asks percentage change. The document doesn't give numeric values for uncertain tax positions, only says no material changes. So we cannot compute exact percentage. Could answer 0%? But \"no material changes\" means percentage change is not material, but not necessarily 0. However question asks \"what was the percentage change\" - if no material changes, likely 0%? But we need be careful. The document does not provide figures for uncertain tax positions. It only states no material changes. So NOT_FOUND? The instruction: if document does not contain enough information, put NOT_FOUND. We have no numeric values. So answer NOT_FOUND.\n\nBut maybe \"no material changes\" implies percentage change is 0%? But that's an inference, not a figure. The question asks percentage change, and we have no numbers. So NOT_FOUND.\n\nWe need provide evidence: cite the sentence. But evidence should be figures? The instruction says list every figure you use inside <evidence>, one per line as value | element. If no figures, maybe no evidence. But we can cite the statement \"no material changes\" as element. But it's not a figure. The instruction says \"Cite only figures you actually read.\" So we can put \"no material changes | UncertainTaxPositionDisclosure\" but that's not a figure. Better to state NOT_FOUND.\n\nLet's produce final answer with NOT_FOUND.",
+ "raw_content": "<evidence>No material changes have been made to our uncertain tax positions | UncertainTaxPositionDisclosure</evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 6831,
+  "completion_tokens": 400,
+  "total_tokens": 7231,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "No material changes have been made to our uncertain tax positions",
+   "element": "UncertainTaxPositionDisclosure",
+   "element_found": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 9.62,
+ "outline_source": "ILMN_2008_0000936392-09-000092.outline.txt",
+ "outline_chars": 79733
+}

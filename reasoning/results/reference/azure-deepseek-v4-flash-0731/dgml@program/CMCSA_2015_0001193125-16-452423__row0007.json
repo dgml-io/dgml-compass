@@ -1,0 +1,77 @@
+{
+ "id": "CMCSA_2015_0001193125-16-452423__row0007",
+ "format": "dgml",
+ "key": "CMCSA_2015_0001193125-16-452423",
+ "question": "what was the change in unrecognized tax benefits from the end of 2014 to the end of 2015?",
+ "gold": "-35",
+ "finqa_id": "CMCSA/2015/page_112.pdf-2",
+ "source_page": "page_112",
+ "ticker": "CMCSA",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml/CMCSA_2015_0001193125-16-452423.dgml.xml",
+ "doc_chars": 907858,
+ "prompt_chars": 908036,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": true,
+ "truncation": "head",
+ "kept_chars": 907748,
+ "original_chars": 1078239,
+ "kept_fraction": 0.8419,
+ "est_doc_tokens": 250309,
+ "est_kept_tokens": 210513,
+ "budget_tokens": 240000,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 181,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-35",
+ "reasoning": "We need answer change in unrecognized tax benefits from end 2014 to end 2015. Document has Note 15 reconciliation: Balance Jan 1 2015 $1,171, Balance Dec 31 2015 $1,136. Change = 1,136 - 1,171 = -35. Or from end 2014 to end 2015: end 2014 $1,171, end 2015 $1,136, decrease $35 million. Need evidence figures.",
+ "raw_content": "<evidence>\n$ 1,171 | UnrecognizedTaxBenefitRollforward Balance, January 1 (2015)\n$ 1,136 | UnrecognizedTaxBenefitRollforward Balance, December 31 (2015)\n</evidence>\n<program>subtract(1136, 1171)</program>\n<answer>-35</answer>",
+ "usage": {
+  "prompt_tokens": 210846,
+  "completion_tokens": 181,
+  "total_tokens": 211027,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 18.02,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 1,171",
+   "element": "UnrecognizedTaxBenefitRollforward Balance, January 1 (2015)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$ 1,136",
+   "element": "UnrecognizedTaxBenefitRollforward Balance, December 31 (2015)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(1136, 1171)",
+ "answer_model": "-35",
+ "program_value": -35.0,
+ "docfinqa_row": 7
+}

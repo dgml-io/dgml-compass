@@ -1,0 +1,74 @@
+{
+ "id": "ILMN_2008_0000936392-09-000092__row0314",
+ "format": "dgml",
+ "key": "ILMN_2008_0000936392-09-000092",
+ "question": "what was the change in millions of company contributions to the employee benefit plans retirement plan between 2007 and 2008?",
+ "gold": "1.2",
+ "finqa_id": "ILMN/2008/page_86.pdf-4",
+ "source_page": "page_86",
+ "ticker": "ILMN",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml/ILMN_2008_0000936392-09-000092.dgml.xml",
+ "doc_chars": 555372,
+ "prompt_chars": 555586,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 555372,
+ "original_chars": 555372,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 127234,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 237,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1.2",
+ "reasoning": "We need answer change in millions of company contributions to retirement plan between 2007 and 2008. From document: \"During the years ended December 28, 2008, December 30, 2007 and December 31, 2006, the Company made matching contributions of $2.6 million, $1.4 million and $0.4 million, respectively.\" So 2008 $2.6M, 2007 $1.4M. Change = 2.6 - 1.4 = 1.2 million. Need answer in millions. Evidence: $2.6 million | MatchingContributionAmount (2008), $1.4 million | MatchingContributionAmount (2007). Program subtract(2.6, 1.4). Final answer inside <answer>1.2</answer>.",
+ "raw_content": "<evidence>\n$2.6 million | MatchingContributionAmount (2008)\n$1.4 million | MatchingContributionAmount (2007)\n</evidence>\n<program>subtract(2.6, 1.4)</program>\n<answer>1.2</answer>",
+ "usage": {
+  "prompt_tokens": 127546,
+  "completion_tokens": 237,
+  "total_tokens": 127783,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 127488
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.78,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$2.6 million",
+   "element": "MatchingContributionAmount (2008)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$1.4 million",
+   "element": "MatchingContributionAmount (2007)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(2.6, 1.4)",
+ "answer_model": "1.2",
+ "program_value": 1.2000000000000002,
+ "docfinqa_row": 314
+}

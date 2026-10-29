@@ -1,0 +1,146 @@
+{
+ "id": "IP_2007_0001193125-08-042850__row0722",
+ "format": "dgml",
+ "key": "IP_2007_0001193125-08-042850",
+ "question": "at december 31 , 2007 , what was the percent of the total future minimum commitments under existing non-cancelable operat- ing leases for purchase obligations",
+ "gold": "72.1%",
+ "finqa_id": "IP/2007/page_75.pdf-3",
+ "source_page": "page_75",
+ "ticker": "IP",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml/IP_2007_0001193125-08-042850.dgml.xml",
+ "doc_chars": 914092,
+ "prompt_chars": 914339,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 914092,
+ "original_chars": 914092,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 217793,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 827,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "88.1534%",
+ "reasoning": "We need answer: \"at december 31, 2007, what was the percent of the total future minimum commitments under existing non-cancelable operating leases for purchase obligations\" Hmm wording: \"percent of the total future minimum commitments under existing non-cancelable operating leases for purchase obligations\" Likely ask: purchase obligations as percent of total future minimum commitments (leases + purchase obligations). Need compute from table in Note 10: Lease obligations and purchase obligations totals by year. Total future minimum commitments under existing non-cancelable operating leases and purchase obligations: table shows Lease obligations: 2008 136, 2009 116, 2010 101, 2011 84, 2012 67, Thereafter 92. Purchase obligations: 1,953, 294, 261, 235, 212, 1,480. Total: 2,089, 410, 362, 319, 279, 1,572. Sum total = 2,089+410+362+319+279+1,572 = 5,031? Let's compute: 2089+410=2499; +362=2861; +319=3180; +279=3459; +1572=5031. Purchase obligations sum = 1953+294+261+235+212+1480 = 4435? 1953+294=2247; +261=2508; +235=2743; +212=2955; +1480=4435. Lease sum = 136+116+101+84+67+92 = 596. Total 5031. Percent purchase = 4435/5031 = 0.8815... = 88.15%. But question says \"percent of the total future minimum commitments under existing non-cancelable operating leases for purchase obligations\" Could be asking purchase obligations as percent of total. Or maybe \"percent of total future minimum commitments ... for purchase obligations\" i.e., what percent are purchase obligations. Answer 88.15%. Need evidence figures. Use table values. Also there is another table in MD&A Contractual obligations includes debt etc, but question specifically \"under existing non-cancelable operating leases\" from Note 10. So use Note 10 table. Compute program: divide(4435, 5031) but need exact figures as printed. We can sum. Program: divide(add(1953,294,261,235,212,1480), add(136,116,101,84,67,92,1953,294,261,235,212,1480)) but nested calls only add(a,b) binary. We'll do nested. Or just use total 5031 and purchase 4435. Evidence list each figure. Final answer inside <answer>88.15%</answer> maybe 88.2%. Let's compute precisely: 4435/5031 = 0.88153... 88.153%. So answer 88.15%.",
+ "raw_content": "<evidence>\n1,953 | Purchase obligations 2008\n294 | Purchase obligations 2009\n261 | Purchase obligations 2010\n235 | Purchase obligations 2011\n212 | Purchase obligations 2012\n1,480 | Purchase obligations Thereafter\n136 | Lease obligations 2008\n116 | Lease obligations 2009\n101 | Lease obligations 2010\n84 | Lease obligations 2011\n67 | Lease obligations 2012\n92 | Lease obligations Thereafter\n</evidence>\n<program>divide(add(1953, add(294, add(261, add(235, add(212, 1480))))), add(136, add(116, add(101, add(84, add(67, add(92, add(1953, add(294, add(261, add(235, add(212, 1480))))))))))))</program>\n<answer>88.15%</answer>",
+ "usage": {
+  "prompt_tokens": 218114,
+  "completion_tokens": 827,
+  "total_tokens": 218941,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 20.46,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,953",
+   "element": "Purchase obligations 2008",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "294",
+   "element": "Purchase obligations 2009",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "261",
+   "element": "Purchase obligations 2010",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "235",
+   "element": "Purchase obligations 2011",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "212",
+   "element": "Purchase obligations 2012",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1,480",
+   "element": "Purchase obligations Thereafter",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "136",
+   "element": "Lease obligations 2008",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "116",
+   "element": "Lease obligations 2009",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "101",
+   "element": "Lease obligations 2010",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "84",
+   "element": "Lease obligations 2011",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "67",
+   "element": "Lease obligations 2012",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "92",
+   "element": "Lease obligations Thereafter",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.8333333333333334,
+ "program_model": "divide(add(1953, add(294, add(261, add(235, add(212, 1480))))), add(136, add(116, add(101, add(84, add(67, add(92, add(1953, add(294, add(261, add(235, add(212, 1480))))))))))))",
+ "answer_model": "88.15%",
+ "program_value": 0.881534486185649,
+ "docfinqa_row": 722
+}

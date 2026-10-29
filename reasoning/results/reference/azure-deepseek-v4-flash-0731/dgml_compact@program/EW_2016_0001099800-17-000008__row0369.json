@@ -1,0 +1,72 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0369",
+ "format": "dgml_compact",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what is the percentage difference in the fair value per share between 2015 and 2016?",
+ "gold": "71%",
+ "finqa_id": "EW/2016/page_94.pdf-3",
+ "source_page": "page_94",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/dgml_compact/EW_2016_0001099800-17-000008.dgml.txt",
+ "doc_chars": 387281,
+ "prompt_chars": 387454,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 387281,
+ "original_chars": 387281,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 83222,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 868,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "70.987314",
+ "reasoning": "We need answer percentage difference in fair value per share between 2015 and 2016. Need identify what \"fair value per share\" refers to. In document, there are fair values per share for options granted: Option fair value per share 2016 $31.00, 2015 $18.13. Also ESPP fair value per share 2016 $22.09, 2015 $15.59. Also market-based RSU? The question likely asks \"fair value per share\" from stock option valuation assumptions table. Need compute percentage difference between 2015 and 2016. Which one? The document has \"Option Awards\" table with \"Fair value, per share\" $31.00 (2016), $18.13 (2015), $11.75 (2014). Also ESPP table with fair value per share. The question says \"the fair value per share between 2015 and 2016\" without specifying option or ESPP. Likely from the option awards table because it's labeled \"Fair value, per share\". Need compute percentage difference: (31.00 - 18.13)/18.13 * 100 = 12.87/18.13 = 0.7099 = 70.99%. Or if they mean percentage difference as absolute? Usually percentage change from 2015 to 2016: (2016-2015)/2015 *100. So ~71.0%. Need provide answer. But let's verify figures: In document under \"Option Awards\" table: \"Fair value, per share | $ 31.00 | $ 18.13 | $ 11.75\" for 2016, 2015, 2014. So yes.\n\nNeed evidence: list figures used. Then program: divide(subtract(31.00, 18.13), 18.13) maybe multiply by 100? The program should compute the value as printed? The answer should be percentage. The program can be divide(subtract(31.00, 18.13), 18.13) which yields 0.7099. But question asks percentage difference, so answer should be 70.99% or 71.0%. The program should output the numeric value? The benchmark likely expects the percentage number. We can put 70.99% in answer. But program must be exact nested calls over figures as printed. We can do multiply(divide(subtract(31.00, 18.13), 18.13), 100) = 70.99. Use figures as printed: 31.00 and 18.13. So program: multiply(divide(subtract(31.00, 18.13), 18.13), 100). Answer: 70.99% (or 71.0%). Need final answer inside <answer> tags only value. Probably \"70.99%\" or \"71.0%\"? The question asks \"what is the percentage difference\" so include percent sign? The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for percentage difference, so include %? It says unless the question asks for them. It asks \"what is the percentage difference\" so units are percentage. So answer \"70.99%\" or \"71.0%\". I'll put 70.99%.\n\nNeed evidence lines: \"31.00 | OptionAwardValuationAssumptions\" and \"18.13 | OptionAwardValuationAssumptions\". Actually element names? The document has table with \"OptionAwardValuationAssumptionYears\" etc. The row label \"Fair value, per share\". We'll cite.\n\nLet's craft final with evidence and program.",
+ "raw_content": "<evidence>\n31.00 | Fair value, per share (Option Awards, 2016)\n18.13 | Fair value, per share (Option Awards, 2015)\n</evidence>\n\n<program>multiply(divide(subtract(31.00, 18.13), 18.13), 100)</program>\n\n<answer>70.99%</answer>",
+ "usage": {
+  "prompt_tokens": 83529,
+  "completion_tokens": 868,
+  "total_tokens": 84397,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 83456
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.66,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "31.00",
+   "element": "Fair value, per share (Option Awards, 2016)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "18.13",
+   "element": "Fair value, per share (Option Awards, 2015)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(31.00, 18.13), 18.13), 100)",
+ "answer_model": "70.99%",
+ "program_value": 70.98731384445671,
+ "docfinqa_row": 369
+}

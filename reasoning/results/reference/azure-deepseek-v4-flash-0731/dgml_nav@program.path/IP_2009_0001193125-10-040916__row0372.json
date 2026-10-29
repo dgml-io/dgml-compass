@@ -1,0 +1,74 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0372",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "what percentage of contractual obligations for future payments under existing debt and lease commitments and purchase obligations at december 31 , 2009 due in 2011 are maturities of long-term debt?",
+ "gold": "41%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "IP_2009_0001193125-10-040916.outline.txt",
+ "doc_source": "IP_2009_0001193125-10-040916.dgml.xml",
+ "outline_chars": 127828,
+ "predicted_xpaths": [
+  "/chunk/InvestmentActivities/ManagementDiscussion/ManagementDiscussion/ContractualObligationsSchedule"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 2236,
+ "r1_usage": {
+  "prompt_tokens": 33582,
+  "completion_tokens": 562,
+  "total_tokens": 34144,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/InvestmentActivities/ManagementDiscussion/ManagementDiscussion/ContractualObligationsSchedule"
+ ],
+ "content_chars": 7825,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "40.79602",
+ "reasoning": "We need percentage: maturities of long-term debt due in 2011 divided by total contractual obligations due in 2011. From table: 2011 column: Maturities of long-term debt = $574, Total = $1,407. Percentage = 574/1407 * 100. Compute.",
+ "raw_content": "<evidence>574 | /chunk/InvestmentActivities/ManagementDiscussion/ManagementDiscussion/ContractualObligationsSchedule/ContractualObligationsSchedule/tr[2]/DebtMaturityAmount[2]</evidence>\n<evidence>1,407 | /chunk/InvestmentActivities/ManagementDiscussion/ManagementDiscussion/ContractualObligationsSchedule/ContractualObligationsSchedule/tr[6]/ContractualObligationAmount[2]</evidence>\n<program>multiply(divide(574, 1407), 100)</program>",
+ "r2_usage": {
+  "prompt_tokens": 2218,
+  "completion_tokens": 183,
+  "total_tokens": 2401,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 2218,
+   "completion_tokens": 183,
+   "got_answer": false
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "574",
+   "element": "chunk/InvestmentActivities/ManagementDiscussion/ManagementDiscussion/ContractualObligationsSchedule/ContractualObligationsSchedule/tr[2]/DebtMaturityAmount[2]",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(574, 1407), 100)",
+ "answer_model": null,
+ "program_value": 40.79601990049751,
+ "elapsed_s": 4.64
+}

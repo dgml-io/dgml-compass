@@ -1,0 +1,72 @@
+{
+ "id": "ZBH_2003_0000950137-04-001881__row0035",
+ "format": "dgml_compact",
+ "key": "ZBH_2003_0000950137-04-001881",
+ "question": "what was the difference in operating profit for the americas as a percentage of net sales between 2001 and 2003?",
+ "gold": "3.8%",
+ "finqa_id": "ZBH/2003/page_40.pdf-1",
+ "source_page": "page_40",
+ "ticker": "ZBH",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/dgml_compact/ZBH_2003_0000950137-04-001881.dgml.txt",
+ "doc_chars": 355371,
+ "prompt_chars": 355572,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 355371,
+ "original_chars": 355371,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 75978,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 146,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "3.8",
+ "reasoning": "We need answer difference in operating profit for Americas as percentage of net sales between 2001 and 2003. From segment operating profit margin table: Americas 2003 51.2%, 2002 48.3%, 2001 47.4%. Difference = 51.2 - 47.4 = 3.8 percentage points. Need answer value. Evidence figures.",
+ "raw_content": "<evidence>51.2% | GeographicSegment: Americas (operating profit margin table)\n47.4% | GeographicSegment: Americas (operating profit margin table)</evidence>\n<program>subtract(51.2, 47.4)</program>\n<answer>3.8</answer>",
+ "usage": {
+  "prompt_tokens": 76291,
+  "completion_tokens": 146,
+  "total_tokens": 76437,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 76032
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 1.69,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "51.2%",
+   "element": "GeographicSegment: Americas (operating profit margin table)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "47.4%",
+   "element": "GeographicSegment: Americas (operating profit margin table)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(51.2, 47.4)",
+ "answer_model": "3.8",
+ "program_value": 3.8000000000000043,
+ "docfinqa_row": 35
+}

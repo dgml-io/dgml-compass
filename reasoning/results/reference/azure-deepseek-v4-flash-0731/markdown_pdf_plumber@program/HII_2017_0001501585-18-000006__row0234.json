@@ -1,0 +1,72 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0234",
+ "format": "markdown_pdf_plumber",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what was the return on total assets during 2013?",
+ "gold": "4.2%",
+ "finqa_id": "HII/2017/page_47.pdf-1",
+ "source_page": "page_47",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/markdown_pdf_plumber/HII_2017_0001501585-18-000006.md",
+ "doc_chars": 479340,
+ "prompt_chars": 479477,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 479340,
+ "original_chars": 479340,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 106334,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 292,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "4.2165%",
+ "reasoning": "We need answer return on total assets during 2013. Need figures: net earnings 2013 = 261 (from selected financial data). Total assets 2013 = 6,190. Return on assets = net earnings / total assets? Usually ROA = net income / average total assets, but question \"return on total assets during 2013\" might use ending total assets? Need infer. Document gives selected financial data: 2013 net earnings 261, total assets 6,190. Also 2012? Not given. So use 261/6190 = 0.04216 = 4.22%. But check if \"return on total assets\" defined? No. Could be net earnings / total assets. Use 261/6190. Compute: 261/6190 = 0.0421648 = 4.2165%. Answer as percentage? Question asks \"what was the return on total assets during 2013?\" Likely percentage. Provide value. Evidence: 261 | Net earnings (loss) 2013; 6,190 | Total assets 2013. Program divide(261, 6190).",
+ "raw_content": "<evidence>\n261 | Net earnings (loss) 2013\n6,190 | Total assets 2013\n</evidence>\n<program>\ndivide(261, 6190)\n</program>\n<answer>4.22%</answer>",
+ "usage": {
+  "prompt_tokens": 106634,
+  "completion_tokens": 292,
+  "total_tokens": 106926,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 106496
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.6,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "261",
+   "element": "Net earnings (loss) 2013",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6,190",
+   "element": "Total assets 2013",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(261, 6190)",
+ "answer_model": "4.22%",
+ "program_value": 0.042164781906300484,
+ "docfinqa_row": 234
+}

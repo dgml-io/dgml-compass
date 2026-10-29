@@ -1,0 +1,79 @@
+{
+ "id": "IP_2007_0001193125-08-042850__row0683",
+ "format": "markdown_pdf_poppler",
+ "key": "IP_2007_0001193125-08-042850",
+ "question": "what percentage of industrial packaging sales where represented by european industrial packaging net sales in 2006?",
+ "gold": "20%",
+ "finqa_id": "IP/2007/page_31.pdf-2",
+ "source_page": "page_31",
+ "ticker": "IP",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_poppler/IP_2007_0001193125-08-042850.md",
+ "doc_chars": 614779,
+ "prompt_chars": 614983,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 614779,
+ "original_chars": 614779,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 105105,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "stop",
+   "completion_tokens": 469,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 1,
+ "ok": true,
+ "answer": "20.304569",
+ "reasoning": "We need answer percentage: European Industrial Packaging net sales 2006 / Industrial Packaging net sales 2006. From document: Industrial Packaging net sales 2006 = $4,925 million (segment table). European Industrial Packaging net sales 2006 = $1.0 billion? In text: \"EUROPEAN INDUSTRIAL PACKAGING net sales for 2007 were $1.1 billion, up from $1.0 billion in 2006 and $880 million in 2005.\" So 2006 = $1.0 billion = $1,000 million. Percentage = 1000/4925 *100 = 20.3045685% approx 20.3%. Need evidence values. Use exact figures: \"1.0\" billion? The text says \"$1.0 billion\" - but in millions? Use 1,000. Industrial Packaging sales 2006 $4,925. Compute divide(1000,4925)*100? Program: multiply(divide(1000, 4925), 100). Answer 20.3045685. Provide inside <answer>20.3%</answer>? The question asks percentage, so include %? They said no units unless asked. They ask percentage, so include % sign? Usually answer numeric with %? I'll put 20.3% inside tags. But instructions: \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what percentage\" so units are percentage. So answer \"20.3%\" or \"20.30%\"? Use 20.3%. Evidence: \"1.0 billion | European Industrial Packaging net sales 2006\" and \"$4,925 | Industrial Packaging net sales 2006\". Also maybe \"Industrial Packaging net sales for 2007 increased 6% to $5.2 billion compared with $4.9 billion in 2006\" but use table.",
+ "raw_content": "<evidence>1.0 billion | European Industrial Packaging net sales 2006\n$4,925 | Industrial Packaging net sales 2006</evidence>\n<program>multiply(divide(1000, 4925), 100)</program>\n<answer>20.3%</answer>",
+ "usage": {
+  "prompt_tokens": 105413,
+  "completion_tokens": 469,
+  "total_tokens": 105882,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 105216
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.91,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1.0 billion",
+   "element": "European Industrial Packaging net sales 2006",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$4,925",
+   "element": "Industrial Packaging net sales 2006",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "multiply(divide(1000, 4925), 100)",
+ "answer_model": "20.3%",
+ "program_value": 20.304568527918782,
+ "docfinqa_row": 683
+}

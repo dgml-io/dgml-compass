@@ -1,0 +1,428 @@
+{
+ "docset": "nqkh1hkhhkaf",
+ "derived_from": "nqkh1hkhhkaf_z4ervk9ic0oo.ref.json",
+ "spec_source": "auto",
+ "note": "ComplexType reference: groups of flat-ref answers that belong together (table rows / entities / itemized lists). Values are the flat ref's texts (token provenance stripped). Relations are document-verified: row instances must be token-local in the document's token stream AND (where a reference XML exists) co-occur inside one element; types failing the co-occurrence gate are dropped. Per file, a type maps to a list of instances, an explicit [] when the document genuinely has no instance of the type (predicting one there is an instance false-positive), or null when the gold could not be verified for that file (metrics must SKIP null, never treat it as empty). The flat ref is unchanged and remains the value-level gold.",
+ "types": {
+  "LandlordInfo": {
+   "scope": "group",
+   "members": [
+    "Landlord+Name",
+    "Landlord+broker+name",
+    "Landlord+transfer+clause"
+   ],
+   "optional": []
+  },
+  "LeaseInfo": {
+   "scope": "group",
+   "members": [
+    "Lease+Execution+Date",
+    "Lease+Term"
+   ],
+   "optional": []
+  },
+  "PremisesInfo": {
+   "scope": "group",
+   "members": [
+    "Premises+Address",
+    "Premises+Rentable+Area+details"
+   ],
+   "optional": []
+  },
+  "TenantInfo": {
+   "scope": "group",
+   "members": [
+    "Tenant+Name",
+    "Tenant+broker+name"
+   ],
+   "optional": []
+  }
+ },
+ "instances": {
+  "1tnhkuacfeku": {
+   "LandlordInfo": null,
+   "LeaseInfo": [
+    {
+     "Lease+Execution+Date": "April 24 , 2020",
+     "Lease+Term": "5 years from the Commencement Date , as may be extended"
+    }
+   ],
+   "PremisesInfo": [
+    {
+     "Premises+Address": "1600 Bubba Road , Suite 111 , Fort Worth , Texas 76109",
+     "Premises+Rentable+Area+details": "17,044 square feet"
+    }
+   ],
+   "TenantInfo": null
+  },
+  "3m8ne11jj0kg": {
+   "LandlordInfo": [
+    {
+     "Landlord+Name": "444 LAKEVIEW , LLC",
+     "Landlord+broker+name": "Commercial Real Estate LLC",
+     "Landlord+transfer+clause": "Landlord may assign or encumber its interest under this Lease . If any portion of the Premises is sold , transferred , or leased , or if Landlord 's interest in any underlying lease of the Premises is transferred or sold , Landlord shall be relieved of all existing and future obligations and liabilities under this Lease , provided that the purchaser , transferee , or tenant of the Premises assumes in writing those obligations and liabilities ."
+    }
+   ],
+   "LeaseInfo": [
+    {
+     "Lease+Execution+Date": "February 25th , 2022",
+     "Lease+Term": "A term commencing on the Commencement Date and continuing for 124 full calendar months ( plus any partial calendar month in which the Commencement Date falls ) , as extended or sooner terminated under the terms of this Lease . If the Commencement Date falls on a day other than the first day of a month , then for purposes of calculating the length of the Lease Term , the first month of the Lease Term shall be the month immediately following the month in which the Commencement Date occurs . Tenant shall pay prorated Rent calculated on a per diem basis for the partial month in which the Commencement Date occurs at the rate the rate in effect for the first month of the Lease Term for which Rent has not been abated or reduced ( i.e. , $ 35.00 per square foot ) ."
+    }
+   ],
+   "PremisesInfo": [
+    {
+     "Premises+Address": "Lakeview Ave , West Palm Beach , Florida",
+     "Premises+Rentable+Area+details": "27,314 square feet ( consisting of 13,657 square feet in Suite 700 and 13,657 square feet in Suite 800 ) . This square footage figure includes an add - on factor for Common Areas in the Building and has been agreed upon by the parties as final and correct and is not subject to challenge or dispute by either party ."
+    }
+   ],
+   "TenantInfo": [
+    {
+     "Tenant+Name": "Shorebucks LLC",
+     "Tenant+broker+name": "CW of Florida , LLC"
+    }
+   ]
+  },
+  "5jh2fgjxsezk": {
+   "LandlordInfo": [
+    {
+     "Landlord+Name": "Perry & Blair LLC",
+     "Landlord+broker+name": "Thrive Real Estate LLC",
+     "Landlord+transfer+clause": "Landlord may assign or encumber its interest under this Lease . If any portion of the Premises is sold , transferred , or leased , or if Landlord 's interest in any underlying lease of the Premises is transferred or sold , Landlord shall be relieved of all existing and future obligations and liabilities under this Lease , provided that the purchaser , transferee , or tenant of the Premises assumes in writing those obligations and liabilities ."
+    }
+   ],
+   "LeaseInfo": [
+    {
+     "Lease+Execution+Date": "March 29th , 2019",
+     "Lease+Term": "A term commencing on the Commencement Date and continuing for 96 full calendar months ( plus any partial calendar month in which the Commencement Date falls ) , as extended or sooner terminated under the terms of this Lease . If the Commencement Date falls on a day other than the first day of a month , then for purposes of calculating the length of the Lease Term , the first month of the Lease Term shall be the month immediately following the month in which the Commencement Date occurs . Tenant shall pay prorated Rent calculated on a per diem basis for the partial month in which the Commencement Date occurs at the rate in effect for the first month of the Lease Term for which Rent has not been abated or reduced ( i.e. , $ 33.82 per square foot ) ."
+    }
+   ],
+   "PremisesInfo": [
+    {
+     "Premises+Address": "515 Michelin Rd , Denver , CO , 80209",
+     "Premises+Rentable+Area+details": "9,753 square feet . This square footage figure includes an add - on factor for Common Areas in the Building and has been agreed upon by the parties as final and correct and is not subject to challenge or dispute by either party ."
+    }
+   ],
+   "TenantInfo": [
+    {
+     "Tenant+Name": "Shorebucks LLC",
+     "Tenant+broker+name": "CW of Colorado , LLC"
+    }
+   ]
+  },
+  "8wts96bqhugi": {
+   "LandlordInfo": [
+    {
+     "Landlord+Name": "CHURCH STREET , LLC",
+     "Landlord+broker+name": "JRL - NYC , LLC",
+     "Landlord+transfer+clause": "In the event of a sale , transfer or leasing of the Premises by Landlord , Landlord shall have the right to transfer the Security to the vendee , transferee or lessee , whereupon Landlord shall be deemed released by Tenant from all liability for the return of said Security , except that Landlord shall remain responsible for the Security Deposit paid hereunder , until such time as [ a ] a successor landlord or party in interest assumes in writing the obligations therefore and [ 2 ] Landlord provides notice of assignment to Tenant . In such event , Tenant agrees to look solely to such new Landlord for the return of said Security . This Article shall apply to every transfer or assignment of the Security to a new Landlord . Tenant shall not assign or encumber the Security , and Landlord shall not be bound by any such assignment and encumbrance ."
+    }
+   ],
+   "LeaseInfo": [
+    {
+     "Lease+Execution+Date": "December 1 , 2021",
+     "Lease+Term": "The term of this Lease shall commence on December 1 , 2021 ( the “ Commencement Date ” ) and shall end , unless sooner terminated as hereinafter provided , on the la st d a y o f t h e c a lendar m o nth in which the day fol l o wing the ten ( 10 ) year anniversary of the Re nt Commencement Date ( as defined in Article 40 of this Lease ) occurs ( the \" Expiration Date \" ) ( from the Commencement Date to the Expiration Date being the \" Initial Term \" , as may be extended pursuant to and in accordance with Section 72 hereof ."
+    }
+   ],
+   "PremisesInfo": null,
+   "TenantInfo": [
+    {
+     "Tenant+Name": "Trutone Lane LLC",
+     "Tenant+broker+name": "Retail Worx Brokerage"
+    }
+   ]
+  },
+  "d1omdshzwuys": {
+   "LandlordInfo": null,
+   "LeaseInfo": [
+    {
+     "Lease+Execution+Date": "April 30 , 2020",
+     "Lease+Term": "5 years from the Commencement Date , as may be extended"
+    }
+   ],
+   "PremisesInfo": [
+    {
+     "Premises+Address": "100 Glory Road , Suite 111 , Fort Worth , Texas 76109",
+     "Premises+Rentable+Area+details": "8,340"
+    }
+   ],
+   "TenantInfo": null
+  },
+  "ecaaxy0leqbe": {
+   "LandlordInfo": [
+    {
+     "Landlord+Name": "Menlo Group",
+     "Landlord+broker+name": "Momentum Realty LLC",
+     "Landlord+transfer+clause": "Landlord may assign or encumber its interest under this Lease . If any portion of the Premises is sold , transferred , or leased , or if Landlord 's interest in any underlying lease of the Premises is transferred or sold , Landlord shall be relieved of all existing and future obligations and liabilities under this Lease , provided that the purchaser , transferee , or tenant of the Premises assumes in writing those obligations and liabilities ."
+    }
+   ],
+   "LeaseInfo": [
+    {
+     "Lease+Execution+Date": "March 29th , 2019",
+     "Lease+Term": "A term commencing on the Commencement Date and continuing for 96 full calendar months ( plus any partial calendar month in which the Commencement Date falls ) , as extended or sooner terminated under the terms of this Lease . If the Commencement Date falls on a day other than the first day of a month , then for purposes of calculating the length of the Lease Term , the first month of the Lease Term shall be the month immediately following the month in which the Commencement Date occurs . Tenant shall pay prorated Rent calculated on a per diem basis for the partial month in which the Commencement Date occurs at the rate in effect for the first month of the Lease Term for which Rent has not been abated or reduced ( i.e. , $ 26.99 per square foot ) ."
+    }
+   ],
+   "PremisesInfo": [
+    {
+     "Premises+Address": "1564 E Broadway Rd , Tempe , Arizona 85282",
+     "Premises+Rentable+Area+details": "16,159 square feet . This square footage figure includes an add - on factor for Common Areas in the Building and has been agreed upon by the parties as final and correct and is not subject to challenge or dispute by either party ."
+    }
+   ],
+   "TenantInfo": [
+    {
+     "Tenant+Name": "Shorebucks LLC",
+     "Tenant+broker+name": "CW of Arizona , LLC"
+    }
+   ]
+  },
+  "gcr8itviyeyw": {
+   "LandlordInfo": [
+    {
+     "Landlord+Name": "Landmark LLC",
+     "Landlord+broker+name": "Sunrise Real Estate LLC",
+     "Landlord+transfer+clause": "Landlord may assign or encumber its interest under this Lease . If any portion of the Premises is sold , transferred , or leased , or if Landlord 's interest in any underlying lease of the Premises is transferred or sold , Landlord shall be relieved of all existing and future obligations and liabilities under this Lease , provided that the purchaser , transferee , or tenant of the Premises assumes in writing those obligations and liabilities ."
+    }
+   ],
+   "LeaseInfo": [
+    {
+     "Lease+Execution+Date": "May 17th , 2018",
+     "Lease+Term": "A term commencing on the Commencement Date and continuing for 84 full calendar months ( plus any partial calendar month in which the Commencement Date falls ) , as extended or sooner terminated under the terms of this Lease . If the Commencement Date falls on a day other than the first day of a month , then for purposes of calculating the length of the Lease Term , the first month of the Lease Term shall be the month immediately following the month in which the Commencement Date occurs . Tenant shall pay prorated Rent calculated on a per diem basis for the partial month in which the Commencement Date occurs at the rate in effect for the first month of the Lease Term for which Rent has not been abated or reduced ( i.e. , $ 30.00 per square foot ) ."
+    }
+   ],
+   "PremisesInfo": [
+    {
+     "Premises+Address": "4055 Valley View Ln , Dallas , Texas , 75244",
+     "Premises+Rentable+Area+details": "15,657 square feet . This square footage figure includes an add - on factor for Common Areas in the Building and has been agreed upon by the parties as final and correct and is not subject to challenge or dispute by either party ."
+    }
+   ],
+   "TenantInfo": [
+    {
+     "Tenant+Name": "Shorebucks LLC",
+     "Tenant+broker+name": "CW of Texas , LLC"
+    }
+   ]
+  },
+  "gzcpur6eo0wv": {
+   "LandlordInfo": null,
+   "LeaseInfo": [
+    {
+     "Lease+Execution+Date": "April 24 , 2020",
+     "Lease+Term": "5 years from the Commencement Date , as may be extended"
+    }
+   ],
+   "PremisesInfo": [
+    {
+     "Premises+Address": "1600 Bubba Road , Suite 111 , Fort Worth , Texas 76109",
+     "Premises+Rentable+Area+details": "5,340"
+    }
+   ],
+   "TenantInfo": null
+  },
+  "ijxoushsd0sb": {
+   "LandlordInfo": [
+    {
+     "Landlord+Name": "BIRCH STREET , LLC",
+     "Landlord+broker+name": "JRL - NYC , LLC",
+     "Landlord+transfer+clause": "In the event of a sale , transfer or leasing of the Premises by Landlord , Landlord shall have the right to transfer the Security to the vendee , transferee or lessee , whereupon Landlord shall be deemed released by Tenant from all liability for the return of said Security , except that Landlord shall remain responsible for the Security Deposit paid hereunder , until such time as [ a ] a successor landlord or party in interest assumes in writing the obligations therefore and [ 2 ] Landlord provides notice of assignment to Tenant . In such event , Tenant agrees to look solely to such new Landlord for the return of said Security . This Article shall apply to every transfer or assignment of the Security to a new Landlord . Tenant shall not assign or encumber the Security , and Landlord shall not be bound by any such assignment and encumbrance ."
+    }
+   ],
+   "LeaseInfo": [
+    {
+     "Lease+Execution+Date": "October 15 , 2021",
+     "Lease+Term": "The term of this Lease shall commence on October 15 , 2018 ( the Commencement Date ” ) and shall end , unless sooner terminated as hereinafter provided , on the la s t day of th e ca l e n d a r mo n t h in w h ic h t h e d a y f o llo w in g t h e t e n ( 1 0 ) year anniversary of the Re n t Commencement Date ( as defined in Article 40 of this Lease ) occurs ( the \" Expiration Date \" ) ( from the Commencement Date to the Expiration Date being the \" Initial Term \" , as may be extended pursuant to and in accordance with Section 72 hereof ."
+    }
+   ],
+   "PremisesInfo": null,
+   "TenantInfo": [
+    {
+     "Tenant+Name": "Trutone Lane LLC",
+     "Tenant+broker+name": "Retail Worx Brokerage"
+    }
+   ]
+  },
+  "iqydgvviwkkf": {
+   "LandlordInfo": [
+    {
+     "Landlord+Name": "DHA Group",
+     "Landlord+broker+name": "CF Realty LLC",
+     "Landlord+transfer+clause": "Landlord may assign or encumber its interest under this Lease . If any portion of the Premises is sold , transferred , or leased , or if Landlord 's interest in any underlying lease of the Premises is transferred or sold , Landlord shall be relieved of all existing and future obligations and liabilities under this Lease , provided that the purchaser , transferee , or tenant of the Premises assumes in writing those obligations and liabilities ."
+    }
+   ],
+   "LeaseInfo": [
+    {
+     "Lease+Execution+Date": "March 29th , 2019",
+     "Lease+Term": "A term commencing on the Commencement Date and continuing for 84 full calendar months ( plus any partial calendar month in which the Commencement Date falls ) , as extended or sooner terminated under the terms of this Lease . If the Commencement Date falls on a day other than the first day of a month , then for purposes of calculating the length of the Lease Term , the first month of the Lease Term shall be the month immediately following the month in which the Commencement Date occurs . Tenant shall pay prorated Rent calculated on a per diem basis for the partial month in which the Commencement Date occurs at the rate in effect for the first month of the Lease Term for which Rent has not been abated or reduced ( i.e. , $ 38.00 per square foot ) ."
+    }
+   ],
+   "PremisesInfo": [
+    {
+     "Premises+Address": "111 Bauer Dr , Oakland , New Jersey , 07436",
+     "Premises+Rentable+Area+details": "13,500 square feet . This square footage figure includes an add - on factor for Common Areas in the Building and has been agreed upon by the parties as final and correct and is not subject to challenge or dispute by either party ."
+    }
+   ],
+   "TenantInfo": [
+    {
+     "Tenant+Name": "Shorebucks LLC",
+     "Tenant+broker+name": "CW of New Jersey , LLC"
+    }
+   ]
+  },
+  "lmkjcsh3ykkr": {
+   "LandlordInfo": [
+    {
+     "Landlord+Name": "BIRCH STREET , LLC",
+     "Landlord+broker+name": "JRL - NYC , LLC",
+     "Landlord+transfer+clause": "In the event of a sale , transfer or leasing of the Premises by Landlord , Landlord shall have the right to transfer the Security to the vendee , transferee or lessee , whereupon Landlord shall be deemed released by Tenant from all liability for the return of said Security , except that Landlord shall remain responsible for the Security Deposit paid hereunder , until such time as [ a ] a successor landlord or party in interest assumes in writing the obligations therefore and [ 2 ] Landlord provides notice of assignment to Tenant . In such event , Tenant agrees to look solely to such new Landlord for the return of said Security . This Article shall apply to every transfer or assignment of the Security to a new Landlord . Tenant shall not assign or encumber the Security , and Landlord shall not be bound by any such assignment and encumbrance ."
+    }
+   ],
+   "LeaseInfo": [
+    {
+     "Lease+Execution+Date": "October 15 , 2021",
+     "Lease+Term": "The term of this Lease shall commence on October 15 , 2018 ( the Commencement Date ” ) and shall end , unless sooner terminated as hereinafter provided , on the la s t d a y o f t h e c a l e n d a r m o n t h in w h ic h t h e d a y f o l lo w in g t h e t e n ( 1 0 ) year anniversary of the Re n t Commencement Date ( as defined in Article 40 of this Lease ) occurs ( the \" Expiration Date \" ) ( from the Commencement Date to the Expiration Date being the \" Initial Term \" , as may be extended pursuant to and in accordance with Section 72 hereof ."
+    }
+   ],
+   "PremisesInfo": null,
+   "TenantInfo": [
+    {
+     "Tenant+Name": "Trutone Lane LLC",
+     "Tenant+broker+name": "Retail Worx Brokerage ."
+    }
+   ]
+  },
+  "ouumqus8kkxj": {
+   "LandlordInfo": [
+    {
+     "Landlord+Name": "BROADWAY , LLC",
+     "Landlord+broker+name": "JRL - NYC , LLC",
+     "Landlord+transfer+clause": "In the event of a sale , transfer or leasing of the Premises by Landlord , Landlord shall have the right to transfer the Security to the vendee , transferee or lessee , whereupon Landlord shall be deemed released by Tenant from all liability for the return of said Security , except that Landlord shall remain responsible for the Security Deposit paid hereunder , until such time as [ a ] a successor landlord or party in interest assumes in writing the obligations therefore and [ 2 ] Landlord provides notice of assignment to Tenant . In such event , Tenant agrees to look solely to such new Landlord for the return of said Security . This Article shall apply to every transfer or assignment of the Security to a new Landlord . Tenant shall not assign or encumber the Security , and Landlord shall not be bound by any such assignment and encumbrance ."
+    }
+   ],
+   "LeaseInfo": [
+    {
+     "Lease+Execution+Date": "February 1 , 2021",
+     "Lease+Term": "The term of this Lease shall commence on February 1 , 2021 ( the “ Commencement Date ” ) and shall end , unless sooner terminated as hereinafter provided , on the la st d a y o f t h e c a lendar m o nth in which the day fol l o wing the ten ( 10 ) year anniversary of the Re nt Commencement Date ( as defined in Article 40 of this Lease ) occurs ( the \" Expiration Date \" ) ( from the Commencement Date to the Expiration Date being the \" Initial Term \" , as may be extended pursuant to and in accordance with Section 72 hereof ."
+    }
+   ],
+   "PremisesInfo": null,
+   "TenantInfo": [
+    {
+     "Tenant+Name": "TruTone Lane LLC",
+     "Tenant+broker+name": "Retail Worx Brokerage"
+    }
+   ]
+  },
+  "q6bxwnl5mua2": {
+   "LandlordInfo": [
+    {
+     "Landlord+Name": "LANDLORDIUS , LLC",
+     "Landlord+broker+name": "JRL - NYC , LLC",
+     "Landlord+transfer+clause": "In the event of a sale , transfer or leasing of the Premises by Landlord , Landlord shall have the right to transfer the Security to the vendee , transferee or lessee , whereupon Landlord shall be deemed released by Tenant from all liability for the return of said Security , except that Landlord shall remain responsible for the Security Deposit paid hereunder , until such time as [ a ] a successor landlord or party in interest assumes in writing the obligations therefore and [ 2 ] Landlord provides notice of assignment to Tenant . In such event , Tenant agrees to look solely to such new Landlord for the return of said Security . This Article shall apply to every transfer or assignment of the Security to a new Landlord . Tenant shall not assign or encumber the Security , and Landlord shall not be bound by any such assignment and encumbrance ."
+    }
+   ],
+   "LeaseInfo": [
+    {
+     "Lease+Execution+Date": "June 1 , 2021",
+     "Lease+Term": "The term of this Lease shall commence on February 1 , 2021 ( the “ Commencement Date ” ) and shall end , unless sooner terminated as hereinafter provided , on the la st d a y o f t h e c a lendar m o nth in which the day fol l o wing the ten ( 10 ) year anniversary of the Re nt Commencement Date ( as defined in Article 40 of this Lease ) occurs ( the \" Expiration Date \" ) ( from the Commencement Date to the Expiration Date being the \" Initial Term \" , as may be extended pursuant to and in accordance with Section 72 hereof ."
+    }
+   ],
+   "PremisesInfo": null,
+   "TenantInfo": [
+    {
+     "Tenant+Name": "TruTone Lane LLC",
+     "Tenant+broker+name": "Retail Worx Brokerage"
+    }
+   ]
+  },
+  "qhyppxl1ak6v": {
+   "LandlordInfo": [
+    {
+     "Landlord+Name": "Catalyst Group LLC",
+     "Landlord+broker+name": "Catalyst LLC",
+     "Landlord+transfer+clause": "Landlord may assign or encumber its interest under this Lease . If any portion of the Premises is sold , transferred , or leased , or if Landlord 's interest in any underlying lease of the Premises is transferred or sold , Landlord shall be relieved of all existing and future obligations and liabilities under this Lease ,"
+    }
+   ],
+   "LeaseInfo": [
+    {
+     "Lease+Execution+Date": "January 8th , 2018",
+     "Lease+Term": "A term commencing on the Commencement Date and continuing for 124 full calendar months ( plus any partial calendar month in which the Commencement Date falls ) , as extended or sooner terminated under the terms of this Lease . If the Commencement Date falls on a day other than the first day of a month , then for purposes of calculating the length of the Lease Term , the first month of the Lease Term shall be the month immediately following the month in which the Commencement Date occurs . Tenant shall pay prorated Rent calculated on a per diem basis for the partial month in which the Commencement Date occurs at the rate in effect for the first month of the Lease Term for which Rent has not been abated or reduced ( i.e. , $ 43.00 per square foot ) ."
+    }
+   ],
+   "PremisesInfo": [
+    {
+     "Premises+Address": "600 Main Street , Bellevue , WA , 98004",
+     "Premises+Rentable+Area+details": "25,568 square feet ( consisting of 12,100 square feet in Suite 500 and 13,468 square feet in Suite 600 ) .. This square footage figure includes an add - on factor for Common Areas in the Building and has been agreed upon by the parties as final and correct and is not subject to challenge or dispute by either party ."
+    }
+   ],
+   "TenantInfo": [
+    {
+     "Tenant+Name": "Shorebucks LLC",
+     "Tenant+broker+name": "CW of Washington , LLC"
+    }
+   ]
+  },
+  "tin5thja0qvk": {
+   "LandlordInfo": [
+    {
+     "Landlord+Name": "Menlo Group",
+     "Landlord+broker+name": "Momentum Realty LLC",
+     "Landlord+transfer+clause": "Landlord may assign or encumber its interest under this Lease . If any portion of the Premises is sold , transferred , or leased , or if Landlord 's interest in any underlying lease of the Premises is transferred or sold , Landlord shall be relieved of all existing and future obligations and liabilities under this Lease , provided that the purchaser , transferee , or tenant of the Premises assumes in writing those obligations and liabilities ."
+    }
+   ],
+   "LeaseInfo": [
+    {
+     "Lease+Execution+Date": "March 29th , 2019",
+     "Lease+Term": "A term commencing on the Commencement Date and continuing for 96 full calendar months ( plus any partial calendar month in which the Commencement Date falls ) , as extended or sooner terminated under the terms of this Lease . If the Commencement Date falls on a day other than the first day of a month , then for purposes of calculating the length of the Lease Term , the first month of the Lease Term shall be the month immediately following the month in which the Commencement Date occurs . Tenant shall pay prorated Rent calculated on a per diem basis for the partial month in which the Commencement Date occurs at the rate in effect for the first month of the Lease Term for which Rent has not been abated or reduced ( i.e. , $ 26.99 per square foot ) ."
+    }
+   ],
+   "PremisesInfo": [
+    {
+     "Premises+Address": "1564 E Broadway Rd , Tempe , Arizona 85282",
+     "Premises+Rentable+Area+details": "16,159 square feet . This square footage figure includes an add - on factor for Common Areas in the Building and has been agreed upon by the parties as final and correct and is not subject to challenge or dispute by either party ."
+    }
+   ],
+   "TenantInfo": [
+    {
+     "Tenant+Name": "Shorebucks LLC",
+     "Tenant+broker+name": "CW of Arizona , LLC"
+    }
+   ]
+  }
+ },
+ "validation": {
+  "LandlordInfo": {
+   "files": 12,
+   "instances": 12,
+   "empty_files": 0,
+   "dropped_files": 0,
+   "xml_checked": 0,
+   "xml_ok": 0,
+   "accepted": true
+  },
+  "LeaseInfo": {
+   "files": 15,
+   "instances": 15,
+   "empty_files": 0,
+   "dropped_files": 0,
+   "xml_checked": 0,
+   "xml_ok": 0,
+   "accepted": true
+  },
+  "PremisesInfo": {
+   "files": 10,
+   "instances": 10,
+   "empty_files": 0,
+   "dropped_files": 0,
+   "xml_checked": 0,
+   "xml_ok": 0,
+   "accepted": true
+  },
+  "TenantInfo": {
+   "files": 12,
+   "instances": 12,
+   "empty_files": 0,
+   "dropped_files": 0,
+   "xml_checked": 0,
+   "xml_ok": 0,
+   "accepted": true
+  }
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "id": "APD_2016_0001193125-16-773346__row0434",
+ "format": "markdown_pdf_plumber",
+ "key": "APD_2016_0001193125-16-773346",
+ "question": "considering the years 2014-2016 , what is the highest interest expense observed?",
+ "gold": "125.1",
+ "finqa_id": "APD/2016/page_39.pdf-1",
+ "source_page": "page_39",
+ "ticker": "APD",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf_plumber/APD_2016_0001193125-16-773346.md",
+ "doc_chars": 489625,
+ "prompt_chars": 489794,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 489625,
+ "original_chars": 489625,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 123740,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 92,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "125.1",
+ "reasoning": "We need answer highest interest expense 2014-2016. From income statement: Interest expense 2016 115.5, 2015 103.5, 2014 125.1. Highest 125.1 in 2014. Evidence.",
+ "raw_content": "<evidence>\n$125.1 | Interest expense 2014\n</evidence>\n\n<program>125.1</program>\n\n<answer>125.1</answer>",
+ "usage": {
+  "prompt_tokens": 124046,
+  "completion_tokens": 92,
+  "total_tokens": 124138,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.47,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$125.1",
+   "element": "Interest expense 2014",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "125.1",
+ "answer_model": "125.1",
+ "program_value": 125.1,
+ "docfinqa_row": 434
+}

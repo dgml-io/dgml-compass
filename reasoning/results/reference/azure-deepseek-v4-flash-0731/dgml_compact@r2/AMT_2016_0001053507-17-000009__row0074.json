@@ -1,0 +1,50 @@
+{
+ "id": "AMT_2016_0001053507-17-000009__row0074",
+ "format": "dgml_compact",
+ "key": "AMT_2016_0001053507-17-000009",
+ "question": "what is the growth rate in the price of shares from the highest value during the quarter ended december 31 , 2016 and the closing price on february 17 , 2017?",
+ "gold": "-8.5%",
+ "finqa_id": "AMT/2016/page_49.pdf-3",
+ "source_page": "page_49",
+ "ticker": "AMT",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/dgml_compact/AMT_2016_0001053507-17-000009.dgml.txt",
+ "doc_chars": 615313,
+ "prompt_chars": 615560,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 615313,
+ "original_chars": 615313,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 137249,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 128,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-8.45%",
+ "reasoning": "We need to find the highest value during quarter ended December 31, 2016. From the stock price table: Quarter ended December 31, 2016: High $118.09, Low $99.72. So highest value is $118.09. Closing price on February 17, 2017: $108.11. Growth rate = (108.11 - 118.09)/118.09 = -9.98/118.09 = -0.0845 = -8.45%. So answer is -8.45%.",
+ "raw_content": "<answer>-8.45%</answer>",
+ "usage": {
+  "prompt_tokens": 137416,
+  "completion_tokens": 128,
+  "total_tokens": 137544,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.63,
+ "answer_tag_found": true,
+ "docfinqa_row": 74
+}

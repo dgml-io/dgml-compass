@@ -1,0 +1,74 @@
+{
+ "id": "AMT_2016_0001053507-17-000009__row0638",
+ "format": "dgml",
+ "key": "AMT_2016_0001053507-17-000009",
+ "question": "what is the net change in the balance of unrecognized tax benefits during 2015?",
+ "gold": "-3833",
+ "finqa_id": "AMT/2016/page_125.pdf-3",
+ "source_page": "page_125",
+ "ticker": "AMT",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/dgml/AMT_2016_0001053507-17-000009.dgml.xml",
+ "doc_chars": 929244,
+ "prompt_chars": 929412,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 929244,
+ "original_chars": 929244,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 223326,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 307,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-3833",
+ "reasoning": "We need net change in unrecognized tax benefits during 2015. From note 12: unrecognized tax benefits rollforward. 2015: beginning $31,947, ending $28,114. Net change = 28,114 - 31,947 = -3,833 (in thousands). But question asks \"net change in the balance\" - likely the change amount. Could be -3,833 thousand. Let's verify figures: In document, \"Balance at January 1\" for 2015 is $31,947 (from 2014 ending). Ending 2015 is $28,114. So net change = -3,833. Alternatively, the rollforward shows additions etc. But net change is simply ending - beginning. Use those figures.\n\nEvidence: 31,947 | UnrecognizedTaxBenefitBeginningBalance (2015 column), 28,114 | UnrecognizedTaxBenefitEndingBalance (2015 column). Program: subtract(28114, 31947) = -3833. Answer: -3833 (in thousands). The question doesn't specify units, but likely answer as number. We'll put -3833.",
+ "raw_content": "<evidence>\n31,947 | UnrecognizedTaxBenefitBeginningBalance (2015)\n28,114 | UnrecognizedTaxBenefitEndingBalance (2015)\n</evidence>\n<program>subtract(28114, 31947)</program>\n<answer>-3833</answer>",
+ "usage": {
+  "prompt_tokens": 223631,
+  "completion_tokens": 307,
+  "total_tokens": 223938,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 20.48,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "31,947",
+   "element": "UnrecognizedTaxBenefitBeginningBalance (2015)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "28,114",
+   "element": "UnrecognizedTaxBenefitEndingBalance (2015)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(28114, 31947)",
+ "answer_model": "-3833",
+ "program_value": -3833.0,
+ "docfinqa_row": 638
+}

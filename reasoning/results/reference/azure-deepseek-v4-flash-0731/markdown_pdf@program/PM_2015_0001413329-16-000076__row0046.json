@@ -1,0 +1,78 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0046",
+ "format": "markdown_pdf",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what was the average currency translation adjustments from 2013 to 2015 in millions?",
+ "gold": "-6806",
+ "finqa_id": "PM/2015/page_127.pdf-4",
+ "source_page": "page_127",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf/PM_2015_0001413329-16-000076.md",
+ "doc_chars": 504705,
+ "prompt_chars": 504878,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 504705,
+ "original_chars": 504705,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 122013,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 274,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-4088.333333",
+ "reasoning": "We need answer question: \"what was the average currency translation adjustments from 2013 to 2015 in millions?\" Need find figures. Document has accumulated other comprehensive losses components: currency translation adjustments at Dec 31 2015, 2014, 2013. In Note 17: Currency translation adjustments: 2015 -6,129; 2014 -3,929; 2013 -2,207. Average = (-6129 + -3929 + -2207)/3 = -12265/3 = -4088.333... So answer -4088.33? Need provide value. Also evidence list figures. Program: divide(add(-6129, -3929, -2207), 3) but add only two args? Use nested add(add(-6129,-3929),-2207) then divide by 3.",
+ "raw_content": "<evidence>\n-6,129 | Accumulated other comprehensive losses - Currency translation adjustments 2015\n-3,929 | Accumulated other comprehensive losses - Currency translation adjustments 2014\n-2,207 | Accumulated other comprehensive losses - Currency translation adjustments 2013\n</evidence>\n\n<program>divide(add(add(-6129, -3929), -2207), 3)</program>\n\n<answer>-4088.33</answer>",
+ "usage": {
+  "prompt_tokens": 122318,
+  "completion_tokens": 274,
+  "total_tokens": 122592,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 15.81,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "6,129",
+   "element": "Accumulated other comprehensive losses - Currency translation adjustments 2015",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "3,929",
+   "element": "Accumulated other comprehensive losses - Currency translation adjustments 2014",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "2,207",
+   "element": "Accumulated other comprehensive losses - Currency translation adjustments 2013",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(add(-6129, -3929), -2207), 3)",
+ "answer_model": "-4088.33",
+ "program_value": -4088.3333333333335,
+ "docfinqa_row": 46
+}

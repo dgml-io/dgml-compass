@@ -1,0 +1,78 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0473",
+ "format": "markdown_pdf_rules",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what is the yearly interest expense incurred from the $ 375 million note with a fixed rate?",
+ "gold": "11.3",
+ "finqa_id": "ADI/2011/page_50.pdf-2",
+ "source_page": "page_50",
+ "ticker": "ADI",
+ "fiscal_year": "2011",
+ "source_file": "data/docs/markdown_pdf_rules/ADI_2011_0000950123-11-099928.md",
+ "doc_chars": 345770,
+ "prompt_chars": 345950,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 345770,
+ "original_chars": 345770,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 77039,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1053,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "11250000",
+ "reasoning": "We need answer: yearly interest expense incurred from $375 million note with fixed rate. There are two notes: 5.0% senior unsecured notes due 2014, and 3.0% notes due 2016. The question says \"the $375 million note with a fixed rate\" - both are fixed rate. But likely refers to the 3.0% note? Or the 5.0%? Need identify. The document: \"In fiscal 2009, we issued ... $375 million aggregate principal amount of 5.0% senior unsecured notes due July 1, 2014.\" \"In April 2011, we issued ... $375 million aggregate principal amount of 3.0% senior unsecured notes due April 15, 2016.\" Both fixed. The question: \"what is the yearly interest expense incurred from the $ 375 million note with a fixed rate?\" Could be asking for the annual interest expense on the fixed-rate note. Which one? The phrase \"the $375 million note with a fixed rate\" - both have fixed rates. But maybe they mean the 3.0% note because the 5.0% note is swapped to floating, so effectively not fixed. The 5.0% note has been swapped to variable, so the fixed rate note that remains fixed is the 3.0% note. The question likely asks for yearly interest expense from the $375 million note with a fixed rate (i.e., the 3.0% note). Annual interest = 3.0% * $375 million = $11.25 million. But check: The 5.0% note is also fixed but hedged. The question says \"with a fixed rate\" - maybe they want the interest expense on the 3.0% note. Let's see if any other info. In MD&A, interest expense total 19,146 for 2011. But that includes both notes and term loan. The specific note: 3.0% notes issued April 4, 2011, semi-annual interest. Annual interest = 0.03 * 375,000,000 = 11,250,000. In thousands? The question asks \"yearly interest expense\" - likely in dollars. The answer should be $11,250,000 or 11.25 million. Need evidence: \"3.0% senior unsecured notes due April 15, 2016\" and \"$375 million aggregate principal amount\". Also the 5.0% note is swapped, so not fixed. The question says \"the $375 million note with a fixed rate\" - singular. The 3.0% note is the one with fixed rate that is not hedged. So answer 11,250,000.\n\nBut let's be careful: The 5.0% note also has a fixed rate but it's swapped to floating. The question might be ambiguous. However, the phrase \"with a fixed rate\" could refer to the 3.0% note because the 5.0% is effectively variable. Also the document says \"our $375 million of 3% fixed-rate debt, which is not hedged.\" So yes.\n\nThus answer: 11,250,000 (or $11.25 million). The question asks \"what is the yearly interest expense\" - no units specified, but likely in dollars. We'll output 11250000.\n\nEvidence: \"3.0% senior unsecured notes due April 15, 2016\" and \"$375 million aggregate principal amount\" from Note 16 or MD&A. Also \"3% fixed-rate debt\" from Item 7A.\n\nProgram: multiply(0.03, 375000000) = 11250000. But we need use figures as printed. The document has \"$375 million\" and \"3.0%\". So multiply(375000000, 0.03) or multiply(375, 0.03) in millions? The program should be exact. Use 375000000 and 0.03. But the figure as printed is \"$375 million\" - we can use 375000000. Or use 375 and 0.03 to get 11.25 million. The answer should be a number. I'll use multiply(375000000, 0.03) = 11250000.\n\nEvidence lines: \"3.0% senior unsecured notes due April 15, 2016\" | Note 16 Debt; \"$375 million aggregate principal amount\" | Note 16 Debt; \"3% fixed-rate debt\" | Item 7A.\n\nFinal answer inside <answer>11250000</answer>.",
+ "raw_content": "<evidence>\n3.0% senior unsecured notes due April 15, 2016 | Note 16 Debt\n$375 million aggregate principal amount | Note 16 Debt\n3% fixed-rate debt | Item 7A\n</evidence>\n<program>\nmultiply(375000000, 0.03)\n</program>\n<answer>11250000</answer>",
+ "usage": {
+  "prompt_tokens": 77345,
+  "completion_tokens": 1053,
+  "total_tokens": 78398,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 13.3,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "3.0% senior unsecured notes due April 15, 2016",
+   "element": "Note 16 Debt",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$375 million aggregate principal amount",
+   "element": "Note 16 Debt",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "3% fixed-rate debt",
+   "element": "Item 7A",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(375000000, 0.03)",
+ "answer_model": "11250000",
+ "program_value": 11250000.0,
+ "docfinqa_row": 473
+}

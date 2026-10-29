@@ -1,0 +1,64 @@
+{
+ "id": "IP_2007_0001193125-08-042850__row0683",
+ "key": "IP_2007_0001193125-08-042850",
+ "question": "what percentage of industrial packaging sales where represented by european industrial packaging net sales in 2006?",
+ "gold": "20%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "IP_2007_0001193125-08-042850.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/ManagementDiscussionAndAnalysis/IndustrySegmentResults/IndustrialPackagingSegment/EuropeanIndustrialPackagingResults"
+ ],
+ "r1_reasoning_chars": 2621,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 35278,
+  "completion_tokens": 567,
+  "total_tokens": 35845,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 35072
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/ManagementDiscussionAndAnalysis/IndustrySegmentResults/IndustrialPackagingSegment/EuropeanIndustrialPackagingResults"
+ ],
+ "content_chars": 12027,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer percentage. Need find industrial packaging sales total 2006 and European industrial packaging net sales 2006. Excerpts: European industrial packaging net sales 2007 $1.1 billion, up from $1.0 billion in 2006 and $880 million in 2005. So European 2006 = $1.0 billion. Need total industrial packaging sales 2006. The region includes Industrial Packaging segment results? We have only European and Asian results, not total industrial packaging sales. Need find total industrial packaging sales in 2006. Maybe elsewhere in document not provided? The question asks percentage of industrial packaging sales represented by European industrial packaging net sales in 2006. Need total industrial packaging sales. The excerpt doesn't include total industrial packaging sales. Maybe there is a table? The region path is IndustrialPackagingSegment/EuropeanIndustrialPackagingResults, but includes Consumer Packaging segment too. No total. Could infer from other data? Asian industrial packaging 2006 $180 million. But total industrial packaging includes North American etc. Not enough. Maybe \"industrial packaging sales\" refers to total segment sales, which might be in a table not included. Since not in excerpt, answer NOT_FOUND. But let's check if any figure: \"Industrial Packaging\" segment results maybe in earlier part not included. The provided region only has European and Asian results, plus consumer packaging. No total. So cannot compute. Need answer NOT_FOUND. But maybe question expects percentage = European 1.0 / total? No total. So NOT_FOUND.\n\nNeed provide evidence? If not found, maybe no evidence. But instructions: \"Before the answer, list every figure you use inside <evidence>... If document does not contain enough information, put NOT_FOUND inside tags.\" We can state not enough. But maybe we should list figures we found? The question asks percentage, we need total. We can cite European 2006 $1.0 billion but no total. However evidence should list figures used. Since we cannot compute, maybe no evidence. But to be safe, list European 2006 figure and note missing total. But final answer NOT_FOUND. The benchmark expects exact. I'll provide evidence with European figure and maybe no total. But instructions: \"Cite only figures you actually read.\" I read $1.0 billion. But not used in computation because no total. I'll include it? The program? If NOT_FOUND, no program? The instruction says \"Then give the computation inside <program>...\" If not found, maybe no program. But they want answer. I'll put NOT_FOUND.\n\nNeed ensure final answer inside <answer>NOT_FOUND</answer>.",
+ "raw_content": "<evidence>$1.0 billion | European Industrial Packaging net sales 2006</evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2899,
+  "completion_tokens": 589,
+  "total_tokens": 3488,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$1.0 billion",
+   "element": "European Industrial Packaging net sales 2006",
+   "element_found": false,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 5.98,
+ "outline_source": "IP_2007_0001193125-08-042850.outline.txt",
+ "outline_chars": 139969
+}

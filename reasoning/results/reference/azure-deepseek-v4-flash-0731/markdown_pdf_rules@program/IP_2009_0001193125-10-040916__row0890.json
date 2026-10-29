@@ -1,0 +1,72 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0890",
+ "format": "markdown_pdf_rules",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "considering the years 2010-2011 , what is the percentual increase observed in the maturities of long-term debt?",
+ "gold": "88.81%",
+ "finqa_id": "IP/2009/page_45.pdf-4",
+ "source_page": "page_45",
+ "ticker": "IP",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/markdown_pdf_rules/IP_2009_0001193125-10-040916.md",
+ "doc_chars": 436761,
+ "prompt_chars": 436961,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 436761,
+ "original_chars": 436761,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 103607,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 282,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "88.815789",
+ "reasoning": "We need answer question: \"considering the years 2010-2011 , what is the percentual increase observed in the maturities of long-term debt?\" Need find maturities of long-term debt for 2010 and 2011. In document, contractual obligations table: \"Maturities of long-term debt (a) $ 304 $ 574 $199 $131 $ 562 $ 7,263\" for years 2010, 2011, 2012, 2013, 2014, Thereafter. So 2010 = 304, 2011 = 574. Percentual increase from 2010 to 2011 = (574-304)/304 *100 = 270/304 = 0.888157... = 88.8158%. Need answer as value maybe 88.8%. Need evidence figures. Also note there is footnote (a) about reclassification. But question asks maturities of long-term debt, so use those. Compute percent increase.",
+ "raw_content": "<evidence>\n304 | Maturities of long-term debt (a) 2010\n574 | Maturities of long-term debt (a) 2011\n</evidence>\n<program>multiply(divide(subtract(574, 304), 304), 100)</program>\n<answer>88.8</answer>",
+ "usage": {
+  "prompt_tokens": 103920,
+  "completion_tokens": 282,
+  "total_tokens": 104202,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.3,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "304",
+   "element": "Maturities of long-term debt (a) 2010",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "574",
+   "element": "Maturities of long-term debt (a) 2011",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(574, 304), 304), 100)",
+ "answer_model": "88.8",
+ "program_value": 88.81578947368422,
+ "docfinqa_row": 890
+}

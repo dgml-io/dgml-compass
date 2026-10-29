@@ -1,0 +1,50 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0069",
+ "format": "dgml_compact",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what portion of the total investment is allocated to mutual funds in 2011?",
+ "gold": "65.1%",
+ "finqa_id": "ADI/2011/page_81.pdf-1",
+ "source_page": "page_81",
+ "ticker": "ADI",
+ "fiscal_year": "2011",
+ "source_file": "data/docs/dgml_compact/ADI_2011_0000950123-11-099928.dgml.txt",
+ "doc_chars": 439213,
+ "prompt_chars": 439376,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 439213,
+ "original_chars": 439213,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 94232,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 264,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "34.9%",
+ "reasoning": "We need to find the portion of total investment allocated to mutual funds in 2011. The document mentions deferred compensation plan investments: money market funds and mutual funds. In Note 7, table shows: Money market funds $17,187, Mutual funds $9,223, Total $26,410. So mutual funds portion = 9,223 / 26,410 = 0.3492... = 34.92%. But the question says \"total investment\" - could refer to total deferred compensation plan investments. Alternatively, could refer to total investments overall? But the context is likely the deferred compensation plan. The question: \"what portion of the total investment is allocated to mutual funds in 2011?\" The document has a table for deferred compensation plan investments. So answer is 9,223/26,410 = 34.9%. But let's check if there is any other mention of mutual funds. In fair value table, deferred compensation investments are listed as total $26,410, but not broken down. So the only breakdown is in Note 7. So answer: 34.9% or 0.349. The question asks \"portion\" - could be fraction or percentage. We'll give percentage.",
+ "raw_content": "<answer>34.9%</answer>",
+ "usage": {
+  "prompt_tokens": 94376,
+  "completion_tokens": 264,
+  "total_tokens": 94640,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 6.35,
+ "answer_tag_found": true,
+ "docfinqa_row": 69
+}

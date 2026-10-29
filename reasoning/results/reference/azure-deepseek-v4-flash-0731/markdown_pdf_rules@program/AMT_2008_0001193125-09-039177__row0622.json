@@ -1,0 +1,59 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0622",
+ "format": "markdown_pdf_rules",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "what is the net change in the balance of liability related to employee separations during 2005?",
+ "gold": "-5781",
+ "finqa_id": "AMT/2008/page_107.pdf-3",
+ "source_page": "page_107",
+ "ticker": "AMT",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_rules/AMT_2008_0001193125-09-039177.md",
+ "doc_chars": 413481,
+ "prompt_chars": 413665,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 413481,
+ "original_chars": 413481,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93036,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 620,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer net change in liability related to employee separations during 2005. Document has table in note 14: \"Employee separations\" row with columns: Liability as of Dec 31, 2005 $20,963; Expense 2005? Actually table shows columns: Liability as of Dec 31, 2005, Expense 2006, Cash Payments 2006, Other 2006, Liability as of Dec 31, 2006, Expense 2007, Cash Payments 2007, Other 2007, Liability as of Dec 31, 2007, Expense 2008, Cash Payments 2008, Other 2008, Liability as of Dec 31, 2008. The row: Employee separations $20,963 $496 $(12,389) $(1,743) $7,327 $633 $(6,110) $(304) $1,546 $284 $(1,901) $71 —. So liability as of Dec 31, 2005 is $20,963. But question asks net change in balance of liability related to employee separations during 2005. The table starts with liability as of Dec 31, 2005, not change during 2005. There is no 2005 activity shown. The net change during 2005 would be from beginning to end of 2005, but we don't have beginning balance. The table only gives liability as of Dec 31, 2005. So insufficient. However maybe \"during 2005\" refers to the year 2005? The table shows liability as of Dec 31, 2005 as $20,963, but no prior. So NOT_FOUND.\n\nBut let's double-check: The question: \"what is the net change in the balance of liability related to employee separations during 2005?\" The document has a table with \"Liability as of December 31, 2005\" and then activity for 2006, 2007, 2008. No 2005 activity. So cannot compute. Answer NOT_FOUND.\n\nNeed evidence: list figures used? We use none? But we can cite the liability as of Dec 31, 2005? But that's not the change. We should state not enough. The instructions: \"If the document does not contain enough information, put NOT_FOUND inside the tags.\" So answer NOT_FOUND. Evidence: maybe we can list \"20,963 | Employee separations liability as of December 31, 2005\" but that is not used in computation. The instruction says \"Cite only figures you actually read.\" We read that but it's not used. We can omit evidence. But to be safe, we can include evidence line? The program would be NOT_FOUND? The program must be exact. For NOT_FOUND, probably no program. The final answer inside <answer>NOT_FOUND</answer>.",
+ "raw_content": "<answer>NOT_FOUND</answer>",
+ "usage": {
+  "prompt_tokens": 93343,
+  "completion_tokens": 620,
+  "total_tokens": 93963,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.22,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": null,
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "docfinqa_row": 622
+}

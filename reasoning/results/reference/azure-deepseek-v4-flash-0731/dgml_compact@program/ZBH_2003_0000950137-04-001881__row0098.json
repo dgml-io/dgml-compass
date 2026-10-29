@@ -1,0 +1,72 @@
+{
+ "id": "ZBH_2003_0000950137-04-001881__row0098",
+ "format": "dgml_compact",
+ "key": "ZBH_2003_0000950137-04-001881",
+ "question": "what is the change in inventories net in millions between 2002 and 2003?",
+ "gold": "270.1",
+ "finqa_id": "ZBH/2003/page_58.pdf-4",
+ "source_page": "page_58",
+ "ticker": "ZBH",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/dgml_compact/ZBH_2003_0000950137-04-001881.dgml.txt",
+ "doc_chars": 355371,
+ "prompt_chars": 355532,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 355371,
+ "original_chars": 355371,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 75978,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 116,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "270.1",
+ "reasoning": "We need answer change in inventories net between 2002 and 2003. From balance sheet: Inventories, net 2003 $527.7, 2002 $257.6. Change = 527.7 - 257.6 = 270.1. Need evidence.",
+ "raw_content": "<evidence>\n$ 527.7 | Inventories, net\n$ 257.6 | Inventories, net\n</evidence>\n<program>subtract(527.7, 257.6)</program>\n<answer>270.1</answer>",
+ "usage": {
+  "prompt_tokens": 76283,
+  "completion_tokens": 116,
+  "total_tokens": 76399,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 46.13,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 527.7",
+   "element": "Inventories, net",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ 257.6",
+   "element": "Inventories, net",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(527.7, 257.6)",
+ "answer_model": "270.1",
+ "program_value": 270.1,
+ "docfinqa_row": 98
+}

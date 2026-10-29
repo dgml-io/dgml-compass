@@ -1,0 +1,81 @@
+{
+ "id": "APD_2016_0001193125-16-773346__row0434",
+ "format": "markdown_pdf",
+ "key": "APD_2016_0001193125-16-773346",
+ "question": "considering the years 2014-2016 , what is the highest interest expense observed?",
+ "gold": "125.1",
+ "finqa_id": "APD/2016/page_39.pdf-1",
+ "source_page": "page_39",
+ "ticker": "APD",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf/APD_2016_0001193125-16-773346.md",
+ "doc_chars": 434740,
+ "prompt_chars": 434909,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 434740,
+ "original_chars": 434740,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 105848,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 335,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "125.1",
+ "reasoning": "We need to find interest expense for 2014-2016. From the document, in the \"Interest Expense\" section: table shows Interest expense: 2016 $115.5, 2015 $103.5, 2014 $125.1. So highest is 2014 $125.1. Also in consolidated income statements: interest expense 2016 115.5, 2015 103.5, 2014 125.1. So answer 125.1.\n\nNeed evidence: list figures used. Use element names? The document has tables. We'll cite \"Interest Expense\" table. Provide program: max? But program is nested calls. We can just output 125.1 as the answer. But need program? The instruction says \"Then give the computation inside <program></program> as nested calls over the figures as printed\". Since it's a direct figure, program is just the figure. So program: 125.1.\n\nEvidence: list each figure used: 115.5 | Interest Expense table 2016, 103.5 | Interest Expense table 2015, 125.1 | Interest Expense table 2014. But we only need the highest, but we should list all figures we read. We'll list them.\n\nFinal answer inside <answer>125.1</answer>.",
+ "raw_content": "<evidence>115.5 | Interest Expense table 2016\n103.5 | Interest Expense table 2015\n125.1 | Interest Expense table 2014</evidence>\n<program>125.1</program>\n<answer>125.1</answer>",
+ "usage": {
+  "prompt_tokens": 106153,
+  "completion_tokens": 335,
+  "total_tokens": 106488,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.58,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "115.5",
+   "element": "Interest Expense table 2016",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "103.5",
+   "element": "Interest Expense table 2015",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "125.1",
+   "element": "Interest Expense table 2014",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "125.1",
+ "answer_model": "125.1",
+ "program_value": 125.1,
+ "docfinqa_row": 434
+}

@@ -1,0 +1,74 @@
+{
+ "id": "UPS_2007_0001193125-08-043891__row0107",
+ "format": "dgml",
+ "key": "UPS_2007_0001193125-08-043891",
+ "question": "what is the total cash inflow from the stock purchases of employees in 2007 , ( in millions ) ?",
+ "gold": "115.6",
+ "finqa_id": "UPS/2007/page_98.pdf-1",
+ "source_page": "page_98",
+ "ticker": "UPS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml/UPS_2007_0001193125-08-043891.dgml.xml",
+ "doc_chars": 609845,
+ "prompt_chars": 610029,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 609845,
+ "original_chars": 609845,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 146117,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1170,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "115.56",
+ "reasoning": "We need answer question: \"what is the total cash inflow from the stock purchases of employees in 2007, (in millions)?\" Need find relevant figures. Document mentions \"Issuances of common stock\" in cash flows from financing activities: $174 million in 2007. Also \"We received cash of $52, $30, and $21 million during 2007, 2006, and 2005, respectively, from option holders resulting from the exercise of stock options.\" Also employee stock purchase plan: \"Employees purchased 1.8, 1.9, and 2.0 million shares at average prices of $64.20, $66.64, and $64.54 per share during 2007, 2006, and 2005, respectively.\" That would be 1.8*64.20 = 115.56 million. But question \"total cash inflow from the stock purchases of employees in 2007\" could refer to \"Issuances of common stock\" in cash flow statement, which includes stock option exercises and employee stock purchases? The cash flow statement line \"Issuances of common stock\" is $174 million. That is the total cash inflow from issuance of common stock, which includes employee stock purchases and option exercises. The question specifically \"stock purchases of employees\" might mean employee stock purchase plan purchases. But \"stock purchases of employees\" could be ambiguous. Let's parse: \"total cash inflow from the stock purchases of employees in 2007\" - In the document, there is \"Employees purchased 1.8, 1.9, and 2.0 million shares at average prices of $64.20, $66.64, and $64.54 per share during 2007, 2006, and 2005, respectively.\" That is the employee stock purchase plan. The cash inflow from those purchases would be 1.8 million * $64.20 = $115.56 million. But the question says \"in millions\" so answer 115.56? However, the cash flow statement line \"Issuances of common stock\" is $174 million, which includes all issuances, including employee stock purchase plan and option exercises. The question specifically \"stock purchases of employees\" might refer to the employee stock purchase plan. Let's check exact wording: \"what is the total cash inflow from the stock purchases of employees in 2007 , ( in millions ) ?\" The document has \"Employees purchased 1.8, 1.9, and 2.0 million shares at average prices of $64.20, $66.64, and $64.54 per share during 2007, 2006, and 2005, respectively.\" That is the only mention of \"Employees purchased\". So the cash inflow from those purchases is 1.8 * 64.20 = 115.56 million. But note the question says \"stock purchases of employees\" not \"employee stock purchase plan\". Could also be \"Issuances of common stock\" line in cash flow statement, which is $174 million. But that line includes all issuances, not just employee purchases. The question likely expects the employee stock purchase plan amount. Let's compute: 1.8 million shares * $64.20 = $115.56 million. The document says \"Employees purchased 1.8, 1.9, and 2.0 million shares at average prices of $64.20, $66.64, and $64.54 per share during 2007, 2006, and 2005, respectively.\" So for 2007, 1.8 million * $64.20 = $115.56 million. The answer should be 115.56. But let's verify if there is any other \"stock purchases\" by employees. The cash flow statement has \"Issuances of common stock\" $174 million. That includes employee stock purchase plan and option exercises. The question says \"stock purchases of employees\" - that is the employee stock purchase plan. So answer 115.56. Need provide evidence and program. Evidence: \"1.8, 1.9, and 2.0 million shares at average prices of $64.20, $66.64, and $64.54 per share during 2007, 2006, and 2005\" - but we need exact figures. The element is EmployeeStockPurchasePlan? In the document, it's under \"EmployeeStockPurchasePlan\" section. The text: \"Employees purchased 1.8, 1.9, and 2.0 million shares at average prices of $64.20, $66.64, and $64.54 per share during 2007, 2006, and 2005, respectively.\" So we use 1.8 and 64.20. Program: multiply(1.8, 64.20) = 115.56. Answer in millions: 115.56. But the question says \"in millions\" so answer 115.56. Let's ensure no rounding. The document says \"in millions\" for cash flow statement, but the employee purchase plan numbers are in millions of shares and dollars per share. So product is in millions of dollars. So answer 115.56.",
+ "raw_content": "<evidence>1.8 | EmployeeStockPurchasePlan (Employees purchased shares in 2007)\n64.20 | EmployeeStockPurchasePlan (average price per share in 2007)</evidence>\n<program>multiply(1.8, 64.20)</program>\n<answer>115.56</answer>",
+ "usage": {
+  "prompt_tokens": 146426,
+  "completion_tokens": 1170,
+  "total_tokens": 147596,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 146176
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.17,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1.8",
+   "element": "EmployeeStockPurchasePlan (Employees purchased shares in 2007)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "64.20",
+   "element": "EmployeeStockPurchasePlan (average price per share in 2007)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(1.8, 64.20)",
+ "answer_model": "115.56",
+ "program_value": 115.56,
+ "docfinqa_row": 107
+}

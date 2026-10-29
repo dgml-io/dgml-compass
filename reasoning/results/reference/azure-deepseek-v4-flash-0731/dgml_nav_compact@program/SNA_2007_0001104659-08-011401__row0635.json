@@ -1,0 +1,68 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0635",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "based on the cash dividends paid , how many common stock shares were outstanding?",
+ "gold": "58909091",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "SNA_2007_0001104659-08-011401.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/MarketForCommonEquity/header",
+  "/chunk/MarketForCommonEquity/MarketForCommonEquityDescription/SharesOutstandingCount",
+  "/chunk/Document/Document/ul/li/p/SharesOutstandingCount"
+ ],
+ "r1_reasoning_chars": 4078,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 22361,
+  "completion_tokens": 951,
+  "total_tokens": 23312,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/MarketForCommonEquity/header",
+  "/chunk/MarketForCommonEquity/MarketForCommonEquityDescription/SharesOutstandingCount",
+  "/chunk/Document/Document/ul/li/p/SharesOutstandingCount"
+ ],
+ "content_chars": 2180,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "57690539",
+ "reasoning": "We need answer. Need find relevant figures. Question: \"based on the cash dividends paid, how many common stock shares were outstanding?\" The document excerpts include SharesOutstandingCount 57,429,139 and 57,690,539. Need determine which based on cash dividends paid? Maybe there is a dividend per share and total dividends paid? But excerpts don't show cash dividends paid. The question likely asks from cash dividends paid, compute shares outstanding = total dividends / dividend per share. But no such figures in region. However there are two share counts. Need infer? Let's examine. The question wording: \"based on the cash dividends paid , how many common stock shares were outstanding?\" Maybe from a table: cash dividends paid per share and total? Not in excerpt. The excerpt has \"SharesOutstandingCount: 57,690,539 shares\" in a list item. Also \"57,429,139 shares of common stock outstanding\" as of Dec 29, 2007. Which one is based on cash dividends paid? Need maybe from statement of cash flows: cash dividends paid $X, dividends per share $Y, shares = X/Y. But not provided. The document excerpt includes only market for common equity. The question might be from a different part? The region includes \"SharesOutstandingCount: 57,690,539 shares\" in a list item. That might be from \"Cash dividends paid per share\" section? Let's think.\n\nThe user says: \"You are given excerpts from one document, selected because they should contain the answer, and one question about it. Find the relevant figures in the document and compute the answer.\" So the answer should be in excerpts. The question: \"based on the cash dividends paid , how many common stock shares were outstanding?\" There is a figure \"57,690,539 shares\" in a list item. That likely is the answer. But why \"based on cash dividends paid\"? Maybe the list item is under \"Cash dividends paid\" and says \"57,690,539 shares\" as weighted-average shares outstanding? Let's inspect the region path: /chunk/Document/Document/ul/li/p/SharesOutstandingCount. It's a separate region. It might be from a different part of document, perhaps \"Cash dividends paid\" section. The value is 57,690,539 shares. The other is 57,429,139 as of Dec 29, 2007. Which one is \"based on cash dividends paid\"? The question asks \"based on the cash dividends paid , how many common stock shares were outstanding?\" This sounds like: In the statement of cash flows, cash dividends paid is given, and dividends per share is given, so compute shares outstanding. But the excerpt has a SharesOutstandingCount of 57,690,539 shares. That might be the number used to compute per share amounts? Let's see.\n\nMaybe the document has a section \"Cash dividends paid per share\" with \"57,690,539 shares\" as the denominator. The question asks \"based on the cash dividends paid, how many common stock shares were outstanding?\" The answer is 57,690,539. Need provide evidence and program.\n\nLet's list figures: 57,429,139 shares (as of Dec 29, 2007) and 57,690,539 shares. Which one is \"based on cash dividends paid\"? The phrase \"based on the cash dividends paid\" might refer to \"cash dividends paid per share\" computed using weighted-average shares outstanding. The number 57,690,539 is likely the weighted-average shares outstanding for the period. The other is actual shares outstanding at a date. The question asks \"how many common stock shares were outstanding?\" based on cash dividends paid. So use 57,690,539.\n\nNeed answer inside <answer>57,690,539</answer>. Evidence: 57,690,539 shares | SharesOutstandingCount. Program: 57690539.\n\nBut let's be careful: The question might be from a financial statement where \"Cash dividends paid\" is $X and \"Dividends per share\" is $Y, so shares = X/Y. But no such figures. The only figures are share counts. So answer is one of them. The phrase \"based on the cash dividends paid\" might indicate the share count used in the cash dividends paid calculation. The region with 57,690,539 shares is in a list item, likely from \"Cash dividends paid\" section. So answer.\n\nLet's produce final with evidence and program.",
+ "raw_content": "<evidence>57,690,539 shares | SharesOutstandingCount</evidence>\n<program>57690539</program>\n<answer>57,690,539</answer>",
+ "r2_usage": {
+  "prompt_tokens": 951,
+  "completion_tokens": 975,
+  "total_tokens": 1926,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "57,690,539 shares",
+   "element": "SharesOutstandingCount",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "57690539",
+ "answer_model": "57,690,539",
+ "program_value": 57690539.0,
+ "elapsed_s": 9.83,
+ "outline_source": "SNA_2007_0001104659-08-011401.outline.txt",
+ "outline_chars": 89754
+}

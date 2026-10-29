@@ -1,0 +1,81 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0475",
+ "format": "markdown_pdf",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what is the net change in the total investment from 2010 to 2011?",
+ "gold": "17720",
+ "finqa_id": "ADI/2011/page_81.pdf-2",
+ "source_page": "page_81",
+ "ticker": "ADI",
+ "fiscal_year": "2011",
+ "source_file": "data/docs/markdown_pdf/ADI_2011_0000950123-11-099928.md",
+ "doc_chars": 351133,
+ "prompt_chars": 351287,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 351133,
+ "original_chars": 351133,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 80142,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 676,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "904694",
+ "reasoning": "We need answer net change in total investment from 2010 to 2011. Need identify \"total investment\" likely cash and cash equivalents and short-term investments? Or total investments? The document mentions \"principal source of liquidity was $3,592.5 million of cash and cash equivalents and short-term investments\" at Oct 29 2011. For 2010? Balance sheet: cash and cash equivalents 2011 1,405,100; 2010 1,070,000. Short-term investments 2011 2,187,362; 2010 1,617,768. Sum 2011 = 3,592,462 (approx 3,592.5). 2010 sum = 2,687,768. Net change = 3,592,462 - 2,687,768 = 904,694 (in thousands). Or maybe \"total investment\" refers to investments? The question: \"net change in the total investment from 2010 to 2011\" Could be total cash and cash equivalents and short-term investments. The document says \"At October 29, 2011, our principal source of liquidity was $3,592.5 million of cash and cash equivalents and short-term investments.\" For 2010, we can compute from balance sheet. Net change = 904,694 thousand = $904.7 million. Alternatively, \"total investment\" might be \"cash and cash equivalents and short-term investments\" as in liquidity. Let's verify: 2011 cash 1,405,100 + short-term 2,187,362 = 3,592,462. 2010 cash 1,070,000 + short-term 1,617,768 = 2,687,768. Difference = 904,694. The question asks \"net change in the total investment\" maybe \"total investment\" from 2010 to 2011. Could be \"total assets\"? No, \"total investment\" likely cash and investments. Need answer value. Use evidence: cash and cash equivalents 2011 $1,405,100; 2010 $1,070,000; short-term investments 2011 $2,187,362; 2010 $1,617,768. Compute subtract. Final answer inside <answer>904,694</answer> (thousands? The figures are in thousands, so net change in thousands). The question doesn't specify units, but likely answer in thousands as per financial statements. Could also be $904.7 million. But benchmark expects exact value from program. Use figures as printed. Program: subtract(add(2187362,1405100), add(1617768,1070000)) = 904694.",
+ "raw_content": "<evidence>\n$ 1,405,100 | Cash and cash equivalents 2011\n$ 1,070,000 | Cash and cash equivalents 2010\n$ 2,187,362 | Short-term investments 2011\n$ 1,617,768 | Short-term investments 2010\n</evidence>\n\n<program>\nsubtract(add(2187362, 1405100), add(1617768, 1070000))\n</program>\n\n<answer>904694</answer>",
+ "usage": {
+  "prompt_tokens": 80447,
+  "completion_tokens": 676,
+  "total_tokens": 81123,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.57,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 1,405,100",
+   "element": "Cash and cash equivalents 2011",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ 1,070,000",
+   "element": "Cash and cash equivalents 2010",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ 2,187,362",
+   "element": "Short-term investments 2011",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ 1,617,768",
+   "element": "Short-term investments 2010",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(add(2187362, 1405100), add(1617768, 1070000))",
+ "answer_model": "904694",
+ "program_value": 904694.0,
+ "docfinqa_row": 475
+}

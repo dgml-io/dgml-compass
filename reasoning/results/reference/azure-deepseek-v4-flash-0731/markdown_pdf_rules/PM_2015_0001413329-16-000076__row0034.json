@@ -1,0 +1,50 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0034",
+ "format": "markdown_pdf_rules",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the percentage change in total debt from 2014 to 2015?",
+ "gold": "3.4%",
+ "finqa_id": "PM/2015/page_85.pdf-1",
+ "source_page": "page_85",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_rules/PM_2015_0001413329-16-000076.md",
+ "doc_chars": 492980,
+ "prompt_chars": 493131,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 492980,
+ "original_chars": 492980,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 115067,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 223,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-3.31%",
+ "reasoning": "We need to find total debt for 2014 and 2015. From the document: In Item 6 Selected Financial Data, there is a table with \"Total debt\" for 2015 and 2014. It shows: Total debt 28,480 for 2015, and 29,455 for 2014. Also in the MD&A section, it says \"Our total debt was $28.5 billion at December 31, 2015, and $29.5 billion at December 31, 2014.\" So we can compute percentage change: (28,480 - 29,455)/29,455 = -975/29,455 ≈ -0.0331 = -3.31%. So percentage change is -3.31% (decrease). The question asks \"what is the percentage change in total debt from 2014 to 2015?\" So answer is -3.31% or approximately -3.3%. We'll put the value inside <answer> tags.",
+ "raw_content": "<answer>-3.31%</answer>",
+ "usage": {
+  "prompt_tokens": 115212,
+  "completion_tokens": 223,
+  "total_tokens": 115435,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.77,
+ "answer_tag_found": true,
+ "docfinqa_row": 34
+}

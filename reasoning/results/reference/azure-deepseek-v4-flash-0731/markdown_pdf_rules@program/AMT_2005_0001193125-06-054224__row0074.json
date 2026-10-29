@@ -1,0 +1,72 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0074",
+ "format": "markdown_pdf_rules",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what portion of the adjusted consolidated cash flow for the twelve months ended december 31 , 2005 is related to tower cash flow?",
+ "gold": "105.0%",
+ "finqa_id": "AMT/2005/page_54.pdf-2",
+ "source_page": "page_54",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/markdown_pdf_rules/AMT_2005_0001193125-06-054224.md",
+ "doc_chars": 437061,
+ "prompt_chars": 437279,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 437061,
+ "original_chars": 437061,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 101793,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 376,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.986804",
+ "reasoning": "We need answer portion of adjusted consolidated cash flow related to tower cash flow. Need figures. Document has \"Information Presented Pursuant to Indentures...\" table: Tower Cash Flow, for three months ended Dec 31 2005 $139,590; Consolidated Cash Flow twelve months $498,266; Less Tower Cash Flow twelve months (524,804); Plus four times Tower Cash Flow three months 558,360; Adjusted Consolidated Cash Flow twelve months $531,822; Non-Tower Cash Flow twelve months $(30,584). Question: what portion of adjusted consolidated cash flow for twelve months ended Dec 31 2005 is related to tower cash flow? Adjusted Consolidated Cash Flow = 531,822. Tower cash flow related? The table shows Tower Cash Flow for twelve months is 524,804. So portion = 524,804 / 531,822. Need compute. Let's compute ratio. 524804/531822 = 0.9868... Let's calculate precisely. 531822 - 524804 = 7018. 7018/531822 = 0.013196. So ratio = 0.986804. As percentage 98.68%. Need answer value only? Probably ratio or percentage. Question \"what portion\" likely fraction. We'll give 0.9868 or 98.68%. Need evidence figures. Use 524,804 and 531,822. Program divide(524804, 531822).",
+ "raw_content": "<evidence>\n524,804 | Tower Cash Flow, for the twelve months ended December 31, 2005\n531,822 | Adjusted Consolidated Cash Flow, for the twelve months ended December 31, 2005\n</evidence>\n<program>divide(524804, 531822)</program>\n<answer>0.9868</answer>",
+ "usage": {
+  "prompt_tokens": 102107,
+  "completion_tokens": 376,
+  "total_tokens": 102483,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 101888
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.82,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "524,804",
+   "element": "Tower Cash Flow, for the twelve months ended December 31, 2005",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "531,822",
+   "element": "Adjusted Consolidated Cash Flow, for the twelve months ended December 31, 2005",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(524804, 531822)",
+ "answer_model": "0.9868",
+ "program_value": 0.9868038554253115,
+ "docfinqa_row": 74
+}

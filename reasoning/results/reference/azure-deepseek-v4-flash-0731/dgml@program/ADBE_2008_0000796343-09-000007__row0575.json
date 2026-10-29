@@ -1,0 +1,67 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0575",
+ "format": "dgml",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "what is the yearly amortization rate for the trademarks?",
+ "gold": "20%",
+ "finqa_id": "ADBE/2008/page_74.pdf-4",
+ "source_page": "page_74",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml/ADBE_2008_0000796343-09-000007.dgml.xml",
+ "doc_chars": 800179,
+ "prompt_chars": 800324,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 800179,
+ "original_chars": 800179,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 183166,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 151,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "20.0000%",
+ "reasoning": "We need answer: yearly amortization rate for trademarks. Need find in document. Trademarks useful life 5 years (from intangible assets table: Trademarks 5). Amortization rate = 1/5 = 20% per year. Need evidence. Also maybe weighted average useful life. The question asks \"yearly amortization rate\" likely 20%. Need cite figure: \"Trademarks 5\" from table. Also maybe \"Intangible assets are amortized over estimated useful lives\" straight-line. So answer 20%.",
+ "raw_content": "<evidence>\n5 | IntangibleAssetUsefulLife (Trademarks)\n</evidence>\n<program>divide(1, 5)</program>\n<answer>20%</answer>",
+ "usage": {
+  "prompt_tokens": 183464,
+  "completion_tokens": 151,
+  "total_tokens": 183615,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 183296
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.15,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "5",
+   "element": "IntangibleAssetUsefulLife (Trademarks)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(1, 5)",
+ "answer_model": "20%",
+ "program_value": 0.2,
+ "docfinqa_row": 575
+}

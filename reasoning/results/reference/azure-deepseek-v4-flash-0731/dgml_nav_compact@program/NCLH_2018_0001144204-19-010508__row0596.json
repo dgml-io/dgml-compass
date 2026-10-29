@@ -1,0 +1,70 @@
+{
+ "id": "NCLH_2018_0001144204-19-010508__row0596",
+ "key": "NCLH_2018_0001144204-19-010508",
+ "question": "what is the percentage change in accred interest liability in 2018 compare to 2017?",
+ "gold": "16.6%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "NCLH_2018_0001144204-19-010508.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/FinancialStatementCrossReference/TableOf/AccruedInterestLiability"
+ ],
+ "r1_reasoning_chars": 728,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 19079,
+  "completion_tokens": 179,
+  "total_tokens": 19258,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/FinancialStatementCrossReference/TableOf/AccruedInterestLiability"
+ ],
+ "content_chars": 3178,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "16.61442",
+ "reasoning": "We need percentage change in accrued interest liability 2018 vs 2017. Figures: $37.2 million (2018), $31.9 million (2017). Percentage change = (37.2 - 31.9)/31.9 * 100. Compute.",
+ "raw_content": "<evidence>\n$37.2 million | AccruedInterestAmount (2018)\n$31.9 million | AccruedInterestAmount (2017)\n</evidence>\n<program>multiply(divide(subtract(37.2, 31.9), 31.9), 100)</program>\n<answer>16.6144200626959</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1133,
+  "completion_tokens": 139,
+  "total_tokens": 1272,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$37.2 million",
+   "element": "AccruedInterestAmount (2018)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$31.9 million",
+   "element": "AccruedInterestAmount (2017)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(37.2, 31.9), 31.9), 100)",
+ "answer_model": "16.6144200626959",
+ "program_value": 16.614420062695938,
+ "elapsed_s": 3.09,
+ "outline_source": "NCLH_2018_0001144204-19-010508.outline.txt",
+ "outline_chars": 75680
+}

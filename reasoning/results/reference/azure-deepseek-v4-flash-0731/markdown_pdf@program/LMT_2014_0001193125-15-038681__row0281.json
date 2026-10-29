@@ -1,0 +1,74 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0281",
+ "format": "markdown_pdf",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "what was the change in millions in backlog at year-end between 2013 and 2014?",
+ "gold": "-1600",
+ "finqa_id": "LMT/2014/page_50.pdf-2",
+ "source_page": "page_50",
+ "ticker": "LMT",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf/LMT_2014_0001193125-15-038681.md",
+ "doc_chars": 433601,
+ "prompt_chars": 433767,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 433601,
+ "original_chars": 433601,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 92728,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 285,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-2100",
+ "reasoning": "We need answer change in backlog between 2013 and 2014. Backlog at Dec 31 2014 $80.5 billion, 2013 $82.6 billion. Change = 80.5 - 82.6 = -2.1 billion = -2,100 million. Question asks \"change in millions\" so -2,100. Evidence: $80.5 billion and $82.6 billion. Use figures as printed: 80.5 and 82.6 (in billions) but question wants millions. Could compute subtract(80.5, 82.6) = -2.1 billion = -2100 million. But program must use figures as printed. We can use 80.5 and 82.6 and multiply by 1000? Or just answer -2,100. Evidence: \"80.5\" and \"82.6\" from backlog text. Program: multiply(subtract(80.5, 82.6), 1000) = -2100.",
+ "raw_content": "<evidence>80.5 | Backlog at December 31, 2014\n82.6 | Backlog at December 31, 2013</evidence>\n<program>multiply(subtract(80.5, 82.6), 1000)</program>\n<answer>-2,100</answer>",
+ "usage": {
+  "prompt_tokens": 93035,
+  "completion_tokens": 285,
+  "total_tokens": 93320,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 92928
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.47,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "80.5",
+   "element": "Backlog at December 31, 2014",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "82.6",
+   "element": "Backlog at December 31, 2013",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(subtract(80.5, 82.6), 1000)",
+ "answer_model": "-2,100",
+ "program_value": -2099.9999999999945,
+ "docfinqa_row": 281
+}

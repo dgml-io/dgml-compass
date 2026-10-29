@@ -1,0 +1,72 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0767",
+ "format": "markdown_pdf_plumber",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "hard assets were what percent of the brazilian purchase price , as finally determined?",
+ "gold": "14.3%",
+ "finqa_id": "AMT/2012/page_118.pdf-3",
+ "source_page": "page_118",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/markdown_pdf_plumber/AMT_2012_0001193125-13-077821.md",
+ "doc_chars": 584045,
+ "prompt_chars": 584220,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 584045,
+ "original_chars": 584045,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 138337,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 567,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "14.2721%",
+ "reasoning": "We need answer question: \"hard assets were what percent of the brazilian purchase price, as finally determined?\" Need find in document. Brazilian acquisition: \"Brazil Acquisition—On March 1, 2011, the Company acquired 100% of the outstanding shares of a company that owned 627 communications sites in Brazil for $553.2 million, which was subsequently increased to $585.4 million as a result of acquiring 39 additional communications sites during the year ended December 31, 2011. During the year ended December 31, 2012, the purchase price was reduced to $585.3 million after certain post-closing purchase price adjustments.\"\n\nThen allocation table: Final Purchase Price Allocation (1) and Preliminary. Final: Current assets $9,922; Non-current assets $71,529; Property and equipment $83,539; Intangible assets $368,000; Current liabilities ($5,536); Other non-current liabilities ($38,519); Fair value of net assets acquired $488,935; Goodwill $96,395. Total purchase price? Fair value of net assets acquired + goodwill = 488,935 + 96,395 = 585,330 (approx $585.3 million). Hard assets likely property and equipment? Or \"hard assets\" might mean tangible assets? In context, \"hard assets\" could be property and equipment. Question: \"hard assets were what percent of the brazilian purchase price, as finally determined?\" So compute property and equipment / purchase price. Purchase price final = $585.3 million (or 585,330). Property and equipment = $83,539 thousand. Percent = 83,539 / 585,330 = 0.1427 = 14.27%. Alternatively \"hard assets\" might include property and equipment plus non-current assets? But typically hard assets = property and equipment. Let's check wording: \"hard assets\" in financial context often means tangible assets like property and equipment. The question asks \"hard assets were what percent of the brazilian purchase price, as finally determined?\" So answer ~14.3%. Need evidence: figures from table: Property and equipment $83,539 (in thousands), purchase price final $585.3 million (or 585,330). Use exact numbers: 83,539 / 585,330 = 0.14272. So 14.27%. Provide answer as percentage.",
+ "raw_content": "<evidence>\n83,539 | Property and equipment (Final Purchase Price Allocation, Brazil Acquisition)\n585,330 | Fair value of net assets acquired + Goodwill (Final Purchase Price Allocation, Brazil Acquisition)\n</evidence>\n\n<program>divide(83539, 585330)</program>\n\n<answer>14.27%</answer>",
+ "usage": {
+  "prompt_tokens": 138642,
+  "completion_tokens": 567,
+  "total_tokens": 139209,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 12.04,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "83,539",
+   "element": "Property and equipment (Final Purchase Price Allocation, Brazil Acquisition)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "585,330",
+   "element": "Fair value of net assets acquired + Goodwill (Final Purchase Price Allocation, Brazil Acquisition)",
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(83539, 585330)",
+ "answer_model": "14.27%",
+ "program_value": 0.14272120000683375,
+ "docfinqa_row": 767
+}

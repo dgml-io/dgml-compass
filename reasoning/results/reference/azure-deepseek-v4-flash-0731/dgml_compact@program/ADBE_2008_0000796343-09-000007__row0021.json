@@ -1,0 +1,72 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0021",
+ "format": "dgml_compact",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "what is the percentage change in the the gross liability for unrecognized tax benefits during 2008 compare to 2007?",
+ "gold": "-30.9%",
+ "finqa_id": "ADBE/2008/page_89.pdf-2",
+ "source_page": "page_89",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml_compact/ADBE_2008_0000796343-09-000007.dgml.txt",
+ "doc_chars": 545889,
+ "prompt_chars": 546093,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 545889,
+ "original_chars": 545889,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 114389,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1189,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-30.85061",
+ "reasoning": "We need the percentage change in gross liability for unrecognized tax benefits during 2008 compared to 2007. The document gives FIN 48 rollforward: beginning balance as of December 1, 2007 was $201,808 (in thousands) and ending balance as of November 28, 2008 was $139,549. Also earlier it says gross liability at adoption was $218.4 million? Wait, there are two numbers: \"Upon adoption, the gross liability for unrecognized tax benefits at December 1, 2007 was $218.4 million, exclusive of interest and penalties.\" But the rollforward table shows beginning balance $201,808 (thousands) = $201.8 million. The $218.4 million includes something? Let's read carefully.\n\nIn Note 8, under \"Adoption of FIN 48\": \"The adoption of FIN 48 resulted in an increase of $3.9 million to both assets and unrecognized tax benefits... Upon adoption, the gross liability for unrecognized tax benefits at December 1, 2007 was $218.4 million, exclusive of interest and penalties. The total amount of gross FIN 48 liabilities included $57.7 million that relates to certain tax attributes from acquired companies, including Macromedia. These liabilities from acquired companies are not recorded on our balance sheet because they are related to positions that have not yet been claimed on our income tax returns.\"\n\nThen later \"Summary FIN 48 Changes\" table: Beginning balance as of December 1, 2007 | $201,808 (thousands) = $201.8 million. Ending balance as of November 28, 2008 | $139,549 = $139.5 million. The question asks \"the gross liability for unrecognized tax benefits during 2008 compare to 2007\" - likely the percentage change from 2007 to 2008. Which 2007 figure? The rollforward beginning balance is the gross liability at start of 2008 (i.e., end of 2007). The $218.4 million is the gross liability at adoption, but that includes $57.7 million not recorded on balance sheet. The rollforward table uses $201,808 which is the balance sheet gross liability? Actually the rollforward says \"Beginning balance as of December 1, 2007 | $201,808\" and then ending $139,549. The $218.4 million is the total gross FIN 48 liabilities including those not recorded. The question says \"gross liability for unrecognized tax benefits\" - likely the one in the rollforward table. Also the text says \"The gross liability for unrecognized tax benefits at November 28, 2008 was $139.5 million, exclusive of interest and penalties.\" So the 2007 figure is $201.8 million (or $201,808 thousand). Percentage change = (139,549 - 201,808)/201,808 * 100 = -30.85% approximately. Let's compute: 201,808 - 139,549 = 62,259. 62,259 / 201,808 = 0.3085. So -30.85%. The question asks \"percentage change ... during 2008 compare to 2007\" - likely decrease of 30.85%. We'll provide the value as -30.85% or -30.9%. Need to be exact? The program should use the figures as printed. Use 201808 and 139549. Compute divide(subtract(139549, 201808), 201808) = -0.3085... multiply by 100? The answer should be a percentage. The program can output the decimal? The instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what is the percentage change\" so we can give -30.85% or -30.9%. But the program must be exact. We'll use the numbers as printed: 201808 and 139549. The program: multiply(divide(subtract(139549, 201808), 201808), 100) = -30.85... We'll output -30.85% or -30.9? The benchmark likely expects a number. We'll give -30.85% (or -30.9%). Let's compute precisely: 201808 - 139549 = 62259. 62259/201808 = 0.3085... 201808*0.3085 = 62257.7, so 0.30851. So -30.85%. We'll put -30.85% inside answer.\n\nEvidence: 201,808 | Beginning balance as of December 1, 2007 (FIN 48 rollforward) ; 139,549 | Ending balance as of November 28, 2008 (FIN 48 rollforward). Also maybe the $218.4 million? But we use the rollforward. We'll cite those.\n\nProgram: multiply(divide(subtract(139549, 201808), 201808), 100)\n\nFinal answer: -30.85% (or -30.9%). We'll put -30.85%.",
+ "raw_content": "<evidence>201,808 | Beginning balance as of December 1, 2007 (FIN 48 rollforward)\n139,549 | Ending balance as of November 28, 2008 (FIN 48 rollforward)</evidence>\n<program>multiply(divide(subtract(139549, 201808), 201808), 100)</program>\n<answer>-30.85%</answer>",
+ "usage": {
+  "prompt_tokens": 114701,
+  "completion_tokens": 1189,
+  "total_tokens": 115890,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 71.41,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "201,808",
+   "element": "Beginning balance as of December 1, 2007 (FIN 48 rollforward)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "139,549",
+   "element": "Ending balance as of November 28, 2008 (FIN 48 rollforward)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(139549, 201808), 201808), 100)",
+ "answer_model": "-30.85%",
+ "program_value": -30.8506104812495,
+ "docfinqa_row": 21
+}

@@ -1,0 +1,72 @@
+{
+ "id": "IP_2007_0001193125-08-042850__row0683",
+ "format": "markdown_pdf_rules",
+ "key": "IP_2007_0001193125-08-042850",
+ "question": "what percentage of industrial packaging sales where represented by european industrial packaging net sales in 2006?",
+ "gold": "20%",
+ "finqa_id": "IP/2007/page_31.pdf-2",
+ "source_page": "page_31",
+ "ticker": "IP",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_rules/IP_2007_0001193125-08-042850.md",
+ "doc_chars": 430301,
+ "prompt_chars": 430505,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 430301,
+ "original_chars": 430301,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 103493,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 266,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "20.324873",
+ "reasoning": "We need to find European Industrial Packaging net sales in 2006 and total Industrial Packaging sales in 2006. From the document, in the \"EUROPEAN SALES BY INDUSTRY SEGMENT\" table: 2006 European Industrial Packaging = $1,001 million. Total Industrial Packaging net sales in 2006: from \"INFORMATION BY INDUSTRY SEGMENT\" NET SALES table: Industrial Packaging 2006 = $4,925 million. So percentage = 1001/4925 * 100. Compute: 1001/4925 = 0.20325... so 20.33%. Let's compute precisely: 1001/4925 = 0.203248... *100 = 20.3248%. Round to maybe 20.3%. The question asks \"what percentage\" - likely answer as a number. We'll give 20.3% or 20.32%. Use exact division.",
+ "raw_content": "<evidence>\n1,001 | European Sales by Industry Segment - Industrial Packaging 2006\n4,925 | Net Sales - Industrial Packaging 2006\n</evidence>\n<program>multiply(divide(1001, 4925), 100)</program>\n<answer>20.3%</answer>",
+ "usage": {
+  "prompt_tokens": 103800,
+  "completion_tokens": 266,
+  "total_tokens": 104066,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.27,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,001",
+   "element": "European Sales by Industry Segment - Industrial Packaging 2006",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "4,925",
+   "element": "Net Sales - Industrial Packaging 2006",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(1001, 4925), 100)",
+ "answer_model": "20.3%",
+ "program_value": 20.324873096446698,
+ "docfinqa_row": 683
+}

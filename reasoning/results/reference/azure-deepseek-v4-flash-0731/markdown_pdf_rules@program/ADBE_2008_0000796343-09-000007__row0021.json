@@ -1,0 +1,74 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0021",
+ "format": "markdown_pdf_rules",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "what is the percentage change in the the gross liability for unrecognized tax benefits during 2008 compare to 2007?",
+ "gold": "-30.9%",
+ "finqa_id": "ADBE/2008/page_89.pdf-2",
+ "source_page": "page_89",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_rules/ADBE_2008_0000796343-09-000007.md",
+ "doc_chars": 443328,
+ "prompt_chars": 443532,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 443328,
+ "original_chars": 443328,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 95226,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 909,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-36.1264%",
+ "reasoning": "We need answer percentage change in gross liability for unrecognized tax benefits during 2008 compare to 2007. Need figures. Document: Note 8. Adoption of FIN 48: \"Upon adoption, the gross liability for unrecognized tax benefits at December 1, 2007 was $218.4 million, exclusive of interest and penalties.\" And \"The gross liability for unrecognized tax benefits at November 28, 2008 was $139.5 million, exclusive of interest and penalties.\" Also summary FIN 48 changes: Beginning balance as of December 1, 2007 $201,808 (thousands) and ending $139,549. But note says gross liability at Dec 1 2007 was $218.4 million? Wait there is discrepancy: \"Upon adoption, the gross liability for unrecognized tax benefits at December 1, 2007 was $218.4 million, exclusive of interest and penalties.\" But summary table beginning balance $201,808 thousand = $201.8 million. The $218.4 includes something? Let's read: \"The adoption of FIN 48 resulted in an increase of $3.9 million to both assets and unrecognized tax benefits... Upon adoption, the gross liability for unrecognized tax benefits at December 1, 2007 was $218.4 million, exclusive of interest and penalties. The total amount of gross FIN 48 liabilities included $57.7 million that relates to certain tax attributes from acquired companies, including Macromedia. These liabilities from acquired companies are not recorded on our balance sheet because they are related to positions that have not yet been claimed on our income tax returns.\" So the gross liability for unrecognized tax benefits at Dec 1 2007 was $218.4 million, but the summary table beginning balance is $201,808 thousand? Maybe the summary table excludes the $57.7? Actually $218.4 - $57.7 = $160.7, not $201.8. Hmm. Let's examine: The summary FIN 48 changes: \"Beginning balance as of December 1, 2007 $ 201,808\" (in thousands) = $201.8 million. Ending $139,549 = $139.5 million. The question asks \"gross liability for unrecognized tax benefits during 2008 compare to 2007\" likely use the figures stated: 2007 $218.4 million, 2008 $139.5 million. Percentage change = (139.5 - 218.4)/218.4 * 100 = -36.13%. But maybe use 201.8? Need determine which is \"gross liability for unrecognized tax benefits\" as of 2007. The document explicitly says \"Upon adoption, the gross liability for unrecognized tax benefits at December 1, 2007 was $218.4 million, exclusive of interest and penalties.\" And \"The gross liability for unrecognized tax benefits at November 28, 2008 was $139.5 million, exclusive of interest and penalties.\" So use those. Percentage change = (139.5 - 218.4)/218.4 = -78.9/218.4 = -0.36126 = -36.1%. Need answer maybe -36.1%. Let's compute precisely: 218.4 - 139.5 = 78.9. 78.9/218.4 = 0.361263736... So -36.13%. Provide evidence figures. Also note summary table gives 201,808 and 139,549, but the question wording \"gross liability for unrecognized tax benefits\" matches the explicit sentences. Use those. Final answer inside tags with value only? The question asks \"what is the percentage change\" so answer -36.1% maybe. We'll put -36.1% inside. Need evidence list.",
+ "raw_content": "<evidence>\n$218.4 million | Note 8, Adoption of FIN 48 - gross liability for unrecognized tax benefits at December 1, 2007\n$139.5 million | Note 8, Adoption of FIN 48 - gross liability for unrecognized tax benefits at November 28, 2008\n</evidence>\n\n<program>\ndivide(subtract(139.5, 218.4), 218.4)\n</program>\n\n<answer>-36.1%</answer>",
+ "usage": {
+  "prompt_tokens": 95538,
+  "completion_tokens": 909,
+  "total_tokens": 96447,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.06,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$218.4 million",
+   "element": "Note 8, Adoption of FIN 48 - gross liability for unrecognized tax benefits at December 1, 2007",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$139.5 million",
+   "element": "Note 8, Adoption of FIN 48 - gross liability for unrecognized tax benefits at November 28, 2008",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(subtract(139.5, 218.4), 218.4)",
+ "answer_model": "-36.1%",
+ "program_value": -0.36126373626373626,
+ "docfinqa_row": 21
+}

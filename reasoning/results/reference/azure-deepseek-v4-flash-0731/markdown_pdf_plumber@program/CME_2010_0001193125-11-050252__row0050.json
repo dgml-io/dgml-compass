@@ -1,0 +1,74 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0050",
+ "format": "markdown_pdf_plumber",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "what percentage of the outstanding options were from plans approved by security holders?",
+ "gold": "99.5%",
+ "finqa_id": "CME/2010/page_123.pdf-4",
+ "source_page": "page_123",
+ "ticker": "CME",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/markdown_pdf_plumber/CME_2010_0001193125-11-050252.md",
+ "doc_chars": 464519,
+ "prompt_chars": 464696,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 464519,
+ "original_chars": 464519,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 111401,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 146,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "99.508841",
+ "reasoning": "We need answer percentage of outstanding options from plans approved by security holders. From Item 12 table: Number of securities to be issued upon exercise of outstanding options: approved 1,211,143; not approved 5,978; total 1,217,121. Percentage = 1,211,143 / 1,217,121 * 100. Compute.",
+ "raw_content": "<evidence>\n1,211,143 | Equity compensation plans approved by security holders (Options (a))\n1,217,121 | Total (Options (a))\n</evidence>\n\n<program>multiply(divide(1211143, 1217121), 100)</program>\n\n<answer>99.51%</answer>",
+ "usage": {
+  "prompt_tokens": 111703,
+  "completion_tokens": 146,
+  "total_tokens": 111849,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.04,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,211,143",
+   "element": "Equity compensation plans approved by security holders (Options (a))",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "1,217,121",
+   "element": "Total (Options (a))",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(1211143, 1217121), 100)",
+ "answer_model": "99.51%",
+ "program_value": 99.50884094514842,
+ "docfinqa_row": 50
+}

@@ -1,0 +1,74 @@
+{
+ "id": "NCLH_2018_0001144204-19-010508__row0596",
+ "format": "markdown_pdf_plumber",
+ "key": "NCLH_2018_0001144204-19-010508",
+ "question": "what is the percentage change in accred interest liability in 2018 compare to 2017?",
+ "gold": "16.6%",
+ "finqa_id": "NCLH/2018/page_97.pdf-1",
+ "source_page": "page_97",
+ "ticker": "NCLH",
+ "fiscal_year": "2018",
+ "source_file": "data/docs/markdown_pdf_plumber/NCLH_2018_0001144204-19-010508.md",
+ "doc_chars": 421996,
+ "prompt_chars": 422168,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 421996,
+ "original_chars": 421996,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 107108,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 340,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "16.6144%",
+ "reasoning": "We need answer question: \"what is the percentage change in accred interest liability in 2018 compare to 2017?\" Probably \"accrued interest liability\" from note 7: \"We had an accrued interest liability of $37.2 million and $31.9 million as of December 31, 2018 and 2017, respectively.\" Percentage change = (37.2-31.9)/31.9 = 5.3/31.9 = 0.166144... = 16.61% increase. Need provide evidence and program. Use figures as printed: 37.2 and 31.9. Program: divide(subtract(37.2, 31.9), 31.9). Answer maybe 16.6% or 16.61%. The question asks percentage change, so give value maybe 16.6%? Inside answer tags only value. We'll put 16.6%? But instructions: \"containing only the value itself with no explanation or units unless the question asks for them.\" Question asks percentage change, so include %? Usually value with % sign. We'll put 16.6%.",
+ "raw_content": "<evidence>\n37.2 | Note 7 - Long-Term Debt (accrued interest liability as of December 31, 2018)\n31.9 | Note 7 - Long-Term Debt (accrued interest liability as of December 31, 2017)\n</evidence>\n<program>\ndivide(subtract(37.2, 31.9), 31.9)\n</program>\n<answer>16.6%</answer>",
+ "usage": {
+  "prompt_tokens": 107414,
+  "completion_tokens": 340,
+  "total_tokens": 107754,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 106752
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.1,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "37.2",
+   "element": "Note 7 - Long-Term Debt (accrued interest liability as of December 31, 2018)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "31.9",
+   "element": "Note 7 - Long-Term Debt (accrued interest liability as of December 31, 2017)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(subtract(37.2, 31.9), 31.9)",
+ "answer_model": "16.6%",
+ "program_value": 0.1661442006269594,
+ "docfinqa_row": 596
+}

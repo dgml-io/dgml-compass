@@ -1,0 +1,53 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0552",
+ "format": "markdown_pdf_poppler",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "in 2014 what was the ratio of the estimated future benefit payments due in 2015 compared to the amount after 2020",
+ "gold": "0.15",
+ "finqa_id": "LMT/2014/page_91.pdf-4",
+ "source_page": "page_91",
+ "ticker": "LMT",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf_poppler/LMT_2014_0001193125-15-038681.md",
+ "doc_chars": 497433,
+ "prompt_chars": 497635,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 497433,
+ "original_chars": 497433,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 91740,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 357,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.154",
+ "reasoning": "We need to find the estimated future benefit payments for qualified defined benefit pension plans. In Note 9, there is a table: \"The following table presents estimated future benefit payments, which reflect expected future employee service, as of December 31, 2014 (in millions):\" It shows for qualified defined benefit pension plans: 2015: $2,070, 2016: $2,150, 2017: $2,230, 2018: $2,320, 2019: $2,420, 2020-2024: $13,430. The question asks: \"in 2014 what was the ratio of the estimated future benefit payments due in 2015 compared to the amount after 2020\" So ratio = 2015 amount / amount after 2020. \"after 2020\" likely means the 2020-2024 amount? Or maybe after 2020 means beyond 2020? The table gives 2020-2024 as a lump sum. So ratio = 2070 / 13430 = 0.1541... Let's compute: 2070/13430 = 0.1541... So answer is approximately 0.154. But the question says \"compared to the amount after 2020\" - could be interpreted as the amount for 2020-2024? Or maybe they want the ratio of 2015 to the total after 2020? The table only gives 2020-2024, not after 2024. So we use that. So ratio = 2070/13430 = 0.1541. We'll put that.",
+ "raw_content": "<answer>0.154</answer>",
+ "usage": {
+  "prompt_tokens": 91897,
+  "completion_tokens": 357,
+  "total_tokens": 92254,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 91648
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.09,
+ "answer_tag_found": true,
+ "docfinqa_row": 552
+}

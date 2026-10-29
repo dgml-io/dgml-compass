@@ -1,0 +1,71 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0405",
+ "format": "markdown_pdf_rules",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "what is the percentage change in the the outstanding debt under the 3.00% ( 3.00 % ) notes from 2007 to 2008?",
+ "gold": "-53.0%",
+ "finqa_id": "AMT/2008/page_94.pdf-3",
+ "source_page": "page_94",
+ "ticker": "AMT",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_rules/AMT_2008_0001193125-09-039177.md",
+ "doc_chars": 413481,
+ "prompt_chars": 413679,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 413481,
+ "original_chars": 413481,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93036,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 322,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-53.01566",
+ "reasoning": "We need percentage change in outstanding debt under 3.00% notes from 2007 to 2008. From note 6: 2008: $161,893 thousand; 2007: $344,568 thousand. Percentage change = (2008-2007)/2007 *100 = (161,893-344,568)/344,568 = -182,675/344,568 ≈ -53.0%. So answer -53.0% or -53%. Need exact? Use figures as printed. Program: divide(subtract(161893,344568),344568) gives -0.530... multiply by 100? The question asks percentage change, so answer as percentage. We can output -53.0% or -53.0. Usually they want value. We'll output -53.0%. But instructions: \"containing only the value itself with no explanation or units unless the question asks for them.\" It asks percentage change, so include %? Probably yes. We'll output -53.0%. Evidence: 161,893 | Long-term obligations table; 344,568 | Long-term obligations table.",
+ "raw_content": "<evidence>\n161,893 | Long-term obligations table (3.00% convertible notes 2008)\n344,568 | Long-term obligations table (3.00% convertible notes 2007)\n</evidence>\n\n<program>\nmultiply(divide(subtract(161893, 344568), 344568), 100)\n</program>\n\n<answer>-53.0%</answer>",
+ "usage": {
+  "prompt_tokens": 93357,
+  "completion_tokens": 322,
+  "total_tokens": 93679,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 17.03,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "161,893",
+   "element": "Long-term obligations table (3.00% convertible notes 2008)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "344,568",
+   "element": "Long-term obligations table (3.00% convertible notes 2007)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(subtract(161893, 344568), 344568), 100)",
+ "answer_model": "-53.0%",
+ "program_value": -53.015660188990275,
+ "docfinqa_row": 405
+}

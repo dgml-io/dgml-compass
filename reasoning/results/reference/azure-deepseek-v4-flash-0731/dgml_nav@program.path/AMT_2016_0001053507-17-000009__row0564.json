@@ -1,0 +1,81 @@
+{
+ "id": "AMT_2016_0001053507-17-000009__row0564",
+ "key": "AMT_2016_0001053507-17-000009",
+ "question": "what is the average number of shares per registered holder as of february 17 , 2017?",
+ "gold": "2792124",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "AMT_2016_0001053507-17-000009.outline.txt",
+ "doc_source": "AMT_2016_0001053507-17-000009.dgml.xml",
+ "outline_chars": 122201,
+ "predicted_xpaths": [
+  "/chunk/MarketForCommonEquity/StockHoldersOfRecord"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 2811,
+ "r1_usage": {
+  "prompt_tokens": 31496,
+  "completion_tokens": 649,
+  "total_tokens": 32145,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/MarketForCommonEquity/StockHoldersOfRecord"
+ ],
+ "content_chars": 5823,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "2792124.424837",
+ "reasoning": "We need average shares per registered holder = outstanding shares / registered holders. Figures: 427,195,037 / 153. Compute.",
+ "raw_content": "<evidence>427,195,037 | /chunk/MarketForCommonEquity/StockHoldersOfRecord/StockHoldersOfRecord/CommonSharesOutstanding\n153 | /chunk/MarketForCommonEquity/StockHoldersOfRecord/StockHoldersOfRecord/RegisteredHolderCount</evidence>\n<program>divide(427195037, 153)</program>",
+ "r2_usage": {
+  "prompt_tokens": 1798,
+  "completion_tokens": 110,
+  "total_tokens": 1908,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 1798,
+   "completion_tokens": 110,
+   "got_answer": false
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "427,195,037",
+   "element": "chunk/MarketForCommonEquity/StockHoldersOfRecord/StockHoldersOfRecord/CommonSharesOutstanding",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "153",
+   "element": "chunk/MarketForCommonEquity/StockHoldersOfRecord/StockHoldersOfRecord/RegisteredHolderCount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(427195037, 153)",
+ "answer_model": null,
+ "program_value": 2792124.424836601,
+ "elapsed_s": 7.36
+}

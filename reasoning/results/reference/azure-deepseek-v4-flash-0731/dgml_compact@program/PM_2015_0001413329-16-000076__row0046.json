@@ -1,0 +1,96 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0046",
+ "format": "dgml_compact",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what was the average currency translation adjustments from 2013 to 2015 in millions?",
+ "gold": "-6806",
+ "finqa_id": "PM/2015/page_127.pdf-4",
+ "source_page": "page_127",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml_compact/PM_2015_0001413329-16-000076.dgml.txt",
+ "doc_chars": 654685,
+ "prompt_chars": 654858,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 654685,
+ "original_chars": 654685,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 144584,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1606,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-1962.666667",
+ "reasoning": "We need to find currency translation adjustments for 2013, 2014, 2015. The question asks \"average currency translation adjustments from 2013 to 2015 in millions\". We need to find the values. In the document, there is a table in Note 17. Accumulated Other Comprehensive Losses: \"Currency translation adjustments | $ (6,129) | $ (3,929) | $ (2,207)\" for 2015, 2014, 2013 respectively. That is the accumulated balance at year end, not the annual adjustment. The question likely asks for the annual currency translation adjustments (the change in that line) or the amounts reported in other comprehensive earnings? The phrase \"currency translation adjustments\" might refer to the line in the statement of comprehensive earnings: \"Change in currency translation adjustments: Unrealized gains (losses), net of income taxes ...\" In the Consolidated Statements of Comprehensive Earnings, there is a line: \"Change in currency translation adjustments: Unrealized gains (losses), net of income taxes of ($143) in 2015, ($161) in 2014 and $227 in 2013 | (2,248) | (1,746) | (1,876)\" and \"(Gains)/losses transferred to earnings ... | (1) | (5) | (12)\". So the total change in currency translation adjustments for each year is the sum of those two lines? Or the net change? The question says \"average currency translation adjustments from 2013 to 2015\". That likely means the average of the annual currency translation adjustment amounts (the change in that component of OCI). We need to compute the average of the three years' currency translation adjustments. The values from the statement of comprehensive earnings: For 2015: (2,248) + (-1) = -2,249? But note the line \"Unrealized gains (losses), net of income taxes\" is -2,248, and \"(Gains)/losses transferred to earnings\" is -1. So total change is -2,249. For 2014: -1,746 + (-5) = -1,751. For 2013: -1,876 + (-12) = -1,888. Alternatively, the accumulated balances at year end: 2013: -2,207, 2014: -3,929, 2015: -6,129. The change from 2013 to 2014 is -3,929 - (-2,207) = -1,722, but that includes other items? Actually the accumulated balance changes by the annual adjustments plus possibly reclassifications? The statement of comprehensive earnings gives the annual change. The question likely expects the average of the annual currency translation adjustments as reported in the statement of comprehensive earnings. Let's check the exact wording: \"what was the average currency translation adjustments from 2013 to 2015 in millions?\" That could be the average of the three annual amounts. We need to find the annual amounts. The statement of comprehensive earnings has \"Change in currency translation adjustments:\" with two lines. The total change is the sum. Let's compute: 2015: -2,248 + (-1) = -2,249; 2014: -1,746 + (-5) = -1,751; 2013: -1,876 + (-12) = -1,888. Average = (-2249 + -1751 + -1888)/3 = (-5888)/3 = -1962.666... So approximately -1,962.67 million. But the question says \"in millions\" so we can give -1,962.67 or round to -1,963. However, we need to check if there is any other interpretation. The document also has in Note 17 the accumulated balances, but the question says \"currency translation adjustments\" not \"accumulated\". The statement of comprehensive earnings explicitly labels \"Change in currency translation adjustments\". So I'll use that.\n\nLet's verify the numbers from the document: In the ComprehensiveIncome section, the table shows:\n\"Change in currency translation adjustments:\nUnrealized gains (losses), net of income taxes of ($143) in 2015, ($161) in 2014 and $227 in 2013 | (2,248) | (1,746) | (1,876)\n(Gains)/losses transferred to earnings, net of income taxes of $- in 2015, $- in 2014 and $- in 2013 | (1) | (5) | (12)\"\n\nSo the total change is the sum of those two lines. So we have -2,249, -1,751, -1,888. Average = -1,962.67. We'll output that.\n\nWe need to list evidence figures: we use the numbers from the statement. We'll cite them as printed: (2,248), (1), (1,746), (5), (1,876), (12). But the question asks for average, so we compute.\n\nWe'll put evidence lines with value | element. The element names are not given, but we can use the row label. We'll use \"Unrealized gains (losses) ...\" and \"(Gains)/losses transferred to earnings\". We'll list each.\n\nThen program: average = divide(add(add(-2249, -1751), -1888), 3) but we need to use the printed numbers. We can do add(-2248, -1) etc. But the program expects nested calls over figures as printed. We can do divide(add(add(-2248, -1), add(-1746, -5), add(-1876, -12)), 3) but that's not valid because add takes two args. We can do divide(add(add(add(-2248, -1), add(-1746, -5)), add(-1876, -12)), 3) but that's messy. Alternatively, we can compute the sum of the three totals: -2249 + -1751 + -1888 = -5888, then divide by 3. We can represent as divide(add(add(-2248, -1), add(-1746, -5), add(-1876, -12)), 3) but add only takes two. We can do divide(add(add(add(-2248, -1), add(-1746, -5)), add(-1876, -12)), 3). That works.\n\nBut we need to use the figures as printed, so we use -2248, -1, -1746, -5, -1876, -12. We'll write program accordingly.\n\nWe'll output the answer as -1962.67 (or -1962.666...). The question says \"in millions\" so we can give -1962.67. We'll put inside <answer> tags.\n\nLet's produce.",
+ "raw_content": "<evidence>\n(2,248) | Unrealized gains (losses), net of income taxes\n(1) | (Gains)/losses transferred to earnings\n(1,746) | Unrealized gains (losses), net of income taxes\n(5) | (Gains)/losses transferred to earnings\n(1,876) | Unrealized gains (losses), net of income taxes\n(12) | (Gains)/losses transferred to earnings\n</evidence>\n\n<program>\ndivide(add(add(add(-2248, -1), add(-1746, -5)), add(-1876, -12)), 3)\n</program>\n\n<answer>-1962.67</answer>",
+ "usage": {
+  "prompt_tokens": 144889,
+  "completion_tokens": 1606,
+  "total_tokens": 146495,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 14.62,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "(2,248)",
+   "element": "Unrealized gains (losses), net of income taxes",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "(1)",
+   "element": "(Gains)/losses transferred to earnings",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "(1,746)",
+   "element": "Unrealized gains (losses), net of income taxes",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "(5)",
+   "element": "(Gains)/losses transferred to earnings",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "(1,876)",
+   "element": "Unrealized gains (losses), net of income taxes",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "(12)",
+   "element": "(Gains)/losses transferred to earnings",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(add(add(-2248, -1), add(-1746, -5)), add(-1876, -12)), 3)",
+ "answer_model": "-1962.67",
+ "program_value": -1962.6666666666667,
+ "docfinqa_row": 46
+}

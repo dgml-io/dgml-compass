@@ -1,0 +1,72 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0765",
+ "format": "dgml_compact",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "for 2002 and 2003 , what is the average crack spread values?",
+ "gold": "3.5",
+ "finqa_id": "MRO/2003/page_84.pdf-4",
+ "source_page": "page_84",
+ "ticker": "MRO",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/dgml_compact/MRO_2003_0001193125-04-036535.dgml.txt",
+ "doc_chars": 625257,
+ "prompt_chars": 625406,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 625257,
+ "original_chars": 625257,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 138745,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 874,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.0387, 0.0601",
+ "reasoning": "We need answer crack spread values for 2002 and 2003. Need find in document. Crack spread is refining and wholesale marketing margin? The document mentions \"crack spread\" as industry indicator but actual values? In MD&A: \"The refining and wholesale marketing margin in 2003 averaged 6.0 cents per gallon, versus 2002 level of 3.9 cents.\" Also in operating statistics table: \"Refining and Wholesale Marketing Margin(g)(h) | $ 0.0601 | $ 0.0387 | $ 0.1167\" for 2003, 2002, 2001. That is per gallon. The question asks \"average crack spread values\" for 2002 and 2003. Crack spread is not explicitly given as \"crack spread\" values, but the refining and wholesale marketing margin is often used as proxy. However, the document also mentions \"crack spread\" as an industry indicator but no numeric crack spread. The question likely expects the refining and wholesale marketing margin values. Need check if there is any explicit \"crack spread\" numbers. Search document: \"crack spread\" appears in MD&A: \"The crack spread, which is a measure of the difference between spot market gasoline and distillate prices and spot market crude costs, is an industry indicator of refining margins.\" No numeric. Also in RM&T derivatives: \"protect against decreases in the future crack spreads\" no values. So the only relevant figures are refining and wholesale marketing margin: 2003 $0.0601 per gallon, 2002 $0.0387 per gallon. The question says \"average crack spread values\" - likely they mean these. Need provide answer as two values. The question asks \"for 2002 and 2003, what is the average crack spread values?\" So answer should be 2002: 3.9 cents per gallon, 2003: 6.0 cents per gallon. Or in dollars: $0.0387 and $0.0601. Need use evidence. We'll cite the table values. Program: just list values? The answer is two numbers. We can output \"2002: $0.0387 per gallon; 2003: $0.0601 per gallon\" but instructions say final answer only value, no units unless asked. The question asks values, so maybe \"0.0387, 0.0601\" or \"3.9, 6.0\" cents. The document gives both. The table gives $0.0601 and $0.0387. The MD&A gives 6.0 cents and 3.9 cents. Which is more precise? Use table values. Answer: 0.0387 and 0.0601 (dollars per gallon). But the question says \"average crack spread values\" - maybe they want the refining and wholesale marketing margin. We'll provide both? The final answer should contain only value. Could be \"0.0387, 0.0601\". Let's do that.\n\nEvidence: $0.0601 | Refining and Wholesale Marketing Margin (2003) ; $0.0387 | Refining and Wholesale Marketing Margin (2002) from Operating Statistics table.\n\nProgram: no computation needed, just list. But program must be exact. We can use add? No, just output the two values. The program can be \"0.0387, 0.0601\" but instructions say program is nested calls. For a figure that is itself the answer, its own program. But here two figures. We can do list? The benchmark expects a value. Maybe answer \"0.0387, 0.0601\" as a string. I'll put in <answer>0.0387, 0.0601</answer>.",
+ "raw_content": "<evidence>\n$0.0601 | Refining and Wholesale Marketing Margin (2003)\n$0.0387 | Refining and Wholesale Marketing Margin (2002)\n</evidence>\n\n<program>0.0387, 0.0601</program>\n\n<answer>0.0387, 0.0601</answer>",
+ "usage": {
+  "prompt_tokens": 139049,
+  "completion_tokens": 874,
+  "total_tokens": 139923,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 139008
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.33,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$0.0601",
+   "element": "Refining and Wholesale Marketing Margin (2003)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$0.0387",
+   "element": "Refining and Wholesale Marketing Margin (2002)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "0.0387, 0.0601",
+ "answer_model": "0.0387, 0.0601",
+ "program_value": null,
+ "docfinqa_row": 765
+}

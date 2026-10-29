@@ -1,0 +1,88 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0566",
+ "format": "dgml",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what is the net change in unrecognized tax benefits during 2007?",
+ "gold": "11918",
+ "finqa_id": "FIS/2007/page_91.pdf-1",
+ "source_page": "page_91",
+ "ticker": "FIS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml/FIS_2007_0000892569-08-000207.dgml.xml",
+ "doc_chars": 680888,
+ "prompt_chars": 681041,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 680888,
+ "original_chars": 680888,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 160676,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 373,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "11918",
+ "reasoning": "We need net change in unrecognized tax benefits during 2007. From note: beginning Jan 1, 2007 $11,825, decreases prior period (3,749), increases prior period 15,667, ending Dec 31, 2007 $23,743. Net change = 23,743 - 11,825 = 11,918. Or sum of changes: -3,749 + 15,667 = 11,918. Also there are other lines: decreases due to lapse (3,429) and change of position (320) but those are not in the rollforward? Actually the rollforward table shows: beginning 11,825; decreases prior period (3,749); increases prior period 15,667; ending 23,743. Then separate lines for decreases due to lapse and change of position are not part of the rollforward? They are listed after ending? The table shows: Amount of unrecognized tax benefit at December 31, 2007 $23,743; then Amount of decreases due to lapse (3,429); Amount of decreases due to change of position (320). Those are probably additional disclosures, not part of rollforward. So net change = 23,743 - 11,825 = 11,918. Use evidence.",
+ "raw_content": "<evidence>\n$ 11,825 | UnrecognizedTaxBenefitAmount (January 1, 2007)\n(3,749) | UnrecognizedTaxBenefitDecreaseAmount\n15,667 | UnrecognizedTaxBenefitIncreaseAmount\n$ 23,743 | UnrecognizedTaxBenefitAmount (December 31, 2007)\n</evidence>\n<program>subtract(23743, 11825)</program>\n<answer>11918</answer>",
+ "usage": {
+  "prompt_tokens": 160978,
+  "completion_tokens": 373,
+  "total_tokens": 161351,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.53,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 11,825",
+   "element": "UnrecognizedTaxBenefitAmount (January 1, 2007)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "(3,749)",
+   "element": "UnrecognizedTaxBenefitDecreaseAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "15,667",
+   "element": "UnrecognizedTaxBenefitIncreaseAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$ 23,743",
+   "element": "UnrecognizedTaxBenefitAmount (December 31, 2007)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(23743, 11825)",
+ "answer_model": "11918",
+ "program_value": 11918.0,
+ "docfinqa_row": 566
+}

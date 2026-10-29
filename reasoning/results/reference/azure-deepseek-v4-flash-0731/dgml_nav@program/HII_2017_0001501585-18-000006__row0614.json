@@ -1,0 +1,66 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0614",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what portion of the equity compensation plan approved by security holders is to be issued upon the exercise of options warrants and rights?",
+ "gold": "9.9%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "HII_2017_0001501585-18-000006.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation",
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation/table/EquityCompensationPlan"
+ ],
+ "r1_reasoning_chars": 1988,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 22180,
+  "completion_tokens": 505,
+  "total_tokens": 22685,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 22016
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation",
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation/table/EquityCompensationPlan"
+ ],
+ "content_chars": 7654,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "448859",
+ "reasoning": "We need answer portion. Question wording: \"what portion of the equity compensation plan approved by security holders is to be issued upon the exercise of options warrants and rights?\" Likely asks number of securities to be issued upon exercise under approved plans. Table row \"Equity compensation plans approved by security holders\" has 448,859. So answer 448,859. Need evidence and program.",
+ "raw_content": "<evidence>448,859 | EquityPlanSharesToBeIssued</evidence>\n<program>448859</program>\n<answer>448,859</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2209,
+  "completion_tokens": 114,
+  "total_tokens": 2323,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "448,859",
+   "element": "EquityPlanSharesToBeIssued",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "448859",
+ "answer_model": "448,859",
+ "program_value": 448859.0,
+ "elapsed_s": 12.41,
+ "outline_source": "HII_2017_0001501585-18-000006.outline.txt",
+ "outline_chars": 86768
+}

@@ -1,0 +1,72 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0094",
+ "format": "dgml_compact",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "by what percentage did protect carrying values of excess inventories increase from 2002 to 2003?",
+ "gold": "39.0%",
+ "finqa_id": "MRO/2003/page_84.pdf-3",
+ "source_page": "page_84",
+ "ticker": "MRO",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/dgml_compact/MRO_2003_0001193125-04-036535.dgml.txt",
+ "doc_chars": 625257,
+ "prompt_chars": 625442,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 625257,
+ "original_chars": 625257,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 138745,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 537,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "39.0244%",
+ "reasoning": "We need to find figures: \"protect carrying values of excess inventories\" derivative losses in RM&T segment. Table: RMTDerivativeGainLoss: Protect carrying values of excess inventories | (57) | (41) for 2003 and 2002. So increase from -41 to -57? The question: \"by what percentage did protect carrying values of excess inventories increase from 2002 to 2003?\" The values are losses, so they are negative. Increase in magnitude? Typically \"increase\" might mean the absolute value increased. But careful: The losses increased from $41 million to $57 million. Percentage increase = (57-41)/41 = 16/41 ≈ 39.024%. But the values are negative, so the loss increased. The question says \"protect carrying values of excess inventories increase\" - likely the cost increased. So compute percentage increase in the loss amount. Use absolute values? The figures as printed are (57) and (41) meaning negative. But the question asks percentage increase, so we take the absolute values. Compute (57-41)/41 = 16/41 = 0.3902439... = 39.0% approximately. Let's compute exactly: 16/41 = 0.3902439024... So 39.0% if rounded. The answer should be a percentage. We'll provide 39.0% or 39.02%. The instruction: \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"by what percentage\" so we give the number, likely as a percentage. We'll put 39.0% or 39.02%. Let's compute precisely: 16/41 = 0.3902439... so 39.02439%. We'll put 39.0% or 39.02%. I'll put 39.0% but better to be precise: 39.02%. The benchmark might expect a number. I'll put 39.0% but let's see. The evidence: values are (57) and (41). We'll cite them.\n\nNow produce evidence and program.",
+ "raw_content": "<evidence>\n(57) | RMTDerivativeGainLoss: Protect carrying values of excess inventories\n(41) | RMTDerivativeGainLoss: Protect carrying values of excess inventories\n</evidence>\n\n<program>\ndivide(subtract(57, 41), 41)\n</program>\n\n<answer>39.0%</answer>",
+ "usage": {
+  "prompt_tokens": 139052,
+  "completion_tokens": 537,
+  "total_tokens": 139589,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.97,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "(57)",
+   "element": "RMTDerivativeGainLoss: Protect carrying values of excess inventories",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "(41)",
+   "element": "RMTDerivativeGainLoss: Protect carrying values of excess inventories",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(57, 41), 41)",
+ "answer_model": "39.0%",
+ "program_value": 0.3902439024390244,
+ "docfinqa_row": 94
+}

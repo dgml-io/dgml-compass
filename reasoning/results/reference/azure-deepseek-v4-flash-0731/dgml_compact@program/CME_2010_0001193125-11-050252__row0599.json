@@ -1,0 +1,59 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0599",
+ "format": "dgml_compact",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "what is the total value of the approved equity compensation plans in 2005 , in millions of dollars?",
+ "gold": "375.15",
+ "finqa_id": "CME/2010/page_123.pdf-5",
+ "source_page": "page_123",
+ "ticker": "CME",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/dgml_compact/CME_2010_0001193125-11-050252.dgml.txt",
+ "doc_chars": 521543,
+ "prompt_chars": 521731,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 521543,
+ "original_chars": 521543,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 112341,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1645,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer question: \"what is the total value of the approved equity compensation plans in 2005 , in millions of dollars?\" Need find in document. The document is 10-K for CME Group. It mentions equity compensation plans. There is a table in Item 12: Equity Compensation Plan Information. It shows \"Equity compensation plans approved by security holders | 1,211,143 | $ 308.10 | 5,156,223\" and \"not approved | 5,978 | 22.00 | —\" and total. But question asks \"total value of the approved equity compensation plans in 2005\" maybe refers to something else? Maybe \"2005 Director Stock Plan\" approved in 2005? The question might be asking about the value of the approved equity compensation plans in 2005? Need interpret. The document mentions \"CME Group Inc. 2005 Director Stock Plan\" and \"Employee Stock Purchase Plan\" approved at 2005 annual meeting. But \"total value\" in millions? There is no explicit value. Maybe the question is from a benchmark that expects a number from the document. Let's search for \"2005\" and \"approved\" and \"equity compensation\". The document says: \"The Employee Stock Purchase Plan and the 2005 Director Stock Plan were approved by shareholders at our 2005 annual meeting of shareholders.\" That is a statement, no value. The table in Item 12 gives number of securities to be issued upon exercise, weighted-average exercise price, and remaining available. But that is as of 2010, not 2005. The question might be asking \"total value of the approved equity compensation plans in 2005\" meaning the value of the plans approved in 2005? There is no such figure. Could be a trick: NOT_FOUND. But let's examine if there is any mention of \"2005\" with a dollar amount. The document has \"2005 Director Stock Plan\" but no value. Also \"In 2005, we...\"? Search for \"2005\" in document: There is \"2005 Director Stock Plan\" and \"2005 annual meeting\". Also \"2005 Long-Term Equity Plan\" (CBOT) but that's not approved in 2005? It says \"Amended and Restated CBOT Holdings, Inc. 2005 Long-Term Equity Plan\" - that plan was adopted in 2005? But no value. The question asks \"total value of the approved equity compensation plans in 2005, in millions of dollars?\" Could be asking for the total value of the shares authorized under the plans approved in 2005? The document does not provide that. So answer NOT_FOUND.\n\nBut let's be careful: The question might be from a dataset where the answer is a number from the document. Maybe \"approved equity compensation plans\" refers to the table in Item 12: \"Equity compensation plans approved by security holders\" has number of securities to be issued upon exercise of outstanding options (a) = 1,211,143, weighted-average exercise price = $308.10, and number remaining available = 5,156,223. The \"total value\" could be the product of (a) and (b) for approved plans? That would be 1,211,143 * $308.10 = approximately $373 million. But the question says \"in 2005\" - maybe \"approved equity compensation plans in 2005\" means the plans that were approved in 2005, i.e., the Employee Stock Purchase Plan and the 2005 Director Stock Plan. But the table doesn't separate those. The table shows all approved plans as of 2010. The question might be asking for the total value of the approved equity compensation plans in 2005? That doesn't make sense.\n\nMaybe the question is from a different context: \"what is the total value of the approved equity compensation plans in 2005\" could refer to the \"2005 Director Stock Plan\" and \"Employee Stock Purchase Plan\" approved in 2005. The total value might be the number of shares reserved under those plans times price? But no price given.\n\nLet's read the exact text: \"The Employee Stock Purchase Plan and the 2005 Director Stock Plan were approved by shareholders at our 2005 annual meeting of shareholders.\" No value. Also in note 21: \"CME Group has adopted a Director Stock Plan under which awards are made to non-executive directors as part of their annual compensation. A total of 125,000 Class A shares have been reserved under this plan, and approximately 34,000 shares have been awarded through December 31, 2010.\" And \"Employee Stock Purchase Plan ... A total of 40,000 Class A shares have been reserved under this plan, of which approximately 20,000 shares have been purchased through December 31, 2010.\" These are shares, not dollar values. The question asks \"total value ... in millions of dollars\" - no dollar value given. So NOT_FOUND.\n\nBut maybe the question is asking for the total value of the \"approved equity compensation plans\" as per the table in Item 12, which gives number of securities and weighted-average exercise price. The \"total value\" could be the product of the number of securities to be issued upon exercise of outstanding options and the weighted-average exercise price for approved plans. That would be 1,211,143 * $308.10 = $373,153,000 approximately $373.2 million. But the question says \"in 2005\" - maybe \"approved equity compensation plans in 2005\" refers to the plans approved in 2005, but the table doesn't break that out. The table's \"approved by security holders\" includes all approved plans, not just those approved in 2005. So that would be wrong.\n\nLet's see if there is any other mention of \"2005\" with a dollar amount. The document has \"2005 Long-Term Equity Plan\" but no value. Also \"2005 Director Stock Plan\" no value. So likely NOT_FOUND.\n\nBut the instruction says: \"If the document does not contain enough information, put NOT_FOUND inside the tags.\" So answer NOT_FOUND.\n\nHowever, let's double-check the question wording: \"what is the total value of the approved equity compensation plans in 2005 , in millions of dollars?\" Could be a trick: The document mentions \"2005 Director Stock Plan\" and \"Employee Stock Purchase Plan\" were approved in 2005. The total value might be the sum of the shares reserved under those plans times par value? Par value is $0.01 per share. 125,000 + 40,000 = 165,000 shares * $0.01 = $1,650, which is $0.00165 million. That seems too trivial. But the question asks \"total value\" in millions of dollars, likely referring to the market value? No.\n\nMaybe the question is from a financial analysis where \"approved equity compensation plans\" refers to the table in Item 12, and \"in 2005\" is a typo? Or maybe it asks \"what is the total value of the approved equity compensation plans in 2005\" meaning the value of the plans that were approved in 2005, which are the Employee Stock Purchase Plan and the 2005 Director Stock Plan. The document gives the number of shares reserved: 40,000 and 125,000. But no dollar value. So NOT_FOUND.\n\nI'll answer NOT_FOUND.\n\nBut let's ensure we don't miss any figure. Search for \"2005\" in the document: There is \"2005 Director Stock Plan\" (multiple), \"2005 Long-Term Equity Plan\" (CBOT), \"2005 annual meeting\". No dollar amounts associated. So NOT_FOUND.\n\nThus final answer: NOT_FOUND.",
+ "raw_content": "<answer>NOT_FOUND</answer>",
+ "usage": {
+  "prompt_tokens": 112649,
+  "completion_tokens": 1645,
+  "total_tokens": 114294,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 110848
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.98,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": null,
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "docfinqa_row": 599
+}

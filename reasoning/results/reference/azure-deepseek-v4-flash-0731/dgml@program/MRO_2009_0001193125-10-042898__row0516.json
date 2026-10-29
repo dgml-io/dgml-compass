@@ -1,0 +1,77 @@
+{
+ "id": "MRO_2009_0001193125-10-042898__row0516",
+ "format": "dgml",
+ "key": "MRO_2009_0001193125-10-042898",
+ "question": "by what percentage did the average wti crude oil benchmark decrease from 2007 to 2009?",
+ "gold": "-14.3%",
+ "finqa_id": "MRO/2009/page_56.pdf-1",
+ "source_page": "page_56",
+ "ticker": "MRO",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/dgml/MRO_2009_0001193125-10-042898.dgml.xml",
+ "doc_chars": 905450,
+ "prompt_chars": 905625,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": true,
+ "truncation": "head",
+ "kept_chars": 905340,
+ "original_chars": 1110151,
+ "kept_fraction": 0.8155,
+ "est_doc_tokens": 264731,
+ "est_kept_tokens": 212186,
+ "budget_tokens": 240000,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 396,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "14.2522%",
+ "reasoning": "We need answer percentage decrease average WTI crude oil benchmark from 2007 to 2009. Need find WTI prices. In document: Benchmark table: WTI crude oil (Dollars per barrel) 2009 $62.09, 2008 $99.75, 2007 $72.41. Also in MD&A overview. So decrease from 2007 to 2009: (62.09 - 72.41)/72.41 = -10.32/72.41 = -0.1425... = -14.25% decrease. Need percentage decrease, so 14.25% (or -14.25%). Question \"by what percentage did the average wti crude oil benchmark decrease from 2007 to 2009?\" So answer 14.25% (approx). Need evidence: value | element. Use figures. Program: divide(subtract(62.09, 72.41), 72.41) gives -0.1425. But question asks percentage decrease, so maybe absolute value. We'll output 14.25% or -14.25? Usually \"decrease by\" positive. We'll give 14.25%. Need exact computation. Use subtract(72.41, 62.09) / 72.41 = 10.32/72.41 = 0.14252... = 14.25%. Program: divide(subtract(72.41, 62.09), 72.41).",
+ "raw_content": "<evidence>\n$62.09 | WTI crude oil (Dollars per barrel) 2009\n$72.41 | WTI crude oil (Dollars per barrel) 2007\n</evidence>\n<program>divide(subtract(72.41, 62.09), 72.41)</program>\n<answer>14.25%</answer>",
+ "usage": {
+  "prompt_tokens": 212516,
+  "completion_tokens": 396,
+  "total_tokens": 212912,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 212480
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.06,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$62.09",
+   "element": "WTI crude oil (Dollars per barrel) 2009",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$72.41",
+   "element": "WTI crude oil (Dollars per barrel) 2007",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(72.41, 62.09), 72.41)",
+ "answer_model": "14.25%",
+ "program_value": 0.14252175113934532,
+ "docfinqa_row": 516
+}

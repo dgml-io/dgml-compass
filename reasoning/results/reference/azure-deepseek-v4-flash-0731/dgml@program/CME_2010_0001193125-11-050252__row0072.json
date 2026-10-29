@@ -1,0 +1,74 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0072",
+ "format": "dgml",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "what is the estimated percentage of revolving credit facility in relation with the total senior credit facility in millions?",
+ "gold": "67.5%",
+ "finqa_id": "CME/2010/page_69.pdf-2",
+ "source_page": "page_69",
+ "ticker": "CME",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/dgml/CME_2010_0001193125-11-050252.dgml.xml",
+ "doc_chars": 731824,
+ "prompt_chars": 732037,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 731824,
+ "original_chars": 731824,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 170125,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 339,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "67.535714",
+ "reasoning": "We need answer question: \"what is the estimated percentage of revolving credit facility in relation with the total senior credit facility in millions?\" Need find figures. Document mentions senior credit facility $1.4 billion, including $420.5 million term loan and $945.5 million revolving credit facility. So revolving credit facility $945.5 million, total senior credit facility $1.4 billion = $1400 million. Percentage = 945.5 / 1400 * 100 = 67.5357...%. Question asks \"estimated percentage of revolving credit facility in relation with the total senior credit facility in millions?\" So answer percentage. Need compute. Evidence: $945.5 million revolving credit facility, $1.4 billion senior credit facility. Also maybe $420.5 term loan. Use divide(945.5, 1400) *100? Program can use multiply(divide(945.5, 1400), 100). But figures as printed: $945.5 million, $1.4 billion. Need use numbers. 945.5 / 1400 = 0.675357... *100 = 67.5357%. Round? Probably 67.5% or 67.54%. The question says \"estimated percentage\" so maybe 67.5%. Let's provide answer with value. Need evidence lines.",
+ "raw_content": "<evidence>\n$945.5 million | RevolvingCreditFacilityAmount\n$1.4 billion | CreditFacilityAmount\n</evidence>\n<program>multiply(divide(945.5, 1400), 100)</program>\n<answer>67.5</answer>",
+ "usage": {
+  "prompt_tokens": 170432,
+  "completion_tokens": 339,
+  "total_tokens": 170771,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 170240
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.59,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$945.5 million",
+   "element": "RevolvingCreditFacilityAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$1.4 billion",
+   "element": "CreditFacilityAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(945.5, 1400), 100)",
+ "answer_model": "67.5",
+ "program_value": 67.53571428571429,
+ "docfinqa_row": 72
+}

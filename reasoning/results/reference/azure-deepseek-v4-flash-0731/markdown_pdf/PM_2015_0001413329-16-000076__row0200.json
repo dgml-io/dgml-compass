@@ -1,0 +1,53 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0200",
+ "format": "markdown_pdf",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the interest expense in 2015 assuming that all the debt is interest bearing debt , ( in billions ) ?",
+ "gold": "0.86",
+ "finqa_id": "PM/2015/page_85.pdf-3",
+ "source_page": "page_85",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf/PM_2015_0001413329-16-000076.md",
+ "doc_chars": 504705,
+ "prompt_chars": 504902,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 504705,
+ "original_chars": 504705,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 122013,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 978,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1.132",
+ "reasoning": "We need answer interest expense in 2015 assuming all debt is interest bearing debt, in billions. Document: Interest expense, net for 2015 was $1,008 million. But question says \"interest expense in 2015 assuming that all the debt is interest bearing debt\" - maybe they want interest expense gross? In Note 14: Interest expense $1,132 million, interest income $(124) million, interest expense, net $1,008 million. The question: \"what is the interest expense in 2015 assuming that all the debt is interest bearing debt, (in billions)?\" Possibly they want interest expense (gross) not net? The phrase \"assuming that all the debt is interest bearing debt\" might be a trick: The document has interest expense, net. But \"interest expense\" in the statement of earnings is \"Interest expense, net\" of $1,008 million. However Note 14 gives \"Interest expense\" $1,132 million and \"Interest income\" $(124) million. The question asks \"interest expense in 2015\" - likely the gross interest expense is $1,132 million = $1.132 billion. But \"assuming that all the debt is interest bearing debt\" might be irrelevant. Let's read: \"what is the interest expense in 2015 assuming that all the debt is interest bearing debt , ( in billions ) ?\" The document has total debt $28.480 billion at 2015? Actually total debt at Dec 31 2015 was $28,480 million (from Selected Financial Data). Weighted-average all-in financing cost 3.0% in 2015. If all debt interest bearing, interest expense = total debt * rate? But that would be 28.480 * 3.0% = 0.8544 billion, not matching. The question likely expects from financial statements: Interest expense, net is $1,008 million. But \"assuming that all the debt is interest bearing debt\" might be a hint to use gross interest expense? Let's examine.\n\nThe document: Consolidated Statements of Earnings: \"Interest expense, net (Note 14)\" $1,008 million for 2015. Note 14: Interest expense $1,132 million, Interest income $(124) million, Interest expense, net $1,008 million. So the actual interest expense (gross) is $1,132 million = $1.132 billion. The question says \"interest expense in 2015 assuming that all the debt is interest bearing debt\" - maybe they want the gross interest expense because net includes interest income. But \"assuming that all the debt is interest bearing debt\" is odd. Could be a question from a dataset where they want to compute interest expense from debt and rate? But the document provides interest expense directly. The phrase \"assuming that all the debt is interest bearing debt\" might be to clarify that the interest expense figure is for all debt, not just some. But the answer is simply $1.132 billion.\n\nLet's check if there is any other mention: In MD&A, \"Interest expense, net, of $1.1 billion increased by $79 million\" for 2014 vs 2013. For 2015, \"Interest – The unfavorable impact of interest was due primarily to higher average debt levels...\" But no explicit gross.\n\nThe question: \"what is the interest expense in 2015 assuming that all the debt is interest bearing debt , ( in billions ) ?\" The answer should be 1.132 (in billions). But note the question says \"interest expense\" not \"interest expense, net\". So use Note 14: Interest expense $1,132 million. In billions, $1.132 billion. The final answer should be just the value. So <answer>1.132</answer> or maybe 1.1? The question asks in billions, so 1.132. Let's ensure no rounding. The document says \"Interest expense $1,132\" for 2015. So answer 1.132.\n\nBut wait: The question says \"assuming that all the debt is interest bearing debt\" - could be a trick to use total debt and weighted-average interest rate? The weighted-average all-in financing cost of total debt was 3.0% in 2015. Total debt at Dec 31 2015 was $28,480 million. 3.0% of 28.480 = 0.8544 billion. But that is not the interest expense because average debt during year differs. The document explicitly gives interest expense. So the assumption is unnecessary. The correct answer is from the financial statements.\n\nThus final answer: 1.132.",
+ "raw_content": "<answer>1.132</answer>",
+ "usage": {
+  "prompt_tokens": 122165,
+  "completion_tokens": 978,
+  "total_tokens": 123143,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 118784
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.94,
+ "answer_tag_found": true,
+ "docfinqa_row": 200
+}

@@ -1,0 +1,81 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0458",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "in 2015 what was the ratio of the net sales to the backlog",
+ "gold": "0.44",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "LMT_2015_0001193125-16-476010.outline.txt",
+ "doc_source": "LMT_2015_0001193125-16-476010.dgml.xml",
+ "outline_chars": 116705,
+ "predicted_xpaths": [
+  "/chunk/FilingPartDesignation/StockMarketInformation/SelectedFinancialData"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 3831,
+ "r1_usage": {
+  "prompt_tokens": 28877,
+  "completion_tokens": 903,
+  "total_tokens": 29780,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/FilingPartDesignation/StockMarketInformation/SelectedFinancialData"
+ ],
+ "content_chars": 34755,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "0.463173",
+ "reasoning": "We need ratio of net sales to backlog in 2015. Net sales 2015: $46,132 million. Backlog 2015: $99,600 million. Ratio = 46132 / 99600 = 0.463... Let's compute exactly. 46132/99600 = 0.46317269... We'll provide program divide(46132, 99600). Need evidence figures.",
+ "raw_content": "<evidence>\n$46,132 | /chunk/FilingPartDesignation/StockMarketInformation/SelectedFinancialData/SelectedFinancialData/NetSalesSelectedData/FinancialMetricValue\n$99,600 | /chunk/FilingPartDesignation/StockMarketInformation/SelectedFinancialData/SelectedFinancialData/BacklogSelectedData/BacklogAmount\n</evidence>\n\n<program>divide(46132, 99600)</program>\n\n<answer>0.4631726907630522</answer>",
+ "r2_usage": {
+  "prompt_tokens": 8452,
+  "completion_tokens": 194,
+  "total_tokens": 8646,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 8452,
+   "completion_tokens": 194,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "$46,132",
+   "element": "chunk/FilingPartDesignation/StockMarketInformation/SelectedFinancialData/SelectedFinancialData/NetSalesSelectedData/FinancialMetricValue",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$99,600",
+   "element": "chunk/FilingPartDesignation/StockMarketInformation/SelectedFinancialData/SelectedFinancialData/BacklogSelectedData/BacklogAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(46132, 99600)",
+ "answer_model": "0.4631726907630522",
+ "program_value": 0.46317269076305223,
+ "elapsed_s": 183.11
+}

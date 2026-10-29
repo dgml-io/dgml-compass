@@ -1,0 +1,70 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0281",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "what was the change in millions in backlog at year-end between 2013 and 2014?",
+ "gold": "-1600",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "LMT_2014_0001193125-15-038681.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/PartDivision/PartDivision/BacklogDescription",
+  "/chunk/IncomeTaxExpenseSectionMarker/BusinessSegmentResultsOfOperations/BacklogDescription"
+ ],
+ "r1_reasoning_chars": 6581,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 16118,
+  "completion_tokens": 1565,
+  "total_tokens": 17683,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/PartDivision/PartDivision/BacklogDescription",
+  "/chunk/IncomeTaxExpenseSectionMarker/BusinessSegmentResultsOfOperations/BacklogDescription"
+ ],
+ "content_chars": 31350,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "-2100",
+ "reasoning": "We need answer change in millions in backlog between 2013 and 2014. Backlog at Dec 31 2014 $80.5 billion, 2013 $82.6 billion. Change = 80.5 - 82.6 = -2.1 billion = -2,100 million. Question asks \"change in millions\" likely -2,100. Need evidence figures. Use values as printed: $80.5 billion, $82.6 billion. Compute subtract(80.5, 82.6) = -2.1 billion, but in millions -2100. Need program exact. Could use multiply(subtract(80.5, 82.6), 1000) = -2100. Or use figures as printed with units? The benchmark expects numeric. We'll provide evidence lines.",
+ "raw_content": "<evidence>\n$80.5 billion | BacklogAmount at December 31, 2014\n$82.6 billion | BacklogAmount at December 31, 2013\n</evidence>\n<program>multiply(subtract(80.5, 82.6), 1000)</program>\n<answer>-2100</answer>",
+ "r2_usage": {
+  "prompt_tokens": 6979,
+  "completion_tokens": 249,
+  "total_tokens": 7228,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$80.5 billion",
+   "element": "BacklogAmount at December 31, 2014",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$82.6 billion",
+   "element": "BacklogAmount at December 31, 2013",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(subtract(80.5, 82.6), 1000)",
+ "answer_model": "-2100",
+ "program_value": -2099.9999999999945,
+ "elapsed_s": 9.18,
+ "outline_source": "LMT_2014_0001193125-15-038681.outline.txt",
+ "outline_chars": 64445
+}

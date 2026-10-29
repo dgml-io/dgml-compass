@@ -1,0 +1,84 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0352",
+ "format": "dgml_compact",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what is the net change of the total fair value balance of non-vested shares during 2013?",
+ "gold": "6820",
+ "finqa_id": "GPN/2013/page_87.pdf-3",
+ "source_page": "page_87",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/dgml_compact/GPN_2013_0001123360-13-000025.dgml.txt",
+ "doc_chars": 440691,
+ "prompt_chars": 440868,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 440691,
+ "original_chars": 440691,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93128,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 768,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "6820",
+ "reasoning": "We need answer question: \"what is the net change of the total fair value balance of non-vested shares during 2013?\" Need find relevant figures. Document has restricted stock rollforward table. It shows non-vested at May 31, 2011: 869 shares, weighted avg grant-date fair value $40. Non-vested at May 31, 2012: 941, $44. Non-vested at May 31, 2013: 1,096, $44. The \"total fair value balance\" likely means total fair value = shares * weighted average grant-date fair value. Net change during 2013 = balance at May 31, 2013 minus balance at May 31, 2012. Compute: 1,096 * 44 = 48,224 (in thousands? shares in thousands, fair value $44, so total $48,224 thousand). 941 * 44 = 41,404. Difference = 6,820 thousand = $6.82 million. But need check if \"total fair value balance\" refers to something else. The table gives shares and weighted average grant-date fair value. The question: \"net change of the total fair value balance of non-vested shares during 2013?\" So compute 1,096*44 - 941*44 = (1,096-941)*44 = 155*44 = 6,820. Units: shares in thousands, fair value per share, so total in thousands of dollars. So answer 6,820 (in thousands) or $6.82 million. Need provide evidence figures. Use values as printed: 1,096, 44, 941, 44. Also maybe 869? No. Need cite element names. The table rows: \"Non-vested at May 31, 2012 | 941 | 44\" and \"Non-vested at May 31, 2013 | 1,096 | $ 44\". Also maybe \"Non-vested at May 31, 2011 | 869 | $ 40\" not needed. So evidence lines.\n\nProgram: multiply(subtract(1096, 941), 44) = 6820. But careful: 1,096 and 941 are in thousands of shares, 44 is dollars per share, so result in thousands of dollars. The question asks \"net change of the total fair value balance\" - likely in dollars? Could be $6,820 thousand. We'll output 6820 (in thousands) or maybe 6.82 million. The answer should be value only. The question doesn't specify units. The document uses thousands for share amounts. The total fair value balance would be in thousands of dollars. So answer 6820. But maybe they want in millions? The question says \"net change of the total fair value balance\" - no units. We'll output 6820. Need ensure no other interpretation: \"total fair value balance\" might be the aggregate fair value of non-vested shares, which is shares * fair value. Net change during 2013 = ending balance - beginning balance. Yes.\n\nLet's produce evidence and program.",
+ "raw_content": "<evidence>\n1,096 | Non-vested at May 31, 2013\n44 | Non-vested at May 31, 2013\n941 | Non-vested at May 31, 2012\n44 | Non-vested at May 31, 2012\n</evidence>\n<program>multiply(subtract(1096, 941), 44)</program>\n<answer>6820</answer>",
+ "usage": {
+  "prompt_tokens": 93437,
+  "completion_tokens": 768,
+  "total_tokens": 94205,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 93184
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 21.8,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,096",
+   "element": "Non-vested at May 31, 2013",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "44",
+   "element": "Non-vested at May 31, 2013",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "941",
+   "element": "Non-vested at May 31, 2012",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "44",
+   "element": "Non-vested at May 31, 2012",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(subtract(1096, 941), 44)",
+ "answer_model": "6820",
+ "program_value": 6820.0,
+ "docfinqa_row": 352
+}

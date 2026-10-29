@@ -1,0 +1,74 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0473",
+ "format": "dgml",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what is the yearly interest expense incurred from the $ 375 million note with a fixed rate?",
+ "gold": "11.3",
+ "finqa_id": "ADI/2011/page_50.pdf-2",
+ "source_page": "page_50",
+ "ticker": "ADI",
+ "fiscal_year": "2011",
+ "source_file": "data/docs/dgml/ADI_2011_0000950123-11-099928.dgml.xml",
+ "doc_chars": 682519,
+ "prompt_chars": 682699,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 682519,
+ "original_chars": 682519,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 156936,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1182,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "11250000",
+ "reasoning": "We need answer question: \"what is the yearly interest expense incurred from the $ 375 million note with a fixed rate?\" Need identify which note. There are two $375 million notes: 5.0% senior unsecured notes due July 1, 2014, and 3.0% senior unsecured notes due April 15, 2016. The question says \"the $ 375 million note with a fixed rate\" - both have fixed rates. But maybe \"the $375 million note with a fixed rate\" refers to the 3.0% note? Actually both are fixed rate. But the 5.0% note is swapped to floating, so its fixed rate is hedged. The 3.0% note is fixed rate not hedged. The question asks yearly interest expense incurred from the $375 million note with a fixed rate. Could be the 3.0% note because it is fixed rate (not swapped). The 5.0% note has been swapped to variable, so its interest expense is based on LIBOR+2.05%, not fixed. So the note with a fixed rate is the 3.0% note. Yearly interest expense = 3.0% * $375 million = $11.25 million. But need check if there is any discount amortization? The question asks \"yearly interest expense incurred from the $375 million note with a fixed rate.\" The note has fixed rate 3.0%. Interest expense would be $375M * 3% = $11.25M per year. But the document also mentions net proceeds $370.5 million, discount amortized over term. Interest expense includes coupon plus amortization of discount. But the question likely expects simple interest. Let's see if there is any explicit figure. The document says \"3.0% senior unsecured notes due April 15, 2016\" with semiannual fixed interest payments. The yearly interest expense would be 3% of $375M = $11.25M. But maybe they want the amount in thousands? The question says \"yearly interest expense incurred from the $ 375 million note with a fixed rate?\" Could be asking for the dollar amount. We need compute. Use figures: $375 million and 3.0%. Multiply. Answer: $11,250,000 or $11.25 million. Need provide evidence: value | element. The figures: \"$375 million\" from DebtPrincipalAmount, \"3.0%\" from InterestRate. Also maybe \"3.0% senior unsecured notes due April 15, 2016\" from DebtInstrumentName. We'll cite.\n\nBut let's double-check if there is another note with fixed rate: The 5.0% note is also fixed but swapped. The question says \"the $375 million note with a fixed rate\" - singular. The 3.0% note is explicitly described as fixed-rate debt not hedged. In Market Risk section: \"our $375 million of 3% senior unsecured notes outstanding\" and \"3% fixed-rate debt, which is not hedged.\" So yes.\n\nCompute: 375,000,000 * 0.03 = 11,250,000. Answer in dollars. The question doesn't specify units, but likely answer as $11.25 million or 11,250,000. We'll put value only inside tags. Probably \"11,250,000\" or \"$11.25 million\"? The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" So just number. But maybe they expect in millions? The question says \"yearly interest expense incurred from the $375 million note\" - could be $11.25 million. We'll put 11,250,000. But to be safe, maybe 11.25? The document uses thousands in tables, but the question uses $375 million. The answer should be in dollars. I'll put 11250000.\n\nEvidence: \n$375 million | DebtPrincipalAmount (3.0% senior unsecured notes)\n3.0% | InterestRate (3.0% senior unsecured notes)\nProgram: multiply(375000000, 0.03) = 11250000. But the figures as printed are \"$375 million\" and \"3.0%\". The program should use numbers as printed? The instruction says \"nested calls over the figures as printed\" - but figures as printed include \"$375 million\" and \"3.0%\". We can use multiply(375, 0.03) if we treat millions? But the program is executed by benchmark, so it must be exact. Better to use multiply(375000000, 0.03) but that's not as printed. The instruction says \"over the figures as printed\" - maybe we should use the numeric values without units. I'll use multiply(375000000, 0.03). But the evidence lists \"$375 million\" and \"3.0%\". The program can use those numbers. I'll do multiply(375000000, 0.03). Alternatively, if they expect in millions, multiply(375, 0.03) = 11.25. But the question asks \"yearly interest expense\" - likely in dollars. I'll output 11250000.\n\nLet's final.",
+ "raw_content": "<evidence>\n$375 million | DebtPrincipalAmount (3.0% senior unsecured notes)\n3.0% | InterestRate (3.0% senior unsecured notes)\n</evidence>\n<program>multiply(375000000, 0.03)</program>\n<answer>11250000</answer>",
+ "usage": {
+  "prompt_tokens": 157242,
+  "completion_tokens": 1182,
+  "total_tokens": 158424,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 155648
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 13.07,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$375 million",
+   "element": "DebtPrincipalAmount (3.0% senior unsecured notes)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "3.0%",
+   "element": "InterestRate (3.0% senior unsecured notes)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(375000000, 0.03)",
+ "answer_model": "11250000",
+ "program_value": 11250000.0,
+ "docfinqa_row": 473
+}

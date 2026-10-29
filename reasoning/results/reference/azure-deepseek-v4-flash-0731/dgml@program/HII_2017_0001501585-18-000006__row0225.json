@@ -1,0 +1,75 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0225",
+ "format": "dgml",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what is the ratio of the deffered tax assets for the state income tax credit carry-forwards to the net operating loss carry-forward",
+ "gold": "5.3",
+ "finqa_id": "HII/2017/page_104.pdf-4",
+ "source_page": "page_104",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/dgml/HII_2017_0001501585-18-000006.dgml.xml",
+ "doc_chars": 733855,
+ "prompt_chars": 734075,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 733855,
+ "original_chars": 733855,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 164566,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 380,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "5.333333",
+ "reasoning": "We need answer ratio of deferred tax assets for state income tax credit carry-forwards to net operating loss carry-forward. Need figures. Document: \"A deferred tax asset of approximately $16 million (net of federal benefit) has been established related to these state income tax credit carry-forwards, with a valuation allowance of $7 million against such deferred tax asset as of December 31, 2017. The Company had a gross state net operating loss carry-forward of $39 million, which expires in 2027. A deferred tax asset of approximately $3 million (net of federal benefit) has been established for the net operating loss carry-forward, with a full valuation allowance as of December 31, 2017.\"\n\nQuestion: \"ratio of the deferred tax assets for the state income tax credit carry-forwards to the net operating loss carry-forward\" - likely ratio of deferred tax assets: $16 million / $3 million = 5.333... Or maybe ratio of deferred tax asset for credit carry-forwards to deferred tax asset for NOL carry-forward. Yes.\n\nNeed evidence: $16 million | DeferredTaxAmount? and $3 million | DeferredTaxAmount. Compute divide(16,3) = 5.333333... Answer as value. Probably 5.33. Need final answer inside <answer> tags only value. Use exact? 16/3 = 5.333... We'll output 5.33 maybe. The instruction says value itself no units. We'll output 5.33. But maybe they expect exact fraction? Usually numeric. We'll output 5.33.\n\nNeed evidence lines.",
+ "raw_content": "<evidence>\n$16 million | DeferredTaxAmount\n$3 million | DeferredTaxAmount\n</evidence>\n<program>divide(16, 3)</program>\n<answer>5.33</answer>",
+ "usage": {
+  "prompt_tokens": 164881,
+  "completion_tokens": 380,
+  "total_tokens": 165261,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.02,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$16 million",
+   "element": "DeferredTaxAmount",
+   "element_found": true,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$3 million",
+   "element": "DeferredTaxAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(16, 3)",
+ "answer_model": "5.33",
+ "program_value": 5.333333333333333,
+ "docfinqa_row": 225
+}

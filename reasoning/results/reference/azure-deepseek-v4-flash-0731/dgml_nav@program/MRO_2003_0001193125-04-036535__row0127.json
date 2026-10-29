@@ -1,0 +1,55 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0127",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "what were total distillates sales in millions for the three year period ? 365 346 345",
+ "gold": "1056",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "MRO_2003_0001193125-04-036535.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/FiveYearSelectedFinancialData/RevenuesAndOtherIncome/table",
+  "/chunk/FiveYearSelectedFinancialData/RevenuesAndOtherIncome/ul/li/p/RevenueByProductCaption"
+ ],
+ "r1_reasoning_chars": 7123,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 40528,
+  "completion_tokens": 1746,
+  "total_tokens": 42274,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/FiveYearSelectedFinancialData/RevenuesAndOtherIncome/table",
+  "/chunk/FiveYearSelectedFinancialData/RevenuesAndOtherIncome/ul/li/p/RevenueByProductCaption"
+ ],
+ "content_chars": 4508,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer question. Need find total distillates sales in millions for three year period? Document excerpt has revenues by product: refined products, merchandise, liquid hydrocarbons, natural gas, transportation and other products. No \"distillates\" explicitly. Maybe \"distillates\" is a product category? The question mentions \"365 346 345\" maybe options? Need determine if document contains enough info. The excerpt doesn't mention distillates. Could be in other part not provided? We have only region. Need answer NOT_FOUND likely. But let's examine: \"total distillates sales in millions for the three year period ? 365 346 345\" Maybe question from financial data: \"what were total distillates sales in millions for the three year period ?\" The numbers 365 346 345 are maybe answer choices? The document has no distillates. So NOT_FOUND.\n\nNeed provide evidence? If no figures used, maybe no evidence. But instruction: \"Before the answer, list every figure you use inside <evidence></evidence>... Cite only figures you actually read.\" We read none relevant. So evidence empty. Then answer NOT_FOUND.",
+ "raw_content": "<evidence></evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1475,
+  "completion_tokens": 261,
+  "total_tokens": 1736,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 11.86,
+ "outline_source": "MRO_2003_0001193125-04-036535.outline.txt",
+ "outline_chars": 159239
+}

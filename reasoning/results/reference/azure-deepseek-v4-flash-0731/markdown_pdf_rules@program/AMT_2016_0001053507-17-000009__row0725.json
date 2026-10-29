@@ -1,0 +1,72 @@
+{
+ "id": "AMT_2016_0001053507-17-000009__row0725",
+ "format": "markdown_pdf_rules",
+ "key": "AMT_2016_0001053507-17-000009",
+ "question": "what is the net change in the balance of unrecognized tax benefits during 2016?",
+ "gold": "79437",
+ "finqa_id": "AMT/2016/page_125.pdf-1",
+ "source_page": "page_125",
+ "ticker": "AMT",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf_rules/AMT_2016_0001053507-17-000009.md",
+ "doc_chars": 479012,
+ "prompt_chars": 479180,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 479012,
+ "original_chars": 479012,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 111015,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 2833,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "79437",
+ "reasoning": "We need to find the net change in unrecognized tax benefits during 2016. From the document, in note 12 (Income Taxes), there is a reconciliation of unrecognized tax benefits. The table shows:\n\nBalance at January 1, 2016: $28,114 (in thousands)\nAdditions based on tax positions related to the current year: $82,912\nAdditions for tax positions of prior years: $3,780 (but note the table shows a line with \"— —\" and then \"Additions for tax positions of prior years 3,780\" - actually the table shows:\n\nBalance at January 1 $ 28,114\nAdditions based on tax positions related to the current year 82,912\nAdditions for tax positions of prior years 3,780\nForeign currency (307)\nReduction as a result of the lapse of statute of limitations and effective settlements (3,168)\nBalance at December 31 $ 107,551\n\nSo net change = ending - beginning = 107,551 - 28,114 = 79,437 (in thousands). But the question asks \"net change in the balance of unrecognized tax benefits during 2016\" - that is the difference. Alternatively, we can sum the additions and subtractions: 82,912 + 3,780 - 307 - 3,168 = 83,217? Let's compute: 82,912+3,780=86,692; minus 307 = 86,385; minus 3,168 = 83,217. But that doesn't match 107,551-28,114=79,437. Wait, check the numbers: The table shows \"Additions for tax positions of prior years\" with a line that has \"— —\" before it? Actually the table as printed:\n\nBalance at January 1 $ 28,114 $ 31,947 $ 32,545\nAdditions based on tax positions related to the current year 82,912 5,042 4,187\n— —\nAdditions for tax positions of prior years 3,780\nForeign currency (307) (5,371) (3,216)\nReduction as a result of the lapse of statute of limitations and effective settlements (3,168) (3,504) (5,349)\nBalance at December 31 $ 107,551 $ 28,114 $ 31,947\n\nSo for 2016, the additions for prior years is 3,780. So sum: 82,912 + 3,780 = 86,692; minus 307 = 86,385; minus 3,168 = 83,217. But the ending balance is 107,551, beginning 28,114, difference 79,437. There's a discrepancy. Possibly the \"Additions for tax positions of prior years\" line might be misaligned? Actually the table shows for 2016: \"Additions based on tax positions related to the current year 82,912\" and then \"— —\" and then \"Additions for tax positions of prior years 3,780\" - that might be a formatting issue. But the numbers given: 82,912 + 3,780 = 86,692; minus 307 = 86,385; minus 3,168 = 83,217. That would give ending balance 28,114 + 83,217 = 111,331, not 107,551. So there is a mismatch. Perhaps the \"Additions for tax positions of prior years\" is actually 0? Or the \"— —\" indicates that for 2016, there is no addition for prior years? Let's read the text: \"Additions based on tax positions related to the current year 82,912 5,042 4,187\" then \"— —\" then \"Additions for tax positions of prior years 3,780\" - the \"— —\" might be for the 2015 and 2014 columns? Actually the table has three columns for 2016, 2015, 2014. The line \"— —\" might be for 2015 and 2014, and then \"Additions for tax positions of prior years 3,780\" is for 2016? But the formatting is ambiguous. Let's look at the original text: \n\n\"Additions based on tax positions related to the current year 82,912 5,042 4,187\n— —\nAdditions for tax positions of prior years 3,780\"\n\nIt seems that the \"— —\" is on the same line as the \"Additions based on tax positions...\"? Actually the text shows:\n\nAdditions based on tax positions related to the current year 82,912 5,042 4,187\n— —\nAdditions for tax positions of prior years 3,780\n\nThat might be a table where the first line has three numbers, then the next line has \"— —\" (maybe for 2015 and 2014) and then the next line has \"Additions for tax positions of prior years 3,780\" - but that would be for 2016 only? Actually the table has three columns, so each row should have three numbers. The row \"Additions based on tax positions related to the current year\" has 82,912, 5,042, 4,187. The next row \"— —\" might be for 2015 and 2014? But then \"Additions for tax positions of prior years 3,780\" - that would be for 2016? But then where are the numbers for 2015 and 2014 for that row? Possibly the \"— —\" indicates that for 2015 and 2014, there were no additions for prior years, and the 3,780 is for 2016. So the row for \"Additions for tax positions of prior years\" has values: 3,780, —, —? But the text shows \"3,780\" only once. Let's check the reconciliation: The ending balance for 2016 is 107,551. Starting 28,114. The sum of changes: 82,912 (current year) + 3,780 (prior years) - 307 (foreign currency) - 3,168 (reductions) = 83,217. That would give 28,114+83,217=111,331, not 107,551. So there is a discrepancy. Perhaps the \"Additions for tax positions of prior years\" is actually 0 for 2016? Or maybe the \"— —\" indicates that the 3,780 is for 2015? Let's look at the 2015 column: For 2015, the additions based on current year is 5,042, and the prior years addition might be 3,780? But the ending balance for 2015 is 28,114, starting 31,947. Sum: 5,042 + 3,780 - 5,371 - 3,504 = 5,042+3,780=8,822; minus 5,371=3,451; minus 3,504 = -53? That would give 31,947 - 53 = 31,894, not 28,114. So that doesn't work either.\n\nMaybe the \"— —\" is for the 2016 and 2015 columns? Actually the table might have been misformatted. Let's read the text carefully: \n\n\"A reconciliation of the beginning and ending amount of unrecognized tax benefits are as follows for the years ended December 31, (in thousands):\n\n**2016** **2015** **2014**\n\nBalance at January 1 $ 28,114 $ 31,947 $ 32,545\n\nAdditions based on tax positions related to the current year 82,912 5,042 4,187\n\n— —\n\nAdditions for tax positions of prior years 3,780\n\nForeign currency (307) (5,371) (3,216)\n\nReduction as a result of the lapse of statute of limitations and effective settlements (3,168) (3,504) (5,349)\n\nBalance at December 31 $ 107,551 $ 28,114 $ 31,947\"\n\nIt appears that the line \"— —\" is a placeholder for the 2015 and 2014 columns for the \"Additions for tax positions of prior years\" row, and the number 3,780 is for 2016. So the row \"Additions for tax positions of prior years\" has values: 3,780, —, —. But then the sum for 2016 would be 82,912 + 3,780 - 307 - 3,168 = 83,217, giving ending 111,331, which contradicts the stated ending of 107,551. So there must be an error in my reading. Perhaps the \"— —\" is actually for the 2016 and 2015 columns? Or maybe the \"Additions for tax positions of prior years\" is actually 0 for 2016, and the 3,780 is for 2015? Let's check the 2015 column: If 2015 had additions for prior years of 3,780, then sum for 2015: 5,042 + 3,780 - 5,371 - 3,504 = 8,822 - 8,875 = -53, so ending would be 31,947 - 53 = 31,894, not 28,114. So that doesn't work.\n\nMaybe the \"— —\" is for the 2016 and 2015 columns, and the 3,780 is for 2014? For 2014: additions current year 4,187, prior years 3,780, foreign currency -3,216, reductions -5,349 => sum = 4,187+3,780-3,216-5,349 = 7,967-8,565 = -598, ending would be 32,545-598=31,947, which matches the 2015 beginning balance! Indeed, the 2014 ending balance is 31,947, which is the 2015 beginning. So that works: For 2014, the additions for prior years is 3,780. So the row \"Additions for tax positions of prior years\" has values: —, —, 3,780? But the text shows \"3,780\" only once, and the \"— —\" before it might be for 2016 and 2015. So the row is: for 2016: —, for 2015: —, for 2014: 3,780. That makes sense. So for 2016, there were no additions for prior years. So the net change for 2016 is: 82,912 (current year) - 307 (foreign currency) - 3,168 (reductions) = 82,912 - 307 - 3,168 = 79,437. That matches the difference between ending and beginning: 107,551 - 28,114 = 79,437. So the net change is 79,437 thousand, i.e., $79.437 million.\n\nThus the answer is 79,437 (in thousands) or $79.4 million. The question asks \"net change in the balance of unrecognized tax benefits during 2016\" - likely in dollars. The document uses thousands, so we can give 79,437 (thousands) or 79.437 million. The instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question doesn't specify units, but it's a financial document, so likely in thousands. However, the question says \"net change in the balance\" - we can give the number as printed? The balance is in thousands, so the net change is 79,437 (in thousands). But to be safe, we can give 79,437. Alternatively, we can give 79.437 million. But the instruction says \"no explanation or units unless the question asks for them.\" So we'll give the numeric value. I'll put 79437.\n\nBut let's double-check: The reconciliation shows beginning 28,114, ending 107,551, difference 79,437. So that is the net change. So answer is 79437.\n\nWe need to provide evidence: the figures used. We'll list the beginning and ending balances, and the components if needed. But the question asks for net change, so we can just use the difference. However, the instruction says \"list every figure you use\" - we use 107,551 and 28,114. So evidence: 107,551 | Balance at December 31 (unrecognized tax benefits) and 28,114 | Balance at January 1. Then program: subtract(107551, 28114) = 79437.\n\nWe'll put that.",
+ "raw_content": "<evidence>\n107,551 | Balance at December 31 (unrecognized tax benefits)\n28,114 | Balance at January 1 (unrecognized tax benefits)\n</evidence>\n\n<program>\nsubtract(107551, 28114)\n</program>\n\n<answer>79437</answer>",
+ "usage": {
+  "prompt_tokens": 111320,
+  "completion_tokens": 2833,
+  "total_tokens": 114153,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 111104
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 13.46,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "107,551",
+   "element": "Balance at December 31 (unrecognized tax benefits)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "28,114",
+   "element": "Balance at January 1 (unrecognized tax benefits)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(107551, 28114)",
+ "answer_model": "79437",
+ "program_value": 79437.0,
+ "docfinqa_row": 725
+}

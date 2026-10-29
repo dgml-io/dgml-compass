@@ -1,0 +1,74 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0486",
+ "format": "markdown_pdf_plumber",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what is the roi in snap-on if the investment was made at the end of 2005 and sold at the end of 2007?",
+ "gold": "34.8%",
+ "finqa_id": "SNA/2007/page_29.pdf-2",
+ "source_page": "page_29",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_plumber/SNA_2007_0001104659-08-011401.md",
+ "doc_chars": 371934,
+ "prompt_chars": 372124,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 371934,
+ "original_chars": 371934,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 94563,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 336,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "34.7554%",
+ "reasoning": "We need answer ROI if investment made end of 2005 and sold end 2007. Need figures. From stock performance graph: Dec 31, 2005 Snap-on value 146.97 (assuming $100 invested Dec 31, 2002 with dividends reinvested). Dec 31, 2007 value 198.05. ROI = (198.05 - 146.97)/146.97 = 51.08/146.97 = 0.34755... = 34.76%. Alternatively use fiscal year-end per share price? But question \"investment\" likely total shareholder return graph. The graph gives cumulative total shareholder return assuming dividends reinvested. So ROI = (198.05/146.97 -1) = 0.3476. Need answer as percentage? Probably 34.76%. Let's compute precisely: 198.05/146.97 = 1.34755... subtract 1 = 0.34755. So 34.76%. Evidence: 146.97 | December 31, 2005 Snap-on Incorporated; 198.05 | December 31, 2007 Snap-on Incorporated. Program: divide(subtract(198.05, 146.97), 146.97).",
+ "raw_content": "<evidence>\n146.97 | December 31, 2005 Snap-on Incorporated\n198.05 | December 31, 2007 Snap-on Incorporated\n</evidence>\n\n<program>\ndivide(subtract(198.05, 146.97), 146.97)\n</program>\n\n<answer>34.76%</answer>",
+ "usage": {
+  "prompt_tokens": 94880,
+  "completion_tokens": 336,
+  "total_tokens": 95216,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.89,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "146.97",
+   "element": "December 31, 2005 Snap-on Incorporated",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "198.05",
+   "element": "December 31, 2007 Snap-on Incorporated",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(subtract(198.05, 146.97), 146.97)",
+ "answer_model": "34.76%",
+ "program_value": 0.3475539225692319,
+ "docfinqa_row": 486
+}

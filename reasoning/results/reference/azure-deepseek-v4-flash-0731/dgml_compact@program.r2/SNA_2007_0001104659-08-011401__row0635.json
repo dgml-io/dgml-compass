@@ -1,0 +1,72 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0635",
+ "format": "dgml_compact",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "based on the cash dividends paid , how many common stock shares were outstanding?",
+ "gold": "58909091",
+ "finqa_id": "SNA/2007/page_49.pdf-2",
+ "source_page": "page_49",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml_compact/SNA_2007_0001104659-08-011401.dgml.txt",
+ "doc_chars": 428718,
+ "prompt_chars": 428888,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 428718,
+ "original_chars": 428718,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 97509,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 849,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "58.378378",
+ "reasoning": "We need answer based on cash dividends paid, how many common stock shares were outstanding? Need infer from dividends paid per share and total dividends paid. Cash dividends paid in 2007 totaled $64.8 million, dividends paid per common share $1.11. So shares outstanding = 64.8 million / 1.11 = 58.378... million. But question \"based on the cash dividends paid, how many common stock shares were outstanding?\" Likely compute. Need use figures. Evidence: DividendPaymentTotal: $64.8 million, DividendPerShare: $1.11 per share. Compute 64.8/1.11 = 58.378378... million shares. But maybe they ask \"how many common stock shares were outstanding?\" Could be 57,429,139 at Dec 29, 2007, but based on cash dividends paid? The phrase \"based on the cash dividends paid\" suggests compute from total dividends and per share. Let's check: Cash dividends paid in 2007 totaled $64.8 million, and dividends paid per common share $1.11. So shares = 64.8/1.11 = 58.378... million. But actual shares outstanding at Dec 29, 2007 was 57,429,139. The difference due to timing? The question asks \"based on the cash dividends paid, how many common stock shares were outstanding?\" It might be a trick: use dividends paid and per share to compute weighted average? Let's see. The document states \"Cash dividends paid in 2007, 2006 and 2005 totaled $64.8 million, $63.6 million and $57.8 million, respectively.\" And \"Dividends paid per common share | $1.11 | $1.08 | $1.00\". So 64.8/1.11 = 58.378... million. But actual shares outstanding at year end 57,429,139. The question might expect the computed number. Need answer with value only. Could be 58.4 million? Let's compute precisely: 64.8 / 1.11 = 58.378378... million. If in shares, 58,378,378. But maybe they want \"approximately 58.4 million shares\". The question: \"based on the cash dividends paid , how many common stock shares were outstanding?\" It doesn't specify year? Probably 2007. Use 2007 figures. Answer: 58,378,378 (or 58.4 million). Need provide evidence and program. Evidence: $64.8 million | DividendPaymentTotal; $1.11 | DividendPerShare. Program: divide(64.8, 1.11) = 58.378378... But note units: 64.8 million / 1.11 dollars per share = 58.378 million shares. The program uses figures as printed: 64.8 and 1.11. So answer 58.378378... But final answer inside tags only value. Could be 58.4 million? The question asks \"how many common stock shares were outstanding?\" Might expect number of shares, not millions. So 58,378,378. But let's check if there is any other interpretation: \"based on the cash dividends paid\" maybe \"cash dividends paid per share\" and \"total cash dividends paid\" gives average shares outstanding. The document also states \"Shares outstanding as of February 15, 2008: 57,690,539 shares\" and \"At December 29, 2007, Snap-on had 57,429,139 shares of common stock outstanding.\" But the question specifically says \"based on the cash dividends paid\" so it's a calculation. So answer 58,378,378. Need include evidence and program.",
+ "raw_content": "<evidence>\n$64.8 million | DividendPaymentTotal\n$1.11 | DividendPerShare\n</evidence>\n<program>divide(64.8, 1.11)</program>\n<answer>58,378,378</answer>",
+ "usage": {
+  "prompt_tokens": 97811,
+  "completion_tokens": 849,
+  "total_tokens": 98660,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 97536
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.56,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$64.8 million",
+   "element": "DividendPaymentTotal",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$1.11",
+   "element": "DividendPerShare",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(64.8, 1.11)",
+ "answer_model": "58,378,378",
+ "program_value": 58.37837837837837,
+ "docfinqa_row": 635
+}

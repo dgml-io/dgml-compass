@@ -1,0 +1,85 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0480",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what percentage of the total cash purchase price net of cash acquired was represented by goodwill?",
+ "gold": "81%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "EW_2016_0001099800-17-000008.outline.txt",
+ "doc_source": "EW_2016_0001099800-17-000008.dgml.xml",
+ "outline_chars": 67317,
+ "predicted_xpaths": [
+  "/chunk/FinancialStatementsCompany/Financial/Acquisitions",
+  "/chunk/GoodwillAmount",
+  "/chunk/FinancialStatementsCompany/Financial/Acquisitions/CardiAQPurchasePriceAllocation"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 5617,
+ "r1_usage": {
+  "prompt_tokens": 17150,
+  "completion_tokens": 1340,
+  "total_tokens": 18490,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/FinancialStatementsCompany/Financial/Acquisitions",
+  "/chunk/GoodwillAmount",
+  "/chunk/FinancialStatementsCompany/Financial/Acquisitions/CardiAQPurchasePriceAllocation"
+ ],
+ "content_chars": 92799,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "80.880975",
+ "reasoning": "We need to find goodwill and total cash purchase price net of cash acquired. From the CardiAQ purchase price allocation table: Goodwill = 258.9, Total cash purchase price net of cash acquired = 320.1. Percentage = 258.9 / 320.1 * 100. Compute.",
+ "raw_content": "<evidence>258.9 | /chunk/FinancialStatementsCompany/Financial/Acquisitions/CardiAQPurchasePriceAllocation/tr[3]/PurchasePriceAllocationAmount\n320.1 | /chunk/FinancialStatementsCompany/Financial/Acquisitions/CardiAQPurchasePriceAllocation/tr[10]/PurchasePriceAllocationAmount</evidence>\n<program>multiply(divide(258.9, 320.1), 100)</program>\n<answer>80.88</answer>",
+ "r2_usage": {
+  "prompt_tokens": 22610,
+  "completion_tokens": 173,
+  "total_tokens": 22783,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 22610,
+   "completion_tokens": 173,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "258.9",
+   "element": "chunk/FinancialStatementsCompany/Financial/Acquisitions/CardiAQPurchasePriceAllocation/tr[3]/PurchasePriceAllocationAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "320.1",
+   "element": "chunk/FinancialStatementsCompany/Financial/Acquisitions/CardiAQPurchasePriceAllocation/tr[10]/PurchasePriceAllocationAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(258.9, 320.1), 100)",
+ "answer_model": "80.88",
+ "program_value": 80.88097469540767,
+ "elapsed_s": 7.95
+}

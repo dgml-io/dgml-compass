@@ -1,0 +1,68 @@
+{
+ "id": "GPN_2010_0001193125-10-169025__row0154",
+ "key": "GPN_2010_0001193125-10-169025",
+ "question": "what is the after-tax share-based compensation cost in 2010?",
+ "gold": "11.8",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "GPN_2010_0001193125-10-169025.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/EquityCompensationExpense"
+ ],
+ "r1_reasoning_chars": 2545,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 22293,
+  "completion_tokens": 645,
+  "total_tokens": 22938,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/EquityCompensationExpense"
+ ],
+ "content_chars": 91892,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "11.8",
+ "reasoning": "We need after-tax share-based compensation cost in 2010. The document gives share-based compensation cost and income tax benefit. After-tax = cost - tax benefit (since tax benefit is negative, subtract negative = add? Actually income tax benefit is shown as $(6.3) meaning a benefit reduces tax expense, so after-tax cost = cost - benefit = 18.1 - 6.3 = 11.8. But careful: the table shows \"Share-based compensation cost\" $18.1 and \"Income tax benefit\" $(6.3). So after-tax = 18.1 - 6.3 = 11.8. Units are millions. The question asks \"after-tax share-based compensation cost in 2010\" so answer 11.8.\n\nWe need evidence: $18.1 | Share-based compensation cost, $(6.3) | Income tax benefit. Then program subtract(18.1, 6.3) = 11.8.\n\nBut note the numbers are in millions? The table doesn't specify units but likely millions. The question doesn't ask for units, just value. So answer 11.8.\n\nLet's produce evidence and program.",
+ "raw_content": "<evidence>\n$18.1 | Share-based compensation cost\n$ (6.3) | Income tax benefit\n</evidence>\n<program>subtract(18.1, 6.3)</program>\n<answer>11.8</answer>",
+ "r2_usage": {
+  "prompt_tokens": 25060,
+  "completion_tokens": 300,
+  "total_tokens": 25360,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$18.1",
+   "element": "Share-based compensation cost",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ (6.3)",
+   "element": "Income tax benefit",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(18.1, 6.3)",
+ "answer_model": "11.8",
+ "program_value": 11.8,
+ "elapsed_s": 7.23,
+ "outline_source": "GPN_2010_0001193125-10-169025.outline.txt",
+ "outline_chars": 88725
+}

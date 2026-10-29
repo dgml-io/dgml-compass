@@ -1,0 +1,66 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0200",
+ "format": "dgml_compact",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the interest expense in 2015 assuming that all the debt is interest bearing debt , ( in billions ) ?",
+ "gold": "0.86",
+ "finqa_id": "PM/2015/page_85.pdf-3",
+ "source_page": "page_85",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml_compact/PM_2015_0001413329-16-000076.dgml.txt",
+ "doc_chars": 654685,
+ "prompt_chars": 654882,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 654685,
+ "original_chars": 654685,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 144584,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 499,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1.132",
+ "reasoning": "We need answer interest expense in 2015 assuming all debt is interest bearing debt, in billions. Need find interest expense. In document, interest expense, net for 2015 is $1,008 million. But question says \"interest expense in 2015 assuming that all the debt is interest bearing debt\" maybe they want interest expense? There is also \"Interest expense\" in Note 14: Interest expense $1,132 million, interest income (124), net $1,008. The question asks \"interest expense in 2015 assuming that all the debt is interest bearing debt\" - maybe they want interest expense gross? Or maybe they want interest expense on total debt? Let's parse. The document has \"Interest expense, net\" in income statement: $1,008 million. Also Note 14: Interest expense $1,132 million, interest income (124), net $1,008. The question: \"what is the interest expense in 2015 assuming that all the debt is interest bearing debt , ( in billions ) ?\" This might be a trick: they want interest expense from income statement? But \"assuming that all the debt is interest bearing debt\" might refer to total debt? Actually interest expense is already on interest-bearing debt. Maybe they want the interest expense figure in billions: $1.132 billion? Or $1.008 billion? The question says \"interest expense\" not \"interest expense, net\". In Note 14, \"Interest expense\" is $1,132 million. So answer $1.132 billion. But check if they ask \"assuming that all the debt is interest bearing debt\" - maybe they want to compute interest expense from total debt and weighted average cost? But they ask \"what is the interest expense in 2015\" - the document gives it. The phrase \"assuming that all the debt is interest bearing debt\" might be to clarify that interest expense is on debt. So answer $1.132 billion. Need evidence: Interest expense $1,132 million from Note 14. Also maybe interest expense, net $1,008. But question says \"interest expense\" not net. So use $1,132 million = $1.132 billion. Final answer inside <answer>1.132</answer>.",
+ "raw_content": "<evidence>$1,132 | Interest expense (Note 14)</evidence>\n<program>1.132</program>\n<answer>1.132</answer>",
+ "usage": {
+  "prompt_tokens": 144895,
+  "completion_tokens": 499,
+  "total_tokens": 145394,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 144640
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.32,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$1,132",
+   "element": "Interest expense (Note 14)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "1.132",
+ "answer_model": "1.132",
+ "program_value": 1.132,
+ "docfinqa_row": 200
+}

@@ -1,0 +1,50 @@
+{
+ "id": "NCLH_2018_0001144204-19-010508__row0887",
+ "format": "markdown_pdf_plumber",
+ "key": "NCLH_2018_0001144204-19-010508",
+ "question": "how much did interest with libor change from year 1 to years 3-5?",
+ "gold": "the interest decreased 25.7% from year 1 to years 3-5",
+ "finqa_id": "NCLH/2018/page_64.pdf-4",
+ "source_page": "page_64",
+ "ticker": "NCLH",
+ "fiscal_year": "2018",
+ "source_file": "data/docs/markdown_pdf_plumber/NCLH_2018_0001144204-19-010508.md",
+ "doc_chars": 421996,
+ "prompt_chars": 422150,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 421996,
+ "original_chars": 421996,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 107108,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1419,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer question: \"how much did interest with libor change from year 1 to years 3-5?\" Need interpret. Document has interest rate risk section: \"Based on our December 31, 2018 outstanding variable rate debt balance, a one percentage point increase in annual LIBOR interest rates would increase our annual interest expense by approximately $18.4 million excluding the effects of capitalization of interest.\" Also has contractual obligations table with interest payments: Less than 1 year: $222,427; 1-3 years: $404,380; 3-5 years: $165,172. But question asks \"interest with libor change from year 1 to years 3-5\" maybe refers to interest rate swaps? Or maybe \"how much did interest with libor change\" meaning the effect of LIBOR change? Need parse.\n\nQuestion: \"how much did interest with libor change from year 1 to years 3-5?\" Could be asking about the change in interest expense due to LIBOR from year 1 to years 3-5? The document says \"Based on our December 31, 2018 outstanding variable rate debt balance, a one percentage point increase in annual LIBOR interest rates would increase our annual interest expense by approximately $18.4 million excluding the effects of capitalization of interest.\" That is a single number. But \"from year 1 to years 3-5\" might refer to the contractual obligations table where interest payments are listed by period. The table shows interest: Less than 1 year: 222,427; 1-3 years: 404,380; 3-5 years: 165,172. But that's not \"interest with libor\" specifically. Maybe they want the difference between year 1 and years 3-5? Or the change in LIBOR? The question is ambiguous.\n\nLet's read the document carefully. There is a section \"Interest Rate Risk\" in Item 7A. It says: \"As of December 31, 2018, we had interest rate swap agreements to manage our interest expense by hedging the interest rate risks associated with variable rates on our outstanding borrowings. As of December 31, 2018, 72% of our debt was fixed and 28% was variable, which includes the effects of the interest rate swaps. The notional amount of our outstanding debt associated with the interest rate swap agreements was $1.0 billion as of December 31, 2018. As of December 31, 2017, 54% of our debt was fixed and 46% was variable, which includes the effects of the interest rate swaps. The notional amount of outstanding debt associated with the interest rate swap agreements was $218.6 million as of December 31, 2017. The change from December 31, 2017 to December 31, 2018 was due to additional interest rate swaps executed and the repayment of variable rate debt.\n\nBased on our December 31, 2018 outstanding variable rate debt balance, a one percentage point increase in annual LIBOR interest rates would increase our annual interest expense by approximately $18.4 million excluding the effects of capitalization of interest.\"\n\nSo the question \"how much did interest with libor change from year 1 to years 3-5?\" might be asking about the change in the impact of LIBOR from year 1 to years 3-5? But there is no such breakdown. Alternatively, maybe they refer to the \"Contractual Obligations\" table which has interest payments by period. The table shows interest: Less than 1 year: 222,427; 1-3 years: 404,380; 3-5 years: 165,172. But that is total interest, not specifically LIBOR. The question says \"interest with libor\" meaning interest expense that is variable with LIBOR? The document says \"Based on our December 31, 2018 outstanding variable rate debt balance, a one percentage point increase in annual LIBOR interest rates would increase our annual interest expense by approximately $18.4 million.\" That is a sensitivity, not a change from year 1 to years 3-5.\n\nMaybe the question is from a financial analysis perspective: \"how much did interest with libor change from year 1 to years 3-5?\" Could be asking for the change in the interest rate swap notional? No.\n\nLet's search the document for \"LIBOR\" occurrences. There is also in risk factors: \"Certain of our debt agreements use LIBOR as a reference rate for interest rate calculations. In July 2017, the U.K.’s Financial Conduct Authority, which regulates LIBOR, announced that it intends to phase out LIBOR by the end of 2021.\" That is not a number.\n\nThe only numeric LIBOR-related is the $18.4 million sensitivity. The question might be asking \"how much did interest with libor change from year 1 to years 3-5?\" meaning if LIBOR increases by 1 percentage point, how much would interest expense change in year 1 vs years 3-5? But the sensitivity is annual, so it would be the same each year unless debt balance changes. The document does not provide a breakdown by year. So likely NOT_FOUND.\n\nBut let's consider if they mean \"interest with libor\" as in the interest rate swaps? The notional amount changed from $218.6 million in 2017 to $1.0 billion in 2018. That is a change from year 1 (2017) to years 3-5? No, that's year over year.\n\nMaybe the question is from a different context: \"how much did interest with libor change from year 1 to years 3-5?\" Could be asking for the change in the interest expense line item in the contractual obligations table? The table shows interest payments: less than 1 year: 222,427; 1-3 years: 404,380; 3-5 years: 165,172. The difference between year 1 and years 3-5? That would be 165,172 - 222,427 = -57,255 (in thousands) i.e., -$57.255 million. But that is total interest, not specifically LIBOR. The question says \"interest with libor\" meaning interest that is tied to LIBOR? The table does not distinguish.\n\nGiven the ambiguity, the safest is to answer NOT_FOUND because the document does not provide a specific figure for the change in LIBOR-related interest from year 1 to years 3-5. The only LIBOR sensitivity is $18.4 million per 1% increase, which is not a change over time.\n\nThus final answer: NOT_FOUND.",
+ "raw_content": "<answer>NOT_FOUND</answer>",
+ "usage": {
+  "prompt_tokens": 107255,
+  "completion_tokens": 1419,
+  "total_tokens": 108674,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.25,
+ "answer_tag_found": true,
+ "docfinqa_row": 887
+}

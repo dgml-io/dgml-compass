@@ -1,0 +1,17 @@
+# Shape map for the mini corpus. The green docset is deliberately name_only, so tests
+# can assert that provisional shapes are excluded from anything fitted.
+not_a_docset: [NO_REF, Schemas, field_name_check]
+unsourced_shapes: [correspondence]
+docsets:
+  - docset_id: dsred0000001
+    display_name: Mini Red Leases
+    org: redorg000001
+    shape: hybrid_composite
+    basis: inspected_sample
+    note: Synthetic fixture.
+  - docset_id: dsgrn0000001
+    display_name: Mini Green Agreements
+    org: grnorg000001
+    shape: prose_narrative
+    basis: name_only
+    note: Synthetic fixture; provisional on purpose.

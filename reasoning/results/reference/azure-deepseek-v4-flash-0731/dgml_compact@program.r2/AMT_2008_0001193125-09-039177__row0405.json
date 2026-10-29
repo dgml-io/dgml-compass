@@ -1,0 +1,80 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0405",
+ "format": "dgml_compact",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "what is the percentage change in the the outstanding debt under the 3.00% ( 3.00 % ) notes from 2007 to 2008?",
+ "gold": "-53.0%",
+ "finqa_id": "AMT/2008/page_94.pdf-3",
+ "source_page": "page_94",
+ "ticker": "AMT",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml_compact/AMT_2008_0001193125-09-039177.dgml.txt",
+ "doc_chars": 530448,
+ "prompt_chars": 530646,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 530448,
+ "original_chars": 530448,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 114721,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "stop",
+   "completion_tokens": 307,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 1,
+ "ok": true,
+ "answer": "-53.01566",
+ "reasoning": "We need percentage change in outstanding debt under 3.00% notes from 2007 to 2008. From document: In Long-Term Obligations schedule: 3.00% convertible notes: 2008: $161,893 (in thousands), 2007: $344,568. Also note text says as of Dec 31, 2008 and 2007, outstanding debt under 3.00% Notes was $161.9 million (principal $162.2 million) and $344.6 million. Use 161,893 and 344,568. Percentage change = (2008-2007)/2007 *100 = (161893-344568)/344568 = -182675/344568 ≈ -0.5302 = -53.02%. So answer -53.0% or -53.02%. Need provide evidence and program. Use figures as printed: 161,893 and 344,568. Program: multiply(divide(subtract(161893, 344568), 344568), 100).",
+ "raw_content": "<evidence>\n161,893 | Long-term obligations schedule: 3.00% convertible notes 2008\n344,568 | Long-term obligations schedule: 3.00% convertible notes 2007\n</evidence>\n<program>\nmultiply(divide(subtract(161893, 344568), 344568), 100)\n</program>\n<answer>-53.02%</answer>",
+ "usage": {
+  "prompt_tokens": 115042,
+  "completion_tokens": 307,
+  "total_tokens": 115349,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 114944
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.14,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "161,893",
+   "element": "Long-term obligations schedule: 3.00% convertible notes 2008",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "344,568",
+   "element": "Long-term obligations schedule: 3.00% convertible notes 2007",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(subtract(161893, 344568), 344568), 100)",
+ "answer_model": "-53.02%",
+ "program_value": -53.015660188990275,
+ "docfinqa_row": 405
+}

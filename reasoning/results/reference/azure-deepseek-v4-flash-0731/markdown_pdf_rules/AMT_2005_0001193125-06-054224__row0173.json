@@ -1,0 +1,53 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0173",
+ "format": "markdown_pdf_rules",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what portion of the adjusted consolidated cash flow for the twelve months ended december 31 , 2005 is related to non-tower cash flow?",
+ "gold": "-5.8%",
+ "finqa_id": "AMT/2005/page_54.pdf-1",
+ "source_page": "page_54",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/markdown_pdf_rules/AMT_2005_0001193125-06-054224.md",
+ "doc_chars": 437061,
+ "prompt_chars": 437283,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 437061,
+ "original_chars": 437061,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 101793,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 299,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-5.75%",
+ "reasoning": "We need to find the portion of adjusted consolidated cash flow related to non-tower cash flow. The document provides: \"Adjusted Consolidated Cash Flow, for the twelve months ended December 31, 2005 $ 531,822\" and \"Non-Tower Cash Flow, for the twelve months ended December 31, 2005 $ (30,584)\". So the portion is -30,584 / 531,822 = -0.0575 or -5.75%. The question asks \"what portion\" so likely a percentage. But the answer should be the value itself? The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what portion\" so we can give a decimal or percentage. Probably give the ratio as a decimal or percentage. Since it's a portion, we can give -0.0575 or -5.75%. But the document gives exact numbers. Let's compute: 30,584 / 531,822 = 0.0575 approximately. So portion is -5.75% or -0.0575. I'll put -5.75% or -0.0575. The question says \"what portion\" so maybe they want the fraction. I'll put -0.0575 or -5.75%. I'll put -5.75% inside the answer tags.",
+ "raw_content": "<answer>-5.75%</answer>",
+ "usage": {
+  "prompt_tokens": 101950,
+  "completion_tokens": 299,
+  "total_tokens": 102249,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 101888
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.29,
+ "answer_tag_found": true,
+ "docfinqa_row": 173
+}

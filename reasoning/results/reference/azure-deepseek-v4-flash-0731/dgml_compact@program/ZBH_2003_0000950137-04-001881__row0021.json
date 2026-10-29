@@ -1,0 +1,72 @@
+{
+ "id": "ZBH_2003_0000950137-04-001881__row0021",
+ "format": "dgml_compact",
+ "key": "ZBH_2003_0000950137-04-001881",
+ "question": "what percent of inventory is ready for liquidation ( sale ) in 2003?",
+ "gold": "72.83%",
+ "finqa_id": "ZBH/2003/page_58.pdf-3",
+ "source_page": "page_58",
+ "ticker": "ZBH",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/dgml_compact/ZBH_2003_0000950137-04-001881.dgml.txt",
+ "doc_chars": 355371,
+ "prompt_chars": 355528,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 355371,
+ "original_chars": 355371,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 75978,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 418,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "72.8255%",
+ "reasoning": "We need answer question: \"what percent of inventory is ready for liquidation (sale) in 2003?\" Need find inventory figures. In document, inventories at Dec 31 2003: Finished goods $384.3, Raw materials and work in progress $90.8, Inventory step-up $52.6, Inventories net $527.7. \"Ready for liquidation (sale)\" likely finished goods as percent of total inventory? Or maybe \"finished goods\" as percent of net inventory? Need interpret. Question asks \"what percent of inventory is ready for liquidation (sale) in 2003?\" In accounting, finished goods are ready for sale. So percent = finished goods / total inventory (net?) = 384.3 / 527.7 = 0.728... = 72.8%. But note inventory step-up is part of inventory? The table shows Finished goods $384.3, Raw materials and work in progress $90.8, Inventory step-up $52.6, Inventories, net $527.7. So finished goods as percent of net inventory = 384.3/527.7 = 72.8%. Alternatively if exclude step-up? But \"inventory\" likely net inventory. Need compute. Let's compute exactly: 384.3 / 527.7 = 0.72825... = 72.8%. Use evidence: Finished goods $384.3, Inventories net $527.7. Answer 72.8%. Need final answer inside <answer>72.8%</answer>. But question asks \"what percent\" so include %? The instruction says no units unless question asks for them. It asks percent, so include %? Usually answer value with % sign. We'll put 72.8%.",
+ "raw_content": "<evidence>\n384.3 | Finished goods\n527.7 | Inventories, net\n</evidence>\n<program>divide(384.3, 527.7)</program>\n<answer>72.8%</answer>",
+ "usage": {
+  "prompt_tokens": 76281,
+  "completion_tokens": 418,
+  "total_tokens": 76699,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 12.24,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "384.3",
+   "element": "Finished goods",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "527.7",
+   "element": "Inventories, net",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(384.3, 527.7)",
+ "answer_model": "72.8%",
+ "program_value": 0.7282546901648663,
+ "docfinqa_row": 21
+}

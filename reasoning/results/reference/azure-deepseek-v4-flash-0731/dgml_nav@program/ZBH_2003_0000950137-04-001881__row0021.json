@@ -1,0 +1,65 @@
+{
+ "id": "ZBH_2003_0000950137-04-001881__row0021",
+ "key": "ZBH_2003_0000950137-04-001881",
+ "question": "what percent of inventory is ready for liquidation ( sale ) in 2003?",
+ "gold": "72.83%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "ZBH_2003_0000950137-04-001881.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/FilingHeader/Inventories/InventoryReserveDescription",
+  "/chunk/FilingComplianceStatus/CriticalAccountingEstimates/ExcessInventoryAndInstrumentReserves",
+  "/chunk/FilingHeader/Inventories/InventoryEstimateChangeDescription"
+ ],
+ "r1_reasoning_chars": 5778,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 13265,
+  "completion_tokens": 1371,
+  "total_tokens": 14636,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/FilingHeader/Inventories/InventoryReserveDescription",
+  "/chunk/FilingComplianceStatus/CriticalAccountingEstimates/ExcessInventoryAndInstrumentReserves",
+  "/chunk/FilingHeader/Inventories/InventoryEstimateChangeDescription"
+ ],
+ "content_chars": 8226,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "72.825469",
+ "reasoning": "We need answer: percent of inventory ready for liquidation (sale) in 2003. Need interpret. Inventory ready for liquidation likely finished goods? Or inventory net? The question asks \"what percent of inventory is ready for liquidation (sale)\" - maybe finished goods as ready for sale. In 2003, finished goods $384.3 million, total inventories net $527.7 million. Percent = 384.3 / 527.7 * 100. Compute. 384.3/527.7 = 0.7283... = 72.83%. Need evidence figures. Also maybe \"ready for liquidation\" means finished goods. Let's compute exactly. 384.3 / 527.7 = 0.728254... 72.8254%. Use program divide(384.3, 527.7) then multiply by 100? The program should output percent? The question asks percent, so answer numeric percent. Use multiply(divide(384.3, 527.7), 100). Evidence: $ 384.3 | Finished goods (2003), $ 527.7 | Inventories, net (2003).",
+ "raw_content": "<evidence>$ 384.3 | Finished goods (2003)</evidence>\n<evidence>$ 527.7 | Inventories, net (2003)</evidence>\n<program>multiply(divide(384.3, 527.7), 100)</program>\n<answer>72.83</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1980,
+  "completion_tokens": 308,
+  "total_tokens": 2288,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 384.3",
+   "element": "Finished goods (2003)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(384.3, 527.7), 100)",
+ "answer_model": "72.83",
+ "program_value": 72.82546901648664,
+ "elapsed_s": 10.31,
+ "outline_source": "ZBH_2003_0000950137-04-001881.outline.txt",
+ "outline_chars": 52082
+}

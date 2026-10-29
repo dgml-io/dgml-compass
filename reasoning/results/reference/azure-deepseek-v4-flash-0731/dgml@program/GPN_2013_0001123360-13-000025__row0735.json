@@ -1,0 +1,74 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0735",
+ "format": "dgml",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what was the total number of grants were forfeited?",
+ "gold": "170 grants",
+ "finqa_id": "GPN/2013/page_87.pdf-4",
+ "source_page": "page_87",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/dgml/GPN_2013_0001123360-13-000025.dgml.xml",
+ "doc_chars": 611417,
+ "prompt_chars": 611557,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 611417,
+ "original_chars": 611417,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 141594,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 294,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "163",
+ "reasoning": "We need answer question: \"what was the total number of grants were forfeited?\" Need find in document. There are restricted stock forfeited and stock options forfeited. Need total number of grants forfeited? Likely from share-based awards. Restricted stock forfeited: 91 (in thousands) in fiscal 2013? Also stock options forfeited: 72 (in thousands) in fiscal 2013. Total = 91+72=163 thousand shares? But question \"total number of grants were forfeited\" maybe asks total number of grants (awards) forfeited, not shares. Need interpret. Document has restricted stock rollforward: Forfeited (91) in thousands. Stock options: Forfeited (72) in thousands. Total = 163 thousand. But \"grants\" could refer to awards. Need answer value. Let's check exact figures: Restricted stock forfeited: (91) in thousands. Stock options forfeited: (72) in thousands. Sum = 163. But question says \"total number of grants were forfeited\" maybe from both plans. We'll provide 163. Need evidence and program.",
+ "raw_content": "<evidence>\n91 | RestrictedStockRollforward - Forfeited (fiscal 2013)\n72 | StockOptionActivity - Forfeited (fiscal 2013)\n</evidence>\n<program>add(91, 72)</program>\n<answer>163</answer>",
+ "usage": {
+  "prompt_tokens": 141892,
+  "completion_tokens": 294,
+  "total_tokens": 142186,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 141824
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.0,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "91",
+   "element": "RestrictedStockRollforward - Forfeited (fiscal 2013)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "72",
+   "element": "StockOptionActivity - Forfeited (fiscal 2013)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "add(91, 72)",
+ "answer_model": "163",
+ "program_value": 163.0,
+ "docfinqa_row": 735
+}

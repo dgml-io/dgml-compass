@@ -1,0 +1,71 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0069",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what portion of the total investment is allocated to mutual funds in 2011?",
+ "gold": "65.1%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "ADI_2011_0000950123-11-099928.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/NotesToFinancial/DeferredCompensationPlanInvestments",
+  "/chunk/NotesToFinancial/OtherInvestments",
+  "/chunk/NotesToConsolidatedFinancial/SignificantAccountingPolicies/CashAndInvestmentsPolicy"
+ ],
+ "r1_reasoning_chars": 8205,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 24719,
+  "completion_tokens": 1946,
+  "total_tokens": 26665,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/NotesToFinancial/DeferredCompensationPlanInvestments",
+  "/chunk/NotesToFinancial/OtherInvestments",
+  "/chunk/NotesToConsolidatedFinancial/SignificantAccountingPolicies/CashAndInvestmentsPolicy"
+ ],
+ "content_chars": 36920,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "0.349224",
+ "reasoning": "We need answer portion of total investment allocated to mutual funds in 2011. Need identify context. The question likely refers to Deferred Compensation Plan investments? \"total investment\" maybe total deferred compensation plan investments. In table: Money market funds $17,187, Mutual funds $9,223, Total $26,410 for 2011. Portion = 9,223 / 26,410. Need compute. Also maybe \"total investment\" could be total cash and short-term investments? But mutual funds appear only in deferred comp. So answer ratio. Need provide evidence figures. Compute divide(9223, 26410). Let's calculate: 9223/26410 ≈ 0.3492? 26,410 * 0.35 = 9,243.5, so slightly less 0.3492. As portion maybe 34.9%. Need answer value maybe decimal. The question \"what portion\" likely fraction. We'll output decimal maybe 0.3492. Need program exact. Use figures as printed: 9,223 and 26,410. In evidence list values with element names. Element names: DeferredCompensationPlanInvestments table rows? The DGML element is \"DeferredCompensationPlanInvestments\" for table rows? In region, table rows have element \"DeferredCompensationPlanInvestments: Mutual funds | 9,223 | 6,850\" and \"Total Deferred Compensation Plan investments | $ 26,410 | $ 8,690\". So evidence lines: 9,223 | DeferredCompensationPlanInvestments (Mutual funds 2011); 26,410 | DeferredCompensationPlanInvestments (Total Deferred Compensation Plan investments 2011). Program divide(9223, 26410). Need answer inside <answer> tags only value. Could be 0.3492. Let's compute precisely: 9223 / 26410. 26410*0.349 = 9217.09? 26410*0.349 = 9217.09? 26,410 * 0.349 = 9,217.09, remainder 5.91, so 0.349224. Let's do more: 9223/26410 = 0.349223... Use divide. Answer maybe 0.3492. We'll output 0.3492.",
+ "raw_content": "<evidence>9,223 | DeferredCompensationPlanInvestments (Mutual funds 2011)\n26,410 | DeferredCompensationPlanInvestments (Total Deferred Compensation Plan investments 2011)</evidence>\n<program>divide(9223, 26410)</program>\n<answer>0.3492</answer>",
+ "r2_usage": {
+  "prompt_tokens": 9409,
+  "completion_tokens": 570,
+  "total_tokens": 9979,
+  "audio_prompt_tokens": 0
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "9,223",
+   "element": "DeferredCompensationPlanInvestments (Mutual funds 2011)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "26,410",
+   "element": "DeferredCompensationPlanInvestments (Total Deferred Compensation Plan investments 2011)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(9223, 26410)",
+ "answer_model": "0.3492",
+ "program_value": 0.3492237788716395,
+ "elapsed_s": 17.97,
+ "outline_source": "ADI_2011_0000950123-11-099928.outline.txt",
+ "outline_chars": 98954
+}

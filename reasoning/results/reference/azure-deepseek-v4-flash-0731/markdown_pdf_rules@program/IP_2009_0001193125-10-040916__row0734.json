@@ -1,0 +1,72 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0734",
+ "format": "markdown_pdf_rules",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "what was the percentage rent increase between 2008 and 2009?",
+ "gold": "5%",
+ "finqa_id": "IP/2009/page_84.pdf-2",
+ "source_page": "page_84",
+ "ticker": "IP",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/markdown_pdf_rules/IP_2009_0001193125-10-040916.md",
+ "doc_chars": 436761,
+ "prompt_chars": 436910,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 436761,
+ "original_chars": 436761,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 103607,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 189,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "5.3659%",
+ "reasoning": "We need answer question: \"what was the percentage rent increase between 2008 and 2009?\" Need find rent figures. Document mentions rent expense: \"Rent expense was $216 million, $205 million and $168 million for 2009, 2008 and 2007, respectively.\" So percentage increase from 2008 to 2009 = (216-205)/205 = 11/205 ≈ 5.36585%. Need provide answer. Evidence: 216 | Rent expense 2009, 205 | Rent expense 2008. Program divide(subtract(216,205),205). Final answer inside tags.",
+ "raw_content": "<evidence>\n216 | Rent expense 2009\n205 | Rent expense 2008\n</evidence>\n<program>divide(subtract(216, 205), 205)</program>\n<answer>5.365853658536586%</answer>",
+ "usage": {
+  "prompt_tokens": 103909,
+  "completion_tokens": 189,
+  "total_tokens": 104098,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 103680
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.54,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "216",
+   "element": "Rent expense 2009",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "205",
+   "element": "Rent expense 2008",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(216, 205), 205)",
+ "answer_model": "5.365853658536586%",
+ "program_value": 0.05365853658536585,
+ "docfinqa_row": 734
+}

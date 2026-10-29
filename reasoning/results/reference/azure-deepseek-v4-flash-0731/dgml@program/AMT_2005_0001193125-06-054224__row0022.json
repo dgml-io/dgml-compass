@@ -1,0 +1,74 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0022",
+ "format": "dgml",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what is the total value of net operating loss carryforwards?",
+ "gold": "4575515",
+ "finqa_id": "AMT/2005/page_105.pdf-2",
+ "source_page": "page_105",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/dgml/AMT_2005_0001193125-06-054224.dgml.xml",
+ "doc_chars": 790211,
+ "prompt_chars": 790360,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 790211,
+ "original_chars": 790211,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 189615,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 373,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "4575515",
+ "reasoning": "We need answer: total value of net operating loss carryforwards. Document: \"At December 31, 2005, the Company had net federal and state operating loss carryforwards available to reduce future taxable income of approximately $2.2 billion and $2.4 billion, respectively.\" Also table shows federal total $2,157,503 and state $2,418,012 (in thousands). Total = 2,157,503 + 2,418,012 = 4,575,515 thousand = $4,575,515,000. Question asks total value. Use figures. Evidence: federal $2,157,503 | NetOperatingLossExpirationTotal; state $2,418,012 | NetOperatingLossExpirationTotal. Program add(2157503, 2418012) = 4575515. Answer in thousands? The question \"total value\" likely in dollars? The document says in thousands. We should output value without units? The instruction: \"containing only the value itself with no explanation or units unless the question asks for them.\" So output 4575515? But that is thousands. Better output 4,575,515,000? The benchmark likely expects numeric. The figures as printed are in thousands. The question asks total value, likely in thousands? We can output 4575515 (thousands). But to be safe, the program uses figures as printed (thousands). The answer should be the computed value in same units as figures. So 4575515.",
+ "raw_content": "<evidence>2,157,503 | NetOperatingLossExpirationTotal\n2,418,012 | NetOperatingLossExpirationTotal</evidence>\n<program>add(2157503, 2418012)</program>\n<answer>4575515</answer>",
+ "usage": {
+  "prompt_tokens": 189915,
+  "completion_tokens": 373,
+  "total_tokens": 190288,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 189696
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.03,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "2,157,503",
+   "element": "NetOperatingLossExpirationTotal",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "2,418,012",
+   "element": "NetOperatingLossExpirationTotal",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "add(2157503, 2418012)",
+ "answer_model": "4575515",
+ "program_value": 4575515.0,
+ "docfinqa_row": 22
+}

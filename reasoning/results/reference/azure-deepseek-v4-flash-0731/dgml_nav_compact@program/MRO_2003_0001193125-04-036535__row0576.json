@@ -1,0 +1,59 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0576",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "what were total asphalt sales in millions for the three year period?",
+ "gold": "227",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "MRO_2003_0001193125-04-036535.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/FiveYearSelectedFinancialData/RevenuesAndOtherIncome/table/RevenueByProductAmount",
+  "/chunk/FiveYearSelectedFinancialData/RevenuesAndOtherIncome/table/RevenueByProductAmount/RevenueAmount"
+ ],
+ "r1_reasoning_chars": 0,
+ "r1_retried": true,
+ "r1_usage": {
+  "prompt_tokens": 40531,
+  "completion_tokens": 16,
+  "total_tokens": 40547,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/FiveYearSelectedFinancialData/RevenuesAndOtherIncome/table/RevenueByProductAmount",
+  "/chunk/FiveYearSelectedFinancialData/RevenuesAndOtherIncome/table/RevenueByProductAmount/RevenueAmount"
+ ],
+ "content_chars": 2729,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer question: \"what were total asphalt sales in millions for the three year period?\" Need find asphalt sales in document excerpts. Provided regions are revenue by product: Refined products, Merchandise, Liquid hydrocarbons, Natural gas, Transportation and other products, Total revenues. No mention of asphalt. Maybe asphalt is part of refined products? But question asks total asphalt sales. Document doesn't contain \"asphalt\". Need check if any region has asphalt? No. So NOT_FOUND.\n\nBut need provide evidence? If not found, maybe no evidence. But instructions: \"Before the answer, list every figure you use inside <evidence>... Cite only figures you actually read.\" If no figures, maybe no evidence. But answer NOT_FOUND.\n\nNeed final answer inside <answer>NOT_FOUND</answer>. Also maybe include evidence? Since no figures used, can omit or state none. But instruction says list every figure you use; we use none. So no evidence. But maybe we should include <evidence></evidence> empty? Probably okay.\n\nLet's craft final with brief reasoning? The user asked \"Reason briefly - at most 150 words - then answer.\" So we can say: The provided excerpts list revenues by product categories (refined products, merchandise, liquid hydrocarbons, natural gas, transportation and other products) but do not mention asphalt. Therefore insufficient information. Then answer.\n\nNeed ensure final answer only value inside tags. So final message: reasoning then <answer>NOT_FOUND</answer>.",
+ "raw_content": "The provided excerpts do not contain any mention of asphalt sales; the revenue categories listed are refined products, merchandise, liquid hydrocarbons, natural gas, and transportation/other products. Therefore, the requested figure is not available.\n\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1073,
+  "completion_tokens": 358,
+  "total_tokens": 1431,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": null,
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 39.97,
+ "outline_source": "MRO_2003_0001193125-04-036535.outline.txt",
+ "outline_chars": 159239
+}

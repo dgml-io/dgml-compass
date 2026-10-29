@@ -1,0 +1,74 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0863",
+ "format": "markdown_pdf_poppler",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "what was the sum of the temporary differences between 2007 and 2009 in billions",
+ "gold": "9.8",
+ "finqa_id": "IP/2009/page_84.pdf-4",
+ "source_page": "page_84",
+ "ticker": "IP",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/markdown_pdf_poppler/IP_2009_0001193125-10-040916.md",
+ "doc_chars": 625466,
+ "prompt_chars": 625634,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 625466,
+ "original_chars": 625466,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 105142,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 457,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "7.2",
+ "reasoning": "We need answer question: \"what was the sum of the temporary differences between 2007 and 2009 in billions\". Need find relevant figures. Document mentions deferred income taxes not provided for temporary differences of approximately $3.5 billion, $2.6 billion and $3.7 billion as of December 31, 2009, 2008 and 2007, respectively. So temporary differences: 2007 $3.7B, 2009 $3.5B. Sum between 2007 and 2009? \"between 2007 and 2009\" likely sum of 2007 and 2009? Or difference? Wording \"sum of the temporary differences between 2007 and 2009\" ambiguous. Could mean sum of the temporary differences for 2007 and 2009? Or \"between\" meaning difference? Let's parse: \"what was the sum of the temporary differences between 2007 and 2009 in billions\" - likely they want sum of the two figures for 2007 and 2009. The document says \"Deferred income taxes are not provided for temporary differences of approximately $3.5 billion, $2.6 billion and $3.7 billion as of December 31, 2009, 2008 and 2007, respectively.\" So 2007 = 3.7, 2009 = 3.5. Sum = 7.2 billion. If difference = 0.2. But \"sum\" suggests add. Need answer in billions. Provide evidence and program. Use figures as printed: $3.5 billion and $3.7 billion. Program add(3.5, 3.7) = 7.2. Final answer <answer>7.2</answer>.",
+ "raw_content": "<evidence>\n$3.5 billion | Deferred income taxes are not provided for temporary differences ... as of December 31, 2009\n$3.7 billion | Deferred income taxes are not provided for temporary differences ... as of December 31, 2007\n</evidence>\n<program>add(3.5, 3.7)</program>\n<answer>7.2</answer>",
+ "usage": {
+  "prompt_tokens": 105449,
+  "completion_tokens": 457,
+  "total_tokens": 105906,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 105216
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 6.9,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$3.5 billion",
+   "element": "Deferred income taxes are not provided for temporary differences ... as of December 31, 2009",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$3.7 billion",
+   "element": "Deferred income taxes are not provided for temporary differences ... as of December 31, 2007",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "add(3.5, 3.7)",
+ "answer_model": "7.2",
+ "program_value": 7.2,
+ "docfinqa_row": 863
+}

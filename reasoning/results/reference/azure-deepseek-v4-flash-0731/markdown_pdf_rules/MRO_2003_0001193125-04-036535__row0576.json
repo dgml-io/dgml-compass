@@ -1,0 +1,50 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0576",
+ "format": "markdown_pdf_rules",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "what were total asphalt sales in millions for the three year period?",
+ "gold": "227",
+ "finqa_id": "MRO/2003/page_45.pdf-1",
+ "source_page": "page_45",
+ "ticker": "MRO",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/markdown_pdf_rules/MRO_2003_0001193125-04-036535.md",
+ "doc_chars": 450627,
+ "prompt_chars": 450784,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 450627,
+ "original_chars": 450627,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 105244,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1912,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "82.855",
+ "reasoning": "We need to find total asphalt sales in millions for the three year period. The question asks \"total asphalt sales in millions for the three year period\". Likely refers to refined product sales volumes? But \"sales\" could be revenue. The document has \"Refined Product Sales\" table with volumes in thousands of barrels per day for 2003, 2002, 2001. But that's volumes, not sales in millions. There is also \"Refined Products Sales Volumes\" in Five-Year Operating Summary, but again volumes. The question says \"total asphalt sales in millions\" - maybe they want the volume? But \"sales\" typically means revenue. However, the document does not provide revenue for asphalt specifically. It provides volumes. The question might be asking for total asphalt sales volumes? But it says \"in millions\" - could be millions of barrels? The table \"Refined Product Sales\" shows asphalt volumes: 74, 75, 78 thousand barrels per day for 2003, 2002, 2001. To get total for three years, we need to sum them? But that's per day, not total. The question says \"total asphalt sales in millions for the three year period\" - likely they want the sum of the daily volumes? But that doesn't make sense. Alternatively, maybe they want the total volume in millions of barrels over the three years? But we don't have annual totals, only daily averages. The document also has \"Refined Product Yields\" but that's production. The question might be misinterpreted. Let's check if there is any mention of asphalt sales in dollars. In the marketing section, it says \"MAP markets asphalt through owned and leased terminals... The MAP customer base includes approximately 900 asphalt-paving contractors...\" but no revenue figure. The Five-Year Operating Summary has \"Refined Products Sales Volumes\" but again volumes. The question says \"total asphalt sales in millions\" - could be asking for the sum of the daily volumes? But that would be in thousands of barrels per day, not millions. Perhaps they want the total volume in millions of barrels over the three years? To compute that, we would need to multiply daily average by 365 days per year and sum. But the question says \"in millions\" - maybe they want the total volume in millions of barrels? Let's see: 2003: 74,000 bpd * 365 = 27,010,000 barrels = 27.01 million barrels. 2002: 75,000 * 365 = 27,375,000 = 27.375 million. 2001: 78,000 * 365 = 28,470,000 = 28.47 million. Sum = 27.01+27.375+28.47 = 82.855 million barrels. But the question says \"total asphalt sales in millions\" - could be that. However, the document also has \"Refined Product Sales\" table with volumes in thousands of barrels per day. The question might be asking for the sum of those numbers? But they are per day, not total. Alternatively, maybe they want the total revenue? But no revenue data for asphalt. The question is ambiguous. Let's read the exact question: \"what were total asphalt sales in millions for the three year period?\" It doesn't specify units. In the context of the document, \"sales\" often refers to volumes. But the phrase \"in millions\" suggests a large number, so likely millions of barrels. However, the document also has \"Refined Product Sales\" table with volumes in thousands of barrels per day. The sum of those daily averages over three years would be 74+75+78 = 227 thousand barrels per day, but that's not \"total\" over three years. The question might be asking for the total volume over the three years, which we computed as ~82.855 million barrels. But let's check if there is any other mention of asphalt sales in dollars. In the Five-Year Operating Summary, there is \"Refined Products Sales Volumes\" but again volumes. The question says \"total asphalt sales in millions\" - could be that they want the sum of the daily volumes? But that would be 227, which is not in millions. So likely they want the total volume in millions of barrels. However, the document also has \"Refined Product Yields\" which is production, not sales. The question specifically says \"sales\". So we should use the sales volumes. The table \"Refined Product Sales\" gives asphalt volumes: 74, 75, 78 for 2003, 2002, 2001. To get total for three years, we need to sum the annual totals. But we only have daily averages. We can compute annual totals by multiplying by 365. But the question might be expecting a simple sum of the daily averages? That would be 227, but that's not \"in millions\". Alternatively, maybe they want the total volume in millions of barrels, which we computed as ~82.855. Let's see if the document provides any other data. In the \"Refined Product Sales\" table, it says \"Thousands of Barrels per Day\" so the numbers are in thousands. So 74 means 74,000 barrels per day. Over a year, that's 74,000*365 = 27,010,000 barrels = 27.01 million. So total for three years is 27.01+27.375+28.47 = 82.855 million. But the question says \"in millions\" - so we can report 82.855 million barrels. However, the question might be asking for the sum of the daily averages? That would be 227, but that's not in millions. So I think the intended answer is the total volume in millions of barrels. But let's check if there is any other interpretation. The question says \"total asphalt sales in millions\" - could be that they want the total revenue in millions of dollars, but we don't have that. So likely it's volume. Let's see if the document has any other table with asphalt sales in dollars. In the \"Refined Product Sales\" table, it's volumes. In the \"Five-Year Operating Summary\", it also has \"Refined Products Sales Volumes\" but again volumes. So I'll go with the volume calculation.\n\nBut wait, the question says \"for the three year period\" - which three years? Probably 2003, 2002, 2001. So we sum those.\n\nLet's compute precisely: 74,000 * 365 = 27,010,000; 75,000 * 365 = 27,375,000; 78,000 * 365 = 28,470,000; sum = 82,855,000 barrels = 82.855 million. So answer: 82.855 million barrels. But the question says \"in millions\" - so we can put 82.855. However, the question might expect an integer? Let's see if there is any rounding. The document gives numbers to the nearest thousand barrels per day. So we can report 82.9 million? But better to be precise.\n\nAlternatively, maybe they want the sum of the daily averages? That would be 227, but that's not in millions. So I'll go with the volume.\n\nBut let's double-check if there is any other mention of asphalt sales in the document. In the marketing section, it says \"MAP markets asphalt through owned and leased terminals...\" but no numbers. So the only numbers are in the sales volume table.\n\nThus, the answer is 82.855 million barrels. But the question says \"total asphalt sales in millions\" - could be that they want the total volume in millions of barrels. I'll provide that.\n\nHowever, the question might be asking for the total sales in millions of dollars, but we don't have that. So I'll assume it's volume.\n\nLet me also check if there is a table that gives asphalt sales in dollars. In the \"Refined Product Sales\" table, it's volumes. In the \"Five-Year Operating Summary\", it has \"Refined Products Sales Volumes\" but again volumes. So no revenue.\n\nThus, I'll answer with the total volume in millions of barrels.\n\nBut wait, the question says \"total asphalt sales in millions\" - could be that they want the sum of the daily averages? That would be 227, but that's not in millions. So I'll go with the volume.\n\nLet me compute: 74+75+78 = 227 thousand barrels per day. Over three years, that's not a total. So I think the intended answer is the total volume.\n\nI'll provide 82.855 million barrels.\n\nBut let me see if the document has any other data. In the \"Refined Product Yields\" table, it shows asphalt production: 72, 72, 76 for 2003, 2002, 2001. But that's production, not sales. So sales are 74,75,78.\n\nThus, answer: 82.855 million barrels.\n\nI'll put that in the answer tags.",
+ "raw_content": "<answer>82.855</answer>",
+ "usage": {
+  "prompt_tokens": 105385,
+  "completion_tokens": 1912,
+  "total_tokens": 107297,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 12.33,
+ "answer_tag_found": true,
+ "docfinqa_row": 576
+}

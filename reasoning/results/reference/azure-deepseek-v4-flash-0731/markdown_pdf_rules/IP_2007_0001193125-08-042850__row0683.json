@@ -1,0 +1,53 @@
+{
+ "id": "IP_2007_0001193125-08-042850__row0683",
+ "format": "markdown_pdf_rules",
+ "key": "IP_2007_0001193125-08-042850",
+ "question": "what percentage of industrial packaging sales where represented by european industrial packaging net sales in 2006?",
+ "gold": "20%",
+ "finqa_id": "IP/2007/page_31.pdf-2",
+ "source_page": "page_31",
+ "ticker": "IP",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_rules/IP_2007_0001193125-08-042850.md",
+ "doc_chars": 430301,
+ "prompt_chars": 430505,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 430301,
+ "original_chars": 430301,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 103493,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 210,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "20.3%",
+ "reasoning": "We need to find European Industrial Packaging net sales in 2006 and total Industrial Packaging sales in 2006. From the document, in the \"INFORMATION BY GEOGRAPHIC AREA\" section, there is a table \"EUROPEAN SALES BY INDUSTRY SEGMENT\" for 2007, 2006, 2005. For 2006, European Industrial Packaging sales = $1,001 million. Total Industrial Packaging sales in 2006 from the segment table: Industrial Packaging net sales = $4,925 million. So percentage = 1001/4925 * 100 ≈ 20.32%. Let's compute: 1001/4925 = 0.20325... so 20.3%. The question asks \"what percentage of industrial packaging sales where represented by european industrial packaging net sales in 2006?\" So answer is approximately 20.3%. We'll put the value inside <answer> tags.",
+ "raw_content": "<answer>20.3%</answer>",
+ "usage": {
+  "prompt_tokens": 103641,
+  "completion_tokens": 210,
+  "total_tokens": 103851,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 100352
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 6.38,
+ "answer_tag_found": true,
+ "docfinqa_row": 683
+}

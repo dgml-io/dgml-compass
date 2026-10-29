@@ -1,0 +1,70 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0219",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "what was the percent of the increase in the backlog from 2012 to 2013",
+ "gold": "13.3%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "LMT_2014_0001193125-15-038681.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/PartDivision/PartDivision/BacklogDescription/BacklogDescription/PercentageValue"
+ ],
+ "r1_reasoning_chars": 2436,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 16115,
+  "completion_tokens": 583,
+  "total_tokens": 16698,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/PartDivision/PartDivision/BacklogDescription/BacklogDescription/PercentageValue"
+ ],
+ "content_chars": 563,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "2.608696",
+ "reasoning": "We need answer percent increase backlog 2012 to 2013. Need identify figures. Excerpts: PercentageValue 40%, BacklogAmount $80.5 billion, $82.6 billion, $32.2 billion. Need know which are 2012 and 2013. Likely backlog amounts: 2012 $80.5? 2013 $82.6? Increase = (82.6-80.5)/80.5 = 2.1/80.5 = 0.026086... = 2.6087%. But there is also 40% maybe percentage increase? Need check. Question asks percent of increase in backlog from 2012 to 2013. The document excerpt includes PercentageValue 40% maybe answer? But need verify. Let's reason.\n\nWe have regions: PercentageValue 40%, BacklogAmount $80.5 billion, $82.6 billion, $32.2 billion. The question likely from a document about Boeing? Backlog. In 2012 backlog $80.5 billion? 2013 $82.6 billion? Increase 2.6%. But there is also 40% maybe \"increase in backlog from 2012 to 2013\" could be 40%? Let's examine.\n\nMaybe the document has a table: Backlog at year-end: 2012 $80.5 billion, 2013 $82.6 billion, and \"Percentage increase\" 40%? No, 40% is too high. Or maybe backlog from 2011 to 2012? Let's see.\n\nThe excerpt includes PercentageValue 40% and BacklogAmounts. Could be \"Backlog increased 40% to $80.5 billion\" from something? Actually if backlog increased 40% to $80.5 billion, then prior = 80.5/1.4 = 57.5. But question asks from 2012 to 2013. Need know which amounts correspond.\n\nLet's parse the region paths: /chunk/PartDivision/PartDivision/BacklogDescription/BacklogDescription/PercentageValue and BacklogAmount. There are multiple regions. The first is PercentageValue: 40%. Then BacklogAmount: $80.5 billion, $82.6 billion, $32.2 billion. Maybe the document is a narrative: \"Backlog increased 40% to $80.5 billion\" etc. But question specifically \"what was the percent of the increase in the backlog from 2012 to 2013\". The answer might be 40% if the document states that. But we need compute from amounts if given.\n\nLet's think: If backlog in 2012 was $80.5 billion and in 2013 was $82.6 billion, increase = 2.6%. If backlog in 2012 was $32.2 billion and 2013 was $80.5 billion, increase = (80.5-32.2)/32.2 = 48.3/32.2 = 1.5 = 150%. If 2012 $32.2 to 2013 $82.6 = 50.4/32.2 = 156.5%. If 2012 $80.5 to 2013 $32.2 decrease. So need identify.\n\nThe question says \"increase in the backlog from 2012 to 2013\" so likely 2012 and 2013 amounts. The excerpt has three BacklogAmounts. Which are 2012 and 2013? Maybe the document has a table with years. The region names don't include years. But the question likely from a dataset where the answer is 40%? Let's investigate.\n\nThe region path includes \"BacklogDescription\" and \"PercentageValue\" with value 40%. That might be the answer directly. But the question asks \"what was the percent of the increase in the backlog from 2012 to 2013\" - if the document explicitly says \"The backlog increased 40% from 2012 to 2013\" then answer 40%. The presence of PercentageValue 40% suggests that is the answer. The BacklogAmounts might be other years or context. But we need be careful: The question asks \"what was the percent of the increase\" not \"what was the percentage increase\" - likely answer is 40%. However, we should verify with amounts.\n\nLet's see if any combination yields 40%. Suppose backlog 2012 = $57.5 billion, 2013 = $80.5 billion, increase = 40%. But we don't have $57.5. Suppose 2012 = $59.0, 2013 = $82.6, increase = 40%. Not present. Suppose 2012 = $23.0, 2013 = $32.2, increase = 40%. Not present. So 40% doesn't match given amounts. But the document may state \"Backlog increased 40% to $80.5 billion\" meaning from some prior year, not 2012 to 2013. The question specifically asks from 2012 to 2013, so we need amounts for those years.\n\nMaybe the excerpt is from a financial report: \"Backlog at December 31, 2013 was $82.6 billion compared with $80.5 billion at December 31, 2012, an increase of 2.6%.\" But the excerpt includes 40%? Could be another metric. The question asks \"what was the percent of the increase in the backlog from 2012 to 2013\" - if the document has a sentence \"Backlog increased 40% from 2012 to 2013\" then answer 40%. But the amounts don't match. Let's consider that the amounts might be in different units or not backlog? The region names are BacklogAmount, so they are backlog amounts. The PercentageValue 40% might be the answer to a different question, e.g., \"increase in backlog from 2011 to 2012\" or \"percentage of total backlog\". The question specifically asks from 2012 to 2013, so we need identify which amounts correspond.\n\nMaybe the document has a table with columns: 2012, 2013, 2014? The amounts $80.5, $82.6, $32.2 could be for different segments or years. The question asks \"from 2012 to 2013\" so we need the two amounts for those years. The excerpt doesn't label years. But the question likely comes from a benchmark where the answer is in the document. The presence of PercentageValue 40% might be a distractor. We need compute from amounts if we can infer years.\n\nLet's think of typical financial data: Boeing's backlog: 2012 $80.5 billion? Actually Boeing's total backlog at end of 2012 was $390 billion? No. Let's recall: Boeing commercial airplanes backlog in 2012 was $80.5 billion? Hmm.\n\nMaybe this is from a company like \"Spirit AeroSystems\"? Backlog: 2012 $80.5 billion? No.\n\nLet's search memory: In 2013, Lockheed Martin backlog was $82.6 billion? Actually Lockheed Martin's backlog at end of 2013 was $82.6 billion, and at end of 2012 was $80.5 billion. That matches! Lockheed Martin annual report: \"Backlog was $82.6 billion at December 31, 2013, compared with $80.5 billion at December 31, 2012.\" Increase = 2.1/80.5 = 2.6087%. The 40% might be something else, like \"increase in net sales\" or \"percentage of backlog funded\". So the answer is approximately 2.6%.\n\nBut the question asks \"what was the percent of the increase in the backlog from 2012 to 2013\" - so we compute (82.6-80.5)/80.5 * 100 = 2.60869565%. The document might have a percentage value 40% but that's not for this. We need use the amounts.\n\nLet's verify: The excerpt includes PercentageValue 40% and BacklogAmounts. The question asks percent increase. The correct computation uses the two amounts. The 40% is likely a distractor or for another metric. So answer should be 2.6% (or 2.61%). We need provide evidence: $82.6 billion and $80.5 billion. But we need know which is 2013 and which is 2012. The question says from 2012 to 2013, so increase = (2013 - 2012)/2012. Typically 2013 is later, so 2013 amount is $82.6, 2012 is $80.5. So compute.\n\nLet's produce evidence: \n$82.6 billion | BacklogAmount (2013)\n$80.5 billion | BacklogAmount (2012)\n\nBut the region labels don't have years. We can infer from order? The excerpt lists $80.5 then $82.6 then $32.2. Could be chronological? If so 2012 $80.5, 2013 $82.6. Yes.\n\nThus program: divide(subtract(82.6, 80.5), 80.5) = 0.0260869565. Multiply by 100? The question asks percent, so answer as number 2.6087. Usually percent value. We can output 2.6 or 2.61. The benchmark expects exact? We'll output 2.608695652. But the program should compute the ratio, not multiply by 100? The question asks \"what was the percent\" so answer should be a percentage number. The program can compute divide(subtract(82.6, 80.5), 80.5) which yields 0.02608, but that's not percent. We need multiply by 100. So program: multiply(divide(subtract(82.6, 80.5), 80.5), 100) = 2.608695652. Or we can just output 2.6. The instructions: \"Give your final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for percent, so value is 2.6 (or 2.61). We'll output 2.608695652.\n\nBut let's double-check if there is any other interpretation. The excerpt includes PercentageValue 40% - could that be the answer? If the document explicitly states \"the backlog increased 40% from 2012 to 2013\" then the amounts would not match. But the amounts are given as backlog amounts, so the percentage increase is computed. The 40% might be \"percentage of backlog that is funded\" or something. The question specifically asks \"what was the percent of the increase in the backlog from 2012 to 2013\" - that is a computed value. So we compute.\n\nLet's ensure we use the correct figures. The evidence should list the figures as printed: \"$82.6 billion\" and \"$80.5 billion\". The element names are BacklogAmount. We'll list them.\n\nNow produce final answer.",
+ "raw_content": "<evidence>\n$82.6 billion | BacklogAmount\n$80.5 billion | BacklogAmount\n</evidence>\n<program>multiply(divide(subtract(82.6, 80.5), 80.5), 100)</program>\n<answer>2.608695652</answer>",
+ "r2_usage": {
+  "prompt_tokens": 463,
+  "completion_tokens": 2469,
+  "total_tokens": 2932,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$82.6 billion",
+   "element": "BacklogAmount",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$80.5 billion",
+   "element": "BacklogAmount",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(82.6, 80.5), 80.5), 100)",
+ "answer_model": "2.608695652",
+ "program_value": 2.608695652173906,
+ "elapsed_s": 16.68,
+ "outline_source": "LMT_2014_0001193125-15-038681.outline.txt",
+ "outline_chars": 64445
+}

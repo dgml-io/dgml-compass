@@ -1,0 +1,71 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0405",
+ "format": "dgml",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "what is the percentage change in the the outstanding debt under the 3.00% ( 3.00 % ) notes from 2007 to 2008?",
+ "gold": "-53.0%",
+ "finqa_id": "AMT/2008/page_94.pdf-3",
+ "source_page": "page_94",
+ "ticker": "AMT",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml/AMT_2008_0001193125-09-039177.dgml.xml",
+ "doc_chars": 745300,
+ "prompt_chars": 745498,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 745300,
+ "original_chars": 745300,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 172559,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 501,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-53.01566",
+ "reasoning": "We need percentage change in outstanding debt under 3.00% notes from 2007 to 2008. Need figures: 2007 and 2008 outstanding amounts. From document: In long-term obligations schedule, 3.00% convertible notes: 2008 $161,893 thousand, 2007 $344,568 thousand. Also elsewhere: \"As of December 31, 2008 and 2007, the outstanding debt under the 3.00% Notes was $161.9 million ($162.2 million principal amount) and $344.6 million, net of $0.3 million and $0.4 million discount, respectively.\" So use carrying values: 161,893 and 344,568. Percentage change = (2008-2007)/2007 *100 = (161893-344568)/344568 = -182675/344568 = -0.5302... = -53.02%. So answer -53.0% or -53.02%. Need exact. Compute: 344568-161893=182675. 182675/344568=0.5302... Let's compute precisely: 344568*0.53=182,621.04, so 0.53016. So -53.02%. Use figures as printed: 161,893 and 344,568. Program: divide(subtract(161893,344568),344568) gives -0.5302... but question asks percentage change, so multiply by 100? The program should output the value? The answer should be percentage. We can output -53.02% or -0.5302? Usually percentage change as percent. The program can compute decimal, but answer should be -53.02%. We'll put -53.02% in answer. Evidence: 161,893 | 3.00% convertible notes (2008) and 344,568 | 3.00% convertible notes (2007). Also maybe 344,568 from schedule. Use those.",
+ "raw_content": "<evidence>\n161,893 | 3.00% convertible notes (2008)\n344,568 | 3.00% convertible notes (2007)\n</evidence>\n<program>multiply(divide(subtract(161893, 344568), 344568), 100)</program>\n<answer>-53.02%</answer>",
+ "usage": {
+  "prompt_tokens": 172880,
+  "completion_tokens": 501,
+  "total_tokens": 173381,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 20.65,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "161,893",
+   "element": "3.00% convertible notes (2008)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "344,568",
+   "element": "3.00% convertible notes (2007)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(161893, 344568), 344568), 100)",
+ "answer_model": "-53.02%",
+ "program_value": -53.015660188990275,
+ "docfinqa_row": 405
+}

@@ -1,0 +1,74 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0590",
+ "format": "markdown_pdf_rules",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "what is the difference in estimated future benefit payments for retiree medical and life insurance plans between 2015 and 2016 , in millions?",
+ "gold": "10",
+ "finqa_id": "LMT/2014/page_91.pdf-3",
+ "source_page": "page_91",
+ "ticker": "LMT",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf_rules/LMT_2014_0001193125-15-038681.md",
+ "doc_chars": 436977,
+ "prompt_chars": 437207,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 436977,
+ "original_chars": 436977,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 95659,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 112,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "10",
+ "reasoning": "We need answer difference in estimated future benefit payments for retiree medical and life insurance plans between 2015 and 2016. From table: 2015 190, 2016 200. Difference 10.",
+ "raw_content": "<evidence>190 | Qualified defined benefit pension plans / Retiree medical and life insurance plans 2015\n200 | Qualified defined benefit pension plans / Retiree medical and life insurance plans 2016</evidence>\n<program>subtract(200, 190)</program>\n<answer>10</answer>",
+ "usage": {
+  "prompt_tokens": 95975,
+  "completion_tokens": 112,
+  "total_tokens": 96087,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 95744
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.22,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "190",
+   "element": "Qualified defined benefit pension plans / Retiree medical and life insurance plans 2015",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "200",
+   "element": "Qualified defined benefit pension plans / Retiree medical and life insurance plans 2016",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "subtract(200, 190)",
+ "answer_model": "10",
+ "program_value": 10.0,
+ "docfinqa_row": 590
+}

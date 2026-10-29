@@ -1,0 +1,90 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0352",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what is the net change of the total fair value balance of non-vested shares during 2013?",
+ "gold": "6820",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "GPN_2013_0001123360-13-000025.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockRollforward",
+  "/chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockRollforward/RestrictedStockRollforward",
+  "/chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockRollforward/RestrictedStockRollforward/AwardFairValue",
+  "/chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockRollforward/RestrictedStockRollforward/AwardQuantity",
+  "/chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockRollforward/RestrictedStockRollforward/RollforwardActivityLabel"
+ ],
+ "r1_reasoning_chars": 2558,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 18976,
+  "completion_tokens": 714,
+  "total_tokens": 19690,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockRollforward",
+  "/chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockRollforward/RestrictedStockRollforward",
+  "/chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockRollforward/RestrictedStockRollforward/AwardFairValue",
+  "/chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockRollforward/RestrictedStockRollforward/AwardQuantity",
+  "/chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockRollforward/RestrictedStockRollforward/RollforwardActivityLabel"
+ ],
+ "content_chars": 11946,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "6820",
+ "reasoning": "We need to compute net change of total fair value balance of non-vested shares during 2013. The table gives shares and weighted average grant-date fair value. Total fair value balance = shares * weighted average fair value. Net change = ending balance (May 31, 2013) minus beginning balance (May 31, 2012). Or we can compute from activity: granted, vested, forfeited. But easiest: beginning balance = 941 shares * $44 = 41,404 (in thousands? shares in thousands, fair value per share, so total in thousands of dollars). Ending = 1,096 * $44 = 48,224. Net change = 48,224 - 41,404 = 6,820. Alternatively, compute from activity: granted 561*44 = 24,684; vested (315)*43 = -13,545; forfeited (91)*44 = -4,004; sum = 24,684 -13,545 -4,004 = 7,135? That doesn't match because weighted average fair values are averages, not exact per-share values for each transaction. The net change in total fair value should be computed from beginning and ending balances using the weighted average grant-date fair value at those points. The table gives weighted average grant-date fair value for non-vested at May 31, 2012 = $44, and at May 31, 2013 = $44. So total fair value = shares * $44. Beginning = 941*44 = 41,404; ending = 1,096*44 = 48,224; net change = 6,820. But note the question says \"net change of the total fair value balance\" - likely in dollars. The table values are in thousands of shares and dollars per share, so total in thousands of dollars. The answer should be 6,820 (thousands of dollars) or $6.82 million? The question doesn't specify units. Usually in such documents, amounts are in thousands. The table header says \"share awards in thousands\" and fair value per share. So total fair value in thousands of dollars. Net change = 6,820 thousand dollars. But let's verify: The table shows \"Non-vested at May 31, 2012\" shares 941, fair value $44. \"Non-vested at May 31, 2013\" shares 1,096, fair value $44. So net change = (1096-941)*44 = 155*44 = 6,820. Yes.\n\nWe need to cite figures: 941, 44, 1,096, 44. Also maybe the row labels. We'll list them.\n\nProgram: multiply(subtract(1096, 941), 44) = 6820.\n\nBut careful: The question says \"net change of the total fair value balance\" - could also be computed from activity but the weighted average method gives the same as beginning/ending. We'll use beginning/ending.\n\nLet's produce evidence and answer.",
+ "raw_content": "<evidence>941 | Non-vested at May 31, 2012 (AwardQuantity)\n44 | Non-vested at May 31, 2012 (AwardFairValue)\n1,096 | Non-vested at May 31, 2013 (AwardQuantity)\n44 | Non-vested at May 31, 2013 (AwardFairValue)</evidence>\n\n<program>multiply(subtract(1096, 941), 44)</program>\n\n<answer>6820</answer>",
+ "r2_usage": {
+  "prompt_tokens": 3311,
+  "completion_tokens": 758,
+  "total_tokens": 4069,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "941",
+   "element": "Non-vested at May 31, 2012 (AwardQuantity)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "44",
+   "element": "Non-vested at May 31, 2012 (AwardFairValue)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1,096",
+   "element": "Non-vested at May 31, 2013 (AwardQuantity)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "44",
+   "element": "Non-vested at May 31, 2013 (AwardFairValue)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(subtract(1096, 941), 44)",
+ "answer_model": "6820",
+ "program_value": 6820.0,
+ "elapsed_s": 8.17,
+ "outline_source": "GPN_2013_0001123360-13-000025.outline.txt",
+ "outline_chars": 74109
+}

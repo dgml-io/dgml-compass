@@ -1,0 +1,76 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0311",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "what was the total reclassification of oci into income , in millions , during the years ended december 31 , 2012 , 2011 and 2010?",
+ "gold": "0.7",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "AMT_2012_0001193125-13-077821.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/FinancialStatementNotesHeader/DerivativeFinancialInstruments/Financial/OciImpactOfDerivatives"
+ ],
+ "r1_reasoning_chars": 7071,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 33161,
+  "completion_tokens": 1793,
+  "total_tokens": 34954,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/FinancialStatementNotesHeader/DerivativeFinancialInstruments/Financial/OciImpactOfDerivatives"
+ ],
+ "content_chars": 3337,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "-21.839",
+ "reasoning": "We need answer total reclassification of OCI into income, in millions, during years 2012, 2011, 2010. The table gives amounts in thousands? The disclosure says \"in thousands\". The amounts reclassified from accumulated OCI into income (effective portion) are: 2012: $(1,340); 2011: $(2,205); 2010: $(18,294). These are in thousands. Need total in millions. Sum = -1,340 -2,205 -18,294 = -21,839 thousand = -21.839 million. Need answer in millions. Probably -21.8? The question asks \"what was the total reclassification of oci into income, in millions\". So compute sum in millions. Use figures as printed: 1,340; 2,205; 18,294. Sum = 21,839. Divide by 1000 = 21.839. Since negative, -21.839. Need maybe round? The question doesn't specify precision. Could answer -21.839. But check if there are other reclassifications? The table only shows interest expense location. The question says \"total reclassification of oci into income\" - likely sum of those amounts. The table has only one line per year. So answer -21.839 million. Need evidence list figures. Also program: divide(add(1340, 2205, 18294), 1000) with negative? Actually figures are negative, but we can use absolute values and then negate. Program should use printed figures? The printed figures are $(1,340) etc. We can represent as -1340. But program expects numbers? We can do divide(add(-1340, -2205, -18294), 1000). That yields -21.839. Use exact.\n\nNeed final answer inside <answer> tags only value. Also evidence and program before.",
+ "raw_content": "<evidence>\n$ (1,340) | OciImpact: Year Ended December 31, 2012 - Amount of Gain/(Loss) Reclassified from Accumulated OCI into Income (Effective Portion)\n$ (2,205) | OciImpact: Year Ended December 31, 2011 - Amount of Gain/(Loss) Reclassified from Accumulated OCI into Income (Effective Portion)\n$ (18,294) | OciImpact: Year Ended December 31, 2010 - Amount of Gain/(Loss) Reclassified from Accumulated OCI into Income (Effective Portion)\n</evidence>\n<program>\ndivide(add(-1340, -2205, -18294), 1000)\n</program>\n<answer>-21.839</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1191,
+  "completion_tokens": 565,
+  "total_tokens": 1756,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ (1,340)",
+   "element": "OciImpact: Year Ended December 31, 2012 - Amount of Gain/(Loss) Reclassified from Accumulated OCI into Income (Effective Portion)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ (2,205)",
+   "element": "OciImpact: Year Ended December 31, 2011 - Amount of Gain/(Loss) Reclassified from Accumulated OCI into Income (Effective Portion)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ (18,294)",
+   "element": "OciImpact: Year Ended December 31, 2010 - Amount of Gain/(Loss) Reclassified from Accumulated OCI into Income (Effective Portion)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(-1340, -2205, -18294), 1000)",
+ "answer_model": "-21.839",
+ "program_value": null,
+ "elapsed_s": 21.17,
+ "outline_source": "AMT_2012_0001193125-13-077821.outline.txt",
+ "outline_chars": 129453
+}

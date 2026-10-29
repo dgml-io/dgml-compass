@@ -1,0 +1,74 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0423",
+ "format": "dgml",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "was was the total amount spent on stock repurchases in december 2012?",
+ "gold": "7662592",
+ "finqa_id": "AMT/2012/page_50.pdf-2",
+ "source_page": "page_50",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/dgml/AMT_2012_0001193125-13-077821.dgml.xml",
+ "doc_chars": 945867,
+ "prompt_chars": 946025,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 945867,
+ "original_chars": 945867,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 220539,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 655,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "7662592",
+ "reasoning": "We need answer: total amount spent on stock repurchases in December 2012. Document has table \"Issuer Purchases of Equity Securities\" for three months ended Dec 31, 2012. It shows October, November, December repurchases. December 2012: 102,400 shares, average price $74.83. Aggregate amount? The table gives \"Approximate Dollar Value of Shares that May Yet be Purchased\" not amount spent. But text says during three months ended Dec 31, 2012, we repurchased 619,314 shares for aggregate approximately $46.0 million. That is for quarter. For December specifically, we can compute 102,400 * $74.83 = $7,662,592? But average price per share is calculated excluding commissions and fees. The question \"total amount spent on stock repurchases in december 2012\" likely wants the dollar amount. The table doesn't give aggregate for December, but we can compute from shares and average price. However, the question might expect the figure from the table? There is no explicit \"aggregate payment amount\" for December. But we can compute. Need evidence: 102,400 shares, $74.83 average price. Multiply = 7,662,592. But note average price excludes commissions and fees. The question says \"total amount spent\" - maybe including commissions? The document says for quarter aggregate approximately $46.0 million including commissions and fees. For December, no such figure. We can compute using average price. Let's check if any other figure: In the table, December row: 102,400 shares, average price $74.83. So amount = 102,400 * 74.83 = 7,662,592. That is about $7.7 million. But the question might be asking for the amount from the table? The table has \"Approximate Dollar Value of Shares that May Yet be Purchased\" which is remaining, not spent. So answer is computed.\n\nWe need provide evidence and program. Evidence: 102,400 | ShareRepurchaseQuantity (December 2012 row), $74.83 | RepurchaseAveragePrice (December 2012 row). Program: multiply(102400, 74.83) = 7,662,592. Final answer inside <answer>7,662,592</answer> (no units). But note the question says \"total amount spent\" - maybe they want in dollars. We'll give numeric.\n\nLet's ensure no other interpretation: The question: \"was was the total amount spent on stock repurchases in december 2012?\" Possibly from the table, the December row has \"Total Number of Shares Purchased\" 102,400 and \"Average Price Paid per Share\" $74.83. So yes.\n\nWe'll answer.",
+ "raw_content": "<evidence>\n102,400 | ShareRepurchaseQuantity (December 2012 row)\n$ 74.83 | RepurchaseAveragePrice (December 2012 row)\n</evidence>\n<program>multiply(102400, 74.83)</program>\n<answer>7,662,592</answer>",
+ "usage": {
+  "prompt_tokens": 220843,
+  "completion_tokens": 655,
+  "total_tokens": 221498,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 220672
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 6.65,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "102,400",
+   "element": "ShareRepurchaseQuantity (December 2012 row)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$ 74.83",
+   "element": "RepurchaseAveragePrice (December 2012 row)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(102400, 74.83)",
+ "answer_model": "7,662,592",
+ "program_value": 7662592.0,
+ "docfinqa_row": 423
+}

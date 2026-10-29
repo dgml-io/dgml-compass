@@ -1,0 +1,56 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0094",
+ "format": "markdown_pdf_rules",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "by what percentage did protect carrying values of excess inventories increase from 2002 to 2003?",
+ "gold": "39.0%",
+ "finqa_id": "MRO/2003/page_84.pdf-3",
+ "source_page": "page_84",
+ "ticker": "MRO",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/markdown_pdf_rules/MRO_2003_0001193125-04-036535.md",
+ "doc_chars": 450627,
+ "prompt_chars": 450812,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 450627,
+ "original_chars": 450627,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 105244,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "stop",
+   "completion_tokens": 395,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 1,
+ "ok": true,
+ "answer": "39.0%",
+ "reasoning": "We need to find the derivative losses for \"protect carrying values of excess inventories\" for 2003 and 2002. From the document, in the RM&T segment derivative table (page 54), we have:\n\nStrategy (In Millions) 2003 2002\nMitigate price risk $(112) $ (95)\nProtect carrying values of excess inventories $(57) (41)\nProtect margin on fixed price sales 5 11\nProtect crack spread values 6 1\nTrading activities (4) –\n\nSo 2003 loss is $57 million, 2002 loss is $41 million. The question asks \"by what percentage did protect carrying values of excess inventories increase from 2002 to 2003?\" The increase is from 41 to 57, which is an increase of 16. Percentage increase = (57-41)/41 *100 = 16/41 *100 ≈ 39.024%. So about 39%. We need to give the final answer inside <answer> tags. The question asks for percentage, so we can give 39.0% or 39.02%. Probably just the number. Let's compute precisely: 16/41 = 0.3902439... so 39.024%. We'll put 39.0% or 39.02%. The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"by what percentage\" so we can give the percentage value. We'll put 39.0% or 39.02%. I'll put 39.0% to be safe. But let's check if there is any other interpretation. The losses are negative numbers, but the question says \"increase\" meaning the magnitude increased. So we take absolute values. So answer is 39.0%.",
+ "raw_content": "<answer>39.0%</answer>",
+ "usage": {
+  "prompt_tokens": 105392,
+  "completion_tokens": 395,
+  "total_tokens": 105787,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.41,
+ "answer_tag_found": true,
+ "docfinqa_row": 94
+}

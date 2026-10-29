@@ -1,0 +1,70 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0034",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the percentage change in total debt from 2014 to 2015?",
+ "gold": "3.4%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "PM_2015_0001413329-16-000076.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/DebtAndLiquidity",
+  "/chunk/DebtAndLiquidity/TotalDebt"
+ ],
+ "r1_reasoning_chars": 2173,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 39597,
+  "completion_tokens": 596,
+  "total_tokens": 40193,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/DebtAndLiquidity",
+  "/chunk/DebtAndLiquidity/TotalDebt"
+ ],
+ "content_chars": 86030,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "-3.389831",
+ "reasoning": "We need percentage change in total debt from 2014 to 2015. Document says total debt was $28.5 billion at Dec 31 2015 and $29.5 billion at Dec 31 2014. Percentage change = (28.5 - 29.5)/29.5 * 100 = -1/29.5*100 = -3.3898...%. Need answer. Use figures as printed: $28.5 billion and $29.5 billion. Compute.",
+ "raw_content": "<evidence>$28.5 billion | DebtAmount at December 31, 2015\n$29.5 billion | DebtAmount at December 31, 2014</evidence>\n<program>multiply(divide(subtract(28.5, 29.5), 29.5), 100)</program>\n<answer>-3.389830508474576%</answer>",
+ "r2_usage": {
+  "prompt_tokens": 21509,
+  "completion_tokens": 189,
+  "total_tokens": 21698,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$28.5 billion",
+   "element": "DebtAmount at December 31, 2015",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$29.5 billion",
+   "element": "DebtAmount at December 31, 2014",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(28.5, 29.5), 29.5), 100)",
+ "answer_model": "-3.389830508474576%",
+ "program_value": -3.389830508474576,
+ "elapsed_s": 7.46,
+ "outline_source": "PM_2015_0001413329-16-000076.outline.txt",
+ "outline_chars": 156714
+}

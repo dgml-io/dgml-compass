@@ -1,0 +1,50 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0375",
+ "format": "markdown_pdf_plumber",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "what is the total percentage decrease in future contingent acquisition obligations payable in cash from 2009-2013?",
+ "gold": "1.56%",
+ "finqa_id": "IPG/2008/page_93.pdf-3",
+ "source_page": "page_93",
+ "ticker": "IPG",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_plumber/IPG_2008_0001193125-09-040141.md",
+ "doc_chars": 407053,
+ "prompt_chars": 407256,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 407053,
+ "original_chars": 407053,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 104214,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 998,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "4.29%",
+ "reasoning": "We need to find the total contingent acquisition payments for 2009-2013 and compare to something? The question: \"what is the total percentage decrease in future contingent acquisition obligations payable in cash from 2009-2013?\" That phrasing is odd. Perhaps it asks for the percentage decrease from 2009 to 2013? Or the total percentage decrease over that period? Let's parse.\n\nFrom Note 16, there is a table: \"As of December 31, 2008, our estimated future contingent acquisition obligations payable in cash are as follows:\" with years 2009, 2010, 2011, 2012, 2013, Thereafter, Total. The row \"Total contingent acquisition payments\" gives: 79.3, 66.4, 103.7, 75.3, 75.9, 2.2, 402.8. So from 2009 to 2013, the amounts are 79.3, 66.4, 103.7, 75.3, 75.9. The question asks \"total percentage decrease in future contingent acquisition obligations payable in cash from 2009-2013?\" That could mean the percentage decrease from the first year (2009) to the last year (2013)? Or the total decrease over the period? Typically \"percentage decrease\" from start to end. So compute (79.3 - 75.9)/79.3 = 3.4/79.3 ≈ 0.0429 = 4.29%. But the question says \"total percentage decrease\" maybe they want the overall decrease from 2009 to 2013? Or maybe they want the percentage decrease in the total for those years compared to something? Alternatively, maybe they want the percentage decrease from the sum of 2009-2013 to something? But the phrase \"from 2009-2013\" suggests the period. Could be asking for the percentage decrease over that period, i.e., from 2009 to 2013. Let's check if there is any other interpretation.\n\nAlternatively, maybe they want the percentage decrease in the total obligations from 2009 to 2013? That is (79.3-75.9)/79.3 = 4.29%. But the word \"total\" might indicate the sum of all years? But \"total percentage decrease\" is ambiguous.\n\nLet's read the question exactly: \"what is the total percentage decrease in future contingent acquisition obligations payable in cash from 2009-2013?\" It might be asking for the percentage decrease from the beginning of the period to the end of the period. So answer ~4.3%.\n\nBut let's double-check the numbers. The table shows \"Total contingent acquisition payments\" row. For 2009: 79.3, 2010: 66.4, 2011: 103.7, 2012: 75.3, 2013: 75.9. So from 2009 to 2013, decrease = 79.3 - 75.9 = 3.4. Percentage decrease = 3.4/79.3 = 0.042875... = 4.2875% ~ 4.3%.\n\nIf they meant the total decrease over the period as a percentage of the initial amount, that's it. If they meant the percentage decrease from the peak? But the question says \"from 2009-2013\" so likely from 2009 to 2013.\n\nThus answer: 4.3% (or 4.29%). We'll put the value without units? The question asks for percentage, so we can give 4.3% or 4.29%. Usually they want the number. I'll give 4.3% but to be precise, 4.29%. Let's compute exactly: 3.4/79.3 = 0.042875... so 4.2875% ~ 4.29%. I'll put 4.29%.\n\nBut wait, the question says \"total percentage decrease\" - maybe they want the percentage decrease in the total amount from 2009 to 2013? That is what we did. Alternatively, they might want the percentage decrease in the sum of all years? But that doesn't make sense.\n\nI'll go with 4.29%.\n\nLet's ensure no other interpretation. The table also has \"Deferred acquisition payments\" and \"Put and call options\" but the question specifically says \"future contingent acquisition obligations payable in cash\" which matches the \"Total contingent acquisition payments\" row. So yes.\n\nThus answer: 4.29% (or 4.3%). I'll put 4.29%.",
+ "raw_content": "<answer>4.29%</answer>",
+ "usage": {
+  "prompt_tokens": 104365,
+  "completion_tokens": 998,
+  "total_tokens": 105363,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 16.5,
+ "answer_tag_found": true,
+ "docfinqa_row": 375
+}

@@ -1,0 +1,84 @@
+{
+ "id": "AON_2009_0001047469-10-001535__row0363",
+ "key": "AON_2009_0001047469-10-001535",
+ "question": "what was the percent of the change in the consulting segment revenue from 2008 2009\\\\n",
+ "gold": "-6.6%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "AON_2009_0001047469-10-001535.outline.txt",
+ "doc_source": "AON_2009_0001047469-10-001535.dgml.xml",
+ "outline_chars": 128911,
+ "predicted_xpaths": [
+  "/chunk/ConsolidatedResultsComparison/SegmentReview/ConsultingRevenue/ConsultingRevenue/PercentChange",
+  "/chunk/ConsolidatedResultsComparison/SegmentReview/ConsultingRevenue/ConsultingServicesRevenueChange/PercentChange",
+  "/chunk/ConsolidatedResultsComparison/SegmentReview/ConsultingOperatingIncome/ConsultingOperatingIncomeAnalysis/PercentChange"
+ ],
+ "r1_retried": true,
+ "r1_first_usage": {
+  "prompt_tokens": 32796,
+  "completion_tokens": 16000,
+  "total_tokens": 48796,
+  "audio_prompt_tokens": 0
+ },
+ "r1_reasoning_chars": 0,
+ "r1_usage": {
+  "prompt_tokens": 32815,
+  "completion_tokens": 20,
+  "total_tokens": 32835,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ConsolidatedResultsComparison/SegmentReview/ConsultingRevenue/ConsultingRevenue/PercentChange",
+  "/chunk/ConsolidatedResultsComparison/SegmentReview/ConsultingRevenue/ConsultingServicesRevenueChange/PercentChange",
+  "/chunk/ConsolidatedResultsComparison/SegmentReview/ConsultingOperatingIncome/ConsultingOperatingIncomeAnalysis/PercentChange"
+ ],
+ "content_chars": 2630,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "6",
+ "reasoning": "We need answer percent change in consulting segment revenue from 2008 to 2009. Document says \"6% lower than 2008\" and \"6%\". So answer 6% (decrease). Need evidence figures. Use PercentChange 6%. Program just 6.",
+ "raw_content": "<evidence>6% | /chunk/ConsolidatedResultsComparison/SegmentReview/ConsultingRevenue/ConsultingRevenue/PercentChange</evidence>\n<program>6</program>\n<answer>6%</answer>",
+ "r2_usage": {
+  "prompt_tokens": 937,
+  "completion_tokens": 108,
+  "total_tokens": 1045,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 937,
+   "completion_tokens": 108,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "6%",
+   "element": "chunk/ConsolidatedResultsComparison/SegmentReview/ConsultingRevenue/ConsultingRevenue/PercentChange",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "6",
+ "answer_model": "6%",
+ "program_value": 6.0,
+ "elapsed_s": 35.02
+}

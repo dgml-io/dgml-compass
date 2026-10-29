@@ -1,0 +1,72 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0725",
+ "format": "markdown_pdf_plumber",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "what was the percentage change in total expense for repairs and maintenance from 2012 to 2013?",
+ "gold": "10%",
+ "finqa_id": "UNP/2014/page_75.pdf-3",
+ "source_page": "page_75",
+ "ticker": "UNP",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf_plumber/UNP_2014_0001193125-15-037518.md",
+ "doc_chars": 359073,
+ "prompt_chars": 359256,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 359073,
+ "original_chars": 359073,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 86861,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 432,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "9.52381",
+ "reasoning": "We need percentage change in total expense for repairs and maintenance from 2012 to 2013. Document says: \"Total expense for repairs and maintenance incurred was $2.4 billion for 2014, $2.3 billion for 2013, and $2.1 billion for 2012.\" So 2013 = 2.3, 2012 = 2.1. Percentage change = (2.3-2.1)/2.1 = 0.2/2.1 = 0.095238... = 9.5238%. Need answer as value. Probably 9.5% or 9.52%. The question asks percentage change. We'll give numeric. Use evidence: figures as printed: $2.3 billion, $2.1 billion. But they are in text. Element: \"Total expense for repairs and maintenance\" row? Actually it's in Note 12 Properties paragraph. We'll cite. Program: divide(subtract(2.3, 2.1), 2.1) = 0.095238... multiply by 100? The program should compute the ratio. The answer should be percentage. We'll output 9.52% maybe. But instructions: \"Give final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what was the percentage change\" so units are percentage. We can output 9.52% or 9.5%. Let's compute exactly: 0.2/2.1 = 0.0952380952 -> 9.5238%. We'll output 9.52%.",
+ "raw_content": "<evidence>\n$2.3 billion | Total expense for repairs and maintenance (2013)\n$2.1 billion | Total expense for repairs and maintenance (2012)\n</evidence>\n<program>multiply(divide(subtract(2.3, 2.1), 2.1), 100)</program>\n<answer>9.52%</answer>",
+ "usage": {
+  "prompt_tokens": 87170,
+  "completion_tokens": 432,
+  "total_tokens": 87602,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 18.01,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$2.3 billion",
+   "element": "Total expense for repairs and maintenance (2013)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$2.1 billion",
+   "element": "Total expense for repairs and maintenance (2012)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(2.3, 2.1), 2.1), 100)",
+ "answer_model": "9.52%",
+ "program_value": 9.523809523809511,
+ "docfinqa_row": 725
+}

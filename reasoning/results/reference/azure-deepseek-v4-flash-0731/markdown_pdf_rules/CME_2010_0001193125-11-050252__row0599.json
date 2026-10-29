@@ -1,0 +1,53 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0599",
+ "format": "markdown_pdf_rules",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "what is the total value of the approved equity compensation plans in 2005 , in millions of dollars?",
+ "gold": "375.15",
+ "finqa_id": "CME/2010/page_123.pdf-5",
+ "source_page": "page_123",
+ "ticker": "CME",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/markdown_pdf_rules/CME_2010_0001193125-11-050252.md",
+ "doc_chars": 415699,
+ "prompt_chars": 415887,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 415699,
+ "original_chars": 415699,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93329,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 261,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer question: \"what is the total value of the approved equity compensation plans in 2005 , in millions of dollars?\" Need find relevant figures. Document mentions 2005 Director Stock Plan approved by shareholders at 2005 annual meeting. But \"total value of the approved equity compensation plans in 2005\" ambiguous. Maybe refers to equity compensation plans approved in 2005? There is \"CME Group Inc. 2005 Director Stock Plan\" but no total value. Also \"Employee Stock Purchase Plan and the 2005 Director Stock Plan were approved by shareholders at our 2005 annual meeting.\" No dollar value. Could be asking about \"approved equity compensation plans\" in table? The table in Item 12 shows number of securities, not value. No total value in millions. Maybe question asks \"total value of the approved equity compensation plans in 2005\" meaning the value of shares authorized? Not given. Could be NOT_FOUND.\n\nBut let's check: The document has \"CME Group Inc. 2005 Director Stock Plan\" with 125,000 shares reserved. No dollar value. Also \"Employee Stock Purchase Plan\" 40,000 shares. No value. So answer NOT_FOUND.",
+ "raw_content": "<answer>NOT_FOUND</answer>",
+ "usage": {
+  "prompt_tokens": 93478,
+  "completion_tokens": 261,
+  "total_tokens": 93739,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 93440
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.13,
+ "answer_tag_found": true,
+ "docfinqa_row": 599
+}

@@ -1,0 +1,70 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0344",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what was the average unrecognized compensation cost related to unvested restricted stock per year?",
+ "gold": "$ 13.4 million",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "GPN_2013_0001123360-13-000025.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockCompensationExpense"
+ ],
+ "r1_reasoning_chars": 5647,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 18968,
+  "completion_tokens": 1419,
+  "total_tokens": 20387,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockCompensationExpense"
+ ],
+ "content_chars": 2121,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "13.4",
+ "reasoning": "We need answer. Need compute average unrecognized compensation cost per year? The document says as of May 31, 2013, there was $33.5 million total unrecognized compensation cost related to unvested restricted stock awards expected to be recognized over weighted average period of 2.5 years. Average per year = 33.5 / 2.5 = 13.4 million. Need provide evidence figures. Question asks \"average unrecognized compensation cost related to unvested restricted stock per year\" likely that. Use figures: $33.5 million, 2.5 years. Compute divide(33.5, 2.5) = 13.4. Need answer value only inside tags. Evidence lines.",
+ "raw_content": "<evidence>\n$33.5 million | UnrecognizedCompensationCost\n2.5 years | VestingPeriod\n</evidence>\n<program>divide(33.5, 2.5)</program>\n<answer>13.4</answer>",
+ "r2_usage": {
+  "prompt_tokens": 920,
+  "completion_tokens": 206,
+  "total_tokens": 1126,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$33.5 million",
+   "element": "UnrecognizedCompensationCost",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "2.5 years",
+   "element": "VestingPeriod",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(33.5, 2.5)",
+ "answer_model": "13.4",
+ "program_value": 13.4,
+ "elapsed_s": 7.02,
+ "outline_source": "GPN_2013_0001123360-13-000025.outline.txt",
+ "outline_chars": 74109
+}

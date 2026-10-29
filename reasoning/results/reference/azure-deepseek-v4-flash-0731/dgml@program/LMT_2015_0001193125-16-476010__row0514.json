@@ -1,0 +1,76 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0514",
+ "format": "dgml",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was the change in the total long-term debt net from 2014 to 2015 in millions",
+ "gold": "9119",
+ "finqa_id": "LMT/2015/page_99.pdf-1",
+ "source_page": "page_99",
+ "ticker": "LMT",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml/LMT_2015_0001193125-16-476010.dgml.xml",
+ "doc_chars": 868444,
+ "prompt_chars": 868614,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 868444,
+ "original_chars": 868444,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 194482,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1638,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "9119",
+ "reasoning": "We need the change in total long-term debt net from 2014 to 2015. From balance sheet: Long-term debt, net 2015 = 14,305, 2014 = 6,142. But also current maturities of long-term debt 2015 = 956, 2014 = 0. Total debt net? The question says \"total long-term debt net\" - likely the line item \"Long-term debt, net\" on balance sheet. But also there is \"Total debt, net\" in selected financial data: 2015 = 15,261, 2014 = 6,142. The question says \"total long-term debt net\" - maybe they mean the balance sheet line \"Long-term debt, net\" which is 14,305 vs 6,142. But the selected data has \"Total debt, net\" 15,261 vs 6,142. The question wording: \"total long-term debt net\" - could be the line \"Long-term debt, net\" on balance sheet. But they might mean \"Total debt, net\" from selected financial data. Let's read: In the balance sheet, there is \"Current maturities of long-term debt\" 956 and \"Long-term debt, net\" 14,305. Total debt would be 15,261. The selected financial data has \"Total debt, net (e)\" 15,261 and 6,142. The question asks \"change in the total long-term debt net from 2014 to 2015 in millions\". The phrase \"total long-term debt net\" is ambiguous. But the balance sheet line is \"Long-term debt, net\" and the selected data is \"Total debt, net\". The question says \"total long-term debt net\" - maybe they mean the line \"Long-term debt, net\" on the balance sheet. However, the selected data explicitly says \"Total debt, net\" which includes current maturities. The question says \"total long-term debt net\" - could be a misphrasing of \"Total debt, net\". Let's check the document: In the balance sheet, \"Long-term debt, net\" is 14,305 and 6,142. In selected financial data, \"Total debt, net (e)\" is 15,261 and 6,142. The change from 2014 to 2015 for \"Total debt, net\" is 15,261 - 6,142 = 9,119. For \"Long-term debt, net\" it's 14,305 - 6,142 = 8,163. The question says \"total long-term debt net\" - maybe they mean the line \"Long-term debt, net\" but with \"total\" prefix. I think the intended is the balance sheet line \"Long-term debt, net\" because it says \"total long-term debt net\" - but the balance sheet line is \"Long-term debt, net\". However, the selected data has \"Total debt, net\" which is more likely what they mean by \"total ... debt net\". The question: \"what was the change in the total long-term debt net from 2014 to 2015 in millions\" - they might be referring to the line \"Total debt, net\" in selected financial data. But they said \"long-term debt\" not \"debt\". Let's look at the balance sheet: there is \"Current maturities of long-term debt\" and \"Long-term debt, net\". The sum is total debt. The selected data has \"Total debt, net\". The question says \"total long-term debt net\" - could be a combination. I'll check the exact wording: \"total long-term debt net\" - maybe they mean the line \"Long-term debt, net\" on the balance sheet. But the word \"total\" might be from \"Total debt, net\". I think the safest is to use the balance sheet line \"Long-term debt, net\" because it explicitly says \"Long-term debt, net\". The change is 14,305 - 6,142 = 8,163. But let's verify: The balance sheet shows 2015: Long-term debt, net = 14,305; 2014: 6,142. So change = 8,163. The selected data shows Total debt, net = 15,261 and 6,142, change = 9,119. The question says \"total long-term debt net\" - if they meant the balance sheet line, they would say \"long-term debt, net\". If they meant the selected data, they would say \"total debt, net\". The phrase \"total long-term debt net\" is ambiguous. I'll look at the context: The question asks \"what was the change in the total long-term debt net from 2014 to 2015 in millions\". In the document, the balance sheet has \"Long-term debt, net\" and the selected financial data has \"Total debt, net\". The word \"total\" appears in the selected data. So I think they mean \"Total debt, net\" from selected financial data. But they said \"long-term debt\" not \"debt\". However, the selected data line is \"Total debt, net\" which includes current maturities of long-term debt. The question says \"total long-term debt net\" - maybe they are referring to the sum of current maturities and long-term debt net? That would be 956 + 14,305 = 15,261, which matches \"Total debt, net\". So the change is 15,261 - 6,142 = 9,119. I'll go with that. But let's read the question exactly: \"what was the change in the total long-term debt net from 2014 to 2015 in millions\" - they might have meant \"total long-term debt, net\" as a line item. The balance sheet line is \"Long-term debt, net\" not \"total\". The selected data line is \"Total debt, net\". I think the intended is the balance sheet line \"Long-term debt, net\" because it says \"long-term debt net\". But the word \"total\" might be a mistake. Let's see the evidence: In the balance sheet, there is \"Current maturities of long-term debt\" and \"Long-term debt, net\". The sum is total debt. The selected data has \"Total debt, net\". The question says \"total long-term debt net\" - could be a combination of \"total\" and \"long-term debt net\". I'll check the numbers: 2015 total debt net = 15,261, 2014 = 6,142. Change = 9,119. 2015 long-term debt net = 14,305, 2014 = 6,142. Change = 8,163. Which one is more likely? The question says \"total long-term debt net\" - if they meant the balance sheet line, they would say \"long-term debt, net\". The word \"total\" suggests they are referring to the total debt including current maturities. Also, the selected financial data explicitly labels it \"Total debt, net\". So I'll use that. The change is 15,261 - 6,142 = 9,119. I'll provide evidence: 15,261 | Total debt, net (2015) from Selected Financial Data; 6,142 | Total debt, net (2014) from Selected Financial Data. Then program: subtract(15261, 6142) = 9119. I'll answer 9119.",
+ "raw_content": "<evidence>15,261 | Total debt, net (2015) Selected Financial Data\n6,142 | Total debt, net (2014) Selected Financial Data</evidence>\n<program>subtract(15261, 6142)</program>\n<answer>9119</answer>",
+ "usage": {
+  "prompt_tokens": 194791,
+  "completion_tokens": 1638,
+  "total_tokens": 196429,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 194560
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 12.09,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "15,261",
+   "element": "Total debt, net (2015) Selected Financial Data",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "6,142",
+   "element": "Total debt, net (2014) Selected Financial Data",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "subtract(15261, 6142)",
+ "answer_model": "9119",
+ "program_value": 9119.0,
+ "docfinqa_row": 514
+}

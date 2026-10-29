@@ -1,0 +1,79 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0575",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "what is the yearly amortization rate for the trademarks?",
+ "gold": "20%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "ADBE_2008_0000796343-09-000007.outline.txt",
+ "doc_source": "ADBE_2008_0000796343-09-000007.dgml.xml",
+ "outline_chars": 99180,
+ "predicted_xpaths": [
+  "/chunk/ConsolidatedCashFlow/IntangibleAssetsPolicy",
+  "/chunk/ConsolidatedCashFlow/IntangibleAssetsPolicy/table/IntangibleAssetUsefulLife",
+  "/chunk/ConsolidatedCashFlow/PurchasePriceAllocation/TrademarkDescription"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 3043,
+ "r1_usage": {
+  "prompt_tokens": 25358,
+  "completion_tokens": 809,
+  "total_tokens": 26167,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ConsolidatedCashFlow/IntangibleAssetsPolicy",
+  "/chunk/ConsolidatedCashFlow/IntangibleAssetsPolicy/table/IntangibleAssetUsefulLife",
+  "/chunk/ConsolidatedCashFlow/PurchasePriceAllocation/TrademarkDescription"
+ ],
+ "content_chars": 29096,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "0.2",
+ "reasoning": "We need to find yearly amortization rate for trademarks. The document says trademarks have useful life of 5 years. Amortization rate is typically 1/useful life = 1/5 = 0.2 or 20% per year. The question asks \"yearly amortization rate\" - likely 20%. But we need to see if there is any explicit rate. The table gives weighted average useful life (years) for trademarks as 5. So yearly amortization rate = 1/5 = 0.2. The answer should be 0.2 or 20%? The question asks \"what is the yearly amortization rate\" - likely as a decimal or percentage. We'll provide 0.2. But let's check if there is any other mention. The region has \"Trademarks\" row with 5. So we use that.\n\nEvidence: value \"5\" from path /chunk/ConsolidatedCashFlow/IntangibleAssetsPolicy/table/IntangibleAssetUsefulLife/Trademarks? Actually the path is /chunk/ConsolidatedCashFlow/IntangibleAssetsPolicy/table/IntangibleAssetUsefulLife with row containing Trademarks and 5. We'll cite the value 5.\n\nProgram: divide(1, 5) = 0.2.\n\nBut the question might expect \"20%\" or \"0.2\". The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what is the yearly amortization rate\" - rate is typically a fraction. We'll output 0.2. Alternatively, if they want percentage, they'd ask \"percentage\". We'll output 0.2.\n\nLet's produce evidence and program.",
+ "raw_content": "<evidence>5 | /chunk/ConsolidatedCashFlow/IntangibleAssetsPolicy/table/IntangibleAssetUsefulLife/Trademarks</evidence>\n<program>divide(1, 5)</program>\n<answer>0.2</answer>",
+ "r2_usage": {
+  "prompt_tokens": 6525,
+  "completion_tokens": 422,
+  "total_tokens": 6947,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 6525,
+   "completion_tokens": 422,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "5",
+   "element": "chunk/ConsolidatedCashFlow/IntangibleAssetsPolicy/table/IntangibleAssetUsefulLife/Trademarks",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(1, 5)",
+ "answer_model": "0.2",
+ "program_value": 0.2,
+ "elapsed_s": 6.95
+}

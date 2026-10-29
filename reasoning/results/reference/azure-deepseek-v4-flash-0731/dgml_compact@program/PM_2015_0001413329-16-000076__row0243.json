@@ -1,0 +1,72 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0243",
+ "format": "dgml_compact",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the percentage change in the weighted-average discount rate for non-u.s . pension plans from 2014 to 2015?",
+ "gold": "-12.5%",
+ "finqa_id": "PM/2015/page_38.pdf-2",
+ "source_page": "page_38",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml_compact/PM_2015_0001413329-16-000076.dgml.txt",
+ "doc_chars": 654685,
+ "prompt_chars": 654888,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 654685,
+ "original_chars": 654685,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 144584,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 371,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-12.5",
+ "reasoning": "We need to find the weighted-average discount rate for non-U.S. pension plans for 2014 and 2015, then compute percentage change.\n\nFrom document: In \"PensionObligationAssumptions\" table (Note 13), we have:\n\nPension Non-U.S. Plans 2015: 1.68%\nPension Non-U.S. Plans 2014: 1.92%\n\nPercentage change = (1.68 - 1.92)/1.92 * 100 = -0.24/1.92 * 100 = -12.5%.\n\nSo answer is -12.5%.\n\nWe need to list evidence: values and element names. The element names are like \"BenefitObligationAssumption\" or \"PensionObligationAssumptions\". We'll cite.\n\nProgram: divide(subtract(1.68, 1.92), 1.92) * 100? But program should be exact nested calls. We can do multiply(divide(subtract(1.68, 1.92), 1.92), 100). But the answer is a percentage, so we can output -12.5. The program should compute the value. We'll use multiply(divide(subtract(1.68, 1.92), 1.92), 100).",
+ "raw_content": "<evidence>\n1.68% | Pension Non-U.S. Plans 2015 (BenefitObligationAssumption)\n1.92% | Pension Non-U.S. Plans 2014 (BenefitObligationAssumption)\n</evidence>\n<program>multiply(divide(subtract(1.68, 1.92), 1.92), 100)</program>\n<answer>-12.5</answer>",
+ "usage": {
+  "prompt_tokens": 144898,
+  "completion_tokens": 371,
+  "total_tokens": 145269,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 143616
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.61,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1.68%",
+   "element": "Pension Non-U.S. Plans 2015 (BenefitObligationAssumption)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1.92%",
+   "element": "Pension Non-U.S. Plans 2014 (BenefitObligationAssumption)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(1.68, 1.92), 1.92), 100)",
+ "answer_model": "-12.5",
+ "program_value": -12.5,
+ "docfinqa_row": 243
+}

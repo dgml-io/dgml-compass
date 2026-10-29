@@ -1,0 +1,64 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0235",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what was the percentage of the anticipated approximate tax refund in 2003 based on the nol $ 90.0 million .",
+ "gold": "23.7%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "AMT_2005_0001193125-06-054224.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/IncomeTaxes/FinancialStatementHeader/table/RefundRateReconciliation"
+ ],
+ "r1_reasoning_chars": 5091,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 28608,
+  "completion_tokens": 1301,
+  "total_tokens": 29909,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/IncomeTaxes/FinancialStatementHeader/table/RefundRateReconciliation"
+ ],
+ "content_chars": 3163,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "35",
+ "reasoning": "We need answer percentage of anticipated approximate tax refund in 2003 based on NOL $90.0 million. Need find in document excerpts. The excerpts show refund rate reconciliation table with columns likely years? Need identify 2003 column. The question: \"what was the percentage of the anticipated approximate tax refund in 2003 based on the nol $ 90.0 million.\" Likely there is a line \"Anticipated approximate tax refund\" or \"NOL\" with percentage? The provided regions only show rate reconciliation rows: Statutory 35%, State 2/4/5, Non-deductible (1)/blank/(4), Foreign (11)/(7)/(3), Other (5)/(6)/(8), Effective (3)%/26%/25%. Also \"Adjustment to refund claim\" (23) in first row. The question mentions NOL $90.0 million. Maybe there is a table with \"Anticipated approximate tax refund\" percentage? Need infer from document. The excerpt includes \"Adjustment to refund claim\" (23) maybe related to NOL? The question asks \"what was the percentage of the anticipated approximate tax refund in 2003 based on the nol $ 90.0 million.\" Could be asking for the percentage used to calculate refund from NOL, e.g., 35%? Or effective tax rate? Need parse.\n\nLet's examine context. The document is income taxes. There is a table \"RefundRateReconciliation\" with rows. The first row \"Adjustment to refund claim\" has (23) in first column, blank others. Then statutory 35% all columns. State 2,4,5. Non-deductible (1), blank, (4). Foreign (11),(7),(3). Other (5),(6),(8). Effective (3)%,26%,25%. The columns likely correspond to years? Maybe 2003, 2002, 2001? The question specifically 2003. Which column is 2003? The first column has adjustment to refund claim (23), effective (3)%. The second column effective 26%, third 25%. The question: \"what was the percentage of the anticipated approximate tax refund in 2003 based on the nol $ 90.0 million.\" There might be a note: \"The anticipated approximate tax refund of $90.0 million is based on the NOL carryback at the statutory rate of 35%\"? Or \"percentage\" might be 35%? Need find.\n\nThe question wording: \"what was the percentage of the anticipated approximate tax refund in 2003 based on the nol $ 90.0 million .\" It might be asking: In 2003, the company had an NOL of $90.0 million, and the anticipated approximate tax refund was some percentage of that? Actually \"percentage of the anticipated approximate tax refund\" could be the effective tax rate? Let's think.\n\nMaybe there is a sentence: \"The anticipated approximate tax refund of $90.0 million is based on the NOL carryback at the statutory rate of 35%.\" The question asks \"what was the percentage of the anticipated approximate tax refund in 2003 based on the nol $ 90.0 million.\" That percentage is 35%. But we need verify from excerpts. The excerpts include statutory tax rate 35% in all columns. The first column (likely 2003) has adjustment to refund claim (23), effective (3)%. But the NOL refund might be computed at statutory rate 35% before adjustment? The question says \"based on the nol $ 90.0 million\" - the refund amount is $90.0 million, and the percentage used to compute it? Actually \"percentage of the anticipated approximate tax refund\" could be the tax rate applied to NOL to get refund. If NOL is $90.0 million and refund is some amount, percentage = refund / NOL. But we don't have refund amount. The question asks \"what was the percentage of the anticipated approximate tax refund in 2003 based on the nol $ 90.0 million.\" Maybe the percentage is 35% (statutory rate). Let's search memory: In financial statements, \"The anticipated approximate tax refund of $90.0 million is based on the NOL carryback at the statutory rate of 35%.\" So answer 35%.\n\nBut need be careful: The excerpt shows \"Adjustment to refund claim\" (23) in first column. That might reduce the refund. The effective tax rate for 2003 is (3)%. But the NOL refund might be at statutory 35%? The question asks \"percentage of the anticipated approximate tax refund\" - maybe the percentage is the effective tax rate? Let's parse exact wording: \"what was the percentage of the anticipated approximate tax refund in 2003 based on the nol $ 90.0 million .\" It might be from a table: \"Anticipated approximate tax refund\" line with percentage? The provided regions don't include that line. But the question says \"based on the nol $ 90.0 million\" - maybe there is a note: \"The anticipated approximate tax refund of $90.0 million is based on the NOL carryback at the statutory rate of 35%.\" So the percentage is 35%.\n\nLet's see if any other percentage in excerpts could be the answer. The first column has \"Adjustment to refund claim\" (23). That is a percentage point adjustment. The statutory rate is 35%. The effective tax rate is (3)%. The question asks \"percentage of the anticipated approximate tax refund\" - could be the effective tax rate? But \"based on the nol $ 90.0 million\" suggests the refund amount is $90.0 million, and the percentage is the rate used to calculate it. The statutory rate is 35%. The adjustment to refund claim (23) might be a reduction from 35% to 12%? Actually 35% + (23)% = 12%? But the effective rate is (3)% after other adjustments. The \"Adjustment to refund claim\" might be a specific adjustment to the refund claim, reducing the refund from 35% to 12%? Let's compute: Statutory 35% + State 2% + Non-deductible (1)% + Foreign (11)% + Other (5)% = 20%? Wait 35+2-1-11-5 = 20. But effective is (3)%. There is also \"Adjustment to refund claim\" (23) in first row. 35+2-1-11-5-23 = -3. Yes! So the first column: 35 + 2 - 1 - 11 - 5 - 23 = -3. So the \"Adjustment to refund claim\" is a reconciling item of (23) percentage points. So the effective tax rate for 2003 is (3)%. The NOL refund might be based on the statutory rate? The question asks \"percentage of the anticipated approximate tax refund\" - maybe the percentage is the effective tax rate? But the phrase \"based on the nol $ 90.0 million\" - if the refund is $90.0 million, and the NOL is something, the percentage would be refund / NOL. But we don't have NOL amount. Actually the question says \"based on the nol $ 90.0 million\" - maybe the NOL is $90.0 million, and the anticipated approximate tax refund is some percentage of that. The percentage might be the effective tax rate? But the effective tax rate is (3)% which is negative, unlikely for refund. The statutory rate is 35%. The refund would be 35% of NOL if no adjustments. But there is an adjustment to refund claim (23) reducing it to 12%? Let's see: 35% - 23% = 12%. That might be the percentage used for the refund claim. The question: \"what was the percentage of the anticipated approximate tax refund in 2003 based on the nol $ 90.0 million.\" Could be asking for the \"Adjustment to refund claim\" percentage? No, \"percentage of the anticipated approximate tax refund\" - maybe the refund is $90.0 million, and the percentage is the rate applied to NOL to get that refund. If NOL is $90.0 million, and refund is $90.0 million, percentage would be 100%? That doesn't make sense.\n\nLet's think of typical note: \"The anticipated approximate tax refund of $90.0 million is based on the NOL carryback at the statutory rate of 35%.\" So the percentage is 35%. The question wording: \"what was the percentage of the anticipated approximate tax refund in 2003 based on the nol $ 90.0 million .\" It might be from a question generation: \"What was the percentage of the anticipated approximate tax refund in 2003 based on the NOL $90.0 million?\" The answer is 35%. The excerpt includes statutory tax rate 35% in all columns. So answer 35%.\n\nBut we need provide evidence and program. Evidence: \"35% | StatutoryRate\" from the StatutoryRateReconciliation row. Also maybe \"Adjustment to refund claim (23)\"? But the question asks percentage, likely 35%. We'll cite 35% from StatutoryRate. Program: 35 (as printed). But the answer should be a number, likely 35. The question asks \"what was the percentage\" - answer 35%. We'll output 35.\n\nNeed ensure no other percentage. The first column effective tax rate is (3)%, but that's not the refund percentage. The statutory rate is 35%. The NOL refund is based on statutory rate. So answer 35.\n\nLet's craft evidence: \"35% | StatutoryRate\" (from StatutoryRateReconciliation). Program: 35.\n\nBut wait, the question says \"in 2003\" - the statutory rate is 35% in all columns, so fine.\n\nLet's final.",
+ "raw_content": "<evidence>35% | StatutoryRate</evidence>\n<program>35</program>\n<answer>35</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1129,
+  "completion_tokens": 2151,
+  "total_tokens": 3280,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "35%",
+   "element": "StatutoryRate",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "35",
+ "answer_model": "35",
+ "program_value": 35.0,
+ "elapsed_s": 21.4,
+ "outline_source": "AMT_2005_0001193125-06-054224.outline.txt",
+ "outline_chars": 112419
+}

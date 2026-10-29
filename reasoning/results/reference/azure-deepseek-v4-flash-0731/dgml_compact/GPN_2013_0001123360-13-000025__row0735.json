@@ -1,0 +1,53 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0735",
+ "format": "dgml_compact",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what was the total number of grants were forfeited?",
+ "gold": "170 grants",
+ "finqa_id": "GPN/2013/page_87.pdf-4",
+ "source_page": "page_87",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/dgml_compact/GPN_2013_0001123360-13-000025.dgml.txt",
+ "doc_chars": 440691,
+ "prompt_chars": 440831,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 440691,
+ "original_chars": 440691,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93128,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 610,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "163",
+ "reasoning": "The question asks: \"what was the total number of grants were forfeited?\" This is ambiguous. It could refer to restricted stock forfeited, stock options forfeited, or both. Let me look for forfeiture data.\n\nFrom the document, in the restricted stock rollforward:\n- Forfeited: (79) in 2012, (91) in 2013. But the question doesn't specify a year.\n\nFor stock options:\n- Forfeited: (72) in 2012, (72) in 2013.\n\nThe question says \"total number of grants were forfeited\" - could be asking for the total across all years or a specific year. Without a year specified, it's ambiguous. Let me check if there's a clear total.\n\nActually, the question might be asking for the total forfeited in fiscal 2013, or the total across all categories. Let me re-read.\n\n\"what was the total number of grants were forfeited?\"\n\nThis is vague. Let me look at the restricted stock table:\nNon-vested at May 31, 2011 | 869\nGranted | 472\nVested | (321)\nForfeited | (79)\nNon-vested at May 31, 2012 | 941\n\nNon-vested at May 31, 2012 | 941\nGranted | 561\nVested | (315)\nForfeited | (91)\nNon-vested at May 31, 2013 | 1,096\n\nFor stock options:\nOutstanding at May 31, 2011 | 2,471\nGranted | —\nForfeited | (72)\nExercised | (254)\nOutstanding at May 31, 2012 | 2,145\n\nOutstanding at May 31, 2012 | 2,145\nGranted | —\nForfeited | (72)\nExercised | (308)\nOutstanding at May 31, 2013 | 1,765\n\nThe question is ambiguous. It might be asking for the total forfeited in fiscal 2013 across both restricted stock and options: 91 + 72 = 163. Or it might be asking for a specific category.\n\nGiven the ambiguity, I'll interpret \"total number of grants were forfeited\" as the total forfeitures in fiscal 2013 (the most recent year): restricted stock forfeited 91, options forfeited 72, total = 163.\n\nAlternatively, it could be asking for the total across all years. But typically these questions refer to the most recent fiscal year.\n\nLet me consider: the question says \"total number of grants\" - grants could refer to restricted stock awards and options. In fiscal 2013, restricted stock forfeited = 91 (in thousands), options forfeited = 72 (in thousands). Total = 163 thousand.\n\nI'll answer 163.",
+ "raw_content": "<answer>163</answer>",
+ "usage": {
+  "prompt_tokens": 93267,
+  "completion_tokens": 610,
+  "total_tokens": 93877,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 93184
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.9,
+ "answer_tag_found": true,
+ "docfinqa_row": 735
+}

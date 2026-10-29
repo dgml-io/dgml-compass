@@ -1,0 +1,50 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0113",
+ "format": "markdown_pdf",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "what is the change in the balance of liability for all restructuring from 2006 to 2008 , ( in millions ) ?",
+ "gold": "-19",
+ "finqa_id": "IPG/2008/page_62.pdf-2",
+ "source_page": "page_62",
+ "ticker": "IPG",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf/IPG_2008_0001193125-09-040141.md",
+ "doc_chars": 368715,
+ "prompt_chars": 368910,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 368715,
+ "original_chars": 368715,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 91399,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 295,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-19.0",
+ "reasoning": "We need to find the change in the balance of liability for all restructuring from 2006 to 2008. The document provides a summary of the remaining liability for the 2007, 2003, and 2001 restructuring programs. The table shows:\n\nLiability at December 31, 2006: $31.8 (total)\nLiability at December 31, 2007: $29.6\nLiability at December 31, 2008: $12.8\n\nSo the change from 2006 to 2008 is 12.8 - 31.8 = -19.0. The question asks \"change in the balance of liability for all restructuring from 2006 to 2008, (in millions)\". So it's a decrease of 19.0. The answer should be -19.0 or 19.0 decrease? The question says \"change\" so likely the numeric change. We'll provide -19.0.\n\nBut check: The table is titled \"A summary of the remaining liability for the 2007, 2003 and 2001 restructuring programs\". That is all restructuring. So yes.\n\nThus answer: -19.0 or 19.0? The question says \"change in the balance\" so it could be negative. We'll put -19.0.\n\nFinal answer inside <answer> tags.",
+ "raw_content": "<answer>-19.0</answer>",
+ "usage": {
+  "prompt_tokens": 91553,
+  "completion_tokens": 295,
+  "total_tokens": 91848,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.96,
+ "answer_tag_found": true,
+ "docfinqa_row": 113
+}

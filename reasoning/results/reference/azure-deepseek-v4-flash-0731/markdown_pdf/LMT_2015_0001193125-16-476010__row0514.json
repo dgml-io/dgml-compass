@@ -1,0 +1,50 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0514",
+ "format": "markdown_pdf",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was the change in the total long-term debt net from 2014 to 2015 in millions",
+ "gold": "9119",
+ "finqa_id": "LMT/2015/page_99.pdf-1",
+ "source_page": "page_99",
+ "ticker": "LMT",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf/LMT_2015_0001193125-16-476010.md",
+ "doc_chars": 503247,
+ "prompt_chars": 503417,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 503247,
+ "original_chars": 503247,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 108132,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 683,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "9,119",
+ "reasoning": "We need to find total long-term debt net for 2014 and 2015. From balance sheet: Long-term debt, net at Dec 31, 2015 = $14,305 million; at Dec 31, 2014 = $6,142 million. Change = 14,305 - 6,142 = 8,163 million. Also note total debt net includes current maturities? The question says \"total long-term debt net\" - likely the line item \"Long-term debt, net\" on balance sheet. But also there is \"Total debt, net\" in selected financial data: 2015 $15,261, 2014 $6,142. That includes current maturities? Actually selected data says \"Total debt, net\" 2015 $15,261, 2014 $6,142. The balance sheet shows current maturities of long-term debt $956 in 2015, and long-term debt net $14,305. So total debt net = 956+14,305 = 15,261. The question asks \"total long-term debt net\" - ambiguous. But likely they mean the line item \"Long-term debt, net\" from balance sheet. However, the selected financial data has \"Total debt, net\" which is 15,261 and 6,142. The change would be 15,261-6,142 = 9,119. But the question says \"total long-term debt net\" - maybe they refer to the balance sheet line \"Long-term debt, net\" which is 14,305 and 6,142. Change = 8,163. Let's check the wording: \"what was the change in the total long-term debt net from 2014 to 2015 in millions\" - likely they want the difference in the balance sheet item \"Long-term debt, net\". But note that in 2014 there was no current maturities? Actually 2014 current maturities of long-term debt was $0. So total debt net in 2014 was 6,142. In 2015, current maturities 956 + long-term debt net 14,305 = 15,261. So if they ask \"total long-term debt net\" they might mean the sum of current and noncurrent? But the phrase \"total long-term debt net\" is odd. The balance sheet has \"Current maturities of long-term debt\" and \"Long-term debt, net\". The selected financial data has \"Total debt, net\" which is the sum. The question says \"total long-term debt net\" - could be interpreted as the total debt net. But to be safe, I'll look at the document: In Note 10, they have \"Total long-term debt, net\" which is $15,261 and $6,142. Actually in Note 10, they show \"Total long-term debt, net\" as $15,261 and $6,142. So that is the total long-term debt net. So change = 15,261 - 6,142 = 9,119 million. Let's verify: In Note 10, they have \"Total long-term debt, net\" line. Yes. So answer is 9,119.",
+ "raw_content": "<answer>9,119</answer>",
+ "usage": {
+  "prompt_tokens": 108282,
+  "completion_tokens": 683,
+  "total_tokens": 108965,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.24,
+ "answer_tag_found": true,
+ "docfinqa_row": 514
+}

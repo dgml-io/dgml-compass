@@ -1,0 +1,53 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0618",
+ "format": "markdown_pdf_rules",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what percentage of total future minimum operating lease payments for leases with remaining terms greater than one year are due in 2010?",
+ "gold": "14%",
+ "finqa_id": "FIS/2007/page_94.pdf-4",
+ "source_page": "page_94",
+ "ticker": "FIS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_rules/FIS_2007_0000892569-08-000207.md",
+ "doc_chars": 363516,
+ "prompt_chars": 363740,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 363516,
+ "original_chars": 363516,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 83492,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 238,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "14.16%",
+ "reasoning": "We need to find future minimum operating lease payments for leases with remaining terms greater than one year. In the document, under Note 16 Commitments and Contingencies, Leases section, there is a table of future minimum operating lease payments for leases with remaining terms greater than one year. The table shows:\n\n2008: 83,382\n2009: 63,060\n2010: 35,269\n2011: 21,598\n2012: 14,860\nThereafter: 30,869\nTotal: 249,038\n\nThe question asks: what percentage of total future minimum operating lease payments are due in 2010? So we compute 35,269 / 249,038 * 100.\n\nLet's calculate: 35,269 / 249,038 ≈ 0.1416, so 14.16%. We'll round to maybe 14.2% or 14.16%. The answer should be a percentage. The question asks \"what percentage\", so we give the number.\n\nWe'll put the answer inside <answer> tags.",
+ "raw_content": "<answer>14.16%</answer>",
+ "usage": {
+  "prompt_tokens": 83645,
+  "completion_tokens": 238,
+  "total_tokens": 83883,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 81920
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.55,
+ "answer_tag_found": true,
+ "docfinqa_row": 618
+}

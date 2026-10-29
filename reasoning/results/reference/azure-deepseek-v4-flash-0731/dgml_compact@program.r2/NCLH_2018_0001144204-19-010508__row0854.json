@@ -1,0 +1,78 @@
+{
+ "id": "NCLH_2018_0001144204-19-010508__row0854",
+ "format": "dgml_compact",
+ "key": "NCLH_2018_0001144204-19-010508",
+ "question": "what percentage of future commitments for service , maintenance and other business enhancement capital expenditure contracts are paid in the first year to the third year?",
+ "gold": "2.7%",
+ "finqa_id": "NCLH/2018/page_64.pdf-3",
+ "source_page": "page_64",
+ "ticker": "NCLH",
+ "fiscal_year": "2018",
+ "source_file": "data/docs/dgml_compact/NCLH_2018_0001144204-19-010508.dgml.txt",
+ "doc_chars": 467893,
+ "prompt_chars": 468152,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 467893,
+ "original_chars": 467893,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 101327,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 423,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "49.3130%",
+ "reasoning": "We need answer question: \"what percentage of future commitments for service, maintenance and other business enhancement capital expenditure contracts are paid in the first year to the third year?\" Need find \"Other\" in contractual obligations table. The table has \"Other (6)\" with amounts: Total $1,381,518; Less than 1 year $248,107; 1-3 years $433,161; 3-5 years $354,454; More than 5 years $345,796. Footnote (6): Other includes future commitments for service, maintenance and other Business Enhancement Capital Expenditure contracts. So first year to third year means less than 1 year + 1-3 years? \"first year to the third year\" likely sum of less than 1 year and 1-3 years. Compute (248,107 + 433,161) / 1,381,518 = 681,268 / 1,381,518 = 0.4931... = 49.31%. Need answer percentage. Let's compute precisely: 248,107+433,161=681,268. Divide by 1,381,518. 1,381,518*0.493 = 681,? 1,381,518*0.493 = 681,? 1,381,518*0.5=690,759; difference 9,491; /1,381,518=0.00687; so 0.49313. So 49.3%. Need evidence figures. Use values from table.",
+ "raw_content": "<evidence>\n248,107 | ContractualObligationAmount: Other (6) Less than 1 year\n433,161 | ContractualObligationAmount: Other (6) 1-3 years\n1,381,518 | ContractualObligationAmount: Other (6) Total\n</evidence>\n\n<program>divide(add(248107, 433161), 1381518)</program>\n\n<answer>49.3%</answer>",
+ "usage": {
+  "prompt_tokens": 101641,
+  "completion_tokens": 423,
+  "total_tokens": 102064,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 98560
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.94,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "248,107",
+   "element": "ContractualObligationAmount: Other (6) Less than 1 year",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "433,161",
+   "element": "ContractualObligationAmount: Other (6) 1-3 years",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1,381,518",
+   "element": "ContractualObligationAmount: Other (6) Total",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(248107, 433161), 1381518)",
+ "answer_model": "49.3%",
+ "program_value": 0.4931300207452961,
+ "docfinqa_row": 854
+}

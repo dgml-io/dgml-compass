@@ -1,0 +1,70 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0507",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what is the percentage change in the balance of the minority interests in consolidated subsidiaries from 2006 to 2007?",
+ "gold": "3.0%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "SNA_2007_0001104659-08-011401.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/ConsolidatedEquityStatementName/AccountingPolicyTopic/MinorityInterestAndEquityEarnings"
+ ],
+ "r1_reasoning_chars": 3909,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 22379,
+  "completion_tokens": 999,
+  "total_tokens": 23378,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ConsolidatedEquityStatementName/AccountingPolicyTopic/MinorityInterestAndEquityEarnings"
+ ],
+ "content_chars": 4697,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "2.97619",
+ "reasoning": "We need percentage change from 2006 to 2007 in balance of minority interests in consolidated subsidiaries. The document gives MinorityInterestLiabilityAmount: $17.3 million as of Dec 29, 2007, and $16.8 million as of Dec 30, 2006. Percentage change = (17.3 - 16.8)/16.8 * 100. Compute: 0.5/16.8 = 0.0297619... = 2.97619%. So answer ~2.98%. Need evidence figures.",
+ "raw_content": "<evidence>\n$17.3 million | MinorityInterestLiabilityAmount (as of December 29, 2007)\n$16.8 million | MinorityInterestLiabilityAmount (as of December 30, 2006)\n</evidence>\n<program>multiply(divide(subtract(17.3, 16.8), 16.8), 100)</program>\n<answer>2.976190476190476</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1386,
+  "completion_tokens": 212,
+  "total_tokens": 1598,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$17.3 million",
+   "element": "MinorityInterestLiabilityAmount (as of December 29, 2007)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$16.8 million",
+   "element": "MinorityInterestLiabilityAmount (as of December 30, 2006)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(17.3, 16.8), 16.8), 100)",
+ "answer_model": "2.976190476190476",
+ "program_value": 2.976190476190476,
+ "elapsed_s": 8.29,
+ "outline_source": "SNA_2007_0001104659-08-011401.outline.txt",
+ "outline_chars": 89754
+}

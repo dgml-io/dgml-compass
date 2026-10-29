@@ -1,0 +1,59 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0622",
+ "format": "dgml",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "what is the net change in the balance of liability related to employee separations during 2005?",
+ "gold": "-5781",
+ "finqa_id": "AMT/2008/page_107.pdf-3",
+ "source_page": "page_107",
+ "ticker": "AMT",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml/AMT_2008_0001193125-09-039177.dgml.xml",
+ "doc_chars": 745300,
+ "prompt_chars": 745484,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 745300,
+ "original_chars": 745300,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 172559,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 534,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer question: \"what is the net change in the balance of liability related to employee separations during 2005?\" The document is 10-K for fiscal year 2008. It contains a table for merger related liability rollforward for years 2008, 2007, 2006, but not 2005? Let's examine. There is a table in note 14: \"The following table displays the activity with respect to this accrued liability for the years ended December 31, 2008, 2007 and 2006 (in thousands):\" It shows columns: Liability as of December 31, 2005, 2006 Expense, 2006 Cash Payments, Other, Liability as of December 31, 2006, 2007 Expense, 2007 Cash Payments, Other, Liability as of December 31, 2007, 2008 Expense, 2008 Cash Payments, Other, Liability as of December 31, 2008. For employee separations: Liability as of Dec 31, 2005 = $20,963; 2006 Expense = $496; 2006 Cash Payments = $(12,389); Other = $(1,743); Liability as of Dec 31, 2006 = $7,327; etc. The question asks \"net change in the balance of liability related to employee separations during 2005?\" That would be change from beginning of 2005 to end of 2005? But the table only gives liability as of Dec 31, 2005, not beginning. The document may not contain 2005 activity. The question might be asking about 2005? The table starts with liability as of Dec 31, 2005, so net change during 2005 is not provided. Could be asking \"during 2005\" but the document only has 2006-2008. So answer NOT_FOUND.\n\nBut let's double-check: The question says \"during 2005?\" The document is for fiscal year 2008, but includes selected financial data for 2004-2008. The merger related liability table only shows 2006-2008 activity. No 2005 activity. So NOT_FOUND.\n\nWe need provide evidence? The instruction says list every figure used inside <evidence>. If no figures, maybe none. But we can cite the table? We should not fabricate. The answer is NOT_FOUND.\n\nLet's produce final answer with <answer>NOT_FOUND</answer>.",
+ "raw_content": "<answer>NOT_FOUND</answer>",
+ "usage": {
+  "prompt_tokens": 172866,
+  "completion_tokens": 534,
+  "total_tokens": 173400,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 172800
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.02,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": null,
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "docfinqa_row": 622
+}

@@ -1,0 +1,72 @@
+{
+ "id": "ILMN_2008_0000936392-09-000092__row0185",
+ "format": "markdown_pdf_plumber",
+ "key": "ILMN_2008_0000936392-09-000092",
+ "question": "what was the percentage change in the uncertain tax positions from 2007 to 2008?",
+ "gold": "11%",
+ "finqa_id": "ILMN/2008/page_86.pdf-3",
+ "source_page": "page_86",
+ "ticker": "ILMN",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_plumber/ILMN_2008_0000936392-09-000092.md",
+ "doc_chars": 364727,
+ "prompt_chars": 364896,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 364727,
+ "original_chars": 364727,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 91437,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 199,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "11.236901",
+ "reasoning": "We need percentage change in uncertain tax positions from 2007 to 2008. From note 12: Balance at December 31, 2007 $21,376; Balance at December 28, 2008 $23,778. Percentage change = (23778-21376)/21376 *100. Compute: 23778-21376=2402. 2402/21376=0.11237... =11.237%. So answer 11.24% or 11.2%. Need exact? Provide value. Use evidence.",
+ "raw_content": "<evidence>\n21,376 | Balance at December 31, 2007 (uncertain tax positions)\n23,778 | Balance at December 28, 2008 (uncertain tax positions)\n</evidence>\n\n<program>multiply(divide(subtract(23778, 21376), 21376), 100)</program>\n\n<answer>11.24%</answer>",
+ "usage": {
+  "prompt_tokens": 91743,
+  "completion_tokens": 199,
+  "total_tokens": 91942,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 91648
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.4,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "21,376",
+   "element": "Balance at December 31, 2007 (uncertain tax positions)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "23,778",
+   "element": "Balance at December 28, 2008 (uncertain tax positions)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(23778, 21376), 21376), 100)",
+ "answer_model": "11.24%",
+ "program_value": 11.23690119760479,
+ "docfinqa_row": 185
+}

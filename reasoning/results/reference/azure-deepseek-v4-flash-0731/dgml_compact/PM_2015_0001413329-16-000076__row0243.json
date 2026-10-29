@@ -1,0 +1,53 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0243",
+ "format": "dgml_compact",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the percentage change in the weighted-average discount rate for non-u.s . pension plans from 2014 to 2015?",
+ "gold": "-12.5%",
+ "finqa_id": "PM/2015/page_38.pdf-2",
+ "source_page": "page_38",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml_compact/PM_2015_0001413329-16-000076.dgml.txt",
+ "doc_chars": 654685,
+ "prompt_chars": 654888,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 654685,
+ "original_chars": 654685,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 144584,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 240,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-12.5%",
+ "reasoning": "The question asks for the percentage change in the weighted-average discount rate for non-U.S. pension plans from 2014 to 2015.\n\nFrom the document, in the \"Critical Accounting Estimates\" section, there is a table:\n\"Weighted-average discount rate assumptions for pensions and postretirement plans are as follows:\n|  | 2015 | 2014 |\n| U.S. pension plans | 4.30% | 3.95% |\n| Non-U.S. pension plans | 1.68% | 1.92% |\n| Postretirement plans | 4.45% | 4.20% |\"\n\nSo non-U.S. pension plans: 2015 = 1.68%, 2014 = 1.92%.\n\nPercentage change = (1.68 - 1.92) / 1.92 * 100 = (-0.24) / 1.92 * 100 = -12.5%.\n\nSo the percentage change is -12.5%. The question asks \"what is the percentage change\", so answer -12.5%.",
+ "raw_content": "<answer>-12.5%</answer>",
+ "usage": {
+  "prompt_tokens": 144739,
+  "completion_tokens": 240,
+  "total_tokens": 144979,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 143360
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.56,
+ "answer_tag_found": true,
+ "docfinqa_row": 243
+}

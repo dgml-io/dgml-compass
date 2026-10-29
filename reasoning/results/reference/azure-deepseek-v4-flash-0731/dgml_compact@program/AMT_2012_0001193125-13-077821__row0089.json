@@ -1,0 +1,72 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0089",
+ "format": "dgml_compact",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "pursuant to the agreement , on march 30 , 2012 , what was the approximate price for each site the company purchased in thousands",
+ "gold": "189625",
+ "finqa_id": "AMT/2012/page_118.pdf-2",
+ "source_page": "page_118",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/dgml_compact/AMT_2012_0001193125-13-077821.dgml.txt",
+ "doc_chars": 684819,
+ "prompt_chars": 685036,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 684819,
+ "original_chars": 684819,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 147020,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 387,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "189.625",
+ "reasoning": "We need answer question: \"pursuant to the agreement , on march 30 , 2012 , what was the approximate price for each site the company purchased in thousands\"\n\nWe need find in document. There is Vivo Acquisition: On March 30, 2012, purchased 800 communications sites for aggregate purchase price of $151.7 million. So per site = 151.7 million / 800 = 0.189625 million = 189.625 thousand. Approximate price per site in thousands = 189.625, maybe round to 190. Need exact? Question asks approximate price for each site in thousands. Use figures: $151.7 million and 800 sites. Compute 151.7/800 = 0.189625 million = 189.625 thousand. So answer 189.625 (or 190). Need evidence and program.\n\nEvidence: $151.7 million | Vivo Acquisition; 800 communications sites | Vivo Acquisition. Program: divide(151.7, 800) * 1000? Actually 151.7 million / 800 = 0.189625 million = 189.625 thousand. So program: multiply(divide(151.7, 800), 1000) = 189.625. Or just divide(151.7, 800) gives 0.189625 million, but question asks in thousands, so multiply by 1000. Use figures as printed: 151.7 (in millions) and 800. Program: multiply(divide(151.7, 800), 1000).",
+ "raw_content": "<evidence>\n$151.7 million | Vivo Acquisition\n800 communications sites | Vivo Acquisition\n</evidence>\n<program>multiply(divide(151.7, 800), 1000)</program>\n<answer>189.625</answer>",
+ "usage": {
+  "prompt_tokens": 147335,
+  "completion_tokens": 387,
+  "total_tokens": 147722,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 20.68,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$151.7 million",
+   "element": "Vivo Acquisition",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "800 communications sites",
+   "element": "Vivo Acquisition",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(151.7, 800), 1000)",
+ "answer_model": "189.625",
+ "program_value": 189.625,
+ "docfinqa_row": 89
+}

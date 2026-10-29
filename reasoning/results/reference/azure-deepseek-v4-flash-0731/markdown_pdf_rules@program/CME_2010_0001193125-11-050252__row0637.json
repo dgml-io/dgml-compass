@@ -1,0 +1,72 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0637",
+ "format": "markdown_pdf_rules",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "as of december 31 , 2010 what was the par value of the debt outstanding for the fixed rate notes due february 2014 compared to term loan due 2011",
+ "gold": "3.2",
+ "finqa_id": "CME/2010/page_69.pdf-4",
+ "source_page": "page_69",
+ "ticker": "CME",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/markdown_pdf_rules/CME_2010_0001193125-11-050252.md",
+ "doc_chars": 415699,
+ "prompt_chars": 415933,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 415699,
+ "original_chars": 415699,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93329,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 413,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1.783591",
+ "reasoning": "We need answer: par value of fixed rate notes due Feb 2014 vs term loan due 2011. From debt table: Term loan due 2011 par value $420.5 million. Fixed rate notes due Feb 2014 par value $750.0 million. Question \"compared to\" maybe ratio? It asks \"what was the par value of the debt outstanding for the fixed rate notes due february 2014 compared to term loan due 2011\" - likely ratio or difference. Need compute. Par values: 750.0 and 420.5. Ratio = 750/420.5 ≈ 1.7836. Or difference = 329.5. The question wording \"compared to\" could mean ratio. We need provide value. Let's read exact: \"as of december 31 , 2010 what was the par value of the debt outstanding for the fixed rate notes due february 2014 compared to term loan due 2011\" So answer likely ratio. We'll compute divide(750.0, 420.5) = 1.78359... Use exact. Evidence: from debt table: \"Term loan due 2011, interest equal to 3-month LIBOR plus 1.00% (2) $ 420.5\" and \"$750.0 million fixed rate notes due February 2014, interest equal to 5.75% 747.1 746.2\" - par value 750.0. Also note long-term debt table shows par value. We'll cite.",
+ "raw_content": "<evidence>\n$420.5 | Term loan due 2011, interest equal to 3-month LIBOR plus 1.00% (2)\n$750.0 | $750.0 million fixed rate notes due February 2014, interest equal to 5.75%\n</evidence>\n\n<program>\ndivide(750.0, 420.5)\n</program>\n\n<answer>1.7836</answer>",
+ "usage": {
+  "prompt_tokens": 93654,
+  "completion_tokens": 413,
+  "total_tokens": 94067,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 18.99,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$420.5",
+   "element": "Term loan due 2011, interest equal to 3-month LIBOR plus 1.00% (2)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$750.0",
+   "element": "$750.0 million fixed rate notes due February 2014, interest equal to 5.75%",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(750.0, 420.5)",
+ "answer_model": "1.7836",
+ "program_value": 1.78359096313912,
+ "docfinqa_row": 637
+}

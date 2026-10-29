@@ -1,0 +1,68 @@
+{
+ "id": "AMT_2016_0001053507-17-000009__row0374",
+ "key": "AMT_2016_0001053507-17-000009",
+ "question": "on february 17 , 2017 , what was the company's market capitalization as reported on the nyse.\\\\n\\\\n",
+ "gold": "46184055450.1",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "AMT_2016_0001053507-17-000009.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/MarketForCommonEquity/StockHoldersOfRecord"
+ ],
+ "r1_reasoning_chars": 4657,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 31511,
+  "completion_tokens": 1131,
+  "total_tokens": 32642,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/MarketForCommonEquity/StockHoldersOfRecord"
+ ],
+ "content_chars": 5823,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "46184055450.07",
+ "reasoning": "We need market cap = price * shares outstanding. Price $108.11, shares 427,195,037. Multiply. Need exact. 108.11 * 427,195,037. Compute. 427,195,037 * 108.11 = 427,195,037*108 + *0.11. 427,195,037*108 = 46,137,064, - wait compute: 427,195,037*100=42,719,503,700; *8=3,417,560,296; sum=46,137,063,996. *0.11=46,991,454.07. Sum=46,184,055,450.07. So market cap ~$46.184 billion. Need answer value only. Evidence: $108.11 per share, 427,195,037 shares. Program multiply(108.11, 427195037).",
+ "raw_content": "<evidence>$108.11 | ClosingSharePrice\n427,195,037 | CommonSharesOutstanding</evidence>\n<program>multiply(108.11, 427195037)</program>\n<answer>46184055450.07</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1794,
+  "completion_tokens": 251,
+  "total_tokens": 2045,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$108.11",
+   "element": "ClosingSharePrice",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "427,195,037",
+   "element": "CommonSharesOutstanding",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(108.11, 427195037)",
+ "answer_model": "46184055450.07",
+ "program_value": 46184055450.07,
+ "elapsed_s": 11.07,
+ "outline_source": "AMT_2016_0001053507-17-000009.outline.txt",
+ "outline_chars": 122201
+}

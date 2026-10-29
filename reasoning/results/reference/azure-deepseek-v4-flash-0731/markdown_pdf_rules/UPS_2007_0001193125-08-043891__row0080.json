@@ -1,0 +1,50 @@
+{
+ "id": "UPS_2007_0001193125-08-043891__row0080",
+ "format": "markdown_pdf_rules",
+ "key": "UPS_2007_0001193125-08-043891",
+ "question": "what is the total in millions of expected cash outflow to satisfy contractual obligations and commitments as of december 31 , 2007?",
+ "gold": "28809",
+ "finqa_id": "UPS/2007/page_49.pdf-1",
+ "source_page": "page_49",
+ "ticker": "UPS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_rules/UPS_2007_0001193125-08-043891.md",
+ "doc_chars": 322003,
+ "prompt_chars": 322223,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 322003,
+ "original_chars": 322003,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 74229,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 265,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "28809",
+ "reasoning": "We need the total expected cash outflow to satisfy contractual obligations and commitments as of Dec 31, 2007. The document has a table in the Commitments section: \"The following table summarizes the expected cash outflow to satisfy our contractual obligations and commitments as of December 31, 2007 (in millions):\" It shows columns: Capital Leases, Operating Leases, Debt Principal, Debt Interest, Purchase Commitments, Pension Fundings, Other Liabilities. The total row at bottom: Total $ 619 $ 1,782 $10,527 $8,026 $ 3,828 $ 3,465 $ 562. The question asks \"total in millions of expected cash outflow\" - likely the sum of all these totals. Sum: 619 + 1,782 = 2,401; +10,527 = 12,928; +8,026 = 20,954; +3,828 = 24,782; +3,465 = 28,247; +562 = 28,809. So total is 28,809 million. Alternatively, the table might have a total column? It doesn't show a total column, but the question asks for total. So answer 28809.",
+ "raw_content": "<answer>28809</answer>",
+ "usage": {
+  "prompt_tokens": 74383,
+  "completion_tokens": 265,
+  "total_tokens": 74648,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.08,
+ "answer_tag_found": true,
+ "docfinqa_row": 80
+}

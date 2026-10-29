@@ -1,0 +1,88 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0261",
+ "format": "markdown_pdf_poppler",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "what was the average price per share from november to december?",
+ "gold": "3.61",
+ "finqa_id": "IPG/2008/page_21.pdf-3",
+ "source_page": "page_21",
+ "ticker": "IPG",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_poppler/IPG_2008_0001193125-09-040141.md",
+ "doc_chars": 483678,
+ "prompt_chars": 483830,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 483678,
+ "original_chars": 483678,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 88848,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 632,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "3.789082",
+ "reasoning": "We need answer average price per share from November to December. Need figures. The repurchase table shows November 1-30: 4,468 shares at $3.24; December 1-31: 12,850 at $3.98. Average price per share from November to December? Could be weighted average of the two months? The question \"average price per share from november to december\" likely asks combined average price paid per share for those two months. Need compute weighted average: total shares = 4,468 + 12,850 = 17,318. Total value = 4,468*3.24 + 12,850*3.98. Compute: 4,468*3.24 = 14,476.32? 4,468*3 = 13,404; 4,468*0.24=1,072.32; sum 14,476.32. 12,850*3.98 = 12,850*4 - 12,850*0.02 = 51,400 - 257 = 51,143. Sum = 65,619.32. Divide by 17,318 = 3.789? 17,318*3.79 = 65,635.22, slightly high. 3.788? 17,318*3.788 = 65,600? Let's compute precisely: 65,619.32 / 17,318. 17,318*3.78 = 65,462.04; remainder 157.28; /17,318=0.00908; so 3.78908. So ~$3.79. But maybe the question asks \"average price per share from november to december\" as in the table's \"Average Price Paid per Share\" for those months? The table has separate rows. Could be asking for the average of the two monthly averages? But typical financial question: \"what was the average price per share from november to december?\" likely weighted average. Need evidence: values from table. Use figures as printed: 4,468, $3.24, 12,850, $3.98. Program: divide(add(multiply(4468, 3.24), multiply(12850, 3.98)), add(4468, 12850)). Answer with value only, no units. Need maybe round to $3.79. Let's provide.",
+ "raw_content": "<evidence>\n4,468 | November 1-30 Total Number of Shares Purchased\n$3.24 | November 1-30 Average Price Paid per Share\n12,850 | December 1-31 Total Number of Shares Purchased\n$3.98 | December 1-31 Average Price Paid per Share\n</evidence>\n<program>divide(add(multiply(4468, 3.24), multiply(12850, 3.98)), add(4468, 12850))</program>\n<answer>3.79</answer>",
+ "usage": {
+  "prompt_tokens": 89148,
+  "completion_tokens": 632,
+  "total_tokens": 89780,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 17.49,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "4,468",
+   "element": "November 1-30 Total Number of Shares Purchased",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$3.24",
+   "element": "November 1-30 Average Price Paid per Share",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "12,850",
+   "element": "December 1-31 Total Number of Shares Purchased",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$3.98",
+   "element": "December 1-31 Average Price Paid per Share",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(add(multiply(4468, 3.24), multiply(12850, 3.98)), add(4468, 12850))",
+ "answer_model": "3.79",
+ "program_value": 3.789081880124726,
+ "docfinqa_row": 261
+}

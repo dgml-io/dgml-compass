@@ -1,0 +1,72 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0661",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what percentage of total future minimum operating lease payments for leases with remaining terms greater than one year are due in 2009?",
+ "gold": "25%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "FIS_2007_0000892569-08-000207.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/RegistrantName/ContingentLiabilityAmount/ConsolidatedFinancial/OperatingLeaseCommitmentAmount",
+  "/chunk/RegistrantName/ContingentLiabilityAmount/ConsolidatedFinancial/OperatingLeaseCommitmentAmount/table"
+ ],
+ "r1_reasoning_chars": 2997,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 23045,
+  "completion_tokens": 762,
+  "total_tokens": 23807,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/RegistrantName/ContingentLiabilityAmount/ConsolidatedFinancial/OperatingLeaseCommitmentAmount",
+  "/chunk/RegistrantName/ContingentLiabilityAmount/ConsolidatedFinancial/OperatingLeaseCommitmentAmount/table"
+ ],
+ "content_chars": 5992,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "25.321437",
+ "reasoning": "We need answer percentage. Need figures: 2009 = 63,060; total = 249,038. Percentage = 63060 / 249038 * 100. Compute. 63060 / 249038 ≈ 0.2532? Let's calculate precisely. 249,038 * 0.25 = 62,259.5. Difference 800.5. 800.5/249038=0.003214. So 0.253214 = 25.3214%. Let's compute more: 63060/249038. Use division. 249038*0.253 = 62,? 249038*0.253 = 249038*253/1000 = 63,? 249038*253 = 249038*200=49,807,600; *50=12,451,900; *3=747,114; sum=63,006,614 /1000=63,006.614. Difference 53.386. /249038=0.0002144. So 0.2532144 = 25.32144%. So answer 25.32%. Need evidence figures. Use 63,060 and 249,038. Program divide(63060, 249038) * 100? The program should compute percentage. Use multiply(divide(63060, 249038), 100). But note figures as printed: 63,060 and $249,038. Use numbers.",
+ "raw_content": "<evidence>\n63,060 | OperatingLeaseCommitmentAmount (2009)\n$249,038 | OperatingLeaseCommitmentAmount (Total)\n</evidence>\n<program>multiply(divide(63060, 249038), 100)</program>\n<answer>25.32</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1741,
+  "completion_tokens": 377,
+  "total_tokens": 2118,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "63,060",
+   "element": "OperatingLeaseCommitmentAmount (2009)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$249,038",
+   "element": "OperatingLeaseCommitmentAmount (Total)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(63060, 249038), 100)",
+ "answer_model": "25.32",
+ "program_value": 25.321436889149446,
+ "elapsed_s": 7.85,
+ "outline_source": "FIS_2007_0000892569-08-000207.outline.txt",
+ "outline_chars": 91339
+}

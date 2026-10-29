@@ -1,0 +1,71 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0014",
+ "format": "markdown_pdf",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "the combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable was what percent of the total ending balance as of november 28 2008?",
+ "gold": "11.0%",
+ "finqa_id": "ADBE/2008/page_89.pdf-3",
+ "source_page": "page_89",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf/ADBE_2008_0000796343-09-000007.md",
+ "doc_chars": 450108,
+ "prompt_chars": 450418,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 450108,
+ "original_chars": 450108,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 99248,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 679,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "10.967742",
+ "reasoning": "We need answer question. Need find figures. \"combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable\" as of Nov 28 2008. In document Note 8: \"As of November 28, 2008, the combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable was approximately $15.3 million.\" Total ending balance? \"gross liability for unrecognized tax benefits at November 28, 2008 was $139.5 million, exclusive of interest and penalties.\" But question says \"total ending balance as of november 28 2008\" likely refers to ending balance of gross unrecognized tax benefits? Need parse: \"combined amount of accrued interest and penalties ... included in non-current income taxes payable was what percent of the total ending balance as of november 28 2008?\" The total ending balance as of Nov 28 2008 might be the ending balance in Summary FIN 48 Changes: $139,549 (i.e., $139.5 million). But that is gross liability for unrecognized tax benefits exclusive of interest and penalties. The combined amount of accrued interest and penalties is $15.3 million. Percent = 15.3 / 139.5 *100 = 10.9677%. Need exact figures: 15.3 million and 139.5 million. But note \"total ending balance\" could be \"gross liability for unrecognized tax benefits at November 28, 2008 was $139.5 million, exclusive of interest and penalties.\" The question asks \"total ending balance as of november 28 2008\" maybe from Summary FIN 48 Changes ending balance $139,549. Use 15.3 / 139.549? But document says approximately $15.3 million. Need compute percent. Use 15.3 / 139.5 = 10.9677419355%. Answer likely 11%. Need provide evidence and program. Evidence: \"$15.3 million | Note 8 Income Taxes\" and \"$139.5 million | Note 8 Income Taxes\" or \"$139,549 | Summary FIN 48 Changes\". The question says \"total ending balance as of november 28 2008\" - in Note 8: \"The gross liability for unrecognized tax benefits at November 28, 2008 was $139.5 million, exclusive of interest and penalties.\" Also Summary FIN 48 Changes ending balance $139,549. Use 139.5 million. Program divide(15.3, 139.5) maybe multiply by 100? The question asks percent, so program should output percent? The benchmark expects value. We can do multiply(divide(15.3, 139.5), 100) = 10.9677. Need final answer inside tags only value. Probably 10.97% or 11.0%. Let's craft.",
+ "raw_content": "<evidence>\n$15.3 million | Note 8 Income Taxes\n$139.5 million | Note 8 Income Taxes\n</evidence>\n<program>multiply(divide(15.3, 139.5), 100)</program>\n<answer>10.97</answer>",
+ "usage": {
+  "prompt_tokens": 99577,
+  "completion_tokens": 679,
+  "total_tokens": 100256,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.2,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$15.3 million",
+   "element": "Note 8 Income Taxes",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$139.5 million",
+   "element": "Note 8 Income Taxes",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(15.3, 139.5), 100)",
+ "answer_model": "10.97",
+ "program_value": 10.967741935483872,
+ "docfinqa_row": 14
+}

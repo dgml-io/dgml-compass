@@ -1,0 +1,50 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0270",
+ "format": "markdown_pdf",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "what was the percentage rent increase between 2007 and 2008?",
+ "gold": "22%",
+ "finqa_id": "IP/2009/page_84.pdf-1",
+ "source_page": "page_84",
+ "ticker": "IP",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/markdown_pdf/IP_2009_0001193125-10-040916.md",
+ "doc_chars": 445162,
+ "prompt_chars": 445311,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 445162,
+ "original_chars": 445162,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 104101,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 218,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "22.02",
+ "reasoning": "The question asks: \"what was the percentage rent increase between 2007 and 2008?\"\n\nI need to find rent expense figures for 2007 and 2008 in the document.\n\nLooking at the document, in Note 11 COMMITMENTS AND CONTINGENT LIABILITIES, there's a line: \"Rent expense was $216 million, $205 million and $168 million for 2009, 2008 and 2007, respectively.\"\n\nSo rent expense:\n- 2007: $168 million\n- 2008: $205 million\n\nPercentage increase = (205 - 168) / 168 * 100 = 37 / 168 * 100 = 22.0238...%\n\nLet me compute: 37/168 = 0.220238... so 22.02%.\n\nThe question asks for the percentage rent increase between 2007 and 2008. So the answer is approximately 22.02%.\n\nI'll provide the value inside the answer tags.",
+ "raw_content": "<answer>22.02</answer>",
+ "usage": {
+  "prompt_tokens": 104244,
+  "completion_tokens": 218,
+  "total_tokens": 104462,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 6.71,
+ "answer_tag_found": true,
+ "docfinqa_row": 270
+}

@@ -1,0 +1,78 @@
+{
+ "id": "CMCSA_2015_0001193125-16-452423__row0102",
+ "format": "dgml",
+ "key": "CMCSA_2015_0001193125-16-452423",
+ "question": "what was the percentage cable distribution systems capital expenditures of the capital expenditures incurred in cable communications segment capital expenditures in 2014?",
+ "gold": "33%",
+ "finqa_id": "CMCSA/2015/page_67.pdf-2",
+ "source_page": "page_67",
+ "ticker": "CMCSA",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml/CMCSA_2015_0001193125-16-452423.dgml.xml",
+ "doc_chars": 907858,
+ "prompt_chars": 908117,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": true,
+ "truncation": "head",
+ "kept_chars": 907748,
+ "original_chars": 1078239,
+ "kept_fraction": 0.8419,
+ "est_doc_tokens": 250309,
+ "est_kept_tokens": 210513,
+ "budget_tokens": 240000,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 570,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "33.262918",
+ "reasoning": "We need answer question: \"what was the percentage cable distribution systems capital expenditures of the capital expenditures incurred in cable communications segment capital expenditures in 2014?\"\n\nWe need find figures. In document, Cable Communications capital expenditures table for 2015, 2014, 2013. It has \"Cable distribution system\" 2014: $2,047 million. Total capital expenditures 2014: $6,154 million. Percentage = 2047/6154 = 33.26% approx.\n\nNeed evidence: values as printed. \"Cable distribution system\" row: 2014 $2,047. Total row: 2014 $6,154. Compute percentage.\n\nQuestion wording: \"percentage cable distribution systems capital expenditures of the capital expenditures incurred in cable communications segment capital expenditures in 2014?\" So divide 2047 by 6154.\n\nCompute: 2047/6154 = 0.3326... = 33.3% approx. Let's calculate precisely: 6154*0.33=2030.82, remainder 16.18, /6154=0.00263, so 0.33263 = 33.263%. So answer 33.3% or 33.26%. The question asks percentage, likely answer as number. We'll give 33.3% maybe. But final answer inside tags only value. Use 33.3%? The document uses percentages with one decimal. We'll provide 33.3%.\n\nEvidence: 2,047 | Cable distribution system (Cable Communications capital expenditures table); 6,154 | Total (Cable Communications capital expenditures table). Program: divide(2047, 6154) * 100? The program should be exact using figures as printed. We can use divide(2047, 6154) and then multiply by 100? The program is executed, so we need produce value. We can use multiply(divide(2047, 6154), 100). But the instruction says program as nested calls over figures as printed. So program: multiply(divide(2047, 6154), 100). Answer 33.26... We'll put 33.3% in answer? The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" Question asks percentage, so include %? Usually value with % sign. We'll put 33.3%.",
+ "raw_content": "<evidence>\n2,047 | Cable distribution system (Cable Communications capital expenditures table)\n6,154 | Total (Cable Communications capital expenditures table)\n</evidence>\n<program>multiply(divide(2047, 6154), 100)</program>\n<answer>33.3%</answer>",
+ "usage": {
+  "prompt_tokens": 210847,
+  "completion_tokens": 570,
+  "total_tokens": 211417,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 210688
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.97,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "2,047",
+   "element": "Cable distribution system (Cable Communications capital expenditures table)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6,154",
+   "element": "Total (Cable Communications capital expenditures table)",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "multiply(divide(2047, 6154), 100)",
+ "answer_model": "33.3%",
+ "program_value": 33.262918427039324,
+ "docfinqa_row": 102
+}

@@ -1,0 +1,76 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0765",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "for 2002 and 2003 , what is the average crack spread values?",
+ "gold": "3.5",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "MRO_2003_0001193125-04-036535.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/MdaSectionTopic/OperatingStatistics/table",
+  "/chunk/MdaSectionTopic/OperatingStatistics/table/RefiningMarginStatistic",
+  "/chunk/MdaSectionTopic/OperatingStatistics/table/RefiningMarginStatistic/PriceUnitLabel",
+  "/chunk/MdaSectionTopic/OperatingStatistics/table/RefiningMarginStatistic/CommodityPriceAverage"
+ ],
+ "r1_reasoning_chars": 12981,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 40521,
+  "completion_tokens": 3315,
+  "total_tokens": 43836,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/MdaSectionTopic/OperatingStatistics/table",
+  "/chunk/MdaSectionTopic/OperatingStatistics/table/RefiningMarginStatistic",
+  "/chunk/MdaSectionTopic/OperatingStatistics/table/RefiningMarginStatistic/PriceUnitLabel",
+  "/chunk/MdaSectionTopic/OperatingStatistics/table/RefiningMarginStatistic/CommodityPriceAverage"
+ ],
+ "content_chars": 6486,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "0.0494",
+ "reasoning": "We need answer average crack spread values for 2002 and 2003. Need find crack spread in document. The table has \"Refining and Wholesale Marketing Margin\" per gallon values: 2003 $0.0601, 2002 $0.0387, 2001 $0.1167. Is that crack spread? The question says \"crack spread values\" maybe refers to refining margin? Need check if document mentions crack spread. The excerpt only has refining margin. Maybe crack spread is same as refining margin? Need compute average of 2002 and 2003 values: (0.0387 + 0.0601)/2 = 0.0988/2 = 0.0494. But need be careful: values are per gallon, maybe crack spread in $/bbl? The question asks \"average crack spread values\" for 2002 and 2003. The document has \"Refining and Wholesale Marketing Margin\" per gallon. Could be crack spread. Need see if there is any other mention of crack spread. The region only includes this table. So likely answer is average of those two margins. But let's verify: The question says \"crack spread values\" not \"refining margin\". Maybe in original document there is a \"crack spread\" line? The provided excerpts only have \"Refining and Wholesale Marketing Margin\". Could be that the crack spread is the same as refining margin? Need maybe compute average of 2002 and 2003 crack spread values if they are given elsewhere. But the document excerpt doesn't have \"crack spread\" explicitly. However, the question might be from a dataset where the answer is the average of the refining margin values. Let's examine the table: It has \"Refining and Wholesale Marketing Margin(g)(h)\" with values $0.0601, $0.0387, $0.1167. The footnote says per gallon, sales revenue less cost of refinery inputs, purchased products and manufacturing expenses, including depreciation. That is essentially crack spread (refining margin). So answer likely 0.0494.\n\nNeed provide evidence: list figures used: $0.0601 for 2003, $0.0387 for 2002. Element names: RefiningMarginStatistic? The table has rows. We'll cite as \"Refining and Wholesale Marketing Margin(g)(h)\" with values.\n\nProgram: divide(add(0.0601, 0.0387), 2) = 0.0494.\n\nNeed final answer inside <answer>0.0494</answer>. But ensure no units? The question asks \"what is the average crack spread values?\" Probably value in dollars per gallon? The document says per gallon. But answer just number. Could be 0.0494. Let's produce.",
+ "raw_content": "<evidence>\n$ 0.0601 | Refining and Wholesale Marketing Margin(g)(h) (2003)\n$ 0.0387 | Refining and Wholesale Marketing Margin(g)(h) (2002)\n</evidence>\n<program>divide(add(0.0601, 0.0387), 2)</program>\n<answer>0.0494</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2371,
+  "completion_tokens": 675,
+  "total_tokens": 3046,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 0.0601",
+   "element": "Refining and Wholesale Marketing Margin(g)(h) (2003)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ 0.0387",
+   "element": "Refining and Wholesale Marketing Margin(g)(h) (2002)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(0.0601, 0.0387), 2)",
+ "answer_model": "0.0494",
+ "program_value": 0.0494,
+ "elapsed_s": 19.82,
+ "outline_source": "MRO_2003_0001193125-04-036535.outline.txt",
+ "outline_chars": 159239
+}

@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+*.log
+*.tmp
+
+# built locally from the shipped DGML and PDFs by scripts/build_renderings.sh
+data/docs/dgml_outline/
+data/docs/dgml_compact/
+data/docs/markdown_pdf*/
+# written by scripts/regenerate_dgml.sh (the shipped data/docs/dgml/ is never overwritten)
+data/docs/dgml_regenerated/
+data/docs/dgml_regenerated_outline/
+
+# local endpoint and key (template: .env.example)
+.env
+

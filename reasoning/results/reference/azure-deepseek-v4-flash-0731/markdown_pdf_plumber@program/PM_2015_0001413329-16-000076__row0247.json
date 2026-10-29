@@ -1,0 +1,74 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0247",
+ "format": "markdown_pdf_plumber",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the percentage increase in total accumulated other comprehensive losses from 2013 to 2014?",
+ "gold": "62.9%",
+ "finqa_id": "PM/2015/page_127.pdf-2",
+ "source_page": "page_127",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_plumber/PM_2015_0001413329-16-000076.md",
+ "doc_chars": 557384,
+ "prompt_chars": 557571,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 557384,
+ "original_chars": 557384,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 137284,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 313,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "62.9117%",
+ "reasoning": "We need answer percentage increase in total accumulated other comprehensive losses from 2013 to 2014. From document: Accumulated other comprehensive losses at Dec 31, 2013: -4,190 (from Note 17 table: 2013 -4,190). At Dec 31, 2014: -6,826. Percentage increase? Typically increase in magnitude? \"percentage increase in total accumulated other comprehensive losses\" means from -4,190 to -6,826. The change is -2,636 (more negative). Percentage increase in losses (absolute value) = (6826-4190)/4190 = 2636/4190 = 0.6291 = 62.9%. Or if they mean change in the negative number, it's not an increase but decrease. But question says \"percentage increase in total accumulated other comprehensive losses\" likely magnitude. Need compute. Use figures: 4,190 and 6,826. Program: divide(subtract(6826,4190),4190) = 0.6291 -> 62.9%. Answer as percentage.",
+ "raw_content": "<evidence>\n4,190 | Accumulated other comprehensive losses at December 31, 2013 (Note 17)\n6,826 | Accumulated other comprehensive losses at December 31, 2014 (Note 17)\n</evidence>\n<program>divide(subtract(6826, 4190), 4190)</program>\n<answer>62.9%</answer>",
+ "usage": {
+  "prompt_tokens": 137592,
+  "completion_tokens": 313,
+  "total_tokens": 137905,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 137472
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.89,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "4,190",
+   "element": "Accumulated other comprehensive losses at December 31, 2013 (Note 17)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "6,826",
+   "element": "Accumulated other comprehensive losses at December 31, 2014 (Note 17)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(subtract(6826, 4190), 4190)",
+ "answer_model": "62.9%",
+ "program_value": 0.6291169451073986,
+ "docfinqa_row": 247
+}

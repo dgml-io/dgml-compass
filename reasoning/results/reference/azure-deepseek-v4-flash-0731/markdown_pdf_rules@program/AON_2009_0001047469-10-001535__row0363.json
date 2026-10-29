@@ -1,0 +1,74 @@
+{
+ "id": "AON_2009_0001047469-10-001535__row0363",
+ "format": "markdown_pdf_rules",
+ "key": "AON_2009_0001047469-10-001535",
+ "question": "what was the percent of the change in the consulting segment revenue from 2008 2009\\\\n",
+ "gold": "-6.6%",
+ "finqa_id": "AON/2009/page_48.pdf-1",
+ "source_page": "page_48",
+ "ticker": "AON",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/markdown_pdf_rules/AON_2009_0001047469-10-001535.md",
+ "doc_chars": 390960,
+ "prompt_chars": 391135,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 390960,
+ "original_chars": 390960,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 87624,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 288,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-6.5634%",
+ "reasoning": "We need percent change in consulting segment revenue from 2008 to 2009. From document: Consulting segment revenue 2009 $1,267 million, 2008 $1,356 million. Percent change = (1267-1356)/1356 = -89/1356 = -6.56% approximately. The document says \"6% lower\" or \"decreased 6%\". But exact percent: -6.56%. The question asks \"percent of the change\" likely negative. We'll compute. Use figures: 1,267 and 1,356. Program: divide(subtract(1267,1356),1356) = -0.0656... So answer -6.56% or -6.6%. The document says \"6% lower\" but we can give precise. We'll output -6.56% maybe. But instructions: final answer only value. We'll put -6.56% inside answer. Evidence: 1,267 | Consulting segment revenue 2009; 1,356 | Consulting segment revenue 2008.",
+ "raw_content": "<evidence>\n1,267 | Consulting segment revenue 2009\n1,356 | Consulting segment revenue 2008\n</evidence>\n\n<program>\ndivide(subtract(1267, 1356), 1356)\n</program>\n\n<answer>-6.56%</answer>",
+ "usage": {
+  "prompt_tokens": 87933,
+  "completion_tokens": 288,
+  "total_tokens": 88221,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 87808
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 6.3,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,267",
+   "element": "Consulting segment revenue 2009",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "1,356",
+   "element": "Consulting segment revenue 2008",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(subtract(1267, 1356), 1356)",
+ "answer_model": "-6.56%",
+ "program_value": -0.06563421828908554,
+ "docfinqa_row": 363
+}

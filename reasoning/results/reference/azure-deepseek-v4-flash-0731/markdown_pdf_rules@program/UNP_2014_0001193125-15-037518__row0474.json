@@ -1,0 +1,73 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0474",
+ "format": "markdown_pdf_rules",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "if overall freight revenues in 2014 grow as the same rate as agricultural arc growth , what would projected 2015 revenues be in millions?",
+ "gold": "23688",
+ "finqa_id": "UNP/2014/page_25.pdf-2",
+ "source_page": "page_25",
+ "ticker": "UNP",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf_rules/UNP_2014_0001193125-15-037518.md",
+ "doc_chars": 326124,
+ "prompt_chars": 326350,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 326124,
+ "original_chars": 326124,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 75178,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 517,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "23462.4",
+ "reasoning": "We need answer question. Need parse. \"if overall freight revenues in 2014 grow as the same rate as agricultural arc growth, what would projected 2015 revenues be in millions?\" Need find agricultural ARC growth rate 2014 v 2013. From table: Agricultural Products ARC 2014 $3,881, 2013 $3,746, % change 4%. So growth rate 4%. Overall freight revenues 2014 $22,560 million. Projected 2015 = 22,560 * 1.04 = 23,462.4 million. Need answer value only. Evidence: 3,881 | Average Revenue per Car Agricultural Products 2014; 3,746 | 2013; 22,560 | Freight revenues 2014. Program: multiply(22560, add(1, divide(subtract(3881,3746),3746))). Compute: 3881-3746=135; /3746=0.03604; +1=1.03604; *22560=23373? Wait 135/3746 = 0.03604, not 4%? Table says 4% rounded. 135/3746 = 0.03604 = 3.6%. But table says 4%. Question says \"same rate as agricultural arc growth\" likely use 4% as stated. Need use printed % change? The table shows % change 4%. So projected = 22560 * 1.04 = 23462.4. But if using exact figures, 3.604% gives 23373.1. Which is intended? The question says \"grow as the same rate as agricultural arc growth\" - agricultural ARC growth is given as 4% in table. So use 4%. Need answer in millions, likely 23,462.4 or 23,462. Use 23462.4. Evidence: 4% | Average Revenue per Car Agricultural Products % Change 2014 v 2013; 22,560 | Freight revenues 2014. Program multiply(22560, 1.04). Final answer inside tags.",
+ "raw_content": "<evidence>4% | Average Revenue per Car Agricultural Products % Change 2014 v 2013\n22,560 | Freight revenues 2014\n</evidence>\n<program>multiply(22560, 1.04)</program>\n<answer>23462.4</answer>",
+ "usage": {
+  "prompt_tokens": 75494,
+  "completion_tokens": 517,
+  "total_tokens": 76011,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 14.44,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "4%",
+   "element": "Average Revenue per Car Agricultural Products % Change 2014 v 2013",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "22,560",
+   "element": "Freight revenues 2014",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "multiply(22560, 1.04)",
+ "answer_model": "23462.4",
+ "program_value": 23462.4,
+ "docfinqa_row": 474
+}

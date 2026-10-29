@@ -1,0 +1,50 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0303",
+ "format": "dgml",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what is the percentage difference in the fair value per share between 2014 and 2015?",
+ "gold": "54%",
+ "finqa_id": "EW/2016/page_94.pdf-2",
+ "source_page": "page_94",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/dgml/EW_2016_0001099800-17-000008.dgml.xml",
+ "doc_chars": 575186,
+ "prompt_chars": 575359,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 575186,
+ "original_chars": 575186,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 133782,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 716,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "54.3%",
+ "reasoning": "We need answer percentage difference in fair value per share between 2014 and 2015. Which fair value per share? Likely option awards fair value per share: 2014 $11.75, 2015 $18.13. Percentage difference = (18.13-11.75)/11.75 = 6.38/11.75 = 0.54298 = 54.3%. Or maybe ESPP? 2014 $8.59, 2015 $15.59 difference = 7.00/8.59=81.5%. Question says \"fair value per share\" without context. In document, there are two tables: Option Awards and ESPP. The question likely refers to option awards? It says \"the fair value per share\" singular. Need infer. The document has \"Fair value, per share\" in Option Awards table: 2016 $31.00, 2015 $18.13, 2014 $11.75. Also ESPP table has \"Fair value, per share\": 2016 $22.09, 2015 $15.59, 2014 $8.59. Which one? The question asks \"percentage difference in the fair value per share between 2014 and 2015\" - likely from option awards because that's the main stock option fair value. But could be ambiguous. Let's read question: \"what is the percentage difference in the fair value per share between 2014 and 2015?\" It doesn't specify option or ESPP. In the document, there are two \"Fair value, per share\" rows. But the question might be from a dataset where they expect one. Need decide. The phrase \"fair value per share\" appears in both. However, the option awards table is more prominent and the first one. Also the question might be asking about the change in fair value per share of options granted. Let's compute both. For option awards: (18.13-11.75)/11.75 = 54.3%. For ESPP: (15.59-8.59)/8.59 = 81.5%. Which is \"percentage difference\"? Usually percentage difference = (new-old)/old *100. The question says \"between 2014 and 2015\" meaning from 2014 to 2015. So answer 54.3% if option. But need be careful: The document also has \"Fair value, per share\" in the option awards table and ESPP table. The question might be from a specific context. Since no other context, I'll assume option awards because it's the first and more likely. Also the question says \"the fair value per share\" not \"ESPP fair value per share\". So answer 54.3%. Let's compute exactly: 18.13 - 11.75 = 6.38; 6.38 / 11.75 = 0.5429787 = 54.3% (rounded). So final answer inside tags: 54.3% or 54.3. The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks percentage difference, so include %? It says no units unless asked. It asks percentage, so include % sign? Usually answer numeric with % sign. I'll put 54.3%.",
+ "raw_content": "<answer>54.3%</answer>",
+ "usage": {
+  "prompt_tokens": 133930,
+  "completion_tokens": 716,
+  "total_tokens": 134646,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 12.08,
+ "answer_tag_found": true,
+ "docfinqa_row": 303
+}

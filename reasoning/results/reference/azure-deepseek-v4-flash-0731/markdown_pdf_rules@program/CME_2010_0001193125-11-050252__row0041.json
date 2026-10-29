@@ -1,0 +1,72 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0041",
+ "format": "markdown_pdf_rules",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "what was the percentage change in receivables from brokers with in other current assets from 2009 to 2010?",
+ "gold": "29%",
+ "finqa_id": "CME/2010/page_91.pdf-1",
+ "source_page": "page_91",
+ "ticker": "CME",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/markdown_pdf_rules/CME_2010_0001193125-11-050252.md",
+ "doc_chars": 415699,
+ "prompt_chars": 415894,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 415699,
+ "original_chars": 415699,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93329,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 182,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "27.2727%",
+ "reasoning": "We need percentage change in receivables from brokers in other current assets from 2009 to 2010. From note 5: Other current assets table: Receivables from brokers 11.2 (2010) and 8.8 (2009). Percentage change = (11.2-8.8)/8.8 = 2.4/8.8 = 0.272727... = 27.27%. So answer 27.27% or 27.3%. Need evidence: values.",
+ "raw_content": "<evidence>\n11.2 | Other current assets - Receivables from brokers 2010\n8.8 | Other current assets - Receivables from brokers 2009\n</evidence>\n<program>divide(subtract(11.2, 8.8), 8.8)</program>\n<answer>27.27%</answer>",
+ "usage": {
+  "prompt_tokens": 93640,
+  "completion_tokens": 182,
+  "total_tokens": 93822,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.59,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "11.2",
+   "element": "Other current assets - Receivables from brokers 2010",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "8.8",
+   "element": "Other current assets - Receivables from brokers 2009",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(11.2, 8.8), 8.8)",
+ "answer_model": "27.27%",
+ "program_value": 0.27272727272727254,
+ "docfinqa_row": 41
+}

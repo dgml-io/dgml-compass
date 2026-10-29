@@ -1,0 +1,62 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0575",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "what is the yearly amortization rate for the trademarks?",
+ "gold": "20%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "ADBE_2008_0000796343-09-000007.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/ConsolidatedCashFlow/PurchasePriceAllocation/TrademarkDescription",
+  "/chunk/ConsolidatedCashFlow/PurchasePriceAllocation/TrademarkDescription/TrademarkName"
+ ],
+ "r1_reasoning_chars": 0,
+ "r1_retried": true,
+ "r1_usage": {
+  "prompt_tokens": 25376,
+  "completion_tokens": 16,
+  "total_tokens": 25392,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 25344
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/ConsolidatedCashFlow/PurchasePriceAllocation/TrademarkDescription",
+  "/chunk/ConsolidatedCashFlow/PurchasePriceAllocation/TrademarkDescription/TrademarkName"
+ ],
+ "content_chars": 2505,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer yearly amortization rate for trademarks. Need find in document. The excerpts mention trademarks amortized based on pattern, but no rate. Maybe elsewhere? The question asks yearly amortization rate. Document may have table with useful lives/rates. Need search within provided regions? Only these regions. No rate. Could be NOT_FOUND. But let's examine: \"TrademarkDescription: Trademarks primarily relate to the TrademarkName: Flash trade name and other product names and is amortized based on the pattern...\" No rate. No numeric. So NOT_FOUND.",
+ "raw_content": "<evidence>No relevant figure found.</evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 804,
+  "completion_tokens": 147,
+  "total_tokens": 951,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 42.34,
+ "outline_source": "ADBE_2008_0000796343-09-000007.outline.txt",
+ "outline_chars": 99180
+}

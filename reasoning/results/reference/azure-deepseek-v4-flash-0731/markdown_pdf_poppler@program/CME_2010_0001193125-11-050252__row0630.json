@@ -1,0 +1,74 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0630",
+ "format": "markdown_pdf_poppler",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "whats is the percentage of equity compensation plans that were not approved by security holders?",
+ "gold": "0.491%",
+ "finqa_id": "CME/2010/page_123.pdf-1",
+ "source_page": "page_123",
+ "ticker": "CME",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/markdown_pdf_poppler/CME_2010_0001193125-11-050252.md",
+ "doc_chars": 524138,
+ "prompt_chars": 524323,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 524138,
+ "original_chars": 524138,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93767,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 605,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "49.1159%",
+ "reasoning": "We need answer percentage of equity compensation plans not approved by security holders. Need find relevant figures. Document has equity compensation plan info in Item 12. Table: Plan category: approved by security holders: 1,211,143 options, weighted avg 308.10, remaining 5,156,223. Not approved: 5,978 options, weighted avg 22.00, remaining —. Total 1,217,121. Question: \"whats is the percentage of equity compensation plans that were not approved by security holders?\" Could mean percentage of plans (number of plans) or percentage of shares/options? Wording \"percentage of equity compensation plans\" ambiguous. Likely asks percentage of options outstanding under plans not approved by security holders? Or percentage of plans? There are two categories: approved and not approved. Number of plans? The table lists \"Equity compensation plans approved by security holders\" and \"not approved\". There is one plan not approved? Actually the text says prior to reorganization, CME issued options under the Omnibus Stock Plan not approved. Options issued prior to sole shareholder approval are listed as not approved. So the not approved category has 5,978 options. Total options 1,217,121. Percentage = 5,978 / 1,217,121 * 100 ≈ 0.491%. Alternatively percentage of plans: 1 out of 2? But \"plans\" might refer to options. The question says \"percentage of equity compensation plans that were not approved by security holders\" - likely from table, the number of securities to be issued upon exercise of outstanding options under plans not approved is 5,978 out of total 1,217,121. So compute percentage. Need evidence: 5,978 | Equity compensation plans not approved by security holders (column a), 1,217,121 | Total (column a). Program: divide(5978, 1217121) * 100? But program only nested calls, can use multiply(divide(5978,1217121),100). Answer with value. Need final answer inside <answer> tags only value. Probably 0.49% or 0.491%. Let's compute: 5978/1217121 = 0.004911? 1217121*0.0049=5963.9, so 0.4912%. So answer 0.49% maybe. The question asks \"percentage\" so include %? The instruction says no units unless asked. It asks percentage, so include %? Usually answer value with % sign. We'll put 0.49%.",
+ "raw_content": "<evidence>\n5,978 | Equity compensation plans not approved by security holders (column a)\n1,217,121 | Total (column a)\n</evidence>\n<program>multiply(divide(5978, 1217121), 100)</program>\n<answer>0.49%</answer>",
+ "usage": {
+  "prompt_tokens": 94071,
+  "completion_tokens": 605,
+  "total_tokens": 94676,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.1,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "5,978",
+   "element": "Equity compensation plans not approved by security holders (column a)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "1,217,121",
+   "element": "Total (column a)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(5978, 1217121), 100)",
+ "answer_model": "0.49%",
+ "program_value": 0.49115905485157185,
+ "docfinqa_row": 630
+}

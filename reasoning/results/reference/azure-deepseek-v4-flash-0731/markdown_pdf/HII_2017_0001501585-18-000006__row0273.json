@@ -1,0 +1,50 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0273",
+ "format": "markdown_pdf",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what was the return on total assets during 2014?",
+ "gold": "5.4%",
+ "finqa_id": "HII/2017/page_47.pdf-2",
+ "source_page": "page_47",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/markdown_pdf/HII_2017_0001501585-18-000006.md",
+ "doc_chars": 458663,
+ "prompt_chars": 458800,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 458663,
+ "original_chars": 458663,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 99639,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 544,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "5.44%",
+ "reasoning": "We need to find return on total assets during 2014. Return on total assets = Net earnings / Total assets. But typically ROA uses average total assets. The question says \"return on total assets during 2014\" - likely net earnings divided by total assets at end of 2014? Or average? The document provides selected financial data for 2014: Net earnings $338 million, Total assets $6,239 million. But we need to check if there is a specific definition. The question asks \"return on total assets\" - usually net income / average total assets. But we have total assets for 2014 and 2013? 2013 total assets $6,190 million. So average = (6,239+6,190)/2 = 6,214.5. Net earnings 338. So ROA = 338/6214.5 = 0.0544 or 5.44%. Alternatively, if using ending assets, 338/6239 = 5.42%. The question doesn't specify. Typically in financial analysis, return on total assets is net income divided by average total assets. But the document might have a specific ratio? The question is straightforward. We need to compute. Let's see if there is any mention of ROA in the document. Not explicitly. So we compute using average. But the question says \"during 2014\" - so we use 2014 net earnings and average total assets for 2014 (i.e., average of 2013 and 2014). We have 2013 total assets $6,190 million, 2014 $6,239 million. Net earnings 2014 $338 million. So ROA = 338 / ((6190+6239)/2) = 338 / 6214.5 = 0.05439... = 5.44% approximately. If we use ending assets, 5.42%. Which one is expected? The question might be from a financial statement analysis context. Usually ROA = Net Income / Average Total Assets. I'll go with that. But let's check if the document provides any other data. The selected financial data table has total assets for each year. So we can compute. I'll answer with the percentage. The answer should be a number. Probably 5.44% or 5.4%. Let's compute precisely: 338/6214.5 = 0.05439... = 5.439% -> 5.44%. I'll put 5.44% inside answer tags.",
+ "raw_content": "<answer>5.44%</answer>",
+ "usage": {
+  "prompt_tokens": 99779,
+  "completion_tokens": 544,
+  "total_tokens": 100323,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.23,
+ "answer_tag_found": true,
+ "docfinqa_row": 273
+}

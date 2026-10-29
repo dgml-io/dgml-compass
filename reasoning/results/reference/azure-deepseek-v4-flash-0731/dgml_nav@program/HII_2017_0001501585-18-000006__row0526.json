@@ -1,0 +1,77 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0526",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "in the number of securities to be issued what is the ratio of the stock rights from the 2012 plan to the 2011 plan included in these securities",
+ "gold": "1.06",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "HII_2017_0001501585-18-000006.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation",
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation/table",
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation/table/EquityCompensationPlan/EquityPlanSharesToBeIssued",
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation/ol/EquityCompensationPlanFootnote/EquityPlanName"
+ ],
+ "r1_reasoning_chars": 2318,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 22197,
+  "completion_tokens": 647,
+  "total_tokens": 22844,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 22016
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation",
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation/table",
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation/table/EquityCompensationPlan/EquityPlanSharesToBeIssued",
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation/ol/EquityCompensationPlanFootnote/EquityPlanName"
+ ],
+ "content_chars": 13194,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "1.060465",
+ "reasoning": "We need ratio of stock rights from 2012 plan to 2011 plan. From footnote: 2011 plan stock rights = 27,123. 2012 plan stock rights = 28,763. Ratio = 28,763 / 27,123. Compute.",
+ "raw_content": "<evidence>27,123 | EquityCompensationPlanFootnote (2011 Plan stock rights)\n28,763 | EquityCompensationPlanFootnote (2012 Plan stock rights)</evidence>\n<program>divide(28763, 27123)</program>\n<answer>1.0605</answer>",
+ "r2_usage": {
+  "prompt_tokens": 3630,
+  "completion_tokens": 121,
+  "total_tokens": 3751,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "27,123",
+   "element": "EquityCompensationPlanFootnote (2011 Plan stock rights)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "28,763",
+   "element": "EquityCompensationPlanFootnote (2012 Plan stock rights)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(28763, 27123)",
+ "answer_model": "1.0605",
+ "program_value": 1.060465287763153,
+ "elapsed_s": 4.21,
+ "outline_source": "HII_2017_0001501585-18-000006.outline.txt",
+ "outline_chars": 86768
+}

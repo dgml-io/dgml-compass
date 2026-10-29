@@ -1,0 +1,72 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0514",
+ "format": "dgml_compact",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was the change in the total long-term debt net from 2014 to 2015 in millions",
+ "gold": "9119",
+ "finqa_id": "LMT/2015/page_99.pdf-1",
+ "source_page": "page_99",
+ "ticker": "LMT",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml_compact/LMT_2015_0001193125-16-476010.dgml.txt",
+ "doc_chars": 620939,
+ "prompt_chars": 621109,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 620939,
+ "original_chars": 620939,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 127470,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 282,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "9119",
+ "reasoning": "We need the change in total long-term debt net from 2014 to 2015. From Selected Financial Data: Total debt, net (e) 2015: 15,261; 2014: 6,142. Change = 15,261 - 6,142 = 9,119. Also from balance sheet: Long-term debt, net 2015: 14,305; 2014: 6,142? Wait balance sheet shows Long-term debt, net 14,305 and current maturities 956, so total debt net = 14,305+956=15,261. 2014: long-term debt net 6,142, current maturities 0, so total 6,142. So change = 9,119. The question asks \"change in the total long-term debt net from 2014 to 2015 in millions\". So answer 9,119. Use evidence: 15,261 and 6,142.",
+ "raw_content": "<evidence>15,261 | TotalDebtSelectedData: Total debt, net (e) | 2015\n6,142 | TotalDebtSelectedData: Total debt, net (e) | 2014</evidence>\n<program>subtract(15261, 6142)</program>\n<answer>9,119</answer>",
+ "usage": {
+  "prompt_tokens": 127779,
+  "completion_tokens": 282,
+  "total_tokens": 128061,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 127232
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.96,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "15,261",
+   "element": "TotalDebtSelectedData: Total debt, net (e) | 2015",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6,142",
+   "element": "TotalDebtSelectedData: Total debt, net (e) | 2014",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(15261, 6142)",
+ "answer_model": "9,119",
+ "program_value": 9119.0,
+ "docfinqa_row": 514
+}

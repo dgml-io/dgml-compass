@@ -1,0 +1,74 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0661",
+ "format": "markdown_pdf_rules",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what percentage of total future minimum operating lease payments for leases with remaining terms greater than one year are due in 2009?",
+ "gold": "25%",
+ "finqa_id": "FIS/2007/page_94.pdf-1",
+ "source_page": "page_94",
+ "ticker": "FIS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_rules/FIS_2007_0000892569-08-000207.md",
+ "doc_chars": 363516,
+ "prompt_chars": 363740,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 363516,
+ "original_chars": 363516,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 83492,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 645,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "25.321437",
+ "reasoning": "We need to find future minimum operating lease payments for leases with remaining terms greater than one year. In the document, under Note 16 Commitments and Contingencies, Leases section, there is a table:\n\n2008 83,382\n2009 63,060\n2010 35,269\n2011 21,598\n2012 14,860\nThereafter 30,869\nTotal $249,038\n\nQuestion: what percentage of total future minimum operating lease payments are due in 2009? So compute 63,060 / 249,038 * 100.\n\nWe need to provide evidence: value | element. The element is the row label or heading. The table is \"Future minimum operating lease payments for leases with remaining terms greater than one year\" - the row for 2009 is 63,060, total is 249,038.\n\nCompute: 63,060 / 249,038 = 0.2532... *100 = 25.32% approximately. Let's compute precisely: 63,060 / 249,038 = 0.2532... 249,038 * 0.25 = 62,259.5, difference 800.5, so 0.2532. So 25.32%.\n\nWe'll give answer as percentage. The question asks \"what percentage\" so answer with number, maybe 25.3% or 25.32%. We'll put 25.32% inside <answer>.\n\nEvidence: 63,060 | 2009 row in future minimum operating lease payments table; 249,038 | Total row.\n\nProgram: divide(63060, 249038) * 100? The program should be exact. We can use multiply(divide(63060, 249038), 100). But the instructions say \"The program is executed by the benchmark, so it must be exact.\" We'll provide that.\n\nFinal answer inside <answer>25.32%</answer> or just 25.32? The question asks \"what percentage\" so include % sign? The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for percentage, so we can include % sign. But typically they want numeric value. I'll put 25.32% inside.\n\nLet's compute more precisely: 63,060 / 249,038 = 0.253214... Let's do division: 249,038 * 0.2532 = 63,056.4, so 0.2532 gives 63,056.4, difference 3.6, so 0.2532145. So 25.32145%. Round to 25.32%.\n\nI'll answer 25.32%.",
+ "raw_content": "<evidence>63,060 | 2009 row in future minimum operating lease payments table\n249,038 | Total row in future minimum operating lease payments table</evidence>\n<program>multiply(divide(63060, 249038), 100)</program>\n<answer>25.32%</answer>",
+ "usage": {
+  "prompt_tokens": 83804,
+  "completion_tokens": 645,
+  "total_tokens": 84449,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.78,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "63,060",
+   "element": "2009 row in future minimum operating lease payments table",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "249,038",
+   "element": "Total row in future minimum operating lease payments table",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(63060, 249038), 100)",
+ "answer_model": "25.32%",
+ "program_value": 25.321436889149446,
+ "docfinqa_row": 661
+}

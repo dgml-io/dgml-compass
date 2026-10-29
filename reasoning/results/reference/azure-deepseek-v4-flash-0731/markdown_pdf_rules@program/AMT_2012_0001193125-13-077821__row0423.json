@@ -1,0 +1,74 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0423",
+ "format": "markdown_pdf_rules",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "was was the total amount spent on stock repurchases in december 2012?",
+ "gold": "7662592",
+ "finqa_id": "AMT/2012/page_50.pdf-2",
+ "source_page": "page_50",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/markdown_pdf_rules/AMT_2012_0001193125-13-077821.md",
+ "doc_chars": 528023,
+ "prompt_chars": 528181,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 528023,
+ "original_chars": 528023,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 118377,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 572,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "7662592",
+ "reasoning": "We need answer: total amount spent on stock repurchases in December 2012. Need find figures. Document has issuer purchases table: December 2012 repurchased 102,400 shares at avg price $74.83, aggregate? The table shows approximate dollar value of shares that may yet be purchased under plans, not amount spent. But text: \"During the three months ended December 31, 2012, we repurchased 619,314 shares ... for an aggregate of approximately $46.0 million, including commissions and fees\". That is for quarter. For December specifically, we have shares and average price per share (excluding commissions and fees). Average price per share is calculated using aggregate price, excluding commissions and fees. So amount spent on repurchases in December = 102,400 * $74.83 = ? Compute: 102,400 * 74.83 = 102,400*70 + 102,400*4.83 = 7,168,000 + 494,? 102,400*4.83 = 102,400*4 + 102,400*0.83 = 409,600 + 84,992 = 494,592. Total 7,662,592. So approximately $7.66 million. But question \"total amount spent on stock repurchases in december 2012\" likely includes commissions and fees? The table gives average price per share excluding commissions and fees. The quarterly total includes commissions and fees. For December, we don't have aggregate including commissions. But we can compute from shares and average price. The question likely expects that. Need evidence: 102,400 shares, $74.83 average price per share. Also maybe note that average price excludes commissions and fees. So answer $7,662,592. But check if there is any other figure: \"December 2012 102,400 $ 74.83 102,400 $ 1,256.1\" The last column is remaining buyback authorization. So yes.\n\nWe need provide evidence and program. Evidence: 102,400 | December 2012 row, $74.83 | Average Price Paid per Share. Program multiply(102400, 74.83). Final answer inside <answer>7662592</answer> (no units). But question asks \"total amount spent\" maybe in dollars. We'll give numeric.\n\nLet's craft final with evidence and program.",
+ "raw_content": "<evidence>\n102,400 | December 2012 row (Total Number of Shares Purchased)\n$74.83 | Average Price Paid per Share (December 2012)\n</evidence>\n\n<program>multiply(102400, 74.83)</program>\n\n<answer>7662592</answer>",
+ "usage": {
+  "prompt_tokens": 118681,
+  "completion_tokens": 572,
+  "total_tokens": 119253,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.71,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "102,400",
+   "element": "December 2012 row (Total Number of Shares Purchased)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$74.83",
+   "element": "Average Price Paid per Share (December 2012)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(102400, 74.83)",
+ "answer_model": "7662592",
+ "program_value": 7662592.0,
+ "docfinqa_row": 423
+}

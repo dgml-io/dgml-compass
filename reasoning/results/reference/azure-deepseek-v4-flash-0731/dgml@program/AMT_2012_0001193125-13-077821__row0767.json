@@ -1,0 +1,75 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0767",
+ "format": "dgml",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "hard assets were what percent of the brazilian purchase price , as finally determined?",
+ "gold": "14.3%",
+ "finqa_id": "AMT/2012/page_118.pdf-3",
+ "source_page": "page_118",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/dgml/AMT_2012_0001193125-13-077821.dgml.xml",
+ "doc_chars": 945867,
+ "prompt_chars": 946042,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 945867,
+ "original_chars": 945867,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 220539,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 459,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "14.272852",
+ "reasoning": "We need answer question: \"hard assets were what percent of the brazilian purchase price, as finally determined?\" Need find Brazilian purchase price and hard assets. In document, Brazil Acquisition: purchase price $553.2 million, increased to $585.4, reduced to $585.3 after post-closing adjustments. Hard assets? Probably property and equipment? In final purchase price allocation for Brazil: Property and equipment $83,539 (in thousands). Also non-current assets $71,529, intangible assets $368,000, etc. \"hard assets\" might mean property and equipment? Or tangible assets? Need interpret. Question: \"hard assets were what percent of the brazilian purchase price, as finally determined?\" Hard assets likely property and equipment. Purchase price as finally determined $585.3 million. Property and equipment in final allocation $83,539 thousand = $83.539 million. Percent = 83.539 / 585.3 * 100 = 14.27%. But check if \"hard assets\" includes property and equipment plus non-current assets? Hard assets typically tangible assets: property and equipment, maybe land? In allocation, property and equipment is $83,539. Non-current assets $71,529 might be other. So answer ~14.3%. Need evidence: purchase price $585.3 million (from text \"purchase price was reduced to $585.3 million\"), property and equipment $83,539 thousand. Compute divide(83.539, 585.3)*100? Use figures as printed: $585.3 million and $83,539 thousand. Program: multiply(divide(83539, 585300), 100) = 14.27. But note purchase price in thousands? $585.3 million = 585,300 thousand. So percent = 83539/585300*100 = 14.27%. Answer inside tags.",
+ "raw_content": "<evidence>\n$585.3 million | Brazil Acquisition purchase price as finally determined\n$83,539 | Property and equipment in final purchase price allocation (in thousands)\n</evidence>\n<program>multiply(divide(83539, 585300), 100)</program>\n<answer>14.27%</answer>",
+ "usage": {
+  "prompt_tokens": 220843,
+  "completion_tokens": 459,
+  "total_tokens": 221302,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 220672
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.61,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$585.3 million",
+   "element": "Brazil Acquisition purchase price as finally determined",
+   "element_found": false,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$83,539",
+   "element": "Property and equipment in final purchase price allocation (in thousands)",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(83539, 585300), 100)",
+ "answer_model": "14.27%",
+ "program_value": 14.27285152913036,
+ "docfinqa_row": 767
+}

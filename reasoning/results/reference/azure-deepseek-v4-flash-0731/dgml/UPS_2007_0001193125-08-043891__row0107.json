@@ -1,0 +1,50 @@
+{
+ "id": "UPS_2007_0001193125-08-043891__row0107",
+ "format": "dgml",
+ "key": "UPS_2007_0001193125-08-043891",
+ "question": "what is the total cash inflow from the stock purchases of employees in 2007 , ( in millions ) ?",
+ "gold": "115.6",
+ "finqa_id": "UPS/2007/page_98.pdf-1",
+ "source_page": "page_98",
+ "ticker": "UPS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml/UPS_2007_0001193125-08-043891.dgml.xml",
+ "doc_chars": 609845,
+ "prompt_chars": 610029,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 609845,
+ "original_chars": 609845,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 146117,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 265,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "174",
+ "reasoning": "We need answer: \"total cash inflow from the stock purchases of employees in 2007\" likely from stock option exercises and employee stock purchase plan. In cash flow statement financing activities: \"Issuances of common stock\" $174 million in 2007. Also \"Cash received from option holders\" $52 million, and employee stock purchase plan purchases? The question says \"stock purchases of employees\" maybe \"Issuances of common stock\" includes employee stock purchases and option exercises. In MD&A: \"Issuances of common stock\" $174 million. Also note 11: cash received from option holders $52 million, and employee stock purchase plan shares purchased 1.8 million at average $64.20 = ~$115.6 million. Sum = ~$167.6? But cash flow statement shows \"Issuances of common stock\" $174 million. The question asks \"total cash inflow from the stock purchases of employees in 2007\" - likely the line \"Issuances of common stock\" in financing activities is $174 million. But let's verify: In cash flow statement: \"Issuances of common stock\" $174 million. That is cash inflow from employee stock purchases/option exercises. So answer 174.",
+ "raw_content": "<answer>174</answer>",
+ "usage": {
+  "prompt_tokens": 146267,
+  "completion_tokens": 265,
+  "total_tokens": 146532,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 17.94,
+ "answer_tag_found": true,
+ "docfinqa_row": 107
+}

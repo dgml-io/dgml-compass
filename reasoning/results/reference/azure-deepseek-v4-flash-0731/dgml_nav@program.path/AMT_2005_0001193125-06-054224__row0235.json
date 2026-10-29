@@ -1,0 +1,85 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0235",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what was the percentage of the anticipated approximate tax refund in 2003 based on the nol $ 90.0 million .",
+ "gold": "23.7%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "AMT_2005_0001193125-06-054224.outline.txt",
+ "doc_source": "AMT_2005_0001193125-06-054224.dgml.xml",
+ "outline_chars": 112419,
+ "predicted_xpaths": [
+  "/chunk/ManagementDiscussionAndAnalysis/ResultsOfOperations/IncomeTaxProvisionDiscussion",
+  "/chunk/IncomeTaxes/FinancialStatementHeader/table/EffectiveTaxRateReconciliation",
+  "/chunk/ManagementDiscussionAndAnalysis/ResultsOfOperations/ImpairmentsAndRestructuring/IncomeTaxBenefit"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 22790,
+ "r1_usage": {
+  "prompt_tokens": 28608,
+  "completion_tokens": 5819,
+  "total_tokens": 34427,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ManagementDiscussionAndAnalysis/ResultsOfOperations/IncomeTaxProvisionDiscussion",
+  "/chunk/IncomeTaxes/FinancialStatementHeader/table/EffectiveTaxRateReconciliation",
+  "/chunk/ManagementDiscussionAndAnalysis/ResultsOfOperations/ImpairmentsAndRestructuring/IncomeTaxBenefit"
+ ],
+ "content_chars": 16488,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "23.6842%",
+ "reasoning": "We need answer: \"what was the percentage of the anticipated approximate tax refund in 2003 based on the nol $90.0 million.\" Need parse. Document says: In June 2003 and October 2003, filed claims relating to carry back of $380.0 million of NOLs, of which initially anticipated receiving approximately $90.0 million. So percentage = 90/380 = 23.6842%. Need compute. Evidence: $90.0 million and $380.0 million. Program divide(90.0, 380.0) maybe multiply by 100? Question asks percentage, so answer 23.6842105263%. Need output value only. Use evidence lines.",
+ "raw_content": "<evidence>90.0 million | /chunk/ManagementDiscussionAndAnalysis/ResultsOfOperations/IncomeTaxProvisionDiscussion/FederalTaxRefundClaims\n380.0 million | /chunk/ManagementDiscussionAndAnalysis/ResultsOfOperations/IncomeTaxProvisionDiscussion/FederalTaxRefundClaims</evidence>\n<program>divide(90.0, 380.0)</program>\n<answer>23.6842105263%</answer>",
+ "r2_usage": {
+  "prompt_tokens": 4227,
+  "completion_tokens": 244,
+  "total_tokens": 4471,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 4227,
+   "completion_tokens": 244,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "90.0 million",
+   "element": "chunk/ManagementDiscussionAndAnalysis/ResultsOfOperations/IncomeTaxProvisionDiscussion/FederalTaxRefundClaims",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "380.0 million",
+   "element": "chunk/ManagementDiscussionAndAnalysis/ResultsOfOperations/IncomeTaxProvisionDiscussion/FederalTaxRefundClaims",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(90.0, 380.0)",
+ "answer_model": "23.6842105263%",
+ "program_value": 0.23684210526315788,
+ "elapsed_s": 20.99
+}

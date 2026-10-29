@@ -1,0 +1,53 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0630",
+ "format": "markdown_pdf_poppler",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "whats is the percentage of equity compensation plans that were not approved by security holders?",
+ "gold": "0.491%",
+ "finqa_id": "CME/2010/page_123.pdf-1",
+ "source_page": "page_123",
+ "ticker": "CME",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/markdown_pdf_poppler/CME_2010_0001193125-11-050252.md",
+ "doc_chars": 524138,
+ "prompt_chars": 524323,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 524138,
+ "original_chars": 524138,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93767,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 345,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.49%",
+ "reasoning": "We need to find the percentage of equity compensation plans not approved by security holders. The document has a table in Item 12: Equity Compensation Plan Information. It shows:\n\nPlan category: approved by security holders: 1,211,143 options, weighted avg exercise price 308.10, remaining available 5,156,223.\nNot approved: 5,978 options, exercise price 22.00, remaining 0.\nTotal: 1,217,121 options.\n\nThe question asks: \"whats is the percentage of equity compensation plans that were not approved by security holders?\" This likely refers to the percentage of outstanding options (or securities to be issued) that are under plans not approved. The table shows number of securities to be issued upon exercise of outstanding options. So percentage = 5,978 / 1,217,121 * 100 ≈ 0.491%. But the question says \"percentage of equity compensation plans\" - could be interpreted as the proportion of plans, but there are two categories. The table gives numbers. The answer should be the percentage of outstanding options under non-approved plans. Let's compute: 5978 / 1217121 = 0.00491 -> 0.491%. Round to maybe 0.5%? The question asks for percentage, so we can give 0.49% or 0.5%. Let's compute precisely: 5978 / 1217121 = 0.004911... so 0.4911%. So answer: 0.49% or 0.5%. I'll put 0.49% inside tags.",
+ "raw_content": "<answer>0.49%</answer>",
+ "usage": {
+  "prompt_tokens": 93912,
+  "completion_tokens": 345,
+  "total_tokens": 94257,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 93696
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.19,
+ "answer_tag_found": true,
+ "docfinqa_row": 630
+}

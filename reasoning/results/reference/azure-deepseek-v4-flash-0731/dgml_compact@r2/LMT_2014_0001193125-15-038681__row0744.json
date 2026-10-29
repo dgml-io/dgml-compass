@@ -1,0 +1,53 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0744",
+ "format": "dgml_compact",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "what was the difference in operating margin between 2012 and 2013?",
+ "gold": ".1%",
+ "finqa_id": "LMT/2014/page_50.pdf-3",
+ "source_page": "page_50",
+ "ticker": "LMT",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/dgml_compact/LMT_2014_0001193125-15-038681.dgml.txt",
+ "doc_chars": 524480,
+ "prompt_chars": 524635,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 524480,
+ "original_chars": 524480,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 107424,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 349,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.53",
+ "reasoning": "We need to find operating margins for 2012 and 2013. The document provides segment operating margins, but the question likely refers to consolidated operating margin. However, the question says \"operating margin\" without specifying segment. In the document, there is a table of selected financial data with operating profit and net sales. For 2012: net sales $47,182 million, operating profit $4,434 million. For 2013: net sales $45,358 million, operating profit $4,505 million. Operating margin = operating profit / net sales. Compute: 2012: 4434/47182 = 0.09398... ~9.4%. 2013: 4505/45358 = 0.09932... ~9.93%. Difference = 9.93% - 9.4% = 0.53 percentage points. But the question asks \"difference in operating margin between 2012 and 2013\" - could be absolute difference. Alternatively, they might want the difference in percentage points. Let's compute precisely: 2012: 4434/47182 = 0.09398 (9.398%) 2013: 4505/45358 = 0.09932 (9.932%) Difference = 0.00534 = 0.534 percentage points. So answer ~0.53 percentage points. But the question might expect a number like 0.5% or 0.53%. Let's see if there is any other mention. The document also has segment operating margins, but the question is general. I'll go with consolidated.",
+ "raw_content": "<answer>0.53</answer>",
+ "usage": {
+  "prompt_tokens": 107568,
+  "completion_tokens": 349,
+  "total_tokens": 107917,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 107520
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.57,
+ "answer_tag_found": true,
+ "docfinqa_row": 744
+}

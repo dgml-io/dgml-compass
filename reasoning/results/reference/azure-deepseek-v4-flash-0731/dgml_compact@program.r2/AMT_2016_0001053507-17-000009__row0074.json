@@ -1,0 +1,72 @@
+{
+ "id": "AMT_2016_0001053507-17-000009__row0074",
+ "format": "dgml_compact",
+ "key": "AMT_2016_0001053507-17-000009",
+ "question": "what is the growth rate in the price of shares from the highest value during the quarter ended december 31 , 2016 and the closing price on february 17 , 2017?",
+ "gold": "-8.5%",
+ "finqa_id": "AMT/2016/page_49.pdf-3",
+ "source_page": "page_49",
+ "ticker": "AMT",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/dgml_compact/AMT_2016_0001053507-17-000009.dgml.txt",
+ "doc_chars": 615313,
+ "prompt_chars": 615560,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 615313,
+ "original_chars": 615313,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 137249,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 498,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-8.4512%",
+ "reasoning": "We need to find highest value during quarter ended December 31, 2016. That is the high for Q4 2016 from the stock price table: Quarter ended December 31 | 118.09 | 99.72. So high = 118.09. Closing price on Feb 17, 2017 = $108.11. Growth rate = (108.11 - 118.09)/118.09 = -8.45% approximately. Need to compute. Let's compute: 108.11 - 118.09 = -9.98. -9.98 / 118.09 = -0.0845... So -8.45%. The question asks \"growth rate\" so negative. Provide answer as percentage? Probably just the number. We'll output -8.45% or -0.0845? The question says \"growth rate\" likely percentage. We'll output -8.45%. But need exact computation. Use figures: 118.09 and 108.11. Program: divide(subtract(108.11, 118.09), 118.09). That gives -0.0845... We'll output as percentage? The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for growth rate, so likely percentage. We'll output -8.45% or -0.0845? Typically growth rate as percentage. We'll output -8.45%. But to be safe, maybe -8.45%? The benchmark might expect numeric. We'll output -8.45%? The instruction says no units unless asked. The question asks for growth rate, so percentage is the unit. We'll output -8.45%. Let's compute precisely: (108.11-118.09)/118.09 = -9.98/118.09 = -0.08451... So -8.451%. We'll round to two decimals: -8.45%.",
+ "raw_content": "<evidence>\n118.09 | QuarterlyStockPriceRecord: Quarter ended December 31 | 118.09 | 99.72\n108.11 | ClosingSharePrice: $108.11\n</evidence>\n<program>\ndivide(subtract(108.11, 118.09), 118.09)\n</program>\n<answer>-8.45%</answer>",
+ "usage": {
+  "prompt_tokens": 137575,
+  "completion_tokens": 498,
+  "total_tokens": 138073,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.21,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "118.09",
+   "element": "QuarterlyStockPriceRecord: Quarter ended December 31 | 118.09 | 99.72",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "108.11",
+   "element": "ClosingSharePrice: $108.11",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(108.11, 118.09), 118.09)",
+ "answer_model": "-8.45%",
+ "program_value": -0.08451181302396481,
+ "docfinqa_row": 74
+}

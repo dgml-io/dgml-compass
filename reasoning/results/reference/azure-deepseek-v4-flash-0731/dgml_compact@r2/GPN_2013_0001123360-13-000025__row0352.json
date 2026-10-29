@@ -1,0 +1,53 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0352",
+ "format": "dgml_compact",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what is the net change of the total fair value balance of non-vested shares during 2013?",
+ "gold": "6820",
+ "finqa_id": "GPN/2013/page_87.pdf-3",
+ "source_page": "page_87",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/dgml_compact/GPN_2013_0001123360-13-000025.dgml.txt",
+ "doc_chars": 440691,
+ "prompt_chars": 440868,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 440691,
+ "original_chars": 440691,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93128,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 627,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "$6,820,000",
+ "reasoning": "We need to find the net change of the total fair value balance of non-vested shares during 2013. The document has a table for restricted stock rollforward. It shows non-vested shares and weighted average grant-date fair value. The total fair value balance is shares * weighted average fair value. We need the change from May 31, 2012 to May 31, 2013.\n\nFrom the table:\nNon-vested at May 31, 2011: 869 shares, $40 weighted avg -> total = 869*40 = 34,760 (in thousands? Actually shares in thousands, so 869,000 shares? The table says \"share awards in thousands\" so shares are in thousands. So total fair value = 869 * 40 = 34,760 (in thousands of dollars? Actually the fair value is per share, so total = 869,000 * $40 = $34,760,000. But we just need the change.\n\nNon-vested at May 31, 2012: 941 shares, $44 -> total = 941*44 = 41,404 (in thousands of dollars? Actually 941,000 * 44 = 41,404,000)\nNon-vested at May 31, 2013: 1,096 shares, $44 -> total = 1,096*44 = 48,224 (in thousands? 1,096,000*44 = 48,224,000)\n\nNet change = 48,224 - 41,404 = 6,820 (in thousands of dollars) = $6,820,000.\n\nBut the question asks \"net change of the total fair value balance of non-vested shares during 2013\". So it's the change from beginning to end of fiscal 2013. So answer is $6,820,000 or 6,820 (in thousands). The document uses thousands, so we can give 6,820 (in thousands) or $6.82 million. The question doesn't specify units, but we can give the number. Typically in such questions, they expect the value in dollars or thousands. Since the table is in thousands, we can say 6,820 (in thousands) or $6,820,000. I'll put $6,820,000.\n\nBut let's double-check: The table shows \"Non-vested at May 31, 2012 | 941 | 44\" and \"Non-vested at May 31, 2013 | 1,096 | $44\". So total fair value at 2012 = 941*44 = 41,404; at 2013 = 1,096*44 = 48,224. Change = 6,820. So answer is 6,820 (in thousands) or $6,820,000.\n\nI'll put $6,820,000.",
+ "raw_content": "<answer>$6,820,000</answer>",
+ "usage": {
+  "prompt_tokens": 93278,
+  "completion_tokens": 627,
+  "total_tokens": 93905,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 93184
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.99,
+ "answer_tag_found": true,
+ "docfinqa_row": 352
+}

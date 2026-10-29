@@ -1,0 +1,76 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0468",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "in november 2015 what was the percent of the discounts and debt issuance costs to the long-term debt november 2015 notes in millions",
+ "gold": "1.42%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "LMT_2015_0001193125-16-476010.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/FinancialStatementsRunningHeader/LongTermDebtDisclosure",
+  "/chunk/FinancialStatementsRunningHeader/LongTermDebtDisclosure/LongTermDebtComponents",
+  "/chunk/FinancialStatementsRunningHeader/LongTermDebtDisclosure/LongTermDebtIssuanceDescription/header",
+  "/chunk/FinancialStatementsRunningHeader/LongTermDebtDisclosure/LongTermDebtComponents/UnamortizedDebtDiscountAmount",
+  "/chunk/FinancialStatementsRunningHeader/LongTermDebtDisclosure/LongTermDebtIssuanceDescription/ol/DebtInstrumentDescription/DebtPrincipalAmount"
+ ],
+ "r1_reasoning_chars": 14942,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 28903,
+  "completion_tokens": 4259,
+  "total_tokens": 33162,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/FinancialStatementsRunningHeader/LongTermDebtDisclosure",
+  "/chunk/FinancialStatementsRunningHeader/LongTermDebtDisclosure/LongTermDebtComponents",
+  "/chunk/FinancialStatementsRunningHeader/LongTermDebtDisclosure/LongTermDebtIssuanceDescription/header",
+  "/chunk/FinancialStatementsRunningHeader/LongTermDebtDisclosure/LongTermDebtComponents/UnamortizedDebtDiscountAmount",
+  "/chunk/FinancialStatementsRunningHeader/LongTermDebtDisclosure/LongTermDebtIssuanceDescription/ol/DebtInstrumentDescription/DebtPrincipalAmount"
+ ],
+ "content_chars": 138017,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "1.428571",
+ "reasoning": "We need answer percent of discounts and debt issuance costs to long-term debt November 2015 notes. Document: issued $7.0 billion notes, received net proceeds $6.9 billion after deducting discounts and debt issuance costs. So discounts and costs = 7.0 - 6.9 = 0.1 billion = $100 million. Percent = 0.1/7.0 = 1.42857% or 1.43%. Question asks \"in november 2015 what was the percent of the discounts and debt issuance costs to the long-term debt november 2015 notes in millions\" Wording odd: \"percent of the discounts and debt issuance costs to the long-term debt november 2015 notes in millions\" Maybe they want percentage. Compute: (7.0 - 6.9)/7.0 * 100 = 1.428571...%. Need answer. Evidence: $7.0 billion, $6.9 billion. Program: multiply(divide(subtract(7.0, 6.9), 7.0), 100) but figures as printed: $7.0 billion, $6.9 billion. Use numbers 7.0 and 6.9. Answer 1.428571... maybe 1.43. The question says \"in millions\" maybe they want amount? \"what was the percent of the discounts and debt issuance costs to the long-term debt november 2015 notes in millions\" Hmm. Let's parse: \"in november 2015 what was the percent of the discounts and debt issuance costs to the long-term debt november 2015 notes in millions\" Could be asking \"what was the percent of the discounts and debt issuance costs to the long-term debt november 2015 notes\" i.e., percentage. The \"in millions\" is from table context. So answer percent.",
+ "raw_content": "<evidence>$7.0 billion | DebtIssuanceAmount (November 2015 Notes issued)\n$6.9 billion | DebtIssuanceAmount (net proceeds after discounts and debt issuance costs)</evidence>\n<program>multiply(divide(subtract(7.0, 6.9), 7.0), 100)</program>\n<answer>1.4285714285714286</answer>",
+ "r2_usage": {
+  "prompt_tokens": 35131,
+  "completion_tokens": 478,
+  "total_tokens": 35609,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$7.0 billion",
+   "element": "DebtIssuanceAmount (November 2015 Notes issued)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$6.9 billion",
+   "element": "DebtIssuanceAmount (net proceeds after discounts and debt issuance costs)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(7.0, 6.9), 7.0), 100)",
+ "answer_model": "1.4285714285714286",
+ "program_value": 1.4285714285714235,
+ "elapsed_s": 18.19,
+ "outline_source": "LMT_2015_0001193125-16-476010.outline.txt",
+ "outline_chars": 116705
+}

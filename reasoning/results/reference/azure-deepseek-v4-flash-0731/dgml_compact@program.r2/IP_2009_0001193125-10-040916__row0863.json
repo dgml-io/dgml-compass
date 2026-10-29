@@ -1,0 +1,72 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0863",
+ "format": "dgml_compact",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "what was the sum of the temporary differences between 2007 and 2009 in billions",
+ "gold": "9.8",
+ "finqa_id": "IP/2009/page_84.pdf-4",
+ "source_page": "page_84",
+ "ticker": "IP",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/dgml_compact/IP_2009_0001193125-10-040916.dgml.txt",
+ "doc_chars": 600076,
+ "prompt_chars": 600244,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 600076,
+ "original_chars": 600076,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 131401,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 586,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "7.2",
+ "reasoning": "We need answer question: \"what was the sum of the temporary differences between 2007 and 2009 in billions\". Need interpret. Document has \"Undistributed earnings reinvestment narrative: Deferred income taxes are not provided for temporary differences of approximately $3.5 billion, $2.6 billion and $3.7 billion as of December 31, 2009, 2008 and 2007, respectively, representing earnings of non-U.S. subsidiaries intended to be permanently reinvested.\" So temporary differences between 2007 and 2009? Sum of temporary differences between 2007 and 2009? Likely sum of the amounts for 2007 and 2009? \"between 2007 and 2009\" could mean sum of the temporary differences in 2007 and 2009? Or difference between 2007 and 2009? The question: \"what was the sum of the temporary differences between 2007 and 2009 in billions\" Ambiguous. It says \"sum of the temporary differences between 2007 and 2009\" - maybe sum of the temporary differences for 2007 and 2009? Or sum of differences between 2007 and 2009? Let's parse. The document lists temporary differences for 2009, 2008, 2007: $3.5, $2.6, $3.7 billion. \"sum of the temporary differences between 2007 and 2009\" could mean add the 2007 and 2009 values: 3.7 + 3.5 = 7.2 billion. Or \"between 2007 and 2009\" might mean the difference (2009 - 2007) = -0.2? But \"sum\" suggests addition. The phrase \"sum of the temporary differences between 2007 and 2009\" likely means sum of the temporary differences for the years 2007 and 2009. Need answer in billions. Evidence: $3.5 billion (2009), $3.7 billion (2007). Sum = 7.2. Let's confirm exact figures: \"temporary differences of approximately $3.5 billion, $2.6 billion and $3.7 billion as of December 31, 2009, 2008 and 2007, respectively.\" So 2009=3.5, 2007=3.7. Sum=7.2. Answer 7.2.",
+ "raw_content": "<evidence>\n$3.5 billion | UndistributedEarningsReinvestmentNarrative (2009)\n$3.7 billion | UndistributedEarningsReinvestmentNarrative (2007)\n</evidence>\n<program>add(3.5, 3.7)</program>\n<answer>7.2</answer>",
+ "usage": {
+  "prompt_tokens": 131707,
+  "completion_tokens": 586,
+  "total_tokens": 132293,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 131584
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.8,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$3.5 billion",
+   "element": "UndistributedEarningsReinvestmentNarrative (2009)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$3.7 billion",
+   "element": "UndistributedEarningsReinvestmentNarrative (2007)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "add(3.5, 3.7)",
+ "answer_model": "7.2",
+ "program_value": 7.2,
+ "docfinqa_row": 863
+}

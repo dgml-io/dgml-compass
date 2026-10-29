@@ -1,0 +1,72 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0514",
+ "format": "markdown_pdf_plumber",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was the change in the total long-term debt net from 2014 to 2015 in millions",
+ "gold": "9119",
+ "finqa_id": "LMT/2015/page_99.pdf-1",
+ "source_page": "page_99",
+ "ticker": "LMT",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_plumber/LMT_2015_0001193125-16-476010.md",
+ "doc_chars": 537327,
+ "prompt_chars": 537497,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 537327,
+ "original_chars": 537327,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 120906,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 413,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "9119",
+ "reasoning": "We need answer change in total long-term debt net from 2014 to 2015. From balance sheet: Long-term debt, net 2015 14,305, 2014 6,142. But total debt net includes current maturities? The question says \"total long-term debt net\" - likely from balance sheet line \"Long-term debt, net\" 14,305 vs 6,142. Change = 14,305 - 6,142 = 8,163. But note in Selected Financial Data \"Total debt, net\" 15,261 vs 6,142. The question says \"total long-term debt net\" - could be total debt net? In balance sheet, current maturities of long-term debt 956 in 2015, long-term debt net 14,305. Total debt net = 15,261. The question wording \"total long-term debt net\" might refer to \"Total long-term debt, net\" from Note 10: 15,261 vs 6,142. Actually Note 10 table: \"Total long-term debt, net $15,261 $6,142\". So change = 15,261 - 6,142 = 9,119. But balance sheet has \"Long-term debt, net\" 14,305. The question says \"total long-term debt net\" - likely from Note 10 \"Total long-term debt, net\". Need determine. The document has \"Total long-term debt, net\" in Note 10. So change = 9,119. Let's verify: 2015 15,261, 2014 6,142. Difference 9,119. Answer in millions.",
+ "raw_content": "<evidence>\n15,261 | Total long-term debt, net (Note 10)\n6,142 | Total long-term debt, net (Note 10)\n</evidence>\n<program>subtract(15261, 6142)</program>\n<answer>9,119</answer>",
+ "usage": {
+  "prompt_tokens": 121215,
+  "completion_tokens": 413,
+  "total_tokens": 121628,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 121088
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.24,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "15,261",
+   "element": "Total long-term debt, net (Note 10)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6,142",
+   "element": "Total long-term debt, net (Note 10)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(15261, 6142)",
+ "answer_model": "9,119",
+ "program_value": 9119.0,
+ "docfinqa_row": 514
+}

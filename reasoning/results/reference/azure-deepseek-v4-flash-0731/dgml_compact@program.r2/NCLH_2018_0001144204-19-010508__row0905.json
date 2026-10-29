@@ -1,0 +1,72 @@
+{
+ "id": "NCLH_2018_0001144204-19-010508__row0905",
+ "format": "dgml_compact",
+ "key": "NCLH_2018_0001144204-19-010508",
+ "question": "what percent of long-term debt was paid off in 2021?",
+ "gold": "38.6%",
+ "finqa_id": "NCLH/2018/page_97.pdf-3",
+ "source_page": "page_97",
+ "ticker": "NCLH",
+ "fiscal_year": "2018",
+ "source_file": "data/docs/dgml_compact/NCLH_2018_0001144204-19-010508.dgml.txt",
+ "doc_chars": 467893,
+ "prompt_chars": 468034,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 467893,
+ "original_chars": 467893,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 101327,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 842,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "39.2727%",
+ "reasoning": "We need answer question: \"what percent of long-term debt was paid off in 2021?\" Need find figures. Document has scheduled principal repayments on long-term debt as of Dec 31, 2018: 2019 $681,218; 2020 $682,556; 2021 $2,549,621; 2022 $494,186; 2023 $434,902; Thereafter $1,767,383; Total $6,609,866. Also long-term debt total $6,492,091 (including current portion) as of Dec 31, 2018. Question: \"what percent of long-term debt was paid off in 2021?\" Likely scheduled principal repayment in 2021 divided by total long-term debt. Need compute percent. Use figures: 2021 repayment $2,549,621 (in thousands) and total long-term debt $6,492,091 (in thousands) or total scheduled repayments $6,609,866? The question says \"long-term debt\" - likely total long-term debt as of Dec 31, 2018. The scheduled principal repayments table shows \"Total $6,609,866\" which includes capital lease obligations and excludes deferred financing fees? The long-term debt balance is $6,492,091. Which denominator? The question \"what percent of long-term debt was paid off in 2021?\" Typically scheduled principal repayments in 2021 as percentage of total long-term debt. Use total long-term debt from balance sheet: $6,492,091. But the scheduled repayments total is $6,609,866, which is slightly higher due to premiums? Actually long-term debt includes current portion $681,218 + long-term $5,810,873 = $6,492,091. The scheduled repayments total $6,609,866 includes capital leases and maybe premiums? The table says \"scheduled principal repayments on long-term debt including capital lease obligations\" total $6,609,866. The question likely expects using the scheduled repayment amount for 2021 divided by total long-term debt. Let's compute: 2,549,621 / 6,492,091 = 0.3927... = 39.27%. Alternatively if denominator total scheduled repayments 6,609,866: 2,549,621/6,609,866 = 0.3857 = 38.57%. Which is more appropriate? The question says \"long-term debt\" not \"total scheduled repayments\". The balance sheet long-term debt is $6,492,091. But the scheduled repayments table is the source for 2021 amount. The denominator should be the total long-term debt outstanding. I'll use $6,492,091. Need evidence: value | element. The element names? In document, the table has ScheduledDebtRepayment: 2021 | $ 2,549,621. And long-term debt total: TotalDebtAmount: $6,492,091. Also maybe \"Long-term debt, including current portion\" in selected financial data: $6,492,091. Use that.\n\nCompute: 2,549,621 / 6,492,091 = 0.3927... Let's calculate precisely: 6,492,091 * 0.39 = 2,531,915.49; difference 17,705.51; /6,492,091=0.002727; so 0.392727 = 39.2727%. So answer 39.27% (or 39.3%). The question asks \"what percent\" - give number. I'll put 39.27% inside answer. Need evidence lines.",
+ "raw_content": "<evidence>\n2,549,621 | ScheduledDebtRepayment: 2021\n6,492,091 | TotalDebtAmount: Total debt\n</evidence>\n<program>divide(2549621, 6492091)</program>\n<answer>39.27%</answer>",
+ "usage": {
+  "prompt_tokens": 101628,
+  "completion_tokens": 842,
+  "total_tokens": 102470,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 101376
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.16,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "2,549,621",
+   "element": "ScheduledDebtRepayment: 2021",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6,492,091",
+   "element": "TotalDebtAmount: Total debt",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(2549621, 6492091)",
+ "answer_model": "39.27%",
+ "program_value": 0.3927272430408015,
+ "docfinqa_row": 905
+}

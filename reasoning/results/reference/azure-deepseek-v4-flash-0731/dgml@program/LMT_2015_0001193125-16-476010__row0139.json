@@ -1,0 +1,81 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0139",
+ "format": "dgml",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was average net sales for space systems in millions from 2013 to 2015?",
+ "gold": "9198",
+ "finqa_id": "LMT/2015/page_56.pdf-4",
+ "source_page": "page_56",
+ "ticker": "LMT",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml/LMT_2015_0001193125-16-476010.dgml.xml",
+ "doc_chars": 868444,
+ "prompt_chars": 868608,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 868444,
+ "original_chars": 868444,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 194482,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 172,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "9198.333333",
+ "reasoning": "We need average net sales for Space Systems 2013-2015. From document: Space Systems net sales: 2015 $9,105, 2014 $9,202, 2013 $9,288. Average = (9105+9202+9288)/3 = 27595/3 = 9198.333... So answer 9198.33? The question asks \"in millions\" so just number. We'll provide 9198.33.",
+ "raw_content": "<evidence>\n$9,105 | SpaceSystemsNetSales\n$9,202 | SpaceSystemsNetSales\n$9,288 | SpaceSystemsNetSales\n</evidence>\n<program>divide(add(add(9105, 9202), 9288), 3)</program>\n<answer>9198.33</answer>",
+ "usage": {
+  "prompt_tokens": 194788,
+  "completion_tokens": 172,
+  "total_tokens": 194960,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 19.18,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$9,105",
+   "element": "SpaceSystemsNetSales",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$9,202",
+   "element": "SpaceSystemsNetSales",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$9,288",
+   "element": "SpaceSystemsNetSales",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(add(9105, 9202), 9288), 3)",
+ "answer_model": "9198.33",
+ "program_value": 9198.333333333334,
+ "docfinqa_row": 139
+}

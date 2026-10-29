@@ -1,0 +1,53 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0468",
+ "format": "markdown_pdf_rules",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "in november 2015 what was the percent of the discounts and debt issuance costs to the long-term debt november 2015 notes in millions",
+ "gold": "1.42%",
+ "finqa_id": "LMT/2015/page_99.pdf-4",
+ "source_page": "page_99",
+ "ticker": "LMT",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_rules/LMT_2015_0001193125-16-476010.md",
+ "doc_chars": 501601,
+ "prompt_chars": 501822,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 501601,
+ "original_chars": 501601,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 108718,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 490,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1.43%",
+ "reasoning": "We need answer: \"in november 2015 what was the percent of the discounts and debt issuance costs to the long-term debt november 2015 notes in millions\"\n\nWe need parse. November 2015 Notes issued $7.0 billion. Net proceeds $6.9 billion after deducting discounts and debt issuance costs. So discounts and issuance costs = $0.1 billion = $100 million. Percent of discounts and costs to long-term debt? \"percent of the discounts and debt issuance costs to the long-term debt november 2015 notes\" likely (100/7000)*100 = 1.4286%. But question says \"in millions\" maybe ask percent? Let's read: \"in november 2015 what was the percent of the discounts and debt issuance costs to the long-term debt november 2015 notes in millions\" Hmm.\n\nDocument: \"We received net proceeds of $6.9 billion from the offering, after deducting discounts and debt issuance costs\" So discounts and costs = $0.1 billion = $100 million. Percent = 100/7000 = 1.4286%. But \"in millions\" might ask amount? The question: \"what was the percent of the discounts and debt issuance costs to the long-term debt november 2015 notes in millions\" Could be asking \"percent ... in millions\" ambiguous. Maybe they want the amount of discounts and debt issuance costs in millions? The phrase \"percent of the discounts and debt issuance costs to the long-term debt\" means ratio. But \"in millions\" might refer to the debt amount. Let's compute: $7.0 billion = 7000 million, net proceeds 6900 million, difference 100 million. Percent = 100/7000 *100 = 1.4286%. Answer likely 1.43% or 1.4%. But they ask \"in millions\" maybe they want 100? Let's examine wording: \"in november 2015 what was the percent of the discounts and debt issuance costs to the long-term debt november 2015 notes in millions\" Could be \"what was the percent of the discounts and debt issuance costs to the long-term debt november 2015 notes\" and \"in millions\" is unit for debt. So answer percent.\n\nI'll provide 1.43% inside tags.",
+ "raw_content": "<answer>1.43%</answer>",
+ "usage": {
+  "prompt_tokens": 108875,
+  "completion_tokens": 490,
+  "total_tokens": 109365,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 108800
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.06,
+ "answer_tag_found": true,
+ "docfinqa_row": 468
+}

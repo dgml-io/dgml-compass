@@ -1,0 +1,76 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0132",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "what is the average liability for all three programs , as of december 31 , 2008 , in millions?",
+ "gold": "4.27",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "IPG_2008_0001193125-09-040141.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/PensionObligationRollforward"
+ ],
+ "r1_reasoning_chars": 6456,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 23080,
+  "completion_tokens": 1633,
+  "total_tokens": 24713,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/PensionObligationRollforward"
+ ],
+ "content_chars": 156279,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "87.366667",
+ "reasoning": "We need answer average liability for all three programs as of Dec 31 2008. Need identify \"liability\" for three programs: domestic pension, foreign pension, postretirement. The table shows \"Funded status of the plans\" as of Dec 31 2008: Domestic $(44.7), Foreign $(159.9), Postretirement $(57.5). These are net liabilities recognized. Also balance sheet recognition shows net liability recognized same. Question \"average liability for all three programs\" likely average of these three liabilities. Need compute average of 44.7, 159.9, 57.5 (absolute values? Liability amounts are negative, but average liability likely average of the liability amounts, maybe use absolute values). The question says \"average liability\" - likely average of the three liability figures. Need decide whether to average the negative numbers or absolute. Usually liability is stated as negative in funded status, but \"liability\" amount is positive. The table \"Funded status of the plans\" shows negative. The balance sheet \"Net liability recognized\" shows negative. The question asks \"average liability for all three programs\" - likely take the absolute values: 44.7, 159.9, 57.5. Average = (44.7+159.9+57.5)/3 = 262.1/3 = 87.366666... = 87.4 (rounded). If average of signed values: (-44.7-159.9-57.5)/3 = -262.1/3 = -87.3667. But \"liability\" is usually positive magnitude. Need check wording: \"average liability for all three programs\" - likely they want average of the liabilities, so positive. The document says \"Funded status of the plans\" with negative values. The question says \"liability\" not \"funded status\". So use absolute values. Need cite figures: $ (44.7), $(159.9), $ (57.5) from PensionFundedStatus row. Compute average. Answer in millions, likely 87.4. Need provide evidence and program.",
+ "raw_content": "<evidence>\n$ (44.7) | PensionFundedStatus: Funded status of the plans (Domestic 2008)\n$(159.9) | PensionFundedStatus: Funded status of the plans (Foreign 2008)\n$ (57.5) | PensionFundedStatus: Funded status of the plans (Postretirement 2008)\n</evidence>\n\n<program>divide(add(add(44.7, 159.9), 57.5), 3)</program>\n\n<answer>87.4</answer>",
+ "r2_usage": {
+  "prompt_tokens": 37336,
+  "completion_tokens": 558,
+  "total_tokens": 37894,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ (44.7)",
+   "element": "PensionFundedStatus: Funded status of the plans (Domestic 2008)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$(159.9)",
+   "element": "PensionFundedStatus: Funded status of the plans (Foreign 2008)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ (57.5)",
+   "element": "PensionFundedStatus: Funded status of the plans (Postretirement 2008)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(add(44.7, 159.9), 57.5), 3)",
+ "answer_model": "87.4",
+ "program_value": 87.36666666666667,
+ "elapsed_s": 13.05,
+ "outline_source": "IPG_2008_0001193125-09-040141.outline.txt",
+ "outline_chars": 90097
+}

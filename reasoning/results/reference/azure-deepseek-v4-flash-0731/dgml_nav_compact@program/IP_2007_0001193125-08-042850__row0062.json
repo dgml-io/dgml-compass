@@ -1,0 +1,102 @@
+{
+ "id": "IP_2007_0001193125-08-042850__row0062",
+ "key": "IP_2007_0001193125-08-042850",
+ "question": "what percentage of december 31 , 2007 , total future minimum commitments under existing non-cancelable operating leases and purchase obligations were due to purchase obligations for the year of 2008?",
+ "gold": "93%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "IP_2007_0001193125-08-042850.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/CommitmentsAndContingentLiabilities/table",
+  "/chunk/CommitmentsAndContingentLiabilities/FutureMinimumCommitments"
+ ],
+ "r1_reasoning_chars": 2492,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 35316,
+  "completion_tokens": 621,
+  "total_tokens": 35937,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/CommitmentsAndContingentLiabilities/table",
+  "/chunk/CommitmentsAndContingentLiabilities/FutureMinimumCommitments"
+ ],
+ "content_chars": 2618,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "38.81932",
+ "reasoning": "We need answer percentage. Need figures: total future minimum commitments at Dec 31 2007 = total for 2008? The table shows columns 2008 etc. Total future minimum commitments under existing non-cancelable operating leases and purchase obligations were as follows: table has Lease obligations, Purchase obligations, Total. For 2008: Lease $136, Purchase $1,953, Total $2,089. Question: what percentage of December 31, 2007, total future minimum commitments ... were due to purchase obligations for the year of 2008? Interpret: total future minimum commitments at Dec 31 2007 = total across all years? Or total for 2008? Wording: \"what percentage of december 31, 2007, total future minimum commitments under existing non-cancelable operating leases and purchase obligations were due to purchase obligations for the year of 2008?\" Could mean: Of the total future minimum commitments (as of Dec 31 2007), what percentage is due to purchase obligations for 2008? The total future minimum commitments is the sum of all years? The table gives total for each year, and maybe total overall? The table has \"Total\" row with amounts per year, not a grand total. The question asks percentage of total future minimum commitments (all years) that were due to purchase obligations for 2008. Need compute purchase obligations 2008 / total future minimum commitments (all years). Total future minimum commitments = sum of all Total row across years? Or sum of lease + purchase? The table: Total row is sum of lease and purchase for each year. Total future minimum commitments under existing non-cancelable operating leases and purchase obligations = sum of all Total amounts across years: 2089+410+362+319+279+1572 = let's compute. 2089+410=2499; +362=2861; +319=3180; +279=3459; +1572=5031. Purchase obligations 2008 = 1953. Percentage = 1953 / 5031 * 100 = ? Compute. 1953/5031 = 0.38819? 5031*0.388 = 1952.0? 5031*0.388 = 1952.028, so 0.38819. Percentage 38.82%. Need exact. Let's compute precisely: 1953 / 5031. 5031*0.3882 = 1953.0342? 5031*0.3882 = 5031*(0.38 + 0.0082) = 1911.78 + 41.2542 = 1953.0342. So 0.388193? 1953/5031 = 0.388193? Let's do division: 5031*0.388 = 1952.028, remainder 0.972, /5031=0.0001932, so 0.3881932. Percentage 38.8193%. Wait 0.388193*100 = 38.8193%. Let's compute more accurately: 1953 / 5031. Use calculator mental: 5031*0.3882 = 1953.0342, so slightly less 0.388193. So 38.8193%. But maybe question asks percentage of total future minimum commitments (as of Dec 31 2007) that were due to purchase obligations for 2008. Could also mean: Of the total future minimum commitments for 2008 (i.e., total due in 2008), what percentage were purchase obligations? That would be 1953 / 2089 = 93.49%. But wording: \"what percentage of december 31, 2007, total future minimum commitments under existing non-cancelable operating leases and purchase obligations were due to purchase obligations for the year of 2008?\" The phrase \"december 31, 2007, total future minimum commitments\" refers to the total amount as of that date, which is the sum of all years. \"were due to purchase obligations for the year of 2008\" means the portion attributable to purchase obligations in 2008. So denominator is total future minimum commitments (all years) = 5031. Numerator = purchase obligations 2008 = 1953. So answer ~38.82%.\n\nNeed evidence: figures: Purchase obligations 2008 = 1,953; Total 2008 = 2,089; Total 2009=410; 2010=362; 2011=319; 2012=279; Thereafter=1,572. Also maybe lease obligations? But denominator total sum. We'll list each total row value. Also purchase obligations 2008. Need program: divide(1953, add(2089, add(410, add(362, add(319, add(279, 1572)))))) * 100? The program should compute percentage. Use multiply(divide(1953, add(...)), 100). But instructions: \"Give final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" Question asks percentage, so answer numeric maybe 38.82. Need include evidence and program. Program exact: multiply(divide(1953, add(2089, add(410, add(362, add(319, add(279, 1572)))))), 100). But note figures as printed include $ and commas? Use numbers as printed without $ and commas. Evidence lines: \"1,953 | PurchaseObligationAmount\" etc. Need element names from DGML? The region has table with elements? The table rows are LeaseObligationAmount, PurchaseObligationAmount, ContractualObligationsTotal. The values are in cells. We'll cite as \"1,953 | PurchaseObligationAmount (2008)\" etc. But evidence should be one per line value | element. We'll use row labels.\n\nLet's craft final with evidence and program, then answer.",
+ "raw_content": "<evidence>\n1,953 | PurchaseObligationAmount (2008)\n2,089 | ContractualObligationsTotal (2008)\n410 | ContractualObligationsTotal (2009)\n362 | ContractualObligationsTotal (2010)\n319 | ContractualObligationsTotal (2011)\n279 | ContractualObligationsTotal (2012)\n1,572 | ContractualObligationsTotal (Thereafter)\n</evidence>\n\n<program>\nmultiply(divide(1953, add(2089, add(410, add(362, add(319, add(279, 1572)))))), 100)\n</program>\n\n<answer>38.82</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1017,
+  "completion_tokens": 1423,
+  "total_tokens": 2440,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,953",
+   "element": "PurchaseObligationAmount (2008)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "2,089",
+   "element": "ContractualObligationsTotal (2008)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "410",
+   "element": "ContractualObligationsTotal (2009)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "362",
+   "element": "ContractualObligationsTotal (2010)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "319",
+   "element": "ContractualObligationsTotal (2011)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "279",
+   "element": "ContractualObligationsTotal (2012)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1,572",
+   "element": "ContractualObligationsTotal (Thereafter)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(1953, add(2089, add(410, add(362, add(319, add(279, 1572)))))), 100)",
+ "answer_model": "38.82",
+ "program_value": 38.81932021466905,
+ "elapsed_s": 14.64,
+ "outline_source": "IP_2007_0001193125-08-042850.outline.txt",
+ "outline_chars": 139969
+}

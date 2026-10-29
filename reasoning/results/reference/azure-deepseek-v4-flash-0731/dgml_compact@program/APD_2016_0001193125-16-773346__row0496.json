@@ -1,0 +1,78 @@
+{
+ "id": "APD_2016_0001193125-16-773346__row0496",
+ "format": "dgml_compact",
+ "key": "APD_2016_0001193125-16-773346",
+ "question": "considering the year 2016 , what is the short-term debt as a percent of total debt?",
+ "gold": "21%",
+ "finqa_id": "APD/2016/page_96.pdf-2",
+ "source_page": "page_96",
+ "ticker": "APD",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/dgml_compact/APD_2016_0001193125-16-773346.dgml.txt",
+ "doc_chars": 576971,
+ "prompt_chars": 577143,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 576971,
+ "original_chars": 576971,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 128386,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 409,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "20.9969%",
+ "reasoning": "We need to find short-term debt and total debt for 2016. Short-term debt likely includes short-term borrowings and current portion of long-term debt. Total debt is given as $6,225.2 million. Short-term borrowings at 30 Sep 2016: $935.8 million. Current portion of long-term debt: $371.3 million. Sum = 935.8 + 371.3 = 1307.1. Percent = 1307.1 / 6225.2 * 100. Compute: 1307.1 / 6225.2 = 0.20997... ~21.0%. Alternatively, the document mentions \"of which $1,307.1 million (including Versum debt of $5.8 million) will mature in the next twelve months.\" That is short-term debt. So percent = 1307.1/6225.2 = 21.0%. Let's compute exactly: 1307.1 / 6225.2 = 0.20997... multiply by 100 = 20.997% ~21.0%. We'll give answer as 21.0% or 21%. The question asks \"what is the short-term debt as a percent of total debt?\" So answer with percentage. Use evidence: short-term borrowings 935.8, current portion 371.3, total debt 6225.2. Also the document explicitly says $1,307.1 million will mature in next twelve months. We'll use that.",
+ "raw_content": "<evidence>\n935.8 | Short-term borrowings (30 September 2016)\n371.3 | Current portion of long-term debt (30 September 2016)\n6,225.2 | Total debt (30 September 2016)\n</evidence>\n<program>divide(add(935.8, 371.3), 6225.2)</program>\n<answer>21.0%</answer>",
+ "usage": {
+  "prompt_tokens": 128693,
+  "completion_tokens": 409,
+  "total_tokens": 129102,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 12.38,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "935.8",
+   "element": "Short-term borrowings (30 September 2016)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "371.3",
+   "element": "Current portion of long-term debt (30 September 2016)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6,225.2",
+   "element": "Total debt (30 September 2016)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(935.8, 371.3), 6225.2)",
+ "answer_model": "21.0%",
+ "program_value": 0.20996915761742593,
+ "docfinqa_row": 496
+}

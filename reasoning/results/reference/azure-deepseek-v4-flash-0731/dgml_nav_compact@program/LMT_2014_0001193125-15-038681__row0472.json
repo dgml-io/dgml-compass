@@ -1,0 +1,76 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0472",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "what was the average of company 401 ( k ) match total for the three years ended 2014 , in millions?",
+ "gold": "383",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "LMT_2014_0001193125-15-038681.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/SegmentFinancial/PostretirementPlans/PlanAssetsOverview/DefinedContributionPlans"
+ ],
+ "r1_reasoning_chars": 892,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 16128,
+  "completion_tokens": 237,
+  "total_tokens": 16365,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/SegmentFinancial/PostretirementPlans/PlanAssetsOverview/DefinedContributionPlans"
+ ],
+ "content_chars": 11061,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "382.666667",
+ "reasoning": "We need answer average of company 401(k) match total for three years ended 2014, in millions. Document gives contributions: $385 million in 2014, $383 million in 2013, $380 million in 2012. Average = (385+383+380)/3 = 1148/3 = 382.666... in millions. Need output value. Probably 382.6667 or 382.67. The question asks \"in millions\" so value is 382.666... maybe round to 382.7? But likely exact average 382.6667. Need provide evidence and program.",
+ "raw_content": "<evidence>\n$385 million | DollarAmountValue (2014)\n$383 million | DollarAmountValue (2013)\n$380 million | DollarAmountValue (2012)\n</evidence>\n<program>divide(add(add(385, 383), 380), 3)</program>\n<answer>382.6667</answer>",
+ "r2_usage": {
+  "prompt_tokens": 3113,
+  "completion_tokens": 202,
+  "total_tokens": 3315,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$385 million",
+   "element": "DollarAmountValue (2014)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$383 million",
+   "element": "DollarAmountValue (2013)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$380 million",
+   "element": "DollarAmountValue (2012)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(add(385, 383), 380), 3)",
+ "answer_model": "382.6667",
+ "program_value": 382.6666666666667,
+ "elapsed_s": 4.67,
+ "outline_source": "LMT_2014_0001193125-15-038681.outline.txt",
+ "outline_chars": 64445
+}

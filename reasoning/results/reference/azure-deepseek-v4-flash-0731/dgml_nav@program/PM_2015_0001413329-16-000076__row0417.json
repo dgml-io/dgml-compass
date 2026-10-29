@@ -1,0 +1,71 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0417",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what was the average total accumulated other comprehensive losses from 2013 to 2015 in millions?",
+ "gold": "-6806",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "PM_2015_0001413329-16-000076.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/Financial/BalanceSheet/StockholdersEquity/table/AccumulatedOtherComprehensiveLoss"
+ ],
+ "r1_reasoning_chars": 2082,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 39603,
+  "completion_tokens": 517,
+  "total_tokens": 40120,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 39424
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/Financial/BalanceSheet/StockholdersEquity/table/AccumulatedOtherComprehensiveLoss"
+ ],
+ "content_chars": 2743,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer average total accumulated other comprehensive losses from 2013 to 2015. Document excerpt shows only 2015 and 2014? Actually table has two columns likely 2015 and 2014. Accumulated other comprehensive losses: (9,402) and (6,826). Need 2013 too? Not in excerpt. Maybe question asks from 2013 to 2015, but only 2014 and 2015 given. Need check if 2013 available elsewhere? Not in provided. So NOT_FOUND. But maybe \"from 2013 to 2015\" means average of 2013, 2014, 2015. We only have 2014 and 2015. So cannot compute. Answer NOT_FOUND.\n\nBut let's be careful: The region has two columns, likely 2015 and 2014. No 2013. So insufficient.\n\nEvidence: (9,402) | AccumulatedOtherComprehensiveLoss; (6,826) | AccumulatedOtherComprehensiveLoss. But we need 2013. So NOT_FOUND.\n\nFinal answer inside tags.",
+ "raw_content": "<evidence>(9,402) | AccumulatedOtherComprehensiveLoss\n(6,826) | AccumulatedOtherComprehensiveLoss</evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1047,
+  "completion_tokens": 283,
+  "total_tokens": 1330,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "(9,402)",
+   "element": "AccumulatedOtherComprehensiveLoss",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "(6,826)",
+   "element": "AccumulatedOtherComprehensiveLoss",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 4.41,
+ "outline_source": "PM_2015_0001413329-16-000076.outline.txt",
+ "outline_chars": 156714
+}

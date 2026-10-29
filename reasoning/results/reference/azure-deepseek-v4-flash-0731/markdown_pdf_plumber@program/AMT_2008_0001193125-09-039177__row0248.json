@@ -1,0 +1,74 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0248",
+ "format": "markdown_pdf_plumber",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "what is the net change in the balance of liability related to employee separations during 2006?",
+ "gold": "-13636",
+ "finqa_id": "AMT/2008/page_107.pdf-4",
+ "source_page": "page_107",
+ "ticker": "AMT",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_plumber/AMT_2008_0001193125-09-039177.md",
+ "doc_chars": 448607,
+ "prompt_chars": 448791,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 448607,
+ "original_chars": 448607,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 105711,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 207,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-13636",
+ "reasoning": "We need answer net change in balance of liability related to employee separations during 2006. From note 14 table: Liability as of Dec 31, 2005 $20,963; 2006 Expense $496; 2006 Cash $(12,389); 2006 Other $(1,743); Liability as of Dec 31, 2006 $7,327. Net change = ending - beginning = 7,327 - 20,963 = -13,636. Or sum of changes: 496 -12,389 -1,743 = -13,636. So answer -13,636 (in thousands). Need evidence figures.",
+ "raw_content": "<evidence>\n20,963 | Liability as of December 31, 2005 (Employee separations)\n7,327 | Liability as of December 31, 2006 (Employee separations)\n</evidence>\n<program>subtract(7327, 20963)</program>\n<answer>-13,636</answer>",
+ "usage": {
+  "prompt_tokens": 106019,
+  "completion_tokens": 207,
+  "total_tokens": 106226,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.52,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "20,963",
+   "element": "Liability as of December 31, 2005 (Employee separations)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "7,327",
+   "element": "Liability as of December 31, 2006 (Employee separations)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "subtract(7327, 20963)",
+ "answer_model": "-13,636",
+ "program_value": -13636.0,
+ "docfinqa_row": 248
+}

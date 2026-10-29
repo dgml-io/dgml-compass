@@ -1,0 +1,72 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0187",
+ "format": "markdown_pdf_poppler",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the percentage increase in total accumulated other comprehensive losses from 2014 to 2015?",
+ "gold": "37.7%",
+ "finqa_id": "PM/2015/page_127.pdf-1",
+ "source_page": "page_127",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_poppler/PM_2015_0001413329-16-000076.md",
+ "doc_chars": 669314,
+ "prompt_chars": 669501,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 669314,
+ "original_chars": 669314,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 116308,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 863,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.377381",
+ "reasoning": "We need to compute percentage increase in total accumulated other comprehensive losses from 2014 to 2015. From balance sheet: accumulated other comprehensive losses at Dec 31, 2015 = -9,402, at 2014 = -6,826. Percentage increase? Typically increase from -6,826 to -9,402 is a change of -2,576 (more negative). Percentage increase in magnitude? The question says \"percentage increase in total accumulated other comprehensive losses\" - likely they mean the change in the absolute value? Or the percentage change in the value? Since it's a loss, an increase in losses means the magnitude increased. Usually \"increase\" means the value becomes more negative, so percentage increase = (new - old)/|old| * 100? But careful: If we treat as numbers, -9,402 vs -6,826, the change is -2,576, which is a decrease in value. But \"increase in losses\" means the loss amount increased. So we compute (9,402 - 6,826)/6,826 = 2,576/6,826 = 0.3774 = 37.74%. Alternatively, if they ask percentage increase in the balance (which is negative), it's not standard. The question likely expects the percentage increase in the magnitude of losses. Let's compute: 2576/6826 = 0.3774 -> 37.74%. Round to maybe 37.7% or 37.74%. We'll give as 37.74% or 37.7%. The answer should be a number. I'll compute exactly: 2576/6826 = 0.37738... So 37.74%. I'll put 37.74.\n\nEvidence: -9,402 and -6,826 from balance sheet. Also note that the statement of stockholders' equity shows accumulated other comprehensive losses at Dec 31, 2015 = -9,402, 2014 = -6,826. Use those.\n\nProgram: divide(subtract(9402, 6826), 6826) but careful: we need to use absolute values. The figures as printed are -9,402 and -6,826. But we can use 9402 and 6826. The program should use the printed figures? The instruction says \"figures exactly as printed\" - they are -9,402 and -6,826. But we need to compute percentage increase in magnitude. We can do divide(subtract(9402, 6826), 6826) but that uses positive numbers. Alternatively, we can use the negative numbers: subtract(-9402, -6826) = -2576, divide by -6826? That gives 0.3774. But the program should be exact. I'll use divide(subtract(9402, 6826), 6826) but note that the printed figures are negative. The instruction says \"value exactly as printed\" - so we should use -9402 and -6826. But then subtract(-9402, -6826) = -2576, divide by -6826 = 0.3774. That works. So program: divide(subtract(-9402, -6826), -6826) = 0.3774. But the answer should be percentage, so multiply by 100? The program returns a number, we can output 37.74. The instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself\" - so we output 37.74. I'll do that.\n\nEvidence: -9,402 | Accumulated other comprehensive losses (balance sheet) ; -6,826 | Accumulated other comprehensive losses (balance sheet)\n\nLet's write.",
+ "raw_content": "<evidence>\n-9,402 | Accumulated other comprehensive losses (Consolidated Balance Sheets)\n-6,826 | Accumulated other comprehensive losses (Consolidated Balance Sheets)\n</evidence>\n\n<program>\ndivide(subtract(-9402, -6826), -6826)\n</program>\n\n<answer>37.74</answer>",
+ "usage": {
+  "prompt_tokens": 116616,
+  "completion_tokens": 863,
+  "total_tokens": 117479,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.51,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "9,402",
+   "element": "Accumulated other comprehensive losses (Consolidated Balance Sheets)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6,826",
+   "element": "Accumulated other comprehensive losses (Consolidated Balance Sheets)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(-9402, -6826), -6826)",
+ "answer_model": "37.74",
+ "program_value": 0.3773806035745678,
+ "docfinqa_row": 187
+}

@@ -1,0 +1,78 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0132",
+ "format": "markdown_pdf_plumber",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "what is the average liability for all three programs , as of december 31 , 2008 , in millions?",
+ "gold": "4.27",
+ "finqa_id": "IPG/2008/page_62.pdf-1",
+ "source_page": "page_62",
+ "ticker": "IPG",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_plumber/IPG_2008_0001193125-09-040141.md",
+ "doc_chars": 407053,
+ "prompt_chars": 407236,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 407053,
+ "original_chars": 407053,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 104214,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 222,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "4.266667",
+ "reasoning": "We need answer average liability for all three programs as of Dec 31 2008. From Note 2 restructuring programs: 2007, 2003, 2001 programs. Liability at December 31, 2008: 2007 program $1.2, 2003 $5.7, 2001 $5.9. Total $12.8. Average = (1.2+5.7+5.9)/3 = 12.8/3 = 4.266666... In millions. Need answer value. Probably 4.27. Use evidence.",
+ "raw_content": "<evidence>\n1.2 | Liability at December 31, 2008 (2007 Program)\n5.7 | Liability at December 31, 2008 (2003 Program)\n5.9 | Liability at December 31, 2008 (2001 Program)\n</evidence>\n\n<program>divide(add(1.2, add(5.7, 5.9)), 3)</program>\n\n<answer>4.27</answer>",
+ "usage": {
+  "prompt_tokens": 104525,
+  "completion_tokens": 222,
+  "total_tokens": 104747,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 104448
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.91,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1.2",
+   "element": "Liability at December 31, 2008 (2007 Program)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "5.7",
+   "element": "Liability at December 31, 2008 (2003 Program)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "5.9",
+   "element": "Liability at December 31, 2008 (2001 Program)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(1.2, add(5.7, 5.9)), 3)",
+ "answer_model": "4.27",
+ "program_value": 4.266666666666667,
+ "docfinqa_row": 132
+}

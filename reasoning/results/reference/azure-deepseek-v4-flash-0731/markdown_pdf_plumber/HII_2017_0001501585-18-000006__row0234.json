@@ -1,0 +1,53 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0234",
+ "format": "markdown_pdf_plumber",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what was the return on total assets during 2013?",
+ "gold": "4.2%",
+ "finqa_id": "HII/2017/page_47.pdf-1",
+ "source_page": "page_47",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/markdown_pdf_plumber/HII_2017_0001501585-18-000006.md",
+ "doc_chars": 479340,
+ "prompt_chars": 479477,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 479340,
+ "original_chars": 479340,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 106334,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 423,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "4.22%",
+ "reasoning": "We need to find return on total assets during 2013. Return on total assets = Net earnings / Total assets. For 2013, from selected financial data: Net earnings (loss) for 2013 = $261 million. Total assets for 2013? The table shows total assets for 2017, 2016, 2015, 2014, 2013. It lists: 2017: 6,374; 2016: 6,352; 2015: 6,024; 2014: 6,239; 2013: 6,190. So total assets 2013 = 6,190. Net earnings 2013 = 261. Return on total assets = 261 / 6190 = 0.04216... = 4.22% approximately. But the question asks \"what was the return on total assets during 2013?\" Usually return on assets is net income / average total assets, but the question might mean net income / total assets at year end. The document provides selected financial data. It doesn't specify average. Typically ROA = net income / total assets. We'll compute 261/6190 = 0.04216 = 4.22%. But check if they want percentage or decimal. The question says \"return on total assets\" - likely percentage. We'll provide 4.22% or 0.0422. The instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what was the return on total assets during 2013?\" So we can give the value. Probably as a percentage. Let's compute precisely: 261/6190 = 0.04216478... = 4.2165%. So 4.22% if rounding to two decimals. Or 4.2%. We'll give 4.22%.",
+ "raw_content": "<answer>4.22%</answer>",
+ "usage": {
+  "prompt_tokens": 106475,
+  "completion_tokens": 423,
+  "total_tokens": 106898,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 106240
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.43,
+ "answer_tag_found": true,
+ "docfinqa_row": 234
+}

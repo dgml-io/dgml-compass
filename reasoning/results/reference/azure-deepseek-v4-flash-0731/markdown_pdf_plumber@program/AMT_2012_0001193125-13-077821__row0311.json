@@ -1,0 +1,84 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0311",
+ "format": "markdown_pdf_plumber",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "what was the total reclassification of oci into income , in millions , during the years ended december 31 , 2012 , 2011 and 2010?",
+ "gold": "0.7",
+ "finqa_id": "AMT/2012/page_144.pdf-2",
+ "source_page": "page_144",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/markdown_pdf_plumber/AMT_2012_0001193125-13-077821.md",
+ "doc_chars": 584045,
+ "prompt_chars": 584263,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 584045,
+ "original_chars": 584045,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 138337,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 958,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1970",
+ "reasoning": "We need answer question: \"what was the total reclassification of oci into income , in millions , during the years ended december 31 , 2012 , 2011 and 2010?\" Need find figures. The document has statements of comprehensive income. It shows reclassification of unrealized losses on cash flow hedges to net income, net of taxes: 2012 $1,132, 2011 $225, 2010 $118 (in thousands). Also reclassification of unrealized losses on available-for-sale securities to net income: 2012 $495, 2011 $0? Actually 2011 no line? In statement: \"Reclassification of unrealized losses on available-for-sale securities to net income 495 — —\" for 2012, 2011, 2010? The table shows 2012 495, 2011 —, 2010 —. Also \"Reclassifications due to REIT Conversion\" 2011 (1,752) but that's not reclassification into income? It's other comprehensive income item. The question asks \"total reclassification of oci into income\" during years 2012, 2011, 2010. Likely sum of reclassification of unrealized losses on cash flow hedges to net income and reclassification of unrealized losses on available-for-sale securities to net income. Also there is \"Reclassification of unrealized losses on cash flow hedges to net income, net of taxes\" amounts: 2012 1,132; 2011 225; 2010 118. And \"Reclassification of unrealized losses on available-for-sale securities to net income\" 2012 495; 2011 —; 2010 —. So total for each year: 2012 = 1,132+495 = 1,627 thousand = 1.627 million. 2011 = 225 thousand = 0.225 million. 2010 = 118 thousand = 0.118 million. But question asks \"in millions\" maybe sum across all three years? \"during the years ended december 31 , 2012 , 2011 and 2010\" could mean total over those three years. Need interpret. It says \"what was the total reclassification of oci into income , in millions , during the years ended december 31 , 2012 , 2011 and 2010?\" Likely sum of reclassifications over those three years. So add 1,132+225+118+495 = 1,970 thousand = 1.97 million. But also there might be \"Reclassification of unrealized losses on available-for-sale securities to net income\" only 2012. Also \"Reclassifications due to REIT Conversion\" is not reclassification into income, it's a reclassification within OCI due to REIT conversion. So ignore. Also note \"Reclassification of unrealized losses on cash flow hedges to net income, net of taxes\" amounts are net of tax. So total reclassification into income = 1,132+225+118+495 = 1,970 thousand = 1.97 million. But question says \"in millions\" so answer 1.97. Need evidence: list figures. Use values as printed: 1,132 | Reclassification of unrealized losses on cash flow hedges to net income, net of taxes (2012); 225 | same (2011); 118 | same (2010); 495 | Reclassification of unrealized losses on available-for-sale securities to net income (2012). Program: add(1132, add(225, add(118, 495))) = 1970. Then answer 1.97 (millions). But careful: The statement of comprehensive income shows amounts in thousands. So 1,970 thousand = 1.97 million. Provide answer inside <answer>1.97</answer>.",
+ "raw_content": "<evidence>\n1,132 | Reclassification of unrealized losses on cash flow hedges to net income, net of taxes (2012)\n225 | Reclassification of unrealized losses on cash flow hedges to net income, net of taxes (2011)\n118 | Reclassification of unrealized losses on cash flow hedges to net income, net of taxes (2010)\n495 | Reclassification of unrealized losses on available-for-sale securities to net income (2012)\n</evidence>\n<program>\nadd(1132, add(225, add(118, 495)))\n</program>\n<answer>1.97</answer>",
+ "usage": {
+  "prompt_tokens": 138660,
+  "completion_tokens": 958,
+  "total_tokens": 139618,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 15.99,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,132",
+   "element": "Reclassification of unrealized losses on cash flow hedges to net income, net of taxes (2012)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "225",
+   "element": "Reclassification of unrealized losses on cash flow hedges to net income, net of taxes (2011)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "118",
+   "element": "Reclassification of unrealized losses on cash flow hedges to net income, net of taxes (2010)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "495",
+   "element": "Reclassification of unrealized losses on available-for-sale securities to net income (2012)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "add(1132, add(225, add(118, 495)))",
+ "answer_model": "1.97",
+ "program_value": 1970.0,
+ "docfinqa_row": 311
+}

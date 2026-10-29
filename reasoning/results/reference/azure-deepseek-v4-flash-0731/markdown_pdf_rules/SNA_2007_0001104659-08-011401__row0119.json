@@ -1,0 +1,50 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0119",
+ "format": "markdown_pdf_rules",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what was the percentage change in the minority interest from 2005 to 2006",
+ "gold": "-32.4%",
+ "finqa_id": "SNA/2007/page_69.pdf-3",
+ "source_page": "page_69",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_rules/SNA_2007_0001104659-08-011401.md",
+ "doc_chars": 336027,
+ "prompt_chars": 336189,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 336027,
+ "original_chars": 336027,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 81193,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 957,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-5.7%",
+ "reasoning": "We need percentage change in minority interest from 2005 to 2006. From income statement: minority interests and equity earnings (loss), net of tax: 2005 -1.4, 2006 -3.7. But note that these are net of tax and include equity earnings. The question says \"minority interest\" - likely the line item \"Minority interests and equity earnings (loss), net of tax\". But there is also a breakdown in Note 1: Minority interests $ (4.9) in 2007, (3.7) in 2006, (3.5) in 2005. So minority interests (excluding equity earnings) were -3.5 in 2005 and -3.7 in 2006. Percentage change = (-3.7 - (-3.5))/abs(-3.5) = (-0.2)/3.5 = -5.714%? Or if using the line item including equity earnings: -1.4 to -3.7, change = (-3.7 - (-1.4))/1.4 = -2.3/1.4 = -164.3%. The question says \"minority interest\" specifically, not \"minority interests and equity earnings\". The document has a line \"Minority interests and equity earnings (loss), net of tax\" but also in Note 1 a breakdown. The question likely refers to the line item on income statement. But it says \"minority interest\" singular. In the income statement, the line is \"Minority interests and equity earnings (loss), net of tax\". However, the question might be asking for the change in that line. But note that the line includes equity earnings. The breakdown shows minority interests alone: 2005 -3.5, 2006 -3.7. So percentage change = (-3.7 - (-3.5))/3.5 = -0.2/3.5 = -5.7142857% approximately -5.7%. Or if using absolute values, it's a decrease of 5.7%. The question asks \"percentage change\" so we give the number. Typically percentage change = (new - old)/old * 100. Old = -3.5, new = -3.7. (-3.7 - (-3.5)) = -0.2. -0.2 / -3.5 = 0.05714? Wait: (-0.2)/(-3.5) = 0.05714 positive? Actually -0.2 divided by -3.5 = 0.05714, so +5.7%? But that's wrong because the magnitude increased (more negative). Usually percentage change for negative numbers is ambiguous. But the question likely expects the change in the line item. However, the line item includes equity earnings. Let's check the income statement: 2005 -1.4, 2006 -3.7. That's a change of -2.3, percentage change = (-2.3)/(-1.4) = 1.6429 = 164.3% increase in magnitude? But the sign is negative. The question says \"minority interest\" not \"minority interests and equity earnings\". In the document, there is a specific line \"Minority interests and equity earnings (loss), net of tax\" but also in Note 1 they break out \"Minority interests\" and \"Equity earnings\". The question likely refers to the minority interest component. Since the question says \"minority interest\" (singular) and the document has a line \"Minority interests\" in Note 1. So I'll use that. 2005: -3.5, 2006: -3.7. Percentage change = ( -3.7 - (-3.5) ) / | -3.5 | * 100 = (-0.2)/3.5 * 100 = -5.714% approximately -5.7%. Or if they want the change in the absolute value, it's an increase of 5.7% in magnitude. But the standard percentage change formula gives -5.7% (since the value became more negative). I'll provide -5.7% or -5.71%. Let me compute exactly: -0.2/3.5 = -0.057142857 = -5.7142857%. So answer: -5.7% or -5.71%. I'll put -5.7% inside tags.",
+ "raw_content": "<answer>-5.7%</answer>",
+ "usage": {
+  "prompt_tokens": 81339,
+  "completion_tokens": 957,
+  "total_tokens": 82296,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.48,
+ "answer_tag_found": true,
+ "docfinqa_row": 119
+}

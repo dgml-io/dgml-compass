@@ -1,0 +1,70 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0566",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "as of december 31 , 2008 , what was the percent of the maturities in 2012 of the aggregate carrying value of long-term debt , including capital leases",
+ "gold": "45.3%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "AMT_2008_0001193125-09-039177.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/NotesToFinancialStatementsContinuation/ConvertibleNoteDebtInstrument/DebtMaturitySchedule"
+ ],
+ "r1_reasoning_chars": 3082,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 24141,
+  "completion_tokens": 773,
+  "total_tokens": 24914,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/NotesToFinancialStatementsContinuation/ConvertibleNoteDebtInstrument/DebtMaturitySchedule"
+ ],
+ "content_chars": 2977,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "45.297851",
+ "reasoning": "We need answer percent of maturities in 2012 of aggregate carrying value long-term debt including capital leases. Need identify figures. Table shows Year Ending December 31, amounts: 2009 $1,837; 2010 60,989; 2011 1,018; 2012 1,962,822; 2013 646; Thereafter 2,305,054; Total cash obligations 4,332,366; Unamortized discounts and premiums, net 780; Balance as of Dec 31, 2008 $4,333,146. Question: \"as of december 31, 2008, what was the percent of the maturities in 2012 of the aggregate carrying value of long-term debt, including capital leases\" The aggregate carrying value is likely Balance as of Dec 31, 2008 $4,333,146 (in thousands). Maturities in 2012 is $1,962,822. Percent = 1,962,822 / 4,333,146 * 100. Compute. Let's calculate. 1,962,822 / 4,333,146 ≈ 0.45298? 4,333,146 * 0.45 = 1,949,915.7; difference 12,906.3; /4,333,146=0.002978; total 0.452978 => 45.2978%. So answer 45.3% maybe. Need evidence figures. Use exact printed values. Program: multiply(divide(1962822, 4333146), 100). Note table amounts in thousands but ratio same. Need answer only value inside tags.",
+ "raw_content": "<evidence>1,962,822 | MaturityScheduleAmount: 2012\n4,333,146 | LongTermDebtBalance: Balance as of December 31, 2008</evidence>\n<program>multiply(divide(1962822, 4333146), 100)</program>\n<answer>45.3</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1148,
+  "completion_tokens": 430,
+  "total_tokens": 1578,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,962,822",
+   "element": "MaturityScheduleAmount: 2012",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "4,333,146",
+   "element": "LongTermDebtBalance: Balance as of December 31, 2008",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(1962822, 4333146), 100)",
+ "answer_model": "45.3",
+ "program_value": 45.29785056861689,
+ "elapsed_s": 6.11,
+ "outline_source": "AMT_2008_0001193125-09-039177.outline.txt",
+ "outline_chars": 96437
+}

@@ -1,0 +1,50 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0322",
+ "format": "markdown_pdf_poppler",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was the change in millions of total long-term debt net from 2014 to 2015?",
+ "gold": "9119",
+ "finqa_id": "LMT/2015/page_99.pdf-3",
+ "source_page": "page_99",
+ "ticker": "LMT",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_poppler/LMT_2015_0001193125-16-476010.md",
+ "doc_chars": 575312,
+ "prompt_chars": 575479,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 575312,
+ "original_chars": 575312,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 107004,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 327,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "9,119",
+ "reasoning": "We need the change in total long-term debt net from 2014 to 2015. From balance sheet: long-term debt, net at Dec 31, 2015 = $14,305 million? Wait, the balance sheet shows \"Long-term debt, net\" line: 14,305 for 2015 and 6,142 for 2014. But note 10 says total long-term debt, net was $15,261 and $6,142. Actually the balance sheet line is \"Long-term debt, net\" but there is also current maturities of long-term debt. The question says \"total long-term debt net\" - likely the total debt net including current maturities? The balance sheet has \"Current maturities of long-term debt\" 956 in 2015, 0 in 2014. And \"Long-term debt, net\" 14,305 in 2015, 6,142 in 2014. So total debt net = current + long-term = 956+14,305=15,261 for 2015, and 0+6,142=6,142 for 2014. Change = 15,261 - 6,142 = 9,119 million. Alternatively, note 10 says total long-term debt, net was $15,261 and $6,142. So change is 9,119. The question asks \"change in millions of total long-term debt net from 2014 to 2015\" so answer 9,119.",
+ "raw_content": "<answer>9,119</answer>",
+ "usage": {
+  "prompt_tokens": 107154,
+  "completion_tokens": 327,
+  "total_tokens": 107481,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.0,
+ "answer_tag_found": true,
+ "docfinqa_row": 322
+}

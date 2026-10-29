@@ -1,0 +1,53 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0514",
+ "format": "dgml_compact",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was the change in the total long-term debt net from 2014 to 2015 in millions",
+ "gold": "9119",
+ "finqa_id": "LMT/2015/page_99.pdf-1",
+ "source_page": "page_99",
+ "ticker": "LMT",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml_compact/LMT_2015_0001193125-16-476010.dgml.txt",
+ "doc_chars": 620939,
+ "prompt_chars": 621109,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 620939,
+ "original_chars": 620939,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 127470,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 284,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "9,119",
+ "reasoning": "We need the change in total long-term debt net from 2014 to 2015. From balance sheet: Long-term debt, net 2015: 14,305; 2014: 6,142. Also current maturities of long-term debt 2015: 956; 2014: 0. Total debt net? The question says \"total long-term debt net\" - likely the line item \"Long-term debt, net\" on balance sheet. But also note in selected financial data: Total debt, net (e) 2015: 15,261; 2014: 6,142. That includes current maturities? Actually selected data shows Total debt, net 15,261 for 2015, 6,142 for 2014. The balance sheet shows current maturities 956 and long-term debt net 14,305, sum 15,261. So total debt net is 15,261 in 2015, 6,142 in 2014. Change = 15,261 - 6,142 = 9,119 million. The question says \"total long-term debt net\" - could be interpreted as the total debt net. The selected data explicitly labels \"Total debt, net (e)\" with values. So change is 9,119.",
+ "raw_content": "<answer>9,119</answer>",
+ "usage": {
+  "prompt_tokens": 127620,
+  "completion_tokens": 284,
+  "total_tokens": 127904,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 127488
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.56,
+ "answer_tag_found": true,
+ "docfinqa_row": 514
+}

@@ -1,0 +1,72 @@
+{
+ "id": "IP_2007_0001193125-08-042850__row0682",
+ "key": "IP_2007_0001193125-08-042850",
+ "question": "what percentage of december 31 , 2007 , total future minimum commitments under existing non-cancelable operating leases and purchase obligations were due to lease obligations for the year of 2008?",
+ "gold": "7%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "IP_2007_0001193125-08-042850.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/CommitmentsAndContingentLiabilities/table",
+  "/chunk/CommitmentsAndContingentLiabilities/FutureMinimumCommitments"
+ ],
+ "r1_reasoning_chars": 2329,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 35316,
+  "completion_tokens": 587,
+  "total_tokens": 35903,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/CommitmentsAndContingentLiabilities/table",
+  "/chunk/CommitmentsAndContingentLiabilities/FutureMinimumCommitments"
+ ],
+ "content_chars": 2618,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "6.510292",
+ "reasoning": "We need answer percentage. Need compute lease obligations 2008 / total future minimum commitments? The table shows total future minimum commitments under existing non-cancelable operating leases and purchase obligations. At Dec 31 2007, total future minimum commitments were as follows: table with 2008 etc. Lease obligations 2008 = $136. Total 2008 = $2,089. Percentage = 136 / 2089 * 100 = 6.51%. Need evidence figures. Use exact printed values. Program divide(136, 2089) then multiply by 100? The question asks percentage, so answer numeric percent. Program should compute percentage. Use multiply(divide(136, 2089), 100). Need evidence list.",
+ "raw_content": "<evidence>\n$ 136 | LeaseObligationAmount (2008)\n$2,089 | ContractualObligationsTotal (2008)\n</evidence>\n<program>multiply(divide(136, 2089), 100)</program>\n<answer>6.51</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1017,
+  "completion_tokens": 217,
+  "total_tokens": 1234,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 136",
+   "element": "LeaseObligationAmount (2008)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$2,089",
+   "element": "ContractualObligationsTotal (2008)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(136, 2089), 100)",
+ "answer_model": "6.51",
+ "program_value": 6.510292005744375,
+ "elapsed_s": 5.23,
+ "outline_source": "IP_2007_0001193125-08-042850.outline.txt",
+ "outline_chars": 139969
+}

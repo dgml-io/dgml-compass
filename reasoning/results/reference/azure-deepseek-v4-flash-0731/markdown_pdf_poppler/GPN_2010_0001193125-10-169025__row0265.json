@@ -1,0 +1,53 @@
+{
+ "id": "GPN_2010_0001193125-10-169025__row0265",
+ "format": "markdown_pdf_poppler",
+ "key": "GPN_2010_0001193125-10-169025",
+ "question": "what is the total fair value of non-vested shares as of may 31 , 2010?",
+ "gold": "29946",
+ "finqa_id": "GPN/2010/page_89.pdf-2",
+ "source_page": "page_89",
+ "ticker": "GPN",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/markdown_pdf_poppler/GPN_2010_0001193125-10-169025.md",
+ "doc_chars": 416799,
+ "prompt_chars": 416958,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 416799,
+ "original_chars": 416799,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 71861,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 292,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "29946000",
+ "reasoning": "We need to find the total fair value of non-vested shares as of May 31, 2010. The document mentions restricted stock awards. In Note 11, there is a table for non-vested restricted stock awards. It shows shares and weighted average grant-date fair value. As of May 31, 2010, non-vested shares = 713 thousand, weighted average grant-date fair value = $42. So total fair value = 713,000 * $42 = $29,946,000. But the question asks \"total fair value of non-vested shares\" - likely that product. However, the table shows \"Non-vested at May 31, 2010\" with shares 713 and weighted average fair value $42. So total fair value = 713 * 42 = 29,946 (in thousands) = $29,946,000. But check if there are other non-vested shares like options? The question says \"non-vested shares\" - likely restricted stock. The document also mentions unvested options but those are options, not shares. So answer is $29,946,000. But the question might expect in thousands? It says \"total fair value\" - we can give in dollars. The answer should be just the value. I'll put 29946000.",
+ "raw_content": "<answer>29946000</answer>",
+ "usage": {
+  "prompt_tokens": 72012,
+  "completion_tokens": 292,
+  "total_tokens": 72304,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 71936
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.03,
+ "answer_tag_found": true,
+ "docfinqa_row": 265
+}

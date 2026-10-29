@@ -1,0 +1,53 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0450",
+ "format": "dgml",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "is the weighted average useful life ( years ) for trademarks greater than customer contracts and relationships?",
+ "gold": "no",
+ "finqa_id": "ADBE/2008/page_74.pdf-3",
+ "source_page": "page_74",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml/ADBE_2008_0000796343-09-000007.dgml.xml",
+ "doc_chars": 800179,
+ "prompt_chars": 800379,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 800179,
+ "original_chars": 800179,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 183166,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 261,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "No",
+ "reasoning": "The question asks: \"is the weighted average useful life (years) for trademarks greater than customer contracts and relationships?\"\n\nI need to find the weighted average useful life for trademarks and customer contracts and relationships. This is in the \"Intangible Assets\" section of the notes to consolidated financial statements.\n\nLooking at the document, there's a table:\n\"Intangible Assets\nOur intangible assets are amortized over their estimated useful lives of 1 to 13 years as shown in the table below. Amortization is based on the pattern in which the economic benefits of the intangible asset will be consumed.\n\nWeighted Average Useful Life (Years)\nPurchased technology 4\nLocalization 1\nTrademarks 5\nCustomer contracts and relationships 6\nOther intangibles 3\"\n\nSo trademarks = 5 years, customer contracts and relationships = 6 years.\n\n5 is not greater than 6. So the answer is No.\n\nThe question asks \"is the weighted average useful life (years) for trademarks greater than customer contracts and relationships?\" - answer is No.\n\nI should just give the value. The question is a yes/no question. So answer \"No\" or \"NOT_FOUND\"? The document has the info, so answer \"No\".",
+ "raw_content": "<answer>No</answer>",
+ "usage": {
+  "prompt_tokens": 183312,
+  "completion_tokens": 261,
+  "total_tokens": 183573,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 183040
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.87,
+ "answer_tag_found": true,
+ "docfinqa_row": 450
+}

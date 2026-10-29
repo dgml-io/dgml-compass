@@ -1,0 +1,53 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0744",
+ "format": "dgml_compact",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "what was the difference in operating margin between 2012 and 2013?",
+ "gold": ".1%",
+ "finqa_id": "LMT/2014/page_50.pdf-3",
+ "source_page": "page_50",
+ "ticker": "LMT",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/dgml_compact/LMT_2014_0001193125-15-038681.dgml.txt",
+ "doc_chars": 524480,
+ "prompt_chars": 524635,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 524480,
+ "original_chars": 524480,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 107424,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 741,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.53",
+ "reasoning": "We need to find operating margins for 2012 and 2013. The document provides segment operating margins, but the question likely refers to consolidated operating margin? The question says \"operating margin\" without specifying segment. In the document, there is a table \"Selected Financial Data\" with operating profit and net sales. For 2012 and 2013, we can compute operating margin as operating profit / net sales. From the consolidated results: 2013 operating profit = 4,505, net sales = 45,358 => margin = 4505/45358 ≈ 9.93%. 2012 operating profit = 4,434, net sales = 47,182 => margin = 4434/47182 ≈ 9.40%. Difference = 0.53 percentage points. But the question might be about a specific segment? The document has segment operating margins for each segment. For example, Aeronautics: 2013 11.4%, 2012 11.4% difference 0. But the question is ambiguous. Typically in such filings, \"operating margin\" refers to consolidated. The question asks \"what was the difference in operating margin between 2012 and 2013?\" It might be asking for the change in percentage points. Let's compute exactly: 2013: 4505/45358 = 0.09932... 2012: 4434/47182 = 0.09398... difference = 0.00534 = 0.534 percentage points. But the document also provides operating margins for segments. However, the question does not specify segment. Given the context, it's likely consolidated. Also, the document has a table \"Selected Financial Data\" with operating profit and net sales. So we can compute. Alternatively, the document might have a direct statement? I don't see a direct consolidated operating margin figure. So we compute.\n\nLet's compute precisely: 4505/45358 = 0.09932 (approx 9.93%). 4434/47182 = 0.09398 (approx 9.40%). Difference = 0.00534 = 0.53 percentage points. But the question might expect a number like 0.5% or 0.53%. Let's see if there is any other interpretation. The question says \"difference in operating margin between 2012 and 2013\" - could be 2013 minus 2012. So 9.93% - 9.40% = 0.53%. Or maybe they want the absolute difference in percentage points. I'll provide 0.53.\n\nBut let's double-check the numbers: From the consolidated results table: 2013 net sales 45,358, operating profit 4,505. 2012 net sales 47,182, operating profit 4,434. Yes.\n\nSo answer: 0.53 percentage points. But the instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what was the difference\" so we can give a number. I'll put 0.53. But to be safe, maybe they want the difference in percentage points, so 0.53. Alternatively, if they want the difference in margin as a percentage change? No, \"difference in operating margin\" typically means the change in the margin percentage. So 0.53 percentage points.\n\nI'll answer 0.53.",
+ "raw_content": "<answer>0.53</answer>",
+ "usage": {
+  "prompt_tokens": 107568,
+  "completion_tokens": 741,
+  "total_tokens": 108309,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 107520
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.06,
+ "answer_tag_found": true,
+ "docfinqa_row": 744
+}

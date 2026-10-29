@@ -1,0 +1,53 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0575",
+ "format": "markdown_pdf_rules",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "what is the yearly amortization rate for the trademarks?",
+ "gold": "20%",
+ "finqa_id": "ADBE/2008/page_74.pdf-4",
+ "source_page": "page_74",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_rules/ADBE_2008_0000796343-09-000007.md",
+ "doc_chars": 443328,
+ "prompt_chars": 443473,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 443328,
+ "original_chars": 443328,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 95226,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 305,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "20%",
+ "reasoning": "We need to find the yearly amortization rate for trademarks. The document mentions trademarks in the intangible assets section. In Note 5, there is a table of purchased and other intangible assets. It shows trademarks with cost, accumulated amortization, and net. But we need the yearly amortization rate. The weighted average useful life for trademarks is given in Note 1: \"Trademarks 5\" years. So the yearly amortization rate would be 1/5 = 20% per year. However, the question asks for \"yearly amortization rate\" - likely the percentage. Alternatively, it might ask for the annual amortization expense? But the wording \"rate\" suggests percentage. The document states: \"Our intangible assets are amortized over their estimated useful lives of 1 to 13 years as shown in the table below. Amortization is based on the pattern in which the economic benefits of the intangible asset will be consumed.\" And the table shows \"Trademarks 5\" years. So the yearly amortization rate is 1/5 = 20%. But we should check if there is any other mention. The question: \"what is the yearly amortization rate for the trademarks?\" So answer 20%. But we need to be careful: the document might have a specific rate. Alternatively, it might be the annual amortization expense? But the question says \"rate\" so it's a percentage. So answer 20%.",
+ "raw_content": "<answer>20%</answer>",
+ "usage": {
+  "prompt_tokens": 95365,
+  "completion_tokens": 305,
+  "total_tokens": 95670,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 95232
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.0,
+ "answer_tag_found": true,
+ "docfinqa_row": 575
+}

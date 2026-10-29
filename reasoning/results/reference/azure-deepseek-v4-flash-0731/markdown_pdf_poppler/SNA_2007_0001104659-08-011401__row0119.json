@@ -1,0 +1,50 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0119",
+ "format": "markdown_pdf_poppler",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what was the percentage change in the minority interest from 2005 to 2006",
+ "gold": "-32.4%",
+ "finqa_id": "SNA/2007/page_69.pdf-3",
+ "source_page": "page_69",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_poppler/SNA_2007_0001104659-08-011401.md",
+ "doc_chars": 416845,
+ "prompt_chars": 417007,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 416845,
+ "original_chars": 416845,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 79065,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 818,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "5.71%",
+ "reasoning": "We need to find minority interest figures for 2005 and 2006. From the income statement: \"Minority interests and equity earnings (loss), net of tax\" for 2006 is -3.7, for 2005 is -1.4. But note that this line includes both minority interests and equity earnings. However, in Note 1, it breaks down: minority interests were -3.7 in 2006 and -3.5 in 2005? Actually the note says: \"Minority interests of $3.7 million in 2006 and $3.5 million in 2005\" but that's the amount previously included in other income? Let's read carefully.\n\nIn Note 1: \"Minority interests of $3.7 million in 2006 and $3.5 million in 2005, and pretax earnings of unconsolidated affiliates of $2.1 million in 2005, all previously included in 'Other income (expense) — net,' are being presented after 'Earnings before minority interests and equity earnings (loss).'\"\n\nSo the line \"Minority interests and equity earnings (loss), net of tax\" is the sum of minority interests and equity earnings. For 2006: -3.7 (minority) + 0 (equity) = -3.7. For 2005: -3.5 (minority) + 2.1 (equity) = -1.4. So the minority interest alone for 2005 is -3.5, for 2006 is -3.7. The question asks \"percentage change in the minority interest from 2005 to 2006\". So we need to compute ( -3.7 - (-3.5) ) / | -3.5 | * 100? Or percentage change typically (new - old)/old * 100. Since both are negative, the change is -0.2, so percentage change = (-0.2)/(-3.5)*100 = 5.714%? But careful: percentage change is usually (new - old)/old * 100. So (-3.7 - (-3.5)) = -0.2, divided by -3.5 = 0.05714, times 100 = 5.714%. But since it's negative to negative, the magnitude increased by 5.7%? Actually the absolute value increased from 3.5 to 3.7, so it's a 5.7% increase in magnitude. But the sign is negative, so the percentage change in the value is +5.7%? Typically we report the change in the value, so it's ( -3.7 - (-3.5) ) / (-3.5) = (-0.2)/(-3.5) = 0.0571 = 5.71%. So the answer is 5.71% or approximately 5.7%. But the question might expect a specific number. Let's check if there is any other mention. The document also has a table in Note 1 that shows minority interests separately: \"Minority interests $ (4.9) in 2007, (3.7) in 2006, (3.5) in 2005\" and equity earnings 2.4, 0, 2.1. So indeed minority interest for 2005 is -3.5, for 2006 is -3.7. So percentage change = ( -3.7 - (-3.5) ) / (-3.5) * 100 = ( -0.2 / -3.5 ) * 100 = 5.7142857... So answer: 5.71% or 5.7%. I'll put 5.71% inside the answer tags.",
+ "raw_content": "<answer>5.71%</answer>",
+ "usage": {
+  "prompt_tokens": 79212,
+  "completion_tokens": 818,
+  "total_tokens": 80030,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.18,
+ "answer_tag_found": true,
+ "docfinqa_row": 119
+}

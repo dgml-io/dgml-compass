@@ -1,0 +1,53 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0369",
+ "format": "dgml",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what is the percentage difference in the fair value per share between 2015 and 2016?",
+ "gold": "71%",
+ "finqa_id": "EW/2016/page_94.pdf-3",
+ "source_page": "page_94",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/dgml/EW_2016_0001099800-17-000008.dgml.xml",
+ "doc_chars": 575186,
+ "prompt_chars": 575359,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 575186,
+ "original_chars": 575186,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 133782,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 274,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "70.99%",
+ "reasoning": "We need answer percentage difference in fair value per share between 2015 and 2016. Which fair value per share? Likely option awards fair value per share: 2016 $31.00, 2015 $18.13. Percentage difference = (31-18.13)/18.13 = 12.87/18.13 = 0.7099 = 70.99% increase. Or maybe ESPP fair value per share: 2016 $22.09, 2015 $15.59 => (22.09-15.59)/15.59=6.5/15.59=41.69%. Question says \"the fair value per share\" without specifying. In document there are two: Option Awards and ESPP. But likely refers to option awards because \"fair value, per share\" in option awards table. Also market-based RSU? No per share. The question: \"what is the percentage difference in the fair value per share between 2015 and 2016?\" Could be from option awards. Need compute percentage difference. Usually percentage difference = (2016-2015)/2015 *100 = 70.99%. Or maybe percentage change from 2015 to 2016. Answer with value.",
+ "raw_content": "<answer>70.99%</answer>",
+ "usage": {
+  "prompt_tokens": 133930,
+  "completion_tokens": 274,
+  "total_tokens": 134204,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 133888
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.91,
+ "answer_tag_found": true,
+ "docfinqa_row": 369
+}

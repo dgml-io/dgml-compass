@@ -1,0 +1,50 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0369",
+ "format": "markdown_pdf_plumber",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what is the percentage difference in the fair value per share between 2015 and 2016?",
+ "gold": "71%",
+ "finqa_id": "EW/2016/page_94.pdf-3",
+ "source_page": "page_94",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf_plumber/EW_2016_0001099800-17-000008.md",
+ "doc_chars": 348684,
+ "prompt_chars": 348857,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 348684,
+ "original_chars": 348684,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 82552,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 844,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "70.99%",
+ "reasoning": "We need to find the fair value per share for 2015 and 2016. The document mentions \"fair value, per share\" for option awards and ESPP. The question likely refers to the fair value per share of stock options granted. In Note 13, there is a table for Option Awards: 2016 fair value per share $31.00, 2015 $18.13. Also ESPP: 2016 $22.09, 2015 $15.59. The question says \"the fair value per share\" without specifying which. Typically, it might refer to the option awards. But let's check the context. The question: \"what is the percentage difference in the fair value per share between 2015 and 2016?\" It could be for the option awards. We need to compute percentage difference. Usually percentage difference is (new - old)/old * 100. So (31.00 - 18.13)/18.13 * 100 = (12.87/18.13)*100 ≈ 70.99%. Or maybe they want the percentage change. Alternatively, if they mean the difference as a percentage of the average? But typically \"percentage difference\" might mean the relative change. Let's compute for option awards: 31.00 vs 18.13. Difference = 12.87. Percentage = 12.87/18.13 = 0.7099 -> 70.99%. For ESPP: 22.09 vs 15.59 -> difference 6.50, percentage = 6.50/15.59 = 0.4169 -> 41.69%. The question says \"the fair value per share\" singular. In the document, there are two tables. The most prominent is the option awards. Also, the question might be from a financial analysis perspective. I'll assume it's the option awards. But let's see if there is any other mention. The question is vague. However, the document also has \"fair value, per share\" for options and ESPP. Since the question says \"between 2015 and 2016\" and the document has both, but the option awards are more commonly referenced. I'll compute for option awards. Alternatively, maybe they want the percentage difference in the fair value of the company's stock? But that is not \"fair value per share\" of the company's stock; it's the market price. The question says \"fair value per share\" which is a term used in the option pricing. So I'll go with option awards.\n\nLet me compute precisely: (31.00 - 18.13) / 18.13 = 12.87 / 18.13 = 0.70987... so 70.99% approximately. I'll round to 71% or 70.99%. The answer should be a number. I'll put 70.99% or 71%. The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for percentage difference, so we can give a percentage. I'll give 70.99% or 71%. I'll compute exactly: 12.87/18.13 = 0.70987... so 70.99%. I'll put 70.99%.\n\nBut let me double-check if there is any other fair value per share. In the document, there is also \"fair value, per share\" for ESPP. But the question might be ambiguous. However, the most likely is the option awards because it's the first table. Also, the question might be from a test where they expect the option awards. I'll answer with that.\n\nAlternatively, if they meant the fair value of the company's common stock? But that is not called \"fair value per share\" in the document; it's market price. So I'll stick with option awards.\n\nThus, answer: 70.99% or 71%. I'll put 70.99%.",
+ "raw_content": "<answer>70.99%</answer>",
+ "usage": {
+  "prompt_tokens": 82701,
+  "completion_tokens": 844,
+  "total_tokens": 83545,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.78,
+ "answer_tag_found": true,
+ "docfinqa_row": 369
+}

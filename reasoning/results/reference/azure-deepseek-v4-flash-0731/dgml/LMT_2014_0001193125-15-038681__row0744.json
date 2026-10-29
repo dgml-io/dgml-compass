@@ -1,0 +1,53 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0744",
+ "format": "dgml",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "what was the difference in operating margin between 2012 and 2013?",
+ "gold": ".1%",
+ "finqa_id": "LMT/2014/page_50.pdf-3",
+ "source_page": "page_50",
+ "ticker": "LMT",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/dgml/LMT_2014_0001193125-15-038681.dgml.xml",
+ "doc_chars": 698763,
+ "prompt_chars": 698918,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 698763,
+ "original_chars": 698763,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 156682,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 642,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.53",
+ "reasoning": "We need to find operating margins for 2012 and 2013. The document provides segment operating margins, but the question likely refers to consolidated operating margin. However, the question says \"operating margin\" without specifying segment. In the document, there is a table of selected financial data with operating profit and net sales. Operating margin = operating profit / net sales. For 2012: operating profit 4,434, net sales 47,182 => margin = 4434/47182 = 0.09398... = 9.40% approx. For 2013: operating profit 4,505, net sales 45,358 => margin = 4505/45358 = 0.09932... = 9.93% approx. Difference = 9.93% - 9.40% = 0.53 percentage points. But the question asks \"difference in operating margin between 2012 and 2013\" - could be absolute difference. Alternatively, they might want the difference in percentage points. Let's compute precisely: 4434/47182 = 0.09398, 4505/45358 = 0.09932, difference = 0.00534 = 0.534 percentage points. But maybe they want the difference as a percentage change? The question says \"difference in operating margin\" - likely the absolute difference in percentage points. However, the document also provides segment operating margins for each segment. But the question is generic. Since it's a financial document, likely they want consolidated operating margin. Let's check if there is any explicit operating margin figure. In the MD&A, they mention expected 2015 segment operating profit margin, but not historical consolidated. So we compute from the table. The difference is 0.53 percentage points. But we need to be careful: the question might be asking for the difference between 2012 and 2013 operating margins, which could be 2013 minus 2012. So answer: 0.53% (or 0.5 percentage points). Let's compute exactly: 4505/45358 = 0.09932, 4434/47182 = 0.09398, difference = 0.00534 = 0.534%. So answer 0.53% (or 0.5). But the question asks \"what was the difference\" - likely they want the numeric value. I'll provide 0.53 percentage points. However, the instruction says \"Give your final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for the difference, so we can give the number. I'll give 0.53. But to be safe, maybe they want the difference in percentage points, so 0.53. Let's see if there is any other interpretation. The document also has segment operating margins for each segment, but the question doesn't specify segment. So consolidated is appropriate. I'll answer 0.53.",
+ "raw_content": "<answer>0.53</answer>",
+ "usage": {
+  "prompt_tokens": 156826,
+  "completion_tokens": 642,
+  "total_tokens": 157468,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 156672
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.71,
+ "answer_tag_found": true,
+ "docfinqa_row": 744
+}

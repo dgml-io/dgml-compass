@@ -1,0 +1,53 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0387",
+ "format": "markdown_pdf",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what is the percent change in the fair value per share between 2014 and 2016?",
+ "gold": "163%",
+ "finqa_id": "EW/2016/page_94.pdf-4",
+ "source_page": "page_94",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf/EW_2016_0001099800-17-000008.md",
+ "doc_chars": 319199,
+ "prompt_chars": 319365,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 319199,
+ "original_chars": 319199,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 73274,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 523,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "163.83%",
+ "reasoning": "We need to find fair value per share for 2014 and 2016. The document mentions \"Fair value, per share\" for option awards and ESPP. For option awards: 2014: $11.75, 2016: $31.00. For ESPP: 2014: $8.59, 2016: $22.09. The question says \"fair value per share\" without specifying which. Likely refers to option awards? Or maybe the stock price? But the question says \"fair value per share\" - in the context of the document, there are multiple fair values. However, the question likely refers to the fair value per share of stock options granted? Or maybe the market price? The document has market price high/low. But \"fair value per share\" appears in the stock-based compensation section. The question: \"what is the percent change in the fair value per share between 2014 and 2016?\" It might be ambiguous. But typically in such documents, \"fair value per share\" refers to the fair value of option awards. Let's check: In Note 13, under Option Awards, they list \"Fair value, per share\" for 2016, 2015, 2014: $31.00, $18.13, $11.75. So percent change from 2014 to 2016: (31.00 - 11.75)/11.75 = 19.25/11.75 = 1.6383... = 163.83% increase. Alternatively, if they meant ESPP, (22.09-8.59)/8.59 = 13.5/8.59 = 1.5716 = 157.16%. But the question says \"fair value per share\" without specifying. Usually in financial documents, \"fair value per share\" for options is common. Also the question might be about the stock price? But they say \"fair value per share\" not \"market price\". I'll go with option awards. The answer should be a percentage. The question asks \"what is the percent change\" so we give the number. I'll compute: (31.00 - 11.75)/11.75 = 19.25/11.75 = 1.638297872... = 163.83% approximately. So answer: 163.83% or 163.8%. I'll put the value inside tags.",
+ "raw_content": "<answer>163.83%</answer>",
+ "usage": {
+  "prompt_tokens": 73422,
+  "completion_tokens": 523,
+  "total_tokens": 73945,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 73216
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.46,
+ "answer_tag_found": true,
+ "docfinqa_row": 387
+}

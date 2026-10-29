@@ -1,0 +1,53 @@
+{
+ "id": "ILMN_2008_0000936392-09-000092__row0667",
+ "format": "dgml",
+ "key": "ILMN_2008_0000936392-09-000092",
+ "question": "what was the percent of the growth in the company made matching contributions from 2007 to 2008",
+ "gold": "85.7%",
+ "finqa_id": "ILMN/2008/page_86.pdf-2",
+ "source_page": "page_86",
+ "ticker": "ILMN",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml/ILMN_2008_0000936392-09-000092.dgml.xml",
+ "doc_chars": 555372,
+ "prompt_chars": 555556,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 555372,
+ "original_chars": 555372,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 127234,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 168,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "85.7%",
+ "reasoning": "We need answer percent growth in matching contributions from 2007 to 2008. Document: \"During the years ended December 28, 2008, December 30, 2007 and December 31, 2006, the Company made matching contributions of $2.6 million, $1.4 million and $0.4 million, respectively.\" So 2007 $1.4M, 2008 $2.6M. Growth = (2.6-1.4)/1.4 = 1.2/1.4 = 0.857142857 = 85.7142857%. So answer 85.7% or 86%. Need final answer inside tags only value. Probably 85.7%.",
+ "raw_content": "<answer>85.7%</answer>",
+ "usage": {
+  "prompt_tokens": 127384,
+  "completion_tokens": 168,
+  "total_tokens": 127552,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 127232
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.07,
+ "answer_tag_found": true,
+ "docfinqa_row": 667
+}

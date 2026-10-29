@@ -1,0 +1,74 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0303",
+ "format": "markdown_pdf_plumber",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what is the percentage difference in the fair value per share between 2014 and 2015?",
+ "gold": "54%",
+ "finqa_id": "EW/2016/page_94.pdf-2",
+ "source_page": "page_94",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf_plumber/EW_2016_0001099800-17-000008.md",
+ "doc_chars": 348684,
+ "prompt_chars": 348857,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 348684,
+ "original_chars": 348684,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 82552,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 410,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "54.2979%",
+ "reasoning": "We need answer percentage difference in fair value per share between 2014 and 2015. Need identify fair value per share. In document, there are fair values per share for options granted and ESPP. Question likely refers to fair value per share of option awards? The table \"Option Awards\" has Fair value, per share: 2016 $31.00, 2015 $18.13, 2014 $11.75. Also ESPP fair value per share: 2016 $22.09, 2015 $15.59, 2014 $8.59. Which one? Question says \"fair value per share\" without specifying. Likely from stock option table. Need percentage difference between 2014 and 2015. Compute (18.13 - 11.75)/11.75 = 6.38/11.75 = 0.54298... = 54.3% increase. Or if percentage difference relative to 2015? Usually \"percentage difference between 2014 and 2015\" could mean change from 2014 to 2015. Need answer. Let's compute exactly: 18.13 - 11.75 = 6.38. 6.38 / 11.75 = 0.5429787... = 54.3%. So answer 54.3%. But need evidence. Use figures from Option Awards table. Also maybe ESPP? But question likely from context of fair value per share in stock option table. We'll cite.\n\nNeed final answer inside <answer> tags only value. Also evidence and program.",
+ "raw_content": "<evidence>\n$ 18.13 | Option Awards Fair value, per share 2015\n$ 11.75 | Option Awards Fair value, per share 2014\n</evidence>\n\n<program>\ndivide(subtract(18.13, 11.75), 11.75)\n</program>\n\n<answer>54.3%</answer>",
+ "usage": {
+  "prompt_tokens": 82860,
+  "completion_tokens": 410,
+  "total_tokens": 83270,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 14.27,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 18.13",
+   "element": "Option Awards Fair value, per share 2015",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$ 11.75",
+   "element": "Option Awards Fair value, per share 2014",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(subtract(18.13, 11.75), 11.75)",
+ "answer_model": "54.3%",
+ "program_value": 0.5429787234042552,
+ "docfinqa_row": 303
+}

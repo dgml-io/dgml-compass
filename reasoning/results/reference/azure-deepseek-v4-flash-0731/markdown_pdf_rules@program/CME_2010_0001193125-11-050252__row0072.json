@@ -1,0 +1,73 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0072",
+ "format": "markdown_pdf_rules",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "what is the estimated percentage of revolving credit facility in relation with the total senior credit facility in millions?",
+ "gold": "67.5%",
+ "finqa_id": "CME/2010/page_69.pdf-2",
+ "source_page": "page_69",
+ "ticker": "CME",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/markdown_pdf_rules/CME_2010_0001193125-11-050252.md",
+ "doc_chars": 415699,
+ "prompt_chars": 415912,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 415699,
+ "original_chars": 415699,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93329,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 243,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "67.5357%",
+ "reasoning": "We need answer question: \"what is the estimated percentage of revolving credit facility in relation with the total senior credit facility in millions?\" Need find figures. Document mentions senior credit facility $1.4 billion, including term loan $420.5 million and revolving credit facility $945.5 million. Also new $1.0 billion multi-currency revolving senior credit facility. Question asks \"estimated percentage of revolving credit facility in relation with the total senior credit facility in millions?\" Likely revolving credit facility $945.5 million out of total $1.4 billion. Percentage = 945.5 / 1400 = 67.5357% ~67.5%. Need evidence figures. Use exact numbers. Also maybe \"excess borrowing capacity for general corporate purposes of approximately $945.5 million\" and \"senior credit facility $1.4 billion\". Let's compute.",
+ "raw_content": "<evidence>\n$945.5 million | revolving credit facility (senior credit facility description)\n$1.4 billion | senior credit facility (senior credit facility description)\n</evidence>\n\n<program>divide(945.5, 1400)</program>\n\n<answer>67.5%</answer>",
+ "usage": {
+  "prompt_tokens": 93636,
+  "completion_tokens": 243,
+  "total_tokens": 93879,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 93440
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.29,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$945.5 million",
+   "element": "revolving credit facility (senior credit facility description)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$1.4 billion",
+   "element": "senior credit facility (senior credit facility description)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(945.5, 1400)",
+ "answer_model": "67.5%",
+ "program_value": 0.6753571428571429,
+ "docfinqa_row": 72
+}

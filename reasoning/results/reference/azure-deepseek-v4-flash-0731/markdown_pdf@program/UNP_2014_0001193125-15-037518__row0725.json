@@ -1,0 +1,74 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0725",
+ "format": "markdown_pdf",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "what was the percentage change in total expense for repairs and maintenance from 2012 to 2013?",
+ "gold": "10%",
+ "finqa_id": "UNP/2014/page_75.pdf-3",
+ "source_page": "page_75",
+ "ticker": "UNP",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf/UNP_2014_0001193125-15-037518.md",
+ "doc_chars": 332985,
+ "prompt_chars": 333168,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 332985,
+ "original_chars": 332985,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 78220,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 301,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "9.5238%",
+ "reasoning": "We need answer percentage change in total expense for repairs and maintenance from 2012 to 2013. Need find figures. Document says: \"Total expense for repairs and maintenance incurred was $2.4 billion for 2014, $2.3 billion for 2013, and $2.1 billion for 2012.\" So 2013 = 2.3 billion, 2012 = 2.1 billion. Percentage change = (2.3-2.1)/2.1 = 0.2/2.1 = 9.5238% approx 9.5%. Need evidence figures as printed: \"$2.4 billion for 2014, $2.3 billion for 2013, and $2.1 billion for 2012\" but exact values? They are in text. Use 2.3 and 2.1. Program divide(subtract(2.3,2.1),2.1). Answer maybe 9.52% or 9.5%. The question asks percentage change, so give value.",
+ "raw_content": "<evidence>2.3 billion | Note 12 Properties - repairs and maintenance expense 2013\n2.1 billion | Note 12 Properties - repairs and maintenance expense 2012</evidence>\n<program>divide(subtract(2.3, 2.1), 2.1)</program>\n<answer>9.52%</answer>",
+ "usage": {
+  "prompt_tokens": 78528,
+  "completion_tokens": 301,
+  "total_tokens": 78829,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 78336
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.69,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "2.3 billion",
+   "element": "Note 12 Properties - repairs and maintenance expense 2013",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "2.1 billion",
+   "element": "Note 12 Properties - repairs and maintenance expense 2012",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(subtract(2.3, 2.1), 2.1)",
+ "answer_model": "9.52%",
+ "program_value": 0.09523809523809511,
+ "docfinqa_row": 725
+}

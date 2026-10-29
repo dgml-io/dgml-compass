@@ -1,0 +1,50 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0405",
+ "format": "markdown_pdf",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "what is the percentage change in the the outstanding debt under the 3.00% ( 3.00 % ) notes from 2007 to 2008?",
+ "gold": "-53.0%",
+ "finqa_id": "AMT/2008/page_94.pdf-3",
+ "source_page": "page_94",
+ "ticker": "AMT",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf/AMT_2008_0001193125-09-039177.md",
+ "doc_chars": 417265,
+ "prompt_chars": 417463,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 417265,
+ "original_chars": 417265,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 94052,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 308,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-53.0%",
+ "reasoning": "We need to find the outstanding debt under 3.00% notes in 2007 and 2008. From the document: In note 6, long-term obligations table: 3.00% convertible notes: 2008: $161,893 thousand; 2007: $344,568 thousand. Also in the text: \"As of December 31, 2008 and 2007, the outstanding debt under the 3.00% Notes was $161.9 million ($162.2 million principal amount) and $344.6 million, net of $0.3 million and $0.4 million discount, respectively.\" So we have values. Percentage change = (2008 - 2007)/2007 * 100 = (161.893 - 344.568)/344.568 * 100 = (-182.675)/344.568 * 100 = -53.0% approximately. So percentage change is -53% (decrease). The question asks \"percentage change\" so we give the value. Probably -53.0% or -53%. We'll compute precisely: 182.675/344.568 = 0.5302, so -53.02%. We'll answer with -53.0% or -53%. The instruction says \"containing only the value itself\" so we put -53.0% or -53%. I'll put -53.0%.",
+ "raw_content": "<answer>-53.0%</answer>",
+ "usage": {
+  "prompt_tokens": 94214,
+  "completion_tokens": 308,
+  "total_tokens": 94522,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.57,
+ "answer_tag_found": true,
+ "docfinqa_row": 405
+}

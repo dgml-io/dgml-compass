@@ -1,0 +1,50 @@
+{
+ "id": "UPS_2007_0001193125-08-043891__row0107",
+ "format": "markdown_pdf_plumber",
+ "key": "UPS_2007_0001193125-08-043891",
+ "question": "what is the total cash inflow from the stock purchases of employees in 2007 , ( in millions ) ?",
+ "gold": "115.6",
+ "finqa_id": "UPS/2007/page_98.pdf-1",
+ "source_page": "page_98",
+ "ticker": "UPS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_plumber/UPS_2007_0001193125-08-043891.md",
+ "doc_chars": 364587,
+ "prompt_chars": 364771,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 364587,
+ "original_chars": 364587,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 89454,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1366,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "115.56",
+ "reasoning": "We need to find total cash inflow from stock purchases of employees in 2007. The document mentions \"Issuances of common stock\" in financing activities: $174 million in 2007. Also, there is \"Cash received from option holders\" from stock options: $52 million in 2007. Also, employee stock purchase plan: employees purchased 1.8 million shares at average price $64.20, which would be about $115.56 million. But the question asks \"total cash inflow from the stock purchases of employees\" - likely includes both option exercises and employee stock purchase plan? However, the cash flow statement shows \"Issuances of common stock\" of $174 million, which likely includes all employee stock purchases (options, ESPP, etc.). The document says: \"We received cash of $52, $30, and $21 million during 2007, 2006, and 2005, respectively, from option holders resulting from the exercise of stock options.\" And also \"Employees purchased 1.8, 1.9, and 2.0 million shares at average prices of $64.20, $66.64, and $64.54 per share during 2007, 2006, and 2005, respectively.\" That would be 1.8*64.20 = 115.56 million. But the cash flow statement shows \"Issuances of common stock\" of $174 million, which likely includes both. However, the question specifically says \"stock purchases of employees\" - that might refer to the employee stock purchase plan only. But the phrasing \"stock purchases of employees\" could be ambiguous. Let's check the cash flow statement: \"Issuances of common stock\" is $174 million. That is the total cash inflow from issuing common stock, which includes employee stock purchases (ESPP) and option exercises. But the question asks \"total cash inflow from the stock purchases of employees\" - that might be the ESPP only. However, the document also mentions \"We received cash of $52 million from option holders\" - that is also from employees. So total cash inflow from employees' stock purchases (options + ESPP) would be 52 + 115.56 = 167.56 million, but the cash flow statement says 174 million, which might include other issuances. Actually, the cash flow statement line \"Issuances of common stock\" is the total cash received from issuing shares, which includes both option exercises and ESPP. The document says \"We received cash of $52 million from option holders\" and \"Employees purchased 1.8 million shares at average price $64.20\" which is 115.56 million. Sum = 167.56, but the cash flow statement says 174. There might be other issuances like restricted stock? But restricted stock units don't generate cash. So the difference might be due to rounding or other items. The question asks \"total cash inflow from the stock purchases of employees\" - likely they want the amount from the employee stock purchase plan only? Or the total from all employee stock purchases? The phrasing \"stock purchases of employees\" could be interpreted as the ESPP. But the document also says \"Issuances of common stock\" in financing activities. Let's read the question: \"what is the total cash inflow from the stock purchases of employees in 2007 , ( in millions ) ?\" It says \"stock purchases of employees\" - that is the employee stock purchase plan. The document says \"Employees purchased 1.8 million shares at average price $64.20\" - that is the cash inflow from that plan. So 1.8 * 64.20 = 115.56 million. But the question asks \"in millions\" so answer 115.56? However, the cash flow statement shows \"Issuances of common stock\" of $174 million, which includes all employee stock purchases. But the question specifically says \"stock purchases of employees\" - that might be the ESPP. Let's check the exact wording: \"total cash inflow from the stock purchases of employees\" - that is the cash received from employees buying stock. That is the ESPP. The option exercises are also employees buying stock, but they are exercising options, not purchasing stock directly. The term \"stock purchases\" typically refers to the employee stock purchase plan. So I'll go with 115.56 million. But the document gives the number of shares and average price, so we can compute. However, the question might expect the figure from the cash flow statement? Let's see if there is a specific line. The cash flow statement has \"Issuances of common stock\" which is $174 million. That includes all issuances, including ESPP and option exercises. But the question says \"stock purchases of employees\" - that is specifically the ESPP. So I'll compute 1.8 * 64.20 = 115.56. But the document says \"Employees purchased 1.8, 1.9, and 2.0 million shares at average prices of $64.20, $66.64, and $64.54 per share during 2007, 2006, and 2005, respectively.\" So for 2007, it's 1.8 million shares at $64.20 = $115.56 million. So answer is 115.56. But the question asks \"in millions\" so we can give 115.56. However, the cash flow statement shows \"Issuances of common stock\" of $174 million, which is the total cash from issuing shares. But that includes option exercises. The question specifically says \"stock purchases of employees\" - that is the ESPP. So I'll answer 115.56. But let's double-check: The document also says \"We received cash of $52 million from option holders\" - that is also from employees. But the question says \"stock purchases\" not \"option exercises\". So I'll go with 115.56. However, the cash flow statement line \"Issuances of common stock\" is $174 million, which is the total cash inflow from issuing shares. If the question meant total cash inflow from employees' stock-related activities, it would be 52 + 115.56 = 167.56, but that doesn't match 174. There might be other issuances. But the question is specific: \"stock purchases of employees\" - that is the ESPP. So answer 115.56. I'll put that in the answer.",
+ "raw_content": "<answer>115.56</answer>",
+ "usage": {
+  "prompt_tokens": 89604,
+  "completion_tokens": 1366,
+  "total_tokens": 90970,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.56,
+ "answer_tag_found": true,
+ "docfinqa_row": 107
+}

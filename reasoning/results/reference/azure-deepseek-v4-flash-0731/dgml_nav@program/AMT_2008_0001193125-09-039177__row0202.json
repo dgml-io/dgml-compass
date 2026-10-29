@@ -1,0 +1,84 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0202",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "as a result of the sales of certain non-core towers and other assets what was the percent of the change in the recorded net losses from 2007 to 2008",
+ "gold": "47.9%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "AMT_2008_0001193125-09-039177.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/ItemNumber/ResultsOfOperations/YearComparisonPeriod/ConsolidatedResultsOfOperations/NetIncome",
+  "/chunk/ItemNumber/ResultsOfOperations/YearComparisonPeriod/ConsolidatedResultsOfOperations/NetIncome/PercentChange"
+ ],
+ "r1_reasoning_chars": 17089,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 24139,
+  "completion_tokens": 4054,
+  "total_tokens": 28193,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ItemNumber/ResultsOfOperations/YearComparisonPeriod/ConsolidatedResultsOfOperations/NetIncome",
+  "/chunk/ItemNumber/ResultsOfOperations/YearComparisonPeriod/ConsolidatedResultsOfOperations/NetIncome/PercentChange"
+ ],
+ "content_chars": 3181,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "405",
+ "reasoning": "We need answer percent change in recorded net losses from 2007 to 2008 as result of sales of certain non-core towers and other assets. Need find relevant figures. The excerpt includes \"Income (loss) from discontinued operations, net\" amounts: 110,982 (2008?) and (36,396) (2007?), change 147,378, percent 405. The question mentions \"as a result of the sales of certain non-core towers and other assets\" likely refers to discontinued operations. Need percent change in recorded net losses? Actually \"net losses\" from discontinued operations? The row shows income (loss) from discontinued operations, net: 110,982 and (36,396). Percent change given 405. But question asks \"what was the percent of the change in the recorded net losses from 2007 to 2008\" - likely the percent change is 405%? Need verify. The row label \"Income (loss) from discontinued operations, net\" amounts: first 110,982, second (36,396), change 147,378, percent 405. The question says \"as a result of the sales of certain non-core towers and other assets\" - that's discontinued operations. The percent change is 405. But need be careful: \"recorded net losses\" maybe from 2007 to 2008? The 2007 was loss (36,396), 2008 income 110,982. Percent change = (110,982 - (-36,396))/abs(-36,396) = 147,378/36,396 = 4.049... = 405%. So answer 405%. Need provide evidence and program. Use figures: 110,982 and (36,396) and 147,378? The percent change is already printed as 405. But question asks percent of change, so answer 405. Need cite figures. The evidence should list value | element. The element names: OtherIncomeExpenseAmount for 110,982 and (36,396), OtherIncomeExpenseChangeAmount 147,378, PercentChange 405. But we only need percent. The program can be divide(147378, 36396) * 100? Actually 147,378 / 36,396 = 4.049... times 100 = 404.9 ~ 405. But the printed percent is 405. The program should compute using printed figures. Need use absolute? The change amount is 147,378, base is 36,396 (absolute of -36,396). Program: multiply(divide(147378, 36396), 100) gives 404.9, not exactly 405 due rounding. But the document gives percent 405. The question asks \"what was the percent of the change\" - likely the printed percent. We can use the printed PercentChange 405. But the instruction says \"compute the answer\" and \"program over figures as printed\". If the figure is itself the answer, its own program. So program: 405. But need evidence include PercentChange 405. However, the question asks \"as a result of the sales of certain non-core towers and other assets\" - the row is \"Income (loss) from discontinued operations, net\" and percent 405. So answer 405.\n\nNeed final answer inside <answer>405</answer>. Also evidence and program.",
+ "raw_content": "<evidence>110,982 | OtherIncomeExpenseAmount\n(36,396) | OtherIncomeExpenseAmount\n147,378 | OtherIncomeExpenseChangeAmount\n405 | PercentChange</evidence>\n<program>405</program>\n<answer>405</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1140,
+  "completion_tokens": 761,
+  "total_tokens": 1901,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "110,982",
+   "element": "OtherIncomeExpenseAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "(36,396)",
+   "element": "OtherIncomeExpenseAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "147,378",
+   "element": "OtherIncomeExpenseChangeAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "405",
+   "element": "PercentChange",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "405",
+ "answer_model": "405",
+ "program_value": 405.0,
+ "elapsed_s": 16.51,
+ "outline_source": "AMT_2008_0001193125-09-039177.outline.txt",
+ "outline_chars": 96437
+}

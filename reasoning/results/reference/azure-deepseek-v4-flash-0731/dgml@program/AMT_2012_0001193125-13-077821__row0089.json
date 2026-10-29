@@ -1,0 +1,74 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0089",
+ "format": "dgml",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "pursuant to the agreement , on march 30 , 2012 , what was the approximate price for each site the company purchased in thousands",
+ "gold": "189625",
+ "finqa_id": "AMT/2012/page_118.pdf-2",
+ "source_page": "page_118",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/dgml/AMT_2012_0001193125-13-077821.dgml.xml",
+ "doc_chars": 945867,
+ "prompt_chars": 946084,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 945867,
+ "original_chars": 945867,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 220539,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 551,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "189.625",
+ "reasoning": "We need answer question: \"pursuant to the agreement , on march 30 , 2012 , what was the approximate price for each site the company purchased in thousands\"\n\nWe need find in document. There is Vivo Acquisition: \"On March 30, 2012, the Company entered into a definitive agreement to purchase up to 1,500 towers from Vivo S.A. (\"Vivo\"). Pursuant to the agreement, on March 30, 2012, the Company purchased 800 communications sites for an aggregate purchase price of $151.7 million. On June 30, 2012, the Company purchased the remaining 700 communications sites for an aggregate purchase price of $126.3 million...\"\n\nSo on March 30, 2012, purchased 800 sites for $151.7 million. Price per site = 151.7 million / 800 = 0.189625 million = $189.625 thousand per site. Approximate price per site in thousands = 189.625, or approximately 190. The question asks \"approximate price for each site the company purchased in thousands\" - likely $189.6 thousand. We need compute. Use figures: 151.7 (in millions) and 800 sites. Price per site in thousands = 151.7*1000/800 = 189.625. So answer 189.625 (or 190). The document says \"aggregate purchase price of $151.7 million\" for 800 sites. So per site = 151.700,000 / 800 = 189,625 = 189.625 thousand. We'll give 189.625.\n\nNeed evidence: value | element. Use \"151.7\" from VivoAcquisition? Actually printed as \"$151.7 million\" in text. Element is VivoAcquisition. And \"800\" from same. We'll cite.\n\nProgram: divide(151.7, 800) * 1000? But program should use figures as printed. We can do multiply(divide(151.7, 800), 1000) = 189.625. Or divide(151700, 800) but figure printed is 151.7 million. We'll use multiply(divide(151.7, 800), 1000).",
+ "raw_content": "<evidence>\n151.7 | VivoAcquisition (aggregate purchase price in millions)\n800 | VivoAcquisition (communications sites purchased on March 30, 2012)\n</evidence>\n<program>multiply(divide(151.7, 800), 1000)</program>\n<answer>189.625</answer>",
+ "usage": {
+  "prompt_tokens": 220854,
+  "completion_tokens": 551,
+  "total_tokens": 221405,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 17.07,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "151.7",
+   "element": "VivoAcquisition (aggregate purchase price in millions)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "800",
+   "element": "VivoAcquisition (communications sites purchased on March 30, 2012)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(151.7, 800), 1000)",
+ "answer_model": "189.625",
+ "program_value": 189.625,
+ "docfinqa_row": 89
+}

@@ -1,0 +1,2612 @@
+{
+ "docset": "8frgx7rlbew3",
+ "derived_from": "8frgx7rlbew3_z4ervk9ic0oo.ref.json",
+ "spec_source": "curated",
+ "note": "ComplexType reference: groups of flat-ref answers that belong together (table rows / entities / itemized lists). Values are the flat ref's texts (token provenance stripped). Relations are document-verified: row instances must be token-local in the document's token stream AND (where a reference XML exists) co-occur inside one element; types failing the co-occurrence gate are dropped. Per file, a type maps to a list of instances, an explicit [] when the document genuinely has no instance of the type (predicting one there is an instance false-positive), or null when the gold could not be verified for that file (metrics must SKIP null, never treat it as empty). The flat ref is unchanged and remains the value-level gold.",
+ "types": {
+  "OccurrenceRecord": {
+   "scope": "row",
+   "members": [
+    "Occurences",
+    "Phase+of+Operations"
+   ]
+  },
+  "AccidentInfo": {
+   "scope": "group",
+   "members": [
+    "Accident+Number",
+    "Investigator+in+Charge",
+    "Flight+conducted+under"
+   ],
+   "optional": [
+    "Departure+Point",
+    "Airport"
+   ]
+  },
+  "PilotInfo": {
+   "scope": "group",
+   "members": [
+    "Medical+Certification",
+    "Last+FAA+Medical+Exam"
+   ],
+   "optional": [
+    "Airplane+Rating",
+    "Seat+Occupied"
+   ]
+  },
+  "AircraftInfo": {
+   "scope": "group",
+   "members": [
+    "Aircraft+Make",
+    "Engine+Model+or+Series"
+   ]
+  },
+  "NarrativeInfo": {
+   "scope": "group",
+   "members": [
+    "Analysis",
+    "Probable+Cause+And+Findings"
+   ]
+  },
+  "FindingsList": {
+   "scope": "list",
+   "members": [
+    "Findings"
+   ]
+  }
+ },
+ "instances": {
+  "1h9tkec8okk6": {
+   "OccurrenceRecord": null,
+   "AccidentInfo": [
+    {
+     "Accident+Number": "MIA08CA025",
+     "Investigator+in+Charge": "Butch Wilson",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "New Smyrna Beac , FL ( KEVB )",
+     "Airport": "New Smyrna Beach Municipal ( KEVB )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 3 With Waivers / Limitations",
+     "Last+FAA+Medical+Exam": "06/01/2006",
+     "Airplane+Rating": "Single - engine Land",
+     "Seat+Occupied": "Left"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Messing Roy",
+     "Engine+Model+or+Series": "3300A"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "According to the pilot , \" the purpose of the flight was to test a new instrument and conduct test approaches and landings to check flying characteristics at slower approach speeds . Previous approaches at 70 miles per hour ( MPH ) [ were ] too fast . After practicing slow flight and entering a stall speed into new instrument I was cleared for a 5 - mile straight in approach to runway 2 . After \" dragging in \" for 5 - miles I attained my test final approach speed of 60 mph . There was a tree in my glide path so I climbed over it but underestimated my sink rate ( which was the purpose of the test flight ) the right gear snagged a limb which jerked me into a right hand roll . I applied power , leveled the wings , and pointed [ the ] nose ahead as it hit the ground . There were no visible markings on the runway to indicate a displaced threshold . The reason for the displaced threshold is the tree . If the runway was properly marked , I am sure I would have been reminded at least a mile out or one - half out that there was a displaced threshold and avoided the incident . \"",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot 's failure to maintain altitude / clearance while on final approach for landing ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . OBJECT - TREE(S )",
+      "2 . ( C ) ALTITUDE / CLEARANCE - NOT MAINTAINED - PILOT IN COMMAND"
+     ]
+    }
+   ]
+  },
+  "33qcdtwbd02w": {
+   "OccurrenceRecord": [],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "ENG08RA005",
+     "Investigator+in+Charge": "Jim Hookey",
+     "Flight+conducted+under": "Part 121 : Air Carrier - Scheduled",
+     "Departure+Point": "Nice",
+     "Airport": "Cote D'Azur , Nice , France ( LFMN )"
+    }
+   ],
+   "PilotInfo": [],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Boeing",
+     "Engine+Model+or+Series": "CF6 - 80C2"
+    }
+   ],
+   "NarrativeInfo": null,
+   "FindingsList": []
+  },
+  "3pinpthiu2nq": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "NOSE OVER",
+     "Phase+of+Operations": "Phase of Operation : LANDING - ROLL"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "CHI08CA049",
+     "Investigator+in+Charge": "Jim Silliman",
+     "Flight+conducted+under": "Part 91 : General Aviation - Instructional",
+     "Departure+Point": "Hastings , MI ( 9D9 )",
+     "Airport": "Hastings Airport ( 9D9 )"
+    }
+   ],
+   "PilotInfo": null,
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Cessna",
+     "Engine+Model+or+Series": "O-300"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The student pilot reported that he was on his first solo flight and was practicing takeoffs and landings to a full stop . The first landing was successful . During the landing rollout on the second full stop landing , the student pilot applied brakes . The braking action on the runway was uneven due to icy patches of snow and ice on the runway . The airplane began to depart the left side of the runway and the student pilot attempted to apply right rudder and right brake , but it had no effect . The airplane departed the left side of the runway and nosed over when the airplane impacted a shallow drainage ditch .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The student pilot failed to maintain directional control during landing . Factors were the ditch and the icy runway ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) DIRECTIONAL CONTROL - NOT MAINTAINED - PILOT IN COMMAND",
+      "2 . TERRAIN CONDITION - DITCH",
+      "3 . ( F ) TERRAIN CONDITION - RUNWAY",
+      "4 . ( F ) TERRAIN CONDITION - ICY"
+     ]
+    }
+   ]
+  },
+  "42ks5l4c9ueh": {
+   "OccurrenceRecord": [],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "DFW08WA050",
+     "Investigator+in+Charge": "Jason T Aguilera",
+     "Flight+conducted+under": "Non - U.S. , Non - Commercial",
+     "Departure+Point": "Islas Secas"
+    }
+   ],
+   "PilotInfo": [],
+   "AircraftInfo": null,
+   "NarrativeInfo": null,
+   "FindingsList": []
+  },
+  "4s9popvee0ck": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "LOSS OF CONTROL - IN FLIGHT",
+     "Phase+of+Operations": "LANDING - FLARE / TOUCHDOWN"
+    },
+    {
+     "Occurences": "NOSE OVER",
+     "Phase+of+Operations": "LANDING"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "DFW08CA041",
+     "Investigator+in+Charge": "Jason T Aguilera",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "FORT WORTH , TX ( FTW )",
+     "Airport": "BRIDGEPORT MUNI ( 1F9 )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 1 With Waivers / Limitations",
+     "Last+FAA+Medical+Exam": "08/01/2007",
+     "Airplane+Rating": "Single - engine Land",
+     "Seat+Occupied": "Left"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Cessna",
+     "Engine+Model+or+Series": "O-320 - D2J"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The 47 - hour private pilot was executing full stop landing on Runway 17 with the wind reported from 230 degrees at 9 knots . During the landing flare , the airplane drifted left of the runway centerline , and the pilot corrected by applying crosswind controls and continued the landing . The airplane touched down with the left main landing gear off of the 60 - foot wide runway and the pilot lost directional control of the airplane . The nose landing gear buckled , the airplane nosed - over , coming to rest in the inverted position . The pilot was not wearing the installed shoulder harness and egressed the airplane with minor injuries . The operator of the airplane recommended that a go - around would have prevented this accident .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot 's failure to maintain direction control of the airplane while landing with a crosswind . A contributing factor was the prevailing crosswind ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( F ) WEATHER CONDITION - CROSSWIND",
+      "2 . CROSSWIND COMPONENT - NOT CORRECTED - PILOT IN COMMAND",
+      "3 . ( C ) DIRECTIONAL CONTROL - NOT MAINTAINED - PILOT IN COMMAND",
+      "4 . LANDING GEAR , NOSE GEAR - BUCKLED",
+      "5 . DIRECTIONAL CONTROL - UNCONTROLLED - PILOT IN COMMAND"
+     ]
+    }
+   ]
+  },
+  "77ythdyuvkym": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "LOSS OF CONTROL - IN FLIGHT",
+     "Phase+of+Operations": "TAKEOFF - INITIAL CLIMB"
+    },
+    {
+     "Occurences": "IN FLIGHT COLLISION WITH TERRAIN / WATER",
+     "Phase+of+Operations": "TAKEOFF - INITIAL CLIMB"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "CHI08CA048",
+     "Investigator+in+Charge": "Tim Sorensen",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "Elyria , OH ( LPR )",
+     "Airport": "Lorain County Regional ( LPR )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 3 With Waivers / Limitations",
+     "Last+FAA+Medical+Exam": "12/01/2005",
+     "Airplane+Rating": "Multi - engine Land ; Single - engine Land",
+     "Seat+Occupied": "Left"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Smith , Ted Aerostar",
+     "Engine+Model+or+Series": "IO-540 - S1 - A5"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The pilot reported that he departed on an instrument flight rules flight plan into a low overcast cloud ceiling . He commented that he lost visual contact with the ground immediately upon liftoff . During the initial climb , the airplane momentarily entered a nose - down attitude . He subsequently corrected the nose down attitude . However , as the airplane began to climb again the right wing impacted a tree . This occurred approximately 1 mile from the airport and within 1 minute of takeoff . After the in - flight collision , he had \" full function \" of the airplane and elected to continue the planned 31 - minute flight to the intended destination . He added that there were no anomalies related to flight control or engine operation during the flight . A post accident inspection revealed impact damage to the leading edge of the right wing , right engine nacelle , and right propeller spinner . In addition , the inspection revealed a 3 - inch crack in the aft wing spar at the right main landing gear wheel well .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot 's momentary loss of control after takeoff , which resulted in an in - flight collision with a tree . A contributing factor was the presence of the tree ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) AIRCRAFT CONTROL - NOT MAINTAINED - PILOT IN COMMAND",
+      "2 . ( F ) OBJECT - TREE(S )"
+     ]
+    }
+   ]
+  },
+  "7bav1uyawkmp": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "IN FLIGHT COLLISION WITH TERRAIN / WATER",
+     "Phase+of+Operations": "MANEUVERING - AERIAL APPLICATION"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "LAX08CA034",
+     "Investigator+in+Charge": "Tealeye C Cornejo",
+     "Flight+conducted+under": "Part 137 : Agricultural",
+     "Departure+Point": "KING CITY , CA ( KIC )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 2",
+     "Last+FAA+Medical+Exam": "10/01/2007",
+     "Airplane+Rating": "Single - engine Land",
+     "Seat+Occupied": "Center"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Air Tractor",
+     "Engine+Model+or+Series": "R1340"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The pilot was seeding an area located adjacent to mountainous terrain . Prior to making the first pass , he had flown a reconnaissance flight to inspect the area . After completion of the first pass as he was maneuvering in a turn back towards the field , he was checking the seeding pattern and making adjustments to the GPS system inside the cockpit . When he checked the gauges again , he realized that the airplane had lost airspeed and rolled out to a wings level configuration to regain the lost airspeed . The airplane was headed towards rising terrain . He jettisoned the remaining seed and made a controlled collision with terrain in a ravine . The airplane was destroyed in a post impact fire . He reported that he had preoccupied himself with less important flight duties at a critical time during the flight . The pilot reported no mechanical problems that would have precluded normal operation .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot 's failure to maintain an adequate clearance from mountainous terrain while maneuvering during an aerial application mission . Contributing to the accident was the pilot 's diverted attention inside the cockpit ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . TERRAIN CONDITION - MOUNTAINOUS / HILLY",
+      "2 . ( C ) IN - FLIGHT PLANNING / DECISION - INADEQUATE - PILOT IN COMMAND",
+      "3 . ( F ) DIVERTED ATTENTION - PILOT IN COMMAND",
+      "4 . ( C ) CLEARANCE - NOT MAINTAINED - PILOT IN COMMAND"
+     ]
+    }
+   ]
+  },
+  "7srml38zuuk9": {
+   "OccurrenceRecord": null,
+   "AccidentInfo": [
+    {
+     "Accident+Number": "LAX08CA041",
+     "Investigator+in+Charge": "Wayne Pollack",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "Winnemucca , NV ( WMC )",
+     "Airport": "Holbrook ( P14 )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 3",
+     "Last+FAA+Medical+Exam": "10/01/2005",
+     "Airplane+Rating": "Single - engine Land"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Found Acft",
+     "Engine+Model+or+Series": "IO-540 - LIC5"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The pilot landed on the runway in a 3 - point touchdown and reduced all engine power and pulled the stick back to keep the tail down . Despite applying right rudder to keep the airplane centered on the runway and not moving to the left , the pilot was unable to maintain directional control . The pilot reported that she added full engine power too late and the airplane ground looped striking its propeller . The pilot said there were no preimpact mechanical malfunctions or failures .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot 's failure to maintain directional control during landing rollout , which resulted in an inadvertent ground loop ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "LOSS OF CONTROL - ON GROUND / WATER",
+      "ON GROUND / WATER ENCOUNTER WITH TERRAIN / WATER"
+     ]
+    }
+   ]
+  },
+  "8ohwve4ew0ic": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "WHEELS UP LANDING",
+     "Phase+of+Operations": "LANDING - FLARE / TOUCHDOWN"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "NYC08CA073",
+     "Investigator+in+Charge": "Todd G Gunther",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "Fort Worth , TX ( FTW )",
+     "Airport": "Muscle Shoals ( MLS )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 2 With Waivers / Limitations",
+     "Last+FAA+Medical+Exam": "09/01/2007",
+     "Airplane+Rating": "Multi - engine Land ; Single - engine Land",
+     "Seat+Occupied": "Left"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Piper",
+     "Engine+Model+or+Series": "PT6A-28"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "While conducting an instrument approach , the pilot of a Piper PA-31 T crossed the initial approach fix and descended to 2,300 feet , per the instrument approach procedure . Upon reaching the final approach fix , he then selected 1,200 feet in the altitude preselect and almost simultaneously visually acquired the runway and visual approach slope indicator . The pilot then \" became distracted , \" and \" forgot to extend the [ landing ] gear . \" He then fully extended the wing flaps , but the power setting remained above the \" trigger point \" for the landing gear warning horn . The airplane touched down with the landing gear retracted and was substantially damaged .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot 's failure to lower the landing gear ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) WHEELS UP LANDING - INADVERTENT - PILOT IN COMMAND"
+     ]
+    }
+   ]
+  },
+  "9awpo5mdeax4": {
+   "OccurrenceRecord": [],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "DFW08WA043",
+     "Investigator+in+Charge": "Jason T Aguilera",
+     "Flight+conducted+under": "Non - U.S. , Non - Commercial",
+     "Departure+Point": "Uruapan ( MMPN )"
+    }
+   ],
+   "PilotInfo": [],
+   "AircraftInfo": null,
+   "NarrativeInfo": null,
+   "FindingsList": []
+  },
+  "9rr5t5ffkota": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "LOSS OF CONTROL - ON GROUND / WATER",
+     "Phase+of+Operations": "LANDING - ROLL"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "DFW08CA044",
+     "Investigator+in+Charge": "William H Gamble",
+     "Flight+conducted+under": "Part 91 : General Aviation - Instructional",
+     "Departure+Point": "Ardmore , OK ( 1F0 )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 3 Without Waivers / Limitations",
+     "Last+FAA+Medical+Exam": "09/01/2007",
+     "Airplane+Rating": "None",
+     "Seat+Occupied": "Left"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Cessna",
+     "Engine+Model+or+Series": "O-235"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The 28 - hour solo student pilot landed with a crosswind condition and lost control of the airplane during the landing roll . The mishap occurred during the student ’s seventh solo landing of the day . The pilot stated that after the airplane landed \" the wind switched from a crosswind to a tail wind and back \" to crosswind . The airplane departed the runway , the nose gear collapsed in the soft terrain , and the propeller contacted the ground . Examination of the airplane by an inspector from the Federal Aviation Administration revealed structural damage to the engine firewall . The winds at the time of the accident were reported as a 90 degree crosswind to the active runway at 8 knots .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot failed to maintain directional control during landing roll . A contributing factor was the crosswind ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( F ) WEATHER CONDITION - CROSSWIND",
+      "2 . ( C ) DIRECTIONAL CONTROL - NOT MAINTAINED - PILOT IN COMMAND"
+     ]
+    }
+   ]
+  },
+  "afcgkdlikudc": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "LOSS OF CONTROL - ON GROUND / WATER",
+     "Phase+of+Operations": "LANDING - ROLL"
+    },
+    {
+     "Occurences": "ON GROUND / WATER COLLISION WITH OBJECT",
+     "Phase+of+Operations": "LANDING"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "DFW08CA032",
+     "Investigator+in+Charge": "Craig R Hatch",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "Muskogee , OK ( MKO )",
+     "Airport": "DAVIS FIELD ( MKO )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 3 With Waivers / Limitations",
+     "Last+FAA+Medical+Exam": "05/01/2006",
+     "Airplane+Rating": "Single - engine Land",
+     "Seat+Occupied": "Left"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Cessna",
+     "Engine+Model+or+Series": "O-200"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The private pilot stated in the NTSB Form 6120.1 ( Pilot / Operator Aircraft Accident / Incident Report ) that during the take - off roll the airplane developed a severe nose - wheel shimmy . He said he circled for a landing , made a stable approach to the runway , and landed \" on the numbers . \" During the landing the airplane departed the left side of the runway onto the grass , and impacted a shallow ditch . The airplane 's nose gear collapsed , and the firewall sustained structural damage . The operator stated that the airplane 's prior flight was for 1.6 - hours , which included six landings , with no reported problems .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot 's failure to maintain directional control while landing ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) DIRECTIONAL CONTROL - NOT MAINTAINED - PILOT IN COMMAND",
+      "2 . ( F ) LIGHT CONDITION - NIGHT",
+      "3 . TERRAIN CONDITION - DITCH"
+     ]
+    }
+   ]
+  },
+  "aulqsr80uc2q": {
+   "OccurrenceRecord": [],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "NYC08WA057",
+     "Investigator+in+Charge": "Dennis J Diaz",
+     "Flight+conducted+under": "Non - U.S. , Non - Commercial",
+     "Departure+Point": "Prague ( LKPR )"
+    }
+   ],
+   "PilotInfo": [],
+   "AircraftInfo": null,
+   "NarrativeInfo": null,
+   "FindingsList": []
+  },
+  "azdmxxmaykgj": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "IN FLIGHT COLLISION WITH TERRAIN / WATER",
+     "Phase+of+Operations": "MANEUVERING"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "NYC08CA068",
+     "Investigator+in+Charge": "Robert J Gretz",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "Sanford , ME ( SFM )",
+     "Airport": "Locke Lake Airport ( NH15 )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 3 With Waivers / Limitations",
+     "Last+FAA+Medical+Exam": "05/01/2007",
+     "Airplane+Rating": "Single - engine Land ; Single - engine Sea",
+     "Seat+Occupied": "Left"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Cessna",
+     "Engine+Model+or+Series": "C145 - 2A"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The pilot stated that he took three friends on a short cross - country pleasure flight . The airplane was entering a downwind leg at the destination airport , when the pilot decided to make a low pass over an adjacent lake , near a friend 's property . The pilot said that his depth perception was negatively affected due to the flat light and snow on the ground . While maneuvering over the lake , the right main landing gear contacted the snowy frozen surface , which resulted in the right wing impacting the surface . The airplane came to rest upright on the frozen lake , and sustained substantial damage to the right wing and firewall . The reported weather at an airport about 10 miles north of the accident site , about the time of the accident , included calm winds and an overcast ceiling at 2,200 feet .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot 's failure to maintain clearance above a frozen lake while maneuvering . Factors contributing to the accident were the pilot 's attempt of the low altitude maneuver , and unfavorable lighting conditions ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . TERRAIN CONDITION - WATER , FROZEN",
+      "2 . ( C ) ALTITUDE / CLEARANCE - NOT MAINTAINED - PILOT IN COMMAND",
+      "3 . ( F ) LIGHT CONDITION - OTHER",
+      "4 . ( F ) LOW ALTITUDE FLIGHT / MANEUVER - ATTEMPTED - PILOT IN COMMAND"
+     ]
+    }
+   ]
+  },
+  "b1bs69ddckuz": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "LOSS OF CONTROL - ON GROUND / WATER",
+     "Phase+of+Operations": "LANDING - ROLL"
+    },
+    {
+     "Occurences": "ON GROUND / WATER ENCOUNTER WITH TERRAIN / WATER",
+     "Phase+of+Operations": "LANDING - ROLL"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "SEA08CA034",
+     "Investigator+in+Charge": "Thomas M Little",
+     "Flight+conducted+under": "Part 137 : Agricultural",
+     "Departure+Point": "Calexico , CA ( 0945 )",
+     "Airport": "Private Airstrip ( NONE )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 2",
+     "Last+FAA+Medical+Exam": "03/01/2007",
+     "Airplane+Rating": "Multi - engine Land ; Single - engine Land ; Single - engine Sea"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Ayres",
+     "Engine+Model+or+Series": "TPE-331"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The pilot reported that after landing and getting the tailwheel on the ground the airplane began to drift to the right . The pilot corrected to the left and managed to get the airplane back to the center of the runway , but the airplane continued to the left as the pilot was late in getting the stick far enough forward to unlock the tailwheel . The pilot stated , \" ... I was on the [ left ] edge of the runway , which is the edge of the ditch . I started to add power to go around , but the left [ landing ] gear fell off the edge of the drain pulling the plane into the ditch . \" The pilot reported that at the time of the landing the wind was calm .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot 's failure to maintain directional control while landing . A factor in the accident was the close proximity of the drainage ditch to the edge of the private airstrip 's runway ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) DIRECTIONAL CONTROL - NOT MAINTAINED - PILOT IN COMMAND",
+      "2 . ( F ) TERRAIN CONDITION - DITCH"
+     ]
+    }
+   ]
+  },
+  "b7s5ryvw0ghk": {
+   "OccurrenceRecord": [],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "DCA08WA020",
+     "Investigator+in+Charge": "Dennis l Jones",
+     "Flight+conducted+under": "Non - U.S. , Commercial",
+     "Departure+Point": "Addis Ababa ( ADD )"
+    }
+   ],
+   "PilotInfo": [],
+   "AircraftInfo": null,
+   "NarrativeInfo": null,
+   "FindingsList": []
+  },
+  "climtbaguuav": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "LOSS OF CONTROL - IN FLIGHT",
+     "Phase+of+Operations": "LANDING - FLARE / TOUCHDOWN"
+    },
+    {
+     "Occurences": "HARD LANDING",
+     "Phase+of+Operations": "LANDING - FLARE / TOUCHDOWN"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "NYC08CA037",
+     "Investigator+in+Charge": "Michael Huhn",
+     "Flight+conducted+under": "Part 91 : General Aviation - Instructional",
+     "Departure+Point": "Barnwell , SC ( BNL )",
+     "Airport": "Statesboro - Bulloch County ( TBR )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 3 With Waivers / Limitations",
+     "Last+FAA+Medical+Exam": "09/01/2007",
+     "Airplane+Rating": "None",
+     "Seat+Occupied": "Left"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Cessna",
+     "Engine+Model+or+Series": "O-320"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The 27 - hour student pilot of the Cessna 172N successfully completed the first leg of a solo cross country flight , and returned for landing on runway 23 at his airport of origin . The pilot reported that on final approach , he was lined up correctly , was at the appropriate speed , and that everything \" felt good . \" He also reported that when he began the flare , a gust of wind \" caught the back of the plane , \" and lifted the tail . The pilot believed that he had landed nose gear first . He completed the rollout and taxied to the terminal without further incident . The pilot did not experience any preimpact failures or malfunctions with the airplane , and a postaccident examination of the airplane revealed damage to the propeller , nose landing gear and firewall . The weather observation at the airport about the time of the accident recorded winds from 220 degrees at 4 knots .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The student pilot 's failure to maintain a proper flare at touchdown ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) FLARE - NOT MAINTAINED - PILOT IN COMMAND"
+     ]
+    }
+   ]
+  },
+  "ddk0net9ukox": {
+   "OccurrenceRecord": [],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "NYC08WA076",
+     "Investigator+in+Charge": "Robert J Gretz",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "Saint John 's ( TAPA )"
+    }
+   ],
+   "PilotInfo": [],
+   "AircraftInfo": null,
+   "NarrativeInfo": [
+    {
+     "Analysis": "On December 12 , 2007 , at 0826 eastern standard time , a Bombardier BD-700 - 1A11 ( Global 5000 ) , N50DS , sustained substantial damage while landing at Vance W. Amory Airport ( TKPN ) , Charlestown , St. Kitts and Nevis . The two certificated airline transport pilots and two passengers were not injured . Visual meteorological conditions prevailed for the flight that originated from Saint John 's , Antigua Island . An instrument flight rules flight plan was filed for the personal flight conducted under 14 Code of Federal Regulations Part 91 .",
+     "Probable+Cause+And+Findings": "According to preliminary information from the Eastern Caribbean Civil Aviation Authority ( ECCAA ) , the airplane was approaching runway 10 , a 13,110 - foot - long , 321 - foot - wide , asphalt runway . While on short final approach , the airplane struck approach lights and a fence about 56 feet prior to the runway threshold . The airplane subsequently landed on runway 10 without further incident , and taxied to the parking area without assistance . During the impact , the airplane sustained damage to the rear fuselage , right flap , and right main landing gear ."
+    }
+   ],
+   "FindingsList": []
+  },
+  "e1vcnwr6kyjr": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "LOSS OF CONTROL - ON GROUND / WATER",
+     "Phase+of+Operations": "LANDING - ROLL"
+    },
+    {
+     "Occurences": "MAIN GEAR COLLAPSED",
+     "Phase+of+Operations": "LANDING - ROLL"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "SEA08CA056",
+     "Investigator+in+Charge": "Georgia R Struhsaker",
+     "Flight+conducted+under": "Part 91 : General Aviation - Instructional",
+     "Departure+Point": "Santa Ana , CA ( SNA )",
+     "Airport": "John Wayne - Orange County ( SNA )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 2",
+     "Last+FAA+Medical+Exam": "06/01/2007",
+     "Airplane+Rating": "Single - engine Land ; Single - engine Sea"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Piper",
+     "Engine+Model+or+Series": "O-320"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The pilot was receiving dual instruction from the flight instructor for the purpose of receiving a tail wheel endorsement . He had accumulated a total of 7 hours tail wheel instruction in the accident airplane . The flight instructor reported that during the landing roll , the airplane yawed to the right and entered a ground loop which collapsed the left main landing gear .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The failure of the student to maintain directional control during landing and the flight instructor 's inadequate supervision of the flight ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) DIRECTIONAL CONTROL - NOT MAINTAINED - DUAL STUDENT",
+      "2 . ( C ) SUPERVISION - INADEQUATE - PILOT IN COMMAND(CFI )",
+      "3 . GROUND LOOP / SWERVE - ENCOUNTERED",
+      "4 . TERRAIN CONDITION - RUNWAY"
+     ]
+    }
+   ]
+  },
+  "etp73sgzquw3": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "PROPELLER FAILURE / MALFUNCTION",
+     "Phase+of+Operations": "CRUISE"
+    },
+    {
+     "Occurences": "FORCED LANDING",
+     "Phase+of+Operations": "EMERGENCY DESCENT / LANDING"
+    },
+    {
+     "Occurences": "ON GROUND / WATER ENCOUNTER WITH TERRAIN / WATER",
+     "Phase+of+Operations": "EMERGENCY LANDING"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "NYC08CA058",
+     "Investigator+in+Charge": "Todd G Gunther",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "Jacksonville , AL ( 3AL5 )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 2 With Waivers / Limitations",
+     "Last+FAA+Medical+Exam": "09/01/2004",
+     "Airplane+Rating": "Multi - engine Land ; Single - engine Land",
+     "Seat+Occupied": "Rear"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Fisher Aero",
+     "Engine+Model+or+Series": "C85 - 12"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "During cruise flight , the pilot of an amateur built airplane noticed that the airplane began to vibrate . He applied carburetor heat , and then checked the magnetos to see if they were functioning properly , but the vibration persisted . Moments later , the vibration became worse , and the wooden propeller came apart . The pilot shut down the engine and made a forced landing in a field . After touchdown , the landing gear collapsed , and the airplane received substantial damage . The pilot had recently purchased the airplane , and had flown it for approximately 55 minutes prior to the accident . According to the pilot , the airplane 's original logbooks had been misplaced , and new ones were begun prior to the sale . The airplane 's total time in service was estimated to be 190 hours . No entries regarding propeller inspections or propeller maintenance were noted in the new logbooks .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : A propeller failure during cruise flight ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) PROPELLER SYSTEM / ACCESSORIES - DISINTEGRATED",
+      "2 . TERRAIN CONDITION - PLOWED / FURROWED"
+     ]
+    }
+   ]
+  },
+  "excwyfxeeyy7": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "LOSS OF CONTROL - ON GROUND / WATER",
+     "Phase+of+Operations": "TAKEOFF - ROLL / RUN"
+    },
+    {
+     "Occurences": "ON GROUND / WATER ENCOUNTER WITH TERRAIN / WATER",
+     "Phase+of+Operations": "TAKEOFF - ROLL / RUN"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "MIA08CA045",
+     "Investigator+in+Charge": "Jose Obregon",
+     "Flight+conducted+under": "Part 91 : General Aviation - Instructional",
+     "Departure+Point": "Northampton , MA ( KBAF )",
+     "Airport": "Northampton ( K7B2 )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 2",
+     "Last+FAA+Medical+Exam": "05/01/2007",
+     "Airplane+Rating": "Multi - engine Land ; Single - engine Land"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Cessna",
+     "Engine+Model+or+Series": "O-320 - D2J"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The flight instructor stated that the student was to perform a short field takeoff . The student aligned the airplane on the centerline of the runway , applied the brakes , and increased engine power . The brakes were released and the airplane began the takeoff roll . The airplane suddenly veered off the centerline and struck a snow bank off the left side of the runway . The flight instructor stated that there were no mechanical failures or malfunctions to the airplane or any of its systems prior to the accident .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The student pilot 's failure to maintain directional control of the airplane during the takeoff roll and inadequate supervision by the CFI ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) DIRECTIONAL CONTROL - NOT MAINTAINED - DUAL STUDENT",
+      "2 . ( C ) SUPERVISION - INADEQUATE - PILOT IN COMMAND(CFI )",
+      "3 . TERRAIN CONDITION - SNOWBANK"
+     ]
+    }
+   ]
+  },
+  "exgxfzttrkqx": {
+   "OccurrenceRecord": [],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "DEN08WA037",
+     "Investigator+in+Charge": "David C Bowling",
+     "Flight+conducted+under": "Part 91 : General Aviation - Ferry"
+    }
+   ],
+   "PilotInfo": [],
+   "AircraftInfo": null,
+   "NarrativeInfo": null,
+   "FindingsList": []
+  },
+  "h2upu1sr4khm": {
+   "OccurrenceRecord": [],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "MIA08WA033",
+     "Investigator+in+Charge": "Timothy W Monville",
+     "Flight+conducted+under": "Part 91 : General Aviation - Business",
+     "Departure+Point": "Santo Domingo ( MDJB )"
+    }
+   ],
+   "PilotInfo": [],
+   "AircraftInfo": null,
+   "NarrativeInfo": null,
+   "FindingsList": []
+  },
+  "hbjt1ebbcea6": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "LOSS OF CONTROL - ON GROUND / WATER",
+     "Phase+of+Operations": "LANDING - ROLL"
+    },
+    {
+     "Occurences": "ON GROUND / WATER COLLISION WITH OBJECT",
+     "Phase+of+Operations": "LANDING - ROLL"
+    },
+    {
+     "Occurences": "ON GROUND / WATER ENCOUNTER WITH TERRAIN / WATER",
+     "Phase+of+Operations": "LANDING - ROLL"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "SEA08CA030",
+     "Investigator+in+Charge": "Thomas M Little",
+     "Flight+conducted+under": "Part 91 : General Aviation - Instructional",
+     "Departure+Point": "Atwater , CA ( MER )",
+     "Airport": "Castle Airport ( MER )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 1",
+     "Last+FAA+Medical+Exam": "11/01/2007",
+     "Airplane+Rating": "Single - engine Land"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Cessna",
+     "Engine+Model+or+Series": "O-320"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "This was the student pilot 's first supervised solo . After making his second landing and during the landing roll , the airplane began to veer to the left . An attempt to correct back to the right was unsuccessful , which was followed by the airplane continuing to the left and impacting a runway sign . The airplane continued northwest - bound before impacting a drainage ditch approximately 250 feet from the edge of the runway . The aircraft subsequently turned eastbound and crossed the drainage ditch a second time , which resulted in the collapse of the right main landing gear . The airplane came to rest in an upright position with its tail section in the drainage ditch and its right wing tip laying on the ground . The airplane 's right wing sustained substantial damage .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The failure of the student pilot to maintain directional control during the landing roll . Factors contributing to the accident included the sign and the ditch ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) DIRECTIONAL CONTROL - NOT MAINTAINED - PILOT IN COMMAND",
+      "• ( F ) OBJECT - SIGN",
+      "3 . ( F ) TERRAIN CONDITION - DITCH"
+     ]
+    }
+   ]
+  },
+  "id4ap86rfu21": {
+   "OccurrenceRecord": [],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "NYC08WA329",
+     "Investigator+in+Charge": "Luke Schiada",
+     "Flight+conducted+under": "Non - U.S. , Non - Commercial",
+     "Departure+Point": "Parral"
+    }
+   ],
+   "PilotInfo": null,
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "GRUMMAN",
+     "Engine+Model+or+Series": "R-985AN-14B"
+    }
+   ],
+   "NarrativeInfo": null,
+   "FindingsList": []
+  },
+  "in5pawsuo5m9": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "ON GROUND / WATER COLLISION WITH OBJECT",
+     "Phase+of+Operations": "TAXI - FROM LANDING"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "SEA08CA052",
+     "Investigator+in+Charge": "Georgia R Struhsaker",
+     "Flight+conducted+under": "Part 91 : General Aviation - Instructional",
+     "Departure+Point": "Fullerton , CA ( FUL )",
+     "Airport": "Fullerton Municipal ( FUL )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 3",
+     "Last+FAA+Medical+Exam": "11/01/2006",
+     "Airplane+Rating": "None"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Cessna",
+     "Engine+Model+or+Series": "IO-360"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The student pilot had landed the airplane , exited the runway and was taxiing to parking . The tower controller informed the pilot that a helicopter was above him and to his right . The pilot looked to the right and saw the helicopter . While watching the helicopter , the pilot added right brake and throttle to move the airplane towards the center line of the taxiway . As the airplane turned , the pilot felt a jolt and saw that the airplane 's left wing had contacted a utility trailer , substantially damaging the wing spar . The pilot stated that the accident could have been prevented if he had looked to all sides before turning and not allowed himself to be distracted by the presence of the helicopter .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot 's failure to maintain clearance while taxiing . Contributing to the accident was the pilot 's diverted attention ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . OBJECT - BUILDING(NONRESIDENTIAL )",
+      "2 . ( C ) CLEARANCE - NOT MAINTAINED - PILOT IN COMMAND",
+      "3 . ( F ) DIVERTED ATTENTION - PILOT IN COMMAND"
+     ]
+    }
+   ]
+  },
+  "irycv3ahyeav": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "LOSS OF ENGINE POWER",
+     "Phase+of+Operations": "TAKEOFF - INITIAL CLIMB"
+    },
+    {
+     "Occurences": "FORCED LANDING",
+     "Phase+of+Operations": "EMERGENCY DESCENT / LANDING"
+    },
+    {
+     "Occurences": "HARD LANDING",
+     "Phase+of+Operations": "EMERGENCY DESCENT / LANDING"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "CHI08CA057",
+     "Investigator+in+Charge": "Jim Silliman",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "Alexandria , MN ( AXN )",
+     "Airport": "Chandler Field Airport ( AXN )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 3",
+     "Last+FAA+Medical+Exam": "04/01/2007",
+     "Airplane+Rating": "Multi - engine Land ; Single - engine Land"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Lerohl",
+     "Engine+Model+or+Series": "13B"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The pilot reported that he conducted a preflight and run - up of the amateur - built experimental airplane , and he reported that it was operating normally . The airplane had climbed to 200 - 300 feet at 90 knots when the engine lost power . The pilot executed a forced landing to the airport property . The airplane landed hard and the main landing gear collapsed . The airplane and engine were inspected but the reason for the loss of power was not determined .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The loss of engine power for undetermined reasons ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) REASON FOR OCCURRENCE UNDETERMINED",
+      "2 . TERRAIN CONDITION - GROUND"
+     ]
+    }
+   ]
+  },
+  "jsyn3kibzuyp": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "DRAGGED WING , ROTOR , POD , FLOAT OR TAIL / SKID",
+     "Phase+of+Operations": "LANDING"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "NYC08CA063",
+     "Investigator+in+Charge": "Paul R Cox",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "Key Largo , FL ( NONE )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 3",
+     "Last+FAA+Medical+Exam": "09/01/2006",
+     "Airplane+Rating": "Multi - engine Land ; Single - engine Land"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Maule",
+     "Engine+Model+or+Series": "O-540"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The pilot of a float - equipped Maule M-7 - 235 noted a rain squall in the \" immediate area \" of his planned water landing . The pilot decided to land 1/2 mile to the northeast , into a northeast wind . Upon touchdown , a wind gust lifted the right wing with more force than the pilot could counteract . The airplane 's left float submerged , then separated , along with the strut , from the wing . The airplane spun to the left , and the right wingtip struck the water . The pilot reported about 350 hours of flight time , with 100 hours in model , and 75 to 100 water landings within the previous year .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot 's loss of control during the landing . Contributing was the wind gust ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . TERRAIN CONDITION - WATER",
+      "2 . ( C ) AIRCRAFT CONTROL - NOT MAINTAINED - PILOT IN COMMAND",
+      "3 . ( F ) WEATHER CONDITION - GUSTS"
+     ]
+    }
+   ]
+  },
+  "knffz6uuguel": {
+   "OccurrenceRecord": [],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "DCA08RA015",
+     "Investigator+in+Charge": "Joe Sedor",
+     "Flight+conducted+under": "Non - U.S. , Commercial",
+     "Departure+Point": "Istanbul"
+    }
+   ],
+   "PilotInfo": [],
+   "AircraftInfo": null,
+   "NarrativeInfo": null,
+   "FindingsList": []
+  },
+  "kvtq6jgt0wfs": {
+   "OccurrenceRecord": [],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "MIA08WA058",
+     "Investigator+in+Charge": "Jose L Obregon",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "Portuguesa ( SVGU )"
+    }
+   ],
+   "PilotInfo": [],
+   "AircraftInfo": null,
+   "NarrativeInfo": [
+    {
+     "Analysis": "On December 26 , 2007 , about 1245 Atlantic standard time , a Cessna 210 , N761YL , impacted with the ground during the approach to the Metropoltano Airport , Ocumare Del Tuy , Venezuela . Visual meteorological conditions prevailed and no flight plan information is known . The pilot received minor injuries and the aircraft incurred substantial damage . The flight originated from the Aerodromo Guanare , Portuguesa , Venezuela , earlier that day , about 1120 .",
+     "Probable+Cause+And+Findings": "Information from the Venezuelan government states that the pilot declared a loss of engine power during the final approach and impact the ground 300 meters short of runway 8 ."
+    }
+   ],
+   "FindingsList": []
+  },
+  "lhbreehnpeks": {
+   "OccurrenceRecord": null,
+   "AccidentInfo": [
+    {
+     "Accident+Number": "SEA08CA049",
+     "Investigator+in+Charge": "James F Struhsaker",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "Reno , NE ( RNO )",
+     "Airport": "Stovepipe Wells Airport ( L09 )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 3",
+     "Last+FAA+Medical+Exam": "08/01/2006",
+     "Airplane+Rating": "Single - engine Land",
+     "Seat+Occupied": "Left"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Beech",
+     "Engine+Model+or+Series": "IO-340 - A"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The pilot reported that during the landing on runway 5 , the touchdown was hard and the airplane bounced and started to \" porpoise \" . Subsequently the nosewheel landing gear failed aft , and the airplane nosed down and slid to a stop . The pilot reported no mechanical failures or malfunctions with the airplane at the time of the accident . Examination of the airplane by salvage personnel revealed that the engine mount and firewall were bent .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot 's improper flare during landing ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) FLARE - IMPROPER - PILOT IN COMMAND",
+      "2 . TERRAIN CONDITION - RUNWAY"
+     ]
+    }
+   ]
+  },
+  "ltbcylyh1k2r": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "LOSS OF ENGINE POWER(TOTAL ) - NONMECHANICAL",
+     "Phase+of+Operations": "CRUISE"
+    },
+    {
+     "Occurences": "FORCED LANDING",
+     "Phase+of+Operations": "DESCENT - EMERGENCY"
+    },
+    {
+     "Occurences": "IN FLIGHT COLLISION WITH OBJECT",
+     "Phase+of+Operations": "EMERGENCY DESCENT / LANDING"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "NYC08CA042",
+     "Investigator+in+Charge": "Brian C Rayner",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "OCEAN CITY , NJ ( 26N )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 2",
+     "Last+FAA+Medical+Exam": "07/01/2006",
+     "Airplane+Rating": "Single - engine Land"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Cessna",
+     "Engine+Model+or+Series": "O-360"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The pilot of the Cessna 172N stated the airplane was in cruise flight when the engine sputtered , and stopped producing power . The pilot then performed a forced landing to trees , resulting in substantial damage , but neither he nor the two passengers were injured . The pilot said he immediately egressed the airplane , checked both fuel tanks , and found both were empty . Examination of the fuel tanks by a Federal Aviation Administration inspector revealed they were intact , and no evidence of fuel , fuel spillage , or fuel odor was identified at the scene . The pilot stated that he departed his home airport with full tanks earlier in the day and recorded 3.2 hours on the hobbs meter . Several stops were made during the day , which involved six takeoffs and climbs to altitude . In a written statement , the pilot added , \" Physically checking the fuel tanks for fuel , instead of relying on [ the ] hobbs meter and an assumed gallons per hour fuel consumption rate , could have prevented this accident . \"",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot 's inadequate fuel consumption calculations which resulted in fuel exhaustion ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) FLUID , FUEL - EXHAUSTION",
+      "2 . ( C ) FUEL CONSUMPTION CALCULATIONS - INADEQUATE - PILOT IN COMMAND",
+      "3 . OBJECT - TREE(S )"
+     ]
+    }
+   ]
+  },
+  "lvlkpc6n6ea2": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "HARD LANDING",
+     "Phase+of+Operations": "LANDING - FLARE / TOUCHDOWN"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "LAX08CA040",
+     "Investigator+in+Charge": "Wayne R Pollack",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "Sahuarita , AZ ( 6AZ8 )",
+     "Airport": "Flying Diamond ( 6AZ8 )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 2",
+     "Last+FAA+Medical+Exam": "03/01/2007",
+     "Airplane+Rating": "Single - engine Land"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Eldredge",
+     "Engine+Model+or+Series": "A-65"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The pilot observed a car approaching the runway when he was on short final approach for landing at the uncontrolled airport . It appeared to the pilot that the car would cross the runway at midfield just about the time he would be on the landing rollout crossing the same area . The pilot abruptly applied full throttle ; however , the engine 's power did not increase . The pilot failed to maintain adequate airspeed to touchdown normally , which resulted in a hard landing . Thereafter , the airplane veered off the runway and came to rest with a bent airframe .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot 's failure to maintain adequate airspeed . A contributing factor was the pilot 's distraction due to the presence of an automobile , which appeared to encroach upon the runway environment ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . OBJECT - VEHICLE",
+      "2 . ( F ) DIVERTED ATTENTION - PILOT IN COMMAND",
+      "3 . ( C ) AIRSPEED - INADEQUATE - PILOT IN COMMAND"
+     ]
+    }
+   ]
+  },
+  "mc5m4vr0sfbf": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "ON GROUND / WATER ENCOUNTER WITH WEATHER",
+     "Phase+of+Operations": "TAKEOFF - ROLL / RUN"
+    },
+    {
+     "Occurences": "LOSS OF CONTROL - ON GROUND / WATER",
+     "Phase+of+Operations": "TAKEOFF - ABORTED"
+    },
+    {
+     "Occurences": "NOSE GEAR COLLAPSED",
+     "Phase+of+Operations": "TAKEOFF - ABORTED"
+    },
+    {
+     "Occurences": "NOSE OVER",
+     "Phase+of+Operations": "LANDING - ROLL"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "DFW08CA051",
+     "Investigator+in+Charge": "Jason T Aguilera",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "HOUSTON , TX ( EYQ )",
+     "Airport": "WEISER AIR PARK ( EYQ )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 3 Without Waivers / Limitations",
+     "Last+FAA+Medical+Exam": "05/01/2007",
+     "Airplane+Rating": "Single - engine Land",
+     "Seat+Occupied": "Left"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Cessna",
+     "Engine+Model+or+Series": "O-320 - E2D"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The private pilot was flying multiple visual patterns on a 40 - foot wide asphalt runway . Winds were reported by the pilot as variable and gusting . The pilot stated that during the third touch- and - go , the wind shifted to a crosswind with a tailwind component . While reconfiguring for takeoff , the pilot perceived a faster than normal groundspeed . A gust of wind contacted the airplane 's tail pushing the nose to the left . The pilot attempted to correct back to centerline but was hesitant to input an aggressive correction due to the faster than normal groundspeed . The left main gear ran off the runway onto the grass and the airplane departed the left side of the runway . The nose gear sank into mud and was separated . The nose gear strut dug into the muddy terrain and the airplane nosed over coming to rest in the inverted position . On a NTSB Form 6120.1 , the pilot reported that the accident could have been prevented with a more aggressive rudder input .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot 's failure to maintain aircraft control . A contributing factor was prevailing crosswind ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( F ) WEATHER CONDITION - CROSSWIND",
+      "• ( C ) DIRECTIONAL CONTROL - NOT MAINTAINED - PILOT IN COMMAND",
+      "• LANDING GEAR , NOSE GEAR - SEPARATION",
+      "4 . TERRAIN CONDITION - MUDDY"
+     ]
+    }
+   ]
+  },
+  "ni1an0yyk62e": {
+   "OccurrenceRecord": [],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "CHI08WA075",
+     "Investigator+in+Charge": "Pamela S Sullivan",
+     "Flight+conducted+under": "Non - U.S. , Non - Commercial",
+     "Departure+Point": "OXFORD ( EGTK )"
+    }
+   ],
+   "PilotInfo": [],
+   "AircraftInfo": null,
+   "NarrativeInfo": null,
+   "FindingsList": []
+  },
+  "nnolzddmu0sj": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "UNDERSHOOT",
+     "Phase+of+Operations": "APPROACH - VFR PATTERN - FINAL APPROACH"
+    },
+    {
+     "Occurences": "ON GROUND / WATER COLLISION WITH OBJECT",
+     "Phase+of+Operations": "LANDING - FLARE / TOUCHDOWN"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "LAX08CA035",
+     "Investigator+in+Charge": "Patrick H Jones",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "CARLSBAD , CA ( CRQ )",
+     "Airport": "FALLBROOK COMMUNITY AIRPARK ( L18 )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 2 Without Waivers / Limitations",
+     "Last+FAA+Medical+Exam": "07/01/2007",
+     "Airplane+Rating": "Multi - engine Land ; Single - engine Land",
+     "Seat+Occupied": "Left"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Piper",
+     "Engine+Model+or+Series": "O-360 - A4A"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "While on approach for landing , the airplane encountered a downdraft . The pilot attempted to arrest the sink rate by applying full power ; however , the airplane landed hard and short of the runway , damaging surrounding vegetation and a runway edge light . After the hard landing the pilot was able to get the airplane airborne again and he decided to return to his home base airport . During the flight back to his home airport the left wheel and strut fell from the airplane .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot 's misjudged distance and altitude that led to an undershoot and a failure to obtain the proper touchdown point ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . WEATHER CONDITION - DOWNDRAFT",
+      "2 . ( C ) DISTANCE / ALTITUDE - MISJUDGED - PILOT IN COMMAND",
+      "3 . ( C ) PROPER TOUCHDOWN POINT - NOT OBTAINED - PILOT IN COMMAND",
+      "4 . OBJECT - RUNWAY LIGHT",
+      "5 . TERRAIN CONDITION - HIGH VEGETATION"
+     ]
+    }
+   ]
+  },
+  "nxbyaludtuiw": {
+   "OccurrenceRecord": [],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "DCA08WA016",
+     "Investigator+in+Charge": "William English",
+     "Flight+conducted+under": "Non - U.S. , Commercial",
+     "Departure+Point": "Jakarta"
+    }
+   ],
+   "PilotInfo": [],
+   "AircraftInfo": null,
+   "NarrativeInfo": null,
+   "FindingsList": []
+  },
+  "oeqoebzfpugu": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "LOSS OF ENGINE POWER(TOTAL ) - NONMECHANICAL",
+     "Phase+of+Operations": "TAKEOFF - INITIAL CLIMB"
+    },
+    {
+     "Occurences": "ON GROUND / WATER COLLISION WITH OBJECT",
+     "Phase+of+Operations": "LANDING - ROLL"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "SEA08CA044",
+     "Investigator+in+Charge": "Joshua D Cawthra",
+     "Flight+conducted+under": "Part 91 : General Aviation - Positioning",
+     "Departure+Point": "Spokane , WA ( KGEG )",
+     "Airport": "Spokane Felts Field ( SFF )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 2",
+     "Last+FAA+Medical+Exam": "06/01/2007",
+     "Airplane+Rating": "Multi - engine Land ; Single - engine Land",
+     "Seat+Occupied": "Left"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Cessna",
+     "Engine+Model+or+Series": "O-470 - R"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The pilot reported that after an uneventful run - up , he taxied onto the runway and proceeded to takeoff . During takeoff initial climb , the engine lost power and he initiated a 180 - degree turn towards the departure runway due to a lack of suitable terrain for a forced landing . During the forced landing , the airplane struck an airport perimeter fence and subsequently nosed into the ground . A post - accident inspection of the airframe and engine revealed no mechanical anomalies . The reason for the loss of engine power was undetermined .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The loss of engine power for undetermined reasons . Contributing factors were the lack of suitable terrain for the forced landing and the fence ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) REASON FOR OCCURRENCE UNDETERMINED",
+      "2 . ( F ) OBJECT - FENCE",
+      "3 . ( F ) TERRAIN CONDITION - NONE SUITABLE"
+     ]
+    }
+   ]
+  },
+  "oyfezwhm2k6r": {
+   "OccurrenceRecord": [],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "LAX08WA131",
+     "Investigator+in+Charge": "Zoë Keliher",
+     "Flight+conducted+under": "Non - U.S. , Non - Commercial",
+     "Departure+Point": "Moorabbin",
+     "Airport": "Runway Surface Type :"
+    }
+   ],
+   "PilotInfo": [],
+   "AircraftInfo": null,
+   "NarrativeInfo": null,
+   "FindingsList": []
+  },
+  "pk2kawz7kurs": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "IN FLIGHT COLLISION WITH OBJECT",
+     "Phase+of+Operations": "APPROACH"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "NYC08CA055",
+     "Investigator+in+Charge": "Robert J Gretz",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "Quincy , FL ( 2J9 )",
+     "Airport": "Private Airstrip ( NONE )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 3 With Waivers / Limitations",
+     "Last+FAA+Medical+Exam": "06/01/2007",
+     "Airplane+Rating": "Single - engine Land",
+     "Seat+Occupied": "Left"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Piper",
+     "Engine+Model+or+Series": "O-320"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The pilot , age 85 , was attempting to land a Piper PA-22 - 150 at his private airstrip . While on final approach for the 1,500 - foot - long turf strip , the airplane contacted trees , then utility wires , and came to rest upright . The reported weather about the time of the accident included calm winds , a broken ceiling at 9,000 feet , and visibility 10 miles . The pilot reported a total flight experience of 2,319 hours ; of which , most was in the same make and model as the accident airplane . In addition , the pilot flew the accident airplane about 17 hours during the 90 - day period preceding the accident . Examination of the wreckage did not reveal any preimpact mechanical malfunctions , nor did the pilot report any .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot 's misjudged clearance over obstacles during final approach ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . OBJECT - TREE(S )",
+      "2 . ( C ) ALTITUDE / CLEARANCE - MISJUDGED - PILOT IN COMMAND"
+     ]
+    }
+   ]
+  },
+  "qddangoiuuxq": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "LOSS OF CONTROL - IN FLIGHT",
+     "Phase+of+Operations": "LANDING - FLARE / TOUCHDOWN"
+    },
+    {
+     "Occurences": "IN FLIGHT COLLISION WITH TERRAIN / WATER",
+     "Phase+of+Operations": "LANDING - ABORTED"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "NYC08CA048",
+     "Investigator+in+Charge": "Todd G Gunther",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "Latrobe , PA ( LBE )",
+     "Airport": "Arnold Palmer Regional Airport ( LBE )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 3 With Waivers / Limitations",
+     "Last+FAA+Medical+Exam": "03/01/2006",
+     "Airplane+Rating": "Single - engine Land",
+     "Seat+Occupied": "Front"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Vans Aircraft",
+     "Engine+Model+or+Series": "O-320"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "On his third landing of the day , the pilot of an amateur built Vans RV-8 touched down , in a tail low attitude , near the displaced runway threshold . The airplane began to veer left and right , so the pilot applied power and climbed to an altitude of 30 to 50 feet . The airplane then rolled and turned left before it overflew the left edge of the runway and parallel taxiway , while continuing to turn past a heading perpendicular to the runway centerline . The airplane continued the left turn , in an approximate 30 - degree bank , and began to descend toward a low wetland adjacent to the runway . The aircraft struck the ground left wingtip first , and the left wing and left main gear separated from the airframe . The airplane then cartwheeled counterclockwise coming to rest upright on the right main landing gear and forward fuselage . This was the pilot 's second incident in an RV-8 . Approximately one year prior to the accident , in a different RV-8 , the pilot also experienced a loss of control while practicing landings , during which the airplane veered off the left side of the runway and struck a taxiway light .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot 's failure to maintain directional control during landing ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) DIRECTIONAL CONTROL - NOT MAINTAINED - PILOT IN COMMAND"
+     ]
+    }
+   ]
+  },
+  "qjy3kc0sn02v": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "ON GROUND / WATER ENCOUNTER WITH TERRAIN / WATER",
+     "Phase+of+Operations": "LANDING - ROLL"
+    },
+    {
+     "Occurences": "NOSE GEAR COLLAPSED",
+     "Phase+of+Operations": "LANDING - ROLL"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "CHI08CA058",
+     "Investigator+in+Charge": "John M Brannen",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "Crystal Falls , MI"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 3",
+     "Last+FAA+Medical+Exam": "11/01/2006",
+     "Airplane+Rating": "Multi - engine Land ; Single - engine Land"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Cessna",
+     "Engine+Model+or+Series": "O-300 - D"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The airplane was substantially damaged during landing on a frozen lake when the nose landing gear collapsed . The pilot reported that he was landing on a frozen lake to visit ice - fisherman . He stated that he had landed at one end of the lake and spent about 20 minutes talking to some fishermen and then got back in the airplane and flew to the opposite end of the lake . Upon landing , the nose landing gear struck a crack in the ice and collapsed . The airplane then slid about 400 feet before coming to rest . Examination of the airplane revealed damage to the engine , propeller and firewall .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The rough , unsuitable terrain encountered during the landing which resulted in the total failure of the nose landing gear ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . TERRAIN CONDITION - FROZEN",
+      "2 . ( C ) UNSUITABLE TERRAIN OR TAKEOFF / LANDING / TAXI AREA - ENCOUNTERED",
+      "3 . ( C ) TERRAIN CONDITION - ROUGH / UNEVEN",
+      "4 . ( C ) LANDING GEAR , NOSE GEAR - FAILURE , TOTAL"
+     ]
+    }
+   ]
+  },
+  "r2z54ve9u2jm": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "OVERRUN",
+     "Phase+of+Operations": "LANDING"
+    },
+    {
+     "Occurences": "ON GROUND / WATER ENCOUNTER WITH TERRAIN / WATER",
+     "Phase+of+Operations": "LANDING"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "MIA08CA018",
+     "Investigator+in+Charge": "Jose Obregon",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "Mount Pleasant , TN ( MRC )",
+     "Airport": "Houston County ( KM93 )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 3",
+     "Last+FAA+Medical+Exam": "08/01/2007",
+     "Airplane+Rating": "Single - engine Land"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Cessna",
+     "Engine+Model+or+Series": "O-300"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The pilot stated that the airplane 's approach was a little high for runway 8 . The airplane was traveling about 70 mph when it touchdown on the runway . A gust of wind lifted the airplane . When the airplane touchdown a second time , there was little runway remaining . He considered executing a go around but saw the power lines beyond the runway and was n't sure the airplane could clear them . He elected to cut engine power and stop ; more so , to utilize the overrun grass area past the end of the runway if needed . Approximately 100 feet into the overrun area , the airplane nosed into a large ditch and flipped onto its back . The pilot stated there were no mechanical failures or malfunctions to the airplane or any of its systems prior to the accident .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot 's failure to perform a go around ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) GO - AROUND - NOT PERFORMED - PILOT IN COMMAND",
+      "2 . TERRAIN CONDITION - DITCH"
+     ]
+    }
+   ]
+  },
+  "rbwnhxekl0y8": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "ON GROUND / WATER ENCOUNTER WITH TERRAIN / WATER",
+     "Phase+of+Operations": "LANDING - ROLL"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "DFW08CA047",
+     "Investigator+in+Charge": "Craig R Hatch",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "HOBBS , NM ( HOB )",
+     "Airport": "MEDFORD MUNI ( OK68 )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 3 With Waivers / Limitations",
+     "Last+FAA+Medical+Exam": "12/01/2007",
+     "Airplane+Rating": "Single - engine Land",
+     "Seat+Occupied": "Left"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Cessna",
+     "Engine+Model+or+Series": "IO-520"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The private pilot attempted a night landing on an unlighted runway . Prior to landing , he said he tried to activate the runway lights , but was unable to turn the lights on . The pilot noted that since there was moonlight and he was familiar with the airport ; he elected to land without the runway lights . He reported that he thought he could see the runway , and that he was on the runway , until \" he felt the nose - wheel sink . \" The airplane came to rest inverted . An inspection of the runway lighting system revealed that the lights were not functioning properly .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot 's decision to attempt a night landing without runway lighting . A contributing factor was inoperative runway lights ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . LIGHT CONDITION - NIGHT",
+      "2 . ( C ) IN - FLIGHT PLANNING / DECISION - INADEQUATE - PILOT IN COMMAND",
+      "3 . ( F ) AIRPORT FACILITIES , RUNWAY EDGE LIGHTS - INOPERATIVE"
+     ]
+    }
+   ]
+  },
+  "rk5nkj7fkuac": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "NOSE OVER",
+     "Phase+of+Operations": "LANDING - ROLL"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "ANC08CA022",
+     "Investigator+in+Charge": "Scott Erickson",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "Chugiak , AK ( PABV )",
+     "Airport": "Wasilla ( PAWS )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 3",
+     "Last+FAA+Medical+Exam": "10/01/2006",
+     "Airplane+Rating": "Single - engine Land"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Aeronca",
+     "Engine+Model+or+Series": "C90 - 12F"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The private certificated pilot was landing a tundra tire , and tailwheel - equipped airplane on an asphalt surfaced runway during a Title 14 , CFR Part 91 , personal flight . During the landing roll , he reported that he applied the brakes and the airplane nosed over . The airplane received structural damage to the wings and the vertical stabilizer . In the Pilot / Operator Aircraft Accident Report ( NTSB",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot 's excessive application of the airplane 's brakes during the landing roll , which resulted in a nose - over ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . TERRAIN CONDITION - RUNWAY",
+      "2 . ( C ) BRAKES(NORMAL ) - EXCESSIVE - PILOT IN COMMAND"
+     ]
+    }
+   ]
+  },
+  "skh7xkodueia": {
+   "OccurrenceRecord": [],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "MIA08WA060",
+     "Investigator+in+Charge": "Jose L Obregon",
+     "Flight+conducted+under": "Non - U.S. , Non - Commercial",
+     "Departure+Point": "San Juan Morros ( SVJM )"
+    }
+   ],
+   "PilotInfo": [],
+   "AircraftInfo": null,
+   "NarrativeInfo": [
+    {
+     "Analysis": "On December 9 , 2007 , about 1730 Atlantic standard time , a Cessna T210 , of Venezuelan registration , YV-1221 , collided with electrical power lines near Guarico , Venezuela . Visual meteorological conditions prevailed and flight plan information is unknown . The pilot and passenger received fatal injuries . The aircraft was destroyed . The flight originated from the San Juan de Los Morros Airport , Guarico , Venezuela , earlier that day , at an unknown time .",
+     "Probable+Cause+And+Findings": "Information from the Venezuelan government states that the airplane collided with high tensioned electrical power lines . The airplane then impacted the ground and a post impact fire ensued , consuming the airplane ."
+    }
+   ],
+   "FindingsList": []
+  },
+  "somadbbkteol": {
+   "OccurrenceRecord": [],
+   "AccidentInfo": null,
+   "PilotInfo": [],
+   "AircraftInfo": null,
+   "NarrativeInfo": [
+    {
+     "Analysis": "On December 19 , 2007 , at 0800 local time , a Brazilian registered Cirrus SR-22 , PR - OGM , was substantially damaged when it impacted the ground during a landing at the Gurupi Airport ( SWGI ) , Gurupi , Brazil . The pilot was fatally injured and the owner / passenger was seriously injured . The flight was conducted under Brazilian flight regulations .",
+     "Probable+Cause+And+Findings": "According to a witness , the airplane made a \" low and tight \" left turn while on the base leg of the traffic pattern . The airplane 's left wing tip then struck the ground and the airplane \" cartwheeled \" before coming to rest ."
+    }
+   ],
+   "FindingsList": []
+  },
+  "tokx0ctuyoes": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "LOSS OF CONTROL - IN FLIGHT",
+     "Phase+of+Operations": "GO - AROUND ( VFR )"
+    },
+    {
+     "Occurences": "IN FLIGHT COLLISION WITH TERRAIN / WATER",
+     "Phase+of+Operations": "DESCENT - UNCONTROLLED"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "NYC08CA047",
+     "Investigator+in+Charge": "Jill M Andrews",
+     "Flight+conducted+under": "Part 91 : General Aviation - Instructional",
+     "Departure+Point": "Venice , FL",
+     "Airport": "Venice Municipal Airport ( VNC )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 1 With Waivers / Limitations",
+     "Last+FAA+Medical+Exam": "08/01/2007",
+     "Airplane+Rating": "None",
+     "Seat+Occupied": "Left"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Cessna",
+     "Engine+Model+or+Series": "O-235"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "During his first solo flight , the student pilot flew the Cessna 152 \" fast \" on final approach and flared higher than normal . The airplane bounced on the runway , and the student pilot initiated a go - around . He then lost control of the airplane , and it impacted grass off to the side of the runway . The student pilot reported no mechanical anomalies and stated that he used 10- degrees of flaps instead of 30 - degrees during the approach . At the time of the accident , the student pilot had accumulated 23 hours of total flight experience , all in the make and model , and within the previous 90 days .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The student pilot 's improper recovery from a bounced landing ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) RECOVERY FROM BOUNCED LANDING - IMPROPER - PILOT IN COMMAND",
+      "2 . TERRAIN CONDITION - GRASS"
+     ]
+    }
+   ]
+  },
+  "u3lvsnzvd0e3": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "LOSS OF CONTROL - ON GROUND / WATER",
+     "Phase+of+Operations": "TAXI - FROM LANDING"
+    },
+    {
+     "Occurences": "ON GROUND / WATER ENCOUNTER WITH TERRAIN / WATER",
+     "Phase+of+Operations": "TAXI - FROM LANDING"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "SEA08CA047",
+     "Investigator+in+Charge": "Kristi Dunks",
+     "Flight+conducted+under": "Part 91 : General Aviation - Instructional",
+     "Departure+Point": "El Cajon , CA ( SEE )",
+     "Airport": "Gillespie Field ( SEE )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 1",
+     "Last+FAA+Medical+Exam": "07/01/2007",
+     "Airplane+Rating": "None"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Cessna",
+     "Engine+Model+or+Series": "IO-360 - B1E"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The student pilot stated that she was practicing touch - and - go takeoffs and landings during her second solo flight . She completed three uneventfully . On the fourth one , her approach speed was higher than normal . She landed the airplane and rolled out on the runway . When she attempted to turn onto a taxiway , the airplane was going too fast , and she taxied off of the runway and into a ditch . The outboard 2 feet of the left wing was curved upward , and the right horizontal stabilizer and elevator were bent .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The excessive speed while turning off of the runway which resulted in a loss of aircraft control . The ditch was a factor ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) AIRSPEED - EXCESSIVE - PILOT IN COMMAND",
+      "2 . ( C ) AIRCRAFT CONTROL - NOT MAINTAINED - PILOT IN COMMAND",
+      "3 . ( F ) TERRAIN CONDITION - DITCH"
+     ]
+    }
+   ]
+  },
+  "umktuoptusel": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "LOSS OF CONTROL - ON GROUND / WATER",
+     "Phase+of+Operations": "LANDING - ROLL"
+    },
+    {
+     "Occurences": "IN FLIGHT COLLISION WITH OBJECT",
+     "Phase+of+Operations": "LANDING - ROLL"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "MIA08CA030",
+     "Investigator+in+Charge": "Eric H Alleyne",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "Talladega , AL ( HUA )",
+     "Airport": "TALLADEGA MUNI ( ASN )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 3 None",
+     "Last+FAA+Medical+Exam": "06/01/2007",
+     "Airplane+Rating": "Single - engine Land",
+     "Seat+Occupied": "Left"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Cessna",
+     "Engine+Model+or+Series": "O-320 - HAD"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The student pilot stated that he entered left closed traffic for runway 21 at the Talladega Municipal Airport , Talladega , Alabama . He landed and started to prepare airplane for a touch- and - go . As he applied power he lost directional control of the airplane , went off the left side of the runway , and collided with a tree . The student pilot did not report any mechanical or flight control anomalies with the airplane .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot 's failure to maintain directional control of the airplane ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) DIRECTIONAL CONTROL - NOT MAINTAINED - PILOT IN COMMAND",
+      "2 . OBJECT - TREE(S )"
+     ]
+    }
+   ]
+  },
+  "utmqjybn1uym": {
+   "OccurrenceRecord": [],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "DEN08RA050",
+     "Investigator+in+Charge": "Jennifer S Kaiser",
+     "Flight+conducted+under": "Non - U.S. , Non - Commercial",
+     "Departure+Point": "Pointe - A - Pitre ( TFFR )"
+    }
+   ],
+   "PilotInfo": [],
+   "AircraftInfo": null,
+   "NarrativeInfo": [
+    {
+     "Analysis": "On December 22 , 2007 , at 1815 coordinated universal time , a Partenavia AP 68 TP , U.S. registered N901TP , owned by Air Coulibri Inc. , and piloted by the accident pilot , was substantially damaged when it experienced an uncontained engine failure during the takeoff roll at Pointe - A - Pitre le Raizet ( TFFR ) , Guadeloupe . Visual meteorological conditions prevailed at the time of the accident . The pilot and one passenger were not injured . The flight was originating at the time of the accident .",
+     "Probable+Cause+And+Findings": "The French investigators reported that pilot experienced a problem during the takeoff roll . The pilot aborted the takeoff . Further examination revealed an uncontained \" rupture \" of the left engine ."
+    }
+   ],
+   "FindingsList": []
+  },
+  "uudvhk7x0gu4": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "LOSS OF CONTROL - IN FLIGHT",
+     "Phase+of+Operations": "TAKEOFF"
+    },
+    {
+     "Occurences": "IN FLIGHT COLLISION WITH TERRAIN / WATER",
+     "Phase+of+Operations": "DESCENT - UNCONTROLLED"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "DEN08CA045",
+     "Investigator+in+Charge": "David C Bowling",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "Gunnison , CO ( GUC )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 3",
+     "Last+FAA+Medical+Exam": "10/01/2007",
+     "Airplane+Rating": "Single - engine Land"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Piper",
+     "Engine+Model+or+Series": "IO-550"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The airplane was taking off . As the pilot began his takeoff roll , he noticed the airplane sliding just a little . As he continued to accelerate , he got the airplane straight and proceeded down the center of the runway . The pilot said that at about 75 knots , he rotated . He said he was watching a snow plow that was farther down the runway and off to the side . He 'd just gotten into the air , approximately 5 feet above the runway , when the airplane drifted left and the left main landing gear caught a snow bank . The airplane came down , impacting the ground off the side of the runway and coming to rest in the snow . The pilot and the four passengers on board were not injured . The airplane sustained substantial damage . The pilot said he felt he did not put in enough right rudder to counter the torque of the propeller after he left the ground .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot 's failure to maintain directional control of the airplane during takeoff resulting in the airplane hitting a snowbank and subsequently , the ground ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) DIRECTIONAL CONTROL - NOT MAINTAINED - PILOT IN COMMAND",
+      "2 . TERRAIN CONDITION - SNOWBANK"
+     ]
+    }
+   ]
+  },
+  "vdj8ymlis0en": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "ON GROUND / WATER ENCOUNTER WITH TERRAIN / WATER",
+     "Phase+of+Operations": "TAKEOFF - ROLL / RUN"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "ANC08CA024",
+     "Investigator+in+Charge": "Lawrence R Lewis",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "Seward , AK"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 3 With Waivers / Limitations",
+     "Last+FAA+Medical+Exam": "03/01/2007",
+     "Airplane+Rating": "Single - engine Land",
+     "Seat+Occupied": "Front"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Piper",
+     "Engine+Model+or+Series": "O-320 - B2B"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The private certificated pilot was taking off from a narrow , off - airport site under Title 14 , CFR Part 91 , when the accident occurred . The pilot said he used too much rudder during takeoff , and the right wing caught in high alder brush next to the takeoff area . He said the airplane veered to the right , into the alders and small spruce trees . According to the pilot , there were no known mechanical problems with the airplane prior to the accident , and that the airplane sustained damage to the left wing leading edge , tip , and spar , and damage to the right wing leading edge . The left landing gear and propeller were also damaged .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot 's failure to maintain directional control during takeoff ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) DIRECTIONAL CONTROL - NOT MAINTAINED - PILOT IN COMMAND",
+      "2 . TERRAIN CONDITION - HIGH VEGETATION"
+     ]
+    }
+   ]
+  },
+  "vkbmolkev0qz": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "ON GROUND / WATER ENCOUNTER WITH TERRAIN / WATER",
+     "Phase+of+Operations": "LANDING"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "NYC08CA040",
+     "Investigator+in+Charge": "Todd G Gunther",
+     "Flight+conducted+under": "Part 91 : General Aviation - Instructional",
+     "Departure+Point": "Fayettsville , TN ( FYM )",
+     "Airport": "Murfreesboro Municipal Airport ( MBT )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 2 With Waivers / Limitations",
+     "Last+FAA+Medical+Exam": "11/01/2007",
+     "Airplane+Rating": "Single - engine Land",
+     "Seat+Occupied": "Right"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Piper",
+     "Engine+Model+or+Series": "O-360 - D2A"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "During an instructional flight the student pilot slipped the Piper PA-28 - 140 in order to lose altitude while on final approach for landing . After reaching a \" reasonable approach altitude \" the student then realigned the airplane and continued the final approach . During the flare , the student \" flared way too much , \" and the airplane ballooned . The instructor then \" grabbed \" the controls and added full power in an attempt to recover . According to the instructor , the airplane was so close to the ground at this point that it did not have time to climb out . The instructor then \" chose \" to touchdown in the grass to the left of the runway , substantially damaging the airplane .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The flight instructor 's inadequate remedial action and failure to maintain runway alignment ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . DISTANCE / ALTITUDE - MISJUDGED - DUAL STUDENT",
+      "2 . FLARE - IMPROPER - DUAL STUDENT",
+      "3 . ( C ) REMEDIAL ACTION - INADEQUATE - PILOT IN COMMAND(CFI )",
+      "4 . ( C ) PROPER ALIGNMENT - NOT MAINTAINED - PILOT IN COMMAND(CFI )",
+      "5 . TERRAIN CONDITION - GRASS"
+     ]
+    }
+   ]
+  },
+  "wpuiqznrjequ": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "HARD LANDING",
+     "Phase+of+Operations": "LANDING - FLARE / TOUCHDOWN"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "LAX08CA031",
+     "Investigator+in+Charge": "Zoë Keliher",
+     "Flight+conducted+under": "Part 91 : General Aviation - Instructional",
+     "Departure+Point": "Mesa , AZ ( FFZ )",
+     "Airport": "Falcon Field Airport ( FFZ )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 3",
+     "Last+FAA+Medical+Exam": "08/01/2007",
+     "Airplane+Rating": "None"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Diamond Aircraft Industries",
+     "Engine+Model+or+Series": "IO-240 - B"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The student pilot was practicing short - field landings . While on short final in a crab to compensate for the crosswind conditions , he realized that the airplane was below the glide path of the destination runway and began to flare in an effort to reduce the rapid rate of descent . The airplane landed hard on the left main landing gear and began an abrupt veer to the left of runway centerline . The left wing sustained substantial damage . The student pilot reported no preimpact mechanical malfunctions or failures with the airframe or engine .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : the student pilot 's failure to maintain the proper glide path and misjudged flare , which resulted in a hard landing ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . WEATHER CONDITION - CROSSWIND",
+      "2 . ( C ) PROPER GLIDEPATH - NOT MAINTAINED - PILOT IN COMMAND",
+      "3 . ( C ) FLARE - MISJUDGED - PILOT IN COMMAND"
+     ]
+    }
+   ]
+  },
+  "wtkhvq128ego": {
+   "OccurrenceRecord": null,
+   "AccidentInfo": [
+    {
+     "Accident+Number": "NYC08CA066",
+     "Investigator+in+Charge": "Brian C Rayner",
+     "Flight+conducted+under": "Part 91 : General Aviation - Instructional",
+     "Departure+Point": "Blue Bell , PA ( KLOM )",
+     "Airport": "Wings Field ( LOM )"
+    }
+   ],
+   "PilotInfo": null,
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Registration :",
+     "Engine+Model+or+Series": "O-360"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The solo student pilot of the Piper PA28 stated that he applied left rudder to compensate for a \" slight \" left crosswind while on approach to land on Runway 06 . At touchdown , having \" never let off left rudder , \" the airplane departed the left side of the runway and struck a culvert and two signs . A post flight inspection revealed damage to the propeller , nose landing gear , and firewall . The student pilot reported 78 total hours of flight experience , 31 hours in make and model , and reported no deficiencies with the performance and handling of the airplane . At the time of the accident , the winds reported at the airport were from 280 degrees at 3 knots .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The student pilot 's failure to maintain directional control while landing ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) DIRECTIONAL CONTROL - NOT MAINTAINED - PILOT IN COMMAND",
+      "2 . OBJECT - AIRPORT SIGN / MARKER",
+      "3 . TERRAIN CONDITION - DITCH"
+     ]
+    }
+   ]
+  },
+  "wxtu4ktw4kmg": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "LOSS OF CONTROL - ON GROUND / WATER",
+     "Phase+of+Operations": "LANDING - ROLL"
+    },
+    {
+     "Occurences": "ON GROUND / WATER ENCOUNTER WITH TERRAIN / WATER",
+     "Phase+of+Operations": "LANDING - ROLL"
+    },
+    {
+     "Occurences": "NOSE OVER",
+     "Phase+of+Operations": "LANDING"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "CHI08CA047",
+     "Investigator+in+Charge": "Jim Silliman",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "Wausau , WI ( AUW )",
+     "Airport": "Wausau Downtown ( AUW )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 3 With Waivers / Limitations",
+     "Last+FAA+Medical+Exam": "04/01/2006",
+     "Airplane+Rating": "Single - engine Land"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Cessna",
+     "Engine+Model+or+Series": "IO-360"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The pilot reported completing three takeoffs and full stop landings on runway 30 , and then he switched to runway 04 ( 3078 feet long , 100 feet wide , ice , snow covered ) . After landing on runway 04 , the airplane skidded on a patch of packed snow and the pilot reported that he \" Lost control . Plane ran off side of runway . \" The pilot tried to hold the yoke back but the nosewheel dug into soft snow on the side of the runway and the airplane nosed over . The pilot was not injured . He did not report any mechanical malfunctions . The right wing rear spar was bent .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot failed to maintain directional control during the landing roll . Factors that contributed to the accident included the snow on the runway and the snowbank ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) DIRECTIONAL CONTROL - NOT MAINTAINED - PILOT IN COMMAND",
+      "2 . ( F ) TERRAIN CONDITION - SNOW COVERED",
+      "3 . ( F ) TERRAIN CONDITION - RUNWAY",
+      "4 . ( F ) TERRAIN CONDITION - SNOWBANK"
+     ]
+    }
+   ]
+  },
+  "xmxsimb940qa": {
+   "OccurrenceRecord": [],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "ENG08WA006",
+     "Investigator+in+Charge": "Jim Hookey",
+     "Flight+conducted+under": "Non - U.S. , Commercial"
+    }
+   ],
+   "PilotInfo": [],
+   "AircraftInfo": null,
+   "NarrativeInfo": null,
+   "FindingsList": []
+  },
+  "xzwnuritaus8": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "LOSS OF ENGINE POWER(PARTIAL ) - NONMECHANICAL",
+     "Phase+of+Operations": "CRUISE - NORMAL"
+    },
+    {
+     "Occurences": "FORCED LANDING",
+     "Phase+of+Operations": "DESCENT - EMERGENCY"
+    },
+    {
+     "Occurences": "ON GROUND / WATER ENCOUNTER WITH TERRAIN / WATER",
+     "Phase+of+Operations": "LANDING - FLARE / TOUCHDOWN"
+    },
+    {
+     "Occurences": "NOSE OVER",
+     "Phase+of+Operations": "LANDING - ROLL"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "SEA08CA053",
+     "Investigator+in+Charge": "James F Struhsaker",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "Truckee , CA ( TRK )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 2 With Waivers / Limitations",
+     "Last+FAA+Medical+Exam": "06/01/2006",
+     "Airplane+Rating": "Multi - engine Land ; Single - engine Land ; Single - engine Sea",
+     "Seat+Occupied": "Left"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Piper",
+     "Engine+Model+or+Series": "O-360 - A4 M"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The pilot said that his engine started running rough while flying over mountainous terrain . There was a large snow covered meadow beneath him , so he circled it while trying to resolve his engine problem . His attempts to regain full power were unsuccessful . The airplane was equipped with large tundra tires , and the pilot believed that a precautionary landing under partial power was more prudent than proceeding to the nearest airport while crossing mountain ridges and over flying the surrounding forest . During a wheel landing in the snow , the airplane nosed over and came to rest inverted . The forward section of the airframe , both wings spars , and the vertical stabilizer were bent . The reason for the partial power loss was undetermined .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The loss of partial engine power during cruise for undetermined reasons . A contributing factor was the snow covered terrain ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) REASON FOR OCCURRENCE UNDETERMINED",
+      "2 . ( F ) TERRAIN CONDITION - SNOW COVERED",
+      "3 . PRECAUTIONARY LANDING - PERFORMED - PILOT IN COMMAND"
+     ]
+    }
+   ]
+  },
+  "y8q280pkolhi": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "LOSS OF CONTROL - ON GROUND / WATER",
+     "Phase+of+Operations": "LANDING - ROLL"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "DEN08CA034",
+     "Investigator+in+Charge": "Aaron M Sauer",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "Belen , NM ( E80 )",
+     "Airport": "Alexander Municipal Airport ( E80 )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 3",
+     "Last+FAA+Medical+Exam": "05/01/2006",
+     "Airplane+Rating": "Single - engine Land"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Godwin , David P",
+     "Engine+Model+or+Series": "O-360 - A1A-5"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "According to the pilot 's statement , he was landing on runway 21 and the winds were light and variable . Shortly after touchdown on the runway , he lost directional control and the airplane ground looped . The airplane departed the left side of the runway and came to rest upright . Examination of the airplane revealed that one main landing gear was separated and one was folded under the fuselage . Several right wing ribs were broken . No anomalies with the aircraft systems were reported .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : the pilot 's loss of directional control during landing resulting in a ground loop ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) DIRECTIONAL CONTROL - NOT MAINTAINED - PILOT IN COMMAND",
+      "2 . ( C ) GROUND LOOP / SWERVE - INADVERTENT - PILOT IN COMMAND"
+     ]
+    }
+   ]
+  },
+  "ymzh1vpeobhf": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "ON GROUND / WATER COLLISION WITH OBJECT",
+     "Phase+of+Operations": "LANDING - ROLL"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "SEA08CA039",
+     "Investigator+in+Charge": "Joshua D Cawthra",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "Puyallup , WA ( PLU )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 2 With Waivers / Limitations",
+     "Last+FAA+Medical+Exam": "10/01/2006",
+     "Airplane+Rating": "Single - engine Land",
+     "Seat+Occupied": "Front"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Piper",
+     "Engine+Model+or+Series": "O-320 - C2A"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "While landing on a gravel river bar in a tailwheel - equipped airplane , the pilot failed to maintain directional control during the landing roll , resulting in the aircraft impacting a log located adjacent to the intended landing area which resulted in substantial damage to the fuselage . A post - accident inspection of the aircraft revealed no mechanical anomalies .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot 's failure to maintain directional control of the tailwheel - equipped airplane during landing roll . Contributing factors were the rough / uneven terrain and log ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) DIRECTIONAL CONTROL - NOT MAINTAINED - PILOT IN COMMAND",
+      "2 . ( F ) TERRAIN CONDITION - ROUGH / UNEVEN",
+      "3 . ( F ) OBJECT - OTHER",
+      "4 . TERRAIN CONDITION - SAND BAR"
+     ]
+    }
+   ]
+  },
+  "ywqmwfsuyewq": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "LOSS OF CONTROL - IN FLIGHT",
+     "Phase+of+Operations": "LANDING - FLARE / TOUCHDOWN"
+    },
+    {
+     "Occurences": "IN FLIGHT COLLISION WITH TERRAIN / WATER",
+     "Phase+of+Operations": "DESCENT - UNCONTROLLED"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "DEN08CA043",
+     "Investigator+in+Charge": "Jennifer S Kaiser",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "CEDAR CITY , UT ( CDC )",
+     "Airport": "GALLUP MUNICIPAL ( GUP )"
+    }
+   ],
+   "PilotInfo": null,
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Champion",
+     "Engine+Model+or+Series": "O-320"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "According to the pilot , during the night landing he flared too high , the airplane stalled , and impacted the runway with the nose canted to the right . He said that he added power in attempt to straighten the airplane , but the airplane departed the runway to the right , traveled through a ditch and nosed over , resulting in substantial damage . The pilot reported no anomalies with the airplane systems . He stated he was not night current , and did not hold a valid medical certificate .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot 's premature landing flare and an inadvertent stall / mush . A contributing factor is pilot 's lack of recent night experience ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) FLARE - PREMATURE - PILOT IN COMMAND",
+      "2 . ( F ) LACK OF RECENT EXPERIENCE IN TYPE OPERATION - PILOT IN COMMAND",
+      "3 . ( C ) STALL / MUSH - INADVERTENT - PILOT IN COMMAND",
+      "4 . TERRAIN CONDITION - RUNWAY"
+     ]
+    }
+   ]
+  },
+  "zdiihkbdiuav": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "LOSS OF CONTROL - ON GROUND / WATER",
+     "Phase+of+Operations": "LANDING - FLARE / TOUCHDOWN"
+    },
+    {
+     "Occurences": "ON GROUND / WATER COLLISION WITH OBJECT",
+     "Phase+of+Operations": "LANDING - ROLL"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "DFW08CA049",
+     "Investigator+in+Charge": "Craig R Hatch",
+     "Flight+conducted+under": "Part 91 : General Aviation - Personal",
+     "Departure+Point": "HOUSTON , TX ( HOU )",
+     "Airport": "HORSESHOE BAY AIRPARK ( 4R2 )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 3 Without Waivers / Limitations",
+     "Last+FAA+Medical+Exam": "08/01/2007",
+     "Airplane+Rating": "Single - engine Land",
+     "Seat+Occupied": "Left"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Cessna",
+     "Engine+Model+or+Series": "O-470"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The private pilot stated as he approached the airport for a landing , the winds were reported as 320 degrees at 20 - knots , gusting to 30 - knots . The pilot added , as he touched down for a landing , a gust of wind pushed the airplane to the right and off the 5,987 - foot by 100 - foot wide runway . The pilot was unable to maneuver the airplane back onto the runway , and the airplane 's nose - gear collapsed after impacting a rock .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The pilot 's failure to maintain directional control while landing . A contributing factor was the gusting winds ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) DIRECTIONAL CONTROL - NOT MAINTAINED - PILOT IN COMMAND",
+      "2 . ( F ) WEATHER CONDITION - GUSTS",
+      "3 . TERRAIN CONDITION - ROCK(S)/BOULDER(S )"
+     ]
+    }
+   ]
+  },
+  "zmsnnpjxauwb": {
+   "OccurrenceRecord": [],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "DEN08WA042",
+     "Investigator+in+Charge": "Jennifer S Kaiser",
+     "Flight+conducted+under": "Non - U.S. , Non - Commercial",
+     "Departure+Point": "Chalon ( LFLH )"
+    }
+   ],
+   "PilotInfo": [],
+   "AircraftInfo": null,
+   "NarrativeInfo": [
+    {
+     "Analysis": "On December 17 , 2007 , at 1045 coordinated universal time , a Reims F172 M , French registered FBVIF , owned by Airclub Besancon la Veze and piloted by the accident pilot , was destroyed when it impacted terrain under unknown circumstances near Chevroux , France . A postimpact fire ensued . Instrument meteorological conditions prevailed at the time of the accident . The pilot was fatally injured . The flight originated from Chalon ( LFLH ) and was en route to Bourg ( LFHS ) , France .",
+     "Probable+Cause+And+Findings": "The French investigators reported that the airplane collided with the ground in \" bad weather conditions . \""
+    }
+   ],
+   "FindingsList": []
+  },
+  "zofcnigpiukg": {
+   "OccurrenceRecord": [
+    {
+     "Occurences": "LOSS OF CONTROL - ON GROUND / WATER",
+     "Phase+of+Operations": "LANDING - ROLL"
+    },
+    {
+     "Occurences": "ON GROUND / WATER COLLISION WITH OBJECT",
+     "Phase+of+Operations": "LANDING - ROLL"
+    }
+   ],
+   "AccidentInfo": [
+    {
+     "Accident+Number": "MIA08CA022",
+     "Investigator+in+Charge": "Jose Obregon",
+     "Flight+conducted+under": "Part 91 : General Aviation - Instructional",
+     "Departure+Point": "Kissimmee , FL ( KISM )",
+     "Airport": "Kissimmee Gateway ( KISM )"
+    }
+   ],
+   "PilotInfo": [
+    {
+     "Medical+Certification": "Class 2",
+     "Last+FAA+Medical+Exam": "10/01/2007",
+     "Airplane+Rating": "Single - engine Land"
+    }
+   ],
+   "AircraftInfo": [
+    {
+     "Aircraft+Make": "Piper",
+     "Engine+Model+or+Series": "O-320 - D3 G"
+    }
+   ],
+   "NarrativeInfo": [
+    {
+     "Analysis": "The pilot stated that he was practicing patterns . It was his third one . He was making a short field landing . As soon as he landed on the numbers , put the flaps down , carburetor heat off , tapped the brakes gently along with pulling the yoke back slowly , he felt the nose entering the grassy area . He tried to control it with the rudder but could n't fix that . Finally he stopped in the middle of the grassy area . He then brought the plane to the taxiway at 15 and switched off the engine . The student pilot stated there were no mechanical failures or malfunctions to the airplane or any of its systems prior to the accident .",
+     "Probable+Cause+And+Findings": "The National Transportation Safety Board determines the probable cause(s ) of this accident to be : The student pilot 's failure to maintain directional control during landing ."
+    }
+   ],
+   "FindingsList": [
+    {
+     "Findings": [
+      "1 . ( C ) DIRECTIONAL CONTROL - NOT MAINTAINED - PILOT IN COMMAND",
+      "2 . OBJECT - SIGN"
+     ]
+    }
+   ]
+  }
+ },
+ "validation": {
+  "OccurrenceRecord": {
+   "files": 42,
+   "instances": 77,
+   "empty_files": 19,
+   "dropped_files": 4,
+   "xml_checked": 5,
+   "xml_ok": 5,
+   "accepted": true
+  },
+  "AccidentInfo": {
+   "files": 64,
+   "instances": 64,
+   "empty_files": 0,
+   "dropped_files": 0,
+   "xml_checked": 0,
+   "xml_ok": 0,
+   "accepted": true
+  },
+  "PilotInfo": {
+   "files": 43,
+   "instances": 43,
+   "empty_files": 18,
+   "dropped_files": 0,
+   "xml_checked": 0,
+   "xml_ok": 0,
+   "accepted": true
+  },
+  "AircraftInfo": {
+   "files": 48,
+   "instances": 48,
+   "empty_files": 0,
+   "dropped_files": 0,
+   "xml_checked": 0,
+   "xml_ok": 0,
+   "accepted": true
+  },
+  "NarrativeInfo": {
+   "files": 52,
+   "instances": 52,
+   "empty_files": 0,
+   "dropped_files": 0,
+   "xml_checked": 0,
+   "xml_ok": 0,
+   "accepted": true
+  },
+  "FindingsList": {
+   "files": 46,
+   "instances": 46,
+   "empty_files": 19,
+   "dropped_files": 0,
+   "xml_checked": 0,
+   "xml_ok": 0,
+   "accepted": true
+  }
+ }
+}

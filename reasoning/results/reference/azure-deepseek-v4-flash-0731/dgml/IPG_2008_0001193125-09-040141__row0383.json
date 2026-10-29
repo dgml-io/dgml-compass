@@ -1,0 +1,53 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0383",
+ "format": "dgml",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "what portion of the total estimated future contingent acquisition obligation is due in the 12 months?",
+ "gold": "19.3%",
+ "finqa_id": "IPG/2008/page_93.pdf-1",
+ "source_page": "page_93",
+ "ticker": "IPG",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml/IPG_2008_0001193125-09-040141.dgml.xml",
+ "doc_chars": 742193,
+ "prompt_chars": 742383,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 742193,
+ "original_chars": 742193,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 181438,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 411,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "19.7%",
+ "reasoning": "We need to find the total estimated future contingent acquisition obligations and the amount due in 2009 (12 months). From the document, in Note 16 Commitments and Contingencies, there is a table \"Contingent Acquisition Obligations\" showing estimated future contingent acquisition obligations payable in cash. The table shows years 2009, 2010, 2011, 2012, 2013, Thereafter, Total. The total contingent acquisition payments row shows 2009: 79.3, 2010: 66.4, 2011: 103.7, 2012: 75.3, 2013: 75.9, Thereafter: 2.2, Total: 402.8. So the portion due in 12 months (2009) is 79.3 out of 402.8. The question asks \"what portion\" - likely a fraction or percentage. Compute 79.3 / 402.8 = 0.1969... ~ 19.7%. But the question might expect a fraction or percentage. It says \"what portion\" - could be a percentage. Let's compute: 79.3 / 402.8 = 0.19687... ~ 19.7%. Alternatively, they might want the amount? But \"portion\" suggests a ratio. The question: \"what portion of the total estimated future contingent acquisition obligation is due in the 12 months?\" So answer as a percentage or fraction. I'll give percentage. 79.3/402.8 = 0.19687... = 19.7% (rounded). Let's check if there is any other mention. The table also has a line \"Total contingent acquisition payments\" with 2009 79.3 and total 402.8. So answer 19.7% or 0.197. I'll put 19.7% inside answer.",
+ "raw_content": "<answer>19.7%</answer>",
+ "usage": {
+  "prompt_tokens": 181584,
+  "completion_tokens": 411,
+  "total_tokens": 181995,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 181504
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.6,
+ "answer_tag_found": true,
+ "docfinqa_row": 383
+}

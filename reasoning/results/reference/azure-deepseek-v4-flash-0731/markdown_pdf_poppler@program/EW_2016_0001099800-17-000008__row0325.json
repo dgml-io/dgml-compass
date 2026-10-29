@@ -1,0 +1,69 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0325",
+ "format": "markdown_pdf_poppler",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "how much goodwill does the company have as a % (  % ) of current assets?",
+ "gold": "921%",
+ "finqa_id": "EW/2016/page_79.pdf-2",
+ "source_page": "page_79",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf_poppler/EW_2016_0001099800-17-000008.md",
+ "doc_chars": 414583,
+ "prompt_chars": 414744,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 414583,
+ "original_chars": 414583,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 71165,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 166,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "27.950893",
+ "reasoning": "We need to find goodwill and current assets. Goodwill at Dec 31, 2016: $626.1 million (from balance sheet). Current assets: $2,240.0 million. Compute percentage: 626.1 / 2240.0 * 100 = 27.95% approx. Let's compute exactly: 626.1 / 2240 = 0.2795089... so 27.95%. Answer as percentage.",
+ "raw_content": "<evidence>\n626.1 | Goodwill (Consolidated Balance Sheets)\n2,240.0 | Total current assets (Consolidated Balance Sheets)\n</evidence>\n<program>multiply(divide(626.1, 2240.0), 100)</program>\n<answer>27.95%</answer>",
+ "usage": {
+  "prompt_tokens": 71471,
+  "completion_tokens": 166,
+  "total_tokens": 71637,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 16.71,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "626.1",
+   "element": "Goodwill (Consolidated Balance Sheets)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "2,240.0",
+   "element": "Total current assets (Consolidated Balance Sheets)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(626.1, 2240.0), 100)",
+ "answer_model": "27.95%",
+ "program_value": 27.950892857142858,
+ "docfinqa_row": 325
+}

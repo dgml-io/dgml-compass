@@ -1,0 +1,72 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0325",
+ "format": "markdown_pdf_plumber",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "how much goodwill does the company have as a % (  % ) of current assets?",
+ "gold": "921%",
+ "finqa_id": "EW/2016/page_79.pdf-2",
+ "source_page": "page_79",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf_plumber/EW_2016_0001099800-17-000008.md",
+ "doc_chars": 348684,
+ "prompt_chars": 348845,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 348684,
+ "original_chars": 348684,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 82552,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 117,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "27.950893",
+ "reasoning": "We need answer: goodwill as % of current assets. Goodwill at Dec 31 2016 = 626.1. Current assets = 2,240.0. Compute 626.1/2240*100 = 27.95%. Need evidence.",
+ "raw_content": "<evidence>\n626.1 | Goodwill (Note 8)\n2,240.0 | Total current assets\n</evidence>\n<program>multiply(divide(626.1, 2240.0), 100)</program>\n<answer>27.95%</answer>",
+ "usage": {
+  "prompt_tokens": 82858,
+  "completion_tokens": 117,
+  "total_tokens": 82975,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 82688
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.13,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "626.1",
+   "element": "Goodwill (Note 8)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "2,240.0",
+   "element": "Total current assets",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(626.1, 2240.0), 100)",
+ "answer_model": "27.95%",
+ "program_value": 27.950892857142858,
+ "docfinqa_row": 325
+}

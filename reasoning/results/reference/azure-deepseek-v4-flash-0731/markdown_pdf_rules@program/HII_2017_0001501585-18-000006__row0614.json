@@ -1,0 +1,74 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0614",
+ "format": "markdown_pdf_rules",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what portion of the equity compensation plan approved by security holders is to be issued upon the exercise of options warrants and rights?",
+ "gold": "9.9%",
+ "finqa_id": "HII/2017/page_124.pdf-1",
+ "source_page": "page_124",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/markdown_pdf_rules/HII_2017_0001501585-18-000006.md",
+ "doc_chars": 465382,
+ "prompt_chars": 465610,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 465382,
+ "original_chars": 465382,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 102037,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 415,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.098945",
+ "reasoning": "We need answer portion: \"what portion of the equity compensation plan approved by security holders is to be issued upon the exercise of options warrants and rights?\" Likely from Item 12 table: Number of securities to be issued upon exercise of outstanding options, warrants and rights (a) = 448,859, and remaining available (c) = 4,087,587. Portion = 448,859 / (448,859 + 4,087,587)? Or portion of plan approved by security holders? The question: \"what portion of the equity compensation plan approved by security holders is to be issued upon the exercise of options warrants and rights?\" Could mean fraction of total authorized? The table shows equity compensation plans approved by security holders: number to be issued upon exercise = 448,859, remaining available = 4,087,587. Total = 4,536,446. Portion = 448,859 / 4,536,446 ≈ 0.09894 ≈ 9.9%. Need compute. Use figures as printed. Evidence: 448,859 | Equity Compensation Plan Information table (a); 4,087,587 | (c). Program: divide(448859, add(448859, 4087587)). Answer as decimal? The question asks \"what portion\" - likely fraction. Provide value maybe 0.0989 or 9.9%. The instruction: final answer only value no units unless asked. We'll give 0.0989? Better exact fraction? The benchmark expects numeric. Compute: 448859 / (448859+4087587=4536446) = 0.09894. So answer 0.0989.",
+ "raw_content": "<evidence>\n448,859 | Equity Compensation Plan Information table (a)\n4,087,587 | Equity Compensation Plan Information table (c)\n</evidence>\n\n<program>divide(448859, add(448859, 4087587))</program>\n\n<answer>0.0989</answer>",
+ "usage": {
+  "prompt_tokens": 102348,
+  "completion_tokens": 415,
+  "total_tokens": 102763,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 102144
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.54,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "448,859",
+   "element": "Equity Compensation Plan Information table (a)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "4,087,587",
+   "element": "Equity Compensation Plan Information table (c)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(448859, add(448859, 4087587))",
+ "answer_model": "0.0989",
+ "program_value": 0.09894507726973935,
+ "docfinqa_row": 614
+}

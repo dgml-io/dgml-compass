@@ -1,0 +1,74 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0089",
+ "format": "markdown_pdf_poppler",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "pursuant to the agreement , on march 30 , 2012 , what was the approximate price for each site the company purchased in thousands",
+ "gold": "189625",
+ "finqa_id": "AMT/2012/page_118.pdf-2",
+ "source_page": "page_118",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/markdown_pdf_poppler/AMT_2012_0001193125-13-077821.md",
+ "doc_chars": 669235,
+ "prompt_chars": 669452,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 669235,
+ "original_chars": 669235,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 120190,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 377,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.189625",
+ "reasoning": "We need answer question: \"pursuant to the agreement , on march 30 , 2012 , what was the approximate price for each site the company purchased in thousands\"\n\nFrom document: Brazil—Vivo Acquisition: On March 30, 2012, the Company entered into a definitive agreement to purchase up to 1,500 towers from Vivo S.A. Pursuant to the agreement, on March 30, 2012, the Company purchased 800 communications sites for an aggregate purchase price of $151.7 million. So price per site = 151.7 million / 800 = 0.189625 million = $189.625 thousand. Approximate price per site in thousands = 189.625. Need answer value only. Evidence: \"800 communications sites\" and \"$151.7 million\". Program: divide(151.7, 800) but units? The question asks \"in thousands\" so 151.7 million = 151,700 thousand? Actually 151.7 million dollars = 151,700 thousand dollars. Divide by 800 = 189.625 thousand dollars per site. So program divide(151700, 800) or divide(151.7, 800) gives 0.189625 million = 189.625 thousand. Use figures as printed: 151.7 and 800. But program should be exact. We'll use divide(151.7, 800) and note result in thousands? The benchmark expects numeric value. Probably 189.625.",
+ "raw_content": "<evidence>\n151.7 | Brazil—Vivo Acquisition aggregate purchase price (in millions)\n800 | communications sites purchased on March 30, 2012\n</evidence>\n<program>\ndivide(151.7, 800)\n</program>\n<answer>189.625</answer>",
+ "usage": {
+  "prompt_tokens": 120506,
+  "completion_tokens": 377,
+  "total_tokens": 120883,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 120320
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.49,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "151.7",
+   "element": "Brazil—Vivo Acquisition aggregate purchase price (in millions)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "800",
+   "element": "communications sites purchased on March 30, 2012",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(151.7, 800)",
+ "answer_model": "189.625",
+ "program_value": 0.189625,
+ "docfinqa_row": 89
+}

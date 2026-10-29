@@ -1,0 +1,73 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0089",
+ "format": "dgml_compact",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "pursuant to the agreement , on march 30 , 2012 , what was the approximate price for each site the company purchased in thousands",
+ "gold": "189625",
+ "finqa_id": "AMT/2012/page_118.pdf-2",
+ "source_page": "page_118",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/dgml_compact/AMT_2012_0001193125-13-077821.dgml.txt",
+ "doc_chars": 684819,
+ "prompt_chars": 685036,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 684819,
+ "original_chars": 684819,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 147020,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 255,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "189.625",
+ "reasoning": "We need answer question: \"pursuant to the agreement , on march 30 , 2012 , what was the approximate price for each site the company purchased in thousands\"\n\nWe need find in document. There is Vivo Acquisition: On March 30, 2012, the Company purchased 800 communications sites for an aggregate purchase price of $151.7 million. So price per site = 151.7 million / 800 = 0.189625 million = $189.625 thousand per site. Approximate price per site in thousands = 189.625. Need answer value only. Evidence: $151.7 million, 800 sites. Program: divide(151.7, 800) = 0.189625 million per site, but question asks \"in thousands\" so 189.625 thousand. Actually 151.7 million = 151,700 thousand. Divide by 800 = 189.625 thousand. So answer 189.625.",
+ "raw_content": "<evidence>\n$151.7 million | Vivo Acquisition purchase price for 800 sites\n800 communications sites | Vivo Acquisition\n</evidence>\n<program>divide(151700, 800)</program>\n<answer>189.625</answer>",
+ "usage": {
+  "prompt_tokens": 147335,
+  "completion_tokens": 255,
+  "total_tokens": 147590,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 12.87,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$151.7 million",
+   "element": "Vivo Acquisition purchase price for 800 sites",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "800 communications sites",
+   "element": "Vivo Acquisition",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(151700, 800)",
+ "answer_model": "189.625",
+ "program_value": 189.625,
+ "docfinqa_row": 89
+}

@@ -1,0 +1,67 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0284",
+ "format": "markdown_pdf_rules",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "what is the yearly amortization rate for the purchased technology?",
+ "gold": "25%",
+ "finqa_id": "ADBE/2008/page_74.pdf-1",
+ "source_page": "page_74",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_rules/ADBE_2008_0000796343-09-000007.md",
+ "doc_chars": 443328,
+ "prompt_chars": 443483,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 443328,
+ "original_chars": 443328,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 95226,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 698,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "25.0000%",
+ "reasoning": "We need answer: \"what is the yearly amortization rate for the purchased technology?\" Need find in document. There is Note 5: purchased technology amortization schedule. It shows expected amortization expense for purchased technology: 2009 $56,230; 2010 $8,244; 2011 $4,938; 2012 $3,388; 2013 $0; Thereafter $0. Total $72,800. But \"yearly amortization rate\" might refer to weighted average useful life? In Note 1: intangible assets amortized over estimated useful lives, purchased technology weighted average useful life 4 years. Also in Note 5: purchased technology cost $411,408, accumulated amortization $338,608, net $72,800. Amortization expense for identifiable intangibles was $184.4M etc. But question \"yearly amortization rate\" could be the annual amortization expense? Or rate as percentage? Need interpret.\n\nThe document says \"Purchased technology 4\" under weighted average useful life. So yearly amortization rate might be 1/4 = 25% per year. Or maybe the expected amortization for 2009 is $56,230. But \"rate\" suggests percentage. Let's examine context: In Note 1, table: \"Weighted Average Useful Life (Years)\" Purchased technology 4. So yearly amortization rate = 1/4 = 25%. But need be careful: The question asks \"what is the yearly amortization rate for the purchased technology?\" Could be from financial statements: purchased technology is amortized over estimated useful lives, weighted average useful life 4 years. So rate = 25% per year. Alternatively, the schedule shows 2009 amortization $56,230 on net $72,800? That's 77%? No.\n\nLet's read exact text: \"Our intangible assets are amortized over their estimated useful lives of 1 to 13 years as shown in the table below. Amortization is based on the pattern in which the economic benefits of the intangible asset will be consumed.\n\nWeighted Average Useful Life (Years)\nPurchased technology 4\nLocalization 1\nTrademarks 5\nCustomer contracts and relationships 6\nOther intangibles 3\"\n\nSo yearly amortization rate for purchased technology is 1/4 = 25% per year. The answer should be 25% or 0.25. The question asks \"yearly amortization rate\" - likely 25%. Need provide evidence: value \"4\" | element \"Weighted Average Useful Life (Years) - Purchased technology\" from Note 1. Program: divide(1, 4) = 0.25. But final answer inside <answer> tags only value. Could be \"25%\" or \"0.25\". The question doesn't specify units. Usually rate as percentage. I'll put 25%.\n\nNeed list evidence: \"4 | Weighted Average Useful Life (Years) - Purchased technology\" (from Note 1). Also maybe \"1 to 13 years\" not needed. Program: divide(1, 4).",
+ "raw_content": "<evidence>\n4 | Weighted Average Useful Life (Years) - Purchased technology\n</evidence>\n<program>\ndivide(1, 4)\n</program>\n<answer>25%</answer>",
+ "usage": {
+  "prompt_tokens": 95525,
+  "completion_tokens": 698,
+  "total_tokens": 96223,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.09,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "4",
+   "element": "Weighted Average Useful Life (Years) - Purchased technology",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(1, 4)",
+ "answer_model": "25%",
+ "program_value": 0.25,
+ "docfinqa_row": 284
+}

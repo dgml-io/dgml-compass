@@ -1,0 +1,53 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0744",
+ "format": "markdown_pdf_rules",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "what was the difference in operating margin between 2012 and 2013?",
+ "gold": ".1%",
+ "finqa_id": "LMT/2014/page_50.pdf-3",
+ "source_page": "page_50",
+ "ticker": "LMT",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf_rules/LMT_2014_0001193125-15-038681.md",
+ "doc_chars": 436977,
+ "prompt_chars": 437132,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 436977,
+ "original_chars": 436977,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 95659,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 380,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.53",
+ "reasoning": "We need to find operating margins for 2012 and 2013. The question asks \"what was the difference in operating margin between 2012 and 2013?\" Likely referring to consolidated operating margin. From the document, we have operating profit and net sales for each year. For 2012: net sales $47,182 million, operating profit $4,434 million. For 2013: net sales $45,358 million, operating profit $4,505 million. Compute margins: 2012: 4434/47182 = 0.09398... ~9.40%. 2013: 4505/45358 = 0.09932... ~9.93%. Difference = 9.93% - 9.40% = 0.53 percentage points. Or maybe they want the difference in percentage points. The question says \"difference in operating margin\" so likely the absolute difference. Let's compute precisely: 4434/47182 = 0.09398, 4505/45358 = 0.09932, difference = 0.00534 = 0.534 percentage points. So answer ~0.53%. But check if they might mean the change in margin from 2012 to 2013, i.e., 2013 minus 2012. So answer 0.53 percentage points. I'll put 0.53% or 0.53 percentage points. The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what was the difference\" so we can give a number. I'll give 0.53. But to be safe, maybe they want the difference in percentage points. I'll put 0.53.",
+ "raw_content": "<answer>0.53</answer>",
+ "usage": {
+  "prompt_tokens": 95803,
+  "completion_tokens": 380,
+  "total_tokens": 96183,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 95744
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 6.92,
+ "answer_tag_found": true,
+ "docfinqa_row": 744
+}

@@ -1,0 +1,74 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0630",
+ "format": "markdown_pdf_plumber",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "whats is the percentage of equity compensation plans that were not approved by security holders?",
+ "gold": "0.491%",
+ "finqa_id": "CME/2010/page_123.pdf-1",
+ "source_page": "page_123",
+ "ticker": "CME",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/markdown_pdf_plumber/CME_2010_0001193125-11-050252.md",
+ "doc_chars": 464519,
+ "prompt_chars": 464704,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 464519,
+ "original_chars": 464519,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 111401,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 176,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.491159",
+ "reasoning": "We need answer percentage of equity compensation plans not approved by security holders. From table: Total options 1,217,121. Not approved: 5,978. Percentage = 5978 / 1217121 * 100 ≈ 0.491%. Need compute. Evidence: 5,978 | Equity compensation plans not approved by security holders; 1,217,121 | Total. Program divide(5978, 1217121) *100? Use exp? multiply(divide(5978,1217121),100). Answer 0.491...",
+ "raw_content": "<evidence>\n5,978 | Equity compensation plans not approved by security holders\n1,217,121 | Total\n</evidence>\n<program>multiply(divide(5978, 1217121), 100)</program>\n<answer>0.491</answer>",
+ "usage": {
+  "prompt_tokens": 111705,
+  "completion_tokens": 176,
+  "total_tokens": 111881,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 111616
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 1.97,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "5,978",
+   "element": "Equity compensation plans not approved by security holders",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "1,217,121",
+   "element": "Total",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(5978, 1217121), 100)",
+ "answer_model": "0.491",
+ "program_value": 0.49115905485157185,
+ "docfinqa_row": 630
+}

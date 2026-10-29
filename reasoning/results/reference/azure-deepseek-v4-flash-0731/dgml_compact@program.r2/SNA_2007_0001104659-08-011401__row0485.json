@@ -1,0 +1,72 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0485",
+ "format": "dgml_compact",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what is the average repurchase price per share paid during 2006?",
+ "gold": "42.0",
+ "finqa_id": "SNA/2007/page_49.pdf-3",
+ "source_page": "page_49",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml_compact/SNA_2007_0001104659-08-011401.dgml.txt",
+ "doc_chars": 428718,
+ "prompt_chars": 428871,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 428718,
+ "original_chars": 428718,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 97509,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 439,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "41.962564",
+ "reasoning": "We need answer average repurchase price per share paid during 2006. Document has: \"Snap-on repurchased 2,616,618 shares of common stock for $109.8 million in 2006\" and \"In 2006, the company used available cash ... repurchase over 2.6 million shares of Snap-on common stock for $109.8 million\". Also \"During 2007, the company repurchased 1,860,000 shares at average purchase price $50.77 per share.\" For 2006, average price = 109.8 million / 2,616,618 shares. Compute: 109,800,000 / 2,616,618 ≈ 41.96. Let's compute precisely: 2,616,618 * 42 = 109,897,956, so slightly less than 42. 109,800,000 / 2,616,618 = 41.96. So answer ~$41.96. Need evidence figures: 2,616,618 shares and $109.8 million. Also maybe \"repurchase over 2.6 million shares ... for $109.8 million\". Use exact figures. Program: divide(109.8, 2.616618) in millions? Actually 109.8 million / 2.616618 million shares = 41.96. Use divide(109.8, 2.616618). But figures as printed: \"$109.8 million\" and \"2,616,618 shares\". We can use divide(109.8, 2.616618). Answer with no units? Question asks average repurchase price per share, so value in dollars. Provide $41.96 maybe. Need final inside <answer> tags only value.",
+ "raw_content": "<evidence>\n$109.8 million | TreasuryStockPurchaseAmount (2006 repurchase)\n2,616,618 shares | ShareRepurchaseQuantity (2006 repurchase)\n</evidence>\n<program>divide(109.8, 2.616618)</program>\n<answer>41.96</answer>",
+ "usage": {
+  "prompt_tokens": 97811,
+  "completion_tokens": 439,
+  "total_tokens": 98250,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 94464
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.63,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$109.8 million",
+   "element": "TreasuryStockPurchaseAmount (2006 repurchase)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "2,616,618 shares",
+   "element": "ShareRepurchaseQuantity (2006 repurchase)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(109.8, 2.616618)",
+ "answer_model": "41.96",
+ "program_value": 41.9625638897233,
+ "docfinqa_row": 485
+}

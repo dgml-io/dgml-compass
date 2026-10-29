@@ -1,0 +1,50 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0034",
+ "format": "dgml_compact",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the percentage change in total debt from 2014 to 2015?",
+ "gold": "3.4%",
+ "finqa_id": "PM/2015/page_85.pdf-1",
+ "source_page": "page_85",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml_compact/PM_2015_0001413329-16-000076.dgml.txt",
+ "doc_chars": 654685,
+ "prompt_chars": 654836,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 654685,
+ "original_chars": 654685,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 144584,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 254,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-3.4%",
+ "reasoning": "The question asks for the percentage change in total debt from 2014 to 2015.\n\nFrom the document, total debt at December 31, 2015 was $28.5 billion, and at December 31, 2014 was $29.5 billion. (From \"Debt – Our total debt was $28.5 billion at December 31, 2015, and $29.5 billion at December 31, 2014.\")\n\nPercentage change = (28.5 - 29.5) / 29.5 * 100 = -1.0 / 29.5 * 100 = -3.3898...% ≈ -3.4%\n\nLet me double-check: (28.5 - 29.5) = -1.0. -1.0/29.5 = -0.033898... = -3.39%. So approximately -3.4%.\n\nThe answer should be the percentage change. The question asks \"what is the percentage change in total debt from 2014 to 2015?\" So answer -3.4% or -3.39%. I'll put -3.4%.",
+ "raw_content": "<answer>-3.4%</answer>",
+ "usage": {
+  "prompt_tokens": 144729,
+  "completion_tokens": 254,
+  "total_tokens": 144983,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.49,
+ "answer_tag_found": true,
+ "docfinqa_row": 34
+}

@@ -1,0 +1,61 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0057",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what was the percentage change in the cash dividends paid per common share from 2006 to 2007",
+ "gold": "2.7%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "SNA_2007_0001104659-08-011401.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/FinancialConditionOverview/table"
+ ],
+ "r1_reasoning_chars": 6714,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 22374,
+  "completion_tokens": 1608,
+  "total_tokens": 23982,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/FinancialConditionOverview/table"
+ ],
+ "content_chars": 11139,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "2.777778",
+ "reasoning": "We need percentage change from 2006 to 2007 in cash dividends paid per common share. From first table: 2007 $1.11, 2006 $1.08. Percentage change = (1.11 - 1.08)/1.08 * 100 = 0.03/1.08 = 0.027777... = 2.777...%. Need answer likely 2.78% or 2.8%. The question asks \"what was the percentage change\" so compute. Use figures as printed: $1.11 and $1.08. Program: multiply(divide(subtract(1.11, 1.08), 1.08), 100). But note figures printed with $, but we use numeric. Evidence: $1.11 | DividendPerShareFiscal (2007), $1.08 | DividendPerShareFiscal (2006). Also there is mention of 11.1% increase to $0.30 per share announced Nov 1 2007, but that's quarterly dividend increase, not the actual paid per share from 2006 to 2007. The table gives cash dividends paid per common share for 2007 and 2006. So use those.\n\nFinal answer inside <answer>2.7777777777777777</answer>? The benchmark likely expects numeric value. Could be 2.78. But instructions: \"containing only the value itself\" - no units. I'll put 2.7777777777777777 or 2.78? Usually percentage change as decimal? The question asks \"percentage change\" so answer should be percent number. I'll put 2.7777777777777777. But maybe they want 2.78. I'll compute exactly: (1.11-1.08)/1.08 = 0.0277777777777778, *100 = 2.77777777777778. I'll put 2.7777777777777777.",
+ "raw_content": "<evidence>$ 1.11 | DividendPerShareFiscal (2007)</evidence>\n<evidence>$ 1.08 | DividendPerShareFiscal (2006)</evidence>\n<program>multiply(divide(subtract(1.11, 1.08), 1.08), 100)</program>\n<answer>2.7777777777777777</answer>",
+ "r2_usage": {
+  "prompt_tokens": 3318,
+  "completion_tokens": 506,
+  "total_tokens": 3824,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 1.11",
+   "element": "DividendPerShareFiscal (2007)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(1.11, 1.08), 1.08), 100)",
+ "answer_model": "2.7777777777777777",
+ "program_value": 2.77777777777778,
+ "elapsed_s": 10.87,
+ "outline_source": "SNA_2007_0001104659-08-011401.outline.txt",
+ "outline_chars": 89754
+}

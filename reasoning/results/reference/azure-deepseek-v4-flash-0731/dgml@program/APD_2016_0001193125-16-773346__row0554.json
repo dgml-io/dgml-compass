@@ -1,0 +1,81 @@
+{
+ "id": "APD_2016_0001193125-16-773346__row0554",
+ "format": "dgml",
+ "key": "APD_2016_0001193125-16-773346",
+ "question": "considering the years 2014-2016 , what was the average cash paid for interest?",
+ "gold": "117",
+ "finqa_id": "APD/2016/page_96.pdf-1",
+ "source_page": "page_96",
+ "ticker": "APD",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/dgml/APD_2016_0001193125-16-773346.dgml.xml",
+ "doc_chars": 924924,
+ "prompt_chars": 925091,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 924924,
+ "original_chars": 924924,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 222653,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 196,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "117",
+ "reasoning": "We need answer average cash paid for interest 2014-2016. Need find figures. Document has \"Cash paid for interest, net of amounts capitalized, was $121.1 in 2016, $97.5 in 2015, and $132.4 in 2014.\" So average = (121.1+97.5+132.4)/3 = 351.0/3 = 117.0. Need evidence and program.",
+ "raw_content": "<evidence>\n$121.1 | InterestPaidAmount (Note 15, Short-term Borrowings)\n$97.5 | InterestPaidAmount (Note 15, Short-term Borrowings)\n$132.4 | InterestPaidAmount (Note 15, Short-term Borrowings)\n</evidence>\n<program>divide(add(121.1, add(97.5, 132.4)), 3)</program>\n<answer>117.0</answer>",
+ "usage": {
+  "prompt_tokens": 222959,
+  "completion_tokens": 196,
+  "total_tokens": 223155,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 25.6,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$121.1",
+   "element": "InterestPaidAmount (Note 15, Short-term Borrowings)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$97.5",
+   "element": "InterestPaidAmount (Note 15, Short-term Borrowings)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$132.4",
+   "element": "InterestPaidAmount (Note 15, Short-term Borrowings)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(121.1, add(97.5, 132.4)), 3)",
+ "answer_model": "117.0",
+ "program_value": 117.0,
+ "docfinqa_row": 554
+}

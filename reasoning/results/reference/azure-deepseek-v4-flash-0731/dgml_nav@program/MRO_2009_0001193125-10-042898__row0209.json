@@ -1,0 +1,59 @@
+{
+ "id": "MRO_2009_0001193125-10-042898__row0209",
+ "key": "MRO_2009_0001193125-10-042898",
+ "question": "what was the spread between the high and low henry hub natural gas ( dollars per mcf ) in 2009?",
+ "gold": "45.38",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "MRO_2009_0001193125-10-042898.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/ManagementDiscussionAndAnalysis/MdaOverview/SegmentDescription/BenchmarkPrice",
+  "/chunk/ManagementDiscussionAndAnalysis/MdaOverview/SegmentDescription/CommodityPriceEnvironment",
+  "/chunk/ManagementDiscussionAndAnalysis/MdaOverview/SegmentDescription/NaturalGasPricing",
+  "/chunk/ManagementDiscussionAndAnalysis/MdaOverview/SegmentDescription/BenchmarkPriceFootnote"
+ ],
+ "r1_reasoning_chars": 6047,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 38649,
+  "completion_tokens": 1568,
+  "total_tokens": 40217,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ManagementDiscussionAndAnalysis/MdaOverview/SegmentDescription/BenchmarkPrice",
+  "/chunk/ManagementDiscussionAndAnalysis/MdaOverview/SegmentDescription/CommodityPriceEnvironment",
+  "/chunk/ManagementDiscussionAndAnalysis/MdaOverview/SegmentDescription/NaturalGasPricing",
+  "/chunk/ManagementDiscussionAndAnalysis/MdaOverview/SegmentDescription/BenchmarkPriceFootnote"
+ ],
+ "content_chars": 9015,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": null,
+ "reasoning": "We need answer: spread between high and low Henry Hub natural gas in 2009. Document gives annual average for 2009: $3.99. But question asks spread between high and low in 2009. The excerpt only has annual averages, not high/low. There is mention of crude oil prices high/low but not natural gas. So NOT_FOUND. Need evidence? We can cite that only average given. But instruction: list every figure used inside evidence. If no figures used, maybe none. But we should answer NOT_FOUND. Let's craft brief reasoning.",
+ "raw_content": "<evidence></evidence>\n<program>NOT_FOUND</program>",
+ "r2_usage": {
+  "prompt_tokens": 2493,
+  "completion_tokens": 134,
+  "total_tokens": 2627,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": "NOT_FOUND",
+ "answer_model": null,
+ "program_value": null,
+ "elapsed_s": 9.08,
+ "outline_source": "MRO_2009_0001193125-10-042898.outline.txt",
+ "outline_chars": 149285
+}

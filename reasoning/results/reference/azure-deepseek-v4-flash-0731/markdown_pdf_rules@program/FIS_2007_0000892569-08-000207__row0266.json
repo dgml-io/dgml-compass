@@ -1,0 +1,67 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0266",
+ "format": "markdown_pdf_rules",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what portion of the future minimum operating lease payments is due in the next 12 months?",
+ "gold": "33.5%",
+ "finqa_id": "FIS/2007/page_94.pdf-2",
+ "source_page": "page_94",
+ "ticker": "FIS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_rules/FIS_2007_0000892569-08-000207.md",
+ "doc_chars": 363516,
+ "prompt_chars": 363694,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 363516,
+ "original_chars": 363516,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 83492,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 448,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "83382",
+ "reasoning": "We need to find future minimum operating lease payments. The document has a table in Note 16 (Leases) and also in Contractual Obligations section. The question: \"what portion of the future minimum operating lease payments is due in the next 12 months?\" That is the 2008 amount. In the contractual obligations table, operating leases 2008: 83,382 (in thousands). Also in Note 16, future minimum operating lease payments: 2008 83,382. So the portion is $83,382 thousand, or $83.382 million. The question asks \"what portion\" - likely the amount. We should give the value. The document says \"Future minimum operating lease payments for leases with remaining terms greater than one year for each of the years in the five years ending December 31, 2012, and thereafter in the aggregate, are as follows: 2008 83,382\". So answer is 83,382 (in thousands). The question doesn't specify units, but the document uses thousands. We'll give 83,382. Or maybe as a fraction? \"what portion\" could mean fraction of total. But the phrasing \"what portion ... is due in the next 12 months\" likely asks for the amount. Let's check: \"what portion of the future minimum operating lease payments is due in the next 12 months?\" Could be asking for the amount due in next 12 months. The total future minimum operating lease payments is $249,038. The portion due in next 12 months is $83,382. So answer: 83,382. We'll put that.\n\nEvidence: 83,382 | Future minimum operating lease payments 2008 (Note 16) or from Contractual Obligations table. We'll cite.\n\nProgram: just the figure.\n\nFinal answer inside <answer>83,382</answer> (in thousands). But the question doesn't ask for units, so just the number.",
+ "raw_content": "<evidence>83,382 | Future minimum operating lease payments 2008 (Note 16 Leases)</evidence>\n<program>83382</program>\n<answer>83,382</answer>",
+ "usage": {
+  "prompt_tokens": 83797,
+  "completion_tokens": 448,
+  "total_tokens": 84245,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 12.71,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "83,382",
+   "element": "Future minimum operating lease payments 2008 (Note 16 Leases)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "83382",
+ "answer_model": "83,382",
+ "program_value": 83382.0,
+ "docfinqa_row": 266
+}

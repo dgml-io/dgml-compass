@@ -1,0 +1,69 @@
+{
+  "derived_from": "synthetic",
+  "docset": "dsred0000001",
+  "instances": {
+    "red000000001": {
+      "PartyInfo": [
+        {
+          "Effective+Date": "1 APRIL 2015",
+          "Party+Name": "ACME LIMITED"
+        }
+      ],
+      "TotalsList": [
+        {
+          "Total": [
+            "one",
+            "two",
+            "three"
+          ]
+        }
+      ]
+    },
+    "red000000002": {
+      "PartyInfo": []
+    },
+    "red000000003": {
+      "PartyInfo": null
+    }
+  },
+  "note": "[] means verified-absent; null means unverified. Do not collapse them.",
+  "reference_xml": null,
+  "spec_source": "curated",
+  "types": {
+    "PartyInfo": {
+      "members": [
+        "Party+Name",
+        "Effective+Date"
+      ],
+      "optional": [],
+      "scope": "group"
+    },
+    "TotalsList": {
+      "members": [
+        "Total"
+      ],
+      "optional": [],
+      "scope": "list"
+    }
+  },
+  "validation": {
+    "PartyInfo": {
+      "accepted": true,
+      "dropped_files": 0,
+      "empty_files": 1,
+      "files": 3,
+      "instances": 1,
+      "xml_checked": 0,
+      "xml_ok": 0
+    },
+    "TotalsList": {
+      "accepted": true,
+      "dropped_files": 0,
+      "empty_files": 0,
+      "files": 1,
+      "instances": 1,
+      "xml_checked": 0,
+      "xml_ok": 0
+    }
+  }
+}

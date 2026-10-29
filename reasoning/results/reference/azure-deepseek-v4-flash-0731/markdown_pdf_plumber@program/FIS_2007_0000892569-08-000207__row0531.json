@@ -1,0 +1,74 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0531",
+ "format": "markdown_pdf_plumber",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what is the percentage change in rent expense from 2006 yo 2007?",
+ "gold": "30.6%",
+ "finqa_id": "FIS/2007/page_94.pdf-3",
+ "source_page": "page_94",
+ "ticker": "FIS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_plumber/FIS_2007_0000892569-08-000207.md",
+ "doc_chars": 457653,
+ "prompt_chars": 457806,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 457653,
+ "original_chars": 457653,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 118964,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 255,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "30.552147",
+ "reasoning": "We need percentage change in rent expense from 2006 to 2007. Rent expense incurred under all operating leases: 2007 $106.4 million, 2006 $81.5 million. Percentage change = (106.4 - 81.5)/81.5 * 100 = 24.9/81.5 = 0.3055... = 30.55%. Need answer as value. Probably 30.55% or 30.5%. Use exact figures.",
+ "raw_content": "<evidence>\n106.4 | Rent expense incurred under all operating leases during the years ended December 31, 2007, 2006 and 2005 was $106.4 million, $81.5 million and $61.1 million, respectively.\n81.5 | Rent expense incurred under all operating leases during the years ended December 31, 2007, 2006 and 2005 was $106.4 million, $81.5 million and $61.1 million, respectively.\n</evidence>\n<program>\nmultiply(divide(subtract(106.4, 81.5), 81.5), 100)\n</program>\n<answer>30.55%</answer>",
+ "usage": {
+  "prompt_tokens": 119269,
+  "completion_tokens": 255,
+  "total_tokens": 119524,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 12.33,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "106.4",
+   "element": "Rent expense incurred under all operating leases during the years ended December 31, 2007, 2006 and 2005 was $106.4 million, $81.5 million and $61.1 million, respectively.",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "81.5",
+   "element": "Rent expense incurred under all operating leases during the years ended December 31, 2007, 2006 and 2005 was $106.4 million, $81.5 million and $61.1 million, respectively.",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(subtract(106.4, 81.5), 81.5), 100)",
+ "answer_model": "30.55%",
+ "program_value": 30.55214723926381,
+ "docfinqa_row": 531
+}

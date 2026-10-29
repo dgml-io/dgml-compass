@@ -1,0 +1,53 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0486",
+ "format": "markdown_pdf_poppler",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what is the roi in snap-on if the investment was made at the end of 2005 and sold at the end of 2007?",
+ "gold": "34.8%",
+ "finqa_id": "SNA/2007/page_29.pdf-2",
+ "source_page": "page_29",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_poppler/SNA_2007_0001104659-08-011401.md",
+ "doc_chars": 416845,
+ "prompt_chars": 417035,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 416845,
+ "original_chars": 416845,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 79065,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 507,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "33.97%",
+ "reasoning": "We need to compute ROI for Snap-on if investment made at end of 2005 and sold at end of 2007. Need to consider stock price and dividends. The question likely asks for total return (including dividends) or simple price return? \"roi\" typically includes dividends. We have stock prices: fiscal year-end per share price: 2005: $37.56, 2007: $48.13. Also dividends paid per share: 2006: $1.08, 2007: $1.11. But if investment made at end of 2005, you receive dividends in 2006 and 2007. So total return = (ending price + dividends received - beginning price) / beginning price. Dividends: $1.08 + $1.11 = $2.19. So ROI = (48.13 + 2.19 - 37.56)/37.56 = (50.32 - 37.56)/37.56 = 12.76/37.56 = 0.3397... = 33.97%. Alternatively, if they want price return only: (48.13-37.56)/37.56 = 10.57/37.56 = 0.2814 = 28.14%. But ROI typically includes dividends. The question says \"roi\" not \"total return\" but likely includes dividends. Also note fiscal year ends: 2005 ended Dec 31, 2005; 2007 ended Dec 29, 2007. So we use those prices. The document gives \"Fiscal year-end per share price\" in Selected Financial Data: 2005: $37.56, 2007: $48.13. Also dividends paid per share: 2006: $1.08, 2007: $1.11. So compute ROI = (48.13 + 1.08 + 1.11 - 37.56)/37.56 = (50.32 - 37.56)/37.56 = 12.76/37.56 = 0.3397... = 33.97%. Round to two decimals? The answer should be a percentage. I'll put 33.97% or 34%? The question asks for ROI, likely as a percentage. I'll give 33.97%.",
+ "raw_content": "<answer>33.97%</answer>",
+ "usage": {
+  "prompt_tokens": 79223,
+  "completion_tokens": 507,
+  "total_tokens": 79730,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 79104
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.55,
+ "answer_tag_found": true,
+ "docfinqa_row": 486
+}

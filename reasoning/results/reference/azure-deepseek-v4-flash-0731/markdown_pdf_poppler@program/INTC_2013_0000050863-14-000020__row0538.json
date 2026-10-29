@@ -1,0 +1,74 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0538",
+ "format": "markdown_pdf_poppler",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "what was the percentage change in diluted earnings per common share december 29 2012 and december 28 2013?",
+ "gold": "-11%",
+ "finqa_id": "INTC/2013/page_33.pdf-3",
+ "source_page": "page_33",
+ "ticker": "INTC",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/markdown_pdf_poppler/INTC_2013_0000050863-14-000020.md",
+ "doc_chars": 547400,
+ "prompt_chars": 547595,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 547400,
+ "original_chars": 547400,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 97025,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 158,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-11.2676%",
+ "reasoning": "We need answer percentage change in diluted EPS from 2012 to 2013. Diluted EPS 2012 $2.13, 2013 $1.89. Change = (1.89-2.13)/2.13 = -0.24/2.13 = -11.2676%. So -11.3% approx. Need evidence figures.",
+ "raw_content": "<evidence>\n2.13 | Consolidated Statements of Income - Diluted earnings per common share 2012\n1.89 | Consolidated Statements of Income - Diluted earnings per common share 2013\n</evidence>\n<program>divide(subtract(1.89, 2.13), 2.13)</program>\n<answer>-11.3%</answer>",
+ "usage": {
+  "prompt_tokens": 97338,
+  "completion_tokens": 158,
+  "total_tokens": 97496,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 97280
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.16,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "2.13",
+   "element": "Consolidated Statements of Income - Diluted earnings per common share 2012",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "1.89",
+   "element": "Consolidated Statements of Income - Diluted earnings per common share 2013",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(subtract(1.89, 2.13), 2.13)",
+ "answer_model": "-11.3%",
+ "program_value": -0.11267605633802817,
+ "docfinqa_row": 538
+}

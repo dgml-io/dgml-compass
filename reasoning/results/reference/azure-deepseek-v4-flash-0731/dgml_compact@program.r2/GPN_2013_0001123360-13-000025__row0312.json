@@ -1,0 +1,72 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0312",
+ "format": "dgml_compact",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what portion of the future minimum lease payments are due in the next 12 months?",
+ "gold": "19.4%",
+ "finqa_id": "GPN/2013/page_92.pdf-3",
+ "source_page": "page_92",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/dgml_compact/GPN_2013_0001123360-13-000025.dgml.txt",
+ "doc_chars": 440691,
+ "prompt_chars": 440860,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 440691,
+ "original_chars": 440691,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93128,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 289,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.193656",
+ "reasoning": "We need answer: portion of future minimum lease payments due in next 12 months. From Note 15 Leases: Future minimum lease payments at May 31, 2013: 2014 $11,057, 2015 $8,985, 2016 $7,378, 2017 $6,700, 2018 $6,164, Thereafter $16,812, Total $57,096. Next 12 months = fiscal 2014 = $11,057. Portion = 11,057 / 57,096. Compute. 11057/57096 ≈ 0.19365... Let's compute precisely. 57096*0.19=10848.24, remainder 208.76, /57096=0.003656, total 0.193656. So ~19.37%. Question \"what portion\" likely fraction or percentage. Answer as percentage? They ask portion, give value. We'll provide 19.37% or 0.1937. Need evidence figures. Use 11,057 and 57,096.",
+ "raw_content": "<evidence>\n11,057 | FutureLeasePayment: 2014\n57,096 | LeaseCommitmentTotal: Total future minimum lease payments\n</evidence>\n\n<program>divide(11057, 57096)</program>\n\n<answer>0.1937</answer>",
+ "usage": {
+  "prompt_tokens": 93432,
+  "completion_tokens": 289,
+  "total_tokens": 93721,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 93184
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.43,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "11,057",
+   "element": "FutureLeasePayment: 2014",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "57,096",
+   "element": "LeaseCommitmentTotal: Total future minimum lease payments",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(11057, 57096)",
+ "answer_model": "0.1937",
+ "program_value": 0.1936562981644949,
+ "docfinqa_row": 312
+}

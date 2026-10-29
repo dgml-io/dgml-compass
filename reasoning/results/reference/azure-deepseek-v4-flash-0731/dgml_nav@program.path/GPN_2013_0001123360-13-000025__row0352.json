@@ -1,0 +1,95 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0352",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what is the net change of the total fair value balance of non-vested shares during 2013?",
+ "gold": "6820",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "GPN_2013_0001123360-13-000025.outline.txt",
+ "doc_source": "GPN_2013_0001123360-13-000025.dgml.xml",
+ "outline_chars": 74109,
+ "predicted_xpaths": [
+  "/chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockRollforward"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 2364,
+ "r1_usage": {
+  "prompt_tokens": 18976,
+  "completion_tokens": 613,
+  "total_tokens": 19589,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockRollforward"
+ ],
+ "content_chars": 7104,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "6820",
+ "reasoning": "We need to compute net change of total fair value balance of non-vested shares during 2013. The table gives shares and weighted average grant-date fair value. Total fair value balance = shares * weighted average fair value. Net change = ending balance (May 31, 2013) minus beginning balance (May 31, 2012). But careful: the table shows non-vested at May 31, 2012: 941 shares, fair value $44. Non-vested at May 31, 2013: 1,096 shares, fair value $44. So total fair value at May 31, 2012 = 941 * 44 = 41,404 (in thousands? shares in thousands, fair value in dollars, so total in thousands of dollars). At May 31, 2013 = 1,096 * 44 = 48,224. Net change = 48,224 - 41,404 = 6,820 (thousands of dollars). But question asks \"net change of the total fair value balance\" - likely in dollars? The table uses shares in thousands, fair value per share. So total fair value in thousands of dollars. The answer should be 6,820 (thousands) or $6.82 million? The question doesn't specify units. Usually in such documents, they report in millions. But the table uses thousands of shares and dollars per share, so total in thousands of dollars. The net change is 6,820 thousand = $6.82 million. But the question asks \"what is the net change\" - likely a number. We need to compute exactly. Let's compute: 941*44 = 41,404; 1,096*44 = 48,224; difference = 6,820. So answer 6820 (in thousands of dollars). But maybe they want in millions? The document uses $13.6 million etc. But the table is in thousands of shares and dollars. The net change in total fair value balance is 6,820 thousand dollars = 6.82 million. The question doesn't specify units. Usually in such contexts, they might expect the number as in the table's units (thousands). But the question says \"total fair value balance\" - the table gives weighted average fair value per share, not total. We compute total. The net change is 6,820 (in thousands). I'll provide 6820. But let's double-check: The table shows \"Non-vested at May 31, 2012\" with shares 941 and fair value $44. That's weighted average grant-date fair value. So total fair value = 941 * 44 = 41,404. At May 31, 2013: 1,096 * 44 = 48,224. Net change = 6,820. So answer 6820. But note the question says \"during 2013\" - fiscal year ended May 31, 2013. So yes.\n\nWe need to cite figures: 941, 44, 1,096, 44. Also maybe the table header. We'll list them.\n\nProgram: subtract(multiply(1096, 44), multiply(941, 44)) = 6820.\n\nBut careful: The numbers are printed as \"1,096\" and \"941\" and \"44\" and \"$ 44\". We'll use 1096 and 941 and 44.\n\nLet's produce evidence and program.",
+ "raw_content": "<evidence>\n941 | /chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockRollforward/RestrictedStockRollforward/Non-vested at May 31, 2012/AwardQuantity\n44 | /chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockRollforward/RestrictedStockRollforward/Non-vested at May 31, 2012/AwardFairValue\n1,096 | /chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockRollforward/RestrictedStockRollforward/Non-vested at May 31, 2013/AwardQuantity\n44 | /chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockRollforward/RestrictedStockRollforward/Non-vested at May 31, 2013/AwardFairValue\n</evidence>\n\n<program>\nsubtract(multiply(1096, 44), multiply(941, 44))\n</program>\n\n<answer>6820</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2071,
+  "completion_tokens": 979,
+  "total_tokens": 3050,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 2071,
+   "completion_tokens": 979,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "941",
+   "element": "chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockRollforward/RestrictedStockRollforward/Non-vested at May 31, 2012/AwardQuantity",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "44",
+   "element": "chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockRollforward/RestrictedStockRollforward/Non-vested at May 31, 2012/AwardFairValue",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "1,096",
+   "element": "chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockRollforward/RestrictedStockRollforward/Non-vested at May 31, 2013/AwardQuantity",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "44",
+   "element": "chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockRollforward/RestrictedStockRollforward/Non-vested at May 31, 2013/AwardFairValue",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(multiply(1096, 44), multiply(941, 44))",
+ "answer_model": "6820",
+ "program_value": 6820.0,
+ "elapsed_s": 7.9
+}

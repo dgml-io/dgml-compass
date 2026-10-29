@@ -1,0 +1,93 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0416",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was average net sales for space systems in millions from 2013 to 2015?",
+ "gold": "9198",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "LMT_2015_0001193125-16-476010.outline.txt",
+ "doc_source": "LMT_2015_0001193125-16-476010.dgml.xml",
+ "outline_chars": 116705,
+ "predicted_xpaths": [
+  "/chunk/FilingPartDesignation/CostOfSalesAnalysis/BusinessSegmentResults/SegmentNetSalesAndOperatingProfit",
+  "/chunk/FilingPartDesignation/CostOfSalesAnalysis/BusinessSegmentResults/SegmentNetSalesAndOperatingProfit/SegmentNetSales/SpaceSystemsNetSales"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 4186,
+ "r1_usage": {
+  "prompt_tokens": 28884,
+  "completion_tokens": 1007,
+  "total_tokens": 29891,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 28672
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/FilingPartDesignation/CostOfSalesAnalysis/BusinessSegmentResults/SegmentNetSalesAndOperatingProfit",
+  "/chunk/FilingPartDesignation/CostOfSalesAnalysis/BusinessSegmentResults/SegmentNetSalesAndOperatingProfit/SegmentNetSales/SpaceSystemsNetSales"
+ ],
+ "content_chars": 33909,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "9198.333333",
+ "reasoning": "We need average of Space Systems net sales for 2013, 2014, 2015. From first table: 2015: 9,105; 2014: 9,202; 2013: 9,288. Average = (9105+9202+9288)/3 = 27595/3 = 9198.333... So 9198.33. Need answer in millions. The question says \"in millions\" so value is 9198.33. We'll provide evidence and program.",
+ "raw_content": "<evidence>9,105 | /chunk/FilingPartDesignation/CostOfSalesAnalysis/BusinessSegmentResults/SegmentNetSalesAndOperatingProfit/SegmentNetSales/SpaceSystemsNetSales\n9,202 | /chunk/FilingPartDesignation/CostOfSalesAnalysis/BusinessSegmentResults/SegmentNetSalesAndOperatingProfit/SegmentNetSales/SpaceSystemsNetSales\n9,288 | /chunk/FilingPartDesignation/CostOfSalesAnalysis/BusinessSegmentResults/SegmentNetSalesAndOperatingProfit/SegmentNetSales/SpaceSystemsNetSales</evidence>\n<program>divide(add(add(9105, 9202), 9288), 3)</program>\n<answer>9198.33</answer>",
+ "r2_usage": {
+  "prompt_tokens": 8570,
+  "completion_tokens": 273,
+  "total_tokens": 8843,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 8570,
+   "completion_tokens": 273,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "9,105",
+   "element": "chunk/FilingPartDesignation/CostOfSalesAnalysis/BusinessSegmentResults/SegmentNetSalesAndOperatingProfit/SegmentNetSales/SpaceSystemsNetSales",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "9,202",
+   "element": "chunk/FilingPartDesignation/CostOfSalesAnalysis/BusinessSegmentResults/SegmentNetSalesAndOperatingProfit/SegmentNetSales/SpaceSystemsNetSales",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "9,288",
+   "element": "chunk/FilingPartDesignation/CostOfSalesAnalysis/BusinessSegmentResults/SegmentNetSalesAndOperatingProfit/SegmentNetSales/SpaceSystemsNetSales",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(add(9105, 9202), 9288), 3)",
+ "answer_model": "9198.33",
+ "program_value": 9198.333333333334,
+ "elapsed_s": 5.45
+}

@@ -1,0 +1,79 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0149",
+ "format": "markdown_pdf_rules",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "what was the percent of the impairment charges to the net revenue in 2013",
+ "gold": "0.5%",
+ "finqa_id": "INTC/2013/page_33.pdf-2",
+ "source_page": "page_33",
+ "ticker": "INTC",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/markdown_pdf_rules/INTC_2013_0000050863-14-000020.md",
+ "doc_chars": 419421,
+ "prompt_chars": 419583,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 419421,
+ "original_chars": 419421,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 94700,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 428,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.4553%",
+ "reasoning": "We need answer percent of impairment charges to net revenue in 2013. Impairment charges? There are several: restructuring and asset impairment charges $240 million in 2013. Also impairments of non-marketable equity investments $112 million? But question \"impairment charges\" likely refers to restructuring and asset impairment charges? Or total impairment charges? Need parse. The document has \"Restructuring and asset impairment charges\" line in income statement $240 million. Also \"Impairment charges\" in gains (losses) on equity investments $123 million. Also impairments of non-marketable equity investments $112 million? But question \"the impairment charges\" singular? Likely from income statement \"Restructuring and asset impairment charges\" $240 million. Percent to net revenue $52,708. Compute 240/52708 = 0.004553... = 0.4553%. So answer 0.46%? Need exact. Let's compute: 240/52708 = 0.004553... = 0.4553%. So 0.46% (rounded). But question asks \"percent of the impairment charges to the net revenue\" - could be \"restructuring and asset impairment charges\" as a percentage of net revenue. In MD&A they have \"Restructuring and asset impairment charges 240 0.5 %\" in table. Indeed in results of operations table: Restructuring and asset impairment charges $240, 0.5% of net revenue. So answer 0.5%. The document explicitly states 0.5%. So answer 0.5%. Need evidence: 240 | Restructuring and asset impairment charges, 52,708 | Net revenue, and 0.5% maybe. But final answer just 0.5%.",
+ "raw_content": "<evidence>\n240 | Restructuring and asset impairment charges\n52,708 | Net revenue\n0.5 % | Restructuring and asset impairment charges as percentage of net revenue\n</evidence>\n<program>divide(240, 52708)</program>\n<answer>0.5%</answer>",
+ "usage": {
+  "prompt_tokens": 95004,
+  "completion_tokens": 428,
+  "total_tokens": 95432,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 94464
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.73,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "240",
+   "element": "Restructuring and asset impairment charges",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "52,708",
+   "element": "Net revenue",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "0.5 %",
+   "element": "Restructuring and asset impairment charges as percentage of net revenue",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.6666666666666666,
+ "program_model": "divide(240, 52708)",
+ "answer_model": "0.5%",
+ "program_value": 0.004553388479927146,
+ "docfinqa_row": 149
+}

@@ -1,0 +1,50 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0273",
+ "format": "markdown_pdf_plumber",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what was the return on total assets during 2014?",
+ "gold": "5.4%",
+ "finqa_id": "HII/2017/page_47.pdf-2",
+ "source_page": "page_47",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/markdown_pdf_plumber/HII_2017_0001501585-18-000006.md",
+ "doc_chars": 479340,
+ "prompt_chars": 479477,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 479340,
+ "original_chars": 479340,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 106334,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 566,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "5.42",
+ "reasoning": "We need to find return on total assets during 2014. Return on total assets = Net earnings / Total assets. But typically average total assets? The question says \"return on total assets during 2014\". We have selected financial data for 2014: Net earnings (loss) = 338, Total assets = 6,239 (as of Dec 31, 2014). But return on assets usually uses average total assets. However, the question might expect net income / total assets at end of year. But we need to check if there is any explicit ratio. The document provides selected financial data for years 2013-2017. For 2014, net earnings = 338, total assets = 6,239. So return on total assets = 338/6239 = 0.0542 or 5.42%. But we need to be careful: The question says \"during 2014\" so we use 2014 net earnings and 2014 total assets (end of year). Alternatively, average total assets would be (2013 total assets + 2014 total assets)/2 = (6190+6239)/2 = 6214.5, then 338/6214.5 = 0.0544. But the question likely expects a simple ratio. Since the document doesn't explicitly state return on assets, we compute. The answer should be a number. Probably as a percentage or decimal. The instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So we can put 5.42% or 0.0542. But typically return on assets is expressed as a percentage. However, the question doesn't specify. I'll compute 338/6239 = 0.05417... So 5.42%. But let's check if there is any other definition. The document has \"Selected Financial Data\" with net earnings and total assets. So I'll use that. I'll answer 5.42% or 0.0542. I'll put 5.42% but the instruction says no units unless asked. So maybe just 5.42. But to be safe, I'll put 5.42. Alternatively, the question might expect a decimal. I'll put 0.0542. But let's see: The question says \"return on total assets\" which is a ratio. Usually expressed as a percentage. I'll put 5.42. But I'll compute precisely: 338/6239 = 0.05417... So 5.42%. I'll put 5.42.",
+ "raw_content": "<answer>5.42</answer>",
+ "usage": {
+  "prompt_tokens": 106475,
+  "completion_tokens": 566,
+  "total_tokens": 107041,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 16.85,
+ "answer_tag_found": true,
+ "docfinqa_row": 273
+}

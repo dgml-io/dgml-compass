@@ -1,0 +1,72 @@
+{
+ "id": "GPN_2010_0001193125-10-169025__row0020",
+ "format": "dgml_compact",
+ "key": "GPN_2010_0001193125-10-169025",
+ "question": "in 2010 what was the percent of the income tax benefit to the stock based compensation cost",
+ "gold": "34.8%",
+ "finqa_id": "GPN/2010/page_87.pdf-3",
+ "source_page": "page_87",
+ "ticker": "GPN",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/dgml_compact/GPN_2010_0001193125-10-169025.dgml.txt",
+ "doc_chars": 408017,
+ "prompt_chars": 408197,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 408017,
+ "original_chars": 408017,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 87247,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 258,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "34.80663",
+ "reasoning": "We need answer: \"in 2010 what was the percent of the income tax benefit to the stock based compensation cost\". Need find figures. In document, Note 11 share-based compensation: table: Share-based compensation cost $18.1 (2010), Income tax benefit $(6.3) (2010). Percent = 6.3/18.1 *100 = 34.806...%. Need compute. Use figures as printed: 18.1 and 6.3. Program: multiply(divide(6.3, 18.1), 100). Evidence: 18.1 | Share-based compensation cost; 6.3 | Income tax benefit. Answer with value maybe 34.8%. Need final inside <answer>34.8%</answer>? The question asks percent, so include %? \"percent of the income tax benefit to the stock based compensation cost\" likely 34.8%. We'll output 34.8%.",
+ "raw_content": "<evidence>\n18.1 | Share-based compensation cost\n6.3 | Income tax benefit\n</evidence>\n<program>multiply(divide(6.3, 18.1), 100)</program>\n<answer>34.8%</answer>",
+ "usage": {
+  "prompt_tokens": 87554,
+  "completion_tokens": 258,
+  "total_tokens": 87812,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 6.62,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "18.1",
+   "element": "Share-based compensation cost",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6.3",
+   "element": "Income tax benefit",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(6.3, 18.1), 100)",
+ "answer_model": "34.8%",
+ "program_value": 34.80662983425414,
+ "docfinqa_row": 20
+}

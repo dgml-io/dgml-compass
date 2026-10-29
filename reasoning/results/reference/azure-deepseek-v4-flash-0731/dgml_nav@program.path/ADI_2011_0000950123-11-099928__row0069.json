@@ -1,0 +1,91 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0069",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what portion of the total investment is allocated to mutual funds in 2011?",
+ "gold": "65.1%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "ADI_2011_0000950123-11-099928.outline.txt",
+ "doc_source": "ADI_2011_0000950123-11-099928.dgml.xml",
+ "outline_chars": 98954,
+ "predicted_xpaths": [
+  "/chunk/NotesToFinancial/DeferredCompensationPlanInvestments/DeferredCompensationPlanInvestmentsDescription",
+  "/chunk/NotesToFinancial/DeferredCompensationPlanInvestments/table",
+  "/chunk/NotesToFinancial/DeferredCompensationPlanInvestments/table/DeferredCompensationPlanInvestments"
+ ],
+ "r1_retried": true,
+ "r1_first_usage": {
+  "prompt_tokens": 24719,
+  "completion_tokens": 16000,
+  "total_tokens": 40719,
+  "audio_prompt_tokens": 0
+ },
+ "r1_reasoning_chars": 0,
+ "r1_usage": {
+  "prompt_tokens": 24737,
+  "completion_tokens": 20,
+  "total_tokens": 24757,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/NotesToFinancial/DeferredCompensationPlanInvestments/DeferredCompensationPlanInvestmentsDescription",
+  "/chunk/NotesToFinancial/DeferredCompensationPlanInvestments/table",
+  "/chunk/NotesToFinancial/DeferredCompensationPlanInvestments/table/DeferredCompensationPlanInvestments"
+ ],
+ "content_chars": 5309,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "0.349224",
+ "reasoning": "We need to compute portion: mutual funds 9,223 / total 26,410. Need answer as portion, likely decimal or percentage? Question says \"what portion\" - could be fraction. We'll compute 9223/26410. Let's compute: 9223/26410 ≈ 0.3492. We'll provide as decimal. Need evidence: figures 9,223 and 26,410. Paths: /chunk/NotesToFinancial/DeferredCompensationPlanInvestments/DeferredCompensationPlanInvestmentsDescription/table/DeferredCompensationPlanInvestments/InvestmentAmount? Actually the table rows have InvestmentAmount elements. The mutual funds row has two InvestmentAmounts, first is 2011. The total row has first InvestmentAmount 26,410. We'll cite those.",
+ "raw_content": "<evidence>\n9,223 | /chunk/NotesToFinancial/DeferredCompensationPlanInvestments/DeferredCompensationPlanInvestmentsDescription/table/DeferredCompensationPlanInvestments/InvestmentAmount\n26,410 | /chunk/NotesToFinancial/DeferredCompensationPlanInvestments/DeferredCompensationPlanInvestmentsDescription/table/DeferredCompensationPlanInvestments/InvestmentAmount\n</evidence>\n<program>divide(9223, 26410)</program>\n<answer>0.3492</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1542,
+  "completion_tokens": 286,
+  "total_tokens": 1828,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 1542,
+   "completion_tokens": 286,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "9,223",
+   "element": "chunk/NotesToFinancial/DeferredCompensationPlanInvestments/DeferredCompensationPlanInvestmentsDescription/table/DeferredCompensationPlanInvestments/InvestmentAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "26,410",
+   "element": "chunk/NotesToFinancial/DeferredCompensationPlanInvestments/DeferredCompensationPlanInvestmentsDescription/table/DeferredCompensationPlanInvestments/InvestmentAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(9223, 26410)",
+ "answer_model": "0.3492",
+ "program_value": 0.3492237788716395,
+ "elapsed_s": 36.12
+}

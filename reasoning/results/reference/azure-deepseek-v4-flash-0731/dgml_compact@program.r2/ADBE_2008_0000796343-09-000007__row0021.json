@@ -1,0 +1,78 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0021",
+ "format": "dgml_compact",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "what is the percentage change in the the gross liability for unrecognized tax benefits during 2008 compare to 2007?",
+ "gold": "-30.9%",
+ "finqa_id": "ADBE/2008/page_89.pdf-2",
+ "source_page": "page_89",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml_compact/ADBE_2008_0000796343-09-000007.dgml.txt",
+ "doc_chars": 545889,
+ "prompt_chars": 546093,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 545889,
+ "original_chars": 545889,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 114389,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "stop",
+   "completion_tokens": 317,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 1,
+ "ok": true,
+ "answer": "-30.8506%",
+ "reasoning": "We need percentage change in gross liability for unrecognized tax benefits during 2008 compared to 2007. Need figures: beginning balance as of Dec 1, 2007 and ending balance Nov 28, 2008. From Note 8 FIN 48 rollforward: Beginning balance as of December 1, 2007 = $201,808 (thousands). Ending balance as of November 28, 2008 = $139,549 (thousands). Percentage change = (End - Begin)/Begin *100 = (139,549 - 201,808)/201,808 = -62,259/201,808 ≈ -30.85%. So answer -30.85% or -30.9%. Need evidence. Also note there is a gross liability for unrecognized tax benefits at Dec 1, 2007 of $218.4 million exclusive of interest and penalties? But the rollforward uses beginning balance $201,808. The question says \"gross liability for unrecognized tax benefits during 2008 compare to 2007\" likely from rollforward. Use those.",
+ "raw_content": "<evidence>\n201,808 | UnrecognizedTaxBenefitRollforward: Beginning balance as of December 1, 2007\n139,549 | UnrecognizedTaxBenefitRollforward: Ending balance as of November 28, 2008\n</evidence>\n<program>\ndivide(subtract(139549, 201808), 201808)\n</program>\n<answer>-30.85%</answer>",
+ "usage": {
+  "prompt_tokens": 114701,
+  "completion_tokens": 317,
+  "total_tokens": 115018,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 114688
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.57,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "201,808",
+   "element": "UnrecognizedTaxBenefitRollforward: Beginning balance as of December 1, 2007",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "139,549",
+   "element": "UnrecognizedTaxBenefitRollforward: Ending balance as of November 28, 2008",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(139549, 201808), 201808)",
+ "answer_model": "-30.85%",
+ "program_value": -0.308506104812495,
+ "docfinqa_row": 21
+}

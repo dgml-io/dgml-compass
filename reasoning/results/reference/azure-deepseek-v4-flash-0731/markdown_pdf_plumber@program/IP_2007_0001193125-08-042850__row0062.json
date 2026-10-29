@@ -1,0 +1,108 @@
+{
+ "id": "IP_2007_0001193125-08-042850__row0062",
+ "format": "markdown_pdf_plumber",
+ "key": "IP_2007_0001193125-08-042850",
+ "question": "what percentage of december 31 , 2007 , total future minimum commitments under existing non-cancelable operating leases and purchase obligations were due to purchase obligations for the year of 2008?",
+ "gold": "93%",
+ "finqa_id": "IP/2007/page_75.pdf-1",
+ "source_page": "page_75",
+ "ticker": "IP",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_plumber/IP_2007_0001193125-08-042850.md",
+ "doc_chars": 478788,
+ "prompt_chars": 479076,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 478788,
+ "original_chars": 478788,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 118162,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 839,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "38.81932",
+ "reasoning": "We need answer percentage. Need figures. Document has table \"At December 31, 2007, total future minimum commitments under existing non-cancelable operating leases and purchase obligations were as follows:\" In millions 2008 2009 2010 2011 2012 Thereafter. Lease obligations $136 $116 $101 $84 $67 $92. Purchase obligations (a) 1,953 294 261 235 212 1,480. Total $2,089 $410 $362 $319 $279 $1,572. Question: what percentage of Dec 31 2007 total future minimum commitments under existing non-cancelable operating leases and purchase obligations were due to purchase obligations for the year of 2008? Need percentage = purchase obligations 2008 / total future minimum commitments? \"total future minimum commitments\" likely total of all years? Or \"for the year of 2008\" - percentage of total future minimum commitments (all years) that were due to purchase obligations for 2008. Need compute: purchase obligations 2008 = 1,953. Total future minimum commitments = sum of all totals? Total column? The table has Total (d) $2,356 $1,710 $1,431 $715 $811 $9,628 in earlier table? Wait there are two tables. One in MD&A \"Contractual obligations for future payments under existing debt and lease commitments and purchase obligations at December 31, 2007\" includes Maturities of long-term debt, Debt obligations with right of offset, Lease obligations, Purchase obligations, Total. That table has Total (d) $2,356 $1,710 $1,431 $715 $811 $9,628. But question specifically \"total future minimum commitments under existing non-cancelable operating leases and purchase obligations\" - that is Note 10 table: Lease obligations and Purchase obligations, Total $2,089 $410 $362 $319 $279 $1,572. So total future minimum commitments = sum of all years totals = 2,089+410+362+319+279+1,572 = ? 2,089+410=2,499; +362=2,861; +319=3,180; +279=3,459; +1,572=5,031. Purchase obligations 2008 = 1,953. Percentage = 1,953 / 5,031 *100 = 38.82% approx. Need exact? Let's compute: 1953/5031 = 0.38819... 5031*0.388 = 1952.0? 5031*0.388 = 1952.028, so 0.38819. So 38.82%. Need answer with value only. Evidence: 1,953 | Purchase obligations (a) 2008; 2,089 | Total 2008; 410 | Total 2009; 362 | Total 2010; 319 | Total 2011; 279 | Total 2012; 1,572 | Total Thereafter. Program: divide(1953, add(2089, add(410, add(362, add(319, add(279, 1572))))) *100? The program should be exact nested calls. Use multiply(divide(1953, add(...)), 100). But instructions: program is executed, so must be exact. Use add etc. Let's do.",
+ "raw_content": "<evidence>\n1,953 | Purchase obligations (a) 2008\n2,089 | Total 2008\n410 | Total 2009\n362 | Total 2010\n319 | Total 2011\n279 | Total 2012\n1,572 | Total Thereafter\n</evidence>\n\n<program>\nmultiply(divide(1953, add(2089, add(410, add(362, add(319, add(279, 1572)))))), 100)\n</program>\n\n<answer>38.82</answer>",
+ "usage": {
+  "prompt_tokens": 118488,
+  "completion_tokens": 839,
+  "total_tokens": 119327,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.94,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,953",
+   "element": "Purchase obligations (a) 2008",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "2,089",
+   "element": "Total 2008",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "410",
+   "element": "Total 2009",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "362",
+   "element": "Total 2010",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "319",
+   "element": "Total 2011",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "279",
+   "element": "Total 2012",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "1,572",
+   "element": "Total Thereafter",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.14285714285714285,
+ "program_model": "multiply(divide(1953, add(2089, add(410, add(362, add(319, add(279, 1572)))))), 100)",
+ "answer_model": "38.82",
+ "program_value": 38.81932021466905,
+ "docfinqa_row": 62
+}

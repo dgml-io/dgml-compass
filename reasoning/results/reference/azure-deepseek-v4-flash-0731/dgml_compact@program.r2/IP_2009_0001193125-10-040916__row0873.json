@@ -1,0 +1,74 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0873",
+ "format": "dgml_compact",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "considering the years 2011-2012 , what is the variation observed in the lease obligations?",
+ "gold": "24",
+ "finqa_id": "IP/2009/page_45.pdf-3",
+ "source_page": "page_45",
+ "ticker": "IP",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/dgml_compact/IP_2009_0001193125-10-040916.dgml.txt",
+ "doc_chars": 600076,
+ "prompt_chars": 600255,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 600076,
+ "original_chars": 600076,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 131401,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 443,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "24",
+ "reasoning": "We need to find lease obligations for 2011 and 2012. The document has a table \"Contractual obligations for future payments under existing debt and lease commitments and purchase obligations at December 31, 2009\" with rows: Maturities of long-term debt, Debt obligations with right of offset, Lease obligations, Purchase obligations, Total. The columns are 2010, 2011, 2012, 2013, 2014, Thereafter. Lease obligations: 2010: 177, 2011: 148, 2012: 124, 2013: 96, 2014: 79, Thereafter: 184. So for 2011 and 2012, lease obligations are 148 and 124. Variation observed: difference between 2011 and 2012? Or change from 2011 to 2012? The question: \"considering the years 2011-2012 , what is the variation observed in the lease obligations?\" Likely the change from 2011 to 2012: 148 - 124 = 24 decrease. Or maybe the variation across those two years? Could be the difference. We'll compute subtract(148,124)=24. But need to be careful: \"variation observed\" could be the change, so 24 (decrease). We'll answer with the value. Also check if there is any other lease obligations table? There is also \"Future minimum commitments\" in Note 11 with lease obligations: 2010:177, 2011:148, 2012:124, etc. Same numbers. So we use those.\n\nEvidence: 148 | Lease obligations (2011) from Contractual obligations table; 124 | Lease obligations (2012) from same.\n\nProgram: subtract(148,124) = 24.\n\nAnswer: 24.",
+ "raw_content": "<evidence>\n148 | Lease obligations (2011) in Contractual obligations table\n124 | Lease obligations (2012) in Contractual obligations table\n</evidence>\n<program>\nsubtract(148, 124)\n</program>\n<answer>24</answer>",
+ "usage": {
+  "prompt_tokens": 131708,
+  "completion_tokens": 443,
+  "total_tokens": 132151,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 131584
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 12.48,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "148",
+   "element": "Lease obligations (2011) in Contractual obligations table",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "124",
+   "element": "Lease obligations (2012) in Contractual obligations table",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "subtract(148, 124)",
+ "answer_model": "24",
+ "program_value": 24.0,
+ "docfinqa_row": 873
+}

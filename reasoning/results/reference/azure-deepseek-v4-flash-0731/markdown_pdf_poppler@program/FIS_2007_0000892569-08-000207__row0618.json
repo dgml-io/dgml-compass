@@ -1,0 +1,74 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0618",
+ "format": "markdown_pdf_poppler",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what percentage of total future minimum operating lease payments for leases with remaining terms greater than one year are due in 2010?",
+ "gold": "14%",
+ "finqa_id": "FIS/2007/page_94.pdf-4",
+ "source_page": "page_94",
+ "ticker": "FIS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_poppler/FIS_2007_0000892569-08-000207.md",
+ "doc_chars": 469457,
+ "prompt_chars": 469681,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 469457,
+ "original_chars": 469457,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 86828,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 401,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "14.162096",
+ "reasoning": "We need to find future minimum operating lease payments table. It shows 2008: 83,382; 2009: 63,060; 2010: 35,269; 2011: 21,598; 2012: 14,860; Thereafter: 30,869; Total: 249,038. Question: percentage of total future minimum operating lease payments due in 2010. So 35,269 / 249,038 * 100. Compute. 35269/249038 = 0.14162... so 14.16%. Let's compute precisely: 249038 * 0.14 = 34865.32, remainder 403.68, /249038 = 0.00162, so 0.14162 -> 14.162%. Round to maybe 14.2% or 14.16%. The answer should be a value. We'll give 14.16% or 14.2%. The question asks \"what percentage\" so answer with number. We'll put 14.16% inside tags. But instructions: \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for percentage, so include % sign? Typically yes. We'll put 14.16%. Evidence: 35,269 | 2010 row, 249,038 | Total row. Program: divide(35269, 249038) * 100? But program must be exact nested calls. We can do multiply(divide(35269, 249038), 100). But the program is executed, so it will compute. We'll provide that.",
+ "raw_content": "<evidence>\n35,269 | 2010\n249,038 | Total\n</evidence>\n<program>multiply(divide(35269, 249038), 100)</program>\n<answer>14.16%</answer>",
+ "usage": {
+  "prompt_tokens": 87141,
+  "completion_tokens": 401,
+  "total_tokens": 87542,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 87040
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.49,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "35,269",
+   "element": "2010",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "249,038",
+   "element": "Total",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(35269, 249038), 100)",
+ "answer_model": "14.16%",
+ "program_value": 14.162095744424546,
+ "docfinqa_row": 618
+}

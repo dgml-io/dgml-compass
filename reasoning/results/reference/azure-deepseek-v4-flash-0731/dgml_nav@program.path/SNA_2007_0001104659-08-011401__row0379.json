@@ -1,0 +1,83 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0379",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "in 2004 what was the ratio of the snap-on incorporated to the peer group perfomance",
+ "gold": "0.86",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "SNA_2007_0001104659-08-011401.outline.txt",
+ "doc_source": "SNA_2007_0001104659-08-011401.dgml.xml",
+ "outline_chars": 89754,
+ "predicted_xpaths": [
+  "/chunk/MarketForCommonEquity/PerformanceGraphDescription",
+  "/chunk/MarketForCommonEquity/TotalShareholderReturn"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 3170,
+ "r1_usage": {
+  "prompt_tokens": 22372,
+  "completion_tokens": 730,
+  "total_tokens": 23102,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/MarketForCommonEquity/PerformanceGraphDescription",
+  "/chunk/MarketForCommonEquity/TotalShareholderReturn"
+ ],
+ "content_chars": 11626,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "0.857237",
+ "reasoning": "We need ratio of Snap-on to Peer Group in 2004. From table: December 31, 2004: Snap-on 130.66, Peer Group 152.42. Ratio = 130.66 / 152.42. Need compute.",
+ "raw_content": "<evidence>130.66 | /chunk/MarketForCommonEquity/PerformanceGraphDescription/TotalShareholderReturn/TotalShareholderReturn/TotalShareholderReturnRecord[3]/ShareholderReturnIndex[1]\n152.42 | /chunk/MarketForCommonEquity/PerformanceGraphDescription/TotalShareholderReturn/TotalShareholderReturn/TotalShareholderReturnRecord[3]/ShareholderReturnIndex[2]</evidence>\n\n<program>divide(130.66, 152.42)</program>\n\n<answer>0.8572</answer>",
+ "r2_usage": {
+  "prompt_tokens": 3109,
+  "completion_tokens": 174,
+  "total_tokens": 3283,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 3109,
+   "completion_tokens": 174,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "130.66",
+   "element": "chunk/MarketForCommonEquity/PerformanceGraphDescription/TotalShareholderReturn/TotalShareholderReturn/TotalShareholderReturnRecord[3]/ShareholderReturnIndex[1]",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "152.42",
+   "element": "chunk/MarketForCommonEquity/PerformanceGraphDescription/TotalShareholderReturn/TotalShareholderReturn/TotalShareholderReturnRecord[3]/ShareholderReturnIndex[2]",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(130.66, 152.42)",
+ "answer_model": "0.8572",
+ "program_value": 0.8572365831255742,
+ "elapsed_s": 5.17
+}

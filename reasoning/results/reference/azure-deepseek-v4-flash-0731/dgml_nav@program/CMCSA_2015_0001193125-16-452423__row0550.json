@@ -1,0 +1,73 @@
+{
+ "id": "CMCSA_2015_0001193125-16-452423__row0550",
+ "key": "CMCSA_2015_0001193125-16-452423",
+ "question": "what was the change in unrecognized tax benefits from the end of 2013 to the end of 2014?",
+ "gold": "-530",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "CMCSA_2015_0001193125-16-452423.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/section/IncomeTax/UnrecognizedTaxBenefitRollforward",
+  "/chunk/section/IncomeTax/UnrecognizedTaxBenefitRollforward/table/UnrecognizedTaxBenefitRollforward"
+ ],
+ "r1_reasoning_chars": 0,
+ "r1_retried": true,
+ "r1_usage": {
+  "prompt_tokens": 34085,
+  "completion_tokens": 16,
+  "total_tokens": 34101,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 34048
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/section/IncomeTax/UnrecognizedTaxBenefitRollforward",
+  "/chunk/section/IncomeTax/UnrecognizedTaxBenefitRollforward/table/UnrecognizedTaxBenefitRollforward"
+ ],
+ "content_chars": 15013,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "-530",
+ "reasoning": "We need the change from end of 2013 to end of 2014. The table gives Balance, December 31 for 2013 and 2014: 2013 = $1,701, 2014 = $1,171. Change = 1,171 - 1,701 = -530. So decrease of 530 million. Need answer as value, likely -530. The question asks \"what was the change\" so could be -530 or 530 decrease. We'll output -530. Evidence: Balance, December 31 2014 $1,171; 2013 $1,701. Program subtract(1171, 1701).",
+ "raw_content": "<evidence>$ 1,171 | Balance, December 31 (2014)\n$ 1,701 | Balance, December 31 (2013)\n</evidence>\n<program>subtract(1171, 1701)</program>\n<answer>-530</answer>",
+ "r2_usage": {
+  "prompt_tokens": 3921,
+  "completion_tokens": 200,
+  "total_tokens": 4121,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 1,171",
+   "element": "Balance, December 31 (2014)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ 1,701",
+   "element": "Balance, December 31 (2013)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(1171, 1701)",
+ "answer_model": "-530",
+ "program_value": -530.0,
+ "elapsed_s": 101.9,
+ "outline_source": "CMCSA_2015_0001193125-16-452423.outline.txt",
+ "outline_chars": 134140
+}

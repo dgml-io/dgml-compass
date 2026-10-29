@@ -1,0 +1,81 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0344",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what was the average unrecognized compensation cost related to unvested restricted stock per year?",
+ "gold": "$ 13.4 million",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "GPN_2013_0001123360-13-000025.outline.txt",
+ "doc_source": "GPN_2013_0001123360-13-000025.dgml.xml",
+ "outline_chars": 74109,
+ "predicted_xpaths": [
+  "/chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockCompensationExpense"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 1836,
+ "r1_usage": {
+  "prompt_tokens": 18968,
+  "completion_tokens": 483,
+  "total_tokens": 19451,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockCompensationExpense"
+ ],
+ "content_chars": 4616,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "13.4",
+ "reasoning": "We need answer: average unrecognized compensation cost related to unvested restricted stock per year. Document says as of May 31, 2013, there was $33.5 million total unrecognized compensation cost related to unvested restricted stock awards expected to be recognized over weighted average period of 2.5 years. Average per year = 33.5 / 2.5 = 13.4 million. Need output value only. Evidence: $33.5 million and 2.5 years. Program divide(33.5, 2.5). Need maybe units? Question asks per year, likely $13.4 million. But answer should be value only, no units unless asked. They ask \"what was the average unrecognized compensation cost related to unvested restricted stock per year?\" So answer 13.4. Use evidence with paths.",
+ "raw_content": "<evidence>$33.5 million | /chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockCompensationExpense/UnrecognizedCompensationCost\n2.5 years | /chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockCompensationExpense/VestingPeriod</evidence>\n\n<program>divide(33.5, 2.5)</program>\n\n<answer>13.4</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1526,
+  "completion_tokens": 286,
+  "total_tokens": 1812,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 1526,
+   "completion_tokens": 286,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "$33.5 million",
+   "element": "chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockCompensationExpense/UnrecognizedCompensationCost",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "2.5 years",
+   "element": "chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockCompensationExpense/VestingPeriod",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(33.5, 2.5)",
+ "answer_model": "13.4",
+ "program_value": 13.4,
+ "elapsed_s": 4.8
+}

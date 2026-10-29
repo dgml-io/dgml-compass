@@ -1,0 +1,72 @@
+{
+ "id": "NCLH_2018_0001144204-19-010508__row0811",
+ "key": "NCLH_2018_0001144204-19-010508",
+ "question": "what is the percentage change in net interest expense in 2018 compare to 2017?",
+ "gold": "1.0%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "NCLH_2018_0001144204-19-010508.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/FinancialStatementCrossReference/TableOf/InterestExpenseDiscussion",
+  "/chunk/RiskFactors/ManagementDiscussionAnalysis/ExpenseDiscussion/InterestExpenseDiscussion",
+  "/chunk/RiskFactors/ManagementDiscussionAnalysis/PeriodComparison/ExpenseDiscussion/p/InterestExpense"
+ ],
+ "r1_reasoning_chars": 5046,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 19079,
+  "completion_tokens": 1235,
+  "total_tokens": 20314,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/FinancialStatementCrossReference/TableOf/InterestExpenseDiscussion",
+  "/chunk/RiskFactors/ManagementDiscussionAnalysis/ExpenseDiscussion/InterestExpenseDiscussion",
+  "/chunk/RiskFactors/ManagementDiscussionAnalysis/PeriodComparison/ExpenseDiscussion/p/InterestExpense"
+ ],
+ "content_chars": 10535,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "0.970874",
+ "reasoning": "We need percentage change in net interest expense 2018 vs 2017. Figures: 2018 $270.4 million, 2017 $267.8 million. Percentage change = (270.4 - 267.8)/267.8 * 100. Compute.",
+ "raw_content": "<evidence>\n$270.4 million | InterestExpense (2018)\n$267.8 million | InterestExpense (2017)\n</evidence>\n<program>\nmultiply(divide(subtract(270.4, 267.8), 267.8), 100)\n</program>\n<answer>0.9709</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2915,
+  "completion_tokens": 133,
+  "total_tokens": 3048,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$270.4 million",
+   "element": "InterestExpense (2018)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$267.8 million",
+   "element": "InterestExpense (2017)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(270.4, 267.8), 267.8), 100)",
+ "answer_model": "0.9709",
+ "program_value": 0.9708737864077542,
+ "elapsed_s": 9.82,
+ "outline_source": "NCLH_2018_0001144204-19-010508.outline.txt",
+ "outline_chars": 75680
+}

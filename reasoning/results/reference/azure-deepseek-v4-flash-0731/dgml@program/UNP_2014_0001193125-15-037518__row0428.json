@@ -1,0 +1,75 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0428",
+ "format": "dgml",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "what was the cost per car for the buyout of locomotives in 2012?",
+ "gold": "454545",
+ "finqa_id": "UNP/2014/page_35.pdf-2",
+ "source_page": "page_35",
+ "ticker": "UNP",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/dgml/UNP_2014_0001193125-15-037518.dgml.xml",
+ "doc_chars": 655633,
+ "prompt_chars": 655786,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 655633,
+ "original_chars": 655633,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 153615,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 275,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.454545",
+ "reasoning": "We need answer: \"what was the cost per car for the buyout of locomotives in 2012?\" Need find figure. Document mentions: \"Included in capital investments in 2012 was $75 million for the early buyout of 165 locomotives under long-term operating and capital leases during the first quarter of 2012\". So cost per car = 75 million / 165 = 454,545.45... per locomotive. But question says \"cost per car\" maybe per locomotive? It says buyout of locomotives. So compute 75,000,000 / 165 = 454,545.45. Need evidence figures: $75 million, 165 locomotives. Program divide(75, 165) but units millions? 75/165 = 0.454545... million = $454,545.45. The answer likely $454,545.45 per locomotive. But question asks \"cost per car\" maybe typo. We'll answer with value. Need include evidence.",
+ "raw_content": "<evidence>\n$75 million | CapitalInvestmentAmount (2012 early buyout of 165 locomotives)\n165 locomotives | CapitalInvestmentAmount (2012 early buyout)\n</evidence>\n<program>divide(75, 165)</program>\n<answer>0.4545454545</answer>",
+ "usage": {
+  "prompt_tokens": 153920,
+  "completion_tokens": 275,
+  "total_tokens": 154195,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 13.21,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$75 million",
+   "element": "CapitalInvestmentAmount (2012 early buyout of 165 locomotives)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "165 locomotives",
+   "element": "CapitalInvestmentAmount (2012 early buyout)",
+   "element_found": true,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(75, 165)",
+ "answer_model": "0.4545454545",
+ "program_value": 0.45454545454545453,
+ "docfinqa_row": 428
+}

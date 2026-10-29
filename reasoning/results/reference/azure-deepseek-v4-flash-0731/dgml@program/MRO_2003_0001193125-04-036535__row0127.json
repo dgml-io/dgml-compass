@@ -1,0 +1,84 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0127",
+ "format": "dgml",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "what were total distillates sales in millions for the three year period ? 365 346 345",
+ "gold": "1056",
+ "finqa_id": "MRO/2003/page_45.pdf-2",
+ "source_page": "page_45",
+ "ticker": "MRO",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/dgml/MRO_2003_0001193125-04-036535.dgml.xml",
+ "doc_chars": 894793,
+ "prompt_chars": 894967,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": true,
+ "truncation": "head",
+ "kept_chars": 894683,
+ "original_chars": 1111982,
+ "kept_fraction": 0.8046,
+ "est_doc_tokens": 266687,
+ "est_kept_tokens": 211360,
+ "budget_tokens": 240000,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 385,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1056",
+ "reasoning": "We need answer question: \"what were total distillates sales in millions for the three year period ? 365 346 345\" The question seems to ask total distillates sales in millions for the three year period. The document has a table \"Refined Product Sales\" with Distillates: 2003 365, 2002 346, 2001 345 (thousands of barrels per day). But question says \"total distillates sales in millions\" - maybe they want sum? The question includes \"365 346 345\" which are the values. Likely they want total sum = 365+346+345 = 1056. But careful: The table is \"Refined Product Sales\" in thousands of barrels per day, not millions. The question says \"total distillates sales in millions\" - maybe they want sum of the three numbers? The phrasing \"what were total distillates sales in millions for the three year period ? 365 346 345\" suggests they want the total (sum) of those three figures. So answer 1056.\n\nWe need provide evidence and program. Evidence: 365 | RefinedProductSalesVolume (Distillates 2003), 346 | RefinedProductSalesVolume (Distillates 2002), 345 | RefinedProductSalesVolume (Distillates 2001). Program: add(365, add(346, 345)) = 1056.\n\nFinal answer inside <answer>1056</answer>.",
+ "raw_content": "<evidence>\n365 | RefinedProductSalesVolume (Distillates 2003)\n346 | RefinedProductSalesVolume (Distillates 2002)\n345 | RefinedProductSalesVolume (Distillates 2001)\n</evidence>\n<program>add(365, add(346, 345))</program>\n<answer>1056</answer>",
+ "usage": {
+  "prompt_tokens": 211690,
+  "completion_tokens": 385,
+  "total_tokens": 212075,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 24.25,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "365",
+   "element": "RefinedProductSalesVolume (Distillates 2003)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "346",
+   "element": "RefinedProductSalesVolume (Distillates 2002)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "345",
+   "element": "RefinedProductSalesVolume (Distillates 2001)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "add(365, add(346, 345))",
+ "answer_model": "1056",
+ "program_value": 1056.0,
+ "docfinqa_row": 127
+}

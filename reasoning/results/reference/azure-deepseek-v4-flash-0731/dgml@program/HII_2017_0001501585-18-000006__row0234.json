@@ -1,0 +1,74 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0234",
+ "format": "dgml",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what was the return on total assets during 2013?",
+ "gold": "4.2%",
+ "finqa_id": "HII/2017/page_47.pdf-1",
+ "source_page": "page_47",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/dgml/HII_2017_0001501585-18-000006.dgml.xml",
+ "doc_chars": 733855,
+ "prompt_chars": 733992,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 733855,
+ "original_chars": 733855,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 164566,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 322,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "4.2165%",
+ "reasoning": "We need return on total assets during 2013. Return on assets = net earnings / total assets. Need figures for 2013. From selected financial data: Net earnings 2013 = 261, Total assets 2013 = 6,190. Also maybe average assets? Typically ROA = net income / average total assets. But question says \"return on total assets during 2013\" - could be net earnings / total assets at end of 2013. Need check if they want average? Usually ROA = net income / average total assets. But document gives total assets for 2013 and 2012? Selected data has 2013 total assets 6,190, but no 2012. So likely use ending total assets. Compute 261/6190 = 0.04216... = 4.22%. Let's compute precisely: 261/6190 = 0.04216478... = 4.2165%. So answer 4.22% or 0.0422. The question asks \"what was the return on total assets during 2013?\" Probably percentage. We'll provide value. Need evidence: 261 | Net earnings 2013, 6,190 | Total assets 2013. Program: divide(261, 6190).",
+ "raw_content": "<evidence>\n261 | Net earnings (loss) 2013\n6,190 | Total assets 2013\n</evidence>\n<program>divide(261, 6190)</program>\n<answer>4.22%</answer>",
+ "usage": {
+  "prompt_tokens": 164865,
+  "completion_tokens": 322,
+  "total_tokens": 165187,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 164096
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.01,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "261",
+   "element": "Net earnings (loss) 2013",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6,190",
+   "element": "Total assets 2013",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(261, 6190)",
+ "answer_model": "4.22%",
+ "program_value": 0.042164781906300484,
+ "docfinqa_row": 234
+}

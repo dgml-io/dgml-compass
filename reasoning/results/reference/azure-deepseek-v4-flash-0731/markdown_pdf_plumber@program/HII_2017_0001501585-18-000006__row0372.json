@@ -1,0 +1,74 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0372",
+ "format": "markdown_pdf_plumber",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what is the combined number of equity compensation plans approved by security holders",
+ "gold": "4536446",
+ "finqa_id": "HII/2017/page_124.pdf-4",
+ "source_page": "page_124",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/markdown_pdf_plumber/HII_2017_0001501585-18-000006.md",
+ "doc_chars": 479340,
+ "prompt_chars": 479514,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 479340,
+ "original_chars": 479340,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 106334,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 347,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "2",
+ "reasoning": "We need answer combined number of equity compensation plans approved by security holders. From Item 12 table: \"Equity compensation plans approved by security holders\" row has number of securities to be issued upon exercise etc. But question asks combined number of equity compensation plans approved by security holders. The table shows plan category \"Equity compensation plans approved by security holders\" with number of securities remaining available etc. But \"combined number of equity compensation plans\" - maybe there are two plans: 2011 and 2012. The text says \"HII had stock-based compensation awards outstanding under the following plans: the 2011 Plan and the 2012 Plan.\" Both approved by security holders? 2011 Plan approved by sole stockholder prior to spin-off, 2012 Plan approved by stockholders. So combined number = 2. But question might be asking from table: \"Equity compensation plans approved by security holders\" row has number of securities to be issued upon exercise of outstanding options, warrants and rights: 448,859. But \"combined number of equity compensation plans\" is not a figure in table. The table lists plan category, not count. The document says two plans. So answer 2.\n\nNeed evidence: \"the 2011 Plan\" and \"the 2012 Plan\" from Note 19. Also Item 12 table says \"Equity compensation plans approved by security holders\" but no count. So answer 2.\n\nFinal answer inside <answer>2</answer>.",
+ "raw_content": "<evidence>2011 Plan | Note 19: Stock Compensation Plans\n2012 Plan | Note 19: Stock Compensation Plans</evidence>\n\n<program>2</program>\n\n<answer>2</answer>",
+ "usage": {
+  "prompt_tokens": 106636,
+  "completion_tokens": 347,
+  "total_tokens": 106983,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.63,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "2011 Plan",
+   "element": "Note 19: Stock Compensation Plans",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "2012 Plan",
+   "element": "Note 19: Stock Compensation Plans",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "2",
+ "answer_model": "2",
+ "program_value": 2.0,
+ "docfinqa_row": 372
+}

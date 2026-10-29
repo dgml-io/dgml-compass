@@ -1,0 +1,78 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0147",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was the average backlog at year-end from 2013 to 2015",
+ "gold": "197000",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "LMT_2015_0001193125-16-476010.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/FilingPartDesignation/StockMarketInformation/SelectedFinancialData",
+  "/chunk/FilingPartDesignation/StockMarketInformation/SelectedFinancialData/table/BacklogSelectedData"
+ ],
+ "r1_reasoning_chars": 10554,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 28879,
+  "completion_tokens": 2704,
+  "total_tokens": 31583,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/FilingPartDesignation/StockMarketInformation/SelectedFinancialData",
+  "/chunk/FilingPartDesignation/StockMarketInformation/SelectedFinancialData/table/BacklogSelectedData"
+ ],
+ "content_chars": 25079,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "87582.333333",
+ "reasoning": "We need average backlog at year-end 2013, 2014, 2015. From table BacklogSelectedData: 2013 $82,600, 2014 $80,547, 2015 $99,600. Average = (82600 + 80547 + 99600)/3. Compute: 82600+80547=163147; +99600=262747; /3=87582.333... So answer 87582.333... Need provide evidence and program.",
+ "raw_content": "<evidence>\n$82,600 | BacklogSelectedData (2013)\n$80,547 | BacklogSelectedData (2014)\n$99,600 | BacklogSelectedData (2015)\n</evidence>\n<program>divide(add(add(82600, 80547), 99600), 3)</program>\n<answer>87582.3333333333</answer>",
+ "r2_usage": {
+  "prompt_tokens": 6217,
+  "completion_tokens": 190,
+  "total_tokens": 6407,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$82,600",
+   "element": "BacklogSelectedData (2013)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$80,547",
+   "element": "BacklogSelectedData (2014)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$99,600",
+   "element": "BacklogSelectedData (2015)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(add(82600, 80547), 99600), 3)",
+ "answer_model": "87582.3333333333",
+ "program_value": 87582.33333333333,
+ "elapsed_s": 16.4,
+ "outline_source": "LMT_2015_0001193125-16-476010.outline.txt",
+ "outline_chars": 116705
+}

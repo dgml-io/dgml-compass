@@ -1,0 +1,74 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0225",
+ "format": "markdown_pdf_rules",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what is the ratio of the deffered tax assets for the state income tax credit carry-forwards to the net operating loss carry-forward",
+ "gold": "5.3",
+ "finqa_id": "HII/2017/page_104.pdf-4",
+ "source_page": "page_104",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/markdown_pdf_rules/HII_2017_0001501585-18-000006.md",
+ "doc_chars": 465382,
+ "prompt_chars": 465602,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 465382,
+ "original_chars": 465382,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 102037,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 266,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "5.333333",
+ "reasoning": "We need answer ratio of deferred tax assets for state income tax credit carry-forwards to net operating loss carry-forward. From note 13: \"A deferred tax asset of approximately $16 million (net of federal benefit) has been established related to these state income tax credit carry-forwards, with a valuation allowance of $7 million against such deferred tax asset as of December 31, 2017. The Company had a gross state net operating loss carry-forward of $39 million, which expires in 2027. A deferred tax asset of approximately $3 million (net of federal benefit) has been established for the net operating loss carry-forward, with a full valuation allowance as of December 31, 2017.\"\n\nSo deferred tax assets: $16 million for state income tax credit carry-forwards, $3 million for NOL carry-forward. Ratio = 16/3 = 5.333... Need answer as value. Probably 5.33. Use evidence.",
+ "raw_content": "<evidence>\n$16 million | Deferred tax asset for state income tax credit carry-forwards (Note 13)\n$3 million | Deferred tax asset for net operating loss carry-forward (Note 13)\n</evidence>\n\n<program>divide(16, 3)</program>\n\n<answer>5.33</answer>",
+ "usage": {
+  "prompt_tokens": 102352,
+  "completion_tokens": 266,
+  "total_tokens": 102618,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.33,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$16 million",
+   "element": "Deferred tax asset for state income tax credit carry-forwards (Note 13)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$3 million",
+   "element": "Deferred tax asset for net operating loss carry-forward (Note 13)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(16, 3)",
+ "answer_model": "5.33",
+ "program_value": 5.333333333333333,
+ "docfinqa_row": 225
+}

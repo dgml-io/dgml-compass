@@ -1,0 +1,67 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0372",
+ "format": "markdown_pdf_poppler",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what is the combined number of equity compensation plans approved by security holders",
+ "gold": "4536446",
+ "finqa_id": "HII/2017/page_124.pdf-4",
+ "source_page": "page_124",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/markdown_pdf_poppler/HII_2017_0001501585-18-000006.md",
+ "doc_chars": 528384,
+ "prompt_chars": 528558,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 528384,
+ "original_chars": 528384,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 97412,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 355,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "2",
+ "reasoning": "We need answer: combined number of equity compensation plans approved by security holders. The table shows \"Equity compensation plans approved by security holders\" row with number of securities to be issued etc. But question asks \"combined number of equity compensation plans approved by security holders\" - likely number of plans? The table lists two plans: 2011 and 2012. But \"combined number\" might be 2. However the table shows \"Equity compensation plans approved by security holders\" as a category, not count. The document says \"HII had stock-based compensation awards outstanding under the following plans: the 2011 Plan and the 2012 Plan.\" Both approved by security holders? 2011 approved by sole stockholder, 2012 by stockholders. So combined number = 2. But question might be asking for number of securities? Let's read: \"what is the combined number of equity compensation plans approved by security holders\" - likely 2. The table has row \"Equity compensation plans approved by security holders\" with columns. But the question asks \"combined number of equity compensation plans\" - not securities. So answer 2.\n\nWe need evidence: from text: \"HII had stock-based compensation awards outstanding under the following plans: the 2011 Plan and the 2012 Plan.\" Also table shows \"Equity compensation plans approved by security holders\" row. But the number of plans is 2. We'll cite.\n\nProgram: just 2.",
+ "raw_content": "<evidence>\n2 | \"HII had stock-based compensation awards outstanding under the following plans: the 2011 Plan and the 2012 Plan.\" (Note 19)\n</evidence>\n<program>2</program>\n<answer>2</answer>",
+ "usage": {
+  "prompt_tokens": 97714,
+  "completion_tokens": 355,
+  "total_tokens": 98069,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 97536
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.77,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "2",
+   "element": "\"HII had stock-based compensation awards outstanding under the following plans: the 2011 Plan and the 2012 Plan.\" (Note 19)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "2",
+ "answer_model": "2",
+ "program_value": 2.0,
+ "docfinqa_row": 372
+}

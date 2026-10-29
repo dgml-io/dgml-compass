@@ -1,0 +1,81 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0320",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "what was the change in millions of the weighted average common shares outstanding for diluted computations from 2013 to 2014?",
+ "gold": "-4.1",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "LMT_2014_0001193125-15-038681.outline.txt",
+ "doc_source": "LMT_2014_0001193125-15-038681.dgml.xml",
+ "outline_chars": 64445,
+ "predicted_xpaths": [
+  "/chunk/Financial/EarningsPerShare/table"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 1291,
+ "r1_usage": {
+  "prompt_tokens": 16128,
+  "completion_tokens": 333,
+  "total_tokens": 16461,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/Financial/EarningsPerShare/table"
+ ],
+ "content_chars": 2701,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "-4.1",
+ "reasoning": "We need change from 2013 to 2014: 2014 diluted 322.4, 2013 diluted 326.5. Change = 322.4 - 326.5 = -4.1. Question asks \"change in millions\" likely absolute change? It says \"what was the change\" could be negative. We'll provide -4.1. Need evidence figures.",
+ "raw_content": "<evidence>\n322.4 | /chunk/Financial/EarningsPerShare/table/EarningsPerShare/ShareCountValue\n326.5 | /chunk/Financial/EarningsPerShare/table/EarningsPerShare/ShareCountValue\n</evidence>\n<program>subtract(322.4, 326.5)</program>\n<answer>-4.1</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1010,
+  "completion_tokens": 164,
+  "total_tokens": 1174,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 1010,
+   "completion_tokens": 164,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "322.4",
+   "element": "chunk/Financial/EarningsPerShare/table/EarningsPerShare/ShareCountValue",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "326.5",
+   "element": "chunk/Financial/EarningsPerShare/table/EarningsPerShare/ShareCountValue",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(322.4, 326.5)",
+ "answer_model": "-4.1",
+ "program_value": -4.100000000000023,
+ "elapsed_s": 4.21
+}

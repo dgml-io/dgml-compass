@@ -1,0 +1,53 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0450",
+ "format": "dgml_compact",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "is the weighted average useful life ( years ) for trademarks greater than customer contracts and relationships?",
+ "gold": "no",
+ "finqa_id": "ADBE/2008/page_74.pdf-3",
+ "source_page": "page_74",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml_compact/ADBE_2008_0000796343-09-000007.dgml.txt",
+ "doc_chars": 545889,
+ "prompt_chars": 546089,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 545889,
+ "original_chars": 545889,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 114389,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 266,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "No",
+ "reasoning": "The question asks: \"is the weighted average useful life (years) for trademarks greater than customer contracts and relationships?\"\n\nFrom the document, in the \"Intangible Assets Policy\" section:\n\n\"Intangible assets are amortized over their estimated useful lives of 1 to 13 years as shown in the table below. Amortization is based on the pattern in which the economic benefits of the intangible asset will be consumed.\n\ntable:\nIntangibleAssetUsefulLife: Weighted Average Useful Life (Years)\nIntangibleAssetUsefulLife: Purchased technology | 4\nIntangibleAssetUsefulLife: Localization | 1\nIntangibleAssetUsefulLife: Trademarks | 5\nIntangibleAssetUsefulLife: Customer contracts and relationships | 6\nIntangibleAssetUsefulLife: Other intangibles | 3\"\n\nSo trademarks weighted average useful life = 5 years, customer contracts and relationships = 6 years. 5 is not greater than 6. So the answer is No.\n\nThe question asks \"is the weighted average useful life (years) for trademarks greater than customer contracts and relationships?\" Answer: No.\n\nThe final answer should be just the value, no explanation. The question is a yes/no question, so answer \"No\".",
+ "raw_content": "<answer>No</answer>",
+ "usage": {
+  "prompt_tokens": 114535,
+  "completion_tokens": 266,
+  "total_tokens": 114801,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 114432
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.06,
+ "answer_tag_found": true,
+ "docfinqa_row": 450
+}

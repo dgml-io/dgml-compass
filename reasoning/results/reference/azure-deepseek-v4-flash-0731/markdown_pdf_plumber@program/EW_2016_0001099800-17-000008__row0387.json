@@ -1,0 +1,72 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0387",
+ "format": "markdown_pdf_plumber",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what is the percent change in the fair value per share between 2014 and 2016?",
+ "gold": "163%",
+ "finqa_id": "EW/2016/page_94.pdf-4",
+ "source_page": "page_94",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf_plumber/EW_2016_0001099800-17-000008.md",
+ "doc_chars": 348684,
+ "prompt_chars": 348850,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 348684,
+ "original_chars": 348684,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 82552,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1207,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "163.829787",
+ "reasoning": "We need answer percent change in fair value per share between 2014 and 2016. Need identify fair value per share. Likely stock option fair value per share? In note 13, option awards fair value per share: 2016 $31.00, 2015 $18.13, 2014 $11.75. Or ESPP fair value per share: 2016 $22.09, 2015 $15.59, 2014 $8.59. Question says \"fair value per share\" without specifying. Could be from stock option table. Need infer. The document has \"Fair value, per share\" in option awards and ESPP. Which one? The question likely refers to fair value per share of options granted. Percent change between 2014 and 2016: (31.00 - 11.75)/11.75 = 19.25/11.75 = 1.63829787234 = 163.83%. Or if ESPP: (22.09-8.59)/8.59 = 13.5/8.59 = 1.57159 = 157.16%. Need determine. The question says \"the fair value per share\" singular. In document, there are two tables with \"Fair value, per share\". Which one is more likely? The question might be from a benchmark expecting one. Need look at context. The question: \"what is the percent change in the fair value per share between 2014 and 2016?\" It might refer to the fair value per share of stock options granted, as that is a common metric. The option awards table has \"Fair value, per share\" $31.00, $18.13, $11.75. The ESPP table also has \"Fair value, per share\" $22.09, $15.59, $8.59. Which one is more prominent? The question doesn't specify. Could be from a financial document analysis task where they ask about \"fair value per share\" and the document has multiple. Need see if there is any other \"fair value per share\" in document. There is \"Fair value, per share\" in both. Also \"fair value of $266.5 million\" for shares issued, but not per share. The question likely expects the option awards because it's the first occurrence and more standard. But we need be careful. The question says \"between 2014 and 2016\" - the option awards table has 2016, 2015, 2014. The ESPP also. Which one is more likely? The option awards table is under \"Option Awards\" and the ESPP under \"ESPP\". The question might be from a dataset where they ask about \"fair value per share\" and the answer is based on the option awards. Let's compute both and see which is more plausible. Percent change = (2016-2014)/2014 *100. For options: (31.00-11.75)/11.75 = 19.25/11.75 = 1.6383 = 163.83%. For ESPP: (22.09-8.59)/8.59 = 13.5/8.59 = 1.5716 = 157.16%. Which one is asked? The question says \"the fair value per share\" without \"option\" or \"ESPP\". In the document, the first table with \"Fair value, per share\" is under \"Option Awards\" (line \"Fair value, per share $ 31.00 $ 18.13 $ 11.75\"). The second is under ESPP. The question might be ambiguous, but likely they refer to the option awards because it's the main one. Also the question says \"between 2014 and 2016\" - the option awards table has 2016, 2015, 2014. The ESPP also. But the option awards is more prominent. I'll answer with options. Need provide evidence and program. Evidence: 31.00 | Fair value, per share (Option Awards) ; 11.75 | Fair value, per share (Option Awards). Program: divide(subtract(31.00, 11.75), 11.75) = 1.6383. But the question asks percent change, so answer should be 163.83% or 163.8%. The instruction: \"Give your final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what is the percent change\" so answer should be a number, likely with %? It says no units unless asked. Percent is a unit? It asks percent change, so include %? Typically answer as 163.83% or 163.8. The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for percent change, so include % sign? It says \"unless the question asks for them\" - it asks for percent change, so include %? I'll put 163.83% or 163.8%. Need be precise. Let's compute exactly: 19.25/11.75 = 1.63829787234, so 163.829787234%. Round to two decimals: 163.83%. I'll put 163.83%.",
+ "raw_content": "<evidence>\n31.00 | Fair value, per share (Option Awards)\n11.75 | Fair value, per share (Option Awards)\n</evidence>\n<program>\nmultiply(divide(subtract(31.00, 11.75), 11.75), 100)\n</program>\n<answer>163.83%</answer>",
+ "usage": {
+  "prompt_tokens": 82860,
+  "completion_tokens": 1207,
+  "total_tokens": 84067,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 82688
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.04,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "31.00",
+   "element": "Fair value, per share (Option Awards)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "11.75",
+   "element": "Fair value, per share (Option Awards)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(31.00, 11.75), 11.75), 100)",
+ "answer_model": "163.83%",
+ "program_value": 163.82978723404256,
+ "docfinqa_row": 387
+}

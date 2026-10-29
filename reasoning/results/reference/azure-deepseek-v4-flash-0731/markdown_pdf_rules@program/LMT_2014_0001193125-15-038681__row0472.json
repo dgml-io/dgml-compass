@@ -1,0 +1,78 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0472",
+ "format": "markdown_pdf_rules",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "what was the average of company 401 ( k ) match total for the three years ended 2014 , in millions?",
+ "gold": "383",
+ "finqa_id": "LMT/2014/page_91.pdf-1",
+ "source_page": "page_91",
+ "ticker": "LMT",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf_rules/LMT_2014_0001193125-15-038681.md",
+ "doc_chars": 436977,
+ "prompt_chars": 437165,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 436977,
+ "original_chars": 436977,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 95659,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 199,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "382.666667",
+ "reasoning": "We need answer average of company 401(k) match total for three years ended 2014. From document: \"Our contributions were $385 million in 2014, $383 million in 2013 and $380 million in 2012\" under Defined Contribution Plans. Average = (385+383+380)/3 = 1148/3 = 382.666... So answer 382.67? In millions. Need final answer value only. Probably 382.7 or 382.67. Use exact? The question says \"in millions\" so answer 382.67. We'll provide evidence and program.",
+ "raw_content": "<evidence>\n385 | Defined Contribution Plans - 2014 contributions\n383 | Defined Contribution Plans - 2013 contributions\n380 | Defined Contribution Plans - 2012 contributions\n</evidence>\n\n<program>divide(add(385, add(383, 380)), 3)</program>\n\n<answer>382.67</answer>",
+ "usage": {
+  "prompt_tokens": 95971,
+  "completion_tokens": 199,
+  "total_tokens": 96170,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 95744
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.18,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "385",
+   "element": "Defined Contribution Plans - 2014 contributions",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "383",
+   "element": "Defined Contribution Plans - 2013 contributions",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "380",
+   "element": "Defined Contribution Plans - 2012 contributions",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(385, add(383, 380)), 3)",
+ "answer_model": "382.67",
+ "program_value": 382.6666666666667,
+ "docfinqa_row": 472
+}

@@ -1,0 +1,78 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0576",
+ "format": "markdown_pdf_plumber",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "what were total asphalt sales in millions for the three year period?",
+ "gold": "227",
+ "finqa_id": "MRO/2003/page_45.pdf-1",
+ "source_page": "page_45",
+ "ticker": "MRO",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/markdown_pdf_plumber/MRO_2003_0001193125-04-036535.md",
+ "doc_chars": 570022,
+ "prompt_chars": 570179,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 570022,
+ "original_chars": 570022,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 146581,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1961,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "82.855",
+ "reasoning": "We need answer: total asphalt sales in millions for three year period. Need find asphalt sales volumes? The question asks \"total asphalt sales in millions\" likely in dollars? But document gives refined product sales volumes in thousands barrels per day for asphalt: 74, 75, 78 for 2003, 2002, 2001. Also refined product yields. But \"sales in millions\" could be volume? The question says \"total asphalt sales in millions\" - maybe from table \"Refined Product Sales (Thousands of Barrels per Day)\" asphalt 74, 75, 78. But \"in millions\" might refer to dollars? There is no dollar sales for asphalt separately. Could be \"total asphalt sales in millions\" meaning sum of volumes? But units are thousands barrels per day, not millions. Need interpret.\n\nLook at document: In \"Refined Product Sales\" table, Asphalt: 74, 75, 78 (thousands of barrels per day). The question: \"what were total asphalt sales in millions for the three year period?\" Could be asking sum of asphalt sales volumes in thousands of barrels per day? But \"in millions\" maybe they want total in millions of barrels? Need compute annual volumes? Let's examine.\n\nThe table \"Refined Product Sales (Thousands of Barrels per Day)\" includes Asphalt 74, 75, 78 for 2003, 2002, 2001. If \"total asphalt sales in millions\" might be sum of these three numbers = 227 (thousands of barrels per day) but that's not millions. Or maybe they want total sales in millions of dollars? No dollar figure for asphalt.\n\nAlternatively, there is \"Refined Product Yields\" Asphalt 72, 72, 76. But question says \"sales\" not yields.\n\nMaybe \"total asphalt sales in millions\" refers to \"Asphalt\" line in \"Refined Product Sales\" table, values are in thousands of barrels per day. Sum = 74+75+78 = 227. But \"in millions\" might be a misnomer. Could be they want total in millions of barrels per year? Let's compute: 74,000 bpd * 365 = 27.01 million barrels; 75,000*365=27.375; 78,000*365=28.47; sum = 82.855 million barrels. But question says \"in millions\" - likely they want total volume in millions of barrels over three years. However the table gives daily average, so need multiply by days. But the question might be from a benchmark expecting simple sum? Let's read exact: \"what were total asphalt sales in millions for the three year period?\" Could be from a table where values are in \"Thousands of Barrels per Day\" and they ask \"total asphalt sales in millions\" meaning sum of the three numbers? But \"millions\" might refer to the unit of the answer? Hmm.\n\nLet's search document for \"asphalt sales\" - only table. The table header: \"Refined Product Sales (Thousands of Barrels per Day)\" with Asphalt 74, 75, 78. So \"total asphalt sales\" over three years would be sum of daily rates? That doesn't make sense. But if they ask \"in millions\" maybe they want total in millions of barrels per day? No.\n\nMaybe there is another table \"Refined Product Yields\" Asphalt 72, 72, 76. But that's production, not sales.\n\nGiven typical financial analysis, they might ask \"total asphalt sales in millions\" meaning sum of the three annual figures in the table, which are in thousands of barrels per day, but they might treat them as \"millions\" because the table is in thousands? Actually \"Thousands of Barrels per Day\" - if you sum 74+75+78 = 227 thousand barrels per day. That's not millions. But if you multiply by 365 and divide by 1000, you get millions of barrels per year. The question says \"in millions\" - likely they want total volume in millions of barrels over the three-year period. Let's compute: 74,000*365 = 27,010,000 barrels = 27.01 million; 75,000*365 = 27,375,000 = 27.375; 78,000*365 = 28,470,000 = 28.47; sum = 82.855 million barrels. But is that correct? The table gives daily average for each year. So total over three years = sum of annual volumes. Yes.\n\nBut the question might be simpler: \"total asphalt sales in millions\" could be sum of the three numbers 74, 75, 78 = 227, but that's in thousands of barrels per day, not millions. The word \"millions\" might be a hint to convert to millions of barrels. Let's see if any other interpretation.\n\nAlternatively, maybe there is a table \"Refined Product Sales\" with Asphalt 74, 75, 78 and they ask \"total asphalt sales in millions\" meaning sum of these three values in millions of barrels per day? No.\n\nLet's check the document for \"asphalt\" in other contexts: \"MAP markets asphalt through owned and leased terminals...\" \"Asphalt 72 72 76\" in yields. \"Asphalt 74 75 78\" in sales. No dollar amounts.\n\nGiven the question asks \"in millions\" - likely they want the total volume in millions of barrels. So compute 74*365/1000 + 75*365/1000 + 78*365/1000 = (74+75+78)*365/1000 = 227*365/1000 = 82,855/1000 = 82.855 million barrels. But the question says \"total asphalt sales in millions\" - could be \"millions of barrels\" or \"millions of dollars\"? Since no dollar, it's volume.\n\nBut wait, the table header says \"Thousands of Barrels per Day\" - so to get millions of barrels per year, multiply by 365 and divide by 1000. So answer 82.855. However, the question might expect just sum of the three numbers because they are already in \"thousands\" and they ask \"in millions\" meaning sum in thousands? No.\n\nLet's see if there is any other table with \"Asphalt\" in \"Refined Product Sales\" that might have values in millions? No.\n\nI'll go with 82.855 million barrels. But let's double-check: 74,000 bpd * 365 = 27,010,000 = 27.01 million; 75,000*365=27,375,000=27.375; 78,000*365=28,470,000=28.47; sum=82.855. Yes.\n\nBut the question says \"total asphalt sales in millions\" - could be \"millions of dollars\" but no price. So it's volume.\n\nAlternatively, maybe they want the sum of the three numbers as \"millions\" because the table is in thousands of barrels per day, and they ask \"total asphalt sales in millions\" meaning sum of the three daily averages? That would be 227 (thousands of barrels per day) which is not millions. So no.\n\nI'll answer 82.855.\n\nBut let's see if the question might be from a dataset where they expect just sum of the three values in the table, e.g., 74+75+78=227. The phrase \"in millions\" might be a red herring. However, the table header explicitly says \"Thousands of Barrels per Day\" - so if you sum them, you get thousands of barrels per day, not millions. To get millions, you need to convert to annual. So I think 82.855 is correct.\n\nLet's provide evidence: values 74, 75, 78 from \"Refined Product Sales\" table, Asphalt row. Then program: multiply(add(74,75,78), 365) / 1000? Actually add(74,75,78) = 227, multiply by 365 = 82855, divide by 1000 = 82.855. So program: divide(multiply(add(74,75,78), 365), 1000). But the figures as printed are 74, 75, 78. So program: divide(multiply(add(74,75,78), 365), 1000). That gives 82.855.\n\nBut the question says \"in millions\" - so answer 82.855 (millions of barrels). I'll put that.\n\nLet's write evidence: 74 | Refined Product Sales - Asphalt 2003; 75 | Refined Product Sales - Asphalt 2002; 78 | Refined Product Sales - Asphalt 2001. Then program.\n\nFinal answer inside <answer>82.855</answer>.",
+ "raw_content": "<evidence>\n74 | Refined Product Sales - Asphalt 2003\n75 | Refined Product Sales - Asphalt 2002\n78 | Refined Product Sales - Asphalt 2001\n</evidence>\n<program>\ndivide(multiply(add(74, 75, 78), 365), 1000)\n</program>\n<answer>82.855</answer>",
+ "usage": {
+  "prompt_tokens": 146882,
+  "completion_tokens": 1961,
+  "total_tokens": 148843,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 14.94,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "74",
+   "element": "Refined Product Sales - Asphalt 2003",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "75",
+   "element": "Refined Product Sales - Asphalt 2002",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "78",
+   "element": "Refined Product Sales - Asphalt 2001",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(multiply(add(74, 75, 78), 365), 1000)",
+ "answer_model": "82.855",
+ "program_value": null,
+ "docfinqa_row": 576
+}

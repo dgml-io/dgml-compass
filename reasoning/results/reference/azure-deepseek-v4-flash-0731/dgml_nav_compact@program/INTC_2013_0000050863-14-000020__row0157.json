@@ -1,0 +1,70 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0157",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "what percentage of major facilities by square footage are owned as of december 28 , 2013?",
+ "gold": "85%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "INTC_2013_0000050863-14-000020.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/Report/UnresolvedStaffCommentsStatus/Report/FacilitySquareFootage"
+ ],
+ "r1_reasoning_chars": 2922,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 25716,
+  "completion_tokens": 688,
+  "total_tokens": 26404,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/Report/UnresolvedStaffCommentsStatus/Report/FacilitySquareFootage"
+ ],
+ "content_chars": 1114,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "84.881603",
+ "reasoning": "We need percentage of major facilities by square footage that are owned. Total facilities 54.9, owned 46.6. Percentage = 46.6 / 54.9 * 100. Need compute. Evidence: Owned facilities total 46.6, Total facilities 54.9. Program: multiply(divide(46.6, 54.9), 100). Let's compute: 46.6/54.9 = 0.848816... *100 = 84.8816%. Answer likely 84.9%. Need exact? The question asks percentage, so provide numeric. Use figures as printed.",
+ "raw_content": "<evidence>\n46.6 | FacilitySquareFootage: Owned facilities1\n54.9 | FacilitySquareFootage: Total facilities\n</evidence>\n<program>multiply(divide(46.6, 54.9), 100)</program>\n<answer>84.9</answer>",
+ "r2_usage": {
+  "prompt_tokens": 641,
+  "completion_tokens": 197,
+  "total_tokens": 838,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "46.6",
+   "element": "FacilitySquareFootage: Owned facilities1",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "54.9",
+   "element": "FacilitySquareFootage: Total facilities",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(46.6, 54.9), 100)",
+ "answer_model": "84.9",
+ "program_value": 84.8816029143898,
+ "elapsed_s": 7.56,
+ "outline_source": "INTC_2013_0000050863-14-000020.outline.txt",
+ "outline_chars": 102835
+}

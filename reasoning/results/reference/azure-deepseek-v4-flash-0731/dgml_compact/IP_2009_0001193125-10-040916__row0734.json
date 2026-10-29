@@ -1,0 +1,50 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0734",
+ "format": "dgml_compact",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "what was the percentage rent increase between 2008 and 2009?",
+ "gold": "5%",
+ "finqa_id": "IP/2009/page_84.pdf-2",
+ "source_page": "page_84",
+ "ticker": "IP",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/dgml_compact/IP_2009_0001193125-10-040916.dgml.txt",
+ "doc_chars": 600076,
+ "prompt_chars": 600225,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 600076,
+ "original_chars": 600076,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 131401,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 226,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "5.37%",
+ "reasoning": "The question asks: \"what was the percentage rent increase between 2008 and 2009?\"\n\nI need to find rent expense figures for 2008 and 2009 in the document.\n\nLooking at the document, I see in the \"Commitments and Contingencies\" section (Note 11):\n\n\"Rent expense was $216 million, $205 million and $168 million for 2009, 2008 and 2007, respectively.\"\n\nSo rent expense in 2009 = $216 million\nRent expense in 2008 = $205 million\n\nPercentage increase = (216 - 205) / 205 * 100 = 11 / 205 * 100 = 5.36585...%\n\nSo the percentage rent increase between 2008 and 2009 is approximately 5.37%.\n\nLet me double-check: 11/205 = 0.0536585... = 5.37% (rounded to two decimal places).\n\nThe question asks for the percentage rent increase. I'll provide the value.",
+ "raw_content": "<answer>5.37%</answer>",
+ "usage": {
+  "prompt_tokens": 131544,
+  "completion_tokens": 226,
+  "total_tokens": 131770,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.85,
+ "answer_tag_found": true,
+ "docfinqa_row": 734
+}

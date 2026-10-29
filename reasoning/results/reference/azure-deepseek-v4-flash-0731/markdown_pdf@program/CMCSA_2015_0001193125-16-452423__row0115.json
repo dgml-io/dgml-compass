@@ -1,0 +1,73 @@
+{
+ "id": "CMCSA_2015_0001193125-16-452423__row0115",
+ "format": "markdown_pdf",
+ "key": "CMCSA_2015_0001193125-16-452423",
+ "question": "what was the percentage cable distribution systems capital expenditures of the capital expenditures incurred in cable communications segment capital expenditures in 2015?",
+ "gold": "34%",
+ "finqa_id": "CMCSA/2015/page_67.pdf-1",
+ "source_page": "page_67",
+ "ticker": "CMCSA",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf/CMCSA_2015_0001193125-16-452423.md",
+ "doc_chars": 580377,
+ "prompt_chars": 580636,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 580377,
+ "original_chars": 580377,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 134778,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 211,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "34.461189",
+ "reasoning": "We need answer percentage cable distribution systems capital expenditures of capital expenditures incurred in cable communications segment capital expenditures in 2015. From document: Cable Communications capital expenditures table: Cable distribution system $2,424; Customer premise equipment $3,698; Other equipment $756; Buildings $156; Total $7,034. So percentage = 2424 / 7034 * 100. Compute. 2424/7034 = 0.3446... = 34.46%. Need answer value. Evidence: 2,424 | Cable distribution system; 7,034 | Total. Program divide(2424,7034) maybe multiply by 100? The question asks percentage, so answer 34.46% or 34.5. We'll provide value.",
+ "raw_content": "<evidence>\n2,424 | Cable distribution system\n7,034 | Total\n</evidence>\n<program>multiply(divide(2424, 7034), 100)</program>\n<answer>34.46%</answer>",
+ "usage": {
+  "prompt_tokens": 135090,
+  "completion_tokens": 211,
+  "total_tokens": 135301,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 131328
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.46,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "2,424",
+   "element": "Cable distribution system",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "7,034",
+   "element": "Total",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "multiply(divide(2424, 7034), 100)",
+ "answer_model": "34.46%",
+ "program_value": 34.46118851293716,
+ "docfinqa_row": 115
+}

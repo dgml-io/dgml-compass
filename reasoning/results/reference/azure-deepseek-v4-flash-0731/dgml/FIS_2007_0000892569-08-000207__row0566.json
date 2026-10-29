@@ -1,0 +1,53 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0566",
+ "format": "dgml",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what is the net change in unrecognized tax benefits during 2007?",
+ "gold": "11918",
+ "finqa_id": "FIS/2007/page_91.pdf-1",
+ "source_page": "page_91",
+ "ticker": "FIS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml/FIS_2007_0000892569-08-000207.dgml.xml",
+ "doc_chars": 680888,
+ "prompt_chars": 681041,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 680888,
+ "original_chars": 680888,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 160676,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 230,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "11,918",
+ "reasoning": "The question asks for the net change in unrecognized tax benefits during 2007.\n\nFrom the document, in the Income Taxes section (Note 15), there is a reconciliation of unrecognized tax benefits:\n\n\"Amounts of unrecognized tax benefits at January 1, 2007: $11,825\"\n\"Decreases as a result of tax positions taken in a prior period: (3,749)\"\n\"Increases as a result of tax positions taken in a prior period: 15,667\"\n\"Amount of unrecognized tax benefit at December 31, 2007: $23,743\"\n\nNet change = 23,743 - 11,825 = 11,918.\n\nAlternatively, sum of changes: -3,749 + 15,667 = 11,918.\n\nSo the net change is $11,918 thousand, or $11.918 million. The question asks for the net change, so answer 11,918 (in thousands) or 11.918 million. The document uses thousands, so I'll provide 11,918.",
+ "raw_content": "<answer>11,918</answer>",
+ "usage": {
+  "prompt_tokens": 160819,
+  "completion_tokens": 230,
+  "total_tokens": 161049,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 160768
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.29,
+ "answer_tag_found": true,
+ "docfinqa_row": 566
+}

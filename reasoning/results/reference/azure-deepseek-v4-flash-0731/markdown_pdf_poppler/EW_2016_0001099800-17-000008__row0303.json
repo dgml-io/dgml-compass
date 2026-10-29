@@ -1,0 +1,53 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0303",
+ "format": "markdown_pdf_poppler",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what is the percentage difference in the fair value per share between 2014 and 2015?",
+ "gold": "54%",
+ "finqa_id": "EW/2016/page_94.pdf-2",
+ "source_page": "page_94",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf_poppler/EW_2016_0001099800-17-000008.md",
+ "doc_chars": 414583,
+ "prompt_chars": 414756,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 414583,
+ "original_chars": 414583,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 71165,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 610,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "54.3%",
+ "reasoning": "We need to find fair value per share for 2014 and 2015. The document mentions \"Fair value, per share\" for option awards and ESPP. For option awards: 2014: $11.75, 2015: $18.13. For ESPP: 2014: $8.59, 2015: $15.59. The question says \"the fair value per share\" without specifying which. Likely refers to option awards? Or maybe the stock price? But the context is about fair value per share in the stock-based compensation section. The question asks \"percentage difference in the fair value per share between 2014 and 2015\". Could be either. But typically in such documents, they might refer to the fair value of options. However, the question is ambiguous. Let's check if there is any other fair value per share. The document also has market price of common stock, but that's not \"fair value per share\". The phrase \"fair value per share\" appears in the option awards table and ESPP table. The question says \"the fair value per share\" singular. Possibly they mean the option award fair value. But we need to compute percentage difference. Let's compute for option awards: (18.13 - 11.75)/11.75 * 100 = 6.38/11.75 = 0.54298... = 54.3% increase. For ESPP: (15.59-8.59)/8.59 = 7.00/8.59 = 0.8149 = 81.5% increase. Which one is intended? The question says \"the fair value per share\" without specifying. In the document, there are two tables. Perhaps the question expects the one for options? Or maybe they refer to the fair value of the company's stock? But that's not called fair value per share. The document also has \"Fair value, per share\" in the option awards table. I think it's that. But to be safe, we could check if there is any other mention. The question might be from a financial analysis context. Since the document is a 10-K, they might ask about the fair value of stock options. I'll go with option awards. Compute percentage difference: (18.13 - 11.75) / 11.75 = 6.38 / 11.75 = 0.54298... = 54.3% (rounded). So answer 54.3% or 54.3? The question asks \"percentage difference\" so we give the number. I'll put 54.3% inside tags. But let's double-check if they want the difference as a percentage of the earlier value. Yes. So answer: 54.3% (or 54.3). I'll put 54.3% inside.",
+ "raw_content": "<answer>54.3%</answer>",
+ "usage": {
+  "prompt_tokens": 71314,
+  "completion_tokens": 610,
+  "total_tokens": 71924,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 71168
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.44,
+ "answer_tag_found": true,
+ "docfinqa_row": 303
+}

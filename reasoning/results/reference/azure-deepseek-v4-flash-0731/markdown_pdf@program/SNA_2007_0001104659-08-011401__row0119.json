@@ -1,0 +1,78 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0119",
+ "format": "markdown_pdf",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what was the percentage change in the minority interest from 2005 to 2006",
+ "gold": "-32.4%",
+ "finqa_id": "SNA/2007/page_69.pdf-3",
+ "source_page": "page_69",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf/SNA_2007_0001104659-08-011401.md",
+ "doc_chars": 330376,
+ "prompt_chars": 330538,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 330376,
+ "original_chars": 330376,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 80490,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "stop",
+   "completion_tokens": 1241,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 1,
+ "ok": true,
+ "answer": "5.714286",
+ "reasoning": "We need percentage change in minority interest from 2005 to 2006. The line \"Minority interests and equity earnings (loss), net of tax\" appears in statements: 2005: (1.4), 2006: (3.7). But that line includes minority interests and equity earnings. The question says \"minority interest\" specifically. There is a breakdown in Note 1: Minority interests and equity earnings (loss) table: 2005 minority interests (3.5), equity earnings 2.1, total (1.4). 2006 minority interests (3.7), equity earnings 0, total (3.7). So minority interest (the component) from 2005 to 2006: from (3.5) to (3.7). Percentage change: (3.7 - 3.5)/3.5 = 0.2/3.5 = 5.714% increase (in magnitude). But since negative, percentage change? Typically percentage change = (new - old)/|old| *100 = ( -3.7 - (-3.5) ) / 3.5 = -0.2/3.5 = -5.714%? Actually -3.7 is more negative, so change is -0.2, relative to -3.5 gives +5.7%? Let's compute: ( -3.7 - (-3.5) ) / (-3.5) = (-0.2)/(-3.5) = 0.05714 = 5.71%. So percentage change is 5.7% increase in the negative amount. The question likely expects the percentage change in the value, maybe 5.7%. But careful: The line item \"Minority interests and equity earnings (loss), net of tax\" is not pure minority interest. The question says \"minority interest\" - likely refers to that line? In the financial statements, the line is \"Minority interests and equity earnings (loss), net of tax\". But the question says \"minority interest\" singular. The document has a breakdown in Note 1. The question might be asking for the change in that line item from 2005 to 2006. The line item values: 2005 (1.4), 2006 (3.7). Percentage change = (3.7 - 1.4)/1.4 = 2.3/1.4 = 164.3% increase. But that includes equity earnings. The question specifically says \"minority interest\" not \"minority interests and equity earnings\". So we should use the minority interests component from Note 1: 2005 (3.5), 2006 (3.7). Percentage change = (3.7 - 3.5)/3.5 = 0.2/3.5 = 5.714% increase (in magnitude). Since both negative, the change in value is -0.2, percentage change relative to -3.5 is +5.7% (if using absolute value) or -5.7% if using signed? Typically percentage change = (new - old)/|old| *100 = (-3.7 - (-3.5))/3.5 = -0.2/3.5 = -5.71%. But that would be a decrease? Actually -3.7 is more negative, so the minority interest expense increased (more negative). The percentage change in the expense amount is 5.7% increase. The question likely expects a positive number. Let's see: \"percentage change in the minority interest from 2005 to 2006\" - if minority interest is an expense (negative), the change from -3.5 to -3.7 is an increase of 0.2, which is 5.7% of 3.5. So answer 5.7% or 5.71%. We'll compute exactly: 0.2/3.5 = 0.057142857 = 5.7142857%. So answer 5.7% (or 5.71%). We'll provide evidence: minority interests 2005: (3.5) from Note 1 table; 2006: (3.7). Program: divide(subtract(3.7, 3.5), 3.5) * 100? But program expects nested calls. We can do multiply(divide(subtract(3.7, 3.5), 3.5), 100). But figures as printed are negative? The table shows (3.5) and (3.7) as negative. We'll use absolute values? The program should use figures as printed? The instruction: \"value is the figure exactly as printed\". So we use -3.5 and -3.7. Then subtract(-3.7, -3.5) = -0.2. divide(-0.2, -3.5) = 0.05714. multiply by 100 = 5.714. So program: multiply(divide(subtract(-3.7, -3.5), -3.5), 100). That yields 5.714. Good.\n\nEvidence: -3.5 | Minority interests (Note 1 table) ; -3.7 | Minority interests (Note 1 table). Also maybe the line item? We'll cite those.\n\nFinal answer inside <answer>5.7%</answer> or 5.71%. We'll put 5.7%.",
+ "raw_content": "<evidence>\n-3.5 | Minority interests (Note 1 table)\n-3.7 | Minority interests (Note 1 table)\n</evidence>\n<program>\nmultiply(divide(subtract(-3.7, -3.5), -3.5), 100)\n</program>\n<answer>5.7%</answer>",
+ "usage": {
+  "prompt_tokens": 80795,
+  "completion_tokens": 1241,
+  "total_tokens": 82036,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 12.42,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "3.5",
+   "element": "Minority interests (Note 1 table)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "3.7",
+   "element": "Minority interests (Note 1 table)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(-3.7, -3.5), -3.5), 100)",
+ "answer_model": "5.7%",
+ "program_value": 5.71428571428572,
+ "docfinqa_row": 119
+}

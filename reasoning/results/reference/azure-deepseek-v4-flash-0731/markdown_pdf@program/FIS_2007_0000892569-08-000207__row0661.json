@@ -1,0 +1,73 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0661",
+ "format": "markdown_pdf",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what percentage of total future minimum operating lease payments for leases with remaining terms greater than one year are due in 2009?",
+ "gold": "25%",
+ "finqa_id": "FIS/2007/page_94.pdf-1",
+ "source_page": "page_94",
+ "ticker": "FIS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf/FIS_2007_0000892569-08-000207.md",
+ "doc_chars": 370864,
+ "prompt_chars": 371088,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 370864,
+ "original_chars": 370864,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 86409,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 480,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "25.321437",
+ "reasoning": "We need to find future minimum operating lease payments for leases with remaining terms greater than one year. In the document, there is a table in Note 16 (Commitments and Contingencies) under Leases: Future minimum operating lease payments for leases with remaining terms greater than one year for each of the years in the five years ending December 31, 2012, and thereafter in the aggregate, are as follows (in thousands):\n\n2008: 83,382\n2009: 63,060\n2010: 35,269\n2011: 21,598\n2012: 14,860\nThereafter: 30,869\nTotal: $249,038\n\nQuestion: what percentage of total future minimum operating lease payments are due in 2009? So 63,060 / 249,038 * 100. Compute: 63060 / 249038 = 0.2532... so 25.32%. Let's compute precisely: 249038 * 0.25 = 62259.5, difference 800.5, 800.5/249038=0.003214, so 0.253214, so 25.32%. We'll give answer as percentage. The question asks \"what percentage\" so answer with number, likely 25.3% or 25.32%. We'll provide value.\n\nEvidence: 63,060 | Future minimum operating lease payments 2009; 249,038 | Total future minimum operating lease payments.\n\nProgram: divide(63060, 249038) * 100? But program expects nested calls. We can do multiply(divide(63060, 249038), 100). But the instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for percentage, so we can give 25.32 or 25.3. We'll give 25.32.\n\nWe'll list evidence.",
+ "raw_content": "<evidence>\n63,060 | Future minimum operating lease payments 2009\n249,038 | Total future minimum operating lease payments\n</evidence>\n\n<program>\nmultiply(divide(63060, 249038), 100)\n</program>\n\n<answer>25.32</answer>",
+ "usage": {
+  "prompt_tokens": 86721,
+  "completion_tokens": 480,
+  "total_tokens": 87201,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 86528
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.16,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "63,060",
+   "element": "Future minimum operating lease payments 2009",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "249,038",
+   "element": "Total future minimum operating lease payments",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "multiply(divide(63060, 249038), 100)",
+ "answer_model": "25.32",
+ "program_value": 25.321436889149446,
+ "docfinqa_row": 661
+}

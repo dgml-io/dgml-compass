@@ -1,0 +1,72 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0873",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "considering the years 2011-2012 , what is the variation observed in the lease obligations?",
+ "gold": "24",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "IP_2009_0001193125-10-040916.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/InvestmentActivities/ManagementDiscussion/ManagementDiscussion/ContractualObligationsSchedule",
+  "/chunk/InvestmentActivities/ManagementDiscussion/ManagementDiscussion/ContractualObligations",
+  "/chunk/CommitmentsAndContingencies"
+ ],
+ "r1_reasoning_chars": 1097,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 33546,
+  "completion_tokens": 299,
+  "total_tokens": 33845,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/InvestmentActivities/ManagementDiscussion/ManagementDiscussion/ContractualObligationsSchedule",
+  "/chunk/InvestmentActivities/ManagementDiscussion/ManagementDiscussion/ContractualObligations",
+  "/chunk/CommitmentsAndContingencies"
+ ],
+ "content_chars": 128651,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "-24",
+ "reasoning": "We need to find lease obligations for 2011 and 2012. The table in the first region shows \"Lease obligations\" row with amounts: 2010: 177, 2011: 148, 2012: 124, 2013: 96, 2014: 79, Thereafter: 184. So variation from 2011 to 2012 is 124 - 148 = -24. The question asks \"considering the years 2011-2012, what is the variation observed in the lease obligations?\" That likely means the change from 2011 to 2012. So answer -24 (or decrease of 24). Need to provide evidence and program. Use figures as printed: 148 and 124. Program: subtract(124, 148) = -24.",
+ "raw_content": "<evidence>148 | ContractualObligationAmount (Lease obligations, 2011)\n124 | ContractualObligationAmount (Lease obligations, 2012)\n</evidence>\n<program>subtract(124, 148)</program>\n<answer>-24</answer>",
+ "r2_usage": {
+  "prompt_tokens": 32353,
+  "completion_tokens": 234,
+  "total_tokens": 32587,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "148",
+   "element": "ContractualObligationAmount (Lease obligations, 2011)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "124",
+   "element": "ContractualObligationAmount (Lease obligations, 2012)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(124, 148)",
+ "answer_model": "-24",
+ "program_value": -24.0,
+ "elapsed_s": 6.36,
+ "outline_source": "IP_2009_0001193125-10-040916.outline.txt",
+ "outline_chars": 127828
+}

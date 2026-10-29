@@ -1,0 +1,81 @@
+{
+ "id": "UPS_2007_0001193125-08-043891__row0107",
+ "key": "UPS_2007_0001193125-08-043891",
+ "question": "what is the total cash inflow from the stock purchases of employees in 2007 , ( in millions ) ?",
+ "gold": "115.6",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "UPS_2007_0001193125-08-043891.outline.txt",
+ "doc_source": "UPS_2007_0001193125-08-043891.dgml.xml",
+ "outline_chars": 77634,
+ "predicted_xpaths": [
+  "/chunk/StockBasedCompensation/StockOptionTerm/NotesToFinancial/EmployeeStockPurchasePlan"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 13410,
+ "r1_usage": {
+  "prompt_tokens": 19643,
+  "completion_tokens": 3336,
+  "total_tokens": 22979,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/StockBasedCompensation/StockOptionTerm/NotesToFinancial/EmployeeStockPurchasePlan"
+ ],
+ "content_chars": 3023,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "115.56",
+ "reasoning": "We need total cash inflow from stock purchases of employees in 2007. The document says employees purchased 1.8 million shares at average price $64.20 per share during 2007. So cash inflow = 1.8 * 64.20 = 115.56 million. Need answer in millions, so 115.56.",
+ "raw_content": "<evidence>1.8 | /chunk/StockBasedCompensation/StockOptionTerm/NotesToFinancial/EmployeeStockPurchasePlan/EmployeeStockPurchasePlan/ShareIssuanceAmount\n$64.20 | /chunk/StockBasedCompensation/StockOptionTerm/NotesToFinancial/EmployeeStockPurchasePlan/EmployeeStockPurchasePlan/StockOptionTerm</evidence>\n<program>multiply(1.8, 64.20)</program>\n<answer>115.56</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1126,
+  "completion_tokens": 177,
+  "total_tokens": 1303,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 1126,
+   "completion_tokens": 177,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "1.8",
+   "element": "chunk/StockBasedCompensation/StockOptionTerm/NotesToFinancial/EmployeeStockPurchasePlan/EmployeeStockPurchasePlan/ShareIssuanceAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$64.20",
+   "element": "chunk/StockBasedCompensation/StockOptionTerm/NotesToFinancial/EmployeeStockPurchasePlan/EmployeeStockPurchasePlan/StockOptionTerm",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(1.8, 64.20)",
+ "answer_model": "115.56",
+ "program_value": 115.56,
+ "elapsed_s": 11.91
+}

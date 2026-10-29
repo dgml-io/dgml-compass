@@ -1,0 +1,138 @@
+{
+ "id": "IP_2007_0001193125-08-042850__row0722",
+ "key": "IP_2007_0001193125-08-042850",
+ "question": "at december 31 , 2007 , what was the percent of the total future minimum commitments under existing non-cancelable operat- ing leases for purchase obligations",
+ "gold": "72.1%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "IP_2007_0001193125-08-042850.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/CommitmentsAndContingentLiabilities/table",
+  "/chunk/CommitmentsAndContingentLiabilities/FutureMinimumCommitments",
+  "/chunk/CommitmentsAndContingentLiabilities",
+  "/chunk/CommitmentsAndContingentLiabilities/table/ContractualObligationsSchedule",
+  "/chunk/CommitmentsAndContingentLiabilities/table/ContractualObligationsTotal"
+ ],
+ "r1_reasoning_chars": 4391,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 35305,
+  "completion_tokens": 1055,
+  "total_tokens": 36360,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/CommitmentsAndContingentLiabilities/table",
+  "/chunk/CommitmentsAndContingentLiabilities/FutureMinimumCommitments",
+  "/chunk/CommitmentsAndContingentLiabilities",
+  "/chunk/CommitmentsAndContingentLiabilities/table/ContractualObligationsSchedule",
+  "/chunk/CommitmentsAndContingentLiabilities/table/ContractualObligationsTotal"
+ ],
+ "content_chars": 208611,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "88.153449",
+ "reasoning": "We need answer percent of total future minimum commitments under existing non-cancelable operating leases for purchase obligations. Need parse: \"total future minimum commitments under existing non-cancelable operating leases and purchase obligations\" table has lease obligations and purchase obligations. Question asks \"percent of the total future minimum commitments ... for purchase obligations\" i.e., purchase obligations as percentage of total (lease + purchase). Need compute total purchase obligations sum and total commitments sum, then percentage.\n\nFrom table:\nLease obligations: 136, 116, 101, 84, 67, 92 sum = let's compute: 136+116=252, +101=353, +84=437, +67=504, +92=596.\nPurchase obligations: 1,953, 294, 261, 235, 212, 1,480 sum = 1,953+294=2,247, +261=2,508, +235=2,743, +212=2,955, +1,480=4,435.\nTotal row: 2,089, 410, 362, 319, 279, 1,572 sum = 2,089+410=2,499, +362=2,861, +319=3,180, +279=3,459, +1,572=5,031. Check lease+purchase = 596+4,435=5,031. So purchase obligations percent = 4,435 / 5,031 * 100 = compute. 4,435 / 5,031 = 0.8815... Let's compute precisely: 5,031 * 0.88 = 4,427.28, remainder 7.72, /5031=0.001535, so 0.881535, 88.1535%. So answer 88.15% maybe. Need evidence figures. Use values as printed. Program: divide(4435, 5031) then multiply by 100? The question asks percent, so answer numeric percent. Program can be multiply(divide(4435, 5031), 100). But need use figures as printed: purchase obligations sum? We need list each figure used. We can list all purchase obligation amounts and total amounts? Or use total row? The total row is printed as Total with values. We can use total sum from row. But program must be exact. We can compute sum using add calls. Need evidence list every figure used. We'll use purchase obligation amounts and total amounts? Or use total row values. The question asks percent of total future minimum commitments for purchase obligations. We can use purchase obligations sum and total sum. We need sum purchase obligations: add(1953, add(294, add(261, add(235, add(212, 1480))))). Total: add(2089, add(410, add(362, add(319, add(279, 1572))))). Then divide and multiply. Evidence: list each value with element name. Element names: PurchaseObligationAmount td values, ContractualObligationsTotal td values. We'll list.\n\nNeed be careful: The question wording \"percent of the total future minimum commitments under existing non-cancelable operating leases for purchase obligations\" could be interpreted as purchase obligations as percent of total (lease + purchase). Yes.\n\nLet's produce final with evidence and program.",
+ "raw_content": "<evidence>\n1,953 | PurchaseObligationAmount\n294 | PurchaseObligationAmount\n261 | PurchaseObligationAmount\n235 | PurchaseObligationAmount\n212 | PurchaseObligationAmount\n1,480 | PurchaseObligationAmount\n2,089 | ContractualObligationsTotal\n410 | ContractualObligationsTotal\n362 | ContractualObligationsTotal\n319 | ContractualObligationsTotal\n279 | ContractualObligationsTotal\n1,572 | ContractualObligationsTotal\n</evidence>\n\n<program>\nmultiply(divide(add(1953, add(294, add(261, add(235, add(212, 1480))))), add(2089, add(410, add(362, add(319, add(279, 1572)))))), 100)\n</program>\n\n<answer>88.15</answer>",
+ "r2_usage": {
+  "prompt_tokens": 49305,
+  "completion_tokens": 902,
+  "total_tokens": 50207,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,953",
+   "element": "PurchaseObligationAmount",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "294",
+   "element": "PurchaseObligationAmount",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "261",
+   "element": "PurchaseObligationAmount",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "235",
+   "element": "PurchaseObligationAmount",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "212",
+   "element": "PurchaseObligationAmount",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1,480",
+   "element": "PurchaseObligationAmount",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "2,089",
+   "element": "ContractualObligationsTotal",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "410",
+   "element": "ContractualObligationsTotal",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "362",
+   "element": "ContractualObligationsTotal",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "319",
+   "element": "ContractualObligationsTotal",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "279",
+   "element": "ContractualObligationsTotal",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1,572",
+   "element": "ContractualObligationsTotal",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(add(1953, add(294, add(261, add(235, add(212, 1480))))), add(2089, add(410, add(362, add(319, add(279, 1572)))))), 100)",
+ "answer_model": "88.15",
+ "program_value": 88.1534486185649,
+ "elapsed_s": 16.16,
+ "outline_source": "IP_2007_0001193125-08-042850.outline.txt",
+ "outline_chars": 139969
+}

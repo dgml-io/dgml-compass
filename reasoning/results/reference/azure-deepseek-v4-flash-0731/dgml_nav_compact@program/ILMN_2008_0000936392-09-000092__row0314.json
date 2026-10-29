@@ -1,0 +1,72 @@
+{
+ "id": "ILMN_2008_0000936392-09-000092__row0314",
+ "key": "ILMN_2008_0000936392-09-000092",
+ "question": "what was the change in millions of company contributions to the employee benefit plans retirement plan between 2007 and 2008?",
+ "gold": "1.2",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "ILMN_2008_0000936392-09-000092.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/section/AccountingPolicyDescription/RetirementPlan",
+  "/chunk/section/AccountingPolicyDescription/RetirementPlan/RetirementPlanContributionPolicy/MatchingContributionAmount"
+ ],
+ "r1_reasoning_chars": 3865,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 19310,
+  "completion_tokens": 938,
+  "total_tokens": 20248,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/section/AccountingPolicyDescription/RetirementPlan",
+  "/chunk/section/AccountingPolicyDescription/RetirementPlan/RetirementPlanContributionPolicy/MatchingContributionAmount"
+ ],
+ "content_chars": 15114,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "1.2",
+ "reasoning": "We need answer change in millions company contributions to employee benefit plans retirement plan between 2007 and 2008. From first region: matching contributions $2.6 million (2008), $1.4 million (2007), $0.4 million (2006). Change = 2.6 - 1.4 = 1.2 million. Need answer. Provide evidence figures.",
+ "raw_content": "<evidence>$2.6 million | MatchingContributionAmount (2008)\n$1.4 million | MatchingContributionAmount (2007)</evidence>\n<program>subtract(2.6, 1.4)</program>\n<answer>1.2</answer>",
+ "r2_usage": {
+  "prompt_tokens": 3890,
+  "completion_tokens": 141,
+  "total_tokens": 4031,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$2.6 million",
+   "element": "MatchingContributionAmount (2008)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$1.4 million",
+   "element": "MatchingContributionAmount (2007)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(2.6, 1.4)",
+ "answer_model": "1.2",
+ "program_value": 1.2000000000000002,
+ "elapsed_s": 6.65,
+ "outline_source": "ILMN_2008_0000936392-09-000092.outline.txt",
+ "outline_chars": 79733
+}

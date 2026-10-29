@@ -1,0 +1,50 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0270",
+ "format": "markdown_pdf_poppler",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "what was the percentage rent increase between 2007 and 2008?",
+ "gold": "22%",
+ "finqa_id": "IP/2009/page_84.pdf-1",
+ "source_page": "page_84",
+ "ticker": "IP",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/markdown_pdf_poppler/IP_2009_0001193125-10-040916.md",
+ "doc_chars": 625466,
+ "prompt_chars": 625615,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 625466,
+ "original_chars": 625466,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 105142,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 130,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "22.0%",
+ "reasoning": "We need answer percentage rent increase between 2007 and 2008. Document has rent expense: \"Rent expense was $216 million, $205 million and $168 million for 2009, 2008 and 2007, respectively.\" So 2008 rent 205, 2007 168. Increase = (205-168)/168 = 37/168 = 0.220238... = 22.0%. Question asks \"percentage rent increase between 2007 and 2008\" likely 22.0%. Need final answer only value.",
+ "raw_content": "<answer>22.0%</answer>",
+ "usage": {
+  "prompt_tokens": 105286,
+  "completion_tokens": 130,
+  "total_tokens": 105416,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.49,
+ "answer_tag_found": true,
+ "docfinqa_row": 270
+}

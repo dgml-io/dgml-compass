@@ -1,0 +1,56 @@
+{
+ "id": "MRO_2009_0001193125-10-042898__row0597",
+ "format": "dgml",
+ "key": "MRO_2009_0001193125-10-042898",
+ "question": "by what percentage did the average henry hub natural gas benchmark decrease from 2007 to 2009?",
+ "gold": "-41.8%",
+ "finqa_id": "MRO/2009/page_56.pdf-3",
+ "source_page": "page_56",
+ "ticker": "MRO",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/dgml/MRO_2009_0001193125-10-042898.dgml.xml",
+ "doc_chars": 905450,
+ "prompt_chars": 905633,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": true,
+ "truncation": "head",
+ "kept_chars": 905340,
+ "original_chars": 1110151,
+ "kept_fraction": 0.8155,
+ "est_doc_tokens": 264731,
+ "est_kept_tokens": 212186,
+ "budget_tokens": 240000,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 150,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "41.8%",
+ "reasoning": "The question asks for the percentage decrease in the average Henry Hub natural gas benchmark from 2007 to 2009.\n\nFrom the document, in the \"Benchmark Price\" table:\n- Henry Hub natural gas (Dollars per mcf): 2009: $3.99, 2008: $9.04, 2007: $6.86\n\nSo from 2007 to 2009: (3.99 - 6.86) / 6.86 = -2.87 / 6.86 = -0.4184... = -41.84% decrease.\n\nSo the percentage decrease is approximately 41.8%.",
+ "raw_content": "<answer>41.8%</answer>",
+ "usage": {
+  "prompt_tokens": 212358,
+  "completion_tokens": 150,
+  "total_tokens": 212508,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 212224
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.66,
+ "answer_tag_found": true,
+ "docfinqa_row": 597
+}

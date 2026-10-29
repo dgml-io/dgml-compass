@@ -1,0 +1,74 @@
+{
+ "id": "NCLH_2018_0001144204-19-010508__row0905",
+ "format": "markdown_pdf_poppler",
+ "key": "NCLH_2018_0001144204-19-010508",
+ "question": "what percent of long-term debt was paid off in 2021?",
+ "gold": "38.6%",
+ "finqa_id": "NCLH/2018/page_97.pdf-3",
+ "source_page": "page_97",
+ "ticker": "NCLH",
+ "fiscal_year": "2018",
+ "source_file": "data/docs/markdown_pdf_poppler/NCLH_2018_0001144204-19-010508.md",
+ "doc_chars": 441169,
+ "prompt_chars": 441310,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 441169,
+ "original_chars": 441169,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 85512,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 487,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "38.57296",
+ "reasoning": "We need answer question: \"what percent of long-term debt was paid off in 2021?\" Need find figures. Document has long-term debt scheduled principal repayments as of Dec 31 2018. Table: Year 2021 amount $2,549,621 (in thousands). Total long-term debt? The scheduled principal repayments total $6,609,866. But question \"what percent of long-term debt was paid off in 2021?\" Likely percentage of total long-term debt that matures in 2021. Need compute 2,549,621 / 6,609,866 * 100. Also note long-term debt including current portion as of Dec 31 2018 was $6,492,091 in balance sheet? But scheduled repayments table total $6,609,866 includes interest? Actually table \"scheduled principal repayments on long-term debt including capital lease obligations\" total $6,609,866. The balance sheet long-term debt including current portion is $6,492,091. Which denominator? Question \"long-term debt\" likely from table. Need use scheduled principal repayments. Compute percent: 2,549,621 / 6,609,866 = 0.3857... = 38.57%. Let's calculate precisely. 6,609,866 * 0.385 = 2,544,798. Difference 4,823 / 6,609,866 = 0.00073. So 38.573%. Answer maybe 38.6%. Need evidence: value 2,549,621 | scheduled principal repayments 2021; 6,609,866 | Total scheduled principal repayments. Program divide(2549621, 6609866) * 100? Program must be exact nested calls. Use multiply(divide(2549621, 6609866), 100). But note figures as printed include commas? Use numbers. Final answer inside <answer>38.6%</answer> maybe. Need include evidence lines.",
+ "raw_content": "<evidence>\n2,549,621 | Scheduled principal repayments 2021\n6,609,866 | Total scheduled principal repayments\n</evidence>\n\n<program>multiply(divide(2549621, 6609866), 100)</program>\n\n<answer>38.6%</answer>",
+ "usage": {
+  "prompt_tokens": 85814,
+  "completion_tokens": 487,
+  "total_tokens": 86301,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.06,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "2,549,621",
+   "element": "Scheduled principal repayments 2021",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "6,609,866",
+   "element": "Total scheduled principal repayments",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(2549621, 6609866), 100)",
+ "answer_model": "38.6%",
+ "program_value": 38.57296048059068,
+ "docfinqa_row": 905
+}

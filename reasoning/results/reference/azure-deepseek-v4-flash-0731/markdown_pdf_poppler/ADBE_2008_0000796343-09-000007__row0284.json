@@ -1,0 +1,53 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0284",
+ "format": "markdown_pdf_poppler",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "what is the yearly amortization rate for the purchased technology?",
+ "gold": "25%",
+ "finqa_id": "ADBE/2008/page_74.pdf-1",
+ "source_page": "page_74",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_poppler/ADBE_2008_0000796343-09-000007.md",
+ "doc_chars": 561420,
+ "prompt_chars": 561575,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 561420,
+ "original_chars": 561420,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 96795,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 216,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "25%",
+ "reasoning": "We need answer: yearly amortization rate for purchased technology. Need find in document. Purchased technology amortization. Note 5: purchased and other intangibles. Purchased technology cost 411,408, accumulated amortization 338,608, net 72,800. Amortization expense for each next five years: 2009 56,230, 2010 8,244, 2011 4,938, 2012 3,388, 2013 0, thereafter 0. But \"yearly amortization rate\" maybe weighted average useful life? In Note 1: intangible assets amortized over estimated useful lives 1 to 13 years. Purchased technology weighted average useful life 4 years. So yearly amortization rate = 1/4 = 25%? Or maybe straight-line over 4 years. The question: \"what is the yearly amortization rate for the purchased technology?\" Likely 25% per year. Need answer value.",
+ "raw_content": "<answer>25%</answer>",
+ "usage": {
+  "prompt_tokens": 96936,
+  "completion_tokens": 216,
+  "total_tokens": 97152,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 96768
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.73,
+ "answer_tag_found": true,
+ "docfinqa_row": 284
+}

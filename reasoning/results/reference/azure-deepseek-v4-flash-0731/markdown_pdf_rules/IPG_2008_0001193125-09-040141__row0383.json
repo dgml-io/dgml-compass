@@ -1,0 +1,53 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0383",
+ "format": "markdown_pdf_rules",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "what portion of the total estimated future contingent acquisition obligation is due in the 12 months?",
+ "gold": "19.3%",
+ "finqa_id": "IPG/2008/page_93.pdf-1",
+ "source_page": "page_93",
+ "ticker": "IPG",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_rules/IPG_2008_0001193125-09-040141.md",
+ "doc_chars": 363361,
+ "prompt_chars": 363551,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 363361,
+ "original_chars": 363361,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 87507,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 283,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "19.7%",
+ "reasoning": "We need to find the total estimated future contingent acquisition obligation and the portion due in the 12 months (i.e., 2009). From Note 16, there is a table: \"As of December 31, 2008, our estimated future contingent acquisition obligations payable in cash are as follows:\" with columns 2009, 2010, 2011, 2012, 2013, Thereafter, Total. The total is $402.8 million. The 2009 amount is $79.3 million. The question asks \"what portion of the total estimated future contingent acquisition obligation is due in the 12 months?\" That is the ratio 79.3 / 402.8. Compute: 79.3 / 402.8 ≈ 0.1969, so about 19.7%. The question might expect a percentage or a fraction. It says \"what portion\" - likely a percentage. We'll give the value. The answer should be just the value, no explanation. So <answer>19.7%</answer> or maybe 0.197. But the instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what portion\" - so a percentage is appropriate. We'll put 19.7%.",
+ "raw_content": "<answer>19.7%</answer>",
+ "usage": {
+  "prompt_tokens": 87653,
+  "completion_tokens": 283,
+  "total_tokens": 87936,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 87552
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.73,
+ "answer_tag_found": true,
+ "docfinqa_row": 383
+}

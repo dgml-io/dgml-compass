@@ -1,0 +1,53 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0363",
+ "format": "dgml_compact",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "for the vivo acquisition how many of the allowed towers were actually purchased under the final amended purchase agreement?",
+ "gold": "94%",
+ "finqa_id": "AMT/2012/page_118.pdf-4",
+ "source_page": "page_118",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/dgml_compact/AMT_2012_0001193125-13-077821.dgml.txt",
+ "doc_chars": 684819,
+ "prompt_chars": 685031,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 684819,
+ "original_chars": 684819,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 147020,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 387,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1,692",
+ "reasoning": "The question asks: \"for the vivo acquisition how many of the allowed towers were actually purchased under the final amended purchase agreement?\"\n\nI need to find the Vivo acquisition details in the document.\n\nFrom the document, under \"VivoAcquisition\" section:\n\n\"VivoAcquisition: Brazil—Vivo Acquisition—On AgreementDate: March 30, 2012, the Company entered into a definitive agreement to purchase up to 1,500 towers from Vivo S.A. (\"Vivo\"). Pursuant to the agreement, on March 30, 2012, the Company purchased 800 communications sites for an aggregate purchase price of AcquisitionPurchasePrice: $151.7 million. On June 30, 2012, the Company purchased the remaining 700 communications sites for an aggregate purchase price of AcquisitionPurchasePrice: $126.3 million, subject to post-closing adjustments. In addition, the Company and Vivo amended the asset purchase agreement to allow for the acquisition of up to an additional 300 communications sites by the Company, subject to regulatory approval. On August 31, 2012, the Company purchased an additional 192 communications sites from Vivo for an aggregate purchase price of AcquisitionPurchasePrice: $32.7 million, subject to post-closing adjustments.\"\n\nSo the original agreement was up to 1,500 towers. They purchased 800 + 700 = 1,500. Then they amended to allow up to an additional 300. They purchased 192 of those additional 300.\n\nThe question: \"how many of the allowed towers were actually purchased under the final amended purchase agreement?\"\n\nThe final amended purchase agreement allowed up to 1,500 + 300 = 1,800 towers. They purchased 800 + 700 + 192 = 1,692 towers.\n\nSo the answer is 1,692.",
+ "raw_content": "<answer>1,692</answer>",
+ "usage": {
+  "prompt_tokens": 147168,
+  "completion_tokens": 387,
+  "total_tokens": 147555,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 146944
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.49,
+ "answer_tag_found": true,
+ "docfinqa_row": 363
+}

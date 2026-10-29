@@ -1,0 +1,86 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0552",
+ "format": "markdown_pdf_plumber",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "in 2014 what was the ratio of the estimated future benefit payments due in 2015 compared to the amount after 2020",
+ "gold": "0.15",
+ "finqa_id": "LMT/2014/page_91.pdf-4",
+ "source_page": "page_91",
+ "ticker": "LMT",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf_plumber/LMT_2014_0001193125-15-038681.md",
+ "doc_chars": 462533,
+ "prompt_chars": 462735,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 462533,
+ "original_chars": 462533,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 103588,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1057,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.156401",
+ "reasoning": "We need answer ratio of estimated future benefit payments due in 2015 compared to amount after 2020. Need identify which benefit payments? The question says \"estimated future benefit payments\" likely from Note 9 table: Qualified defined benefit pension plans and retiree medical and life insurance plans. The table shows 2015, 2016, 2017, 2018, 2019, 2020-2024. \"amount after 2020\" likely the 2020-2024 column? Or \"after 2020\" could mean beyond 2020? The table has \"2020 - 2024\" as last column. The question: \"in 2014 what was the ratio of the estimated future benefit payments due in 2015 compared to the amount after 2020\" - likely compare 2015 payments to the amount in 2020-2024 (which is after 2020? Actually 2020-2024 includes 2020, so \"after 2020\" might mean the column labeled \"2020 - 2024\" which is the period after 2020? But it includes 2020. However the table header says \"2020 - 2024\" meaning years 2020 through 2024. The question says \"after 2020\" could be interpreted as the amount in the \"2020 - 2024\" column. Need see if there is any other \"after 5 years\" in contractual commitments? But the question specifically \"estimated future benefit payments\" - that phrase appears in Note 9: \"The following table presents estimated future benefit payments, which reflect expected future employee service, as of December 31, 2014 (in millions): 2015 2016 2017 2018 2019 2020 - 2024. Qualified defined benefit pension plans $2,070 $2,150 $2,230 $2,320 $2,420 $13,430. Retiree medical and life insurance plans 190 200 200 210 210 1,020.\" So total estimated future benefit payments for 2015 = 2,070 + 190 = 2,260. Amount after 2020? The column \"2020 - 2024\" total = 13,430 + 1,020 = 14,450. Ratio = 2,260 / 14,450 = simplify. Compute: 2260/14450 = divide by 10 = 226/1445. 226/1445 ≈ 0.1564. Or maybe they want ratio as fraction? The question: \"what was the ratio of the estimated future benefit payments due in 2015 compared to the amount after 2020\" - likely ratio = 2015 amount / after 2020 amount. So answer 0.1564 or 226/1445. Need provide exact value. Let's compute precisely: 2260 / 14450 = 0.156401384... Let's do division: 14450 * 0.1564 = 2260. - 14450*0.1564 = 14450*0.15=2167.5, plus 14450*0.0064=92.48, total 2259.98, so 0.1564 approx. Exact fraction 226/1445. Could also be 2,260:14,450. The question asks \"ratio\" so answer as decimal or fraction. We'll give decimal maybe 0.1564. But need ensure \"after 2020\" might mean the amount in the \"2020 - 2024\" column? The table says \"2020 - 2024\" which is the period after 2020? Actually it includes 2020. But the question says \"after 2020\" - could be interpreted as the amount in the column labeled \"2020 - 2024\" which is the only future period beyond 2019. So yes.\n\nLet's list evidence: 2,070 | Qualified defined benefit pension plans 2015; 190 | Retiree medical and life insurance plans 2015; 13,430 | Qualified defined benefit pension plans 2020-2024; 1,020 | Retiree medical and life insurance plans 2020-2024. Then program: divide(add(2070,190), add(13430,1020)) = divide(2260,14450) = 0.1564. Need answer inside <answer> tags. Also evidence and program.",
+ "raw_content": "<evidence>\n2,070 | Qualified defined benefit pension plans 2015\n190 | Retiree medical and life insurance plans 2015\n13,430 | Qualified defined benefit pension plans 2020-2024\n1,020 | Retiree medical and life insurance plans 2020-2024\n</evidence>\n\n<program>\ndivide(add(2070, 190), add(13430, 1020))\n</program>\n\n<answer>0.1564</answer>",
+ "usage": {
+  "prompt_tokens": 103903,
+  "completion_tokens": 1057,
+  "total_tokens": 104960,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 103680
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.48,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "2,070",
+   "element": "Qualified defined benefit pension plans 2015",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "190",
+   "element": "Retiree medical and life insurance plans 2015",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "13,430",
+   "element": "Qualified defined benefit pension plans 2020-2024",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "1,020",
+   "element": "Retiree medical and life insurance plans 2020-2024",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(add(2070, 190), add(13430, 1020))",
+ "answer_model": "0.1564",
+ "program_value": 0.156401384083045,
+ "docfinqa_row": 552
+}

@@ -1,0 +1,50 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0303",
+ "format": "markdown_pdf_rules",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what is the percentage difference in the fair value per share between 2014 and 2015?",
+ "gold": "54%",
+ "finqa_id": "EW/2016/page_94.pdf-2",
+ "source_page": "page_94",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf_rules/EW_2016_0001099800-17-000008.md",
+ "doc_chars": 314607,
+ "prompt_chars": 314780,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 314607,
+ "original_chars": 314607,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 69815,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 429,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "54.3%",
+ "reasoning": "We need to find fair value per share for 2014 and 2015. The document mentions \"Fair value, per share\" for option awards and ESPP. For option awards: 2016: $31.00, 2015: $18.13, 2014: $11.75. For ESPP: 2016: $22.09, 2015: $15.59, 2014: $8.59. The question asks \"the percentage difference in the fair value per share between 2014 and 2015\". Which fair value? Likely the option awards fair value per share. Or maybe the stock price? But the question says \"fair value per share\" which appears in the option valuation table. It could be ambiguous. The document has \"Fair value, per share\" for options and ESPP. The question likely refers to the option awards fair value per share. Let's compute percentage difference from 2014 to 2015: (18.13 - 11.75)/11.75 = 6.38/11.75 = 0.5430 = 54.3% increase. Or if they mean decrease? Actually it's increase. Alternatively, if they mean the difference as a percentage of 2015? But typically percentage difference is (new - old)/old. So 54.3%. But let's check if there is any other fair value per share. The stock price? The market price high/low? But the question says \"fair value per share\" which is a specific term in the option table. So answer 54.3%. But we need to be careful: the question might be asking for the percentage difference between 2014 and 2015 for the fair value per share of options. I'll compute exactly: (18.13-11.75)/11.75 = 6.38/11.75 = 0.54298... = 54.3% (rounded). So answer 54.3%.",
+ "raw_content": "<answer>54.3%</answer>",
+ "usage": {
+  "prompt_tokens": 69963,
+  "completion_tokens": 429,
+  "total_tokens": 70392,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.74,
+ "answer_tag_found": true,
+ "docfinqa_row": 303
+}

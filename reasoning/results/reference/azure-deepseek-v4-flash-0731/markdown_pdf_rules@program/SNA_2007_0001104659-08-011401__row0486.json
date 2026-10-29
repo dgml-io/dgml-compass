@@ -1,0 +1,98 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0486",
+ "format": "markdown_pdf_rules",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what is the roi in snap-on if the investment was made at the end of 2005 and sold at the end of 2007?",
+ "gold": "34.8%",
+ "finqa_id": "SNA/2007/page_29.pdf-2",
+ "source_page": "page_29",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_rules/SNA_2007_0001104659-08-011401.md",
+ "doc_chars": 336027,
+ "prompt_chars": 336217,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 336027,
+ "original_chars": 336027,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 81193,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.7,
+   "finish_reason": "stop",
+   "completion_tokens": 5541,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 2,
+ "ok": true,
+ "answer": "0.339723",
+ "reasoning": "We need ROI from end of 2005 to end of 2007. Need investment value. The document gives stock prices? Five-year data shows fiscal year-end per share price: 2005 $34.36? Actually table: \"Fiscal year-end per share price\" row: 2007 $48.13, 2006 $47.64, 2005 $37.56? Let's check. The Five-year Data table has columns 2007, 2006, 2005, 2004, 2003. Row \"Fiscal year-end per share price\" values: 48.13, 47.64, 37.56, 34.36, 31.80? Wait the table shows: 2007 $48.13, 2006 $47.64, 2005 $37.56, 2004 $34.36, 2003 $31.80? Actually the table is messy. Let's parse.\n\nThe table \"Five-year Data\" includes rows. The \"Common Share Summary\" section has \"Fiscal year-end per share price\" row. The values appear: 48.13, 47.64, 37.56, 34.36, 31.80? But the table order: after \"Shareholders’ equity per basic share\" row, \"Fiscal year-end per share price\" row. The values listed: 34.36, 31.80, 48.13, 47.64, 37.56? Need to align.\n\nThe table is presented with columns 2007, 2006, 2005, 2004, 2003. The row \"Fiscal year-end per share price\" has values: 48.13, 47.64, 37.56, 34.36, 31.80? Actually the text shows: \"Fiscal year-end per share price\" then numbers: 19.20, 17.37, 22.11, 18.46, 16.65? No that's shareholders' equity per basic share. Let's extract from the table.\n\nIn the document, the Five-year Data table has rows. The \"Common Share Summary\" section:\n\nAverage shares outstanding - diluted 58.3, 58.4, 58.6, 59.2, 58.4\nEarnings per share, continuing operations: Basic 1.37, 1.34, 3.27, 1.68, 1.53? Actually the values are listed in order but the table is garbled. Let's re-read.\n\nThe table after \"Common Share Summary\" lists:\n\nAverage shares outstanding - diluted\nEarnings per share, continuing operations:\nBasic\nDiluted\nNet earnings per share:\nBasic\nDiluted\nCash dividends paid per share\nShareholders’ equity per basic share\nFiscal year-end per share price\n\nThen rows of numbers. The numbers are presented in columns for each year. The text shows:\n\n58.3\n$ 1.37\n1.36\n1.41\n1.40\n1.00\n19.20\n34.36\n\n58.4\n$ 1.34\n1.34\n1.35\n1.35\n1.00\n17.37\n31.80\n\n58.6\n$ 3.27\n3.23\n3.13\n3.09\n1.11\n22.11\n48.13\n\n59.2\n$ 1.68\n1.65\n1.72\n1.69\n1.08\n18.46\n47.64\n\n58.4\n$ 1.53\n1.51\n1.61\n1.59\n1.00\n16.65\n37.56\n\nSo the last row \"Fiscal year-end per share price\" values are: for 2007 $48.13? Wait the order of columns in the table is 2007, 2006, 2005, 2004, 2003. But the numbers are listed in that order? The text shows the rows are grouped by year? Actually the table formatting is messed up. Let's look at the raw text:\n\n\"Average shares outstanding - diluted\nEarnings per share, continuing operations:\nBasic\nDiluted\nNet earnings per share:\nBasic\nDiluted\nCash dividends paid per share\nShareholders’ equity per basic share\nFiscal year-end per share price\"\n\nThen there is a block of numbers. The numbers appear as:\n\n58.3\n$ 1.37\n1.36\n1.41\n1.40\n1.00\n19.20\n34.36\n\n58.4\n$ 1.34\n1.34\n1.35\n1.35\n1.00\n17.37\n31.80\n\n58.6\n$ 3.27\n3.23\n3.13\n3.09\n1.11\n22.11\n48.13\n\n59.2\n$ 1.68\n1.65\n1.72\n1.69\n1.08\n18.46\n47.64\n\n58.4\n$ 1.53\n1.51\n1.61\n1.59\n1.00\n16.65\n37.56\n\nSo each block corresponds to a year column? But there are 5 blocks for 5 years. The order of blocks is likely 2007, 2006, 2005, 2004, 2003? The first block has 58.3 shares, EPS 1.37, etc. That matches 2007? From the income statement, 2007 basic EPS from continuing ops is $3.27? Wait the income statement shows 2007 basic EPS continuing ops $3.27? Actually the Consolidated Statements of Earnings shows: Basic earnings per share: Earnings per share, continuing operations $3.27, discontinued (0.14), net $3.13. Diluted: $3.23, (0.14), $3.09. So 2007 basic EPS continuing is $3.27. But the first block has 1.37, not 3.27. So the blocks are not in year order? Let's check.\n\nThe Five-year Data table has columns 2007, 2006, 2005, 2004, 2003. The numbers are listed in that order? The first block might be 2003? Let's see: 2003 basic EPS from continuing ops? The income statement for 2005 shows basic EPS continuing $1.61? Actually the income statement shows 2005: basic EPS continuing $1.61, diluted $1.59. 2006: basic $1.68, diluted $1.65. 2007: basic $3.27, diluted $3.23. So the blocks: first has 1.37, second 1.34, third 3.27, fourth 1.68, fifth 1.53. So the third block (3.27) is 2007. Fourth (1.68) is 2006. Fifth (1.53) is 2005. What are first and second? 2004 and 2003. So the order is 2004, 2003, 2007, 2006, 2005? That doesn't make sense. Actually the table might be presented with the years in columns but the text extraction placed the numbers in a different order. Let's look at the original table structure. The table has rows and columns. The text extraction may have put the numbers in column order but the columns are not in chronological order? The header shows \"2007 2006 2005 2004 2003\". The numbers should be 2007 first, then 2006, etc. But the first block has 1.37 which is not 2007. So perhaps the table is actually ordered 2004, 2003, 2007, 2006, 2005? That seems unlikely.\n\nLet's check the \"Selected Financial Data\" table at the beginning. It has rows like \"Net sales\" and values: 2007 $2,841.2, 2006 $2,455.1, 2005 $2,281.0, 2004 $2,311.6, 2003 $2,218.9. That order is correct. Then later \"Common Share Summary\" rows. The numbers for \"Fiscal year-end per share price\" should be 48.13 for 2007, 47.64 for 2006, 37.56 for 2005, 34.36 for 2004, 31.80 for 2003? Actually the last row in the table shows values: 34.36, 31.80, 48.13, 47.64, 37.56? Wait the text shows the blocks as:\n\nBlock1: 58.3, 1.37, 1.36, 1.41, 1.40, 1.00, 19.20, 34.36\nBlock2: 58.4, 1.34, 1.34, 1.35, 1.35, 1.00, 17.37, 31.80\nBlock3: 58.6, 3.27, 3.23, 3.13, 3.09, 1.11, 22.11, 48.13\nBlock4: 59.2, 1.68, 1.65, 1.72, 1.69, 1.08, 18.46, 47.64\nBlock5: 58.4, 1.53, 1.51, 1.61, 1.59, 1.00, 16.65, 37.56\n\nNow, the columns are 2007, 2006, 2005, 2004, 2003. So the values for each row should be in that order. For example \"Average shares outstanding - diluted\" row: 58.3 (2007), 58.4 (2006), 58.6 (2005), 59.2 (2004), 58.4 (2003). That matches: block1 is 2007? No block1 has 58.3, block2 58.4, block3 58.6, block4 59.2, block5 58.4. So block1 is 2007, block2 2006, block3 2005, block4 2004, block5 2003. But then the EPS numbers: block1 (2007) has 1.37, but actual 2007 basic EPS continuing is 3.27. So that's wrong. Wait the row \"Earnings per share, continuing operations: Basic\" should have 3.27 for 2007. But block1 has 1.37. So the blocks are not aligned with the row labels? The text extraction might have placed the numbers in a different order relative to the rows. Actually the row labels are listed first, then all numbers for all years are listed in column-major order? The pattern: after the row labels, there is a sequence of numbers. The numbers are grouped by year, but the years are not in order? Let's see the sequence:\n\n58.3, 1.37, 1.36, 1.41, 1.40, 1.00, 19.20, 34.36,\n58.4, 1.34, 1.34, 1.35, 1.35, 1.00, 17.37, 31.80,\n58.6, 3.27, 3.23, 3.13, 3.09, 1.11, 22.11, 48.13,\n59.2, 1.68, 1.65, 1.72, 1.69, 1.08, 18.46, 47.64,\n58.4, 1.53, 1.51, 1.61, 1.59, 1.00, 16.65, 37.56\n\nSo each group of 8 numbers corresponds to one year. The order of groups is: group1 (58.3, 1.37...), group2 (58.4, 1.34...), group3 (58.6, 3.27...), group4 (59.2, 1.68...), group5 (58.4, 1.53...). The row labels are: Average shares outstanding - diluted, EPS continuing basic, EPS continuing diluted, Net EPS basic, Net EPS diluted, Cash dividends paid per share, Shareholders’ equity per basic share, Fiscal year-end per share price. So for each group, the numbers correspond to these rows in that order.\n\nNow, which year is group1? The first number is 58.3 shares. From the income statement, 2007 weighted-average shares outstanding - basic is 57.9? Actually the income statement shows basic shares 57.9 for 2007? Wait the income statement shows: Weighted-average shares outstanding: Basic 57.9, diluted 58.6? Let's check the income statement at the end: \"Weighted-average shares outstanding: Basic\" then numbers: 57.8, 58.3, 57.9? Actually the income statement shows for 2007: Basic 57.9, Diluted 58.6? The text: \"Weighted-average shares outstanding: Basic 57.9, 0.7, 58.6\" maybe. Let's look at the income statement snippet: \"Basic earnings per share: ... Weighted-average shares outstanding: Basic ... Diluted ...\" The numbers are messy. But from the Five-year Data, the shares outstanding for 2007 is 58.3? Actually the balance sheet shows shares outstanding as of Dec 29, 2007: 57,429,139 shares. But average shares outstanding - diluted in 2007 is 58.6? The income statement shows diluted shares 58.6 for 2007? The text: \"Weighted-average shares outstanding: Basic 57.9, 0.7, 58.6\" perhaps. Let's find the exact numbers.\n\nIn the Consolidated Statements of Earnings, after the per share data, there is \"Weighted-average shares outstanding: Basic\" then numbers: 57.8, 58.3, 57.9? Actually the text shows:\n\n\"Basic earnings per share:\nEarnings per share, continuing operations\nEarnings (loss) per share, discontinued operations\nNet earnings per share\nDiluted earnings per share:\nEarnings per share, continuing operations\nEarnings (loss) per share, discontinued operations\nNet earnings per share\nWeighted-average shares outstanding:\nBasic\nEffect of dilutive options\nDiluted\nDividends paid per common share\"\n\nThen the numbers are given in columns for 2007, 2006, 2005. The numbers appear as:\n\nFor 2007: $3.27, (0.14), $3.13, $3.23, (0.14), $3.09, 57.9, 0.7, 58.6, $1.11\nFor 2006: $1.68, 0.04, $1.72, $1.65, 0.04, $1.69, 58.3, 0.9, 59.2, $1.08\nFor 2005: $1.53, 0.08, $1.61, $1.51, 0.08, $1.59, 57.8, 0.6, 58.4, $1.00\n\nSo average basic shares 2007 is 57.9, 2006 58.3, 2005 57.8. But the Five-year Data table shows \"Average shares outstanding - diluted\" row with values 58.3, 58.4, 58.6, 59.2, 58.4. That row is diluted shares. So 2007 diluted 58.6, 2006 59.2, 2005 58.4, 2004 58.3? Actually the income statement shows 2007 diluted 58.6, 2006 59.2, 2005 58.4. So the Five-year Data row \"Average shares outstanding - diluted\" should be 58.6, 59.2, 58.4, ... But the groups have first number 58.3, 58.4, 58.6, 59.2, 58.4. That suggests group1 is not 2007 but maybe 2004? Let's map.\n\nFrom income statement:\n2007: diluted 58.6\n2006: diluted 59.2\n2005: diluted 58.4\n\nSo the group with 58.6 is group3, which also has EPS 3.27 (2007 continuing basic). So group3 is 2007. Group4 has 59.2 and EPS 1.68 (2006 continuing basic) -> 2006. Group5 has 58.4 and EPS 1.53 (2005 continuing basic) -> 2005. Then group1 and group2 are 2004 and 2003. Group1 has 58.3, EPS 1.37. Group2 has 58.4, EPS 1.34. So group1 is 2004? group2 2003? The order in the table is not chronological; it's 2004, 2003, 2007, 2006, 2005? That is weird. Actually the table might have been reformatted. The header \"2007 2006 2005 2004 2003\" but the data is presented in that order? The groups are in order: group1 (58.3, 1.37) could be 2004? Let's check the actual 2004 EPS from continuing ops: from the Five-year Data table earlier, net earnings from continuing operations for 2004 was $79.5 million, and average shares? The income statement for 2004 not given but from the Five-year Data, EPS continuing basic for 2004 is $1.37? The table shows for 2004: \"Earnings per share, continuing operations: Basic $1.37, Diluted $1.36\" maybe. That matches group1. So group1 is 2004. Group2 is 2003 with EPS 1.34. So the order of groups is 2004, 2003, 2007, 2006, 2005. That is bizarre. Perhaps the table is actually ordered with columns 2007, 2006, 2005, 2004, 2003 but the text extraction placed the numbers in a different sequence due to formatting? Let's check the \"Fiscal year-end per share price\" row: group1 (2004) has 34.36, group2 (2003) 31.80, group3 (2007) 48.13, group4 (2006) 47.64, group5 (2005) 37.56. So the year-end price for 2005 is 37.56, 2006 47.64, 2007 48.13.\n\nThus, the investment at end of 2005: price $37.56. Sold at end of 2007: price $48.13. But ROI should include dividends received during the holding period. The question says \"investment was made at the end of 2005 and sold at the end of 2007\". ROI typically includes dividends if they are part of return. The document gives cash dividends paid per share: 2006 $1.08, 2007 $1.11. But if bought at end of 2005, you would receive dividends in 2006 and 2007. So total return = (sale price + dividends received - purchase price) / purchase price. Dividends: 2006 $1.08, 2007 $1.11. Total dividends = 2.19. Purchase price = 37.56. Sale price = 48.13. ROI = (48.13 + 2.19 - 37.56) / 37.56 = (50.32 - 37.56)/37.56 = 12.76/37.56 = 0.3397... So 33.97%. Alternatively, if ROI is just price appreciation: (48.13-37.56)/37.56 = 10.57/37.56 = 0.2814 = 28.14%. The question likely expects total return including dividends. But it says \"roi\" without specifying. In financial context, ROI includes dividends. However, the document also provides the Five-year Stock Performance Graph which shows total shareholder return assuming dividends reinvested. The graph shows cumulative total shareholder return from 2002 to 2007: Snap-on $100 to $198.05, so over 5 years. But we need 2005-2007.\n\nLet's check if there is any explicit ROI figure. The question: \"what is the roi in snap-on if the investment was made at the end of 2005 and sold at the end of 2007?\" We need to compute. Use end of 2005 price and end of 2007 price plus dividends. We have those figures.\n\nEvidence: Fiscal year-end per share price: 2005 $37.56, 2007 $48.13. Cash dividends paid per share: 2006 $1.08, 2007 $1.11. (Note: dividends paid in 2007 were $1.11 per share, but the dividend declared in 2007 includes fourth quarter $0.30 paid in 2008? Actually cash dividends paid in 2007 totaled $1.11 per share? The text says \"Cash dividends paid in 2007, 2006 and 2005 totaled $64.8 million, $63.6 million and $57.8 million\" and \"Cash dividends paid per common share\" table shows 2007 $1.11, 2006 $1.08, 2005 $1.00. So yes.\n\nSo compute: purchase price 37.56, sale 48.13, dividends 2.19. ROI = (48.13 + 2.19 - 37.56) / 37.56 = 12.76 / 37.56 = 0.3397 = 33.97%. If we want percentage, 33.97%. The answer should be a number. The question asks \"what is the roi\" – likely as a percentage. We'll give 33.97% or 0.34? The instruction: \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So just the number, maybe 33.97. But we need to decide if include % sign? The instruction says no units unless asked. ROI is a ratio, often expressed as %. The question asks \"what is the roi\" – could be a percentage. I'll output 33.97 (or 0.3397). Typically ROI is expressed as a percentage. I'll output 33.97.\n\nBut let's double-check if the purchase price at end of 2005 is indeed $37.56. The \"Fiscal year-end per share price\" for 2005 is 37.56. Yes.\n\nAlso, the investment made at end of 2005 means after the market close on Dec 31, 2005? The document says fiscal year ends on Saturday closest to Dec 31. 2005 ended Dec 31, 2005. So price at that date is 37.56.\n\nThus ROI = (48.13 + 1.08 + 1.11 - 37.56) / 37.56 = 12.76/37.56 = 0.3397.\n\nAlternatively, if dividends are not reinvested, that's the ROI. If reinvested, it would be different, but we don't have reinvestment price. So simple.\n\nLet's write evidence: \n- 37.56 | Fiscal year-end per share price (2005)\n- 48.13 | Fiscal year-end per share price (2007)\n- 1.08 | Cash dividends paid per share (2006)\n- 1.11 | Cash dividends paid per share (2007)\n\nProgram: divide(subtract(add(48.13, add(1.08, 1.11)), 37.56), 37.56) = divide(subtract(add(48.13, 2.19), 37.56), 37.56) = divide(50.32-37.56, 37.56) = divide(12.76, 37.56) = 0.3397.\n\nAnswer: 33.97 (or 0.3397). I'll put 33.97.",
+ "raw_content": "<evidence>\n37.56 | Fiscal year-end per share price (2005)\n48.13 | Fiscal year-end per share price (2007)\n1.08 | Cash dividends paid per share (2006)\n1.11 | Cash dividends paid per share (2007)\n</evidence>\n<program>\ndivide(subtract(add(48.13, add(1.08, 1.11)), 37.56), 37.56)\n</program>\n<answer>33.97</answer>",
+ "usage": {
+  "prompt_tokens": 81527,
+  "completion_tokens": 5541,
+  "total_tokens": 87068,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 33.46,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "37.56",
+   "element": "Fiscal year-end per share price (2005)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "48.13",
+   "element": "Fiscal year-end per share price (2007)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "1.08",
+   "element": "Cash dividends paid per share (2006)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1.11",
+   "element": "Cash dividends paid per share (2007)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(subtract(add(48.13, add(1.08, 1.11)), 37.56), 37.56)",
+ "answer_model": "33.97",
+ "program_value": 0.33972310969116076,
+ "docfinqa_row": 486
+}

@@ -1,0 +1,50 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0445",
+ "format": "markdown_pdf_poppler",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what portion of total value of net operating loss carryforwards is related to state?",
+ "gold": "52.8%",
+ "finqa_id": "AMT/2005/page_105.pdf-4",
+ "source_page": "page_105",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/markdown_pdf_poppler/AMT_2005_0001193125-06-054224.md",
+ "doc_chars": 538102,
+ "prompt_chars": 538275,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 538102,
+ "original_chars": 538102,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 103343,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 357,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.5217",
+ "reasoning": "We need to find net operating loss carryforwards total and state portion. From note 13: \"At December 31, 2005, the Company had net federal and state operating loss carryforwards available to reduce future taxable income of approximately $2.2 billion and $2.4 billion, respectively.\" So total = 2.2 + 2.4 = 4.6 billion. State portion = 2.4 billion. Portion = 2.4 / 4.6 = 0.521739... = 52.17%. But careful: The question asks \"what portion of total value of net operating loss carryforwards is related to state?\" So answer as a fraction or percentage. The document says \"approximately $2.2 billion and $2.4 billion\" for federal and state. So total = 4.6. State portion = 2.4/4.6 = 12/23 ≈ 0.5217. We can give as 52.17% or 0.5217. The instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what portion\" so we can give a decimal or percentage. I'll give 0.5217 or 52.17%. Since it's a portion, maybe as a fraction? I'll give 0.5217. But to be precise, 2.4/4.6 = 0.521739... I'll round to 0.5217 or 52.17%. I'll put 0.5217.",
+ "raw_content": "<answer>0.5217</answer>",
+ "usage": {
+  "prompt_tokens": 103489,
+  "completion_tokens": 357,
+  "total_tokens": 103846,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.83,
+ "answer_tag_found": true,
+ "docfinqa_row": 445
+}

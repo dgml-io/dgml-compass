@@ -1,0 +1,98 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0486",
+ "format": "dgml",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what is the roi in snap-on if the investment was made at the end of 2005 and sold at the end of 2007?",
+ "gold": "34.8%",
+ "finqa_id": "SNA/2007/page_29.pdf-2",
+ "source_page": "page_29",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml/SNA_2007_0001104659-08-011401.dgml.xml",
+ "doc_chars": 646204,
+ "prompt_chars": 646394,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 646204,
+ "original_chars": 646204,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 157120,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "stop",
+   "completion_tokens": 1801,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 1,
+ "ok": true,
+ "answer": "0.339723",
+ "reasoning": "We need ROI from end of 2005 to end of 2007. Need stock prices? The document gives fiscal year-end per share price in Selected Financial Data: 2005: 37.56, 2007: 48.13. Also dividends paid per share: 2006: 1.08, 2007: 1.11. ROI = (ending price + dividends received - beginning price)/beginning price. Assuming investment at end of 2005, held through 2006 and 2007, received dividends in 2006 and 2007. So total return = (48.13 + 1.08 + 1.11 - 37.56)/37.56 = (48.13+2.19-37.56)=12.76/37.56=0.3397... = 33.97%. Alternatively ROI might be just price appreciation? But question says \"roi\" typically includes dividends. The document provides dividends paid per share. So compute.\n\nEvidence: 37.56 (fiscal year-end per share price 2005), 48.13 (2007), 1.08 (cash dividends paid per share 2006), 1.11 (2007). Use those.\n\nProgram: divide(subtract(add(add(48.13, 1.08), 1.11), 37.56), 37.56)\n\nAnswer as percentage? The question asks \"what is the roi\" - likely as a percentage. We'll output 33.97% or 0.3397? Usually ROI as percentage. The instructions: \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what is the roi\" - could be percentage. We'll output 33.97%? But units? They said no units unless asked. ROI is a ratio, often expressed as %. I'll output 33.97%? Or 0.3397? The benchmark might expect numeric. I'll output 33.97%? To be safe, maybe 0.3397? But typical ROI is percentage. The question says \"roi\" - I'll output 33.97%? The instruction says no units unless asked. Percentage is a unit? It's a value. I'll output 33.97%? Hmm.\n\nLet's compute precisely: 48.13 + 1.08 + 1.11 = 50.32. 50.32 - 37.56 = 12.76. 12.76 / 37.56 = 0.339723... = 33.9723%. So 33.97% or 0.3397. I'll output 33.97%? The instruction says \"containing only the value itself\" - I'll put 33.97%? Or 0.3397? I think percentage is fine. But to avoid ambiguity, maybe 33.97%? The benchmark may parse numeric. I'll output 33.97%? Actually they said \"no explanation or units unless the question asks for them.\" The question asks \"what is the roi\" - ROI is typically expressed as a percentage, so unit is implicit. I'll output 33.97%? I'll output 0.3397? Hmm.\n\nLet's check if there is any other interpretation: ROI might be based on total shareholder return index? The document gives cumulative total shareholder return index: 2005: 146.97, 2007: 198.05. That assumes dividends reinvested. ROI from end of 2005 to end of 2007 would be (198.05 - 146.97)/146.97 = 51.08/146.97 = 0.3476 = 34.76%. But that index is cumulative from 2002. Actually the index values: Dec 31, 2005: 146.97, Dec 31, 2007: 198.05. That is total shareholder return assuming dividends reinvested. So ROI = (198.05/146.97 - 1) = 0.3476 = 34.76%. But the question says \"investment was made at the end of 2005 and sold at the end of 2007\" - that matches the index. However, the index is based on $100 invested at end of 2002, with dividends reinvested. The ratio of index values gives total return. So ROI = 198.05/146.97 - 1 = 0.3476. But the document also gives actual price and dividends. Which is more appropriate? The question likely expects using the stock price and dividends. But the index is specifically designed for total shareholder return. The question says \"roi\" - could be either. We need to decide.\n\nThe document provides \"Fiscal year-end per share price\" in Selected Financial Data: 2005: 37.56, 2007: 48.13. Also \"Cash dividends paid per share\" 2006: 1.08, 2007: 1.11. That is straightforward. The index is also there. Which one is more direct? The question doesn't specify dividends reinvested. ROI typically includes dividends received. So using price and dividends is standard. The index assumes reinvestment, which is a different measure. I'll go with price + dividends.\n\nBut note: The investment at end of 2005 would be at fiscal year-end price 37.56. Sold at end of 2007 at 48.13. Dividends paid during 2006 and 2007: 1.08 and 1.11. So total return = (48.13 + 1.08 + 1.11 - 37.56)/37.56 = 33.97%. That is ROI.\n\nI'll output 33.97%? Or 0.3397? I'll output 33.97%? The instruction says \"no units\" - percentage is a unit. But they might expect a number. I'll output 0.3397? Hmm.\n\nLet's see the benchmark: They will execute the program and compare to answer. The program yields a decimal. So answer should be decimal. I'll output 0.3397? But the question asks \"what is the roi\" - typically expressed as percentage. But the program gives decimal. The answer tag should contain the value. I'll put 0.3397? Or 33.97%? The instruction: \"containing only the value itself with no explanation or units unless the question asks for them.\" So no percent sign. So 0.3397. But to be precise, 12.76/37.56 = 0.339723... So I'll output 0.3397? Or 0.33972? I'll output 0.3397.\n\nBut wait: The program will be executed exactly. The answer should match the program result. The program: divide(subtract(add(add(48.13, 1.08), 1.11), 37.56), 37.56) = 0.339723... So answer should be that decimal. I'll output 0.3397? But the benchmark might compare with tolerance. I'll output 0.3397? Or 0.33972? I'll output 0.3397.\n\nLet's list evidence: 37.56 | Fiscal year-end per share price 2005 (Selected Financial Data), 48.13 | Fiscal year-end per share price 2007, 1.08 | Cash dividends paid per share 2006, 1.11 | Cash dividends paid per share 2007.\n\nProgram: divide(subtract(add(add(48.13, 1.08), 1.11), 37.56), 37.56)\n\nFinal answer: 0.3397? I'll put 0.3397.",
+ "raw_content": "<evidence>\n37.56 | Fiscal year-end per share price 2005 (Selected Financial Data)\n48.13 | Fiscal year-end per share price 2007 (Selected Financial Data)\n1.08 | Cash dividends paid per share 2006 (Selected Financial Data)\n1.11 | Cash dividends paid per share 2007 (Selected Financial Data)\n</evidence>\n\n<program>divide(subtract(add(add(48.13, 1.08), 1.11), 37.56), 37.56)</program>\n\n<answer>0.3397</answer>",
+ "usage": {
+  "prompt_tokens": 157436,
+  "completion_tokens": 1801,
+  "total_tokens": 159237,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 157184
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 21.18,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "37.56",
+   "element": "Fiscal year-end per share price 2005 (Selected Financial Data)",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "48.13",
+   "element": "Fiscal year-end per share price 2007 (Selected Financial Data)",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "1.08",
+   "element": "Cash dividends paid per share 2006 (Selected Financial Data)",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "1.11",
+   "element": "Cash dividends paid per share 2007 (Selected Financial Data)",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(subtract(add(add(48.13, 1.08), 1.11), 37.56), 37.56)",
+ "answer_model": "0.3397",
+ "program_value": 0.33972310969116076,
+ "docfinqa_row": 486
+}

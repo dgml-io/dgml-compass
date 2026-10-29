@@ -1,0 +1,70 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0458",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "in 2015 what was the ratio of the net sales to the backlog",
+ "gold": "0.44",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "LMT_2015_0001193125-16-476010.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/FilingPartDesignation/StockMarketInformation/SelectedFinancialData"
+ ],
+ "r1_reasoning_chars": 4167,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 28877,
+  "completion_tokens": 968,
+  "total_tokens": 29845,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/FilingPartDesignation/StockMarketInformation/SelectedFinancialData"
+ ],
+ "content_chars": 23982,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "0.463173",
+ "reasoning": "We need ratio of net sales to backlog in 2015. From SelectedFinancialData: Net sales 2015 = $46,132 million. Backlog 2015 = $99,600 million. Ratio = 46132 / 99600 = 0.46317... Need compute. Use figures as printed: 46,132 and 99,600. Program divide(46132, 99600). Answer likely 0.463. Need evidence lines.",
+ "raw_content": "<evidence>\n$46,132 | NetSalesSelectedData\n$99,600 | BacklogSelectedData\n</evidence>\n<program>divide(46132, 99600)</program>\n<answer>0.463</answer>",
+ "r2_usage": {
+  "prompt_tokens": 5857,
+  "completion_tokens": 148,
+  "total_tokens": 6005,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$46,132",
+   "element": "NetSalesSelectedData",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$99,600",
+   "element": "BacklogSelectedData",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(46132, 99600)",
+ "answer_model": "0.463",
+ "program_value": 0.46317269076305223,
+ "elapsed_s": 10.03,
+ "outline_source": "LMT_2015_0001193125-16-476010.outline.txt",
+ "outline_chars": 116705
+}

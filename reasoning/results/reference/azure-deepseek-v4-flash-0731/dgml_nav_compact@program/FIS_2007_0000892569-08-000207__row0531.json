@@ -1,0 +1,65 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0531",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what is the percentage change in rent expense from 2006 yo 2007?",
+ "gold": "30.6%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "FIS_2007_0000892569-08-000207.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/section/RelatedPartyTransactions/RelatedPartyExpenseByType"
+ ],
+ "r1_reasoning_chars": 5161,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 23029,
+  "completion_tokens": 1284,
+  "total_tokens": 24313,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/section/RelatedPartyTransactions/RelatedPartyExpenseByType"
+ ],
+ "content_chars": 2365,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need percentage change in rent expense from 2006 to 2007. From table: Rent expense | — | — | 5.0. The columns are 2007, 2006, 2005. So 2007 is — (blank/dash), 2006 is —, 2005 is 5.0. So rent expense is not present for 2007 and 2006? Actually the dashes indicate zero or not applicable? The table shows \"—\" for 2007 and 2006, and 5.0 for 2005. So rent expense was zero in 2006 and 2007? If 2006 is zero, percentage change from 2006 to 2007 is undefined (division by zero). The question asks percentage change from 2006 to 2007. Since 2006 is — (likely zero or not disclosed), cannot compute. Also 2007 is —. So NOT_FOUND. But maybe the dashes mean not applicable? The table shows \"—\" for rent expense in 2007 and 2006, and 5.0 in 2005. So no figures for 2006 and 2007. Thus cannot compute. Answer NOT_FOUND.\n\nBut let's be careful: The question might be from a different part? The region only has this table. So answer NOT_FOUND.\n\nEvidence: Rent expense | — | — | 5.0. But we need 2006 and 2007 values, they are dashes. So no figures.\n\nFinal answer: NOT_FOUND.",
+ "raw_content": "<evidence>Rent expense | — | — | 5.0 | RelatedPartyExpenseByType</evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 963,
+  "completion_tokens": 375,
+  "total_tokens": 1338,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "Rent expense",
+   "element": "— | — | 5.0 | RelatedPartyExpenseByType",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 12.37,
+ "outline_source": "FIS_2007_0000892569-08-000207.outline.txt",
+ "outline_chars": 91339
+}

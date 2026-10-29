@@ -1,0 +1,53 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0767",
+ "format": "markdown_pdf_rules",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "hard assets were what percent of the brazilian purchase price , as finally determined?",
+ "gold": "14.3%",
+ "finqa_id": "AMT/2012/page_118.pdf-3",
+ "source_page": "page_118",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/markdown_pdf_rules/AMT_2012_0001193125-13-077821.md",
+ "doc_chars": 528023,
+ "prompt_chars": 528198,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 528023,
+ "original_chars": 528023,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 118377,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 362,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "14.27%",
+ "reasoning": "We need to find the Brazilian acquisition and the purchase price, and the hard assets (property and equipment) as a percentage of the final purchase price. The document mentions \"Brazil Acquisition\" in note 6. It says: On March 1, 2011, the Company acquired 100% of the outstanding shares of a company that owned 627 communications sites in Brazil for $553.2 million, which was subsequently increased to $585.4 million as a result of acquiring 39 additional communications sites during the year ended December 31, 2011. During the year ended December 31, 2012, the purchase price was reduced to $585.3 million after certain post-closing purchase price adjustments.\n\nThen there is a table for the final purchase price allocation. The table shows: Property and equipment $83,539 (in thousands). The final purchase price allocation total? The table shows \"Fair value of net assets acquired $488,935\" and \"Goodwill $96,395\" so total consideration = 488,935 + 96,395 = 585,330 (in thousands) which matches $585.3 million. So the purchase price is $585.3 million. Hard assets are property and equipment, which is $83,539 thousand. So percentage = 83,539 / 585,330 * 100 = approximately 14.27%. Let's compute: 83,539 / 585,330 = 0.1427, so 14.27%. The question asks \"hard assets were what percent of the brazilian purchase price, as finally determined?\" So answer is 14.27% or about 14.3%. We'll put the number.",
+ "raw_content": "<answer>14.27%</answer>",
+ "usage": {
+  "prompt_tokens": 118522,
+  "completion_tokens": 362,
+  "total_tokens": 118884,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 118272
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.39,
+ "answer_tag_found": true,
+ "docfinqa_row": 767
+}

@@ -1,0 +1,53 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0408",
+ "format": "dgml",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what portion of the equity compensation plan approved by security holders remains available for future issuance?",
+ "gold": "90.1%",
+ "finqa_id": "HII/2017/page_124.pdf-2",
+ "source_page": "page_124",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/dgml/HII_2017_0001501585-18-000006.dgml.xml",
+ "doc_chars": 733855,
+ "prompt_chars": 734056,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 733855,
+ "original_chars": 733855,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 164566,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 400,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "4,087,587",
+ "reasoning": "The question asks: \"what portion of the equity compensation plan approved by security holders remains available for future issuance?\"\n\nLooking at the document, in the section \"Equity Compensation Plan Information\" under Item 12, there is a table showing equity compensation plans. The row for \"Equity compensation plans approved by security holders\" shows:\n- Number of Securities to be Issued Upon Exercise of Outstanding Options, Warrants and Rights: 448,859\n- Weighted-Average Exercise Price: $0.00\n- Number of Securities Remaining Available for Future Issuance Under Equity Compensation Plans: 4,087,587\n\nThe question asks for the \"portion\" that remains available for future issuance. This could be interpreted as the number of shares remaining available, or as a fraction/percentage of the total.\n\nThe table shows:\n- Approved by security holders: 448,859 to be issued, 4,087,587 remaining available\n- Not approved: 0\n- Total: 448,859 to be issued, 4,087,587 remaining available\n\nThe \"portion\" remaining available for future issuance is 4,087,587 shares. But \"portion\" might mean the fraction of the total plan. The total shares authorized under the 2012 Plan was 3.4 million new shares plus forfeited shares, and as of Dec 31, 2017, remaining was 4.1 million (approximately 4,087,587).\n\nThe question asks \"what portion of the equity compensation plan approved by security holders remains available for future issuance?\" - this likely asks for the number of shares remaining available, which is 4,087,587.\n\nAlternatively, \"portion\" could mean the percentage. But the table directly gives the number remaining available for future issuance: 4,087,587.\n\nI'll answer with the number of shares: 4,087,587.",
+ "raw_content": "<answer>4,087,587</answer>",
+ "usage": {
+  "prompt_tokens": 164711,
+  "completion_tokens": 400,
+  "total_tokens": 165111,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 164608
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.15,
+ "answer_tag_found": true,
+ "docfinqa_row": 408
+}

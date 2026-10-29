@@ -1,0 +1,81 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0514",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was the change in the total long-term debt net from 2014 to 2015 in millions",
+ "gold": "9119",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "LMT_2015_0001193125-16-476010.outline.txt",
+ "doc_source": "LMT_2015_0001193125-16-476010.dgml.xml",
+ "outline_chars": 116705,
+ "predicted_xpaths": [
+  "/chunk/ConsolidatedBalanceSheets/table/LongTermDebtNetBalance"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 1354,
+ "r1_usage": {
+  "prompt_tokens": 28889,
+  "completion_tokens": 355,
+  "total_tokens": 29244,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ConsolidatedBalanceSheets/table/LongTermDebtNetBalance"
+ ],
+ "content_chars": 2890,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "8163",
+ "reasoning": "We need to find long-term debt net for 2014 and 2015. The table shows two amounts: 14,305 and 6,142. Typically first column is current year (2015) and second is prior year (2014) or vice versa. Need to determine order. The question asks change from 2014 to 2015. Usually in balance sheets, first column is most recent year. So 2015 = 14,305, 2014 = 6,142. Change = 14,305 - 6,142 = 8,163. But need to confirm if that's the correct interpretation. The label is \"Long-term debt, net\" and amounts are 14,305 and 6,142. So change = 8,163. But we should check if the question asks \"change in total long-term debt net\" - that's exactly that line. So answer 8,163.\n\nBut we need to be careful: The document might have multiple years. The region shows two amounts. Typically the first is the most recent. So change = 14,305 - 6,142 = 8,163. We'll use that.\n\nEvidence: 14,305 and 6,142 from /chunk/ConsolidatedBalanceSheets/table/LongTermDebtNetBalance/LongTermDebtNetBalance/DebtPrincipalAmount[1] and [2]? Actually the path: /chunk/ConsolidatedBalanceSheets/table/LongTermDebtNetBalance/LongTermDebtNetBalance/DebtPrincipalAmount - there are two. We'll cite both.\n\nProgram: subtract(14305, 6142) = 8163.\n\nAnswer: 8163.",
+ "raw_content": "<evidence>14,305 | /chunk/ConsolidatedBalanceSheets/table/LongTermDebtNetBalance/LongTermDebtNetBalance/DebtPrincipalAmount[1]\n6,142 | /chunk/ConsolidatedBalanceSheets/table/LongTermDebtNetBalance/LongTermDebtNetBalance/DebtPrincipalAmount[2]</evidence>\n<program>subtract(14305, 6142)</program>\n<answer>8163</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1115,
+  "completion_tokens": 471,
+  "total_tokens": 1586,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 1115,
+   "completion_tokens": 471,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "14,305",
+   "element": "chunk/ConsolidatedBalanceSheets/table/LongTermDebtNetBalance/LongTermDebtNetBalance/DebtPrincipalAmount[1]",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "6,142",
+   "element": "chunk/ConsolidatedBalanceSheets/table/LongTermDebtNetBalance/LongTermDebtNetBalance/DebtPrincipalAmount[2]",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(14305, 6142)",
+ "answer_model": "8163",
+ "program_value": 8163.0,
+ "elapsed_s": 6.13
+}

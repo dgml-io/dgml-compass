@@ -1,0 +1,71 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0408",
+ "format": "markdown_pdf_poppler",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what portion of the equity compensation plan approved by security holders remains available for future issuance?",
+ "gold": "90.1%",
+ "finqa_id": "HII/2017/page_124.pdf-2",
+ "source_page": "page_124",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/markdown_pdf_poppler/HII_2017_0001501585-18-000006.md",
+ "doc_chars": 528384,
+ "prompt_chars": 528585,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 528384,
+ "original_chars": 528384,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 97412,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 424,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.901055",
+ "reasoning": "We need answer: portion of equity compensation plan approved by security holders remains available for future issuance. Need compute ratio? \"portion\" likely fraction of total authorized? Table: Number of securities to be issued upon exercise outstanding options, warrants and rights (a) = 448,859. Remaining available for future issuance (c) = 4,087,587. Total approved plan? The plan authorized? The table shows equity compensation plan approved by security holders: (a) 448,859, (c) 4,087,587. The portion remaining available for future issuance = 4,087,587 / (448,859 + 4,087,587) = ? Compute. 4,087,587 / 4,536,446 = 0.9010... So about 90.1%. Question asks \"what portion ... remains available for future issuance?\" Could be fraction. Need answer value. Let's compute precisely. 4,087,587 / (4,087,587+448,859) = 4,087,587 / 4,536,446. Calculate: 4,536,446 * 0.9 = 4,082,801.4. Difference 4,785.6. /4,536,446 = 0.001055. So 0.901055. So 90.1055%. Answer maybe 90.1%. But question might expect \"portion\" as decimal or percent. We'll give 0.9011 or 90.1%. Need evidence: figures from table. Use exact numbers. Program: divide(4087587, add(4087587,448859)).",
+ "raw_content": "<evidence>\n4,087,587 | Equity Compensation Plan Information - column (c) approved by security holders\n448,859 | Equity Compensation Plan Information - column (a) approved by security holders\n</evidence>\n\n<program>divide(4087587, add(4087587, 448859))</program>\n\n<answer>0.9011</answer>",
+ "usage": {
+  "prompt_tokens": 97717,
+  "completion_tokens": 424,
+  "total_tokens": 98141,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.81,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "4,087,587",
+   "element": "Equity Compensation Plan Information - column (c) approved by security holders",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "448,859",
+   "element": "Equity Compensation Plan Information - column (a) approved by security holders",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(4087587, add(4087587, 448859))",
+ "answer_model": "0.9011",
+ "program_value": 0.9010549227302607,
+ "docfinqa_row": 408
+}

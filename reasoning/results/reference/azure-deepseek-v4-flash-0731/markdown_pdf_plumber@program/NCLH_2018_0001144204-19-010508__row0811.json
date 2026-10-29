@@ -1,0 +1,74 @@
+{
+ "id": "NCLH_2018_0001144204-19-010508__row0811",
+ "format": "markdown_pdf_plumber",
+ "key": "NCLH_2018_0001144204-19-010508",
+ "question": "what is the percentage change in net interest expense in 2018 compare to 2017?",
+ "gold": "1.0%",
+ "finqa_id": "NCLH/2018/page_97.pdf-2",
+ "source_page": "page_97",
+ "ticker": "NCLH",
+ "fiscal_year": "2018",
+ "source_file": "data/docs/markdown_pdf_plumber/NCLH_2018_0001144204-19-010508.md",
+ "doc_chars": 421996,
+ "prompt_chars": 422163,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 421996,
+ "original_chars": 421996,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 107108,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 253,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.970859",
+ "reasoning": "We need answer percentage change in net interest expense 2018 vs 2017. Need find interest expense, net. In document: 2018 interest expense, net (270,404) and 2017 (267,804). Percentage change = (270,404 - 267,804)/267,804 *100 = 2600/267804 = 0.9708%. Need compute. Use figures. Evidence: 270,404 | Consolidated Statements of Operations, 2018; 267,804 | 2017. Program divide(subtract(270404,267804),267804) *100? But program only nested calls, can multiply by 100. Use multiply(divide(subtract(270404,267804),267804),100). Answer value maybe 0.97%. Need final inside tags only value.",
+ "raw_content": "<evidence>\n270,404 | Consolidated Statements of Operations, Interest expense, net 2018\n267,804 | Consolidated Statements of Operations, Interest expense, net 2017\n</evidence>\n<program>multiply(divide(subtract(270404, 267804), 267804), 100)</program>\n<answer>0.97</answer>",
+ "usage": {
+  "prompt_tokens": 107414,
+  "completion_tokens": 253,
+  "total_tokens": 107667,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 107264
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.23,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "270,404",
+   "element": "Consolidated Statements of Operations, Interest expense, net 2018",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "267,804",
+   "element": "Consolidated Statements of Operations, Interest expense, net 2017",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(subtract(270404, 267804), 267804), 100)",
+ "answer_model": "0.97",
+ "program_value": 0.9708592851488402,
+ "docfinqa_row": 811
+}

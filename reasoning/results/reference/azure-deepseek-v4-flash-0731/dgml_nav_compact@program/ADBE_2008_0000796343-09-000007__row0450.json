@@ -1,0 +1,75 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0450",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "is the weighted average useful life ( years ) for trademarks greater than customer contracts and relationships?",
+ "gold": "no",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "ADBE_2008_0000796343-09-000007.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/ConsolidatedCashFlow/PurchasePriceAllocation",
+  "/chunk/ConsolidatedCashFlow/PurchasePriceAllocation/table",
+  "/chunk/ConsolidatedCashFlow/PurchasePriceAllocation/table/PurchasePriceAllocation/IntangibleAssetUsefulLife",
+  "/chunk/ConsolidatedCashFlow/IntangibleAssetsPolicy",
+  "/chunk/ConsolidatedCashFlow/IntangibleAssetsPolicy/table"
+ ],
+ "r1_reasoning_chars": 6476,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 25372,
+  "completion_tokens": 1639,
+  "total_tokens": 27011,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ConsolidatedCashFlow/PurchasePriceAllocation",
+  "/chunk/ConsolidatedCashFlow/PurchasePriceAllocation/table",
+  "/chunk/ConsolidatedCashFlow/PurchasePriceAllocation/table/PurchasePriceAllocation/IntangibleAssetUsefulLife",
+  "/chunk/ConsolidatedCashFlow/IntangibleAssetsPolicy",
+  "/chunk/ConsolidatedCashFlow/IntangibleAssetsPolicy/table"
+ ],
+ "content_chars": 39854,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "no",
+ "reasoning": "We need answer yes/no. Need figures: weighted average useful life for trademarks = 5, customer contracts and relationships = 6. So 5 > 6? No. Answer no. Need evidence and program.",
+ "raw_content": "<evidence>5 | IntangibleAssetUsefulLife: Trademarks\n6 | IntangibleAssetUsefulLife: Customer contracts and relationships\n</evidence>\n<program>less(5, 6)</program>\n<answer>no</answer>",
+ "r2_usage": {
+  "prompt_tokens": 8752,
+  "completion_tokens": 97,
+  "total_tokens": 8849,
+  "audio_prompt_tokens": 0
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "5",
+   "element": "IntangibleAssetUsefulLife: Trademarks",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6",
+   "element": "IntangibleAssetUsefulLife: Customer contracts and relationships",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "less(5, 6)",
+ "answer_model": "no",
+ "program_value": null,
+ "elapsed_s": 10.44,
+ "outline_source": "ADBE_2008_0000796343-09-000007.outline.txt",
+ "outline_chars": 99180
+}

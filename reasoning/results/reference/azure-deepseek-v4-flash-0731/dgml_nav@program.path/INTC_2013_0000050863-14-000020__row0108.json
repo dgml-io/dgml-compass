@@ -1,0 +1,81 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0108",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "what is the percent of the square feet in owned facilities in other countries?",
+ "gold": "35.8%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "INTC_2013_0000050863-14-000020.outline.txt",
+ "doc_source": "INTC_2013_0000050863-14-000020.dgml.xml",
+ "outline_chars": 102835,
+ "predicted_xpaths": [
+  "/chunk/Report/UnresolvedStaffCommentsStatus/Report/FacilitySquareFootage"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 2522,
+ "r1_usage": {
+  "prompt_tokens": 25706,
+  "completion_tokens": 595,
+  "total_tokens": 26301,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/Report/UnresolvedStaffCommentsStatus/Report/FacilitySquareFootage"
+ ],
+ "content_chars": 1886,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "35.83691",
+ "reasoning": "We need percent of square feet in owned facilities in other countries. Owned facilities other countries = 16.7 million. Total owned facilities = 46.6 million. Percent = 16.7 / 46.6 * 100. Need compute. Use figures as printed.",
+ "raw_content": "<evidence>16.7 | /chunk/Report/UnresolvedStaffCommentsStatus/Report/FacilitySquareFootage/table/FacilitySquareFootage[1]/td[2]\n46.6 | /chunk/Report/UnresolvedStaffCommentsStatus/Report/FacilitySquareFootage/table/FacilitySquareFootage[1]/td[3]</evidence>\n\n<program>multiply(divide(16.7, 46.6), 100)</program>",
+ "r2_usage": {
+  "prompt_tokens": 843,
+  "completion_tokens": 166,
+  "total_tokens": 1009,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 843,
+   "completion_tokens": 166,
+   "got_answer": false
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "16.7",
+   "element": "chunk/Report/UnresolvedStaffCommentsStatus/Report/FacilitySquareFootage/table/FacilitySquareFootage[1]/td[2]",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "46.6",
+   "element": "chunk/Report/UnresolvedStaffCommentsStatus/Report/FacilitySquareFootage/table/FacilitySquareFootage[1]/td[3]",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(16.7, 46.6), 100)",
+ "answer_model": null,
+ "program_value": 35.83690987124463,
+ "elapsed_s": 4.63
+}

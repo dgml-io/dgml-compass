@@ -1,0 +1,72 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0298",
+ "format": "markdown_pdf_poppler",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what is the percentage change in the expected minimum payments from 2014 to 2015?",
+ "gold": "-18.7%",
+ "finqa_id": "GPN/2013/page_92.pdf-2",
+ "source_page": "page_92",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/markdown_pdf_poppler/GPN_2013_0001123360-13-000025.md",
+ "doc_chars": 447391,
+ "prompt_chars": 447561,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 447391,
+ "original_chars": 447391,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 78474,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 619,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-0.187393",
+ "reasoning": "We need to find expected minimum payments from 2014 to 2015. The document has a table \"Future minimum lease payments for all non-cancelable operating leases at May 31, 2013\" with fiscal years: 2014: $11,057, 2015: $8,985. Also there is a table \"Maturity requirements on outstanding debt by fiscal years\" but that's debt, not \"expected minimum payments\". The question says \"expected minimum payments\" - likely refers to future minimum lease payments. So percentage change from 2014 to 2015: (8,985 - 11,057)/11,057 = -18.74% approximately. Let's compute exactly: difference = -2,072, divide by 11,057 = -0.18739... so -18.74%. The answer should be a percentage. We'll provide the value.\n\nEvidence: 11,057 | Future minimum lease payments 2014; 8,985 | Future minimum lease payments 2015.\n\nProgram: divide(subtract(8985, 11057), 11057) then multiply by 100? The program should be exact. The question asks for percentage change, so we can output the decimal or percentage? Usually they want the percentage value. We'll output -18.74% or -0.1874? The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what is the percentage change\" so we should give a percentage number. We'll give -18.74% or -18.7? Let's compute precisely: (8985-11057)/11057 = -2072/11057 = -0.18739... so -18.739%. We'll round to two decimals: -18.74%. But the program should be exact: divide(subtract(8985, 11057), 11057) gives -0.18739... The benchmark might expect the decimal or the percentage? Usually they want the percentage as a number, e.g., -18.74. We'll put -18.74 in the answer. But to be safe, we can put -18.74%? The instruction says no units unless asked. The question asks for percentage change, so the unit is percentage. But they said \"containing only the value itself\" - so maybe just -18.74. I'll put -18.74.\n\nLet's confirm the figures: The table \"Future minimum lease payments\" has 2014: 11,057 and 2015: 8,985. Yes.\n\nSo answer: -18.74.",
+ "raw_content": "<evidence>\n11,057 | Future minimum lease payments 2014\n8,985 | Future minimum lease payments 2015\n</evidence>\n<program>\ndivide(subtract(8985, 11057), 11057)\n</program>\n<answer>-18.74</answer>",
+ "usage": {
+  "prompt_tokens": 78781,
+  "completion_tokens": 619,
+  "total_tokens": 79400,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.48,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "11,057",
+   "element": "Future minimum lease payments 2014",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "8,985",
+   "element": "Future minimum lease payments 2015",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(8985, 11057), 11057)",
+ "answer_model": "-18.74",
+ "program_value": -0.1873926019716017,
+ "docfinqa_row": 298
+}

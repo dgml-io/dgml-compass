@@ -1,0 +1,83 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0247",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the percentage increase in total accumulated other comprehensive losses from 2013 to 2014?",
+ "gold": "62.9%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "PM_2015_0001413329-16-000076.outline.txt",
+ "doc_source": "PM_2015_0001413329-16-000076.dgml.xml",
+ "outline_chars": 156714,
+ "predicted_xpaths": [
+  "/chunk/Financial/BalanceSheet/StockholdersEquity/table",
+  "/chunk/Financial/BalanceSheet/StockholdersEquity/table/AccumulatedOtherComprehensiveLoss"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 6784,
+ "r1_usage": {
+  "prompt_tokens": 39603,
+  "completion_tokens": 1618,
+  "total_tokens": 41221,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/Financial/BalanceSheet/StockholdersEquity/table",
+  "/chunk/Financial/BalanceSheet/StockholdersEquity/table/AccumulatedOtherComprehensiveLoss"
+ ],
+ "content_chars": 6312,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need percentage increase from 2013 to 2014. The table shows columns for 2015 and 2014? The header says \"2015 and 2014\" for common stock. The table has two columns: likely 2015 and 2014. The question asks from 2013 to 2014. We need 2013 and 2014 values. The excerpt only shows 2015 and 2014? Actually the table has two columns, likely 2015 and 2014. The question asks 2013 to 2014, but we don't have 2013. Maybe the columns are 2014 and 2013? Let's check: The common stock header says \"2,109,316,331 shares issued in 2015 and 2014\" so the columns are 2015 and 2014. The question asks from 2013 to 2014, but we only have 2014 and 2015. So NOT_FOUND. But maybe the table has 2014 and 2013? The header says 2015 and 2014, so the two columns are 2015 and 2014. The question asks 2013 to 2014, so we need 2013 value, not present. So answer NOT_FOUND.\n\nBut let's double-check: The region path includes \"AccumulatedOtherComprehensiveLoss\" with values (9,402) and (6,826). Which is which? The first column is 2015, second is 2014. So 2014 is (6,826). We don't have 2013. So cannot compute.\n\nThus answer NOT_FOUND.",
+ "raw_content": "<evidence>(9,402) | /chunk/Financial/BalanceSheet/StockholdersEquity/table/AccumulatedOtherComprehensiveLoss/AccumulatedOtherComprehensiveLoss/td[1]\n(6,826) | /chunk/Financial/BalanceSheet/StockholdersEquity/table/AccumulatedOtherComprehensiveLoss/AccumulatedOtherComprehensiveLoss/td[2]</evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1996,
+  "completion_tokens": 460,
+  "total_tokens": 2456,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 1996,
+   "completion_tokens": 460,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "(9,402)",
+   "element": "chunk/Financial/BalanceSheet/StockholdersEquity/table/AccumulatedOtherComprehensiveLoss/AccumulatedOtherComprehensiveLoss/td[1]",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "(6,826)",
+   "element": "chunk/Financial/BalanceSheet/StockholdersEquity/table/AccumulatedOtherComprehensiveLoss/AccumulatedOtherComprehensiveLoss/td[2]",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 10.68
+}

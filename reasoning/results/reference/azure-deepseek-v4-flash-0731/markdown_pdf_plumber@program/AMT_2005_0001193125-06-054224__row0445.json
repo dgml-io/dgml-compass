@@ -1,0 +1,74 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0445",
+ "format": "markdown_pdf_plumber",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what portion of total value of net operating loss carryforwards is related to state?",
+ "gold": "52.8%",
+ "finqa_id": "AMT/2005/page_105.pdf-4",
+ "source_page": "page_105",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/markdown_pdf_plumber/AMT_2005_0001193125-06-054224.md",
+ "doc_chars": 493545,
+ "prompt_chars": 493718,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 493545,
+ "original_chars": 493545,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 121512,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 393,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.528468",
+ "reasoning": "We need answer: portion of total value of net operating loss carryforwards related to state. Need figures. Document note 13: At December 31, 2005, Company had net federal and state operating loss carryforwards available to reduce future taxable income of approximately $2.2 billion and $2.4 billion, respectively. Table: Federal $2,157,503, State $2,418,012 (in thousands). Total = sum. Portion state = state / total. Compute. Use figures as printed: 2,418,012 and 2,157,503. Total = 4,575,515. Portion = 2,418,012 / 4,575,515 = 0.5285... Let's compute precisely. 2,418,012 / 4,575,515. 4,575,515 * 0.528 = 2,415,? 4,575,515*0.528 = 2,415,? 4,575,515*0.5=2,287,757.5; *0.028=128,114.42; sum=2,415,871.92; difference 2,140.08; /4,575,515=0.0004677; so 0.5284677. So ~52.85%. Answer as portion maybe 0.5285 or 52.85%. Question \"what portion\" likely fraction. Provide value. Need evidence lines.",
+ "raw_content": "<evidence>\n2,418,012 | State net operating loss carryforwards (note 13 table)\n2,157,503 | Federal net operating loss carryforwards (note 13 table)\n</evidence>\n\n<program>divide(2418012, add(2418012, 2157503))</program>\n\n<answer>0.5285</answer>",
+ "usage": {
+  "prompt_tokens": 121817,
+  "completion_tokens": 393,
+  "total_tokens": 122210,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 121600
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.55,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "2,418,012",
+   "element": "State net operating loss carryforwards (note 13 table)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "2,157,503",
+   "element": "Federal net operating loss carryforwards (note 13 table)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(2418012, add(2418012, 2157503))",
+ "answer_model": "0.5285",
+ "program_value": 0.5284677243982372,
+ "docfinqa_row": 445
+}

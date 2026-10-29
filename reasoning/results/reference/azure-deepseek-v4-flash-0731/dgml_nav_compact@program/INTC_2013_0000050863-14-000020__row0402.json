@@ -1,0 +1,70 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0402",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "what percentage of major facilities by square footage are leased as of december 28 , 2013?",
+ "gold": "15%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "INTC_2013_0000050863-14-000020.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/Report/UnresolvedStaffCommentsStatus/Report/table"
+ ],
+ "r1_reasoning_chars": 3584,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 25716,
+  "completion_tokens": 890,
+  "total_tokens": 26606,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/Report/UnresolvedStaffCommentsStatus/Report/table"
+ ],
+ "content_chars": 2512,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "15.118397",
+ "reasoning": "We need answer percentage of major facilities by square footage leased as of Dec 28 2013. From table: Leased facilities total 8.3 million sq ft, Total facilities 54.9 million. Percentage = 8.3 / 54.9 * 100. Need compute. Let's compute: 8.3/54.9 = 0.151184... *100 = 15.1184%. Need answer maybe 15.1%. Use evidence figures.",
+ "raw_content": "<evidence>8.3 | Leased facilities Total\n54.9 | Total facilities Total\n</evidence>\n<program>multiply(divide(8.3, 54.9), 100)</program>\n<answer>15.1</answer>",
+ "r2_usage": {
+  "prompt_tokens": 925,
+  "completion_tokens": 157,
+  "total_tokens": 1082,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "8.3",
+   "element": "Leased facilities Total",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "54.9",
+   "element": "Total facilities Total",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(8.3, 54.9), 100)",
+ "answer_model": "15.1",
+ "program_value": 15.118397085610201,
+ "elapsed_s": 9.59,
+ "outline_source": "INTC_2013_0000050863-14-000020.outline.txt",
+ "outline_chars": 102835
+}

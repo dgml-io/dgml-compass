@@ -1,0 +1,72 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0270",
+ "format": "markdown_pdf_poppler",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "what was the percentage rent increase between 2007 and 2008?",
+ "gold": "22%",
+ "finqa_id": "IP/2009/page_84.pdf-1",
+ "source_page": "page_84",
+ "ticker": "IP",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/markdown_pdf_poppler/IP_2009_0001193125-10-040916.md",
+ "doc_chars": 625466,
+ "prompt_chars": 625615,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 625466,
+ "original_chars": 625466,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 105142,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 290,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "22.0238%",
+ "reasoning": "We need answer question: \"what was the percentage rent increase between 2007 and 2008?\" Need find rent expense figures. Document mentions rent expense was $216 million, $205 million and $168 million for 2009, 2008 and 2007 respectively. So rent increase from 2007 to 2008: (205-168)/168 = 37/168 = 0.220238... = 22.02%. Need compute percentage. Use figures. Evidence: 205 | Rent expense 2008, 168 | Rent expense 2007. Program: divide(subtract(205,168),168) = 0.220238... But answer should be percentage? The question asks \"percentage rent increase\" so answer as 22.0% maybe. The instruction: final answer inside tags containing only value itself with no explanation or units unless question asks for them. It asks percentage, so include %? Usually give number. We'll give 22.0% or 22.02%. Let's compute exactly: 37/168 = 0.2202380952 -> 22.02%. Use that.",
+ "raw_content": "<evidence>\n205 | Rent expense 2008\n168 | Rent expense 2007\n</evidence>\n<program>divide(subtract(205, 168), 168)</program>\n<answer>22.02%</answer>",
+ "usage": {
+  "prompt_tokens": 105445,
+  "completion_tokens": 290,
+  "total_tokens": 105735,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.47,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "205",
+   "element": "Rent expense 2008",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "168",
+   "element": "Rent expense 2007",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(205, 168), 168)",
+ "answer_model": "22.02%",
+ "program_value": 0.22023809523809523,
+ "docfinqa_row": 270
+}

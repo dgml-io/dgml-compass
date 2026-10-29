@@ -1,0 +1,86 @@
+{
+ "id": "GPN_2010_0001193125-10-169025__row0069",
+ "key": "GPN_2010_0001193125-10-169025",
+ "question": "what is the percentage change in the total fair value of non-vested shares from 2009 to 2010?",
+ "gold": "-4.1%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "GPN_2010_0001193125-10-169025.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/NotesToFinancialStatementsContinuation/RestrictedStock/table",
+  "/chunk/NotesToFinancialStatementsContinuation/RestrictedStock"
+ ],
+ "r1_reasoning_chars": 3080,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 22315,
+  "completion_tokens": 852,
+  "total_tokens": 23167,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/NotesToFinancialStatementsContinuation/RestrictedStock/table",
+  "/chunk/NotesToFinancialStatementsContinuation/RestrictedStock"
+ ],
+ "content_chars": 9962,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "-6.430446",
+ "reasoning": "We need percentage change in total fair value of non-vested shares from 2009 to 2010. Total fair value = shares * weighted average grant-date fair value. For 2009: 762 * 42 = 32,004 (thousands). For 2010: 713 * 42 = 29,946. Percentage change = (29,946 - 32,004)/32,004 = -2,058/32,004 ≈ -6.43%. Need compute exactly. Use figures: 762, 42, 713, 42. Program: divide(subtract(multiply(713,42), multiply(762,42)), multiply(762,42)) * 100? But program should output percentage? The question asks percentage change. We can compute as decimal or percentage? Usually answer as percentage number. We'll compute value: (713*42 - 762*42)/(762*42) = (29946 - 32004)/32004 = -2058/32004 = -0.064304... = -6.4304%. So answer -6.43% or -6.4%. Need exact. Let's compute: 2058/32004 = 0.064304... 32004*0.0643 = 2057.8572, so 0.06430446. So -6.4304%. We'll output -6.43% maybe. But instructions: final answer inside tags only value, no units unless asked. They ask percentage change, so include %? Usually yes. But \"containing only the value itself\" - maybe just -6.43. But to be safe, include -6.43%? The instruction says no explanation or units unless the question asks for them. The question asks \"what is the percentage change\" so unit is percentage, so include % sign. We'll output -6.43%.\n\nEvidence: list figures used: 762 | Shares (Non-vested at May 31, 2009), 42 | Weighted Average Grant-Date Fair Value (for 2009), 713 | Shares (Non-vested at May 31, 2010), 42 | Weighted Average Grant-Date Fair Value (for 2010). Also note shares in thousands, but ratio unaffected.\n\nProgram: divide(subtract(multiply(713,42), multiply(762,42)), multiply(762,42)) then multiply by 100? The program should compute the percentage change as a number. We can do multiply(divide(subtract(multiply(713,42), multiply(762,42)), multiply(762,42)), 100). That yields -6.4304. We'll output that.\n\nLet's write.",
+ "raw_content": "<evidence>\n762 | Shares (Non-vested at May 31, 2009)\n42 | Weighted Average Grant-Date Fair Value (2009)\n713 | Shares (Non-vested at May 31, 2010)\n42 | Weighted Average Grant-Date Fair Value (2010)\n</evidence>\n\n<program>\nmultiply(divide(subtract(multiply(713, 42), multiply(762, 42)), multiply(762, 42)), 100)\n</program>\n\n<answer>-6.43%</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2899,
+  "completion_tokens": 697,
+  "total_tokens": 3596,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "762",
+   "element": "Shares (Non-vested at May 31, 2009)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "42",
+   "element": "Weighted Average Grant-Date Fair Value (2009)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "713",
+   "element": "Shares (Non-vested at May 31, 2010)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "42",
+   "element": "Weighted Average Grant-Date Fair Value (2010)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "multiply(divide(subtract(multiply(713, 42), multiply(762, 42)), multiply(762, 42)), 100)",
+ "answer_model": "-6.43%",
+ "program_value": -6.4304461942257225,
+ "elapsed_s": 7.66,
+ "outline_source": "GPN_2010_0001193125-10-169025.outline.txt",
+ "outline_chars": 88725
+}

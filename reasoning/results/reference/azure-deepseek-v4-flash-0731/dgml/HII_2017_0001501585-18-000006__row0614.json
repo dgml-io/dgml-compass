@@ -1,0 +1,53 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0614",
+ "format": "dgml",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what portion of the equity compensation plan approved by security holders is to be issued upon the exercise of options warrants and rights?",
+ "gold": "9.9%",
+ "finqa_id": "HII/2017/page_124.pdf-1",
+ "source_page": "page_124",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/dgml/HII_2017_0001501585-18-000006.dgml.xml",
+ "doc_chars": 733855,
+ "prompt_chars": 734083,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 733855,
+ "original_chars": 733855,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 164566,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 291,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "448,859",
+ "reasoning": "The question asks: \"what portion of the equity compensation plan approved by security holders is to be issued upon the exercise of options warrants and rights?\"\n\nLooking at the document, there's a table in \"Equity Compensation Plan Information\" section (Item 12). The table shows:\n\nPlan category | Number of Securities to be Issued Upon Exercise of Outstanding Options, Warrants and Rights(1) | Weighted-Average Exercise Price | Number of Securities Remaining Available for Future Issuance\n\nEquity compensation plans approved by security holders: 448,859 shares to be issued upon exercise, $0.00 weighted-average exercise price, 4,087,587 remaining available.\n\nThe question asks \"what portion\" - this could mean the number of securities to be issued upon exercise, which is 448,859. Or it could mean the fraction/percentage of the total plan. Let me re-read.\n\n\"what portion of the equity compensation plan approved by security holders is to be issued upon the exercise of options warrants and rights?\"\n\nThe table shows for \"Equity compensation plans approved by security holders\": Number of Securities to be Issued Upon Exercise of Outstanding Options, Warrants and Rights = 448,859.\n\nSo the answer is 448,859 shares. The question asks for the portion, which is the number of securities to be issued upon exercise. I'll provide that number.",
+ "raw_content": "<answer>448,859</answer>",
+ "usage": {
+  "prompt_tokens": 164718,
+  "completion_tokens": 291,
+  "total_tokens": 165009,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 164608
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.35,
+ "answer_tag_found": true,
+ "docfinqa_row": 614
+}

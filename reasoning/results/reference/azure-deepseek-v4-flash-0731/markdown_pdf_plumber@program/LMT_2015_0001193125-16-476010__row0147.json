@@ -1,0 +1,81 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0147",
+ "format": "markdown_pdf_plumber",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was the average backlog at year-end from 2013 to 2015",
+ "gold": "197000",
+ "finqa_id": "LMT/2015/page_56.pdf-3",
+ "source_page": "page_56",
+ "ticker": "LMT",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_plumber/LMT_2015_0001193125-16-476010.md",
+ "doc_chars": 537327,
+ "prompt_chars": 537474,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 537327,
+ "original_chars": 537327,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 120906,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 190,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "87582.333333",
+ "reasoning": "We need average backlog at year-end 2013 to 2015. Backlog figures: 2013 $82,600 million, 2014 $80,547 million, 2015 $99,600 million. Average = (82600+80547+99600)/3 = 262747/3 = 87582.333... million. In millions, answer 87582.33. Use exact figures.",
+ "raw_content": "<evidence>\n$82,600 | Backlog at December 31, 2013 (Selected Financial Data)\n$80,547 | Backlog at December 31, 2014 (Selected Financial Data)\n$99,600 | Backlog at December 31, 2015 (Selected Financial Data)\n</evidence>\n<program>\ndivide(add(add(82600, 80547), 99600), 3)\n</program>\n<answer>87582.33</answer>",
+ "usage": {
+  "prompt_tokens": 121210,
+  "completion_tokens": 190,
+  "total_tokens": 121400,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.65,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$82,600",
+   "element": "Backlog at December 31, 2013 (Selected Financial Data)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$80,547",
+   "element": "Backlog at December 31, 2014 (Selected Financial Data)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$99,600",
+   "element": "Backlog at December 31, 2015 (Selected Financial Data)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(add(add(82600, 80547), 99600), 3)",
+ "answer_model": "87582.33",
+ "program_value": 87582.33333333333,
+ "docfinqa_row": 147
+}

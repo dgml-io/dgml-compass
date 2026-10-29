@@ -1,0 +1,53 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0765",
+ "format": "dgml_compact",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "for 2002 and 2003 , what is the average crack spread values?",
+ "gold": "3.5",
+ "finqa_id": "MRO/2003/page_84.pdf-4",
+ "source_page": "page_84",
+ "ticker": "MRO",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/dgml_compact/MRO_2003_0001193125-04-036535.dgml.txt",
+ "doc_chars": 625257,
+ "prompt_chars": 625406,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 625257,
+ "original_chars": 625257,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 138745,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 313,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "The question asks for the average crack spread values for 2002 and 2003. I need to find \"crack spread\" in the document.\n\nSearching the document for \"crack spread\":\n- In the MD&A section: \"The crack spread, which is a measure of the difference between spot market gasoline and distillate prices and spot market crude costs, is an industry indicator of refining margins.\" - this is a definition, no values.\n- In the RM&T segment derivatives section: \"Derivative commodity instruments are used to protect against decreases in the future crack spreads.\" - no values.\n- In the table \"Derivative gains (losses) included in RM&T segment income\": \"Protect crack spread values | 6 | 1\" - these are derivative gains/losses, not average crack spread values.\n\nThe question asks for \"average crack spread values\" for 2002 and 2003. The document does not seem to provide explicit average crack spread values. It provides refining and wholesale marketing margin, which is related but not the same as crack spread.\n\nLet me check the Five-Year Operating Summary: \"Refining and Wholesale Marketing Margin (dollars per gallon)(c) | $ .0601 | $ .0387 | $ .1167 | $ .0788 | $ .0353\" - this is the refining margin, not crack spread.\n\nThe document does not contain average crack spread values. Therefore, the answer is NOT_FOUND.",
+ "raw_content": "<answer>NOT_FOUND</answer>",
+ "usage": {
+  "prompt_tokens": 138890,
+  "completion_tokens": 313,
+  "total_tokens": 139203,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 138752
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.75,
+ "answer_tag_found": true,
+ "docfinqa_row": 765
+}

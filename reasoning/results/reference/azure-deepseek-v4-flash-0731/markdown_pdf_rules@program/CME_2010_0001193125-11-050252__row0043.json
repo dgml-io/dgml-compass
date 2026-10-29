@@ -1,0 +1,74 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0043",
+ "format": "markdown_pdf_rules",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "assuming all options in the compensation plans approved by security holders were exercised , what would be the deemed proceeds to the company?",
+ "gold": "373153150",
+ "finqa_id": "CME/2010/page_123.pdf-2",
+ "source_page": "page_123",
+ "ticker": "CME",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/markdown_pdf_rules/CME_2010_0001193125-11-050252.md",
+ "doc_chars": 415699,
+ "prompt_chars": 415930,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 415699,
+ "original_chars": 415699,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93329,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 435,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "373153158.3",
+ "reasoning": "We need answer question: \"assuming all options in the compensation plans approved by security holders were exercised , what would be the deemed proceeds to the company?\" Need find relevant figures. In Item 12 Equity Compensation Plan Information table: \"Number of Securities to be Issued Upon Exercise of Outstanding Options (a)\" and \"Weighted-Average Exercise Price of Outstanding Options (b)\" for plans approved by security holders: 1,211,143 options, weighted-average exercise price $308.10. Deemed proceeds = number * exercise price = 1,211,143 * 308.10. Compute. 1,211,143 * 308.10 = 1,211,143*308 + *0.10? Let's compute precisely. 1,211,143 * 308.10 = 1,211,143 * 308 + 1,211,143 * 0.10 = 1,211,143*300=363,342,900; *8=9,689,144; sum=373,032,044; plus 121,114.3 = 373,153,158.3. So $373,153,158.3. But question \"deemed proceeds to the company\" likely exercise proceeds = shares * exercise price. Need answer value. Use evidence: 1,211,143 | Number of Securities to be Issued Upon Exercise of Outstanding Options (a) (plans approved by security holders); 308.10 | Weighted-Average Exercise Price of Outstanding Options (b). Program multiply(1211143, 308.10). Final answer inside <answer>373,153,158.3</answer> (no units).",
+ "raw_content": "<evidence>\n1,211,143 | Number of Securities to be Issued Upon Exercise of Outstanding Options (a) (plans approved by security holders)\n308.10 | Weighted-Average Exercise Price of Outstanding Options (b)\n</evidence>\n\n<program>\nmultiply(1211143, 308.10)\n</program>\n\n<answer>373,153,158.3</answer>",
+ "usage": {
+  "prompt_tokens": 93640,
+  "completion_tokens": 435,
+  "total_tokens": 94075,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.53,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,211,143",
+   "element": "Number of Securities to be Issued Upon Exercise of Outstanding Options (a) (plans approved by security holders)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "308.10",
+   "element": "Weighted-Average Exercise Price of Outstanding Options (b)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(1211143, 308.10)",
+ "answer_model": "373,153,158.3",
+ "program_value": 373153158.3,
+ "docfinqa_row": 43
+}

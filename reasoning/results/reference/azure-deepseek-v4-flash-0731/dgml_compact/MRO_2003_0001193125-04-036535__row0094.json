@@ -1,0 +1,50 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0094",
+ "format": "dgml_compact",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "by what percentage did protect carrying values of excess inventories increase from 2002 to 2003?",
+ "gold": "39.0%",
+ "finqa_id": "MRO/2003/page_84.pdf-3",
+ "source_page": "page_84",
+ "ticker": "MRO",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/dgml_compact/MRO_2003_0001193125-04-036535.dgml.txt",
+ "doc_chars": 625257,
+ "prompt_chars": 625442,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 625257,
+ "original_chars": 625257,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 138745,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 209,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "39.02%",
+ "reasoning": "We need to find the percentage increase in \"protect carrying values of excess inventories\" from 2002 to 2003. In the document, under RM&T segment derivatives, there is a table with strategies and amounts. The row \"Protect carrying values of excess inventories\" shows (57) for 2003 and (41) for 2002. These are losses, but the question asks \"by what percentage did protect carrying values of excess inventories increase from 2002 to 2003?\" The values are negative, but we interpret the magnitude. The increase from 41 to 57 is (57-41)/41 = 16/41 ≈ 0.3902 = 39.02%. But careful: the numbers are negative, but the question likely refers to the absolute value of the loss. So percentage increase = (57-41)/41 *100 = 16/41*100 ≈ 39.02%. We'll answer with that.",
+ "raw_content": "<answer>39.02%</answer>",
+ "usage": {
+  "prompt_tokens": 138893,
+  "completion_tokens": 209,
+  "total_tokens": 139102,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.51,
+ "answer_tag_found": true,
+ "docfinqa_row": 94
+}

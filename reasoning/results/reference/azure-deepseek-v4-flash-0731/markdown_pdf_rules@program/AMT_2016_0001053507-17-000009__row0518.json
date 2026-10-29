@@ -1,0 +1,81 @@
+{
+ "id": "AMT_2016_0001053507-17-000009__row0518",
+ "format": "markdown_pdf_rules",
+ "key": "AMT_2016_0001053507-17-000009",
+ "question": "what were the average tax penalties from 2014 to 2016 in millions",
+ "gold": "6.3",
+ "finqa_id": "AMT/2016/page_125.pdf-4",
+ "source_page": "page_125",
+ "ticker": "AMT",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf_rules/AMT_2016_0001053507-17-000009.md",
+ "doc_chars": 479012,
+ "prompt_chars": 479166,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 479012,
+ "original_chars": 479012,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 111015,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 229,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "6.3",
+ "reasoning": "We need answer question: \"what were the average tax penalties from 2014 to 2016 in millions\". Need find tax penalties. Document mentions \"The Company recorded penalties and tax-related interest expense to the tax provision of $9.2 million, $3.2 million and $6.5 million for the years ended December 31, 2016, 2015 and 2014, respectively.\" So average = (9.2+3.2+6.5)/3 = 19/3 = 6.333... million. Need provide evidence and program.",
+ "raw_content": "<evidence>\n$9.2 million | Note 12 Income Taxes - penalties and tax-related interest expense 2016\n$3.2 million | Note 12 Income Taxes - penalties and tax-related interest expense 2015\n$6.5 million | Note 12 Income Taxes - penalties and tax-related interest expense 2014\n</evidence>\n\n<program>divide(add(9.2, add(3.2, 6.5)), 3)</program>\n\n<answer>6.33</answer>",
+ "usage": {
+  "prompt_tokens": 111319,
+  "completion_tokens": 229,
+  "total_tokens": 111548,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.7,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$9.2 million",
+   "element": "Note 12 Income Taxes - penalties and tax-related interest expense 2016",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$3.2 million",
+   "element": "Note 12 Income Taxes - penalties and tax-related interest expense 2015",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$6.5 million",
+   "element": "Note 12 Income Taxes - penalties and tax-related interest expense 2014",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(add(9.2, add(3.2, 6.5)), 3)",
+ "answer_model": "6.33",
+ "program_value": 6.3,
+ "docfinqa_row": 518
+}

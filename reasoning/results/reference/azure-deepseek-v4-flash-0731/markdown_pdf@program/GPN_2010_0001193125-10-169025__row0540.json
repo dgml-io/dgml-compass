@@ -1,0 +1,72 @@
+{
+ "id": "GPN_2010_0001193125-10-169025__row0540",
+ "format": "markdown_pdf",
+ "key": "GPN_2010_0001193125-10-169025",
+ "question": "in 2009 what was the percentage change in the non-vested at may 31 2009",
+ "gold": "47.1%",
+ "finqa_id": "GPN/2010/page_89.pdf-1",
+ "source_page": "page_89",
+ "ticker": "GPN",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/markdown_pdf/GPN_2010_0001193125-10-169025.md",
+ "doc_chars": 321931,
+ "prompt_chars": 322091,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 321931,
+ "original_chars": 321931,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 73426,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 262,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "47.1042%",
+ "reasoning": "We need answer: \"in 2009 what was the percentage change in the non-vested at may 31 2009\" Need interpret. The document has restricted stock non-vested table: Non-vested at May 31, 2008 518; Granted 430; Vested (159); Forfeited (27); Non-vested at May 31, 2009 762. Percentage change from 2008 to 2009? (762-518)/518 = 244/518 = 0.4710... = 47.1%. Or maybe \"in 2009\" means fiscal year 2009 change. Need compute. Evidence: 518 and 762. Program divide(subtract(762,518),518). Answer 47.1%? The question asks \"percentage change in the non-vested at may 31 2009\" likely from prior year. Provide value.",
+ "raw_content": "<evidence>\n518 | Non-vested at May 31, 2008\n762 | Non-vested at May 31, 2009\n</evidence>\n<program>divide(subtract(762, 518), 518)</program>\n<answer>47.1%</answer>",
+ "usage": {
+  "prompt_tokens": 73736,
+  "completion_tokens": 262,
+  "total_tokens": 73998,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.06,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "518",
+   "element": "Non-vested at May 31, 2008",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "762",
+   "element": "Non-vested at May 31, 2009",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(762, 518), 518)",
+ "answer_model": "47.1%",
+ "program_value": 0.47104247104247104,
+ "docfinqa_row": 540
+}

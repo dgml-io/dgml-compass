@@ -1,0 +1,53 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0552",
+ "format": "dgml_compact",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "in 2014 what was the ratio of the estimated future benefit payments due in 2015 compared to the amount after 2020",
+ "gold": "0.15",
+ "finqa_id": "LMT/2014/page_91.pdf-4",
+ "source_page": "page_91",
+ "ticker": "LMT",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/dgml_compact/LMT_2014_0001193125-15-038681.dgml.txt",
+ "doc_chars": 524480,
+ "prompt_chars": 524682,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 524480,
+ "original_chars": 524480,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 107424,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 607,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.154",
+ "reasoning": "We need the ratio of estimated future benefit payments due in 2015 compared to the amount after 2020. The document has a table \"Expected future benefit payments\" for qualified defined benefit pension plans and retiree medical and life insurance plans. The question likely refers to qualified defined benefit pension plans? It says \"estimated future benefit payments\" - the table shows for qualified defined benefit pension plans: 2015: $2,070 million, 2016: $2,150, 2017: $2,230, 2018: $2,320, 2019: $2,420, 2020-2024: $13,430. The question: \"in 2014 what was the ratio of the estimated future benefit payments due in 2015 compared to the amount after 2020\" - \"after 2020\" likely means the 2020-2024 period? Or \"after 2020\" could mean beyond 2020, but the table only gives 2020-2024. The question says \"compared to the amount after 2020\" - probably the amount for 2020-2024. So ratio = 2070 / 13430 = 0.154... Let's compute: 2070/13430 = 0.1541... So ratio is approximately 0.154. But the question might be about total future benefit payments? The table is for qualified defined benefit pension plans. There is also retiree medical and life insurance plans: 2015: 190, 2020-2024: 1020. But the question says \"estimated future benefit payments\" without specifying which plan. The document has a table \"Expected future benefit payments\" that includes both. But the question likely refers to the qualified defined benefit pension plans because that's the main one. However, the question says \"in 2014 what was the ratio of the estimated future benefit payments due in 2015 compared to the amount after 2020\" - the table is as of December 31, 2014. So we use the 2014 table. The ratio is 2070/13430. Let's compute: 2070/13430 = 0.1541... So answer is approximately 0.154. But the question might want a ratio like \"2070:13430\" or a decimal. The instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So we should give the ratio as a number. Probably 0.154. Let's compute exactly: 2070/13430 = 0.1541... So 0.154. Alternatively, if they want the ratio as a fraction, but the instruction says \"value itself\" - likely a decimal. I'll put 0.154.",
+ "raw_content": "<answer>0.154</answer>",
+ "usage": {
+  "prompt_tokens": 107580,
+  "completion_tokens": 607,
+  "total_tokens": 108187,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 107520
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.96,
+ "answer_tag_found": true,
+ "docfinqa_row": 552
+}

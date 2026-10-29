@@ -1,0 +1,72 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0369",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what is the percentage difference in the fair value per share between 2015 and 2016?",
+ "gold": "71%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "EW_2016_0001099800-17-000008.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/CommonStock/EmployeeAndDirectorStockPlans/OptionAwardValuationAssumptions",
+  "/chunk/CommonStock/EmployeeAndDirectorStockPlans/ESPPValuationAssumptionYears"
+ ],
+ "r1_reasoning_chars": 6580,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 17156,
+  "completion_tokens": 1733,
+  "total_tokens": 18889,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/CommonStock/EmployeeAndDirectorStockPlans/OptionAwardValuationAssumptions",
+  "/chunk/CommonStock/EmployeeAndDirectorStockPlans/ESPPValuationAssumptionYears"
+ ],
+ "content_chars": 8212,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "70.987314",
+ "reasoning": "We need percentage difference in fair value per share between 2015 and 2016. Which fair value per share? The question likely refers to option awards fair value per share from first table: 2016 $31.00, 2015 $18.13. Percentage difference = (31.00 - 18.13)/18.13 * 100. Compute.",
+ "raw_content": "<evidence>\n$ 31.00 | OptionFairValuePerShare (2016)\n$ 18.13 | OptionFairValuePerShare (2015)\n</evidence>\n<program>multiply(divide(subtract(31.00, 18.13), 18.13), 100)</program>",
+ "r2_usage": {
+  "prompt_tokens": 2418,
+  "completion_tokens": 145,
+  "total_tokens": 2563,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 31.00",
+   "element": "OptionFairValuePerShare (2016)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ 18.13",
+   "element": "OptionFairValuePerShare (2015)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(31.00, 18.13), 18.13), 100)",
+ "answer_model": null,
+ "program_value": 70.98731384445671,
+ "elapsed_s": 9.31,
+ "outline_source": "EW_2016_0001099800-17-000008.outline.txt",
+ "outline_chars": 67317
+}

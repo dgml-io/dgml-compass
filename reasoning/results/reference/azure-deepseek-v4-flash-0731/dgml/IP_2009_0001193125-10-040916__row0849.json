@@ -1,0 +1,53 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0849",
+ "format": "dgml",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "at december 31 , 2009 , total future minimum commitments under existing non-cancelable leases and purchase obligations what was the percent of the lease obligations compared to the purchase obligations in 2012",
+ "gold": "16.6%",
+ "finqa_id": "IP/2009/page_84.pdf-3",
+ "source_page": "page_84",
+ "ticker": "IP",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/dgml/IP_2009_0001193125-10-040916.dgml.xml",
+ "doc_chars": 908141,
+ "prompt_chars": 908439,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 908141,
+ "original_chars": 908141,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 216559,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 412,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "19.9%",
+ "reasoning": "We need to find total future minimum commitments under existing non-cancelable leases and purchase obligations at Dec 31, 2009. The question asks: \"what was the percent of the lease obligations compared to the purchase obligations in 2012\". So we need lease obligations for 2012 and purchase obligations for 2012, then compute lease/purchase * 100.\n\nFrom the document, there is a table \"Future minimum commitments\" under Note 11 Commitments and Contingent Liabilities. It shows for 2010, 2011, 2012, 2013, 2014, Thereafter. Lease obligations: 2010: 177, 2011: 148, 2012: 124, 2013: 96, 2014: 79, Thereafter: 184. Purchase obligations: 2010: 2,262, 2011: 657, 2012: 623, 2013: 556, 2014: 532, Thereafter: 3,729.\n\nSo for 2012: lease = 124, purchase = 623. Percent = 124/623 * 100 = 19.9% approximately. Let's compute: 124/623 = 0.1990... so 19.9%. The question asks \"what was the percent of the lease obligations compared to the purchase obligations in 2012\". So answer is 19.9% or 20%? We'll give exact value.\n\nWe'll put in <answer>19.9%</answer> or maybe 19.9. The question says \"percent\" so include % sign? The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for percent, so we can include % sign. But to be safe, we can give numeric value. I'll put 19.9% inside.",
+ "raw_content": "<answer>19.9%</answer>",
+ "usage": {
+  "prompt_tokens": 216728,
+  "completion_tokens": 412,
+  "total_tokens": 217140,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 216576
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.35,
+ "answer_tag_found": true,
+ "docfinqa_row": 849
+}

@@ -1,0 +1,62 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0391",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "of the square feet in the us what was the percent of the owned facility of the us total",
+ "gold": "92.8%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "INTC_2013_0000050863-14-000020.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/Report/UnresolvedStaffCommentsStatus/Report/FacilitySquareFootage"
+ ],
+ "r1_reasoning_chars": 1538,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 25715,
+  "completion_tokens": 378,
+  "total_tokens": 26093,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/Report/UnresolvedStaffCommentsStatus/Report/FacilitySquareFootage"
+ ],
+ "content_chars": 1886,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "92.857143",
+ "reasoning": "We need answer percent owned facility of US total. US owned 29.9, US total 32.2. Percent = 29.9/32.2*100. Need compute. Evidence figures. Program divide(29.9,32.2) then multiply? Program can use multiply(divide(29.9,32.2),100). Answer numeric.",
+ "raw_content": "<evidence>29.9 | Owned facilities United States</evidence>\n<evidence>32.2 | Total facilities United States</evidence>\n<program>multiply(divide(29.9, 32.2), 100)</program>\n<answer>92.85714285714286</answer>",
+ "r2_usage": {
+  "prompt_tokens": 833,
+  "completion_tokens": 143,
+  "total_tokens": 976,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "29.9",
+   "element": "Owned facilities United States",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(29.9, 32.2), 100)",
+ "answer_model": "92.85714285714286",
+ "program_value": 92.85714285714285,
+ "elapsed_s": 4.56,
+ "outline_source": "INTC_2013_0000050863-14-000020.outline.txt",
+ "outline_chars": 102835
+}

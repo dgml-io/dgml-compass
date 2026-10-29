@@ -1,0 +1,53 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0089",
+ "format": "dgml",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "pursuant to the agreement , on march 30 , 2012 , what was the approximate price for each site the company purchased in thousands",
+ "gold": "189625",
+ "finqa_id": "AMT/2012/page_118.pdf-2",
+ "source_page": "page_118",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/dgml/AMT_2012_0001193125-13-077821.dgml.xml",
+ "doc_chars": 945867,
+ "prompt_chars": 946084,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 945867,
+ "original_chars": 945867,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 220539,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 323,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "190",
+ "reasoning": "We need to find the Vivo acquisition: On March 30, 2012, purchased 800 communications sites for aggregate purchase price of $151.7 million. So per site = 151.7 million / 800 = 0.189625 million = $189.625 thousand. The question asks \"approximate price for each site ... in thousands\". So answer ~190 (thousand). But check: \"pursuant to the agreement, on march 30, 2012\" - that is the Vivo acquisition. The text says: \"On March 30, 2012, the Company purchased 800 communications sites for an aggregate purchase price of $151.7 million.\" So per site = 151.7/800 = 0.189625 million = 189.625 thousand. Approximate 190. But the question says \"in thousands\" so answer 190. Or maybe they want the exact number? Let's compute: 151.7 million / 800 = 0.189625 million = 189.625 thousand. So answer 189.625 or 190. The question says \"approximate price\" so 190. But let's see if there is any other mention. The document says \"for an aggregate purchase price of $151.7 million\" and \"800 communications sites\". So per site = 151.7/800 = 0.189625 million = 189.625 thousand. So answer 189.625 or 190. I'll put 190.",
+ "raw_content": "<answer>190</answer>",
+ "usage": {
+  "prompt_tokens": 220695,
+  "completion_tokens": 323,
+  "total_tokens": 221018,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 217088
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.61,
+ "answer_tag_found": true,
+ "docfinqa_row": 89
+}

@@ -1,0 +1,66 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0219",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "what was the percent of the increase in the backlog from 2012 to 2013",
+ "gold": "13.3%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "LMT_2014_0001193125-15-038681.outline.txt",
+ "doc_source": "LMT_2014_0001193125-15-038681.dgml.xml",
+ "outline_chars": 64445,
+ "predicted_xpaths": [
+  "/chunk/PartDivision/PartDivision/BacklogDescription"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 2068,
+ "r1_usage": {
+  "prompt_tokens": 16115,
+  "completion_tokens": 513,
+  "total_tokens": 16628,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/PartDivision/PartDivision/BacklogDescription"
+ ],
+ "content_chars": 15134,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need percent increase in backlog from 2012 to 2013. The document excerpt gives backlog at Dec 31, 2014 ($80.5B) and Dec 31, 2013 ($82.6B). It does not give 2012 backlog. So not enough info. But maybe there is another region? The provided regions only include these. No 2012 backlog. So answer NOT_FOUND.",
+ "raw_content": "<evidence></evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 3235,
+  "completion_tokens": 113,
+  "total_tokens": 3348,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 3235,
+   "completion_tokens": 113,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 3.91
+}

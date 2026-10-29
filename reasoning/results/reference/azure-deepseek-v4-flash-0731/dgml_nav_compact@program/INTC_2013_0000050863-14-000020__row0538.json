@@ -1,0 +1,72 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0538",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "what was the percentage change in diluted earnings per common share december 29 2012 and december 28 2013?",
+ "gold": "-11%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "INTC_2013_0000050863-14-000020.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/ReportPartDivision/MarketRiskDisclosure/FinancialStatementPeriodHeader",
+  "/chunk/ReportPartDivision/MarketRiskDisclosure/FinancialStatementPeriodHeader/ConsolidatedStatementsOfIncome/EarningsPerShareAmount"
+ ],
+ "r1_reasoning_chars": 4082,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 25726,
+  "completion_tokens": 1022,
+  "total_tokens": 26748,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ReportPartDivision/MarketRiskDisclosure/FinancialStatementPeriodHeader",
+  "/chunk/ReportPartDivision/MarketRiskDisclosure/FinancialStatementPeriodHeader/ConsolidatedStatementsOfIncome/EarningsPerShareAmount"
+ ],
+ "content_chars": 10479,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "-11.267606",
+ "reasoning": "We need percentage change in diluted EPS from Dec 29 2012 (fiscal 2012) to Dec 28 2013 (fiscal 2013). From income statement: Diluted EPS 2013 = $1.89, 2012 = $2.13. Percentage change = (1.89 - 2.13)/2.13 * 100 = -0.24/2.13 = -0.112676... = -11.2676%. Need answer as percentage change. Probably -11.3% or -11.27%. The question asks \"what was the percentage change\" so answer numeric. We'll provide -11.27% maybe. Need evidence figures: $1.89 and $2.13. Program: multiply(divide(subtract(1.89, 2.13), 2.13), 100). But careful: figures as printed include $ and commas. Use 1.89 and 2.13.",
+ "raw_content": "<evidence>$ 1.89 | Diluted earnings per common share (2013)\n$ 2.13 | Diluted earnings per common share (2012)</evidence>\n<program>multiply(divide(subtract(1.89, 2.13), 2.13), 100)</program>\n<answer>-11.27</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2976,
+  "completion_tokens": 283,
+  "total_tokens": 3259,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 1.89",
+   "element": "Diluted earnings per common share (2013)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ 2.13",
+   "element": "Diluted earnings per common share (2012)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(1.89, 2.13), 2.13), 100)",
+ "answer_model": "-11.27",
+ "program_value": -11.267605633802818,
+ "elapsed_s": 8.43,
+ "outline_source": "INTC_2013_0000050863-14-000020.outline.txt",
+ "outline_chars": 102835
+}

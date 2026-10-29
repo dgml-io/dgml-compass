@@ -1,0 +1,84 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0261",
+ "format": "markdown_pdf_plumber",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "what was the average price per share from november to december?",
+ "gold": "3.61",
+ "finqa_id": "IPG/2008/page_21.pdf-3",
+ "source_page": "page_21",
+ "ticker": "IPG",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_plumber/IPG_2008_0001193125-09-040141.md",
+ "doc_chars": 407053,
+ "prompt_chars": 407205,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 407053,
+ "original_chars": 407053,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 104214,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 733,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "3.789082",
+ "reasoning": "We need answer average price per share from November to December. Need figures. Repurchase table: November 1-30: 4,468 shares, $3.24; December 1-31: 12,850 shares, $3.98. Average price per share from November to December? Could be weighted average? Question \"average price per share from november to december\" likely average of the two monthly average prices? Or combined weighted average? Need compute. The table gives total for quarter: Total 47,022, $5.18. But November and December only. If asking average price per share from November to December, likely weighted average of shares purchased in Nov and Dec: total shares = 4,468+12,850=17,318; total value = 4,468*3.24 + 12,850*3.98. Compute: 4,468*3.24 = 14,476.32? 4,468*3 = 13,404; 4,468*0.24=1,072.32; sum 14,476.32. 12,850*3.98 = 12,850*4 - 12,850*0.02 = 51,400 - 257 = 51,143. Sum = 65,619.32. Divide by 17,318 = 3.789? 17,318*3.79 = 65,635.22, slightly high. 3.788? 17,318*3.788 = 65,600? Let's compute precisely: 65,619.32 / 17,318. 17,318*3.78 = 65,462.04; remainder 157.28; /17,318=0.00908; so 3.78908. So ~3.79. But question might expect simple average of $3.24 and $3.98 = $3.61. Need infer. \"average price per share from november to december\" In table, each month has average price paid per share. The average price per share from November to December could be the average of the two monthly averages, but more likely weighted by shares. The document says \"Total Average Price Paid per Share\" for total quarter is $5.18, which is weighted average of all months. For November and December, if asked average price per share from November to December, we should compute weighted average using shares. Let's check if there is any explicit figure. No. So compute weighted average. Evidence: 4,468 | November 1-30; $3.24 | November 1-30; 12,850 | December 1-31; $3.98 | December 1-31. Program: divide(add(multiply(4468, 3.24), multiply(12850, 3.98)), add(4468, 12850)). Answer ~3.79. Need final inside <answer> tags only value. Probably 3.79.",
+ "raw_content": "<evidence>\n4,468 | November 1-30\n$3.24 | November 1-30\n12,850 | December 1-31\n$3.98 | December 1-31\n</evidence>\n<program>\ndivide(add(multiply(4468, 3.24), multiply(12850, 3.98)), add(4468, 12850))\n</program>\n<answer>3.79</answer>",
+ "usage": {
+  "prompt_tokens": 104514,
+  "completion_tokens": 733,
+  "total_tokens": 105247,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 15.73,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "4,468",
+   "element": "November 1-30",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$3.24",
+   "element": "November 1-30",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "12,850",
+   "element": "December 1-31",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$3.98",
+   "element": "December 1-31",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(multiply(4468, 3.24), multiply(12850, 3.98)), add(4468, 12850))",
+ "answer_model": "3.79",
+ "program_value": 3.789081880124726,
+ "docfinqa_row": 261
+}

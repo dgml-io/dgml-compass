@@ -1,0 +1,77 @@
+{
+ "id": "CMCSA_2015_0001193125-16-452423__row0916",
+ "format": "dgml",
+ "key": "CMCSA_2015_0001193125-16-452423",
+ "question": "in 2015 what was the ratio of the nol carry forward for the federal to the foreign taxes",
+ "gold": "19.3%",
+ "finqa_id": "CMCSA/2015/page_112.pdf-4",
+ "source_page": "page_112",
+ "ticker": "CMCSA",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml/CMCSA_2015_0001193125-16-452423.dgml.xml",
+ "doc_chars": 907858,
+ "prompt_chars": 908035,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": true,
+ "truncation": "head",
+ "kept_chars": 907748,
+ "original_chars": 1078239,
+ "kept_fraction": 0.8419,
+ "est_doc_tokens": 250309,
+ "est_kept_tokens": 210513,
+ "budget_tokens": 240000,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 291,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.192857",
+ "reasoning": "We need answer question: \"in 2015 what was the ratio of the nol carry forward for the federal to the foreign taxes\"\n\nNeed find figures: federal net operating loss carryforwards and foreign net operating loss carryforwards as of Dec 31 2015. From Note 15 Income Taxes: \"As of December 31, 2015, we had federal net operating loss carryforwards of $135 million and various state net operating loss carryforwards that expire in periods through 2035. As of December 31, 2015, we also had foreign net operating loss carryforwards of $700 million that are related to the foreign operations of NBCUniversal...\" So ratio federal to foreign = 135 / 700 = 0.192857... = 0.1929 approx. Need answer value. The question says \"ratio of the nol carry forward for the federal to the foreign taxes\" likely federal NOL / foreign NOL. So 135/700 = 0.192857. Provide as decimal maybe 0.1929. Need evidence list figures. Program divide(135,700).",
+ "raw_content": "<evidence>\n$135 million | NetOperatingLossCarryforwards (federal)\n$700 million | NetOperatingLossCarryforwards (foreign)\n</evidence>\n<program>divide(135, 700)</program>\n<answer>0.192857</answer>",
+ "usage": {
+  "prompt_tokens": 210844,
+  "completion_tokens": 291,
+  "total_tokens": 211135,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 210688
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.6,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$135 million",
+   "element": "NetOperatingLossCarryforwards (federal)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$700 million",
+   "element": "NetOperatingLossCarryforwards (foreign)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(135, 700)",
+ "answer_model": "0.192857",
+ "program_value": 0.19285714285714287,
+ "docfinqa_row": 916
+}

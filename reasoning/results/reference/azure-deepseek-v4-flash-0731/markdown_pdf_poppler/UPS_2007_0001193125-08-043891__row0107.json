@@ -1,0 +1,50 @@
+{
+ "id": "UPS_2007_0001193125-08-043891__row0107",
+ "format": "markdown_pdf_poppler",
+ "key": "UPS_2007_0001193125-08-043891",
+ "question": "what is the total cash inflow from the stock purchases of employees in 2007 , ( in millions ) ?",
+ "gold": "115.6",
+ "finqa_id": "UPS/2007/page_98.pdf-1",
+ "source_page": "page_98",
+ "ticker": "UPS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_poppler/UPS_2007_0001193125-08-043891.md",
+ "doc_chars": 420536,
+ "prompt_chars": 420720,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 420536,
+ "original_chars": 420536,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 75577,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 312,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "174",
+ "reasoning": "We need to find total cash inflow from stock purchases of employees in 2007. The document mentions \"Issuances of common stock\" in financing activities: $174 million in 2007. Also, from Note 11, \"We received cash of $52, $30, and $21 million during 2007, 2006, and 2005, respectively, from option holders resulting from the exercise of stock options.\" Also, employee stock purchase plan: \"Employees purchased 1.8, 1.9, and 2.0 million shares at average prices of $64.20, $66.64, and $64.54 per share during 2007, 2006, and 2005, respectively.\" That would be 1.8 million * $64.20 = $115.56 million. But the question asks \"total cash inflow from the stock purchases of employees\" - likely includes both option exercises and employee stock purchase plan? The cash flow statement shows \"Issuances of common stock\" $174 million. That likely includes all employee stock purchases (options, ESPP, etc.). The document says \"Issuances of common stock\" in financing activities: $174 million in 2007. So answer is 174. But let's verify: The cash flow statement line \"Issuances of common stock\" is $174 million. That is the total cash inflow from issuing common stock to employees. So answer is 174.",
+ "raw_content": "<answer>174</answer>",
+ "usage": {
+  "prompt_tokens": 75728,
+  "completion_tokens": 312,
+  "total_tokens": 76040,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 6.07,
+ "answer_tag_found": true,
+ "docfinqa_row": 107
+}

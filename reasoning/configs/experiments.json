@@ -1,0 +1,478 @@
+{
+  "_README": "The protocol: every run is `dgr run <experiment> --yes`, which exports exactly the parameters recorded here (backend = model, client, reasoning effort, temperature, max tokens, prompt budget; env = the condition). The endpoint and key come from the environment or .env. Experiment names are <split>_<condition>; results land in results/reference/<model>/<condition>/ (a condition directory holds both splits, the question ids differ).",
+  "backends": {
+    "deepseek-azure": {
+      "LLM_CLIENT": "raw",
+      "LLM_MODEL": "azure/DeepSeek-V4-Flash-0731",
+      "LLM_REASONING_EFFORT": "low",
+      "LLM_TEMPERATURE": "0.0",
+      "LLM_MAX_TOKENS": "8192",
+      "LLM_MAX_PROMPT_TOKENS": "240000",
+      "_note": "The reference model: DeepSeek-V4-Flash-0731 on Azure AI Foundry through the stdlib client (llm.py), reasoning effort low, temperature 0, prompt budget 240k tokens counted with the model's own tokenizer (LLM_TOKENIZER, pinned; a run refuses to start if it cannot be loaded). Set AZURE_OPENAI_ENDPOINT and AZURE_OPENAI_API_KEY in .env. To run another model, add a backend with the same keys (LLM_CLIENT=litellm reaches any litellm provider).",
+      "LLM_TOKENIZER": "hf:deepseek-ai/DeepSeek-V4-Flash-0731",
+      "AZURE_API_VERSION": "2024-10-21",
+      "AZURE_MAX_TOKENS_FIELD": "max_tokens"
+    }
+  },
+  "experiments": {
+    "dev_dgml": {
+      "_desc": "dev split (15 filings, 122 questions): full read as DGML (Pass A), plain prompt; results in dgml/.",
+      "backend": "deepseek-azure",
+      "command": "answer",
+      "args": [
+        "--split",
+        "dev",
+        "--format",
+        "dgml"
+      ],
+      "env": {}
+    },
+    "dev_dgml_program": {
+      "_desc": "dev split (15 filings, 122 questions): full read as DGML (Pass A), program prompt (cites every figure as `value | element`, the program is executed); results in dgml@program/.",
+      "backend": "deepseek-azure",
+      "command": "answer",
+      "args": [
+        "--split",
+        "dev",
+        "--format",
+        "dgml"
+      ],
+      "env": {
+        "BENCH_ANSWER_MODE": "cite+program",
+        "BENCH_CONDITION_SUFFIX": "program"
+      }
+    },
+    "dev_dgml_compact": {
+      "_desc": "dev split (15 filings, 122 questions): full read as DGML compact serialization (make_compact.py), plain prompt; results in dgml_compact/.",
+      "backend": "deepseek-azure",
+      "command": "answer",
+      "args": [
+        "--split",
+        "dev",
+        "--format",
+        "dgml_compact"
+      ],
+      "env": {}
+    },
+    "dev_dgml_compact_program": {
+      "_desc": "dev split (15 filings, 122 questions): full read as DGML compact serialization (make_compact.py), program prompt (cites every figure as `value | element`, the program is executed); results in dgml_compact@program/.",
+      "backend": "deepseek-azure",
+      "command": "answer",
+      "args": [
+        "--split",
+        "dev",
+        "--format",
+        "dgml_compact"
+      ],
+      "env": {
+        "BENCH_ANSWER_MODE": "cite+program",
+        "BENCH_CONDITION_SUFFIX": "program"
+      }
+    },
+    "dev_markdown_pdf": {
+      "_desc": "dev split (15 filings, 122 questions): full read as markdown from the PDF, pymupdf4llm 2.0 (ONNX layout and table models), plain prompt; results in markdown_pdf/.",
+      "backend": "deepseek-azure",
+      "command": "answer",
+      "args": [
+        "--split",
+        "dev",
+        "--format",
+        "markdown_pdf"
+      ],
+      "env": {}
+    },
+    "dev_markdown_pdf_program": {
+      "_desc": "dev split (15 filings, 122 questions): full read as markdown from the PDF, pymupdf4llm 2.0 (ONNX layout and table models), program prompt (cites every figure as `value | element`, the program is executed); results in markdown_pdf@program/.",
+      "backend": "deepseek-azure",
+      "command": "answer",
+      "args": [
+        "--split",
+        "dev",
+        "--format",
+        "markdown_pdf"
+      ],
+      "env": {
+        "BENCH_ANSWER_MODE": "cite+program",
+        "BENCH_CONDITION_SUFFIX": "program"
+      }
+    },
+    "dev_markdown_pdf_rules": {
+      "_desc": "dev split (15 filings, 122 questions): full read as markdown from the PDF, pymupdf4llm 0.0.27 (rule-based), plain prompt; results in markdown_pdf_rules/.",
+      "backend": "deepseek-azure",
+      "command": "answer",
+      "args": [
+        "--split",
+        "dev",
+        "--format",
+        "markdown_pdf_rules"
+      ],
+      "env": {}
+    },
+    "dev_markdown_pdf_rules_program": {
+      "_desc": "dev split (15 filings, 122 questions): full read as markdown from the PDF, pymupdf4llm 0.0.27 (rule-based), program prompt (cites every figure as `value | element`, the program is executed); results in markdown_pdf_rules@program/.",
+      "backend": "deepseek-azure",
+      "command": "answer",
+      "args": [
+        "--split",
+        "dev",
+        "--format",
+        "markdown_pdf_rules"
+      ],
+      "env": {
+        "BENCH_ANSWER_MODE": "cite+program",
+        "BENCH_CONDITION_SUFFIX": "program"
+      }
+    },
+    "dev_markdown_pdf_plumber": {
+      "_desc": "dev split (15 filings, 122 questions): full read as markdown from the PDF, pdfplumber 0.11.10, plain prompt; results in markdown_pdf_plumber/.",
+      "backend": "deepseek-azure",
+      "command": "answer",
+      "args": [
+        "--split",
+        "dev",
+        "--format",
+        "markdown_pdf_plumber"
+      ],
+      "env": {}
+    },
+    "dev_markdown_pdf_plumber_program": {
+      "_desc": "dev split (15 filings, 122 questions): full read as markdown from the PDF, pdfplumber 0.11.10, program prompt (cites every figure as `value | element`, the program is executed); results in markdown_pdf_plumber@program/.",
+      "backend": "deepseek-azure",
+      "command": "answer",
+      "args": [
+        "--split",
+        "dev",
+        "--format",
+        "markdown_pdf_plumber"
+      ],
+      "env": {
+        "BENCH_ANSWER_MODE": "cite+program",
+        "BENCH_CONDITION_SUFFIX": "program"
+      }
+    },
+    "dev_markdown_pdf_poppler": {
+      "_desc": "dev split (15 filings, 122 questions): full read as text from the PDF, poppler pdftotext -layout, plain prompt; results in markdown_pdf_poppler/.",
+      "backend": "deepseek-azure",
+      "command": "answer",
+      "args": [
+        "--split",
+        "dev",
+        "--format",
+        "markdown_pdf_poppler"
+      ],
+      "env": {}
+    },
+    "dev_markdown_pdf_poppler_program": {
+      "_desc": "dev split (15 filings, 122 questions): full read as text from the PDF, poppler pdftotext -layout, program prompt (cites every figure as `value | element`, the program is executed); results in markdown_pdf_poppler@program/.",
+      "backend": "deepseek-azure",
+      "command": "answer",
+      "args": [
+        "--split",
+        "dev",
+        "--format",
+        "markdown_pdf_poppler"
+      ],
+      "env": {
+        "BENCH_ANSWER_MODE": "cite+program",
+        "BENCH_CONDITION_SUFFIX": "program"
+      }
+    },
+    "test_dgml": {
+      "_desc": "test split (15 filings, 111 questions): full read as DGML (Pass A), plain prompt; results in dgml/.",
+      "backend": "deepseek-azure",
+      "command": "answer",
+      "args": [
+        "--split",
+        "test",
+        "--format",
+        "dgml"
+      ],
+      "env": {}
+    },
+    "test_dgml_program": {
+      "_desc": "test split (15 filings, 111 questions): full read as DGML (Pass A), program prompt (cites every figure as `value | element`, the program is executed); results in dgml@program/.",
+      "backend": "deepseek-azure",
+      "command": "answer",
+      "args": [
+        "--split",
+        "test",
+        "--format",
+        "dgml"
+      ],
+      "env": {
+        "BENCH_ANSWER_MODE": "cite+program",
+        "BENCH_CONDITION_SUFFIX": "program"
+      }
+    },
+    "test_dgml_compact": {
+      "_desc": "test split (15 filings, 111 questions): full read as DGML compact serialization (make_compact.py), plain prompt; results in dgml_compact/.",
+      "backend": "deepseek-azure",
+      "command": "answer",
+      "args": [
+        "--split",
+        "test",
+        "--format",
+        "dgml_compact"
+      ],
+      "env": {}
+    },
+    "test_dgml_compact_program": {
+      "_desc": "test split (15 filings, 111 questions): full read as DGML compact serialization (make_compact.py), program prompt (cites every figure as `value | element`, the program is executed); results in dgml_compact@program/.",
+      "backend": "deepseek-azure",
+      "command": "answer",
+      "args": [
+        "--split",
+        "test",
+        "--format",
+        "dgml_compact"
+      ],
+      "env": {
+        "BENCH_ANSWER_MODE": "cite+program",
+        "BENCH_CONDITION_SUFFIX": "program"
+      }
+    },
+    "test_markdown_pdf": {
+      "_desc": "test split (15 filings, 111 questions): full read as markdown from the PDF, pymupdf4llm 2.0 (ONNX layout and table models), plain prompt; results in markdown_pdf/.",
+      "backend": "deepseek-azure",
+      "command": "answer",
+      "args": [
+        "--split",
+        "test",
+        "--format",
+        "markdown_pdf"
+      ],
+      "env": {}
+    },
+    "test_markdown_pdf_program": {
+      "_desc": "test split (15 filings, 111 questions): full read as markdown from the PDF, pymupdf4llm 2.0 (ONNX layout and table models), program prompt (cites every figure as `value | element`, the program is executed); results in markdown_pdf@program/.",
+      "backend": "deepseek-azure",
+      "command": "answer",
+      "args": [
+        "--split",
+        "test",
+        "--format",
+        "markdown_pdf"
+      ],
+      "env": {
+        "BENCH_ANSWER_MODE": "cite+program",
+        "BENCH_CONDITION_SUFFIX": "program"
+      }
+    },
+    "test_markdown_pdf_rules": {
+      "_desc": "test split (15 filings, 111 questions): full read as markdown from the PDF, pymupdf4llm 0.0.27 (rule-based), plain prompt; results in markdown_pdf_rules/.",
+      "backend": "deepseek-azure",
+      "command": "answer",
+      "args": [
+        "--split",
+        "test",
+        "--format",
+        "markdown_pdf_rules"
+      ],
+      "env": {}
+    },
+    "test_markdown_pdf_rules_program": {
+      "_desc": "test split (15 filings, 111 questions): full read as markdown from the PDF, pymupdf4llm 0.0.27 (rule-based), program prompt (cites every figure as `value | element`, the program is executed); results in markdown_pdf_rules@program/.",
+      "backend": "deepseek-azure",
+      "command": "answer",
+      "args": [
+        "--split",
+        "test",
+        "--format",
+        "markdown_pdf_rules"
+      ],
+      "env": {
+        "BENCH_ANSWER_MODE": "cite+program",
+        "BENCH_CONDITION_SUFFIX": "program"
+      }
+    },
+    "test_markdown_pdf_plumber": {
+      "_desc": "test split (15 filings, 111 questions): full read as markdown from the PDF, pdfplumber 0.11.10, plain prompt; results in markdown_pdf_plumber/.",
+      "backend": "deepseek-azure",
+      "command": "answer",
+      "args": [
+        "--split",
+        "test",
+        "--format",
+        "markdown_pdf_plumber"
+      ],
+      "env": {}
+    },
+    "test_markdown_pdf_plumber_program": {
+      "_desc": "test split (15 filings, 111 questions): full read as markdown from the PDF, pdfplumber 0.11.10, program prompt (cites every figure as `value | element`, the program is executed); results in markdown_pdf_plumber@program/.",
+      "backend": "deepseek-azure",
+      "command": "answer",
+      "args": [
+        "--split",
+        "test",
+        "--format",
+        "markdown_pdf_plumber"
+      ],
+      "env": {
+        "BENCH_ANSWER_MODE": "cite+program",
+        "BENCH_CONDITION_SUFFIX": "program"
+      }
+    },
+    "test_markdown_pdf_poppler": {
+      "_desc": "test split (15 filings, 111 questions): full read as text from the PDF, poppler pdftotext -layout, plain prompt; results in markdown_pdf_poppler/.",
+      "backend": "deepseek-azure",
+      "command": "answer",
+      "args": [
+        "--split",
+        "test",
+        "--format",
+        "markdown_pdf_poppler"
+      ],
+      "env": {}
+    },
+    "test_markdown_pdf_poppler_program": {
+      "_desc": "test split (15 filings, 111 questions): full read as text from the PDF, poppler pdftotext -layout, program prompt (cites every figure as `value | element`, the program is executed); results in markdown_pdf_poppler@program/.",
+      "backend": "deepseek-azure",
+      "command": "answer",
+      "args": [
+        "--split",
+        "test",
+        "--format",
+        "markdown_pdf_poppler"
+      ],
+      "env": {
+        "BENCH_ANSWER_MODE": "cite+program",
+        "BENCH_CONDITION_SUFFIX": "program"
+      }
+    },
+    "test_dgml_compact_r2": {
+      "_desc": "test split: second run of test_dgml_compact (same parameters) for the run-to-run spread; results in dgml_compact@r2/.",
+      "backend": "deepseek-azure",
+      "command": "answer",
+      "args": [
+        "--split",
+        "test",
+        "--format",
+        "dgml_compact"
+      ],
+      "env": {
+        "BENCH_CONDITION_SUFFIX": "r2"
+      }
+    },
+    "test_dgml_compact_program_r2": {
+      "_desc": "test split: second run of test_dgml_compact_program (same parameters) for the run-to-run spread; results in dgml_compact@program.r2/.",
+      "backend": "deepseek-azure",
+      "command": "answer",
+      "args": [
+        "--split",
+        "test",
+        "--format",
+        "dgml_compact"
+      ],
+      "env": {
+        "BENCH_CONDITION_SUFFIX": "program.r2",
+        "BENCH_ANSWER_MODE": "cite+program"
+      }
+    },
+    "dev_dgml_nav_program": {
+      "_desc": "dev split (15 filings, 122 questions): DGML navigation -- call 1 reads the element outline of the filing (data/docs/dgml_outline) and names up to 5 elements, call 2 reads those elements (+3 siblings each, no parent widening) as DGML -- program prompt; results in dgml_nav@program/. The '+ compact fallback' row of the report re-reads the whole filing in DGML compact on NOT_FOUND (from dgml_compact@program).",
+      "backend": "deepseek-azure",
+      "command": "navigate",
+      "args": [
+        "--split",
+        "dev"
+      ],
+      "env": {
+        "BENCH_DGML_FORMAT": "dgml",
+        "BENCH_CONDITION": "dgml_nav@program",
+        "TR_XPATHS": "5",
+        "TR_SIBLINGS": "3",
+        "TR_WIDEN": "0",
+        "BENCH_ANSWER_MODE": "cite+program"
+      }
+    },
+    "dev_dgml_nav_path_program": {
+      "_desc": "dev split (15 filings, 122 questions): dev_dgml_nav_program with every figure cited by its element path (`value | /chunk/Debt/DebtTable/LongTermDebtNet`) and call 2 retried, as a full read is, when it spends its whole budget without an answer; results in dgml_nav@program.path/.",
+      "backend": "deepseek-azure",
+      "command": "navigate",
+      "args": [
+        "--split",
+        "dev"
+      ],
+      "env": {
+        "BENCH_DGML_FORMAT": "dgml",
+        "BENCH_CONDITION": "dgml_nav@program.path",
+        "TR_XPATHS": "5",
+        "TR_SIBLINGS": "3",
+        "TR_WIDEN": "0",
+        "BENCH_ANSWER_MODE": "cite+path+program",
+        "BENCH_R2_RETRY": "1"
+      }
+    },
+    "dev_dgml_nav_compact_program": {
+      "_desc": "dev split (15 filings, 122 questions): DGML navigation with the picked elements given in DGML compact (BENCH_REGION_RENDER=compact), program prompt; results in dgml_nav_compact@program/.",
+      "backend": "deepseek-azure",
+      "command": "navigate",
+      "args": [
+        "--split",
+        "dev"
+      ],
+      "env": {
+        "BENCH_DGML_FORMAT": "dgml",
+        "BENCH_CONDITION": "dgml_nav_compact@program",
+        "TR_XPATHS": "5",
+        "TR_SIBLINGS": "3",
+        "TR_WIDEN": "0",
+        "BENCH_ANSWER_MODE": "cite+program",
+        "BENCH_REGION_RENDER": "compact"
+      }
+    },
+    "test_dgml_nav_program": {
+      "_desc": "test split (15 filings, 111 questions): DGML navigation -- call 1 reads the element outline of the filing (data/docs/dgml_outline) and names up to 5 elements, call 2 reads those elements (+3 siblings each, no parent widening) as DGML -- program prompt; results in dgml_nav@program/. The '+ compact fallback' row of the report re-reads the whole filing in DGML compact on NOT_FOUND (from dgml_compact@program).",
+      "backend": "deepseek-azure",
+      "command": "navigate",
+      "args": [
+        "--split",
+        "test"
+      ],
+      "env": {
+        "BENCH_DGML_FORMAT": "dgml",
+        "BENCH_CONDITION": "dgml_nav@program",
+        "TR_XPATHS": "5",
+        "TR_SIBLINGS": "3",
+        "TR_WIDEN": "0",
+        "BENCH_ANSWER_MODE": "cite+program"
+      }
+    },
+    "test_dgml_nav_path_program": {
+      "_desc": "test split (15 filings, 111 questions): test_dgml_nav_program with every figure cited by its element path (`value | /chunk/Debt/DebtTable/LongTermDebtNet`) and call 2 retried, as a full read is, when it spends its whole budget without an answer; results in dgml_nav@program.path/.",
+      "backend": "deepseek-azure",
+      "command": "navigate",
+      "args": [
+        "--split",
+        "test"
+      ],
+      "env": {
+        "BENCH_DGML_FORMAT": "dgml",
+        "BENCH_CONDITION": "dgml_nav@program.path",
+        "TR_XPATHS": "5",
+        "TR_SIBLINGS": "3",
+        "TR_WIDEN": "0",
+        "BENCH_ANSWER_MODE": "cite+path+program",
+        "BENCH_R2_RETRY": "1"
+      }
+    },
+    "test_dgml_nav_compact_program": {
+      "_desc": "test split (15 filings, 111 questions): DGML navigation with the picked elements given in DGML compact (BENCH_REGION_RENDER=compact), program prompt; results in dgml_nav_compact@program/.",
+      "backend": "deepseek-azure",
+      "command": "navigate",
+      "args": [
+        "--split",
+        "test"
+      ],
+      "env": {
+        "BENCH_DGML_FORMAT": "dgml",
+        "BENCH_CONDITION": "dgml_nav_compact@program",
+        "TR_XPATHS": "5",
+        "TR_SIBLINGS": "3",
+        "TR_WIDEN": "0",
+        "BENCH_ANSWER_MODE": "cite+program",
+        "BENCH_REGION_RENDER": "compact"
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+ "id": "MRO_2009_0001193125-10-042898__row0209",
+ "format": "dgml_compact",
+ "key": "MRO_2009_0001193125-10-042898",
+ "question": "what was the spread between the high and low henry hub natural gas ( dollars per mcf ) in 2009?",
+ "gold": "45.38",
+ "finqa_id": "MRO/2009/page_56.pdf-2",
+ "source_page": "page_56",
+ "ticker": "MRO",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/dgml_compact/MRO_2009_0001193125-10-042898.dgml.txt",
+ "doc_chars": 697881,
+ "prompt_chars": 698065,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 697881,
+ "original_chars": 697881,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 153188,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 933,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer spread between high and low Henry Hub natural gas in 2009. Need find figures. Document has benchmark prices: Henry Hub natural gas (Dollars per mcf) 2009 $3.99, 2008 $9.04, 2007 $6.86. But question asks spread between high and low Henry Hub natural gas in 2009. Need high and low? Maybe from quarterly stock prices? No, that's stock. Maybe Henry Hub natural gas prices? The document mentions \"Prices were volatile in 2009... ending year at $79.36\" for crude. For natural gas? Need find high and low Henry Hub in 2009. Search document for \"Henry Hub\" and \"high\" \"low\". There is \"Henry Hub natural gas (Dollars per mcf)(a) | $ 3.99 | $ 9.04 | $ 6.86\" only annual average. Also \"first-of-month price index\" footnote. No high/low. Maybe question expects spread between high and low of Henry Hub natural gas in 2009? Could be from \"Benchmark | 2009 | 2008 | 2007\" table: WTI, Dated Brent, Henry Hub. No high/low. Maybe \"spread\" means difference between high and low prices? Not available. Could be \"high and low\" refers to quarterly stock prices? No, Henry Hub natural gas. The document may have \"Henry Hub natural gas (Dollars per mcf)\" only average. No high/low. So NOT_FOUND.\n\nBut let's double-check: There is \"BenchmarkPrice: Henry Hub natural gas (Dollars per mcf)(a) | $ 3.99 | $ 9.04 | $ 6.86\" in MD&A. Also \"first-of-month price index.\" No high/low. Also \"Natural gas prices on average were lower...\" No high/low. So answer NOT_FOUND.\n\nNeed evidence: list figures used? We use none? But we can cite the Henry Hub average? The question asks spread between high and low, not average. We can state not found. But instructions: \"Before the answer, list every figure you use inside <evidence></evidence>\". If no figures, maybe empty. But we should cite that we looked at Henry Hub average? The evidence should be figures actually read. We read \"Henry Hub natural gas (Dollars per mcf) | $3.99 | $9.04 | $6.86\" but not used in computation. The instruction says \"Cite only figures you actually read.\" We can include it? But it's not used. Better to include it as evidence that no high/low. But the answer is NOT_FOUND. The program? \"A figure that is itself the answer is its own program.\" For NOT_FOUND, no program? The benchmark expects NOT_FOUND. We'll provide evidence with the Henry Hub average? But the question asks spread between high and low, so the average is not relevant. However, to show we searched, we can list \"Henry Hub natural gas (Dollars per mcf) | $3.99 | $9.04 | $6.86\" as evidence. But the instruction says \"Cite only figures you actually read.\" We did read it. But it's not used. The evidence section is for figures used in computation. Since no computation, maybe empty. But to be safe, include the Henry Hub average? The benchmark might not care. The final answer must be NOT_FOUND.\n\nLet's craft: evidence: Henry Hub natural gas (Dollars per mcf) | $3.99 | $9.04 | $6.86 (from Benchmark table). But that's not high/low. Then program: NOT_FOUND? The program must be exact nested calls. For NOT_FOUND, maybe no program. The instructions: \"Give the final answer inside <answer></answer> tags, containing only the value itself... If the document does not contain enough information, put NOT_FOUND inside the tags.\" So answer NOT_FOUND.\n\nWe'll provide evidence with the Henry Hub average? The instruction says \"list every figure you use\" - we don't use any. So evidence empty. But we can mention in reasoning that no high/low figures exist. The final answer NOT_FOUND.\n\nLet's produce.",
+ "raw_content": "<evidence></evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "usage": {
+  "prompt_tokens": 153500,
+  "completion_tokens": 933,
+  "total_tokens": 154433,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 13.2,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "docfinqa_row": 209
+}

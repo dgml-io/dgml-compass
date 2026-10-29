@@ -1,0 +1,68 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0661",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what percentage of total future minimum operating lease payments for leases with remaining terms greater than one year are due in 2009?",
+ "gold": "25%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "FIS_2007_0000892569-08-000207.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/RegistrantName/ContingentLiabilityAmount/ConsolidatedFinancial/OperatingLeaseCommitmentAmount/table"
+ ],
+ "r1_reasoning_chars": 5221,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 23045,
+  "completion_tokens": 1207,
+  "total_tokens": 24252,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/RegistrantName/ContingentLiabilityAmount/ConsolidatedFinancial/OperatingLeaseCommitmentAmount/table"
+ ],
+ "content_chars": 4581,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "25.321437",
+ "reasoning": "We need answer percentage. Need figures: 2009 amount 63,060; total 249,038. Percentage = 63060/249038*100. Compute. Need evidence.",
+ "raw_content": "<evidence>63,060 | OperatingLeaseCommitmentAmount (2009)\n$249,038 | OperatingLeaseCommitmentAmount (Total)</evidence>\n\n<program>multiply(divide(63060, 249038), 100)</program>",
+ "r2_usage": {
+  "prompt_tokens": 1391,
+  "completion_tokens": 94,
+  "total_tokens": 1485,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "63,060",
+   "element": "OperatingLeaseCommitmentAmount (2009)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$249,038",
+   "element": "OperatingLeaseCommitmentAmount (Total)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(63060, 249038), 100)",
+ "answer_model": null,
+ "program_value": 25.321436889149446,
+ "elapsed_s": 6.04,
+ "outline_source": "FIS_2007_0000892569-08-000207.outline.txt",
+ "outline_chars": 91339
+}

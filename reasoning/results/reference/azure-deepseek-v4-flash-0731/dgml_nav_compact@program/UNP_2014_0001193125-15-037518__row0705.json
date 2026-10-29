@@ -1,0 +1,70 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0705",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "what was the percentage change in total expense for repairs and maintenance from 2013 to 2014?",
+ "gold": "4%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "UNP_2014_0001193125-15-037518.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/RetirementPlans/PropertiesDisclosure/RepairsAndMaintenancePolicy"
+ ],
+ "r1_reasoning_chars": 3352,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 19891,
+  "completion_tokens": 817,
+  "total_tokens": 20708,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/RetirementPlans/PropertiesDisclosure/RepairsAndMaintenancePolicy"
+ ],
+ "content_chars": 3993,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "4.347826",
+ "reasoning": "We need percentage change from 2013 to 2014. Figures: 2014 $2.4 billion, 2013 $2.3 billion. Percentage change = (2.4 - 2.3)/2.3 * 100. Need compute. Use figures as printed: $2.4 billion and $2.3 billion. But program should use numbers? The instruction says figures exactly as printed, but we can use 2.4 and 2.3? The printed includes $ and billion. We need parse. Usually we can use numeric values. The program should be exact. We'll use divide(subtract(2.4, 2.3), 2.3) * 100? But exp? Actually multiply by 100. The program can be multiply(divide(subtract(2.4, 2.3), 2.3), 100). But the instruction says \"as printed\" - maybe use 2.4 and 2.3. We'll do that. Answer: 4.347826... percent. Round? The question asks percentage change, likely 4.3% or 4.35%. We'll output numeric value maybe 4.3478260869565215? The benchmark expects exact? Usually they want a number. We'll provide 4.35? But instruction says only value. We'll compute exactly: (0.1/2.3)*100 = 10/2.3 = 4.3478260869565215. We'll output 4.3478260869565215? Or maybe 4.35. Let's see. We'll output 4.3478260869565215. But maybe they expect percentage as number without % sign. We'll do that.\n\nEvidence: $2.4 billion | RepairsAndMaintenanceExpenseAmount (2014); $2.3 billion | span (2013). Actually the text: \"span: $2.3 billion for 2013\" - element is span? The region has RepairsAndMaintenanceExpenseAmount for 2014 and 2012, and span for 2013. We'll cite.\n\nProgram: multiply(divide(subtract(2.4, 2.3), 2.3), 100)",
+ "raw_content": "<evidence>$2.4 billion | RepairsAndMaintenanceExpenseAmount (2014)\n$2.3 billion | span (2013)</evidence>\n<program>multiply(divide(subtract(2.4, 2.3), 2.3), 100)</program>\n<answer>4.3478260869565215</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1112,
+  "completion_tokens": 560,
+  "total_tokens": 1672,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$2.4 billion",
+   "element": "RepairsAndMaintenanceExpenseAmount (2014)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$2.3 billion",
+   "element": "span (2013)",
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "multiply(divide(subtract(2.4, 2.3), 2.3), 100)",
+ "answer_model": "4.3478260869565215",
+ "program_value": 4.347826086956526,
+ "elapsed_s": 9.77,
+ "outline_source": "UNP_2014_0001193125-15-037518.outline.txt",
+ "outline_chars": 77599
+}

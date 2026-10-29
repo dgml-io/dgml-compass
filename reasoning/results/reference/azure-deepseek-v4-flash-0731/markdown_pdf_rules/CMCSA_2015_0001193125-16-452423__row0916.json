@@ -1,0 +1,53 @@
+{
+ "id": "CMCSA_2015_0001193125-16-452423__row0916",
+ "format": "markdown_pdf_rules",
+ "key": "CMCSA_2015_0001193125-16-452423",
+ "question": "in 2015 what was the ratio of the nol carry forward for the federal to the foreign taxes",
+ "gold": "19.3%",
+ "finqa_id": "CMCSA/2015/page_112.pdf-4",
+ "source_page": "page_112",
+ "ticker": "CMCSA",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_rules/CMCSA_2015_0001193125-16-452423.md",
+ "doc_chars": 564207,
+ "prompt_chars": 564384,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 564207,
+ "original_chars": 564207,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 125792,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 395,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.1929",
+ "reasoning": "We need to find the NOL carryforward for federal and foreign taxes in 2015. From the document, in Note 15: Income Taxes, there is a table \"Components of Net Deferred Tax Liability\" that shows deferred tax assets. It says: \"As of December 31, 2015, we had federal net operating loss carryforwards of $135 million and various state net operating loss carryforwards that expire in periods through 2035. As of December 31, 2015, we also had foreign net operating loss carryforwards of $700 million that are related to the foreign operations of NBCUniversal, the majority of which expire in periods through 2025.\"\n\nSo federal NOL = $135 million, foreign NOL = $700 million. The ratio of federal to foreign is 135/700 = 0.192857... which is approximately 0.193. The question asks \"what was the ratio of the nol carry forward for the federal to the foreign taxes\" - likely federal NOL / foreign NOL. So answer is 135/700 = 0.192857... or as a fraction 27/140? 135/700 simplifies to 27/140. But the question likely expects a decimal or fraction. We'll provide the ratio as a decimal or fraction. Since the instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So we can put 0.1929 or 27/140. I'll put 0.1929. But to be precise, 135/700 = 0.192857... I'll put 0.1929. Or maybe they want the ratio as \"135:700\" but that's not a value. I'll put 0.1929.",
+ "raw_content": "<answer>0.1929</answer>",
+ "usage": {
+  "prompt_tokens": 125942,
+  "completion_tokens": 395,
+  "total_tokens": 126337,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 125696
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.91,
+ "answer_tag_found": true,
+ "docfinqa_row": 916
+}

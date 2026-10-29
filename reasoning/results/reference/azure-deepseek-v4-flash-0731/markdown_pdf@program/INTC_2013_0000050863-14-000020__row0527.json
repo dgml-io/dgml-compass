@@ -1,0 +1,74 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0527",
+ "format": "markdown_pdf",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "what was the percent of the change in the net revenues from dec . 282012 dec . 29 2013",
+ "gold": "-1.2%",
+ "finqa_id": "INTC/2013/page_33.pdf-1",
+ "source_page": "page_33",
+ "ticker": "INTC",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/markdown_pdf/INTC_2013_0000050863-14-000020.md",
+ "doc_chars": 435630,
+ "prompt_chars": 435805,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 435630,
+ "original_chars": 435630,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 102659,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 160,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-1.1867%",
+ "reasoning": "We need answer percent change in net revenues from 2012 to 2013. Net revenue 2013 $52,708, 2012 $53,341. Change = (52,708 - 53,341)/53,341 = -633/53,341 = -1.1867% approx -1.2%. Question asks \"percent of the change\" likely -1.2%. Need evidence figures.",
+ "raw_content": "<evidence>\n$ 52,708 | Consolidated Statements of Income 2013 Net revenue\n$ 53,341 | Consolidated Statements of Income 2012 Net revenue\n</evidence>\n\n<program>\ndivide(subtract(52708, 53341), 53341)\n</program>\n\n<answer>-1.2%</answer>",
+ "usage": {
+  "prompt_tokens": 102971,
+  "completion_tokens": 160,
+  "total_tokens": 103131,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.69,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 52,708",
+   "element": "Consolidated Statements of Income 2013 Net revenue",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$ 53,341",
+   "element": "Consolidated Statements of Income 2012 Net revenue",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(subtract(52708, 53341), 53341)",
+ "answer_model": "-1.2%",
+ "program_value": -0.011867044112408841,
+ "docfinqa_row": 527
+}

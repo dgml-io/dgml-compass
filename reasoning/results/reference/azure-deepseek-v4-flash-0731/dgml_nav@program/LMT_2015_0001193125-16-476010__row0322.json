@@ -1,0 +1,68 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0322",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was the change in millions of total long-term debt net from 2014 to 2015?",
+ "gold": "9119",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "LMT_2015_0001193125-16-476010.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/ConsolidatedBalanceSheets/table/LongTermDebtNetBalance"
+ ],
+ "r1_reasoning_chars": 1921,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 28888,
+  "completion_tokens": 492,
+  "total_tokens": 29380,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ConsolidatedBalanceSheets/table/LongTermDebtNetBalance"
+ ],
+ "content_chars": 2890,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "8163",
+ "reasoning": "We need to find the change in long-term debt net from 2014 to 2015. The table shows two amounts for Long-term debt, net: 14,305 and 6,142. Which is 2015 and which is 2014? Typically the first column is the most recent year (2015) and second is prior (2014). So change = 14,305 - 6,142 = 8,163. The question asks \"change in millions\" so just the number. Need to confirm order. The document excerpt doesn't explicitly label years, but standard balance sheet presents current year first. So answer 8,163.",
+ "raw_content": "<evidence>14,305 | Long-term debt, net (first amount)\n6,142 | Long-term debt, net (second amount)</evidence>\n<program>subtract(14305, 6142)</program>\n<answer>8163</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1095,
+  "completion_tokens": 192,
+  "total_tokens": 1287,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "14,305",
+   "element": "Long-term debt, net (first amount)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6,142",
+   "element": "Long-term debt, net (second amount)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(14305, 6142)",
+ "answer_model": "8163",
+ "program_value": 8163.0,
+ "elapsed_s": 18.14,
+ "outline_source": "LMT_2015_0001193125-16-476010.outline.txt",
+ "outline_chars": 116705
+}

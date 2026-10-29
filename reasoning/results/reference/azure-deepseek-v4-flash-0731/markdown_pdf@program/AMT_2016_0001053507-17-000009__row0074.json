@@ -1,0 +1,73 @@
+{
+ "id": "AMT_2016_0001053507-17-000009__row0074",
+ "format": "markdown_pdf",
+ "key": "AMT_2016_0001053507-17-000009",
+ "question": "what is the growth rate in the price of shares from the highest value during the quarter ended december 31 , 2016 and the closing price on february 17 , 2017?",
+ "gold": "-8.5%",
+ "finqa_id": "AMT/2016/page_49.pdf-3",
+ "source_page": "page_49",
+ "ticker": "AMT",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf/AMT_2016_0001053507-17-000009.md",
+ "doc_chars": 486538,
+ "prompt_chars": 486785,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 486538,
+ "original_chars": 486538,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 115908,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 337,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-0.084512",
+ "reasoning": "We need answer growth rate in price of shares from highest value during quarter ended Dec 31 2016 and closing price Feb 17 2017. Need find highest value during quarter ended Dec 31 2016. From table: 2016 Quarter ended December 31 High $118.09, Low $99.72. Closing price Feb 17 2017 $108.11. Growth rate from highest value to closing price = (108.11 - 118.09)/118.09 = -8.45%? Let's compute: 108.11/118.09 = 0.9155, so -8.45%. Question \"growth rate in the price of shares from the highest value during the quarter ended december 31 , 2016 and the closing price on february 17 , 2017?\" So answer -8.45% or -0.0845. Need provide evidence and program. Use figures: 118.09 | Quarter ended December 31, 2016 High; 108.11 | closing price Feb 17 2017. Program divide(subtract(108.11, 118.09), 118.09). Final answer inside tags.",
+ "raw_content": "<evidence>\n118.09 | Quarter ended December 31, 2016 High\n108.11 | On February 17, 2017, the closing price of our common stock was $108.11 per share\n</evidence>\n\n<program>\ndivide(subtract(108.11, 118.09), 118.09)\n</program>\n\n<answer>-0.0845</answer>",
+ "usage": {
+  "prompt_tokens": 116234,
+  "completion_tokens": 337,
+  "total_tokens": 116571,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.35,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "118.09",
+   "element": "Quarter ended December 31, 2016 High",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "108.11",
+   "element": "On February 17, 2017, the closing price of our common stock was $108.11 per share",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(subtract(108.11, 118.09), 118.09)",
+ "answer_model": "-0.0845",
+ "program_value": -0.08451181302396481,
+ "docfinqa_row": 74
+}

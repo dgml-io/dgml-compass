@@ -1,0 +1,68 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0248",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "what is the net change in the balance of liability related to employee separations during 2006?",
+ "gold": "-13636",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "AMT_2008_0001193125-09-039177.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/NotesToFinancialStatementsHeader/NoteNumber/ImpairmentsAndRestructuring/table/MergerRelatedLiabilityRollforward"
+ ],
+ "r1_reasoning_chars": 2070,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 24110,
+  "completion_tokens": 529,
+  "total_tokens": 24639,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/NotesToFinancialStatementsHeader/NoteNumber/ImpairmentsAndRestructuring/table/MergerRelatedLiabilityRollforward"
+ ],
+ "content_chars": 2052,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "-13636",
+ "reasoning": "We need answer net change in liability related to employee separations during 2006. From table: Liability as of Dec 31, 2005 = 20,963. 2006 Expense = 496. 2006 Cash Payments = (12,389). Other = (1,743). Liability as of Dec 31, 2006 = 7,327. Net change = ending - beginning = 7,327 - 20,963 = -13,636. Or sum of expense + payments + other = 496 - 12,389 - 1,743 = -13,636. So answer -13,636. Need evidence figures. Use exact printed values. Program subtract(7327, 20963) or add(496, -12389, -1743) but program supports add(a,b) maybe nested. Use subtract(7327, 20963).",
+ "raw_content": "<evidence>\n$ 20,963 | RestructuringLiability (Liability as of December 31, 2005)\n$ 7,327 | RestructuringLiability (Liability as of December 31, 2006)\n</evidence>\n<program>subtract(7327, 20963)</program>\n<answer>-13,636</answer>",
+ "r2_usage": {
+  "prompt_tokens": 869,
+  "completion_tokens": 264,
+  "total_tokens": 1133,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 20,963",
+   "element": "RestructuringLiability (Liability as of December 31, 2005)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$ 7,327",
+   "element": "RestructuringLiability (Liability as of December 31, 2006)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(7327, 20963)",
+ "answer_model": "-13,636",
+ "program_value": -13636.0,
+ "elapsed_s": 4.97,
+ "outline_source": "AMT_2008_0001193125-09-039177.outline.txt",
+ "outline_chars": 96437
+}

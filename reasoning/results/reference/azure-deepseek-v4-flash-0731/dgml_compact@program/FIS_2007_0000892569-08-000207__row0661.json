@@ -1,0 +1,72 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0661",
+ "format": "dgml_compact",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what percentage of total future minimum operating lease payments for leases with remaining terms greater than one year are due in 2009?",
+ "gold": "25%",
+ "finqa_id": "FIS/2007/page_94.pdf-1",
+ "source_page": "page_94",
+ "ticker": "FIS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml_compact/FIS_2007_0000892569-08-000207.dgml.txt",
+ "doc_chars": 463971,
+ "prompt_chars": 464195,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 463971,
+ "original_chars": 463971,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 101341,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 247,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "25.3214%",
+ "reasoning": "We need to find total future minimum operating lease payments and amount due in 2009. From document: \"Future minimum operating lease payments for leases with remaining terms greater than one year for each of the years in the five years ending December 31, 2012, and thereafter in the aggregate, are as follows (in thousands): 2008 | 83,382; 2009 | 63,060; 2010 | 35,269; 2011 | 21,598; 2012 | 14,860; Thereafter | 30,869; Total | $249,038\". So total = 249,038, 2009 = 63,060. Percentage = 63,060 / 249,038 * 100. Compute: 63060/249038 ≈ 0.2532, so 25.32%. Need answer as percentage. Use exact figures.",
+ "raw_content": "<evidence>\n63,060 | OperatingLeaseCommitmentAmount (2009)\n249,038 | OperatingLeaseCommitmentAmount (Total)\n</evidence>\n<program>divide(63060, 249038)</program>\n<answer>25.32%</answer>",
+ "usage": {
+  "prompt_tokens": 101653,
+  "completion_tokens": 247,
+  "total_tokens": 101900,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 98560
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.45,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "63,060",
+   "element": "OperatingLeaseCommitmentAmount (2009)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "249,038",
+   "element": "OperatingLeaseCommitmentAmount (Total)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(63060, 249038)",
+ "answer_model": "25.32%",
+ "program_value": 0.25321436889149446,
+ "docfinqa_row": 661
+}

@@ -1,0 +1,81 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0443",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what were average net sales for mfc from 2013 to 2015 in millions?",
+ "gold": "6886",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "LMT_2015_0001193125-16-476010.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/FilingPartDesignation/CostOfSalesAnalysis/BusinessSegmentResults/SegmentNetSalesAndOperatingProfit/SegmentNetSales/MfcSegmentName",
+  "/chunk/FilingPartDesignation/CostOfSalesAnalysis/BusinessSegmentResults/SegmentNetSalesAndOperatingProfit/SegmentNetSales/MfcNetSales"
+ ],
+ "r1_reasoning_chars": 0,
+ "r1_retried": true,
+ "r1_usage": {
+  "prompt_tokens": 28902,
+  "completion_tokens": 14,
+  "total_tokens": 28916,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 28672
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/FilingPartDesignation/CostOfSalesAnalysis/BusinessSegmentResults/SegmentNetSalesAndOperatingProfit/SegmentNetSales/MfcSegmentName",
+  "/chunk/FilingPartDesignation/CostOfSalesAnalysis/BusinessSegmentResults/SegmentNetSalesAndOperatingProfit/SegmentNetSales/MfcNetSales"
+ ],
+ "content_chars": 754,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "6885.666667",
+ "reasoning": "We need average of 6,770, 7,092, 6,795. Compute sum = 6770+7092+6795 = 20657? Let's add: 6770+7092=13862; +6795=20657. Divide by 3 = 6885.666... So answer 6885.666... But question asks \"in millions\" so value is 6885.666... maybe round? The figures are in millions already. We'll output 6885.666666666667 or 6885.67? The instruction says value only, no units. Usually average can be decimal. We'll output 6885.666666666667. But maybe they expect 6885.67? The program will compute exactly. We'll provide evidence and program.",
+ "raw_content": "<evidence>\n6,770 | MfcNetSales\n7,092 | MfcNetSales\n6,795 | MfcNetSales\n</evidence>\n<program>divide(add(add(6770, 7092), 6795), 3)</program>\n<answer>6885.666666666667</answer>",
+ "r2_usage": {
+  "prompt_tokens": 525,
+  "completion_tokens": 241,
+  "total_tokens": 766,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "6,770",
+   "element": "MfcNetSales",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "7,092",
+   "element": "MfcNetSales",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6,795",
+   "element": "MfcNetSales",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(add(6770, 7092), 6795), 3)",
+ "answer_model": "6885.666666666667",
+ "program_value": 6885.666666666667,
+ "elapsed_s": 39.9,
+ "outline_source": "LMT_2015_0001193125-16-476010.outline.txt",
+ "outline_chars": 116705
+}

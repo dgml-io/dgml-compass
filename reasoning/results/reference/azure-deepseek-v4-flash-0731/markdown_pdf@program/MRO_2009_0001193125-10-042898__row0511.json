@@ -1,0 +1,72 @@
+{
+ "id": "MRO_2009_0001193125-10-042898__row0511",
+ "format": "markdown_pdf",
+ "key": "MRO_2009_0001193125-10-042898",
+ "question": "by how much did contingent rental liability decrease from 2007 to 2009?",
+ "gold": "-42.4%",
+ "finqa_id": "MRO/2009/page_139.pdf-3",
+ "source_page": "page_139",
+ "ticker": "MRO",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/markdown_pdf/MRO_2009_0001193125-10-042898.md",
+ "doc_chars": 531860,
+ "prompt_chars": 532020,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 531860,
+ "original_chars": 531860,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 122109,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 225,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "14",
+ "reasoning": "We need answer question: \"by how much did contingent rental liability decrease from 2007 to 2009?\" Need find figures. Document has operating lease rental expense table: Contingent rental: 2009 $19, 2008 $22, 2007 $33. \"contingent rental liability\" maybe they mean contingent rental expense? The question says \"contingent rental liability decrease from 2007 to 2009\". In document, under Note 25 Leases, operating lease rental expense: Contingent rental 2009 $19, 2008 $22, 2007 $33. So decrease = 33 - 19 = 14. Need answer 14. Evidence: 19 | Contingent rental (2009), 33 | Contingent rental (2007). Program subtract(33,19).",
+ "raw_content": "<evidence>\n19 | Contingent rental (2009)\n33 | Contingent rental (2007)\n</evidence>\n<program>\nsubtract(33, 19)\n</program>\n<answer>14</answer>",
+ "usage": {
+  "prompt_tokens": 122413,
+  "completion_tokens": 225,
+  "total_tokens": 122638,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 17.16,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "19",
+   "element": "Contingent rental (2009)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "33",
+   "element": "Contingent rental (2007)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(33, 19)",
+ "answer_model": "14",
+ "program_value": 14.0,
+ "docfinqa_row": 511
+}

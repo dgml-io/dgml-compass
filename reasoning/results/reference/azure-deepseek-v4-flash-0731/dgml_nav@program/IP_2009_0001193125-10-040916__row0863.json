@@ -1,0 +1,53 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0863",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "what was the sum of the temporary differences between 2007 and 2009 in billions",
+ "gold": "9.8",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "IP_2009_0001193125-10-040916.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/IncomeTax/DeferredTaxComponents"
+ ],
+ "r1_reasoning_chars": 1091,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 33543,
+  "completion_tokens": 271,
+  "total_tokens": 33814,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/IncomeTax/DeferredTaxComponents"
+ ],
+ "content_chars": 15701,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer question: \"what was the sum of the temporary differences between 2007 and 2009 in billions\". Need parse. Document excerpt has deferred tax components for 2009 and 2008 only, not 2007. The question asks sum of temporary differences between 2007 and 2009? Maybe \"temporary differences\" refers to deferred tax assets/liabilities? But table only 2009 and 2008. No 2007 data. Could be \"sum of the temporary differences\" meaning gross deferred tax assets/liabilities? But no 2007. Need check if any other region has 2007? The excerpt includes income tax payments for 2009, 2008, 2007 but not temporary differences. Effective tax rate reconciliation has 2007 but not temporary differences. So insufficient. Answer NOT_FOUND.\n\nBut let's be careful: \"temporary differences\" might be the deferred tax components table, which has 2009 and 2008 only. The question asks between 2007 and 2009, maybe sum of temporary differences in 2007 and 2009? No 2007. So NOT_FOUND.\n\nNeed provide evidence? Since no figures used, maybe no evidence. But instruction says list every figure you use. We use none. So evidence empty. Then answer NOT_FOUND.\n\nFinal answer inside <answer>NOT_FOUND</answer>.",
+ "raw_content": "<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 4396,
+  "completion_tokens": 301,
+  "total_tokens": 4697,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": null,
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 5.84,
+ "outline_source": "IP_2009_0001193125-10-040916.outline.txt",
+ "outline_chars": 127828
+}

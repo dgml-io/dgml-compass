@@ -1,0 +1,30 @@
+# The $5 smoke test over the synthetic mini corpus under `tests/fixtures/mini_corpus` -- two
+# docsets, two documents each -- so a dry run needs no credentials. Dry-run it with:
+#
+#     DGC_CORPUS_ROOT=tests/fixtures/mini_corpus \
+#     uv run dgc run -e specs/rehearsal.yaml --dry-run
+#
+# It proves the spec loads, the corpus resolves, the plan prices, the runner runs and the
+# manifest is written; nothing about model quality. It is not a template for a real sweep.
+name: rehearsal
+description: >-
+  Dry-run rehearsal of the whole path over the committed mini corpus. Proves the machinery
+  works without a corpus checkout, credentials, or spend.
+
+corpus:
+  docsets:
+    all_with_refs: true
+  max_files_per_docset: 2
+
+axes:
+  generation.model:
+    - anthropic/claude-haiku-5-5
+    - anthropic/claude-sonnet-5
+
+metrics: [reference_free]
+draws: 1
+
+# Small enough that a real run of this spec could not be an expensive mistake, and the number is
+# still a real cap rather than a formality.
+budget_usd: 5
+seed: 20260901

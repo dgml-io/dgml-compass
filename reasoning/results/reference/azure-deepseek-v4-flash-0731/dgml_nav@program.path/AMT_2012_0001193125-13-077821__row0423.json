@@ -1,0 +1,78 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0423",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "was was the total amount spent on stock repurchases in december 2012?",
+ "gold": "7662592",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "AMT_2012_0001193125-13-077821.outline.txt",
+ "doc_source": "AMT_2012_0001193125-13-077821.dgml.xml",
+ "outline_chars": 129453,
+ "predicted_xpaths": [
+  "/chunk/LiquidityAndCapitalResources/OperatingFundingUses/CashFlowFinancingActivities/StockRepurchaseProgram",
+  "/chunk/LiquidityAndCapitalResources/OperatingFundingUses/CashFlowFinancingActivities/StockRepurchaseProgram/ShareRepurchaseActivity",
+  "/chunk/StockBasedCompensation/Equity/StockRepurchaseActivity"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 4116,
+ "r1_usage": {
+  "prompt_tokens": 33125,
+  "completion_tokens": 1071,
+  "total_tokens": 34196,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/LiquidityAndCapitalResources/OperatingFundingUses/CashFlowFinancingActivities/StockRepurchaseProgram",
+  "/chunk/LiquidityAndCapitalResources/OperatingFundingUses/CashFlowFinancingActivities/StockRepurchaseProgram/ShareRepurchaseActivity",
+  "/chunk/StockBasedCompensation/Equity/StockRepurchaseActivity"
+ ],
+ "content_chars": 40097,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "The question asks for the total amount spent on stock repurchases in December 2012. The document provides annual figures for 2012 ($62.7 million) and cumulative figures, but no monthly breakdown. The document does not contain December-specific repurchase amounts.",
+ "raw_content": "<evidence>$62.7 million | /chunk/LiquidityAndCapitalResources/OperatingFundingUses/CashFlowFinancingActivities/StockRepurchaseProgram/ShareRepurchaseActivity/AggregatePaymentAmount</evidence>\n<evidence>$243.9 million | /chunk/LiquidityAndCapitalResources/OperatingFundingUses/CashFlowFinancingActivities/StockRepurchaseProgram/ShareRepurchaseActivity/span</evidence>\n<evidence>$245.2 million | /chunk/LiquidityAndCapitalResources/OperatingFundingUses/CashFlowFinancingActivities/StockRepurchaseProgram/ShareRepurchaseActivity/AggregatePaymentAmount</evidence>\n\n<program>NOT_FOUND</program>\n\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 10099,
+  "completion_tokens": 209,
+  "total_tokens": 10308,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 10099,
+   "completion_tokens": 209,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "$62.7 million",
+   "element": "chunk/LiquidityAndCapitalResources/OperatingFundingUses/CashFlowFinancingActivities/StockRepurchaseProgram/ShareRepurchaseActivity/AggregatePaymentAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 9.48
+}

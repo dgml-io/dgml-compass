@@ -1,0 +1,53 @@
+{
+ "id": "NCLH_2018_0001144204-19-010508__row0905",
+ "format": "dgml",
+ "key": "NCLH_2018_0001144204-19-010508",
+ "question": "what percent of long-term debt was paid off in 2021?",
+ "gold": "38.6%",
+ "finqa_id": "NCLH/2018/page_97.pdf-3",
+ "source_page": "page_97",
+ "ticker": "NCLH",
+ "fiscal_year": "2018",
+ "source_file": "data/docs/dgml/NCLH_2018_0001144204-19-010508.dgml.xml",
+ "doc_chars": 652616,
+ "prompt_chars": 652757,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 652616,
+ "original_chars": 652616,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 154094,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 552,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "39.27%",
+ "reasoning": "We need to find what percent of long-term debt was paid off in 2021. The question asks \"what percent of long-term debt was paid off in 2021?\" This likely refers to scheduled principal repayments on long-term debt for 2021. From the document, we have a table \"Scheduled principal repayments on long-term debt including capital lease obligations as of December 31, 2018 for each of the next five years\". It shows for 2021: $2,549,621 thousand. Total long-term debt as of Dec 31, 2018 is $6,492,091 thousand (from balance sheet or debt table). But the question says \"paid off in 2021\" - that is the scheduled repayment amount for 2021. The percent would be 2,549,621 / 6,492,091 * 100. Let's compute: 2,549,621 / 6,492,091 ≈ 0.3927, so 39.27%. But careful: The question might be asking about the percentage of long-term debt that matures in 2021. Alternatively, it could be asking about the percentage of total debt that is due in 2021. The document also has a contractual obligations table with long-term debt amounts by time bucket: \"Less than 1 year\" $681,218, \"1-3 years\" $3,232,177, etc. But the scheduled principal repayments table is more specific. The question says \"paid off in 2021\" - that is the principal repayment scheduled for 2021. So we use the scheduled principal repayments table. The total long-term debt is $6,492,091 (from the debt table). So percent = 2,549,621 / 6,492,091 * 100 = 39.27%. Let's compute precisely: 2,549,621 / 6,492,091 = 0.3927... 0.3927*100 = 39.27%. So answer is 39.27%. But we need to check if the question expects a specific number. The document says \"The following are scheduled principal repayments on long-term debt including capital lease obligations as of December 31, 2018 for each of the next five years\". So 2021 amount is $2,549,621 thousand. Total long-term debt is $6,492,091 thousand. So percentage = 2,549,621 / 6,492,091 * 100 = 39.27%. I'll put that in the answer.",
+ "raw_content": "<answer>39.27%</answer>",
+ "usage": {
+  "prompt_tokens": 154236,
+  "completion_tokens": 552,
+  "total_tokens": 154788,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 154112
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.1,
+ "answer_tag_found": true,
+ "docfinqa_row": 905
+}

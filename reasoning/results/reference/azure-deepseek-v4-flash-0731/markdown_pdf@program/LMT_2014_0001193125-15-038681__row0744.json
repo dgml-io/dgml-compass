@@ -1,0 +1,84 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0744",
+ "format": "markdown_pdf",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "what was the difference in operating margin between 2012 and 2013?",
+ "gold": ".1%",
+ "finqa_id": "LMT/2014/page_50.pdf-3",
+ "source_page": "page_50",
+ "ticker": "LMT",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf/LMT_2014_0001193125-15-038681.md",
+ "doc_chars": 433601,
+ "prompt_chars": 433756,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 433601,
+ "original_chars": 433601,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 92728,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 462,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.005344",
+ "reasoning": "We need answer difference in operating margin between 2012 and 2013. Need identify operating margin. Likely consolidated operating margin? Or segment? Question ambiguous. \"operating margin\" could be total consolidated operating profit / net sales. 2012: operating profit 4,434, net sales 47,182 => 9.397...%. 2013: 4,505 / 45,358 = 9.932...%. Difference = 0.535 percentage points. Or maybe they ask difference in operating margin between 2012 and 2013 for a specific segment? No segment specified. Likely consolidated. Need compute. Figures: 2012 operating profit $4,434, net sales $47,182; 2013 operating profit $4,505, net sales $45,358. Difference = (4505/45358) - (4434/47182). Compute. 4505/45358 = 0.09932; 4434/47182 = 0.09398; diff = 0.00534 = 0.534 percentage points. Could express as 0.5%? Need exact. Let's compute precisely. 4505/45358 = 0.099320... 4434/47182 = 0.093977... diff = 0.005343 = 0.5343 percentage points. Answer likely 0.53 percentage points. But question asks \"difference in operating margin between 2012 and 2013\" maybe they want 2013 minus 2012. We'll provide value. Evidence: operating profit and net sales from selected financial data. Program: subtract(divide(4505,45358), divide(4434,47182)). But answer should be value only. Need include evidence.",
+ "raw_content": "<evidence>\n$4,505 | Operating profit 2013\n$45,358 | Net sales 2013\n$4,434 | Operating profit 2012\n$47,182 | Net sales 2012\n</evidence>\n<program>subtract(divide(4505, 45358), divide(4434, 47182))</program>\n<answer>0.0053</answer>",
+ "usage": {
+  "prompt_tokens": 93031,
+  "completion_tokens": 462,
+  "total_tokens": 93493,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 92928
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.13,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$4,505",
+   "element": "Operating profit 2013",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$45,358",
+   "element": "Net sales 2013",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$4,434",
+   "element": "Operating profit 2012",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$47,182",
+   "element": "Net sales 2012",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(divide(4505, 45358), divide(4434, 47182))",
+ "answer_model": "0.0053",
+ "program_value": 0.005344441246040305,
+ "docfinqa_row": 744
+}

@@ -1,0 +1,69 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0342",
+ "format": "dgml_compact",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what percentage of long-term financing was classified as current at the end of 2005?",
+ "gold": "4%",
+ "finqa_id": "AMT/2005/page_85.pdf-2",
+ "source_page": "page_85",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/dgml_compact/AMT_2005_0001193125-06-054224.dgml.txt",
+ "doc_chars": 570128,
+ "prompt_chars": 570301,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 570128,
+ "original_chars": 570128,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 127365,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 400,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "4.48751",
+ "reasoning": "We need answer percentage of long-term financing classified as current at end 2005. Need find long-term obligations total and current portion. From balance sheet: Current portion of long-term obligations 162,153; Long-term obligations 3,451,276; total long-term obligations including current portion = 3,613,429. Also note 7 table total 3,613,429, less current portion 162,153. So percentage = 162,153 / 3,613,429 * 100. Compute. 162,153 / 3,613,429 ≈ 0.04488 = 4.49%. Need exact. Let's compute: 3,613,429 * 0.045 = 162,604.3, so slightly less than 4.5%. Difference 451.3 / 3,613,429 = 0.0001249 = 0.0125%. So 4.4875%. Round maybe 4.5%. Question asks \"what percentage\" likely answer 4.5%. Use figures. Evidence: 162,153 | Current portion of long-term obligations; 3,613,429 | Long-term obligations, including current portion (from Selected Financial Data or note 7). Program divide(162153, 3613429) * 100? Program must be exact nested calls. Use divide(162153, 3613429) then multiply by 100? The program is executed, so need produce value. Could do multiply(divide(162153, 3613429), 100). But answer should be value. We'll provide.",
+ "raw_content": "<evidence>\n162,153 | Current portion of long-term obligations\n3,613,429 | Long-term obligations, including current portion\n</evidence>\n<program>multiply(divide(162153, 3613429), 100)</program>\n<answer>4.49%</answer>",
+ "usage": {
+  "prompt_tokens": 127670,
+  "completion_tokens": 400,
+  "total_tokens": 128070,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 71.59,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "162,153",
+   "element": "Current portion of long-term obligations",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "3,613,429",
+   "element": "Long-term obligations, including current portion",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(162153, 3613429), 100)",
+ "answer_model": "4.49%",
+ "program_value": 4.487510339901517,
+ "docfinqa_row": 342
+}

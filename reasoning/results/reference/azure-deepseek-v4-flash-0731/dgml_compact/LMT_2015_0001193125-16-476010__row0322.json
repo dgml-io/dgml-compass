@@ -1,0 +1,53 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0322",
+ "format": "dgml_compact",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was the change in millions of total long-term debt net from 2014 to 2015?",
+ "gold": "9119",
+ "finqa_id": "LMT/2015/page_99.pdf-3",
+ "source_page": "page_99",
+ "ticker": "LMT",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml_compact/LMT_2015_0001193125-16-476010.dgml.txt",
+ "doc_chars": 620939,
+ "prompt_chars": 621106,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 620939,
+ "original_chars": 620939,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 127470,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 709,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "9119",
+ "reasoning": "We need the change in total long-term debt net from 2014 to 2015. From balance sheet: Long-term debt, net 2015: 14,305; 2014: 6,142. Also current maturities of long-term debt 2015: 956; 2014: 0. Total long-term debt net? The question says \"total long-term debt net\" - likely the balance sheet line \"Long-term debt, net\" which is 14,305 in 2015 and 6,142 in 2014. Change = 14,305 - 6,142 = 8,163 million. But note there is also \"Total debt, net\" in selected financial data: 15,261 in 2015 and 6,142 in 2014. That includes current maturities. The question says \"total long-term debt net\" - ambiguous. The balance sheet has \"Long-term debt, net\" and \"Current maturities of long-term debt\". The selected data has \"Total debt, net\" which is 15,261 and 6,142. The change in total debt net would be 15,261 - 6,142 = 9,119. But the question specifically says \"total long-term debt net\" - maybe they mean the line item \"Long-term debt, net\" on the balance sheet. However, the phrase \"total long-term debt net\" might refer to the total debt including current portion. Let's check the document: In the balance sheet, there is \"Current maturities of long-term debt\" 956 and \"Long-term debt, net\" 14,305. The sum is 15,261 which matches \"Total debt, net\" in selected financial data. The question asks \"change in millions of total long-term debt net from 2014 to 2015\". It might be asking for the change in the total debt (including current) because they say \"total long-term debt net\" but that is a bit redundant. Alternatively, they might be referring to the line \"Long-term debt, net\" on the balance sheet. Let's see the exact wording: \"what was the change in millions of total long-term debt net from 2014 to 2015?\" The document has a line \"Long-term debt, net\" on the balance sheet. Also in the notes, \"Total long-term debt, net\" appears in Note 10: \"Total long-term debt, net | $15,261 | $6,142\" - actually in Note 10, the table shows \"Total long-term debt, net\" as 15,261 and 6,142. So that is the total including current maturities. The balance sheet shows \"Long-term debt, net\" as 14,305 and \"Current maturities of long-term debt\" as 956. The note 10 table shows \"Total long-term debt, net\" as 15,261. So the question likely refers to that total. The change is 15,261 - 6,142 = 9,119 million. But let's confirm: In Note 10, the table: \"Total long-term debt, net | $15,261 | $6,142\". So change = 9,119. The question says \"total long-term debt net\" - that matches the note. So answer 9119.",
+ "raw_content": "<answer>9119</answer>",
+ "usage": {
+  "prompt_tokens": 127619,
+  "completion_tokens": 709,
+  "total_tokens": 128328,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 127488
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.19,
+ "answer_tag_found": true,
+ "docfinqa_row": 322
+}

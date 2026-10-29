@@ -1,0 +1,53 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0445",
+ "format": "markdown_pdf_rules",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what portion of total value of net operating loss carryforwards is related to state?",
+ "gold": "52.8%",
+ "finqa_id": "AMT/2005/page_105.pdf-4",
+ "source_page": "page_105",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/markdown_pdf_rules/AMT_2005_0001193125-06-054224.md",
+ "doc_chars": 437061,
+ "prompt_chars": 437234,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 437061,
+ "original_chars": 437061,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 101793,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1159,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "52.85%",
+ "reasoning": "We need to find net operating loss carryforwards total and state portion. In note 13, there is a table: \"At December 31, 2005, the Company had net federal and state operating loss carryforwards available to reduce future taxable income of approximately $2.2 billion and $2.4 billion, respectively.\" So total NOL carryforwards = federal + state = 2.2 + 2.4 = 4.6 billion? But careful: \"approximately $2.2 billion and $2.4 billion\" for federal and state respectively. So state portion = 2.4 billion, total = 4.6 billion. Portion = 2.4/4.6 = 0.5217... = 52.17%. But the question asks \"what portion of total value of net operating loss carryforwards is related to state?\" So answer as a fraction or percentage. The document gives approximate numbers. We'll compute 2.4/(2.2+2.4) = 2.4/4.6 = 0.521739... So about 52.2%. But we need to check if there is any other mention. The table also shows federal and state NOL carryforwards with expiration schedule. The total federal is 2,157,503 and state 2,418,012 (in thousands) from the table. Actually the table shows \"Federal\" and \"State\" columns with amounts. Summing the federal column: 5,248+10,012+397,691+1,744,552 = 2,157,503. State: 469,747+272,662+777,707+897,896 = 2,418,012. So total = 4,575,515. State portion = 2,418,012 / 4,575,515 = 0.5285... = 52.85%. But the text says \"approximately $2.2 billion and $2.4 billion\" which is consistent. The question asks \"what portion of total value of net operating loss carryforwards is related to state?\" So we should use the exact numbers from the table. So state portion = 2,418,012 / (2,157,503+2,418,012) = 2,418,012 / 4,575,515 = 0.5285... So about 52.85%. We'll give the answer as a percentage or fraction. The instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So we can put \"52.85%\" or \"0.5285\". Probably percentage is fine. Let's compute precisely: 2,418,012 / 4,575,515 = 0.5285... Let's do division: 4,575,515 * 0.5285 = 2,418,? 4,575,515*0.5=2,287,757.5; remainder 130,254.5; 0.0285*4,575,515=130,? 4,575,515*0.0285=130,? 4,575,515*0.03=137,265.45 minus 0.0015*4,575,515=6,863.27 => 130,402.18 so total 2,418,159.68 slightly high. So 0.5285 gives 2,418,159.68, so actual is slightly less. Let's compute exactly: 2,418,012 / 4,575,515 = 0.5285... Let's do more precise: 4,575,515 * 0.5285 = 2,418,? Actually 4,575,515*0.5285 = 4,575,515*(0.5+0.0285)=2,287,757.5 + 130,? 4,575,515*0.0285 = 4,575,515*0.03 - 4,575,515*0.0015 = 137,265.45 - 6,863.27 = 130,402.18 => sum 2,418,159.68. That's 147.68 higher than 2,418,012. So fraction = 2,418,012/4,575,515 = 0.5285 - 147.68/(4,575,515*?) Actually difference 147.68 / 4,575,515 = 0.0000323. So 0.5285 - 0.0000323 = 0.5284677. So about 52.8468%. So we can say 52.85% or 0.5285. The question says \"what portion\" so we can give a fraction or percentage. I'll give \"52.85%\" or \"0.5285\". Since it's a portion, maybe fraction is fine. I'll put \"52.85%\" inside the answer tags. But the instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for portion, so percentage is acceptable. I'll put \"52.85%\". Alternatively, we could put \"0.5285\". I'll go with \"52.85%\".",
+ "raw_content": "<answer>52.85%</answer>",
+ "usage": {
+  "prompt_tokens": 101938,
+  "completion_tokens": 1159,
+  "total_tokens": 103097,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 101888
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.06,
+ "answer_tag_found": true,
+ "docfinqa_row": 445
+}

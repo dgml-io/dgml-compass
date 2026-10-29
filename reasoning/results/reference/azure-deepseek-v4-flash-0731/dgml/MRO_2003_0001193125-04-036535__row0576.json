@@ -1,0 +1,56 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0576",
+ "format": "dgml",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "what were total asphalt sales in millions for the three year period?",
+ "gold": "227",
+ "finqa_id": "MRO/2003/page_45.pdf-1",
+ "source_page": "page_45",
+ "ticker": "MRO",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/dgml/MRO_2003_0001193125-04-036535.dgml.xml",
+ "doc_chars": 894793,
+ "prompt_chars": 894950,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": true,
+ "truncation": "head",
+ "kept_chars": 894683,
+ "original_chars": 1111982,
+ "kept_fraction": 0.8046,
+ "est_doc_tokens": 266687,
+ "est_kept_tokens": 211360,
+ "budget_tokens": 240000,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1219,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "The question asks for total asphalt sales in millions for the three year period. I need to find asphalt sales figures. The document mentions \"Asphalt\" in the Refined Product Yields table and Refined Product Sales table. Let me look for asphalt sales volumes.\n\nIn the \"Refined Product Yields\" table, asphalt yields were 72, 72, 76 thousand barrels per day for 2003, 2002, 2001.\n\nIn the \"Refined Product Sales\" table, asphalt sales volumes were 74, 75, 78 thousand barrels per day for 2003, 2002, 2001.\n\nBut the question asks for \"total asphalt sales in millions\" - this likely refers to sales revenue in millions of dollars, not volumes. However, the document doesn't seem to provide asphalt sales revenue in dollars. The revenue by product line table shows \"Refined products\" total, \"Merchandise\", \"Liquid hydrocarbons\", \"Natural gas\", \"Transportation and other products\" - but no separate asphalt line.\n\nWait, maybe the question is asking for the total asphalt sales volumes in millions of barrels? But the table gives thousands of barrels per day. Let me check if there's any asphalt sales amount in dollars.\n\nLooking at the document, I don't see asphalt sales revenue in dollars. The question says \"total asphalt sales in millions\" - this could be interpreted as millions of dollars or millions of barrels. Since the document doesn't provide asphalt sales in dollars, perhaps it means the total volume in millions of barrels over three years.\n\nAsphalt sales volumes: 74, 75, 78 thousand barrels per day for 2003, 2002, 2001.\nTotal = 74+75+78 = 227 thousand barrels per day average? No, that's not right either.\n\nActually, \"total asphalt sales in millions for the three year period\" - if we sum the daily rates, that doesn't make sense. Perhaps it's asking for the total volume over three years in millions of barrels.\n\n74,000 bpd * 365 days = 27.01 million barrels for 2003\n75,000 bpd * 365 days = 27.375 million barrels for 2002\n78,000 bpd * 365 days = 28.47 million barrels for 2001\nTotal = 27.01 + 27.375 + 28.47 = 82.855 million barrels\n\nBut the question says \"in millions\" - could be millions of dollars. The document doesn't have asphalt sales in dollars.\n\nActually, looking more carefully, the question might be asking for the total asphalt sales volume in millions of barrels. But the phrasing \"total asphalt sales in millions\" is ambiguous.\n\nLet me reconsider. The document has a \"Refined Product Sales\" table with asphalt volumes in thousands of barrels per day. The question asks for \"total asphalt sales in millions for the three year period.\"\n\nIf we interpret this as total volume in millions of barrels:\n2003: 74,000 bpd * 365 = 27,010,000 barrels = 27.01 million\n2002: 75,000 bpd * 365 = 27,375,000 barrels = 27.375 million\n2001: 78,000 bpd * 365 = 28,470,000 barrels = 28.47 million\nTotal = 82.855 million barrels\n\nBut wait, the question says \"in millions\" - maybe it's asking for the sum of the daily rates? 74+75+78 = 227? That doesn't seem right.\n\nActually, I think the question might be poorly phrased and is asking for the total asphalt sales volume. But without clear revenue figures, I should check if there's any other mention.\n\nLooking at the revenue by product line table, there's no separate asphalt line. So the answer is likely NOT_FOUND since the document doesn't provide asphalt sales in dollars.\n\nHowever, if the question means total asphalt sales volumes in millions of barrels, we could compute it. But the question says \"in millions\" which typically means dollars.\n\nGiven the ambiguity, and since the document doesn't provide asphalt sales revenue in dollars, I'll say NOT_FOUND.\n\nWait, let me re-read: \"what were total asphalt sales in millions for the three year period?\" - This could be asking for the total sales volume in millions of barrels. Let me compute that.\n\nActually, the refined product sales table shows asphalt sales in thousands of barrels per day. Summing the daily rates doesn't give a \"total\" for the period. To get total volume, we'd multiply by 365 days.\n\n2003: 74 * 365 = 27,010 thousand barrels = 27.01 million barrels\n2002: 75 * 365 = 27,375 thousand barrels = 27.375 million barrels\n2001: 78 * 365 = 28,470 thousand barrels = 28.47 million barrels\nTotal = 82.855 million barrels\n\nBut the question says \"in millions\" - this could be millions of barrels. However, the phrasing is odd.\n\nGiven the document doesn't provide asphalt sales in dollars, and the question asks \"in millions\" (likely dollars), I'll answer NOT_FOUND.\n\nActually, let me reconsider. The question might be asking for the total asphalt sales volume in millions of barrels. But the document only provides daily rates. Without a clear dollar figure, I think the answer is NOT_FOUND.\n\nHmm, but maybe the question is asking for the sum of the daily rates in thousands of barrels per day? 74+75+78 = 227? That doesn't make sense as a \"total for the three year period.\"\n\nI'll go with NOT_FOUND since the document doesn't provide asphalt sales in dollar amounts.",
+ "raw_content": "<answer>NOT_FOUND</answer>",
+ "usage": {
+  "prompt_tokens": 211523,
+  "completion_tokens": 1219,
+  "total_tokens": 212742,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 211456
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.12,
+ "answer_tag_found": true,
+ "docfinqa_row": 576
+}

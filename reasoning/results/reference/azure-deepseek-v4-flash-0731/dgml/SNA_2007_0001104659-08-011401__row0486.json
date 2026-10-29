@@ -1,0 +1,53 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0486",
+ "format": "dgml",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what is the roi in snap-on if the investment was made at the end of 2005 and sold at the end of 2007?",
+ "gold": "34.8%",
+ "finqa_id": "SNA/2007/page_29.pdf-2",
+ "source_page": "page_29",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml/SNA_2007_0001104659-08-011401.dgml.xml",
+ "doc_chars": 646204,
+ "prompt_chars": 646394,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 646204,
+ "original_chars": 646204,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 157120,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 216,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "33.97%",
+ "reasoning": "We need ROI for Snap-on if investment made at end of 2005 and sold at end of 2007. Need to consider stock price and dividends. The document gives fiscal year-end per share price: 2005: $37.56, 2007: $48.13. Also dividends paid per share: 2006: $1.08, 2007: $1.11. So total return = (48.13 + 1.08 + 1.11 - 37.56) / 37.56 = (48.13+2.19-37.56)=12.76 /37.56 = 0.3397... = 33.97%. ROI as percentage. The question asks \"what is the roi\" - likely percentage. So answer 33.97% or 34%. Need to compute precisely. 12.76/37.56 = 0.33972... = 33.97%. So answer.",
+ "raw_content": "<answer>33.97%</answer>",
+ "usage": {
+  "prompt_tokens": 157277,
+  "completion_tokens": 216,
+  "total_tokens": 157493,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 157184
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.31,
+ "answer_tag_found": true,
+ "docfinqa_row": 486
+}

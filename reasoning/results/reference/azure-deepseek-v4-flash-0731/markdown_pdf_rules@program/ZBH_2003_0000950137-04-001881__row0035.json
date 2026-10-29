@@ -1,0 +1,74 @@
+{
+ "id": "ZBH_2003_0000950137-04-001881__row0035",
+ "format": "markdown_pdf_rules",
+ "key": "ZBH_2003_0000950137-04-001881",
+ "question": "what was the difference in operating profit for the americas as a percentage of net sales between 2001 and 2003?",
+ "gold": "3.8%",
+ "finqa_id": "ZBH/2003/page_40.pdf-1",
+ "source_page": "page_40",
+ "ticker": "ZBH",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/markdown_pdf_rules/ZBH_2003_0000950137-04-001881.md",
+ "doc_chars": 274949,
+ "prompt_chars": 275150,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 274949,
+ "original_chars": 274949,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 61705,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 213,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "3.8",
+ "reasoning": "We need answer difference in operating profit for Americas as % of net sales between 2001 and 2003. From document: \"Operating profit margin by segment\" table: Americas 51.2% in 2003, 48.3% 2002, 47.4% 2001. Difference = 51.2 - 47.4 = 3.8 percentage points. Need answer value. Evidence: 51.2% | table, 47.4% | table. Program subtract(51.2, 47.4). Final answer inside <answer>3.8</answer> (no units? question asks difference in percentage points, likely 3.8).",
+ "raw_content": "<evidence>\n51.2% | Operating profit margin by segment, Americas 2003\n47.4% | Operating profit margin by segment, Americas 2001\n</evidence>\n<program>\nsubtract(51.2, 47.4)\n</program>\n<answer>3.8</answer>",
+ "usage": {
+  "prompt_tokens": 62018,
+  "completion_tokens": 213,
+  "total_tokens": 62231,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.31,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "51.2%",
+   "element": "Operating profit margin by segment, Americas 2003",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "47.4%",
+   "element": "Operating profit margin by segment, Americas 2001",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "subtract(51.2, 47.4)",
+ "answer_model": "3.8",
+ "program_value": 3.8000000000000043,
+ "docfinqa_row": 35
+}

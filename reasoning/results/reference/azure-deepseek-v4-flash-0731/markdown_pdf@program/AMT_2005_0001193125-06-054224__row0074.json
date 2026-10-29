@@ -1,0 +1,69 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0074",
+ "format": "markdown_pdf",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what portion of the adjusted consolidated cash flow for the twelve months ended december 31 , 2005 is related to tower cash flow?",
+ "gold": "105.0%",
+ "finqa_id": "AMT/2005/page_54.pdf-2",
+ "source_page": "page_54",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/markdown_pdf/AMT_2005_0001193125-06-054224.md",
+ "doc_chars": 443446,
+ "prompt_chars": 443664,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 443446,
+ "original_chars": 443446,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 103998,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 349,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.986804",
+ "reasoning": "We need answer question: \"what portion of the adjusted consolidated cash flow for the twelve months ended december 31, 2005 is related to tower cash flow?\" Need find figures. Document has table \"Information Presented Pursuant to the Indentures...\" with Tower Cash Flow, Consolidated Cash Flow, etc. Specifically:\n\nTower Cash Flow, for the twelve months ended December 31, 2005 | (524,804)\nAdjusted Consolidated Cash Flow, for the twelve months ended December 31, 2005 | $ 531,822\n\nPortion = Tower Cash Flow / Adjusted Consolidated Cash Flow = 524,804 / 531,822. Need compute. Let's calculate. 524804 / 531822 ≈ 0.9868. Let's compute precisely. 531822 - 524804 = 7018. So ratio = 1 - 7018/531822 = 1 - 0.013196 = 0.986804. So about 98.68%. Need answer as portion maybe decimal or percentage. The question \"what portion\" likely fraction. We'll give value. Need evidence: figures as printed. Use evidence lines.\n\nProgram: divide(524804, 531822). Note figures are in thousands but ratio same. Use exact numbers.\n\nFinal answer inside <answer> tags.",
+ "raw_content": "<evidence>\n524,804 | Tower Cash Flow, for the twelve months ended December 31, 2005\n531,822 | Adjusted Consolidated Cash Flow, for the twelve months ended December 31, 2005\n</evidence>\n\n<program>\ndivide(524804, 531822)\n</program>\n\n<answer>0.9868</answer>",
+ "usage": {
+  "prompt_tokens": 104312,
+  "completion_tokens": 349,
+  "total_tokens": 104661,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.59,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "524,804",
+   "element": "Tower Cash Flow, for the twelve months ended December 31, 2005",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "531,822",
+   "element": "Adjusted Consolidated Cash Flow, for the twelve months ended December 31, 2005",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(524804, 531822)",
+ "answer_model": "0.9868",
+ "program_value": 0.9868038554253115,
+ "docfinqa_row": 74
+}

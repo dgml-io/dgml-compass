@@ -1,0 +1,72 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0873",
+ "format": "markdown_pdf_plumber",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "considering the years 2011-2012 , what is the variation observed in the lease obligations?",
+ "gold": "24",
+ "finqa_id": "IP/2009/page_45.pdf-3",
+ "source_page": "page_45",
+ "ticker": "IP",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/markdown_pdf_plumber/IP_2009_0001193125-10-040916.md",
+ "doc_chars": 489910,
+ "prompt_chars": 490089,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 489910,
+ "original_chars": 489910,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 119893,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 212,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-24",
+ "reasoning": "We need to find lease obligations for 2011 and 2012. From the document, there is a table \"Contractual obligations for future payments under existing debt and lease commitments and purchase obligations at December 31, 2009\" with columns 2010, 2011, 2012, 2013, 2014, Thereafter. Lease obligations row: 177, 148, 124, 96, 79, 184. So for 2011: 148, 2012: 124. Variation = 2012 - 2011 = 124 - 148 = -24. Or maybe percentage change? The question says \"variation observed\" - likely the change in value. Could be absolute difference. We'll compute subtract(124, 148) = -24. Provide answer as -24.",
+ "raw_content": "<evidence>\n148 | Lease obligations\n124 | Lease obligations\n</evidence>\n<program>subtract(124, 148)</program>\n<answer>-24</answer>",
+ "usage": {
+  "prompt_tokens": 120200,
+  "completion_tokens": 212,
+  "total_tokens": 120412,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 13.21,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "148",
+   "element": "Lease obligations",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "124",
+   "element": "Lease obligations",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(124, 148)",
+ "answer_model": "-24",
+ "program_value": -24.0,
+ "docfinqa_row": 873
+}

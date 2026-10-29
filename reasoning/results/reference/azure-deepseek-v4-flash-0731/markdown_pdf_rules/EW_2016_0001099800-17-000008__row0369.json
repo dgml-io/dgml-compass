@@ -1,0 +1,53 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0369",
+ "format": "markdown_pdf_rules",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what is the percentage difference in the fair value per share between 2015 and 2016?",
+ "gold": "71%",
+ "finqa_id": "EW/2016/page_94.pdf-3",
+ "source_page": "page_94",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf_rules/EW_2016_0001099800-17-000008.md",
+ "doc_chars": 314607,
+ "prompt_chars": 314780,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 314607,
+ "original_chars": 314607,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 69815,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 280,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "71.0%",
+ "reasoning": "We need to find fair value per share for 2015 and 2016. The document mentions \"Fair value, per share\" for option awards and ESPP. The question likely refers to the fair value per share of stock options granted. In Note 13, there is a table for Option Awards: 2016 fair value per share $31.00, 2015 $18.13. Also ESPP: 2016 $22.09, 2015 $15.59. The question says \"the fair value per share\" without specifying which. Probably it's the option awards fair value per share. The percentage difference from 2015 to 2016: (31.00 - 18.13)/18.13 * 100 = 12.87/18.13 ≈ 70.99% increase. Alternatively, if they mean the difference as a percentage of 2016? Usually \"percentage difference\" could be (new - old)/old. So answer ~71%. But let's check if there is any other fair value per share. The question might be ambiguous. Since the document has multiple, but the most prominent is the option awards. Also the question says \"between 2015 and 2016\" so we compute percentage change. I'll answer with the value.",
+ "raw_content": "<answer>71.0%</answer>",
+ "usage": {
+  "prompt_tokens": 69963,
+  "completion_tokens": 280,
+  "total_tokens": 70243,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 69888
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 6.7,
+ "answer_tag_found": true,
+ "docfinqa_row": 369
+}

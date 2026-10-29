@@ -1,0 +1,66 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0594",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what portion of the total interest expense is related to unpaid taxes in 2007?",
+ "gold": "16.7%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "FIS_2007_0000892569-08-000207.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/RegistrantName/Financial/Financial/IncomeTaxExpenseAmount",
+  "/chunk/RegistrantName/Financial/Financial/IncomeTaxExpenseAmount/InterestExpenseAmount"
+ ],
+ "r1_reasoning_chars": 8099,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 23029,
+  "completion_tokens": 1948,
+  "total_tokens": 24977,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/RegistrantName/Financial/Financial/IncomeTaxExpenseAmount",
+  "/chunk/RegistrantName/Financial/Financial/IncomeTaxExpenseAmount/InterestExpenseAmount"
+ ],
+ "content_chars": 2607,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "1.4",
+ "reasoning": "We need answer: portion of total interest expense related to unpaid taxes in 2007. Document says \"The total amount of interest expense recognized ... for unpaid taxes is $1.4 million for year ended Dec 31 2007.\" But question asks \"portion of the total interest expense\" - need total interest expense? Not given. Maybe \"total interest expense\" refers to total interest and penalties? The document gives $1.4 million interest expense for unpaid taxes, and $8.4 million contingent liability at balance sheet. But \"portion of total interest expense\" - maybe need total interest expense from income statement? Not in excerpt. Could be that the $1.4 million is the portion? The question asks \"what portion of the total interest expense is related to unpaid taxes in 2007?\" If total interest expense is not given, cannot compute portion. But maybe \"total interest expense\" is the $8.4 million? No, that's balance sheet liability. Or maybe \"total interest expense\" is the total amount of interest and penalties recognized in balance sheet? The text: \"The total amount of interest expense recognized in the consolidated and combined statements of earnings for unpaid taxes is $1.4 million for the year ended December 31, 2007. The total amount of interest and penalties recognized in the consolidated balance sheet is $8.4 million at December 31, 2007.\" So the $1.4 million is the interest expense related to unpaid taxes. The question asks \"what portion of the total interest expense is related to unpaid taxes in 2007?\" That could be interpreted as: the portion is 100%? Or maybe they want the ratio of interest expense to total interest and penalties? But \"total interest expense\" might be the total interest expense line item in income statement, not provided. The excerpt only gives interest expense for unpaid taxes. So answer is $1.4 million? But \"portion\" suggests a fraction. Could be \"what portion of the total interest expense\" meaning \"how much\" - but portion usually fraction. Let's read carefully: \"what portion of the total interest expense is related to unpaid taxes in 2007?\" The document says \"The total amount of interest expense recognized ... for unpaid taxes is $1.4 million\". That is the amount. If total interest expense is not given, we cannot compute portion. But maybe the \"total interest expense\" is the $8.4 million? No, that's balance sheet. Or maybe the total interest expense is the sum of interest and penalties? The $8.4 million is \"total amount of interest and penalties recognized in the consolidated balance sheet\" - that's a liability, not expense. So not.\n\nMaybe the question expects the answer $1.4 million. But \"portion\" - could be \"what portion\" meaning \"what amount\". In financial documents, \"portion\" can mean \"amount\". The question: \"what portion of the total interest expense is related to unpaid taxes in 2007?\" The total interest expense might be a line item in the income statement, but not in excerpt. The excerpt only gives the interest expense for unpaid taxes. So the portion is the entire interest expense? No, it says \"total amount of interest expense recognized ... for unpaid taxes is $1.4 million\" - that is the interest expense related to unpaid taxes. If the total interest expense (all sources) is not given, we cannot say portion. But maybe the \"total interest expense\" refers to the total interest and penalties recognized in balance sheet? That is $8.4 million, but that's not expense. Hmm.\n\nLet's see if there is any other figure: The table has unrecognized tax benefits, not interest. So likely the answer is $1.4 million. But the question asks \"portion\" - maybe they want the fraction of total interest expense that is related to unpaid taxes. If total interest expense is not given, NOT_FOUND. But the document explicitly states \"The total amount of interest expense recognized ... for unpaid taxes is $1.4 million\" - that is the answer to \"what portion\" if portion means amount. The word \"portion\" could be used to ask \"how much\". In many QA tasks, \"what portion\" means \"what amount\". I'll answer $1.4 million.\n\nBut let's be careful: The question says \"what portion of the total interest expense is related to unpaid taxes in 2007?\" The phrase \"total interest expense\" might refer to the total interest expense line in the income statement. The document says \"The total amount of interest expense recognized ... for unpaid taxes is $1.4 million\" - that is the portion. So the portion is $1.4 million. The \"total interest expense\" is not given, but the portion is given. So answer is $1.4 million.\n\nI'll provide evidence: InterestExpenseAmount: $1.4 million. Program: 1.4 (in millions). But the question asks \"portion\" - maybe they want a fraction? If they want fraction, we need total. Not available. So answer $1.4 million.\n\nI'll output <answer>1.4</answer> with evidence.",
+ "raw_content": "<evidence>$1.4 million | InterestExpenseAmount</evidence>\n<program>1.4</program>\n<answer>1.4</answer>",
+ "r2_usage": {
+  "prompt_tokens": 973,
+  "completion_tokens": 1106,
+  "total_tokens": 2079,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$1.4 million",
+   "element": "InterestExpenseAmount",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "1.4",
+ "answer_model": "1.4",
+ "program_value": 1.4,
+ "elapsed_s": 15.66,
+ "outline_source": "FIS_2007_0000892569-08-000207.outline.txt",
+ "outline_chars": 91339
+}

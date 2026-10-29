@@ -1,0 +1,72 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0767",
+ "format": "dgml_compact",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "hard assets were what percent of the brazilian purchase price , as finally determined?",
+ "gold": "14.3%",
+ "finqa_id": "AMT/2012/page_118.pdf-3",
+ "source_page": "page_118",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/dgml_compact/AMT_2012_0001193125-13-077821.dgml.txt",
+ "doc_chars": 684819,
+ "prompt_chars": 684994,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 684819,
+ "original_chars": 684819,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 147020,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 914,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "14.27212",
+ "reasoning": "We need answer question: \"hard assets were what percent of the brazilian purchase price, as finally determined?\" Need find Brazil acquisition. Document has Brazil Acquisition: On March 1, 2011, acquired 100% of shares of company that owned 627 communications sites in Brazil for $553.2 million, subsequently increased to $585.4 million as result of acquiring 39 additional sites during 2011. During 2012, purchase price reduced to $585.3 million after post-closing adjustments. Then purchase price allocation final: table shows Final Purchase Price Allocation and Preliminary. Need \"hard assets\" likely property and equipment? Or tangible assets? The question: \"hard assets were what percent of the brazilian purchase price, as finally determined?\" Hard assets might mean property and equipment (tangible assets) as opposed to intangibles. In final allocation, property and equipment = $83,539 (in thousands). Purchase price? The final purchase price allocation table shows fair value of net assets acquired $488,935 and goodwill $96,395. But purchase price is total consideration? The purchase price was $585.3 million. The allocation table shows property and equipment $83,539. So percent = 83,539 / 585,300? But note table in thousands. Purchase price $585.3 million = $585,300 thousand. Property and equipment $83,539 thousand. Percent = 83,539 / 585,300 = 0.1427... = 14.27%. But maybe \"hard assets\" includes property and equipment plus non-current assets? Or \"hard assets\" might be tangible assets (property and equipment) only. The question says \"hard assets\" - in context of acquisition, hard assets likely property and equipment. Let's verify. The Brazil acquisition final purchase price allocation: Current assets $9,922; Non-current assets $71,529; Property and equipment $83,539; Intangible assets $368,000; Current liabilities (5,536); Other non-current liabilities (38,519); Fair value of net assets acquired $488,935; Goodwill $96,395. Sum: 9,922+71,529+83,539+368,000-5,536-38,519 = 488,935. Goodwill 96,395 gives total consideration 585,330? 488,935+96,395=585,330. That matches $585.3 million. So purchase price = $585.3 million. Hard assets = property and equipment = $83,539. Percent = 83,539 / 585,330? But purchase price as finally determined is $585.3 million (rounded). The table shows total consideration = 585,330 (in thousands). So percent = 83,539 / 585,330 = 0.14272 = 14.27%. Alternatively if using $585.3 million exactly, 83,539/585,300 = 14.273%. The question asks \"hard assets were what percent of the brazilian purchase price, as finally determined?\" So answer ~14.3%. Need provide evidence and program. Use figures: Property and equipment $83,539 (in thousands) from final purchase price allocation; Purchase price $585.3 million (or total consideration $585,330). The document says \"During the year ended December 31, 2012, the purchase price was reduced to $585.3 million after certain post-closing purchase price adjustments.\" So use 585.3 million. But the allocation table shows total consideration 585,330 (in thousands) which is exactly 585.33 million. The question says \"as finally determined\" - that is the final purchase price allocation. So use 585,330. Percent = 83,539 / 585,330 * 100 = 14.272... Let's compute: 83,539 / 585,330 = 0.14272. So 14.27%. Answer with percent. Need include evidence lines.",
+ "raw_content": "<evidence>\n$83,539 | Property and equipment (Final Purchase Price Allocation, Brazil Acquisition)\n$585,330 | Fair value of net assets acquired + Goodwill (Final Purchase Price Allocation, Brazil Acquisition)\n</evidence>\n\n<program>multiply(divide(83539, 585330), 100)</program>\n\n<answer>14.27%</answer>",
+ "usage": {
+  "prompt_tokens": 147324,
+  "completion_tokens": 914,
+  "total_tokens": 148238,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 147200
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.42,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$83,539",
+   "element": "Property and equipment (Final Purchase Price Allocation, Brazil Acquisition)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$585,330",
+   "element": "Fair value of net assets acquired + Goodwill (Final Purchase Price Allocation, Brazil Acquisition)",
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "multiply(divide(83539, 585330), 100)",
+ "answer_model": "14.27%",
+ "program_value": 14.272120000683374,
+ "docfinqa_row": 767
+}

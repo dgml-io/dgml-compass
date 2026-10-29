@@ -1,0 +1,73 @@
+{
+ "id": "CMCSA_2015_0001193125-16-452423__row0115",
+ "format": "markdown_pdf_rules",
+ "key": "CMCSA_2015_0001193125-16-452423",
+ "question": "what was the percentage cable distribution systems capital expenditures of the capital expenditures incurred in cable communications segment capital expenditures in 2015?",
+ "gold": "34%",
+ "finqa_id": "CMCSA/2015/page_67.pdf-1",
+ "source_page": "page_67",
+ "ticker": "CMCSA",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_rules/CMCSA_2015_0001193125-16-452423.md",
+ "doc_chars": 564207,
+ "prompt_chars": 564466,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 564207,
+ "original_chars": 564207,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 125792,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 536,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "34.461189",
+ "reasoning": "We need to find capital expenditures in Cable Communications segment in 2015, and specifically cable distribution system capital expenditures. From the document, in the \"Capital Expenditures\" section under Investing Activities, there is a table:\n\nYear ended December 31 (in millions) 2015 2014 2013\nCable distribution system $ 2,424 $ 2,047 $ 1,819\nCustomer premise equipment 3,698 3,397 2,990\nOther equipment 756 613 527\nBuildings and building improvements 156 97 67\nTotal $ 7,034 $ 6,154 $ 5,403\n\nSo cable distribution system capital expenditures = 2,424, total = 7,034. Percentage = 2424/7034 * 100. Compute: 2424/7034 ≈ 0.3446, so 34.46%. The question asks \"percentage cable distribution systems capital expenditures of the capital expenditures incurred in cable communications segment capital expenditures in 2015?\" So answer is 34.46% (or 34.5%). We'll provide the value.\n\nWe need to list evidence: value | element. The element is the row label or heading. So we have \"Cable distribution system\" and \"Total\" from the table. Also the year 2015.\n\nWe'll compute: divide(2424, 7034) * 100? But the program expects nested calls. We can do multiply(divide(2424, 7034), 100) but the instruction says \"exp(a, b)\" for exponent? Actually they said \"exp(a, b)\" but that's likely exponent? They said \"for example divide(subtract(15261, 6142), 6142)\". So we can use multiply(divide(2424, 7034), 100) to get percentage. But the answer should be the value itself, maybe as a percentage number. The question asks \"what was the percentage\" so answer should be a number like 34.46. We'll put 34.46.\n\nWe'll provide evidence lines: \"2,424 | Cable distribution system\" and \"7,034 | Total\" from the table. Also note the table is under \"Capital Expenditures\" in the MD&A.\n\nLet's write the answer.",
+ "raw_content": "<evidence>\n2,424 | Cable distribution system\n7,034 | Total\n</evidence>\n<program>\nmultiply(divide(2424, 7034), 100)\n</program>\n<answer>34.46</answer>",
+ "usage": {
+  "prompt_tokens": 126104,
+  "completion_tokens": 536,
+  "total_tokens": 126640,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.78,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "2,424",
+   "element": "Cable distribution system",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "7,034",
+   "element": "Total",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "multiply(divide(2424, 7034), 100)",
+ "answer_model": "34.46",
+ "program_value": 34.46118851293716,
+ "docfinqa_row": 115
+}

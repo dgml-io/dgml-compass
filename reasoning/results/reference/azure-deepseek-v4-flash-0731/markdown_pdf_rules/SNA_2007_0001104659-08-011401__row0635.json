@@ -1,0 +1,53 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0635",
+ "format": "markdown_pdf_rules",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "based on the cash dividends paid , how many common stock shares were outstanding?",
+ "gold": "58909091",
+ "finqa_id": "SNA/2007/page_49.pdf-2",
+ "source_page": "page_49",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_rules/SNA_2007_0001104659-08-011401.md",
+ "doc_chars": 336027,
+ "prompt_chars": 336197,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 336027,
+ "original_chars": 336027,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 81193,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1343,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "58.4",
+ "reasoning": "We need to find cash dividends paid and per share dividend to compute shares outstanding. Cash dividends paid in 2007 totaled $64.8 million. Dividends paid per share in 2007 was $1.11 (from common share summary). So shares = 64.8 million / 1.11 = 58.378... million. But note that dividends paid per share is based on weighted average shares? Actually cash dividends paid per share is total dividends paid divided by average shares outstanding? The question says \"based on the cash dividends paid, how many common stock shares were outstanding?\" It might be asking for the number of shares that received dividends, which is total dividends paid divided by dividend per share. But careful: The dividend per share declared was $1.11 for the year (0.27*3 + 0.30 = 1.11). Cash dividends paid in 2007 totaled $64.8 million. So shares = 64.8 / 1.11 = 58.378... million. But the document also states shares outstanding at December 29, 2007: 57,429,139 shares. And at Feb 15, 2008: 57,690,539. The question might be asking for the number of shares based on cash dividends paid, which would be the average shares outstanding during the year? Actually cash dividends paid are based on shares outstanding at the time of each dividend payment. But the per share dividend is $1.11 for the year. So dividing total cash dividends by per share dividend gives the average number of shares that received dividends. That is approximately 58.4 million. But the document gives weighted average shares outstanding for basic EPS as 57.9 million for 2007. So it's close. The question says \"based on the cash dividends paid, how many common stock shares were outstanding?\" It might be a trick: The cash dividends paid is $64.8 million, and the per share dividend is $1.11, so shares = 64.8/1.11 = 58.378... million. But the document also states \"At December 29, 2007, Snap-on had 57,429,139 shares of common stock outstanding.\" So which one? The question specifically says \"based on the cash dividends paid\" so we should compute from that. However, note that cash dividends paid might include dividends on shares that were outstanding at different times, so the computed number is an average. But the question asks \"how many common stock shares were outstanding?\" It might be asking for the number of shares that received dividends, which is the average. But the document gives the exact number at year end. The phrasing \"based on the cash dividends paid\" suggests we use the total dividends and per share dividend to find the number of shares. So answer: 64.8 million / 1.11 = 58.378... million. But we need to give the value. The question might expect the number of shares outstanding at year end? Let's read the question: \"based on the cash dividends paid , how many common stock shares were outstanding?\" It doesn't specify at year end. It says \"based on the cash dividends paid\" so we compute from that. So answer: 58.4 million (rounded). But the document also says \"At December 29, 2007, Snap-on had 57,429,139 shares of common stock outstanding.\" That is a different number. The question might be a trick to see if we use the correct data. The cash dividends paid per share is $1.11, and total cash dividends paid is $64.8 million. So shares = 64.8/1.11 = 58.378... million. But note that the per share dividend is declared, not necessarily paid? Actually cash dividends paid per share is given as $1.11 in the common share summary. So that is the amount paid per share. So the number of shares that received dividends is total paid divided by per share. So answer: 58.4 million. But the question might expect the exact number? The document gives shares outstanding at year end as 57,429,139. But that is not based on cash dividends. The question says \"based on the cash dividends paid\" so we should compute. So I'll answer with the computed value. Let me compute precisely: 64.8 / 1.11 = 58.378378... million. So approximately 58.4 million. But the answer should be a number. I'll put 58.4 million. However, the question might want the number of shares outstanding at the time of dividend payment? But we don't have that. So I'll go with the computed average. Alternatively, the question might be asking for the number of shares outstanding at year end, but it says \"based on the cash dividends paid\" so it's a calculation. I'll answer with the computed value. Let me check if there is any other information. The document also says \"Cash dividends paid in 2007, 2006 and 2005 totaled $64.8 million, $63.6 million and $57.8 million, respectively.\" And \"Cash dividends paid per common share\" for 2007 is $1.11. So yes.\n\nThus answer: 58.4 million (or 58,378,378). I'll put the number without units? The question asks \"how many common stock shares were outstanding?\" So I'll put the number. I'll put 58.4 million. But to be precise, I'll put 58,378,378. But the answer should be a value. I'll put 58.4 million. However, the instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So I'll put 58.4. But it might be better to put the exact number. Let me compute: 64.8 / 1.11 = 58.378378... So I'll put 58.4. But the question might expect the number of shares outstanding at year end? Let me re-read: \"based on the cash dividends paid , how many common stock shares were outstanding?\" It doesn't say \"at year end\". So it's a calculation. So I'll answer with the computed value.\n\nI'll put 58.4.",
+ "raw_content": "<answer>58.4</answer>",
+ "usage": {
+  "prompt_tokens": 81336,
+  "completion_tokens": 1343,
+  "total_tokens": 82679,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 81152
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 6.82,
+ "answer_tag_found": true,
+ "docfinqa_row": 635
+}

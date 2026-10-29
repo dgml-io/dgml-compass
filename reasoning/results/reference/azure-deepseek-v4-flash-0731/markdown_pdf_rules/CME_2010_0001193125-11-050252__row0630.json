@@ -1,0 +1,53 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0630",
+ "format": "markdown_pdf_rules",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "whats is the percentage of equity compensation plans that were not approved by security holders?",
+ "gold": "0.491%",
+ "finqa_id": "CME/2010/page_123.pdf-1",
+ "source_page": "page_123",
+ "ticker": "CME",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/markdown_pdf_rules/CME_2010_0001193125-11-050252.md",
+ "doc_chars": 415699,
+ "prompt_chars": 415884,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 415699,
+ "original_chars": 415699,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93329,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1135,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.49",
+ "reasoning": "We need to find the percentage of equity compensation plans not approved by security holders. The document has a table in Item 12: Equity Compensation Plan Information. It shows:\n\nNumber of securities to be issued upon exercise of outstanding options (a), weighted-average exercise price (b), number remaining available for future issuance (c).\n\nFor plans approved by security holders: (a) 1,211,143, (b) $308.10, (c) 5,156,223.\nFor plans not approved: (a) 5,978, (b) $22.00, (c) —.\n\nTotal: (a) 1,217,121.\n\nThe question asks: \"whats is the percentage of equity compensation plans that were not approved by security holders?\" It might mean the percentage of outstanding options that are under plans not approved, or the percentage of plans themselves? The phrasing \"percentage of equity compensation plans\" could be interpreted as the proportion of plans (count) or the proportion of shares. Typically in such contexts, it's the percentage of shares or options. The table gives numbers of securities. The question likely expects the percentage of outstanding options that are under plans not approved. That would be 5,978 / 1,217,121 * 100 ≈ 0.491%. Alternatively, it could be the percentage of plans by count: there are two categories: approved and not approved. So 1 out of 2? But that doesn't make sense. The table shows two rows: approved and not approved. The percentage of plans not approved would be 1/2 = 50%? But that seems too trivial. Usually in SEC filings, they ask for the percentage of shares under plans not approved. The question says \"percentage of equity compensation plans\" but likely means the percentage of shares or options. Let's read the question: \"whats is the percentage of equity compensation plans that were not approved by security holders?\" It might be asking for the percentage of the total number of securities (options) that are under plans not approved. The table gives numbers. So compute 5,978 / 1,217,121 = 0.00491 = 0.491%. Round to maybe 0.5%? The answer should be a number. The instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So we output the percentage value. Probably 0.49% or 0.5%. Let's compute precisely: 5,978 / 1,217,121 = 0.004911... so 0.4911%. So answer: 0.49% or 0.5%? The question says \"percentage\" so we can give a number like 0.49. But maybe they want the percentage of plans (count) which is 50%? Let's check the context. The table is titled \"Equity Compensation Plan Information\" and lists two categories. The question might be from a financial analysis perspective: what percentage of the equity compensation plans (i.e., the shares) were not approved? Usually in proxy statements, they disclose the number of shares under plans not approved. So I think it's the share count. So answer: 0.49% (or 0.5%). I'll output 0.49. But to be safe, I'll compute exactly: 5978/1217121 = 0.004911... so 0.4911%. So answer: 0.49. Or maybe they want the percentage of the total number of plans? There are two categories: approved and not approved. So 1 out of 2 = 50%. But that seems too simplistic and not typical. The question says \"percentage of equity compensation plans\" - it could be interpreted as the proportion of plans (i.e., number of plans) that were not approved. But the table doesn't list individual plans, it lists categories. Actually, the table shows two rows: \"Equity compensation plans approved by security holders\" and \"Equity compensation plans not approved by security holders\". So there are two groups. The percentage of plans not approved would be 1/2 = 50% if we count each group as one plan? But that's not accurate because there are multiple plans within each group. The document mentions several plans: Omnibus Stock Plan, Director Stock Plan, Employee Stock Purchase Plan, CBOT plan, NYMEX plan. And the not approved one is the Chicago Mercantile Exchange Omnibus Stock Plan (pre-2001). So there is one plan not approved out of many. But the table aggregates them. The question likely expects the percentage of shares or options. I'll go with the share count.\n\nThus answer: 0.49% or 0.5%. I'll output 0.49.\n\nBut let's double-check: The table shows for not approved: (a) 5,978, (b) $22.00, (c) —. Total (a) is 1,217,121. So percentage = 5978/1217121 * 100 = 0.4911%. So answer: 0.49.\n\nI'll put <answer>0.49</answer> or maybe 0.5? The question says \"percentage\" so I'll give a number. I'll give 0.49.",
+ "raw_content": "<answer>0.49</answer>",
+ "usage": {
+  "prompt_tokens": 93473,
+  "completion_tokens": 1135,
+  "total_tokens": 94608,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 93440
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.94,
+ "answer_tag_found": true,
+ "docfinqa_row": 630
+}

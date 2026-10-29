@@ -1,0 +1,81 @@
+{
+ "id": "GPN_2010_0001193125-10-169025__row0540",
+ "key": "GPN_2010_0001193125-10-169025",
+ "question": "in 2009 what was the percentage change in the non-vested at may 31 2009",
+ "gold": "47.1%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "GPN_2010_0001193125-10-169025.outline.txt",
+ "doc_source": "GPN_2010_0001193125-10-169025.dgml.xml",
+ "outline_chars": 88725,
+ "predicted_xpaths": [
+  "/chunk/NotesToFinancialStatementsContinuation/RestrictedStock"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 4464,
+ "r1_usage": {
+  "prompt_tokens": 22310,
+  "completion_tokens": 1149,
+  "total_tokens": 23459,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/NotesToFinancialStatementsContinuation/RestrictedStock"
+ ],
+ "content_chars": 11216,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "47.104247",
+ "reasoning": "We need to find percentage change in non-vested at May 31, 2009. The table shows non-vested at May 31, 2008: 518 shares, and non-vested at May 31, 2009: 762 shares. Percentage change from 2008 to 2009? The question says \"in 2009 what was the percentage change in the non-vested at may 31 2009\" - likely comparing May 31, 2009 to May 31, 2008. So percentage change = (762-518)/518 * 100. Compute: 762-518=244; 244/518=0.4710... so 47.1%. But need exact? Let's compute: 244/518 = 0.471042... percentage 47.1042%. The question asks \"percentage change\" - likely as a number, maybe 47.1% or 47.10%. We'll provide the value as a decimal? Usually percentage change is expressed as a percentage. The program should output the value. We'll compute divide(subtract(762,518),518) then multiply by 100? But the program expects a number. The question asks \"what was the percentage change\" - so answer should be a percentage number, e.g., 47.1. But we need to be careful: the document gives shares in thousands, but the change is relative, so units don't matter. We'll use the figures as printed: 762 and 518. The program: multiply(divide(subtract(762,518),518),100) gives 47.1042... We'll output that. But the instruction says \"Give your final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So we output the numeric value, maybe 47.1042. But we should round? The question doesn't specify. We'll output the exact fraction as a decimal? The program will compute exactly. We'll output the result of the program. Let's do that.\n\nEvidence: 762 and 518 from the table. Path: /chunk/NotesToFinancialStatementsContinuation/RestrictedStock/RestrictedStock/table/RestrictedStock/NonVestedShares? Actually the table rows have NonVestedShares elements. We need to cite the figures. The row for Non-vested at May 31, 2008 has NonVestedShares 518. The row for Non-vested at May 31, 2009 has NonVestedShares 762. We'll cite those.\n\nProgram: multiply(divide(subtract(762,518),518),100)\n\nLet's write evidence lines.",
+ "raw_content": "<evidence>518 | /chunk/NotesToFinancialStatementsContinuation/RestrictedStock/RestrictedStock/table/RestrictedStock/NonVestedShares\n762 | /chunk/NotesToFinancialStatementsContinuation/RestrictedStock/RestrictedStock/table/RestrictedStock/NonVestedShares</evidence>\n<program>multiply(divide(subtract(762, 518), 518), 100)</program>\n<answer>47.1042471042471</answer>",
+ "r2_usage": {
+  "prompt_tokens": 3208,
+  "completion_tokens": 692,
+  "total_tokens": 3900,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 3208,
+   "completion_tokens": 692,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "518",
+   "element": "chunk/NotesToFinancialStatementsContinuation/RestrictedStock/RestrictedStock/table/RestrictedStock/NonVestedShares",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "762",
+   "element": "chunk/NotesToFinancialStatementsContinuation/RestrictedStock/RestrictedStock/table/RestrictedStock/NonVestedShares",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(762, 518), 518), 100)",
+ "answer_model": "47.1042471042471",
+ "program_value": 47.10424710424711,
+ "elapsed_s": 6.71
+}

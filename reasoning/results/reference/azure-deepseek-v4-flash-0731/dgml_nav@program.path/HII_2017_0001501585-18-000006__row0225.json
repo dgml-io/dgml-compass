@@ -1,0 +1,84 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0225",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what is the ratio of the deffered tax assets for the state income tax credit carry-forwards to the net operating loss carry-forward",
+ "gold": "5.3",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "HII_2017_0001501585-18-000006.outline.txt",
+ "doc_source": "HII_2017_0001501585-18-000006.dgml.xml",
+ "outline_chars": 86768,
+ "predicted_xpaths": [
+  "/chunk/IncomeTaxes/TaxReformOverview/StateTaxCarryforwards"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 1449,
+ "r1_usage": {
+  "prompt_tokens": 22187,
+  "completion_tokens": 361,
+  "total_tokens": 22548,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 22016
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/IncomeTaxes/TaxReformOverview/StateTaxCarryforwards"
+ ],
+ "content_chars": 5815,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "5.333333",
+ "reasoning": "We need ratio of deferred tax assets for state income tax credit carry-forwards to net operating loss carry-forward. From text: deferred tax asset for state income tax credit carry-forwards = $16 million (net of federal benefit). Deferred tax asset for net operating loss carry-forward = $3 million. Ratio = 16/3 = 5.333... Need answer as value. Use evidence figures.",
+ "raw_content": "<evidence>\n$16 million | /chunk/IncomeTaxes/TaxReformOverview/StateTaxCarryforwards/StateTaxCarryforwards/span\n$3 million | /chunk/IncomeTaxes/TaxReformOverview/StateTaxCarryforwards/StateTaxCarryforwards/DeferredTaxAmount\n</evidence>\n<program>divide(16, 3)</program>\n<answer>5.333333333333333</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1914,
+  "completion_tokens": 184,
+  "total_tokens": 2098,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 1792
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 1914,
+   "completion_tokens": 184,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "$16 million",
+   "element": "chunk/IncomeTaxes/TaxReformOverview/StateTaxCarryforwards/StateTaxCarryforwards/span",
+   "element_found": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$3 million",
+   "element": "chunk/IncomeTaxes/TaxReformOverview/StateTaxCarryforwards/StateTaxCarryforwards/DeferredTaxAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(16, 3)",
+ "answer_model": "5.333333333333333",
+ "program_value": 5.333333333333333,
+ "elapsed_s": 3.04
+}

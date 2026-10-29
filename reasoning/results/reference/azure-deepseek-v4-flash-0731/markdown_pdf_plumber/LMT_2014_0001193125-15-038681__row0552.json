@@ -1,0 +1,53 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0552",
+ "format": "markdown_pdf_plumber",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "in 2014 what was the ratio of the estimated future benefit payments due in 2015 compared to the amount after 2020",
+ "gold": "0.15",
+ "finqa_id": "LMT/2014/page_91.pdf-4",
+ "source_page": "page_91",
+ "ticker": "LMT",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf_plumber/LMT_2014_0001193125-15-038681.md",
+ "doc_chars": 462533,
+ "prompt_chars": 462735,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 462533,
+ "original_chars": 462533,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 103588,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 741,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.1564",
+ "reasoning": "We need to find estimated future benefit payments. In Note 9, there is a table: \"The following table presents estimated future benefit payments, which reflect expected future employee service, as of December 31, 2014 (in millions):\" It shows for qualified defined benefit pension plans: 2015: $2,070, 2016: $2,150, 2017: $2,230, 2018: $2,320, 2019: $2,420, 2020-2024: $13,430. Also for retiree medical and life insurance plans: 2015: $190, 2016: $200, 2017: $200, 2018: $210, 2019: $210, 2020-2024: $1,020. The question asks: \"in 2014 what was the ratio of the estimated future benefit payments due in 2015 compared to the amount after 2020\" That likely means the ratio of the 2015 payments to the amount after 2020 (i.e., 2020-2024). But it says \"after 2020\" - could be the 2020-2024 column. Or maybe it means the total after 2020? The table only gives 2020-2024 as a lump sum. So we need to sum both plans? The question says \"estimated future benefit payments\" - likely the total of both qualified pension and retiree medical. So 2015 total = 2070+190 = 2260. After 2020 (2020-2024) total = 13430+1020 = 14450. Ratio = 2260 / 14450 = 0.1564... Let's compute: 2260/14450 = 0.1564. Or maybe they want the ratio of 2015 to the amount after 2020, i.e., 2015 / (after 2020). So answer ~0.156. But check if they want \"compared to\" meaning ratio of 2015 to after 2020. Yes.\n\nAlternatively, they might want the ratio of the 2015 payments to the total after 2020 (i.e., 2020-2024). So answer is 2260/14450 = 0.1564. We'll give as a decimal or fraction? The question says \"ratio\" so we can give as a decimal. Let's compute precisely: 2260/14450 = 0.1564 (approx). Or as a fraction 226/1445? Simplify? 2260/14450 divide by 10 = 226/1445, divide by 7? 226/7=32.28, 1445/7=206.4, no. So decimal.\n\nWe'll put <answer>0.156</answer> or more precise. Let's compute: 2260/14450 = 0.1564 (rounded to 4 decimals). I'll give 0.1564.\n\nBut check if they want the ratio of 2015 to after 2020, or maybe the ratio of after 2020 to 2015? The phrasing: \"ratio of the estimated future benefit payments due in 2015 compared to the amount after 2020\" - that means 2015 compared to after 2020, so 2015 / after 2020. So answer.\n\nWe'll output that.",
+ "raw_content": "<answer>0.1564</answer>",
+ "usage": {
+  "prompt_tokens": 103744,
+  "completion_tokens": 741,
+  "total_tokens": 104485,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 103680
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.19,
+ "answer_tag_found": true,
+ "docfinqa_row": 552
+}

@@ -1,0 +1,50 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0322",
+ "format": "markdown_pdf_rules",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was the change in millions of total long-term debt net from 2014 to 2015?",
+ "gold": "9119",
+ "finqa_id": "LMT/2015/page_99.pdf-3",
+ "source_page": "page_99",
+ "ticker": "LMT",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_rules/LMT_2015_0001193125-16-476010.md",
+ "doc_chars": 501601,
+ "prompt_chars": 501768,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 501601,
+ "original_chars": 501601,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 108718,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 502,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "9,119",
+ "reasoning": "We need to find total long-term debt net for 2014 and 2015. From balance sheet: 2015 long-term debt, net = $14,305 million? Wait, the balance sheet shows \"Long-term debt, net\" as $14,305 for 2015 and $6,142 for 2014. But also note 10 shows total long-term debt, net = $15,261 for 2015 and $6,142 for 2014. The balance sheet line item is \"Long-term debt, net\" but there is also current maturities of long-term debt. The question says \"total long-term debt net\" - likely the total debt net including current maturities? The balance sheet has \"Current maturities of long-term debt\" of $956 for 2015 and $0 for 2014. The note 10 shows total long-term debt, net = $15,261 (which includes current maturities? Actually note 10 says \"Total long-term debt, net\" and then balance sheet has current maturities separately. The note 10 table shows total long-term debt, net of $15,261, which is the sum of long-term debt and current maturities? Let's check: In balance sheet, current maturities of long-term debt is $956, and long-term debt, net is $14,305. Sum = $15,261. So total debt net = $15,261 for 2015. For 2014, current maturities was $0, long-term debt net $6,142, so total = $6,142. So change = 15,261 - 6,142 = 9,119 million. Alternatively, the question might refer to the line item \"Long-term debt, net\" only, which is $14,305 vs $6,142, change = 8,163. But the phrase \"total long-term debt net\" likely means the total debt including current portion. The note 10 explicitly says \"Total long-term debt, net\" and that is $15,261. Also the selected financial data shows \"Total debt, net\" of $15,261 for 2015 and $6,142 for 2014. So change = 9,119. The question says \"change in millions of total long-term debt net\" - so answer 9,119.",
+ "raw_content": "<answer>9,119</answer>",
+ "usage": {
+  "prompt_tokens": 108867,
+  "completion_tokens": 502,
+  "total_tokens": 109369,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 14.13,
+ "answer_tag_found": true,
+ "docfinqa_row": 322
+}

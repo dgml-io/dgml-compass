@@ -1,0 +1,65 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0284",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "what is the yearly amortization rate for the purchased technology?",
+ "gold": "25%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "ADBE_2008_0000796343-09-000007.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/TableOfContentsMarker/OtherAssets/AcquiredRightsAmortizationPolicy",
+  "/chunk/ConsolidatedCashFlow/IntangibleAssetsPolicy",
+  "/chunk/ManagementDiscussionAndAnalysis/ResultsOfOperationsPart/RestructuringCharges/AmortizationOfPurchasedIntangiblesAndIncompleteTechnology"
+ ],
+ "r1_reasoning_chars": 2615,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 25360,
+  "completion_tokens": 695,
+  "total_tokens": 26055,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/TableOfContentsMarker/OtherAssets/AcquiredRightsAmortizationPolicy",
+  "/chunk/ConsolidatedCashFlow/IntangibleAssetsPolicy",
+  "/chunk/ManagementDiscussionAndAnalysis/ResultsOfOperationsPart/RestructuringCharges/AmortizationOfPurchasedIntangiblesAndIncompleteTechnology"
+ ],
+ "content_chars": 50762,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "25.0000%",
+ "reasoning": "We need answer yearly amortization rate for purchased technology. Need find in document. There is table in Intangible Assets policy: \"Purchased technology\" weighted average useful life 4 years. Yearly amortization rate = 1/4 = 25% per year straight-line? The question asks \"yearly amortization rate\" likely 25%. Need evidence: \"Purchased technology | 4\" from table. Also maybe \"amortized over estimated useful lives of 1 to 13 years\" but specific purchased technology 4 years. So answer 25%. Need provide evidence and program.",
+ "raw_content": "<evidence>\n4 | IntangibleAssetUsefulLife (Purchased technology weighted average useful life)\n</evidence>\n<program>divide(1, 4)</program>\n<answer>25%</answer>",
+ "r2_usage": {
+  "prompt_tokens": 11455,
+  "completion_tokens": 167,
+  "total_tokens": 11622,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "4",
+   "element": "IntangibleAssetUsefulLife (Purchased technology weighted average useful life)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(1, 4)",
+ "answer_model": "25%",
+ "program_value": 0.25,
+ "elapsed_s": 9.7,
+ "outline_source": "ADBE_2008_0000796343-09-000007.outline.txt",
+ "outline_chars": 99180
+}

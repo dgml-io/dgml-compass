@@ -1,0 +1,74 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0014",
+ "format": "markdown_pdf_rules",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "the combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable was what percent of the total ending balance as of november 28 2008?",
+ "gold": "11.0%",
+ "finqa_id": "ADBE/2008/page_89.pdf-3",
+ "source_page": "page_89",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_rules/ADBE_2008_0000796343-09-000007.md",
+ "doc_chars": 443328,
+ "prompt_chars": 443638,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 443328,
+ "original_chars": 443328,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 95226,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1537,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "10.963891",
+ "reasoning": "We need answer question. Need find figures. Question: \"the combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable was what percent of the total ending balance as of november 28 2008?\" Need identify combined amount accrued interest and penalties included in non-current income taxes payable. In document Note 8: \"As of November 28, 2008, the combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable was approximately $15.3 million.\" Also \"The gross liability for unrecognized tax benefits at November 28, 2008 was $139.5 million, exclusive of interest and penalties.\" But question says \"total ending balance\" maybe total ending balance of what? \"total ending balance as of november 28 2008\" likely total gross unrecognized tax benefits ending balance? Need parse: \"the combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable was what percent of the total ending balance as of november 28 2008?\" The total ending balance could refer to \"our aggregate changes in our total gross amount of unrecognized tax benefits\" ending balance as of November 28, 2008 = $139,549 (in thousands) = $139.5 million. Or could refer to non-current income taxes payable balance? In balance sheet, long-term income taxes payable = $123,182 thousand. But the phrase \"total ending balance\" likely from summary FIN 48 changes: \"Ending balance as of November 28, 2008 $ 139,549\" (gross unrecognized tax benefits). The question asks \"combined amount of accrued interest and penalties ... included in non-current income taxes payable was what percent of the total ending balance as of november 28 2008?\" Need compute 15.3 / 139.5 *100 = 10.9677%. But need check if \"total ending balance\" might be total gross unrecognized tax benefits ending balance $139,549 (thousands) = $139.549 million. Use 15.3 / 139.549 = 10.964%. Let's compute precisely: 15.3 / 139.549 = 0.10964 -> 10.96%. If using 139.5 = 10.9677%. Need answer likely 10.97%. Need evidence figures: \"approximately $15.3 million\" and \"$139,549\" or \"$139.5 million\". Also maybe \"non-current income taxes payable\" balance $123,182? But question says \"total ending balance\" maybe \"total ending balance\" of unrecognized tax benefits. Let's read exact text: In Note 8, after summary FIN 48 changes: \"Ending balance as of November 28, 2008 $ 139,549\" (gross unrecognized tax benefits). Then \"The gross liability for unrecognized tax benefits at November 28, 2008 of $139.5 million is exclusive of interest and penalties. If the total FIN 48 gross liability ... As of November 28, 2008, the combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable was approximately $15.3 million.\" So yes.\n\nNeed provide evidence lines with values and element names. Element names? The document is a 10-K, no DGML elements. Use row labels/headings. Evidence: \"approximately $15.3 million | Note 8 - Summary FIN 48 Changes / non-current income taxes payable\" and \"$139,549 | Note 8 - Summary FIN 48 Changes / Ending balance\". Also maybe \"$139.5 million | Note 8 - gross liability\". Use exact printed figures. Then program: divide(15.3, 139.549) *100? Program must be exact nested calls. Use divide(15.3, 139.549) gives 0.10964, but need percent. Could multiply by 100: multiply(divide(15.3, 139.549), 100). But figures as printed: 15.3 and 139,549 (thousands) not same units. Need convert 139,549 thousands = 139.549 million. Program can use divide(15.3, 139.549) then multiply 100. But if using 139,549 as thousands, 15.3 million = 15,300 thousand. divide(15300, 139549) *100 = 10.964. Use exact: multiply(divide(15300, 139549), 100). But evidence value \"139,549\" printed. Program can use 15300 derived? Better use 15.3 and 139.549. But 139.549 not printed exactly; printed 139,549 (in thousands). Could use divide(15.3, 139.549) but that's not exact printed. The benchmark executes program, so it must be exact. Use multiply(divide(15300, 139549), 100) = 10.964. That uses printed figures converted to same units. Evidence includes 15.3 million and 139,549 (thousands). Program: multiply(divide(15300, 139549), 100). Or use divide(15.3, 139.5) *100 = 10.9677. But 139.5 is printed as \"$139.5 million\" in text. Use that. Program: multiply(divide(15.3, 139.5), 100) = 10.9677. Which is more accurate? The ending balance is 139,549 thousand = 139.549 million. The text says $139.5 million rounded. Use 139.549 for precision. But program can use 15300/139549. Let's do that.\n\nNeed final answer inside <answer> tags only value. Probably 10.96% or 10.97%. Let's compute: 15300 / 139549 = 0.109638? 139549*0.1096 = 15294.6, so 0.10964. *100 = 10.964%. Round to 10.96%. If using 15.3/139.5 = 10.9677 -> 10.97%. Which one expected? The question says \"total ending balance\" likely exact ending balance $139,549 (thousands). So 10.96%. But the combined amount is \"approximately $15.3 million\" so answer approximate. I'll give 10.96%.\n\nNeed evidence lines: \n15.3 million | Note 8 - non-current income taxes payable accrued interest and penalties\n139,549 | Note 8 - Summary FIN 48 Changes ending balance\n\nProgram: multiply(divide(15300, 139549), 100)\n\nFinal answer: <answer>10.96%</answer>",
+ "raw_content": "<evidence>approximately $15.3 million | Note 8 - non-current income taxes payable accrued interest and penalties\n139,549 | Note 8 - Summary FIN 48 Changes ending balance</evidence>\n<program>multiply(divide(15300, 139549), 100)</program>\n<answer>10.96%</answer>",
+ "usage": {
+  "prompt_tokens": 95555,
+  "completion_tokens": 1537,
+  "total_tokens": 97092,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 21.67,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "approximately $15.3 million",
+   "element": "Note 8 - non-current income taxes payable accrued interest and penalties",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "139,549",
+   "element": "Note 8 - Summary FIN 48 Changes ending balance",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(15300, 139549), 100)",
+ "answer_model": "10.96%",
+ "program_value": 10.963890819712073,
+ "docfinqa_row": 14
+}

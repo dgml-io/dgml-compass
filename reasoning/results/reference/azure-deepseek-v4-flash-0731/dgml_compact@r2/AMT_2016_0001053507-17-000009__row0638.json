@@ -1,0 +1,53 @@
+{
+ "id": "AMT_2016_0001053507-17-000009__row0638",
+ "format": "dgml_compact",
+ "key": "AMT_2016_0001053507-17-000009",
+ "question": "what is the net change in the balance of unrecognized tax benefits during 2015?",
+ "gold": "-3833",
+ "finqa_id": "AMT/2016/page_125.pdf-3",
+ "source_page": "page_125",
+ "ticker": "AMT",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/dgml_compact/AMT_2016_0001053507-17-000009.dgml.txt",
+ "doc_chars": 615313,
+ "prompt_chars": 615481,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 615313,
+ "original_chars": 615313,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 137249,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 230,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-3,833",
+ "reasoning": "The question asks for the net change in the balance of unrecognized tax benefits during 2015.\n\nFrom the document, in the \"UnrecognizedTaxBenefitRollforward\" section:\nBalance at January 1, 2015: $31,947\nBalance at December 31, 2015: $28,114\n\nNet change = 28,114 - 31,947 = -3,833 (in thousands)\n\nSo the net change is -$3,833 thousand, or -$3.833 million.\n\nThe question asks for the net change, so it's -3,833 (in thousands). Let me just provide the value. The document states amounts in thousands. So the net change is -3,833 thousand dollars.\n\nLet me double check: 2015 column: Balance at January 1 = 31,947; Balance at December 31 = 28,114. Change = -3,833.\n\nAnswer: -3,833 (in thousands) or -$3.833 million. I'll provide -3,833.",
+ "raw_content": "<answer>-3,833</answer>",
+ "usage": {
+  "prompt_tokens": 137395,
+  "completion_tokens": 230,
+  "total_tokens": 137625,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 137216
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.22,
+ "answer_tag_found": true,
+ "docfinqa_row": 638
+}

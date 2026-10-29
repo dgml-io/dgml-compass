@@ -1,0 +1,53 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0375",
+ "format": "dgml",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "what is the total percentage decrease in future contingent acquisition obligations payable in cash from 2009-2013?",
+ "gold": "1.56%",
+ "finqa_id": "IPG/2008/page_93.pdf-3",
+ "source_page": "page_93",
+ "ticker": "IPG",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml/IPG_2008_0001193125-09-040141.dgml.xml",
+ "doc_chars": 742193,
+ "prompt_chars": 742396,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 742193,
+ "original_chars": 742193,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 181438,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 262,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-4.3%",
+ "reasoning": "We need to find the total percentage decrease in future contingent acquisition obligations payable in cash from 2009-2013. The table in Note 16 shows contingent acquisition payments by year: 2009: 79.3, 2010: 66.4, 2011: 103.7, 2012: 75.3, 2013: 75.9. The question asks \"total percentage decrease\" from 2009-2013. That likely means the percentage change from 2009 to 2013. So (75.9 - 79.3)/79.3 = -3.4/79.3 ≈ -0.0429 = -4.29% decrease. Or maybe they want the total decrease over the period? But \"total percentage decrease\" likely means the overall percentage change from first to last year. Let's compute: (75.9 - 79.3)/79.3 = -0.0429, so a decrease of about 4.3%. Alternatively, they might want the sum of decreases? But the phrasing \"total percentage decrease\" suggests the percentage change from 2009 to 2013. I'll answer with that.",
+ "raw_content": "<answer>-4.3%</answer>",
+ "usage": {
+  "prompt_tokens": 181588,
+  "completion_tokens": 262,
+  "total_tokens": 181850,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 181504
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.33,
+ "answer_tag_found": true,
+ "docfinqa_row": 375
+}

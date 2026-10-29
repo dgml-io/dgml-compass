@@ -1,0 +1,66 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0575",
+ "format": "markdown_pdf_poppler",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "what is the yearly amortization rate for the trademarks?",
+ "gold": "20%",
+ "finqa_id": "ADBE/2008/page_74.pdf-4",
+ "source_page": "page_74",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_poppler/ADBE_2008_0000796343-09-000007.md",
+ "doc_chars": 561420,
+ "prompt_chars": 561565,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 561420,
+ "original_chars": 561420,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 96795,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 116,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "20.0000%",
+ "reasoning": "We need answer: yearly amortization rate for trademarks. Need find in document. Trademarks useful life 5 years (Note 1 table: Trademarks 5). Amortization rate = 1/5 = 20% per year. Evidence: \"Trademarks 5\" from Note 1. Also maybe weighted average useful life. Answer 20%.",
+ "raw_content": "<evidence>5 | Trademarks (Note 1, weighted average useful life)</evidence>\n<program>divide(1, 5)</program>\n<answer>20%</answer>",
+ "usage": {
+  "prompt_tokens": 97094,
+  "completion_tokens": 116,
+  "total_tokens": 97210,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 97024
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.04,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "5",
+   "element": "Trademarks (Note 1, weighted average useful life)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(1, 5)",
+ "answer_model": "20%",
+ "program_value": 0.2,
+ "docfinqa_row": 575
+}

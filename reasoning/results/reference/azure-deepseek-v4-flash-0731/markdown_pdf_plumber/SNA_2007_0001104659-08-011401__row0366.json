@@ -1,0 +1,50 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0366",
+ "format": "markdown_pdf_plumber",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what was the percentage change in the in pretax losses related to foreign exchange transactions in 2007",
+ "gold": "41.7%",
+ "finqa_id": "SNA/2007/page_69.pdf-1",
+ "source_page": "page_69",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_plumber/SNA_2007_0001104659-08-011401.md",
+ "doc_chars": 371934,
+ "prompt_chars": 372126,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 371934,
+ "original_chars": 371934,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 94563,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 366,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "41.67%",
+ "reasoning": "We need to find pretax losses related to foreign exchange transactions in 2007 and compare to previous year? The question: \"what was the percentage change in the in pretax losses related to foreign exchange transactions in 2007\" It might be asking for the percentage change from 2006 to 2007. In Note 1, it says: \"Foreign exchange transactions resulted in pretax losses of $1.7 million in 2007 and $1.2 million in 2006, and a pretax gain of $0.7 million in 2005.\" So losses in 2007: 1.7, in 2006: 1.2. Percentage change = (1.7-1.2)/1.2 = 0.5/1.2 = 41.6667% increase. But note it says \"pretax losses\" so it's a loss, but the change is increase in loss. The question says \"percentage change in the in pretax losses\" - likely they want the percentage change. So answer: 41.67% or 41.7%. But careful: it says \"in the in pretax losses\" - maybe they want the change from 2006 to 2007. So compute (1.7-1.2)/1.2 = 0.4167 = 41.67%. So answer 41.67%. But the question might be asking for the percentage change in the pretax losses, i.e., how much did the loss increase? So answer 41.67%. Alternatively, if they want the percentage change in the amount of loss, it's an increase of 41.67%. I'll put that.",
+ "raw_content": "<answer>41.67%</answer>",
+ "usage": {
+  "prompt_tokens": 94713,
+  "completion_tokens": 366,
+  "total_tokens": 95079,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.71,
+ "answer_tag_found": true,
+ "docfinqa_row": 366
+}

@@ -1,0 +1,74 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0405",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "what is the percentage change in the the outstanding debt under the 3.00% ( 3.00 % ) notes from 2007 to 2008?",
+ "gold": "-53.0%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "AMT_2008_0001193125-09-039177.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/NotesToFinancialStatementsContinuation/ConvertibleNoteDebtInstrument",
+  "/chunk/NotesToFinancialStatementsContinuation/DocumentRunningHeader/LongTermObligations/LongTermObligationsSchedule",
+  "/chunk/NotesToFinancialStatementsContinuation/DocumentRunningHeader/SeniorNoteDebtInstrument/ConvertibleNoteDebtInstrument",
+  "/chunk/NotesToFinancialStatementsContinuation/DocumentRunningHeader/OutstandingNotesDescription"
+ ],
+ "r1_reasoning_chars": 25761,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 24138,
+  "completion_tokens": 6680,
+  "total_tokens": 30818,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/NotesToFinancialStatementsContinuation/ConvertibleNoteDebtInstrument",
+  "/chunk/NotesToFinancialStatementsContinuation/DocumentRunningHeader/LongTermObligations/LongTermObligationsSchedule",
+  "/chunk/NotesToFinancialStatementsContinuation/DocumentRunningHeader/SeniorNoteDebtInstrument/ConvertibleNoteDebtInstrument",
+  "/chunk/NotesToFinancialStatementsContinuation/DocumentRunningHeader/OutstandingNotesDescription"
+ ],
+ "content_chars": 74426,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "-53.01566",
+ "reasoning": "We need percentage change in outstanding debt under 3.00% notes from 2007 to 2008. Need figures. In document, there is a paragraph: \"As of December 31, 2008 and 2007, the outstanding debt under the 3.00% Notes was $161.9 million ($162.2 million principal amount) and $344.6 million, net of $0.3 million and $0.4 million discount, respectively.\" So 2008 carrying value $161.9 million, 2007 $344.6 million. Also in long-term obligations schedule: 3.00% convertible notes: 2008 161,893 (thousands) and 2007 344,568 (thousands). Which to use? The question says \"outstanding debt under the 3.00% notes\" - likely carrying value. The paragraph gives $161.9 and $344.6 million. The schedule gives 161,893 and 344,568 thousands, which are more precise. But the question asks percentage change. We need compute (2008-2007)/2007 * 100. Using schedule: (161,893 - 344,568)/344,568 = -182,675/344,568 = -0.5302 = -53.02%. Using paragraph: (161.9-344.6)/344.6 = -182.7/344.6 = -0.5302 = -53.02%. Same. So answer -53.0% approximately. Need provide evidence figures. Use exact from schedule? The question says \"outstanding debt\" - the schedule line \"3.00% convertible notes\" amounts. Also paragraph. I'll cite both? The evidence should list figures used. I'll use the schedule values: 161,893 and 344,568 (in thousands). But the question asks percentage change, so compute. Need program: divide(subtract(161893, 344568), 344568) then multiply by 100? The program should output percentage? The instruction: \"Give your final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what is the percentage change\" so answer should be a number, likely -53.02% or -53.0. We can output -53.02. But program must be exact. We can do multiply(divide(subtract(161893, 344568), 344568), 100) = -53.02. But the program is executed, so it will compute. Need ensure figures as printed: \"161,893\" and \"344,568\" with commas? The program should use numbers without commas? The instruction says \"figures as printed\" but for computation we can use numeric. I'll use 161893 and 344568. Evidence: \"161,893 | 3.00% convertible notes (2008)\" and \"344,568 | 3.00% convertible notes (2007)\". Also maybe the paragraph values. But I'll use schedule.\n\nLet's craft evidence and program.",
+ "raw_content": "<evidence>\n161,893 | 3.00% convertible notes (2008)\n344,568 | 3.00% convertible notes (2007)\n</evidence>\n\n<program>multiply(divide(subtract(161893, 344568), 344568), 100)</program>\n\n<answer>-53.02</answer>",
+ "r2_usage": {
+  "prompt_tokens": 18310,
+  "completion_tokens": 731,
+  "total_tokens": 19041,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "161,893",
+   "element": "3.00% convertible notes (2008)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "344,568",
+   "element": "3.00% convertible notes (2007)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(161893, 344568), 344568), 100)",
+ "answer_model": "-53.02",
+ "program_value": -53.015660188990275,
+ "elapsed_s": 30.01,
+ "outline_source": "AMT_2008_0001193125-09-039177.outline.txt",
+ "outline_chars": 96437
+}

@@ -1,0 +1,74 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0187",
+ "format": "dgml",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the percentage increase in total accumulated other comprehensive losses from 2014 to 2015?",
+ "gold": "37.7%",
+ "finqa_id": "PM/2015/page_127.pdf-1",
+ "source_page": "page_127",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml/PM_2015_0001413329-16-000076.dgml.xml",
+ "doc_chars": 987218,
+ "prompt_chars": 987405,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 987218,
+ "original_chars": 987218,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 236868,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 950,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "37.73806",
+ "reasoning": "We need percentage increase in total accumulated other comprehensive losses from 2014 to 2015. The values: 2014: (6,826) negative, 2015: (9,402) negative. Percentage increase? Typically increase from -6826 to -9402 is a change of -2576 (more negative). Percentage increase = (new - old)/|old| *100 = (-9402 - (-6826))/6826 *100 = (-2576)/6826 *100 = -37.74%? But \"percentage increase\" might be interpreted as magnitude increase? The question says \"percentage increase in total accumulated other comprehensive losses\" - losses increased (more negative) by 37.7%. But they might want the change in the absolute value? Let's compute: (9402-6826)/6826 = 2576/6826 = 0.3774 = 37.74%. So percentage increase in losses (absolute) is 37.7%. But if they ask \"percentage increase\" from -6826 to -9402, mathematically it's -37.7% (decrease). However, the phrasing \"increase in losses\" suggests the magnitude increased. We need to decide. The document shows \"Accumulated other comprehensive losses\" as negative numbers. The question: \"what is the percentage increase in total accumulated other comprehensive losses from 2014 to 2015?\" Likely they want the change in the loss amount, i.e., (9402-6826)/6826 = 37.7%. But we should be careful. Let's read the exact figures: In the balance sheet, \"Accumulated other comprehensive losses\" 2015: (9,402), 2014: (6,826). Also in Note 17 table: 2015: (9,402), 2014: (6,826). So we use those.\n\nCompute: (9402 - 6826) / 6826 = 2576 / 6826 = 0.37738... = 37.74%. So answer 37.7% or 37.74%. The question asks \"percentage increase\" - we'll give 37.7% (or 37.74%). We'll put the value without units? The question asks for percentage, so include %? The instruction: \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what is the percentage increase\" - so we should give the number with %? Typically they want the numeric value. We'll put 37.7% or 37.74. I'll put 37.7% inside answer. But to be safe, maybe 37.74%. Let's compute exactly: 2576/6826 = 0.37738... so 37.738%. Round to one decimal 37.7%. I'll put 37.7%.\n\nEvidence: 2014: (6,826) | AccumulatedOtherComprehensiveLoss; 2015: (9,402) | AccumulatedOtherComprehensiveLoss.\n\nProgram: divide(subtract(9402, 6826), 6826) * 100? But program should be exact. We can do multiply(divide(subtract(9402, 6826), 6826), 100) but the program expects nested calls. We'll provide that.\n\nBut note the values are negative in the document. We use absolute values for the increase. The program should use the printed figures? The instruction says \"figures as printed\" - they are printed as (9,402) and (6,826) with parentheses. We can use 9402 and 6826. The program: multiply(divide(subtract(9402, 6826), 6826), 100) = 37.738... So answer 37.7.\n\nI'll put <answer>37.7%</answer> but the instruction says no units unless asked. The question asks for percentage, so include %? I'll put 37.7% inside. Or just 37.7. I'll put 37.7% to be clear.",
+ "raw_content": "<evidence>\n(9,402) | AccumulatedOtherComprehensiveLoss (2015)\n(6,826) | AccumulatedOtherComprehensiveLoss (2014)\n</evidence>\n<program>multiply(divide(subtract(9402, 6826), 6826), 100)</program>\n<answer>37.7%</answer>",
+ "usage": {
+  "prompt_tokens": 237175,
+  "completion_tokens": 950,
+  "total_tokens": 238125,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 237056
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.81,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "(9,402)",
+   "element": "AccumulatedOtherComprehensiveLoss (2015)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "(6,826)",
+   "element": "AccumulatedOtherComprehensiveLoss (2014)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(9402, 6826), 6826), 100)",
+ "answer_model": "37.7%",
+ "program_value": 37.73806035745678,
+ "docfinqa_row": 187
+}

@@ -1,0 +1,78 @@
+{
+ "id": "APD_2016_0001193125-16-773346__row0332",
+ "format": "markdown_pdf_poppler",
+ "key": "APD_2016_0001193125-16-773346",
+ "question": "considering the years 2014-2016 , what is the lowest interest incurred observed?",
+ "gold": "148.4",
+ "finqa_id": "APD/2016/page_39.pdf-2",
+ "source_page": "page_39",
+ "ticker": "APD",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf_poppler/APD_2016_0001193125-16-773346.md",
+ "doc_chars": 536347,
+ "prompt_chars": 536516,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 536347,
+ "original_chars": 536347,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 99137,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 128,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "148.4",
+ "reasoning": "We need answer lowest interest incurred observed 2014-2016. From document: Interest incurred table: 2016 $148.4, 2015 $152.6, 2014 $158.1. Lowest is 148.4. Need evidence and program.",
+ "raw_content": "<evidence>\n$148.4 | Interest incurred 2016\n$152.6 | Interest incurred 2015\n$158.1 | Interest incurred 2014\n</evidence>\n<program>min(148.4, 152.6, 158.1)</program>\n<answer>148.4</answer>",
+ "usage": {
+  "prompt_tokens": 99443,
+  "completion_tokens": 128,
+  "total_tokens": 99571,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.67,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$148.4",
+   "element": "Interest incurred 2016",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$152.6",
+   "element": "Interest incurred 2015",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$158.1",
+   "element": "Interest incurred 2014",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "min(148.4, 152.6, 158.1)",
+ "answer_model": "148.4",
+ "program_value": null,
+ "docfinqa_row": 332
+}

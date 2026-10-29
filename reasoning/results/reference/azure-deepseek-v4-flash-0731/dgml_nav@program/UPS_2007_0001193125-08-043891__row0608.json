@@ -1,0 +1,53 @@
+{
+ "id": "UPS_2007_0001193125-08-043891__row0608",
+ "key": "UPS_2007_0001193125-08-043891",
+ "question": "what portion of total expected cash outflow for capital leases is due in 2018?",
+ "gold": "17.4%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "UPS_2007_0001193125-08-043891.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/RegistrantName/DebtObligations/OtherInformation/table"
+ ],
+ "r1_reasoning_chars": 5095,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 19633,
+  "completion_tokens": 1282,
+  "total_tokens": 20915,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/RegistrantName/DebtObligations/OtherInformation/table"
+ ],
+ "content_chars": 6976,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer portion of total expected cash outflow for capital leases due in 2018. But table shows years 2008-2012 and After 2012, no 2018. The question asks 2018. The table is from 2007 report, so 2018 is after 2012, not separately broken out. There is no specific 2018 figure. Could be \"After 2012\" includes 2018 but not specific. So NOT_FOUND. Need evidence? We can cite table has no 2018. But instruction says list every figure used. If not found, maybe no evidence. But final answer NOT_FOUND. Need reason briefly.",
+ "raw_content": "<evidence></evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2066,
+  "completion_tokens": 165,
+  "total_tokens": 2231,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 6.76,
+ "outline_source": "UPS_2007_0001193125-08-043891.outline.txt",
+ "outline_chars": 77634
+}

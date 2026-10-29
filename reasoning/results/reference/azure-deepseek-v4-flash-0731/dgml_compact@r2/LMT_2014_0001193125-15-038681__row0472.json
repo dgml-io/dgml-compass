@@ -1,0 +1,53 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0472",
+ "format": "dgml_compact",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "what was the average of company 401 ( k ) match total for the three years ended 2014 , in millions?",
+ "gold": "383",
+ "finqa_id": "LMT/2014/page_91.pdf-1",
+ "source_page": "page_91",
+ "ticker": "LMT",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/dgml_compact/LMT_2014_0001193125-15-038681.dgml.txt",
+ "doc_chars": 524480,
+ "prompt_chars": 524668,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 524480,
+ "original_chars": 524480,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 107424,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 145,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "382.67",
+ "reasoning": "We need to find the 401(k) match contributions for 2014, 2012013, 2012. The document says: \"Our contributions were $385 million in 2014, $383 million in 2013 and $380 million in 2012\". So average = (385+383+380)/3 = 1148/3 = 382.666... million. The question asks \"average of company 401(k) match total for the three years ended 2014, in millions?\" So answer 382.67 or 382.7. But likely they want a number. We'll put 382.67.",
+ "raw_content": "<answer>382.67</answer>",
+ "usage": {
+  "prompt_tokens": 107577,
+  "completion_tokens": 145,
+  "total_tokens": 107722,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 107520
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.14,
+ "answer_tag_found": true,
+ "docfinqa_row": 472
+}

@@ -1,0 +1,74 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0243",
+ "format": "dgml",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the percentage change in the weighted-average discount rate for non-u.s . pension plans from 2014 to 2015?",
+ "gold": "-12.5%",
+ "finqa_id": "PM/2015/page_38.pdf-2",
+ "source_page": "page_38",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml/PM_2015_0001413329-16-000076.dgml.xml",
+ "doc_chars": 987218,
+ "prompt_chars": 987421,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 987218,
+ "original_chars": 987218,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 236868,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 178,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-12.5000%",
+ "reasoning": "We need percentage change in weighted-average discount rate for non-U.S. pension plans from 2014 to 2015. From document: Non-U.S. pension plans discount rate: 2015: 1.68%, 2014: 1.92%. Percentage change = (1.68 - 1.92)/1.92 * 100 = -0.24/1.92 = -0.125 = -12.5%. So answer -12.5%. Need evidence: values.",
+ "raw_content": "<evidence>\n1.68% | NonUSPensionDiscountRate (2015)\n1.92% | NonUSPensionDiscountRate (2014)\n</evidence>\n<program>divide(subtract(1.68, 1.92), 1.92)</program>\n<answer>-12.5%</answer>",
+ "usage": {
+  "prompt_tokens": 237182,
+  "completion_tokens": 178,
+  "total_tokens": 237360,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 36.04,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1.68%",
+   "element": "NonUSPensionDiscountRate (2015)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "1.92%",
+   "element": "NonUSPensionDiscountRate (2014)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(1.68, 1.92), 1.92)",
+ "answer_model": "-12.5%",
+ "program_value": -0.125,
+ "docfinqa_row": 243
+}

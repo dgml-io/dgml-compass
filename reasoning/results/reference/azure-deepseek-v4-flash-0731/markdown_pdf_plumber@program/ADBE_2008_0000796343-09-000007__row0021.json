@@ -1,0 +1,74 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0021",
+ "format": "markdown_pdf_plumber",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "what is the percentage change in the the gross liability for unrecognized tax benefits during 2008 compare to 2007?",
+ "gold": "-30.9%",
+ "finqa_id": "ADBE/2008/page_89.pdf-2",
+ "source_page": "page_89",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_plumber/ADBE_2008_0000796343-09-000007.md",
+ "doc_chars": 913121,
+ "prompt_chars": 913325,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 913121,
+ "original_chars": 913121,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 209296,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 935,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-30.8506%",
+ "reasoning": "We need answer percentage change in gross liability for unrecognized tax benefits during 2008 compare to 2007. Need find figures. Document has Note 8: Summary FIN 48 Changes: Beginning balance as of December 1, 2007 $201,808 (in thousands). Ending balance as of November 28, 2008 $139,549. Also text says gross liability for unrecognized tax benefits at November 28, 2008 was $139.5 million, exclusive of interest and penalties. Also adoption FIN 48: upon adoption gross liability at Dec 1 2007 was $218.4 million? Wait careful. There are two numbers: \"Upon adoption, the gross liability for unrecognized tax benefits at December 1, 2007 was $218.4 million, exclusive of interest and penalties.\" But then Summary FIN 48 Changes shows beginning balance as of December 1, 2007 $201,808 (thousands) = $201.8 million. Why difference? The $218.4 includes $57.7 million that relates to tax attributes from acquired companies not recorded on balance sheet? Let's read: \"Upon adoption, the gross liability for unrecognized tax benefits at December 1, 2007 was $218.4 million, exclusive of interest and penalties. The total amount of gross FIN 48 liabilities included $57.7 million that relates to certain tax attributes from acquired companies, including Macromedia. These liabilities from acquired companies are not recorded on our balance sheet because they are related to positions that have not yet been claimed on our income tax returns.\" Then Summary FIN 48 Changes: Beginning balance as of December 1, 2007 $201,808. That is the recorded gross liability? The question: \"what is the percentage change in the gross liability for unrecognized tax benefits during 2008 compare to 2007?\" Likely use beginning and ending from summary: 201,808 to 139,549. Percentage change = (139,549 - 201,808)/201,808 = -62,259/201,808 = -0.3085 = -30.85%. Alternatively if using 218.4 to 139.5? But summary is the rollforward of gross unrecognized tax benefits. The question says \"gross liability for unrecognized tax benefits\" - in text: \"The gross liability for unrecognized tax benefits at November 28, 2008 was $139.5 million, exclusive of interest and penalties.\" For 2007, \"Upon adoption, the gross liability for unrecognized tax benefits at December 1, 2007 was $218.4 million\" but that includes not recorded? The summary beginning is $201,808. Which is the correct \"gross liability\" for comparison? The question likely expects using the rollforward beginning and ending. Need compute percentage change. Let's compute precisely: 139,549 / 201,808 = 0.6915? 201,808 * 0.69 = 139,247.52, difference 301.48, so 0.6915. So change = -30.85%. If using 218.4: 139.5/218.4 = 0.6387, change -36.13%. But the summary is the authoritative rollforward. The question says \"during 2008 compare to 2007\" meaning from beginning of 2008 (Dec 1 2007) to end of 2008. The beginning balance in summary is $201,808. So answer -30.85%. Need evidence: 201,808 | Summary FIN 48 Changes beginning balance; 139,549 | Summary FIN 48 Changes ending balance. Program: divide(subtract(139549, 201808), 201808) = -0.3085. Final answer inside tags with value only. Probably -30.85% or -30.9%. The question asks percentage change, so include percent sign? \"Give final answer ... containing only the value itself with no explanation or units unless the question asks for them.\" It asks percentage change, so include %? Usually value with % sign. We'll put -30.85%.",
+ "raw_content": "<evidence>\n201,808 | Summary FIN 48 Changes beginning balance\n139,549 | Summary FIN 48 Changes ending balance\n</evidence>\n<program>\ndivide(subtract(139549, 201808), 201808)\n</program>\n<answer>-30.85%</answer>",
+ "usage": {
+  "prompt_tokens": 209609,
+  "completion_tokens": 935,
+  "total_tokens": 210544,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 15.93,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "201,808",
+   "element": "Summary FIN 48 Changes beginning balance",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "139,549",
+   "element": "Summary FIN 48 Changes ending balance",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(subtract(139549, 201808), 201808)",
+ "answer_model": "-30.85%",
+ "program_value": -0.308506104812495,
+ "docfinqa_row": 21
+}

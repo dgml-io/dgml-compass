@@ -1,0 +1,50 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0248",
+ "format": "markdown_pdf",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "what is the net change in the balance of liability related to employee separations during 2006?",
+ "gold": "-13636",
+ "finqa_id": "AMT/2008/page_107.pdf-4",
+ "source_page": "page_107",
+ "ticker": "AMT",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf/AMT_2008_0001193125-09-039177.md",
+ "doc_chars": 417265,
+ "prompt_chars": 417449,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 417265,
+ "original_chars": 417265,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 94052,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 243,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-13636",
+ "reasoning": "We need to find the net change in the balance of liability related to employee separations during 2006. From the document, in note 14, there is a table showing activity for merger related expense. The table shows for employee separations: Liability as of December 31, 2005: $20,963; 2006 Expense: $496; 2006 Cash Payments: $(12,389); Other: $(1,743); Liability as of December 31, 2006: $7,327. So net change = ending - beginning = 7,327 - 20,963 = -13,636. Or we can sum the changes: expense + cash payments + other = 496 - 12,389 - 1,743 = -13,636. So net change is -13,636 (in thousands). The question asks \"net change in the balance of liability related to employee separations during 2006?\" So answer is -13,636. But the question might expect a number without units? It says \"net change\" so it's a decrease. We'll put -13636.",
+ "raw_content": "<answer>-13636</answer>",
+ "usage": {
+  "prompt_tokens": 94200,
+  "completion_tokens": 243,
+  "total_tokens": 94443,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.28,
+ "answer_tag_found": true,
+ "docfinqa_row": 248
+}

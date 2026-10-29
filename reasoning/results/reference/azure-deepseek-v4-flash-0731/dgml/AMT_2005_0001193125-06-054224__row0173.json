@@ -1,0 +1,53 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0173",
+ "format": "dgml",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what portion of the adjusted consolidated cash flow for the twelve months ended december 31 , 2005 is related to non-tower cash flow?",
+ "gold": "-5.8%",
+ "finqa_id": "AMT/2005/page_54.pdf-1",
+ "source_page": "page_54",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/dgml/AMT_2005_0001193125-06-054224.dgml.xml",
+ "doc_chars": 790211,
+ "prompt_chars": 790433,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 790211,
+ "original_chars": 790211,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 189615,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 531,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-5.75%",
+ "reasoning": "We need to find adjusted consolidated cash flow and non-tower cash flow for twelve months ended Dec 31, 2005. From the document, in the section \"Information Presented Pursuant to the Indentures...\" there is a table:\n\nTower Cash Flow, for the three months ended December 31, 2005: $139,590\nConsolidated Cash Flow, for the twelve months ended December 31, 2005: $498,266\nLess: Tower Cash Flow, for the twelve months ended December 31, 2005: (524,804)\nPlus: four times Tower Cash Flow, for the three months ended December 31, 2005: 558,360\nAdjusted Consolidated Cash Flow, for the twelve months ended December 31, 2005: $531,822\nNon-Tower Cash Flow, for the twelve months ended December 31, 2005: $ (30,584)\n\nSo non-tower cash flow is -30,584. The question asks \"what portion of the adjusted consolidated cash flow ... is related to non-tower cash flow?\" That is the ratio: non-tower cash flow / adjusted consolidated cash flow = -30,584 / 531,822 ≈ -0.0575 or -5.75%. But the question might be asking for the amount? \"what portion\" could mean the fraction. The answer should be the value. Since it says \"portion\", likely the ratio. But we need to be careful: the question says \"what portion of the adjusted consolidated cash flow ... is related to non-tower cash flow?\" So we compute -30,584 / 531,822 = -0.0575. Or maybe they want the percentage? The instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So we can give the ratio as a decimal or percentage. Since it's a portion, we can give -5.75% or -0.0575. But the question doesn't specify format. Typically, \"portion\" might be a fraction. I'll compute: 30584/531822 = 0.0575. So -5.75%. I'll put -5.75% or -0.0575. I'll put -5.75% as it's a portion. But the document gives non-tower cash flow as negative, so the portion is negative. I'll answer -5.75%.",
+ "raw_content": "<answer>-5.75%</answer>",
+ "usage": {
+  "prompt_tokens": 189772,
+  "completion_tokens": 531,
+  "total_tokens": 190303,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 189696
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.47,
+ "answer_tag_found": true,
+ "docfinqa_row": 173
+}

@@ -1,0 +1,70 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0162",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what was the ratio of the 2017 total long term debt to 2016",
+ "gold": "1",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "HII_2017_0001501585-18-000006.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/IncomeTaxes/Debt/LongTermDebt"
+ ],
+ "r1_reasoning_chars": 3412,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 22167,
+  "completion_tokens": 904,
+  "total_tokens": 23071,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/IncomeTaxes/Debt/LongTermDebt"
+ ],
+ "content_chars": 2851,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "1.000782",
+ "reasoning": "We need ratio 2017 total long term debt to 2016. From table: Total long-term debt 2017 = 1,279, 2016 = 1,278. Ratio = 1279/1278. Need answer.",
+ "raw_content": "<evidence>1,279 | Total long-term debt (2017)\n1,278 | Total long-term debt (2016)</evidence>\n<program>divide(1279, 1278)</program>\n<answer>1.0007824726134585</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1078,
+  "completion_tokens": 111,
+  "total_tokens": 1189,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,279",
+   "element": "Total long-term debt (2017)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1,278",
+   "element": "Total long-term debt (2016)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(1279, 1278)",
+ "answer_model": "1.0007824726134585",
+ "program_value": 1.0007824726134584,
+ "elapsed_s": 9.27,
+ "outline_source": "HII_2017_0001501585-18-000006.outline.txt",
+ "outline_chars": 86768
+}

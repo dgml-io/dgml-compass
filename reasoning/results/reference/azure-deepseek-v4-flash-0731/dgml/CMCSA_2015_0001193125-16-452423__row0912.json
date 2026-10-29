@@ -1,0 +1,56 @@
+{
+ "id": "CMCSA_2015_0001193125-16-452423__row0912",
+ "format": "dgml",
+ "key": "CMCSA_2015_0001193125-16-452423",
+ "question": "what was the percentage of the capital expenditures incurred in our cable communications for customer premise equipment in 2015",
+ "gold": "52.6%",
+ "finqa_id": "CMCSA/2015/page_67.pdf-3",
+ "source_page": "page_67",
+ "ticker": "CMCSA",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml/CMCSA_2015_0001193125-16-452423.dgml.xml",
+ "doc_chars": 907858,
+ "prompt_chars": 908074,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": true,
+ "truncation": "head",
+ "kept_chars": 907748,
+ "original_chars": 1078239,
+ "kept_fraction": 0.8419,
+ "est_doc_tokens": 250309,
+ "est_kept_tokens": 210513,
+ "budget_tokens": 240000,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 310,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "52.6%",
+ "reasoning": "We need to find capital expenditures in Cable Communications for customer premise equipment in 2015, and express as percentage of total capital expenditures in Cable Communications. From the document, in the \"Capital Expenditures\" section under \"Cable Communications segment\" we have a table:\n\nCable distribution system: $2,424\nCustomer premise equipment: $3,698\nOther equipment: $756\nBuildings and building improvements: $156\nTotal: $7,034\n\nSo customer premise equipment = 3,698 / 7,034 = 0.5257... = 52.6% approximately. The question asks \"what was the percentage of the capital expenditures incurred in our cable communications for customer premise equipment in 2015\". So answer is 52.6% or 52.57%. We'll compute precisely: 3698/7034 = 0.5257... = 52.57%. Round to one decimal? The document might have percentages elsewhere but we can compute. The answer should be a number. We'll put 52.6% or 52.57%. Since the question asks for percentage, we can give 52.6% or 52.57%. I'll compute: 3698/7034 = 0.5257... = 52.57%. So answer: 52.6% (rounded) or 52.57%. I'll put 52.6% in the answer.",
+ "raw_content": "<answer>52.6%</answer>",
+ "usage": {
+  "prompt_tokens": 210685,
+  "completion_tokens": 310,
+  "total_tokens": 210995,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 210432
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.9,
+ "answer_tag_found": true,
+ "docfinqa_row": 912
+}

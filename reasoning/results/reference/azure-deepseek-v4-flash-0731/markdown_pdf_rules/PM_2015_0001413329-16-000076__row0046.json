@@ -1,0 +1,53 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0046",
+ "format": "markdown_pdf_rules",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what was the average currency translation adjustments from 2013 to 2015 in millions?",
+ "gold": "-6806",
+ "finqa_id": "PM/2015/page_127.pdf-4",
+ "source_page": "page_127",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_rules/PM_2015_0001413329-16-000076.md",
+ "doc_chars": 492980,
+ "prompt_chars": 493153,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 492980,
+ "original_chars": 492980,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 115067,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1381,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-1,963",
+ "reasoning": "We need to find the average currency translation adjustments from 2013 to 2015. The document provides \"Change in currency translation adjustments\" in the Consolidated Statements of Comprehensive Earnings. For 2015: unrealized gains (losses) net of income taxes of ($143) in 2015, ($161) in 2014, $227 in 2013. The amounts are: 2015: (2,248) million? Actually the line says: \"Unrealized gains (losses), net of income taxes of ($143) in 2015, ($161) in 2014 and $227 in 2013 (2,248) (1,746) (1,876)\". So the values are -2,248, -1,746, -1,876 for 2015, 2014, 2013 respectively. Also there is \"(Gains)/losses transferred to earnings\" with amounts (1), (5), (12) for 2015, 2014, 2013. But the question asks \"average currency translation adjustments\" - likely the total change in currency translation adjustments? Or the unrealized gains/losses? The line \"Change in currency translation adjustments\" includes both unrealized and transferred. But the question says \"average currency translation adjustments\" - probably the net change in currency translation adjustments for each year. The statement shows \"Change in currency translation adjustments:\" with two sub-items. The total change would be the sum of unrealized and transferred. But the question might refer to the \"Change in currency translation adjustments\" as a whole. However, the numbers given are the unrealized gains/losses. The transferred amounts are small. Let's compute the total change for each year: 2015: -2,248 + (-1) = -2,249? Actually the transferred is (1) meaning -1? The line says \"(Gains)/losses transferred to earnings, net of income taxes of $- in 2015, $- in 2014 and $- in 2013 (1) (5) (12)\". So the amounts are -1, -5, -12. So total change in currency translation adjustments: 2015: -2,248 + (-1) = -2,249; 2014: -1,746 + (-5) = -1,751; 2013: -1,876 + (-12) = -1,888. But the question says \"average currency translation adjustments\" - maybe they want the average of the unrealized gains/losses? Or the average of the total change? The phrasing \"currency translation adjustments\" typically refers to the line item in other comprehensive income. The document shows \"Change in currency translation adjustments:\" with two components. The total change is the sum. But the question might be simpler: they might want the average of the numbers given in the table for \"Unrealized gains (losses)\"? However, the question says \"average currency translation adjustments\" - likely the average of the total change in currency translation adjustments over the three years. Let's compute the average of the total changes: (-2,249 + -1,751 + -1,888)/3 = (-5,888)/3 = -1,962.67 million. Alternatively, if they only consider the unrealized gains/losses: (-2,248 + -1,746 + -1,876)/3 = (-5,870)/3 = -1,956.67. The difference is small. The question says \"average currency translation adjustments\" - the term \"currency translation adjustments\" is used in the statement of comprehensive earnings. The line \"Change in currency translation adjustments\" includes both. But the question might be from a typical financial analysis perspective. Let's check the exact wording: \"what was the average currency translation adjustments from 2013 to 2015 in millions?\" It doesn't specify whether it's the unrealized or total. The document provides the unrealized gains/losses and the transferred. The total change is the sum. I think the average of the total change is more appropriate. But let's see if there is any other mention. In the notes, they might have a table. But the question is straightforward. I'll compute the average of the total change. However, the numbers are negative. The answer should be a number. Let's compute precisely: 2015: -2,248 + (-1) = -2,249; 2014: -1,746 + (-5) = -1,751; 2013: -1,876 + (-12) = -1,888. Sum = -5,888. Average = -1,962.666... So approximately -1,963 million. But the question says \"in millions\" so we can give -1,963. Alternatively, if they only consider the unrealized, it's -1,957. I'll check the document: The statement of comprehensive earnings shows \"Change in currency translation adjustments:\" with two lines. The total change is the sum. The question might be from a test where they expect the average of the unrealized gains/losses because that's the main number. But the phrase \"currency translation adjustments\" typically refers to the total. I'll go with the total. However, let's see if there is any other interpretation. The question says \"average currency translation adjustments\" - maybe they want the average of the \"Change in currency translation adjustments\" which is the net amount. I'll compute the average of the net change. The net change is the sum of unrealized and transferred. So I'll answer -1,963. But let's double-check the numbers: The table shows for 2015: (2,248) and (1) so total -2,249. For 2014: (1,746) and (5) so -1,751. For 2013: (1,876) and (12) so -1,888. Average = (-2,249 -1,751 -1,888)/3 = -5,888/3 = -1,962.67. I'll round to -1,963. But the question might expect a positive number? No, it's negative. I'll provide the value.\n\nAlternatively, if they only consider the unrealized, it's -1,956.67. I'll check the wording: \"currency translation adjustments\" is a term used in the statement. The line \"Change in currency translation adjustments\" includes both. So I'll go with the total.\n\nI'll answer -1,963.",
+ "raw_content": "<answer>-1,963</answer>",
+ "usage": {
+  "prompt_tokens": 115213,
+  "completion_tokens": 1381,
+  "total_tokens": 116594,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 114688
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 12.02,
+ "answer_tag_found": true,
+ "docfinqa_row": 46
+}

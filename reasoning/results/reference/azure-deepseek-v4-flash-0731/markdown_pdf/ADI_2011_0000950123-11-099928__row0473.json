@@ -1,0 +1,50 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0473",
+ "format": "markdown_pdf",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what is the yearly interest expense incurred from the $ 375 million note with a fixed rate?",
+ "gold": "11.3",
+ "finqa_id": "ADI/2011/page_50.pdf-2",
+ "source_page": "page_50",
+ "ticker": "ADI",
+ "fiscal_year": "2011",
+ "source_file": "data/docs/markdown_pdf/ADI_2011_0000950123-11-099928.md",
+ "doc_chars": 351133,
+ "prompt_chars": 351313,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 351133,
+ "original_chars": 351133,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 80142,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1731,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "11,250,000",
+ "reasoning": "We need to find the yearly interest expense from the $375 million note with a fixed rate. There are two notes: 5.0% due 2014 and 3.0% due 2016. The question says \"the $375 million note with a fixed rate\" - both are fixed rate. But likely they mean the 5.0% note? Or the 3.0%? The question says \"the $375 million note with a fixed rate\" - both are fixed. But maybe they refer to the 5.0% note because it's mentioned earlier? Actually, the 5.0% note is swapped to variable, but the interest expense is still based on the fixed rate? The interest expense on the income statement is the actual interest paid, which for the 5.0% note is swapped to variable, but the interest expense recorded is the fixed rate? Actually, the swap is a fair value hedge, so the interest expense is the fixed rate? Let's check: In the MD&A, they mention interest expense increased due to issuance of 3.0% notes and term loan. The 5.0% note interest expense is offset by swap? Actually, the swap converts fixed to variable, so the interest expense is the variable rate? But the question asks \"yearly interest expense incurred from the $375 million note with a fixed rate\" - likely they want the fixed rate interest, which is 5% of 375M = 18.75M per year. But the 3.0% note is also fixed, 3% of 375M = 11.25M. Which one? The question says \"the $375 million note with a fixed rate\" - both are fixed. But maybe they mean the 5.0% note because it's the one that was originally fixed? Or the 3.0%? The question might be ambiguous. However, the document states: \"On June 30, 2009, we issued $375 million aggregate principal amount of 5.0% senior unsecured notes due July 1, 2014\" and \"On April 4, 2011, we issued $375 million aggregate principal amount of 3.0% senior unsecured notes due April 15, 2016\". Both are fixed rate. But the question says \"the $375 million note with a fixed rate\" - maybe they mean the 5.0% note because it's the one that is swapped? Actually, the 5.0% note is swapped to variable, so the interest expense is not fixed? But the question says \"incurred from the $375 million note with a fixed rate\" - perhaps they want the interest expense on the 5.0% note before swap? Or the 3.0% note? Let's see the interest expense in the income statement: For fiscal 2011, interest expense was $19,146 thousand. That includes both notes and term loan. But the question asks specifically for the yearly interest expense from the $375 million note with a fixed rate. Since both are fixed, but the 5.0% note is swapped, the actual interest expense might be the variable rate? However, the swap is a fair value hedge, so the interest expense is still the fixed rate? Actually, under fair value hedge, the interest expense is the fixed rate, and the swap adjustments are recorded in other income? Let's check: In the notes, they say \"The amounts earned and owed under the swap agreements are accrued each period and are reported in interest expense.\" So the interest expense includes the swap payments? Actually, they receive 5% and pay LIBOR+2.05%, so net interest expense is LIBOR+2.05%? But they also have the fixed interest on the note? Let's read: \"The Company will (i) receive on the $375 million notional amount a 5.0% annual interest payment ... and (ii) pay on the $375 million notional amount an annual three month LIBOR plus 2.05% ...\" So the net interest expense is the variable rate. But the question says \"with a fixed rate\" - maybe they mean the 3.0% note because it is not swapped. The 3.0% note is fixed at 3%. So the yearly interest expense on that note is 3% of 375M = 11.25M. But the question says \"the $375 million note with a fixed rate\" - both are fixed, but the 5.0% is swapped, so effectively variable. So the only truly fixed rate note is the 3.0% note. Also, the 3.0% note was issued in April 2011, so for fiscal 2011, it was outstanding for about 7 months? But the question asks \"yearly interest expense\" - likely the annual interest expense if held for a full year. So 3% of 375M = 11.25M. Alternatively, the 5.0% note has a fixed rate of 5% but is swapped, so the interest expense is variable. The question might be asking for the interest expense on the 5.0% note? But it says \"with a fixed rate\" - the 5.0% note has a fixed rate, but the swap changes it. However, the interest expense reported is the net of swap? Actually, the interest expense on the income statement includes the interest on the note and the swap payments? Let's see: In the MD&A, they say \"Interest expense increased ... due to the issuance of $375 million aggregate principal amount of 3.0% senior unsecured notes ... and the $145 million term loan.\" They don't mention the 5.0% note because it was already there. So the 5.0% note interest expense is included in the base. But the swap makes it variable. The question specifically says \"with a fixed rate\" - so likely they want the 3.0% note because it is fixed and not swapped. Also, the 5.0% note is described as \"5.0% senior unsecured notes\" but it is swapped. So the answer is 3% of 375M = 11.25M. But let's check if there is any mention of the interest expense for the 3.0% note. The document says: \"The interest payments related to our 5% senior unsecured notes are expected to be fully offset by the proceeds from our interest rate swap agreements.\" So the net interest expense on the 5% note is zero? Actually, they receive 5% and pay LIBOR+2.05%, so net is LIBOR+2.05% - 5%? Wait, they receive 5% and pay LIBOR+2.05%, so net payment is LIBOR+2.05% - 5% = LIBOR - 2.95%? That doesn't make sense. Actually, they pay interest on the note at 5% and receive 5% from swap, and pay LIBOR+2.05% on swap, so net interest expense is LIBOR+2.05%. So the interest expense is variable. So the fixed rate note is the 3.0% note. So the yearly interest expense is 3% * 375,000,000 = 11,250,000. But the question asks for the value, likely in dollars. So answer: 11,250,000. But let's confirm: The 3.0% note was issued April 4, 2011, so for fiscal 2011, it was outstanding for about 7 months, but the question asks \"yearly interest expense\" - so annual amount. So 11.25 million. Alternatively, if they meant the 5% note, it would be 18.75 million, but that is swapped. The question says \"with a fixed rate\" - both have fixed rates, but the 5% is swapped, so the effective interest is variable. So I'll go with 3% note. Also, the document mentions \"3.0% senior unsecured notes\" explicitly. So answer: 11,250,000.",
+ "raw_content": "<answer>11,250,000</answer>",
+ "usage": {
+  "prompt_tokens": 80289,
+  "completion_tokens": 1731,
+  "total_tokens": 82020,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 20.28,
+ "answer_tag_found": true,
+ "docfinqa_row": 473
+}

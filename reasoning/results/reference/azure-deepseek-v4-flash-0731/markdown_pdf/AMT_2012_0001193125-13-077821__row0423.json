@@ -1,0 +1,50 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0423",
+ "format": "markdown_pdf",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "was was the total amount spent on stock repurchases in december 2012?",
+ "gold": "7662592",
+ "finqa_id": "AMT/2012/page_50.pdf-2",
+ "source_page": "page_50",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/markdown_pdf/AMT_2012_0001193125-13-077821.md",
+ "doc_chars": 534235,
+ "prompt_chars": 534393,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 534235,
+ "original_chars": 534235,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 121639,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1138,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "7,662,592",
+ "reasoning": "We need to find total amount spent on stock repurchases in December 2012. The document has a table \"Issuer Purchases of Equity Securities\" for the three months ended December 31, 2012. It shows monthly data: October, November, December. For December 2012, it shows \"102,400\" shares purchased, average price $74.83, and the approximate dollar value of shares that may yet be purchased under the plans or programs is $1,256.1 million. But the question asks \"total amount spent on stock repurchases in december 2012\". The table gives average price per share and number of shares. The total amount spent would be shares * average price. But note the footnote says average price per share is calculated using aggregate price, excluding commissions and fees. The question likely wants the aggregate purchase price. The table shows for December: 102,400 shares at $74.83 average. So 102,400 * 74.83 = 7,662,592? Let's compute: 102,400 * 74.83 = 102,400*70 = 7,168,000; 102,400*4.83 = 494,592; total = 7,662,592. But the table also shows \"Total Fourth Quarter\" with aggregate of approximately $46.0 million. But that's for the quarter. The question specifically asks December 2012. So we need the amount for December. The table gives the number of shares and average price, but not the aggregate dollar amount for December. However, we can compute it. But the question might expect the exact figure from the document. The document says \"During the three months ended December 31, 2012, we repurchased 619,314 shares of our common stock for an aggregate of approximately $46.0 million, including commissions and fees\". That's for the quarter. For December specifically, we have the shares and average price. But the average price excludes commissions and fees. The question says \"total amount spent on stock repurchases\" - likely including commissions and fees? The document says for the quarter it was approximately $46.0 million including commissions and fees. For December, we can compute the aggregate price excluding commissions and fees. But the question might want the amount as reported. However, the table does not give the aggregate dollar amount for December. It gives the average price per share (excluding commissions and fees) and the number of shares. So we can compute the product. But the question might be looking for the figure from the table? The table has a column \"Approximate Dollar Value of Shares that May Yet be Purchased\" which is the remaining authorization, not the spent amount. So we need to compute.\n\nAlternatively, the document also says in the narrative: \"During the year ended December 31, 2012, we repurchased 872,005 shares of our common stock for an aggregate of $62.7 million, including commissions and fees\" - that's for the year. For December, we have the monthly data. So we compute 102,400 * 74.83 = 7,662,592. But that's excluding commissions and fees. The question says \"total amount spent\" - likely including commissions and fees? The document says for the quarter it was approximately $46.0 million including commissions and fees. For December, we don't have that figure. But we can compute the product. However, the question might expect the exact number from the table? The table does not give the aggregate for December. So we need to compute.\n\nLet's check if there is any other mention. The table shows for December: \"102,400\" shares, average price $74.83. So the product is 7,662,592. But the question might want the amount in millions? The question says \"total amount spent\" - likely in dollars. So we can answer 7,662,592. But we should check if the document provides the aggregate for December elsewhere. The narrative says \"During the three months ended December 31, 2012, we repurchased 619,314 shares ... for an aggregate of approximately $46.0 million\" - that's for the quarter. So for December, we have to compute.\n\nAlternatively, the question might be asking for the total amount spent on stock repurchases in December 2012, which is the product of shares and average price. So I'll compute that.\n\nBut note: the average price is \"excluding commissions and fees\". The question says \"total amount spent\" - if we want including commissions and fees, we don't have that breakdown. But the document says for the quarter it was approximately $46.0 million including commissions and fees. For December, we can compute the product and that would be the aggregate price excluding commissions and fees. However, the question might be satisfied with that. Since the question does not specify including commissions, we can give the product.\n\nLet me compute precisely: 102,400 * 74.83 = 7,662,592. So answer: 7,662,592.\n\nBut let me double-check the numbers: The table shows for December 2012: Total Number of Shares Purchased: 102,400; Average Price Paid per Share: $74.83. So yes.\n\nThus the answer is 7,662,592.\n\nI'll put that in the answer tags.",
+ "raw_content": "<answer>7,662,592</answer>",
+ "usage": {
+  "prompt_tokens": 121784,
+  "completion_tokens": 1138,
+  "total_tokens": 122922,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.11,
+ "answer_tag_found": true,
+ "docfinqa_row": 423
+}

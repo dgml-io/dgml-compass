@@ -1,0 +1,66 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0327",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what is the current ratio?",
+ "gold": "-0.85",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "EW_2016_0001099800-17-000008.outline.txt",
+ "doc_source": "EW_2016_0001099800-17-000008.dgml.xml",
+ "outline_chars": 67317,
+ "predicted_xpaths": [
+  "/chunk/LiquidityAndCapitalResources"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 6164,
+ "r1_usage": {
+  "prompt_tokens": 17128,
+  "completion_tokens": 1422,
+  "total_tokens": 18550,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/LiquidityAndCapitalResources"
+ ],
+ "content_chars": 113012,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer current ratio. Need find current assets and current liabilities from document. Excerpts include balance sheet data? We have selected financial data: total assets, long-term debt, but not current assets/current liabilities. Need current ratio = current assets / current liabilities. Document may not include balance sheet details. Search excerpts: There is \"Consolidated Balance Sheets at December 31, 2016 and 2015\" but not actual table in given excerpts. The provided regions include liquidity discussion, market risk, financial statements index, but not the balance sheet table. The question asks current ratio. We need figures. Not found. Could be in other parts not provided. So answer NOT_FOUND.\n\nBut let's double-check if any current assets/liabilities mentioned. In liquidity section: cash and cash equivalents and short-term investments held US $214.1 and foreign $1,057.0, total $1,271.1? But current assets include more. Current liabilities not given. No current ratio. So NOT_FOUND.\n\nNeed provide evidence? If not found, maybe no evidence. But instructions: \"Before the answer, list every figure you use inside <evidence></evidence>... Cite only figures you actually read.\" If no figures used, can leave empty. Then program? If not found, maybe no program. But final answer NOT_FOUND.\n\nI'll answer with NOT_FOUND.",
+ "raw_content": "<evidence></evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 26268,
+  "completion_tokens": 310,
+  "total_tokens": 26578,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 26268,
+   "completion_tokens": 310,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 8.97
+}

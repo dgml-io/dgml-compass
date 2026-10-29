@@ -1,0 +1,80 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0863",
+ "format": "markdown_pdf_rules",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "what was the sum of the temporary differences between 2007 and 2009 in billions",
+ "gold": "9.8",
+ "finqa_id": "IP/2009/page_84.pdf-4",
+ "source_page": "page_84",
+ "ticker": "IP",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/markdown_pdf_rules/IP_2009_0001193125-10-040916.md",
+ "doc_chars": 436761,
+ "prompt_chars": 436929,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 436761,
+ "original_chars": 436761,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 103607,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 790,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "9.8",
+ "reasoning": "We need answer question: \"what was the sum of the temporary differences between 2007 and 2009 in billions\". Need interpret. Document mentions deferred income taxes not provided for temporary differences of approximately $3.5 billion, $2.6 billion and $3.7 billion as of Dec 31 2009, 2008, 2007 respectively. \"temporary differences between 2007 and 2009\" maybe sum of those? Or difference between 2007 and 2009? Wording \"sum of the temporary differences between 2007 and 2009\" could mean add the temporary differences for 2007 and 2009? Or sum of differences between years? Need parse.\n\nQuestion: \"what was the sum of the temporary differences between 2007 and 2009 in billions\" Likely asks for sum of the temporary differences (deferred tax not provided) for 2007 and 2009? Or \"between 2007 and 2009\" means the range, sum of all three years? Let's examine.\n\nIn Note 10: \"Deferred income taxes are not provided for temporary differences of approximately $3.5 billion, $2.6 billion and $3.7 billion as of December 31, 2009, 2008 and 2007, respectively.\" So values: 2009 $3.5B, 2008 $2.6B, 2007 $3.7B.\n\nQuestion: \"what was the sum of the temporary differences between 2007 and 2009 in billions\" Could mean sum of temporary differences for years 2007, 2008, 2009? \"between 2007 and 2009\" often means inclusive. Sum = 3.7 + 2.6 + 3.5 = 9.8 billion. Or \"between 2007 and 2009\" could mean difference between 2007 and 2009: 3.7 - 3.5 = 0.2 billion. But \"sum of the temporary differences\" suggests add them. The phrase \"sum of the temporary differences between 2007 and 2009\" maybe \"sum of the temporary differences\" for those years. Need decide.\n\nLet's read exact: \"what was the sum of the temporary differences between 2007 and 2009 in billions\" It asks sum of temporary differences between 2007 and 2009. Likely add the three amounts for 2007, 2008, 2009. But \"between 2007 and 2009\" could be inclusive of 2008. The document gives three years. So sum = 3.7 + 2.6 + 3.5 = 9.8.\n\nNeed provide evidence: values from Note 10. Element: \"Deferred income taxes are not provided for temporary differences\" line. Use figures as printed: $3.5 billion, $2.6 billion, $3.7 billion. Program: add(3.7, 2.6, 3.5) but function only add(a,b) maybe nested: add(add(3.7, 2.6), 3.5). Answer 9.8.\n\nNeed final answer inside <answer>9.8</answer>. Also evidence and program.",
+ "raw_content": "<evidence>\n$3.5 billion | Deferred income taxes are not provided for temporary differences (2009)\n$2.6 billion | Deferred income taxes are not provided for temporary differences (2008)\n$3.7 billion | Deferred income taxes are not provided for temporary differences (2007)\n</evidence>\n\n<program>\nadd(add(3.7, 2.6), 3.5)\n</program>\n\n<answer>9.8</answer>",
+ "usage": {
+  "prompt_tokens": 103913,
+  "completion_tokens": 790,
+  "total_tokens": 104703,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 103680
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.9,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$3.5 billion",
+   "element": "Deferred income taxes are not provided for temporary differences (2009)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$2.6 billion",
+   "element": "Deferred income taxes are not provided for temporary differences (2008)",
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$3.7 billion",
+   "element": "Deferred income taxes are not provided for temporary differences (2007)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "add(add(3.7, 2.6), 3.5)",
+ "answer_model": "9.8",
+ "program_value": 9.8,
+ "docfinqa_row": 863
+}

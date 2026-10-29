@@ -1,0 +1,50 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0248",
+ "format": "dgml_compact",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "what is the net change in the balance of liability related to employee separations during 2006?",
+ "gold": "-13636",
+ "finqa_id": "AMT/2008/page_107.pdf-4",
+ "source_page": "page_107",
+ "ticker": "AMT",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml_compact/AMT_2008_0001193125-09-039177.dgml.txt",
+ "doc_chars": 530448,
+ "prompt_chars": 530632,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 530448,
+ "original_chars": 530448,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 114721,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 278,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-13,636",
+ "reasoning": "We need to find the net change in the balance of liability related to employee separations during 2006. The document has a table in note 14 about merger related expense. It shows a rollforward: \"Liability as of December 31, 2005 | 2006 Expense | 2006 Cash Payments | Other | Liability as of December 31, 2006\". The row for employee separations: $20,963 | $496 | $(12,389) | $(1,743) | $7,327. So net change = ending - beginning = 7,327 - 20,963 = -13,636 (in thousands). Or we can compute from components: expense + cash payments + other = 496 - 12,389 - 1,743 = -13,636. So net change is -13,636 thousand, i.e., a decrease of $13.636 million. The question asks \"net change in the balance of liability related to employee separations during 2006?\" So answer is -13,636 (in thousands) or -$13.636 million. The document uses thousands. The answer should be the value. Probably just the number. Since it's a net change, it's negative. We'll put -13,636.",
+ "raw_content": "<answer>-13,636</answer>",
+ "usage": {
+  "prompt_tokens": 114869,
+  "completion_tokens": 278,
+  "total_tokens": 115147,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.76,
+ "answer_tag_found": true,
+ "docfinqa_row": 248
+}

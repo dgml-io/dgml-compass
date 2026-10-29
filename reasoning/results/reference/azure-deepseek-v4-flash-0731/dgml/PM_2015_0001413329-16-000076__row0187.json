@@ -1,0 +1,53 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0187",
+ "format": "dgml",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the percentage increase in total accumulated other comprehensive losses from 2014 to 2015?",
+ "gold": "37.7%",
+ "finqa_id": "PM/2015/page_127.pdf-1",
+ "source_page": "page_127",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml/PM_2015_0001413329-16-000076.dgml.xml",
+ "doc_chars": 987218,
+ "prompt_chars": 987405,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 987218,
+ "original_chars": 987218,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 236868,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 309,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "37.74%",
+ "reasoning": "We need percentage increase in total accumulated other comprehensive losses from 2014 to 2015. From balance sheet: accumulated other comprehensive losses at Dec 31, 2015 = (9,402) and 2014 = (6,826). These are negative numbers. \"percentage increase\" in losses? Typically increase in magnitude: from 6,826 to 9,402. Increase = 9,402 - 6,826 = 2,576. Percentage increase = 2,576 / 6,826 * 100 = 37.74% approx. But careful: if they ask \"percentage increase in total accumulated other comprehensive losses\" meaning the loss amount increased by 37.7%. Alternatively, if they treat as negative numbers, change from -6,826 to -9,402 is a decrease of 37.7%? But \"increase in losses\" means magnitude. The question says \"percentage increase in total accumulated other comprehensive losses\" - likely they want the increase in the loss amount. So compute (9,402-6,826)/6,826 = 2576/6826 = 0.3774 = 37.74%. Round to 37.7% or 37.74%. I'll give 37.7% or 37.74%. Let's compute precisely: 2576/6826 = 0.37738... so 37.74%. Answer inside tags.",
+ "raw_content": "<answer>37.74%</answer>",
+ "usage": {
+  "prompt_tokens": 237016,
+  "completion_tokens": 309,
+  "total_tokens": 237325,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 236800
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.33,
+ "answer_tag_found": true,
+ "docfinqa_row": 187
+}

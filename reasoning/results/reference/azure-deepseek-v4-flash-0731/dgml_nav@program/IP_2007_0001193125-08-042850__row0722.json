@@ -1,0 +1,140 @@
+{
+ "id": "IP_2007_0001193125-08-042850__row0722",
+ "key": "IP_2007_0001193125-08-042850",
+ "question": "at december 31 , 2007 , what was the percent of the total future minimum commitments under existing non-cancelable operat- ing leases for purchase obligations",
+ "gold": "72.1%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "IP_2007_0001193125-08-042850.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/CommitmentsAndContingentLiabilities/table",
+  "/chunk/CommitmentsAndContingentLiabilities"
+ ],
+ "r1_reasoning_chars": 3094,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 35305,
+  "completion_tokens": 739,
+  "total_tokens": 36044,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/CommitmentsAndContingentLiabilities/table",
+  "/chunk/CommitmentsAndContingentLiabilities"
+ ],
+ "content_chars": 359384,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "88.1534%",
+ "reasoning": "We need answer percent of total future minimum commitments under existing non-cancelable operating leases for purchase obligations. Need parse. The table shows \"Lease obligations\" and \"Purchase obligations (a)\" and \"Total\" for years 2008-2012 and Thereafter. At Dec 31 2007 total future minimum commitments under existing non-cancelable operating leases and purchase obligations. Question asks \"percent of the total future minimum commitments under existing non-cancelable operating leases for purchase obligations\" Wording ambiguous: \"percent of the total future minimum commitments under existing non-cancelable operating leases for purchase obligations\" Maybe they want purchase obligations as percent of total commitments (lease + purchase). Or \"under existing non-cancelable operating leases for purchase obligations\" Actually table includes lease obligations and purchase obligations. The question: \"at december 31, 2007, what was the percent of the total future minimum commitments under existing non-cancelable operating leases for purchase obligations\" Could be asking: what percent of total future minimum commitments (lease + purchase) are purchase obligations? Need compute total purchase obligations sum / total sum *100.\n\nLet's sum purchase obligations: 1,953 + 294 + 261 + 235 + 212 + 1,480 = let's add: 1953+294=2247; +261=2508; +235=2743; +212=2955; +1480=4435. Lease obligations: 136+116+101+84+67+92 = 136+116=252; +101=353; +84=437; +67=504; +92=596. Total sum = 4435+596=5031. Percent purchase = 4435/5031 = 0.8815... = 88.15%. Alternatively maybe they ask \"percent of total future minimum commitments under existing non-cancelable operating leases for purchase obligations\" Could be \"percent of total future minimum commitments under existing non-cancelable operating leases\" that are purchase obligations. Yes.\n\nNeed evidence figures. Use table values. Also note footnote (a) includes $2.1 billion fiber supply agreements, but not needed.\n\nNeed answer with <answer>88.15%</answer> maybe round. Let's compute exact: 4435/5031 = 0.881534... 88.1534%. Could answer 88.15%. Need program: divide(4435, 5031) but program must use figures as printed? We can use sum? The program supports add etc. Need compute total purchase and total lease and total. Could do divide(add(1953,294,261,235,212,1480), add(1953,294,261,235,212,1480,136,116,101,84,67,92)) but add only two args? The instruction says add(a,b) etc, nested calls. We can nest. But maybe simpler: divide(4435, 5031) but 4435 not printed. Need use printed figures. We can compute with nested adds. But benchmark expects exact program using figures as printed. We'll do nested.\n\nEvidence list each figure used. Need list value | element. Use table rows. For purchase obligations: 1,953 | PurchaseObligationAmount, 294, 261, 235, 212, 1,480. Lease: 136,116,101,84,67,92. Could also use Total row? But we compute.\n\nNeed final answer inside tags only value. Also evidence and program before.",
+ "raw_content": "<evidence>1,953 | PurchaseObligationAmount\n294 | PurchaseObligationAmount\n261 | PurchaseObligationAmount\n235 | PurchaseObligationAmount\n212 | PurchaseObligationAmount\n1,480 | PurchaseObligationAmount\n136 | LeaseObligationAmount\n116 | LeaseObligationAmount\n101 | LeaseObligationAmount\n84 | LeaseObligationAmount\n67 | LeaseObligationAmount\n92 | LeaseObligationAmount</evidence>\n<program>divide(add(add(add(add(add(1953,294),261),235),212),1480), add(add(add(add(add(add(1953,294),261),235),212),1480), add(add(add(add(add(136,116),101),84),67),92)))</program>\n<answer>88.15%</answer>",
+ "r2_usage": {
+  "prompt_tokens": 87917,
+  "completion_tokens": 921,
+  "total_tokens": 88838,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,953",
+   "element": "PurchaseObligationAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "294",
+   "element": "PurchaseObligationAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "261",
+   "element": "PurchaseObligationAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "235",
+   "element": "PurchaseObligationAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "212",
+   "element": "PurchaseObligationAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "1,480",
+   "element": "PurchaseObligationAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "136",
+   "element": "LeaseObligationAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "116",
+   "element": "LeaseObligationAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "101",
+   "element": "LeaseObligationAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "84",
+   "element": "LeaseObligationAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "67",
+   "element": "LeaseObligationAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "92",
+   "element": "LeaseObligationAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(add(add(add(add(1953,294),261),235),212),1480), add(add(add(add(add(add(1953,294),261),235),212),1480), add(add(add(add(add(136,116),101),84),67),92)))",
+ "answer_model": "88.15%",
+ "program_value": 0.881534486185649,
+ "elapsed_s": 15.08,
+ "outline_source": "IP_2007_0001193125-08-042850.outline.txt",
+ "outline_chars": 139969
+}

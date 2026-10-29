@@ -1,0 +1,102 @@
+{
+ "id": "UPS_2007_0001193125-08-043891__row0080",
+ "format": "dgml_compact",
+ "key": "UPS_2007_0001193125-08-043891",
+ "question": "what is the total in millions of expected cash outflow to satisfy contractual obligations and commitments as of december 31 , 2007?",
+ "gold": "28809",
+ "finqa_id": "UPS/2007/page_49.pdf-1",
+ "source_page": "page_49",
+ "ticker": "UPS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml_compact/UPS_2007_0001193125-08-043891.dgml.txt",
+ "doc_chars": 424830,
+ "prompt_chars": 425050,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 424830,
+ "original_chars": 424830,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93585,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 368,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "28809",
+ "reasoning": "We need answer total expected cash outflow contractual obligations commitments as of Dec 31 2007. Document has table \"Contractual Obligations and Commitments\" with Total row: Capital Leases $619, Operating Leases $1,782, Debt Principal $10,527, Debt Interest $8,026, Purchase Commitments $3,828, Pension Fundings $3,465, Other Liabilities $562. Sum? Need compute total. The table shows Total row with those amounts. Question asks total in millions. Sum = 619+1782+10527+8026+3828+3465+562. Let's compute: 619+1782=2401; +10527=12928; +8026=20954; +3828=24782; +3465=28247; +562=28809. So answer 28809. Need evidence list figures. Use values from table.",
+ "raw_content": "<evidence>\n619 | ContractualObligationsByYear: Total (Capital Leases)\n1,782 | ContractualObligationsByYear: Total (Operating Leases)\n10,527 | ContractualObligationsByYear: Total (Debt Principal)\n8,026 | ContractualObligationsByYear: Total (Debt Interest)\n3,828 | ContractualObligationsByYear: Total (Purchase Commitments)\n3,465 | ContractualObligationsByYear: Total (Pension Fundings)\n562 | ContractualObligationsByYear: Total (Other Liabilities)\n</evidence>\n\n<program>\nadd(add(add(add(add(add(619, 1782), 10527), 8026), 3828), 3465), 562)\n</program>\n\n<answer>28809</answer>",
+ "usage": {
+  "prompt_tokens": 93898,
+  "completion_tokens": 368,
+  "total_tokens": 94266,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.24,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "619",
+   "element": "ContractualObligationsByYear: Total (Capital Leases)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1,782",
+   "element": "ContractualObligationsByYear: Total (Operating Leases)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "10,527",
+   "element": "ContractualObligationsByYear: Total (Debt Principal)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "8,026",
+   "element": "ContractualObligationsByYear: Total (Debt Interest)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "3,828",
+   "element": "ContractualObligationsByYear: Total (Purchase Commitments)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "3,465",
+   "element": "ContractualObligationsByYear: Total (Pension Fundings)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "562",
+   "element": "ContractualObligationsByYear: Total (Other Liabilities)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "add(add(add(add(add(add(619, 1782), 10527), 8026), 3828), 3465), 562)",
+ "answer_model": "28809",
+ "program_value": 28809.0,
+ "docfinqa_row": 80
+}

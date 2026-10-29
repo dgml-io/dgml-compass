@@ -1,0 +1,50 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0767",
+ "format": "dgml",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "hard assets were what percent of the brazilian purchase price , as finally determined?",
+ "gold": "14.3%",
+ "finqa_id": "AMT/2012/page_118.pdf-3",
+ "source_page": "page_118",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/dgml/AMT_2012_0001193125-13-077821.dgml.xml",
+ "doc_chars": 945867,
+ "prompt_chars": 946042,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 945867,
+ "original_chars": 945867,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 220539,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 751,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "14.27%",
+ "reasoning": "We need to find the Brazilian purchase price and hard assets. The question: \"hard assets were what percent of the brazilian purchase price, as finally determined?\" We need to find the Brazilian acquisition. In the document, there is a \"Brazil Acquisition\" section. It says: \"On March 1, 2011, the Company acquired 100% of the outstanding shares of a company that owned 627 communications sites in Brazil for $553.2 million, which was subsequently increased to $585.4 million as a result of acquiring 39 additional communications sites during the year ended December 31, 2011. During the year ended December 31, 2012, the purchase price was reduced to $585.3 million after certain post-closing purchase price adjustments.\" Then there is a purchase price allocation table. The table shows \"Property and equipment\" and \"Intangible assets\" etc. The question asks \"hard assets\" - likely meaning property and equipment? Or maybe tangible assets? In the allocation table, we have \"Property and equipment\" and \"Intangible assets\". Hard assets typically refer to tangible assets like property and equipment. The table shows final purchase price allocation: Property and equipment: $83,539 (in thousands) and Intangible assets: $368,000. But the purchase price is $585.3 million. So we need to compute property and equipment as a percentage of purchase price. But the table also includes other items. The question says \"hard assets\" - could be property and equipment. Let's check the table: The final purchase price allocation shows: Current assets: $9,922; Non-current assets: $71,529; Property and equipment: $83,539; Intangible assets: $368,000; Current liabilities: -$5,536; Other non-current liabilities: -$38,519; Fair value of net assets acquired: $488,935; Goodwill: $96,395. The purchase price is $585.3 million. But the sum of net assets plus goodwill equals $488,935 + $96,395 = $585,330, which matches $585.3 million. So the purchase price is $585.3 million. Hard assets: likely property and equipment? Or maybe property and equipment plus non-current assets? But \"hard assets\" typically means tangible assets like property, plant, equipment. In the context, property and equipment is the hard asset. So percentage = (83,539 / 585,330) * 100 = approximately 14.27%. But let's check if there is any other mention. The question says \"as finally determined\" - so we use the final purchase price allocation. The final allocation is given. So compute 83,539 / 585,330 = 0.1427 = 14.27%. But maybe they consider \"hard assets\" as property and equipment plus non-current assets? Non-current assets might include other intangibles? Actually non-current assets in the table are separate from property and equipment. The table lists \"Non-current assets\" as a line item, which might be other non-current assets like prepaid leases etc. But hard assets usually are tangible. I think property and equipment is the hard asset. Let's see if there is any other definition. The question might be from a financial analysis perspective. I'll go with property and equipment. So answer: 14.27% or approximately 14.3%. But let's compute precisely: 83,539 / 585,330 = 0.1427. So 14.27%. I'll put that.",
+ "raw_content": "<answer>14.27%</answer>",
+ "usage": {
+  "prompt_tokens": 220684,
+  "completion_tokens": 751,
+  "total_tokens": 221435,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 18.02,
+ "answer_tag_found": true,
+ "docfinqa_row": 767
+}

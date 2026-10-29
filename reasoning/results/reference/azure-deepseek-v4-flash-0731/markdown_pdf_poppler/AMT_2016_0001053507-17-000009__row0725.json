@@ -1,0 +1,53 @@
+{
+ "id": "AMT_2016_0001053507-17-000009__row0725",
+ "format": "markdown_pdf_poppler",
+ "key": "AMT_2016_0001053507-17-000009",
+ "question": "what is the net change in the balance of unrecognized tax benefits during 2016?",
+ "gold": "79437",
+ "finqa_id": "AMT/2016/page_125.pdf-1",
+ "source_page": "page_125",
+ "ticker": "AMT",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf_poppler/AMT_2016_0001053507-17-000009.md",
+ "doc_chars": 629712,
+ "prompt_chars": 629880,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 629712,
+ "original_chars": 629712,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 113740,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 344,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "79437",
+ "reasoning": "We need to find the net change in unrecognized tax benefits during 2016. From note 12, there is a reconciliation of unrecognized tax benefits. The table shows:\n\nBalance at January 1: $28,114 (in thousands)\nAdditions based on tax positions related to the current year: $82,912\nAdditions for tax positions of prior years: $0\nForeign currency: -$307\nReduction as a result of lapse of statute of limitations and effective settlements: -$3,168\nBalance at December 31: $107,551\n\nNet change = ending - beginning = 107,551 - 28,114 = 79,437 (in thousands). But the question asks \"net change in the balance of unrecognized tax benefits during 2016\" - that is the difference. So answer is 79,437 (in thousands). But the question doesn't specify units, so we can give the number. However, the document uses thousands, so we should state in thousands? The instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So we just put 79437. But careful: the table shows amounts in thousands, so net change is 79,437 thousand dollars. But the question asks \"what is the net change\" - we can give the number as 79,437. Alternatively, we could compute from the reconciliation: additions 82,912 - foreign currency 307 - reduction 3,168 = 79,437. Yes.\n\nSo answer: 79437.",
+ "raw_content": "<answer>79437</answer>",
+ "usage": {
+  "prompt_tokens": 113887,
+  "completion_tokens": 344,
+  "total_tokens": 114231,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 113664
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.84,
+ "answer_tag_found": true,
+ "docfinqa_row": 725
+}

@@ -1,0 +1,84 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0046",
+ "format": "dgml",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what was the average currency translation adjustments from 2013 to 2015 in millions?",
+ "gold": "-6806",
+ "finqa_id": "PM/2015/page_127.pdf-4",
+ "source_page": "page_127",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml/PM_2015_0001413329-16-000076.dgml.xml",
+ "doc_chars": 987218,
+ "prompt_chars": 987391,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 987218,
+ "original_chars": 987218,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 236868,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 923,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-4088.333333",
+ "reasoning": "We need answer question: \"what was the average currency translation adjustments from 2013 to 2015 in millions?\" Need find figures. Document has accumulated other comprehensive losses components: currency translation adjustments at Dec 31 2013, 2014, 2015. But \"average currency translation adjustments from 2013 to 2015\" could mean average of the balances? Or average of the changes? Need interpret. The question says \"average currency translation adjustments from 2013 to 2015 in millions\". Likely they want average of the currency translation adjustment amounts for years 2013, 2014, 2015. In Note 17 Accumulated Other Comprehensive Losses: table shows 2015, 2014, 2013: Currency translation adjustments: (6,129), (3,929), (2,207). Average = (-6129 + -3929 + -2207)/3 = -12265/3 = -4088.333... But maybe they want average of the changes? The phrase \"from 2013 to 2015\" could mean the average over that period of the currency translation adjustments (the balances). Let's check document also has \"Change in currency translation adjustments\" in comprehensive earnings: 2015: -2,248, 2014: -1,746, 2013: -1,876. Average of changes = (-2248-1746-1876)/3 = -5870/3 = -1956.67. Which one is \"currency translation adjustments\"? The question says \"average currency translation adjustments from 2013 to 2015 in millions\". In financial statements, \"currency translation adjustments\" is a component of accumulated other comprehensive losses. The balances are given. The changes are \"Change in currency translation adjustments\". The question likely refers to the balances. Need decide. Let's read exact: \"what was the average currency translation adjustments from 2013 to 2015 in millions?\" Could be asking for average of the currency translation adjustment amounts for the years 2013, 2014, 2015. The document has a table in Note 17: Accumulated other comprehensive losses: Currency translation adjustments: 2015: $(6,129), 2014: $(3,929), 2013: $(2,207). So average = (-6129 + -3929 + -2207)/3 = -12265/3 = -4088.333... But maybe they want the average of the changes? The phrase \"from 2013 to 2015\" might mean over the period, i.e., the average annual change? But \"currency translation adjustments\" as a line item is the balance. The question says \"average currency translation adjustments\" not \"average change\". I'll go with balances.\n\nNeed provide evidence: list figures used. Then program: divide(add(-6129, -3929, -2207), 3) but add takes two args? The instruction says add(a, b) etc. We can nest: divide(add(add(-6129, -3929), -2207), 3). But figures as printed: they are negative numbers with parentheses? In document: $(6,129) etc. We'll use -6129, -3929, -2207. Evidence: value | element. The element names: Currency translation adjustments in table under AccumulatedOtherComprehensiveLoss. We'll cite.\n\nFinal answer inside <answer> -4088.33? The question asks \"in millions\" so answer value. Should we round? Average is -4088.333... I'll put -4088.33 or -4088.333? The benchmark likely expects exact computation. Use -4088.333333... But answer should be value. I'll put -4088.33. But maybe they want integer? Let's compute: -12265/3 = -4088.333... So answer -4088.33.\n\nLet's produce.",
+ "raw_content": "<evidence>\n-6,129 | Currency translation adjustments 2015 (AccumulatedOtherComprehensiveLoss)\n-3,929 | Currency translation adjustments 2014 (AccumulatedOtherComprehensiveLoss)\n-2,207 | Currency translation adjustments 2013 (AccumulatedOtherComprehensiveLoss)\n</evidence>\n\n<program>divide(add(add(-6129, -3929), -2207), 3)</program>\n\n<answer>-4088.33</answer>",
+ "usage": {
+  "prompt_tokens": 237173,
+  "completion_tokens": 923,
+  "total_tokens": 238096,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 233728
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 14.57,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "6,129",
+   "element": "Currency translation adjustments 2015 (AccumulatedOtherComprehensiveLoss)",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "3,929",
+   "element": "Currency translation adjustments 2014 (AccumulatedOtherComprehensiveLoss)",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "2,207",
+   "element": "Currency translation adjustments 2013 (AccumulatedOtherComprehensiveLoss)",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(add(add(-6129, -3929), -2207), 3)",
+ "answer_model": "-4088.33",
+ "program_value": -4088.3333333333335,
+ "docfinqa_row": 46
+}

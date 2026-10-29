@@ -1,0 +1,74 @@
+{
+ "id": "AMT_2016_0001053507-17-000009__row0374",
+ "format": "dgml",
+ "key": "AMT_2016_0001053507-17-000009",
+ "question": "on february 17 , 2017 , what was the company's market capitalization as reported on the nyse.\\\\n\\\\n",
+ "gold": "46184055450.1",
+ "finqa_id": "AMT/2016/page_49.pdf-2",
+ "source_page": "page_49",
+ "ticker": "AMT",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/dgml/AMT_2016_0001053507-17-000009.dgml.xml",
+ "doc_chars": 929244,
+ "prompt_chars": 929432,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 929244,
+ "original_chars": 929244,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 223326,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 291,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "46184055450.07",
+ "reasoning": "We need market cap on Feb 17, 2017. Document says: \"On February 17, 2017, the closing price of our common stock was $108.11 per share as reported on the NYSE. As of February 17, 2017, we had 427,195,037 outstanding shares of common stock and 153 registered holders.\" Market cap = price * shares = 108.11 * 427,195,037. Compute: 427,195,037 * 108.11. Let's compute: 427,195,037 * 100 = 42,719,503,700; *8 = 3,417,560,296; *0.11 = 46,991,454.07; sum = 42,719,503,700 + 3,417,560,296 = 46,137,063,996; +46,991,454 = 46,184,055,450. So approximately $46.184 billion. The question asks \"market capitalization as reported on the nyse\" - likely the product. Use exact figures.",
+ "raw_content": "<evidence>\n$108.11 | ClosingSharePrice\n427,195,037 | CommonSharesOutstanding\n</evidence>\n<program>multiply(108.11, 427195037)</program>\n<answer>46,184,055,450</answer>",
+ "usage": {
+  "prompt_tokens": 223642,
+  "completion_tokens": 291,
+  "total_tokens": 223933,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 18.22,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$108.11",
+   "element": "ClosingSharePrice",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "427,195,037",
+   "element": "CommonSharesOutstanding",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(108.11, 427195037)",
+ "answer_model": "46,184,055,450",
+ "program_value": 46184055450.07,
+ "docfinqa_row": 374
+}

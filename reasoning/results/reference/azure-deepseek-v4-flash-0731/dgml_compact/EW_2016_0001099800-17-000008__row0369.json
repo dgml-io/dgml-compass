@@ -1,0 +1,53 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0369",
+ "format": "dgml_compact",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what is the percentage difference in the fair value per share between 2015 and 2016?",
+ "gold": "71%",
+ "finqa_id": "EW/2016/page_94.pdf-3",
+ "source_page": "page_94",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/dgml_compact/EW_2016_0001099800-17-000008.dgml.txt",
+ "doc_chars": 387281,
+ "prompt_chars": 387454,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 387281,
+ "original_chars": 387281,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 83222,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 292,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "70.99%",
+ "reasoning": "The question asks for the percentage difference in the fair value per share between 2015 and 2016. This likely refers to the fair value per share of option awards or ESPP subscriptions. Looking at the document, under \"Option Awards\" table, the fair value per share for 2016 is $31.00 and for 2015 is $18.13. The percentage difference would be (31.00 - 18.13) / 18.13 * 100 = 12.87 / 18.13 * 100 = 70.99%. Alternatively, it could be ESPP fair value per share: 2016 $22.09, 2015 $15.59. Percentage difference = (22.09 - 15.59)/15.59 * 100 = 6.5/15.59 * 100 = 41.69%. The question says \"the fair value per share\" - likely referring to the option awards since that's the most prominent. Let me check the context. The question is vague, but the most likely interpretation is the fair value per share of option awards. Let me compute: (31.00 - 18.13) / 18.13 = 12.87 / 18.13 = 0.7099 = 70.99%. I'll answer with that.",
+ "raw_content": "<answer>70.99%</answer>",
+ "usage": {
+  "prompt_tokens": 83370,
+  "completion_tokens": 292,
+  "total_tokens": 83662,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 83200
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.45,
+ "answer_tag_found": true,
+ "docfinqa_row": 369
+}

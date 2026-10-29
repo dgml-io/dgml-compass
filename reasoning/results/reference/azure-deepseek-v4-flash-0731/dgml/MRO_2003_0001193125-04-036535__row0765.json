@@ -1,0 +1,53 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0765",
+ "format": "dgml",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "for 2002 and 2003 , what is the average crack spread values?",
+ "gold": "3.5",
+ "finqa_id": "MRO/2003/page_84.pdf-4",
+ "source_page": "page_84",
+ "ticker": "MRO",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/dgml/MRO_2003_0001193125-04-036535.dgml.xml",
+ "doc_chars": 894793,
+ "prompt_chars": 894942,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": true,
+ "truncation": "head",
+ "kept_chars": 894683,
+ "original_chars": 1111982,
+ "kept_fraction": 0.8046,
+ "est_doc_tokens": 266687,
+ "est_kept_tokens": 211360,
+ "budget_tokens": 240000,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 403,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "The question asks for the average crack spread values for 2002 and 2003. The document mentions \"crack spread\" in the context of refining margins. Let me search for \"crack spread\" in the document.\n\nI see \"The crack spread, which is a measure of the difference between spot market gasoline and distillate prices and spot market crude costs, is an industry indicator of refining margins.\" This is a definition, not a value.\n\nI also see \"Refining and Wholesale Marketing Margin\" values: $0.0601 per gallon in 2003, $0.0387 in 2002, $0.1167 in 2001. But that's the refining margin, not the crack spread.\n\nThe question specifically asks for \"average crack spread values\" for 2002 and 2003. I don't see any explicit crack spread values in the document. The document discusses crack spread as a concept but doesn't provide specific average crack spread values.\n\nLet me double-check by searching for \"crack\" in the document... I see \"crack spread\" mentioned in the MD&A section: \"The crack spread, which is a measure of the difference between spot market gasoline and distillate prices and spot market crude costs, is an industry indicator of refining margins.\" No numerical values given.\n\nAlso in the RM&T section: \"Derivative losses, which are included in the refining and wholesale marketing margin, were $162 million in 2003 as compared to losses of $124 million and gains of $210 million in 2002 and 2001. These derivative losses were generally incurred to mitigate the price risk of certain crude oil and other feedstock purchases and to protect carrying values of excess inventories.\" - This is about derivative losses, not crack spread values.\n\nThe document does not contain specific average crack spread values for 2002 and 2003. Therefore, the answer should be NOT_FOUND.",
+ "raw_content": "<answer>NOT_FOUND</answer>",
+ "usage": {
+  "prompt_tokens": 211527,
+  "completion_tokens": 403,
+  "total_tokens": 211930,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 16.26,
+ "answer_tag_found": true,
+ "docfinqa_row": 765
+}

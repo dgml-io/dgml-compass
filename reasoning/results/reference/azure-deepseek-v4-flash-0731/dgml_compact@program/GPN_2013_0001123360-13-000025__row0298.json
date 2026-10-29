@@ -1,0 +1,72 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0298",
+ "format": "dgml_compact",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what is the percentage change in the expected minimum payments from 2014 to 2015?",
+ "gold": "-18.7%",
+ "finqa_id": "GPN/2013/page_92.pdf-2",
+ "source_page": "page_92",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/dgml_compact/GPN_2013_0001123360-13-000025.dgml.txt",
+ "doc_chars": 440691,
+ "prompt_chars": 440861,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 440691,
+ "original_chars": 440691,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93128,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 692,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-18.7393%",
+ "reasoning": "We need answer question: \"what is the percentage change in the expected minimum payments from 2014 to 2015?\" Need find expected minimum payments. Likely from contractual obligations table: \"Operating leases (Note 15) and purchase obligations\" with payments due by future period: Less than 1 Year, 1-3 Years, 3-5 Years, 5+ Years. But question asks from 2014 to 2015? Maybe from debt maturity schedule? \"Maturity requirements on outstanding debt by fiscal years\" 2014 $259,796, 2015 $71,472. Or from future minimum lease payments: 2014 $11,057, 2015 $8,985. \"expected minimum payments\" might refer to future minimum lease payments. The question: \"what is the percentage change in the expected minimum payments from 2014 to 2015?\" In document, there is \"Future minimum lease payments for all non-cancelable operating leases at May 31, 2013\" with 2014 $11,057, 2015 $8,985. Also \"Maturity requirements on outstanding debt by fiscal years\" 2014 $259,796, 2015 $71,472. Which one is \"expected minimum payments\"? The phrase \"expected minimum payments\" might be from \"Future minimum lease payments\" - they are minimum payments. The question says \"expected minimum payments\" maybe from \"Future minimum lease payments\". Need compute percentage change from 2014 to 2015: (2015-2014)/2014 = (8,985 - 11,057)/11,057 = -2,072/11,057 = -0.18739... = -18.74%. Alternatively debt maturity: (71,472 - 259,796)/259,796 = -188,324/259,796 = -0.7249 = -72.49%. Which is more likely? The question wording \"expected minimum payments\" - in the document, \"Future minimum lease payments\" are minimum payments. The debt maturity schedule is \"Maturity requirements on outstanding debt\" not \"minimum payments\". So likely lease payments. Need answer percentage change. Let's compute precisely: 11,057 to 8,985. Difference = -2,072. Divide by 11,057 = -0.18739... = -18.74% (rounded). The question asks \"percentage change\" - could be negative. We'll provide -18.74% or -18.7%. Need evidence: figures 11,057 and 8,985 from FutureLeasePayment. Also maybe 2014 and 2015. We'll cite.\n\nNeed final answer inside <answer> tags only value. Probably -18.74% or -18.7%. Let's compute exact: 2072/11057 = 0.18739... 11057*0.1874 = 2072.08. So -18.74%. We'll answer -18.74%.",
+ "raw_content": "<evidence>\n11,057 | FutureLeasePayment: 2014\n8,985 | FutureLeasePayment: 2015\n</evidence>\n<program>divide(subtract(8985, 11057), 11057)</program>\n<answer>-18.74%</answer>",
+ "usage": {
+  "prompt_tokens": 93434,
+  "completion_tokens": 692,
+  "total_tokens": 94126,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 20.42,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "11,057",
+   "element": "FutureLeasePayment: 2014",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "8,985",
+   "element": "FutureLeasePayment: 2015",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(8985, 11057), 11057)",
+ "answer_model": "-18.74%",
+ "program_value": -0.1873926019716017,
+ "docfinqa_row": 298
+}

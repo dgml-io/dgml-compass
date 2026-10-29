@@ -1,0 +1,53 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0352",
+ "format": "markdown_pdf_rules",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what is the net change of the total fair value balance of non-vested shares during 2013?",
+ "gold": "6820",
+ "finqa_id": "GPN/2013/page_87.pdf-3",
+ "source_page": "page_87",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/markdown_pdf_rules/GPN_2013_0001123360-13-000025.md",
+ "doc_chars": 352179,
+ "prompt_chars": 352356,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 352179,
+ "original_chars": 352179,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 76901,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 841,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "6,820,000",
+ "reasoning": "We need to find the net change of the total fair value balance of non-vested shares during 2013. The document has a table for non-vested restricted stock awards. It shows shares and weighted average grant-date fair value. The \"total fair value balance\" would be shares * weighted average fair value. We need the change from May 31, 2012 to May 31, 2013.\n\nFrom the table:\nNon-vested at May 31, 2012: 941 shares, weighted average fair value $44. So total fair value = 941 * 44 = 41,404 (in thousands? Actually shares in thousands, so 941,000 shares * $44 = $41,404,000).\nNon-vested at May 31, 2013: 1,096 shares, weighted average fair value $44. So total = 1,096 * 44 = 48,224 (in thousands? 1,096,000 * 44 = $48,224,000).\nNet change = 48,224 - 41,404 = 6,820 (in thousands) = $6,820,000.\n\nBut the question says \"net change of the total fair value balance\" - likely the change in the aggregate fair value. So answer is $6,820,000 or 6,820 (in thousands). The document uses thousands, so we can give 6,820 (in thousands) or $6.82 million. The question doesn't specify units, but we should give the value. Probably in thousands as per the table. The table says \"share awards in thousands\" and fair value is per share. So the total fair value is in thousands of dollars. So net change = 6,820 (in thousands) = $6,820,000.\n\nLet's double-check: The table shows:\nNon-vested at May 31, 2011: 869, $40 -> total 34,760\nGranted 472, 48 -> added 22,656\nVested (321), 40 -> removed 12,840\nForfeited (79), 43 -> removed 3,397\nNet change 2012: 941*44 = 41,404 vs 34,760 = +6,644? Actually 41,404 - 34,760 = 6,644. But the table shows the weighted average changed. But we only need 2013 change.\n\nFor 2013:\nBeginning: 941 * 44 = 41,404\nGranted: 561 * 44 = 24,684\nVested: (315) * 43 = -13,545\nForfeited: (91) * 44 = -4,004\nEnding: 1,096 * 44 = 48,224\nNet change = 48,224 - 41,404 = 6,820.\n\nSo answer is 6,820 (in thousands) or $6,820,000. The question asks \"what is the net change of the total fair value balance\" - so we give the number. I'll put 6820 (in thousands) or 6,820,000. Since the document uses thousands, I'll put 6,820 (in thousands) but the answer should be a value. I'll put 6820 (in thousands) or 6,820,000. The instruction says \"containing only the value itself\" so I'll put 6820 (in thousands) but better to put 6,820,000? The table is in thousands, so the net change is 6,820 thousand dollars = $6,820,000. I'll put 6,820,000.\n\nBut let's check if the question expects the change in the \"total fair value balance\" which is the product of shares and weighted average fair value. Yes.\n\nSo answer: 6,820,000.",
+ "raw_content": "<answer>6,820,000</answer>",
+ "usage": {
+  "prompt_tokens": 77051,
+  "completion_tokens": 841,
+  "total_tokens": 77892,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 76800
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.35,
+ "answer_tag_found": true,
+ "docfinqa_row": 352
+}

@@ -1,0 +1,72 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0298",
+ "format": "markdown_pdf_rules",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what is the percentage change in the expected minimum payments from 2014 to 2015?",
+ "gold": "-18.7%",
+ "finqa_id": "GPN/2013/page_92.pdf-2",
+ "source_page": "page_92",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/markdown_pdf_rules/GPN_2013_0001123360-13-000025.md",
+ "doc_chars": 352179,
+ "prompt_chars": 352349,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 352179,
+ "original_chars": 352179,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 76901,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 734,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-18.73926",
+ "reasoning": "We need to find expected minimum payments from 2014 to 2015. The document has \"Future minimum lease payments for all non-cancelable operating leases at May 31, 2013\" with fiscal years: 2014 $11,057, 2015 $8,985. Also there is a table \"Maturity requirements on outstanding debt by fiscal years\" but that's debt. The question says \"expected minimum payments\" - likely the lease payments. Also there is a table \"Commitments and Contractual Obligations\" with \"Operating leases and purchase obligations\" but that's aggregated. The specific future minimum lease payments table gives 2014 and 2015. So percentage change from 2014 to 2015: (8,985 - 11,057)/11,057 = -18.74% approximately. Let's compute exactly: 8,985 - 11,057 = -2,072. Divide by 11,057 = -0.18739... so -18.74%. The question asks \"percentage change\" - likely negative. We'll provide the value.\n\nEvidence: 11,057 | Future minimum lease payments 2014; 8,985 | Future minimum lease payments 2015.\n\nProgram: divide(subtract(8985, 11057), 11057) but that gives -0.1874. The answer should be percentage, so maybe multiply by 100? The instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what is the percentage change\" so we should give the percentage number, e.g., -18.74% or -18.7%. But the program must be exact. The program can be divide(subtract(8985, 11057), 11057) which yields -0.1874. But the answer should be a percentage. The benchmark might expect the numeric value as a percentage? Usually they want the percentage change as a number like -18.74. But the instruction says \"no explanation or units unless the question asks for them\" - the question asks for percentage change, so we can include %? It says \"containing only the value itself\" - so maybe just -18.74. But to be safe, we can give -18.74%? The instruction says \"no explanation or units unless the question asks for them\" - the question asks for percentage change, so the unit is percentage. But \"only the value itself\" suggests just the number. I'll put -18.74. But let's compute exactly: 8985/11057 = 0.8126, so change = -0.1874 = -18.74%. I'll put -18.74.\n\nEvidence: 11,057 | Future minimum lease payments 2014; 8,985 | Future minimum lease payments 2015.\n\nProgram: multiply(divide(subtract(8985, 11057), 11057), 100) to get -18.74. But the program is executed by benchmark, so it must be exact. I'll use that.\n\nFinal answer: -18.74",
+ "raw_content": "<evidence>11,057 | Future minimum lease payments 2014\n8,985 | Future minimum lease payments 2015</evidence>\n<program>multiply(divide(subtract(8985, 11057), 11057), 100)</program>\n<answer>-18.74</answer>",
+ "usage": {
+  "prompt_tokens": 77207,
+  "completion_tokens": 734,
+  "total_tokens": 77941,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.26,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "11,057",
+   "element": "Future minimum lease payments 2014",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "8,985",
+   "element": "Future minimum lease payments 2015",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(8985, 11057), 11057), 100)",
+ "answer_model": "-18.74",
+ "program_value": -18.73926019716017,
+ "docfinqa_row": 298
+}

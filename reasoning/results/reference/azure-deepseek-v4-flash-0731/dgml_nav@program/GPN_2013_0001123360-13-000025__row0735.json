@@ -1,0 +1,70 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0735",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what was the total number of grants were forfeited?",
+ "gold": "170 grants",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "GPN_2013_0001123360-13-000025.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockRollforward",
+  "/chunk/DeferredTaxBalance/ShareBasedAwards/StockOptionTerms/StockOptionRollforward"
+ ],
+ "r1_reasoning_chars": 2495,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 18954,
+  "completion_tokens": 619,
+  "total_tokens": 19573,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/DeferredTaxBalance/ShareBasedAwards/RestrictedStockAwards/RestrictedStockRollforward",
+  "/chunk/DeferredTaxBalance/ShareBasedAwards/StockOptionTerms/StockOptionRollforward"
+ ],
+ "content_chars": 14200,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "170",
+ "reasoning": "We need answer total number of grants forfeited. Need determine from document. There are restricted stock forfeited: 79 in 2012, 91 in 2013. Stock options forfeited: 72 in 2012, 72 in 2013. Question \"total number of grants were forfeited\" ambiguous: total across all share-based awards? Could be sum of forfeited restricted stock and stock options for both years? Need parse. The question likely asks \"what was the total number of grants were forfeited?\" Maybe from table, total forfeited in restricted stock rollforward? But \"grants\" could refer to restricted stock awards? Let's examine context. The excerpt includes restricted stock rollforward and stock option rollforward. The question: \"what was the total number of grants were forfeited?\" It might be asking total number of grants forfeited across all share-based compensation? Need identify from document. The tables show \"Forfeited\" rows. For restricted stock: 79 (2012) and 91 (2013). For stock options: 72 (2012) and 72 (2013). If \"total number of grants\" means total forfeited over the two years? Or total in a given year? The question doesn't specify year. It says \"total number of grants were forfeited\" maybe from a table that has \"Forfeited\" row. Could be asking for the total number of grants forfeited in the period? Need infer.\n\nLet's read question: \"what was the total number of grants were forfeited?\" It might be from a dataset where answer is a single number. The document has two tables with forfeited amounts. The total number of grants forfeited could be sum of all forfeited across both types and both years: 79+91+72+72 = 314. But \"grants\" might refer to \"restricted stock awards\" only? The restricted stock table has \"Forfeited\" rows. The stock option table also has \"Forfeited\" rows. The question says \"grants\" not \"options\". In share-based compensation, \"grants\" can refer to awards granted, but forfeitures are of awards. The restricted stock table uses \"Forfeited\" for restricted stock awards. The stock option table uses \"Forfeited\" for options. The question \"total number of grants were forfeited\" might be asking for the sum of forfeited restricted stock awards and stock options? But \"grants\" typically refers to restricted stock grants, not options. However, the document has \"RestrictedStockRollforward\" and \"StockOptionRollforward\". The question might be from a QA dataset where the answer is in the restricted stock table: \"Forfeited\" row has (79) and (91). But \"total number\" could be sum of both years? Let's examine the table: It shows non-vested at May 31, 2011, Granted, Vested, Forfeited, Non-vested at May 31, 2012, Granted, Vested, Forfeited, Non-vested at May 31, 2013. The question \"what was the total number of grants were forfeited?\" Could be asking for the total forfeited over the two years? The table has two forfeited rows: (79) and (91). If \"total\" means sum, answer 170. But the question says \"grants\" plural, \"were forfeited\" past tense. Could be asking for the total number of grants forfeited in the period covered? The table covers years ended May 31, 2013 and 2012. The total forfeited restricted stock awards over those two years is 79+91=170. But the stock options also have forfeited 72+72=144. If including options, total 314. Which is more likely?\n\nLet's look at the phrasing: \"what was the total number of grants were forfeited?\" It might be a question generated from a table with a \"Forfeited\" row. The table header says \"RestrictedStockRollforward\" and the rows include \"Forfeited\". The question might be \"what was the total number of grants were forfeited?\" In the restricted stock table, the \"Forfeited\" row appears twice with values (79) and (91). The \"total\" could be the sum of those two. But the question says \"grants\" not \"restricted stock awards\". However, the table is specifically about restricted stock awards. The stock option table is about options, not grants. So likely answer is 170.\n\nBut let's not jump. The question: \"what was the total number of grants were forfeited?\" It might be asking for the total number of grants forfeited in a specific year? The document has two years. The question doesn't specify year, so \"total\" might mean across all years shown. The restricted stock table shows forfeited 79 in 2012 and 91 in 2013. Sum = 170. The stock option table shows forfeited 72 in 2012 and 72 in 2013. If \"grants\" includes options? Options are not \"grants\" typically; they are options. The document says \"Stock options are granted\" but the table is \"Stock Option Activity\". The question says \"grants\" not \"options\". So likely restricted stock only.\n\nLet's check the exact wording: \"what was the total number of grants were forfeited?\" It might be a question from a dataset where the answer is a single number from a table. The table has \"Forfeited\" row with (79) and (91). The \"total\" could be the sum of those two. But the question says \"grants\" plural, \"were forfeited\" - could be asking for the total number of grants forfeited in the period. The table shows two years, so total = 170.\n\nBut wait, the table also has \"Granted\" rows: 472 and 561. The question might be asking \"total number of grants were forfeited\" meaning the sum of forfeited grants? Yes.\n\nLet's see if there is any other mention of forfeitures. The text says \"Grants of restricted awards are subject to forfeiture if a grantee...\". So \"grants\" refers to restricted stock awards. So the forfeited amounts are 79 and 91. Sum = 170.\n\nThus answer 170.\n\nBut let's be thorough: The question might be asking for the total number of grants forfeited in the most recent year? The phrase \"total number\" suggests sum across all. The document covers two years. The answer could be 91 if asking for 2013 only, but \"total\" implies sum. The question doesn't specify year, so sum.\n\nLet's produce evidence: Forfeited (79) and (91) from RestrictedStockRollforward. Also maybe stock options? But I'll only cite restricted stock.\n\nCompute: add(79, 91) = 170.\n\nBut note the numbers are in thousands? The table says \"share awards in thousands\". So the values are in thousands. The question asks \"total number of grants\" - the answer should be in thousands? The table header says \"(share awards in thousands)\". So the numbers 79 and 91 are in thousands. The total is 170 thousand. But the question asks \"what was the total number of grants were forfeited?\" It might expect the number as printed, i.e., 170 (in thousands). Usually in such questions, the answer is the number as it appears, without units. The table says \"share awards in thousands\", so the actual number is 170,000. But the question likely expects the numeric value from the table, which is 170. The evidence values are printed as (79) and (91). The sum is 170. So answer 170.\n\nLet's check if there is any other \"Forfeited\" in the document. The stock option table has (72) and (72). If the question includes options, total would be 314. But the question says \"grants\" not \"options\". The restricted stock table is about \"restricted stock awards\" which are grants. The stock option table is about \"stock options\". So I'll go with 170.\n\nBut let's consider the possibility that the question is from a dataset where the answer is the total number of grants forfeited in a single year, e.g., 2013. The question says \"total number of grants were forfeited\" - could be asking for the total in the table, which has two years. The word \"total\" might refer to the sum of all forfeitures in the table. So 170.\n\nI'll answer 170.\n\nNow produce evidence and program.",
+ "raw_content": "<evidence>\n(79) | Forfeited (RestrictedStockRollforward, year ended May 31, 2012)\n(91) | Forfeited (RestrictedStockRollforward, year ended May 31, 2013)\n</evidence>\n\n<program>add(79, 91)</program>\n\n<answer>170</answer>",
+ "r2_usage": {
+  "prompt_tokens": 3827,
+  "completion_tokens": 1896,
+  "total_tokens": 5723,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "(79)",
+   "element": "Forfeited (RestrictedStockRollforward, year ended May 31, 2012)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "(91)",
+   "element": "Forfeited (RestrictedStockRollforward, year ended May 31, 2013)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "add(79, 91)",
+ "answer_model": "170",
+ "program_value": 170.0,
+ "elapsed_s": 958.96,
+ "outline_source": "GPN_2013_0001123360-13-000025.outline.txt",
+ "outline_chars": 74109
+}

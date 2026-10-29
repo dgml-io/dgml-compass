@@ -1,0 +1,74 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0369",
+ "format": "dgml",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what is the percentage difference in the fair value per share between 2015 and 2016?",
+ "gold": "71%",
+ "finqa_id": "EW/2016/page_94.pdf-3",
+ "source_page": "page_94",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/dgml/EW_2016_0001099800-17-000008.dgml.xml",
+ "doc_chars": 575186,
+ "prompt_chars": 575359,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 575186,
+ "original_chars": 575186,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 133782,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1063,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "70.9873%",
+ "reasoning": "We need answer percentage difference in fair value per share between 2015 and 2016. Need identify which fair value per share? There are option awards fair value per share: 2016 $31.00, 2015 $18.13, 2014 $11.75. Also ESPP fair value per share: 2016 $22.09, 2015 $15.59. Question says \"the fair value per share\" likely from option awards table? Need determine. The document has \"Fair value, per share\" under Option Awards: 2016 $31.00, 2015 $18.13. Also under ESPP: 2016 $22.09, 2015 $15.59. Which one? The question likely refers to the option awards fair value per share because it's a prominent table. But ambiguous. Need compute percentage difference between 2015 and 2016. Percentage difference = (2016-2015)/2015 *100 = (31.00-18.13)/18.13 = 12.87/18.13 = 0.7099 = 70.99%. If using ESPP: (22.09-15.59)/15.59 = 6.50/15.59 = 0.4169 = 41.69%. Which is intended? The question says \"the fair value per share\" without specifying. In the document, there are two \"Fair value, per share\" rows. But the option awards table is more prominent and the question likely from a benchmark expects one. Need infer from context. The question: \"what is the percentage difference in the fair value per share between 2015 and 2016?\" It might refer to the fair value per share of stock options granted, as in the Black-Scholes assumptions table. The document has \"Option Awards\" table with \"Fair value, per share\" for 2016, 2015, 2014. Also \"ESPP\" table with \"Fair value, per share\". Which one is more likely? The question doesn't specify \"option awards\" or \"ESPP\". Could be from a dataset where they ask about \"fair value per share\" in the context of stock-based compensation. The document has two. Need decide. Maybe the question expects the one that is clearly labeled \"Fair value, per share\" in the Option Awards table. The ESPP table also has \"Fair value, per share\" but it's under ESPP. The question might be ambiguous but we need answer. Let's read the question: \"what is the percentage difference in the fair value per share between 2015 and 2016?\" It doesn't say \"of options\" or \"of ESPP\". In the document, the \"Fair value, per share\" appears in two places. But the option awards table is the first one and more likely. Also the question might be from a financial analysis where they ask about the fair value per share of stock options. I'll go with option awards: 31.00 and 18.13. Percentage difference = (31.00 - 18.13)/18.13 = 12.87/18.13 = 0.70987... = 70.99%. Need provide evidence and program. Evidence: 31.00 | OptionAwardValuationAssumptions (Fair value, per share 2016), 18.13 | OptionAwardValuationAssumptions (Fair value, per share 2015). Program: divide(subtract(31.00, 18.13), 18.13) = 0.70987... The answer should be percentage, so maybe 70.99% or 0.7099? The question asks \"percentage difference\" so answer as 70.99%? The instructions: \"Give your final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for percentage difference, so include %? It says no units unless asked. It asks \"what is the percentage difference\" so answer with number and %? Typically they want numeric value. I'll put 70.99% or 70.99? The benchmark might expect a number. I'll put 70.99% inside answer. But to be safe, maybe just 70.99. The instruction says \"no explanation or units unless the question asks for them\" - the question asks for percentage, so include %? It says \"percentage difference\" so unit is percentage. I'll include % sign. But the program returns a decimal. The answer should be the percentage value. I'll put 70.99%.",
+ "raw_content": "<evidence>\n31.00 | OptionAwardValuationAssumptions (Fair value, per share 2016)\n18.13 | OptionAwardValuationAssumptions (Fair value, per share 2015)\n</evidence>\n<program>\ndivide(subtract(31.00, 18.13), 18.13)\n</program>\n<answer>70.99%</answer>",
+ "usage": {
+  "prompt_tokens": 134089,
+  "completion_tokens": 1063,
+  "total_tokens": 135152,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 133888
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.79,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "31.00",
+   "element": "OptionAwardValuationAssumptions (Fair value, per share 2016)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "18.13",
+   "element": "OptionAwardValuationAssumptions (Fair value, per share 2015)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(31.00, 18.13), 18.13)",
+ "answer_model": "70.99%",
+ "program_value": 0.7098731384445671,
+ "docfinqa_row": 369
+}

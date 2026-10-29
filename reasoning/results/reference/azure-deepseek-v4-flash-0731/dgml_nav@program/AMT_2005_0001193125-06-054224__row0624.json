@@ -1,0 +1,68 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0624",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "in 2005 what was the percentage of the federal nol set to expire between 2016 to 2020",
+ "gold": "18.4%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "AMT_2005_0001193125-06-054224.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/IncomeTaxes/FinancialStatementHeader/table/NetOperatingLossExpiration"
+ ],
+ "r1_reasoning_chars": 2815,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 28605,
+  "completion_tokens": 721,
+  "total_tokens": 29326,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/IncomeTaxes/FinancialStatementHeader/table/NetOperatingLossExpiration"
+ ],
+ "content_chars": 2879,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "18.432929",
+ "reasoning": "We need answer percentage. Need figures: federal NOL 2016-2020 = 397,691; total federal = 2,157,503. Percentage = 397691 / 2157503 * 100. Need compute.",
+ "raw_content": "<evidence>397,691 | FederalNetOperatingLossExpiration (2016 to 2020)\n2,157,503 | FederalNetOperatingLossExpirationTotal</evidence>\n<program>multiply(divide(397691, 2157503), 100)</program>\n<answer>18.43</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1044,
+  "completion_tokens": 119,
+  "total_tokens": 1163,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "397,691",
+   "element": "FederalNetOperatingLossExpiration (2016 to 2020)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "2,157,503",
+   "element": "FederalNetOperatingLossExpirationTotal",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(397691, 2157503), 100)",
+ "answer_model": "18.43",
+ "program_value": 18.432929177850507,
+ "elapsed_s": 5.39,
+ "outline_source": "AMT_2005_0001193125-06-054224.outline.txt",
+ "outline_chars": 112419
+}

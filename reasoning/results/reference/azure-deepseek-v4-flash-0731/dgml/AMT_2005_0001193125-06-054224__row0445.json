@@ -1,0 +1,50 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0445",
+ "format": "dgml",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what portion of total value of net operating loss carryforwards is related to state?",
+ "gold": "52.8%",
+ "finqa_id": "AMT/2005/page_105.pdf-4",
+ "source_page": "page_105",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/dgml/AMT_2005_0001193125-06-054224.dgml.xml",
+ "doc_chars": 790211,
+ "prompt_chars": 790384,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 790211,
+ "original_chars": 790211,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 189615,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 409,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "52.85%",
+ "reasoning": "We need answer: what portion of total value of net operating loss carryforwards is related to state? Need find NOL carryforwards federal and state. In document: \"At December 31, 2005, the Company had net federal and state operating loss carryforwards available to reduce future taxable income of approximately $2.2 billion and $2.4 billion, respectively.\" But \"total value\" maybe deferred tax assets? There is table: Net operating loss carryforwards deferred tax asset $888,826 (long-term assets) for 2005. But that's combined? Need portion related to state? The question: \"what portion of total value of net operating loss carryforwards is related to state?\" Could be asking percentage of total NOL carryforwards (federal + state) that is state. Federal $2,157,503, state $2,418,012 (from table). Total = 4,575,515. State portion = 2,418,012 / 4,575,515 = 0.5285... ~52.85%. But \"total value\" might refer to deferred tax asset value? The NOL carryforwards in tax return amounts. The question says \"total value of net operating loss carryforwards\" - likely the amounts given. Need compute portion. Let's compute precisely: 2,418,012 / (2,157,503+2,418,012) = 2,418,012 / 4,575,515 = 0.5285. So 52.85%. But maybe \"related to state\" means state NOL carryforwards as a percentage of total NOL carryforwards. Answer as percentage. Need final inside <answer> tags only value. Could be 52.85% or 0.5285. The question asks \"what portion\" - likely percentage. I'll put 52.85%.",
+ "raw_content": "<answer>52.85%</answer>",
+ "usage": {
+  "prompt_tokens": 189760,
+  "completion_tokens": 409,
+  "total_tokens": 190169,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 17.22,
+ "answer_tag_found": true,
+ "docfinqa_row": 445
+}

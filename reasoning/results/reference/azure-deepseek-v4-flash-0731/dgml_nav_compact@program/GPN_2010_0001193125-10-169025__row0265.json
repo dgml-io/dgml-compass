@@ -1,0 +1,70 @@
+{
+ "id": "GPN_2010_0001193125-10-169025__row0265",
+ "key": "GPN_2010_0001193125-10-169025",
+ "question": "what is the total fair value of non-vested shares as of may 31 , 2010?",
+ "gold": "29946",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "GPN_2010_0001193125-10-169025.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/NotesToFinancialStatementsContinuation/RestrictedStock"
+ ],
+ "r1_reasoning_chars": 1604,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 22309,
+  "completion_tokens": 407,
+  "total_tokens": 22716,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/NotesToFinancialStatementsContinuation/RestrictedStock"
+ ],
+ "content_chars": 6937,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "29946",
+ "reasoning": "We need answer total fair value of non-vested shares as of May 31, 2010. From table: Non-vested at May 31, 2010 | 713 | 42 (weighted average grant-date fair value). Total fair value = 713 thousand shares * $42 = $29,946 thousand = $29.946 million. Need compute. Evidence: 713 and 42. Program multiply(713, 42). Answer likely $29,946 thousand or $29.9 million. Question asks \"total fair value\" - likely in thousands? The table says share awards in thousands, fair value per share. So total = 713 * 42 = 29,946 (thousands). Could be $29,946,000. Need output value only. Probably 29946 (in thousands) or 29,946,000. The question doesn't specify units. Usually answer in dollars? Let's see. The table: shares in thousands, weighted average grant-date fair value. Total fair value = 713,000 * $42 = $29,946,000. So answer $29,946,000. But if they expect numeric, maybe 29946000. We'll provide inside answer.",
+ "raw_content": "<evidence>713 | RestrictedStock: Non-vested at May 31, 2010\n42 | RestrictedStock: Weighted Average Grant-Date Fair Value</evidence>\n<program>multiply(713, 42)</program>\n<answer>29946000</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2077,
+  "completion_tokens": 318,
+  "total_tokens": 2395,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "713",
+   "element": "RestrictedStock: Non-vested at May 31, 2010",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "42",
+   "element": "RestrictedStock: Weighted Average Grant-Date Fair Value",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(713, 42)",
+ "answer_model": "29946000",
+ "program_value": 29946.0,
+ "elapsed_s": 6.85,
+ "outline_source": "GPN_2010_0001193125-10-169025.outline.txt",
+ "outline_chars": 88725
+}

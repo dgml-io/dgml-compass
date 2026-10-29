@@ -1,0 +1,73 @@
+{
+ "id": "IP_2007_0001193125-08-042850__row0062",
+ "format": "markdown_pdf_rules",
+ "key": "IP_2007_0001193125-08-042850",
+ "question": "what percentage of december 31 , 2007 , total future minimum commitments under existing non-cancelable operating leases and purchase obligations were due to purchase obligations for the year of 2008?",
+ "gold": "93%",
+ "finqa_id": "IP/2007/page_75.pdf-1",
+ "source_page": "page_75",
+ "ticker": "IP",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_rules/IP_2007_0001193125-08-042850.md",
+ "doc_chars": 430301,
+ "prompt_chars": 430589,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 430301,
+ "original_chars": 430301,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 103493,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 257,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "93.4897%",
+ "reasoning": "We need answer percentage. Need figures: total future minimum commitments under existing non-cancelable operating leases and purchase obligations at Dec 31 2007. There is table in Note 10: Lease obligations 2008 $136, Purchase obligations 2008 $1,953, Total $2,089. Also in MD&A contractual obligations table: Total (d) $2,356 etc but that includes debt. Question specifically \"total future minimum commitments under existing non-cancelable operating leases and purchase obligations\" - that's Note 10 table. For 2008: purchase obligations $1,953, total $2,089. Percentage = 1953/2089 = ? Compute. 1953/2089 ≈ 0.9349 = 93.49%. Let's compute precisely: 2089*0.935 = 1953.215, so 0.9349. Answer 93.5%. Need evidence figures.",
+ "raw_content": "<evidence>\n1,953 | Purchase obligations (a) 2008\n2,089 | Total 2008 (Lease obligations + Purchase obligations)\n</evidence>\n\n<program>divide(1953, 2089)</program>\n\n<answer>93.5%</answer>",
+ "usage": {
+  "prompt_tokens": 103819,
+  "completion_tokens": 257,
+  "total_tokens": 104076,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.46,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,953",
+   "element": "Purchase obligations (a) 2008",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "2,089",
+   "element": "Total 2008 (Lease obligations + Purchase obligations)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(1953, 2089)",
+ "answer_model": "93.5%",
+ "program_value": 0.9348970799425562,
+ "docfinqa_row": 62
+}

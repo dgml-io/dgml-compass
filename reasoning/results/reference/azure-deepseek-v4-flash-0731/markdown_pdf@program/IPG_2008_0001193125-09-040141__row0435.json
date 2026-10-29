@@ -1,0 +1,74 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0435",
+ "format": "markdown_pdf",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "what is the percentage change in the amount of guarantees from parent company from 2007 to 2008?",
+ "gold": "-21.8%",
+ "finqa_id": "IPG/2008/page_93.pdf-2",
+ "source_page": "page_93",
+ "ticker": "IPG",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf/IPG_2008_0001193125-09-040141.md",
+ "doc_chars": 368715,
+ "prompt_chars": 368900,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 368715,
+ "original_chars": 368715,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 91399,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 257,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-21.8282%",
+ "reasoning": "We need percentage change in parent company guarantees from 2007 to 2008. From Note 16: \"The amount of such parent company guarantees was $255.7 and $327.1 as of December 31, 2008 and 2007, respectively.\" So 2008=255.7, 2007=327.1. Percentage change = (255.7-327.1)/327.1 = -71.4/327.1 = -0.2183... = -21.83%. So answer -21.8% or -21.83%. Need exact. Compute: 327.1-255.7=71.4; 71.4/327.1=0.21828... So -21.83%. Provide evidence.",
+ "raw_content": "<evidence>\n255.7 | Note 16: Guarantees - parent company guarantees as of December 31, 2008\n327.1 | Note 16: Guarantees - parent company guarantees as of December 31, 2007\n</evidence>\n\n<program>\ndivide(subtract(255.7, 327.1), 327.1)\n</program>\n\n<answer>-21.83%</answer>",
+ "usage": {
+  "prompt_tokens": 91708,
+  "completion_tokens": 257,
+  "total_tokens": 91965,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 91648
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.44,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "255.7",
+   "element": "Note 16: Guarantees - parent company guarantees as of December 31, 2008",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "327.1",
+   "element": "Note 16: Guarantees - parent company guarantees as of December 31, 2007",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(subtract(255.7, 327.1), 327.1)",
+ "answer_model": "-21.83%",
+ "program_value": -0.2182818709874657,
+ "docfinqa_row": 435
+}

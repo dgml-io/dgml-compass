@@ -1,0 +1,53 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0722",
+ "format": "dgml_compact",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "what was map's 3 year growth of gasoline production?",
+ "gold": "3.7%",
+ "finqa_id": "MRO/2003/page_45.pdf-3",
+ "source_page": "page_45",
+ "ticker": "MRO",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/dgml_compact/MRO_2003_0001193125-04-036535.dgml.txt",
+ "doc_chars": 625257,
+ "prompt_chars": 625398,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 625257,
+ "original_chars": 625257,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 138745,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 623,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-2.41%",
+ "reasoning": "We need to find MAP's gasoline production for 2003, 2002, 2001. From the document, in the \"Refined Product Yields\" table: Gasoline: 2003: 567, 2002: 581, 2001: 581 (thousands of barrels per day). The question asks \"3 year growth of gasoline production\" - likely the growth from 2001 to 2003? Or maybe the growth over the three years? Typically \"3 year growth\" might mean the compound annual growth rate (CAGR) over the three-year period from 2001 to 2003. But the question says \"3 year growth\" - could be the total growth from 2001 to 2003. Let's compute: 2001: 581, 2003: 567. That's a decrease. So growth = (567-581)/581 = -14/581 ≈ -2.41%. Or maybe they want the growth from 2002 to 2003? But \"3 year\" suggests over three years. Alternatively, they might want the growth over the three years from 2000 to 2003? But we have 2001,2002,2003. The document gives 2001,2002,2003. So the three-year period is 2001-2003. The growth is negative. The answer should be a percentage. Let's compute: (567-581)/581 = -0.0241 = -2.41%. Or maybe they want the absolute change? The question says \"growth\" so likely percentage. We'll provide the percentage. But let's check if there is any other interpretation. The document also has a \"Five-Year Operating Summary\" with gasoline yields: 2003: 567, 2002: 581, 2001: 581, 2000: 552, 1999: 566. So the three-year growth from 2001 to 2003 is -2.41%. If they meant from 2000 to 2003, that would be (567-552)/552 = 2.72%. But the question says \"3 year growth\" - typically means over the last three years, i.e., from the beginning of the period to the end. Since the document covers 2001-2003, we'll use that. Also note the question says \"map's\" - MAP is Marathon Ashland Petroleum. The table is for MAP's refinery production. So answer: -2.41% or approximately -2.4%. We'll put the value. Since the question asks for the growth, we can give the percentage. I'll put -2.4% or -2.41%. Let's compute exactly: 567-581 = -14, -14/581 = -0.024096... = -2.4096%. So -2.41%. I'll put that.",
+ "raw_content": "<answer>-2.41%</answer>",
+ "usage": {
+  "prompt_tokens": 138885,
+  "completion_tokens": 623,
+  "total_tokens": 139508,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 135168
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.25,
+ "answer_tag_found": true,
+ "docfinqa_row": 722
+}

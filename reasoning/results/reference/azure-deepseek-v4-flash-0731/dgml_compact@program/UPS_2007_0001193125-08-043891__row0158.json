@@ -1,0 +1,90 @@
+{
+ "id": "UPS_2007_0001193125-08-043891__row0158",
+ "format": "dgml_compact",
+ "key": "UPS_2007_0001193125-08-043891",
+ "question": "what is the average expected dividend per share in 2007?",
+ "gold": "1.4",
+ "finqa_id": "UPS/2007/page_98.pdf-2",
+ "source_page": "page_98",
+ "ticker": "UPS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml_compact/UPS_2007_0001193125-08-043891.dgml.txt",
+ "doc_chars": 424830,
+ "prompt_chars": 424975,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 424830,
+ "original_chars": 424830,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93585,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 350,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1.68",
+ "reasoning": "We need answer average expected dividend per share in 2007. Document has dividends declared per share 2007: $1.68 in selected financial data. Also quarterly dividends declared 2007: 0.42 each quarter = 1.68. Question \"average expected dividend per share in 2007\" likely means total dividends declared per share for 2007, which is $1.68. Or average? The phrase \"average expected dividend per share\" might be asking for the average of quarterly dividends? But \"expected dividend per share\" in 2007 is $1.68. Let's check. The document states \"Dividends declared per share | $ 1.68\" for 2007. Also quarterly dividends declared 0.42 each quarter. So answer 1.68. Need evidence. Use figures: $1.68 from Selected Financial Data, and 0.42 from quarterly table. But question asks average expected dividend per share in 2007. Could be \"average\" as in total per year? The answer is 1.68. We'll provide evidence and program.",
+ "raw_content": "<evidence>$1.68 | Dividends declared per share (Selected Financial Data)\n$ 0.42 | QuarterlyStockPrice (First Quarter 2007)\n$ 0.42 | QuarterlyStockPrice (Second Quarter 2007)\n$ 0.42 | QuarterlyStockPrice (Third Quarter 2007)\n$ 0.42 | QuarterlyStockPrice (Fourth Quarter 2007)</evidence>\n<program>add(add(add(0.42, 0.42), 0.42), 0.42)</program>\n<answer>1.68</answer>",
+ "usage": {
+  "prompt_tokens": 93885,
+  "completion_tokens": 350,
+  "total_tokens": 94235,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 23.2,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$1.68",
+   "element": "Dividends declared per share (Selected Financial Data)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ 0.42",
+   "element": "QuarterlyStockPrice (First Quarter 2007)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ 0.42",
+   "element": "QuarterlyStockPrice (Second Quarter 2007)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ 0.42",
+   "element": "QuarterlyStockPrice (Third Quarter 2007)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ 0.42",
+   "element": "QuarterlyStockPrice (Fourth Quarter 2007)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "add(add(add(0.42, 0.42), 0.42), 0.42)",
+ "answer_model": "1.68",
+ "program_value": 1.68,
+ "docfinqa_row": 158
+}

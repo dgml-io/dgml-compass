@@ -1,0 +1,53 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0594",
+ "format": "markdown_pdf_poppler",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what portion of the total interest expense is related to unpaid taxes in 2007?",
+ "gold": "16.7%",
+ "finqa_id": "FIS/2007/page_91.pdf-2",
+ "source_page": "page_91",
+ "ticker": "FIS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_poppler/FIS_2007_0000892569-08-000207.md",
+ "doc_chars": 469457,
+ "prompt_chars": 469624,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 469457,
+ "original_chars": 469457,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 86828,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 482,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.61%",
+ "reasoning": "We need to find interest expense related to unpaid taxes in 2007. The document mentions in Note 15 (Income Taxes): \"The total amount of interest expense recognized in the consolidated and combined statements of earnings for unpaid taxes is $1.4 million for the year ended December 31, 2007.\" Total interest expense for 2007 is $228,340 thousand (from income statement). So portion = 1.4 / 228.340 = 0.00613... = 0.613%. The question asks \"what portion\" - likely a percentage. So answer: 0.61% or 0.6%. But we need to be precise. Let's compute: 1.4 million / 228.340 million = 0.00613 = 0.613%. So answer as a percentage. The question says \"what portion\" - could be fraction or percentage. Usually portion means fraction. But we can give as a decimal or percentage. The instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what portion\" - so we can give a decimal or percentage. I'll give 0.61% or 0.0061. But to be safe, I'll give the percentage: 0.61%. However, the question might expect a fraction. Let's see: \"what portion of the total interest expense is related to unpaid taxes in 2007?\" So portion = 1.4 / 228.340 = 0.00613. I'll give 0.61% or 0.0061. I'll put 0.61% inside the tags. But the instruction says \"no explanation or units unless the question asks for them.\" The question asks for a portion, which is dimensionless. So I can give 0.0061 or 0.61%. I'll give 0.61% as it's more interpretable. But to be precise, I'll give 0.0061. Actually, let's compute exactly: 1.4 / 228.340 = 0.006131... So 0.61% is fine. I'll put 0.61%.",
+ "raw_content": "<answer>0.61%</answer>",
+ "usage": {
+  "prompt_tokens": 86974,
+  "completion_tokens": 482,
+  "total_tokens": 87456,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 86784
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.75,
+ "answer_tag_found": true,
+ "docfinqa_row": 594
+}

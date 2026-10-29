@@ -1,0 +1,72 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0270",
+ "format": "markdown_pdf_rules",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "what was the percentage rent increase between 2007 and 2008?",
+ "gold": "22%",
+ "finqa_id": "IP/2009/page_84.pdf-1",
+ "source_page": "page_84",
+ "ticker": "IP",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/markdown_pdf_rules/IP_2009_0001193125-10-040916.md",
+ "doc_chars": 436761,
+ "prompt_chars": 436910,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 436761,
+ "original_chars": 436761,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 103607,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 257,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "22.0238%",
+ "reasoning": "We need answer question: \"what was the percentage rent increase between 2007 and 2008?\" Need find rent figures. Document mentions rent expense: \"Rent expense was $216 million, $205 million and $168 million for 2009, 2008 and 2007, respectively.\" So rent expense 2008 = 205, 2007 = 168. Percentage increase = (205-168)/168 = 37/168 = 0.220238... = 22.02%. Need provide evidence and program. Final answer inside <answer> tags only value. Probably 22.0% or 22.02%. Let's compute exactly: 37/168 = 0.2202380952 -> 22.02%. Use figures as printed: 205 and 168. Program: divide(subtract(205,168),168). Evidence: 205 | Rent expense 2008, 168 | Rent expense 2007. Need answer.",
+ "raw_content": "<evidence>\n205 | Rent expense 2008\n168 | Rent expense 2007\n</evidence>\n\n<program>\ndivide(subtract(205, 168), 168)\n</program>\n\n<answer>22.02%</answer>",
+ "usage": {
+  "prompt_tokens": 103909,
+  "completion_tokens": 257,
+  "total_tokens": 104166,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.03,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "205",
+   "element": "Rent expense 2008",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "168",
+   "element": "Rent expense 2007",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(205, 168), 168)",
+ "answer_model": "22.02%",
+ "program_value": 0.22023809523809523,
+ "docfinqa_row": 270
+}

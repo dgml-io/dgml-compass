@@ -1,0 +1,64 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0200",
+ "format": "dgml",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the interest expense in 2015 assuming that all the debt is interest bearing debt , ( in billions ) ?",
+ "gold": "0.86",
+ "finqa_id": "PM/2015/page_85.pdf-3",
+ "source_page": "page_85",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml/PM_2015_0001413329-16-000076.dgml.xml",
+ "doc_chars": 987218,
+ "prompt_chars": 987415,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 987218,
+ "original_chars": 987218,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 236868,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 264,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1.132",
+ "reasoning": "We need answer interest expense in 2015 assuming all debt is interest bearing debt, in billions. Need find interest expense. Document has interest expense, net $1,008 million in 2015. Also Note 14: Interest expense $1,132 million, interest income (124), net $1,008. Question: \"what is the interest expense in 2015 assuming that all the debt is interest bearing debt, (in billions)?\" Likely they want interest expense (gross) not net? \"interest expense\" in 2015 assuming all debt is interest bearing debt. The document gives interest expense $1,132 million in Note 14. Also interest expense, net $1,008. The question says \"interest expense\" not net. So use $1,132 million = $1.132 billion. But check if there is any other interest expense? In consolidated statements of earnings, \"Interest expense, net\" $1,008. Note 14 gives Interest expense $1,132 and interest income (124). So answer 1.132 billion. Need evidence and program.",
+ "raw_content": "<evidence>\n$1,132 | Interest expense (Note 14)\n</evidence>\n<program>1.132</program>\n<answer>1.132</answer>",
+ "usage": {
+  "prompt_tokens": 237179,
+  "completion_tokens": 264,
+  "total_tokens": 237443,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 17.81,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$1,132",
+   "element": "Interest expense (Note 14)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "1.132",
+ "answer_model": "1.132",
+ "program_value": 1.132,
+ "docfinqa_row": 200
+}

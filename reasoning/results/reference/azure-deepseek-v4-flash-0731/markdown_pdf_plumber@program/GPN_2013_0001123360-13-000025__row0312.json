@@ -1,0 +1,66 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0312",
+ "format": "markdown_pdf_plumber",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what portion of the future minimum lease payments are due in the next 12 months?",
+ "gold": "19.4%",
+ "finqa_id": "GPN/2013/page_92.pdf-3",
+ "source_page": "page_92",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/markdown_pdf_plumber/GPN_2013_0001123360-13-000025.md",
+ "doc_chars": 385288,
+ "prompt_chars": 385457,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 385288,
+ "original_chars": 385288,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 88373,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 549,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "11057",
+ "reasoning": "We need to find future minimum lease payments and the portion due in next 12 months. In Note 15, there is a table: Future minimum lease payments for all non-cancelable operating leases at May 31, 2013: 2014 $11,057, 2015 $8,985, 2016 $7,378, 2017 $6,700, 2018 $6,164, Thereafter $16,812, Total $57,096. The question asks \"what portion of the future minimum lease payments are due in the next 12 months?\" That is the 2014 amount, $11,057. But \"portion\" might mean fraction? The question says \"what portion\" - could be the amount or percentage. Typically \"portion\" means the amount. But to be safe, we can compute the fraction: 11,057 / 57,096. The question asks \"what portion\" - ambiguous. Usually in such contexts, they want the amount. But let's read: \"what portion of the future minimum lease payments are due in the next 12 months?\" That is the amount due in next 12 months, which is $11,057. However, they might want the percentage. The instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question does not ask for units, but it asks \"what portion\" - could be a fraction or percentage. Typically \"portion\" means the amount. But to be safe, we can provide the amount. Let's check the evidence: we have the table. The next 12 months is fiscal year 2014, which is $11,057. So answer is 11057. But the question might expect a percentage. Let's see if there is any other interpretation. The phrase \"portion\" often means a part of a whole, so they might want the fraction. But the question says \"what portion ... are due\" - that is the amount. I'll provide the amount. However, to be thorough, I'll compute the fraction as well. But the answer should be a single value. I'll go with the amount. Let's list evidence: 11,057 | Future minimum lease payments 2014. Also total 57,096 if needed. But the question asks for portion due in next 12 months, so just 11,057. I'll answer 11057.",
+ "raw_content": "<evidence>\n11,057 | Future minimum lease payments 2014\n</evidence>\n<program>11057</program>\n<answer>11057</answer>",
+ "usage": {
+  "prompt_tokens": 88677,
+  "completion_tokens": 549,
+  "total_tokens": 89226,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.88,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "11,057",
+   "element": "Future minimum lease payments 2014",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "11057",
+ "answer_model": "11057",
+ "program_value": 11057.0,
+ "docfinqa_row": 312
+}

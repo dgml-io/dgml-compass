@@ -1,0 +1,53 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0372",
+ "format": "markdown_pdf_plumber",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what is the combined number of equity compensation plans approved by security holders",
+ "gold": "4536446",
+ "finqa_id": "HII/2017/page_124.pdf-4",
+ "source_page": "page_124",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/markdown_pdf_plumber/HII_2017_0001501585-18-000006.md",
+ "doc_chars": 479340,
+ "prompt_chars": 479514,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 479340,
+ "original_chars": 479340,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 106334,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 469,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "2",
+ "reasoning": "We need to find the number of equity compensation plans approved by security holders. The table in Item 12 shows \"Equity compensation plans approved by security holders\" with number of securities to be issued upon exercise of outstanding options, warrants and rights: 448,859. But the question asks \"combined number of equity compensation plans approved by security holders\" - that might be the count of plans, not shares. The table shows a row for \"Equity compensation plans approved by security holders\" and another for \"not approved\". The number of plans? The table doesn't list a count of plans, it lists securities. However, the text says \"The following table presents the equity securities available for issuance under our equity compensation plans as of December 31, 2017.\" The row \"Equity compensation plans approved by security holders\" has a number in column (a) which is 448,859. But that is number of securities to be issued upon exercise. The question asks \"combined number of equity compensation plans approved by security holders\" - that would be the count of plans, not shares. The document mentions two plans: 2011 Plan and 2012 Plan, both approved by security holders? The 2011 Plan was approved by the sole stockholder prior to spin-off, and 2012 Plan approved by stockholders. So there are 2 plans approved. But the table says \"Equity compensation plans approved by security holders\" as a category, not a count. The question might be asking for the number of plans, which is 2. However, the phrasing \"combined number\" might refer to the total number of securities? But it says \"number of equity compensation plans\" - that is a count. The document states: \"As of December 31, 2017, HII had stock-based compensation awards outstanding under the following plans: the 2011 Plan and the 2012 Plan.\" Both are approved by security holders. So the answer is 2.\n\nBut let's check the table: It has a row for \"Equity compensation plans approved by security holders\" and another for \"not approved\". The number of plans is not given, but the text says there are two plans. So answer is 2.\n\nI'll put 2.",
+ "raw_content": "<answer>2</answer>",
+ "usage": {
+  "prompt_tokens": 106477,
+  "completion_tokens": 469,
+  "total_tokens": 106946,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 106240
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 6.49,
+ "answer_tag_found": true,
+ "docfinqa_row": 372
+}

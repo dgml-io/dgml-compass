@@ -1,0 +1,53 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0485",
+ "format": "dgml_compact",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what is the average repurchase price per share paid during 2006?",
+ "gold": "42.0",
+ "finqa_id": "SNA/2007/page_49.pdf-3",
+ "source_page": "page_49",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml_compact/SNA_2007_0001104659-08-011401.dgml.txt",
+ "doc_chars": 428718,
+ "prompt_chars": 428871,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 428718,
+ "original_chars": 428718,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 97509,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 668,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "41.96",
+ "reasoning": "We need the average repurchase price per share paid during 2006. The document mentions share repurchases. In the Management Discussion, under Cash Flows: \"In 2006, the company used available cash to fund, in part, the purchase of the Business Solutions acquisition, pay dividends totaling $63.6 million, repurchase over 2.6 million shares of Snap-on common stock for $109.8 million\". That gives total cost and shares. But average price per share? It says \"over 2.6 million shares\" - not exact. However, in Note 14: \"Snap-on repurchased 1,860,000 shares in 2007, following the repurchase of 2,616,618 shares in 2006 and 912,100 shares in 2005.\" So exact shares 2,616,618. Cost $109.8 million. Average price = 109.8e6 / 2,616,618 ≈ 41.96? Let's compute: 109,800,000 / 2,616,618 = 41.96. But is there a stated average price? In the share repurchase table for Q4 2007, they give average price paid per share for that period. For 2006, no explicit average. But we can compute. However, the question asks \"average repurchase price per share paid during 2006\" - we can compute from the given figures. But note the document says \"repurchase over 2.6 million shares\" and \"for $109.8 million\". The exact number is 2,616,618. So average = 109.8e6 / 2,616,618 = 41.96. Let's compute precisely: 109,800,000 / 2,616,618 = 41.96 (approx). Let's do division: 2,616,618 * 42 = 109,897,956, which is slightly more than 109,800,000, so average is slightly less than 42. Difference: 109,897,956 - 109,800,000 = 97,956, so subtract 97,956/2,616,618 ≈ 0.0374, so 41.9626. So about $41.96. But is there any other mention? In the Management Discussion, they say \"repurchase over 2.6 million shares ... for $109.8 million\". That is the only data. So answer is approximately $41.96. But the question might expect a specific number if given. The document does not explicitly state the average price for 2006. However, we can compute. The instruction says \"Find the relevant figures in the document and compute the answer.\" So we compute. So answer: 41.96 (or 41.96). We'll put in <answer>41.96</answer>. But check if there is any rounding? The document gives exact shares and cost. So we can compute. Let's do exact: 109.8 million / 2.616618 million = 41.96. So answer.",
+ "raw_content": "<answer>41.96</answer>",
+ "usage": {
+  "prompt_tokens": 97652,
+  "completion_tokens": 668,
+  "total_tokens": 98320,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 97536
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.04,
+ "answer_tag_found": true,
+ "docfinqa_row": 485
+}

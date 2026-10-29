@@ -1,0 +1,71 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0777",
+ "format": "dgml",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what was the percentage increase of total deferred compensation plan investments from 2010 to 2011?\\\\n",
+ "gold": "204%",
+ "finqa_id": "ADI/2011/page_81.pdf-3",
+ "source_page": "page_81",
+ "ticker": "ADI",
+ "fiscal_year": "2011",
+ "source_file": "data/docs/dgml/ADI_2011_0000950123-11-099928.dgml.xml",
+ "doc_chars": 682519,
+ "prompt_chars": 682710,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 682519,
+ "original_chars": 682519,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 156936,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 197,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "2.039125",
+ "reasoning": "We need percentage increase of deferred compensation plan investments from 2010 to 2011. Values: 2010 $8,690, 2011 $26,410 (thousands). Increase = (26410-8690)/8690 = 17720/8690 = 2.039... = 203.9%. Compute exactly: 17720/8690 = 2.039... Let's compute: 8690*2=17380, remainder 340, 340/8690=0.0391, so 2.0391 => 203.91%. Answer as percentage.",
+ "raw_content": "<evidence>\n$ 26,410 | Deferred compensation plan investments (2011)\n$ 8,690 | Deferred compensation plan investments (2010)\n</evidence>\n<program>divide(subtract(26410, 8690), 8690)</program>\n<answer>203.9%</answer>",
+ "usage": {
+  "prompt_tokens": 157246,
+  "completion_tokens": 197,
+  "total_tokens": 157443,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 35.14,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 26,410",
+   "element": "Deferred compensation plan investments (2011)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ 8,690",
+   "element": "Deferred compensation plan investments (2010)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(26410, 8690), 8690)",
+ "answer_model": "203.9%",
+ "program_value": 2.0391254315304947,
+ "docfinqa_row": 777
+}

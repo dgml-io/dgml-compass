@@ -1,0 +1,50 @@
+{
+ "id": "CMCSA_2015_0001193125-16-452423__row0102",
+ "format": "dgml_compact",
+ "key": "CMCSA_2015_0001193125-16-452423",
+ "question": "what was the percentage cable distribution systems capital expenditures of the capital expenditures incurred in cable communications segment capital expenditures in 2014?",
+ "gold": "33%",
+ "finqa_id": "CMCSA/2015/page_67.pdf-2",
+ "source_page": "page_67",
+ "ticker": "CMCSA",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml_compact/CMCSA_2015_0001193125-16-452423.dgml.txt",
+ "doc_chars": 713665,
+ "prompt_chars": 713924,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 713665,
+ "original_chars": 713665,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 152405,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 322,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "33.26%",
+ "reasoning": "We need to find capital expenditures in Cable Communications segment in 2014, and specifically \"cable distribution system\" capital expenditures. From the document, in the \"Capital Expenditures\" section under Investing Activities, there is a table for Cable Communications capital expenditures for 2015, 2014, 2013. It shows:\n\nCable distribution system: 2015 $2,424, 2014 $2,047, 2013 $1,819\nCustomer premise equipment: 2015 $3,698, 2014 $3,397, 2013 $2,990\nOther equipment: 2015 $756, 2014 $613, 2013 $527\nBuildings and building improvements: 2015 $156, 2014 $97, 2013 $67\nTotal: 2015 $7,034, 2014 $6,154, 2013 $5,403\n\nSo for 2014, cable distribution system = $2,047 million, total = $6,154 million. Percentage = 2047/6154 * 100 = 33.26% approximately. Let's compute: 2047/6154 = 0.3326... so 33.26%. The question asks \"what was the percentage cable distribution systems capital expenditures of the capital expenditures incurred in cable communications segment capital expenditures in 2014?\" So answer is 33.26% or 33.3%. We'll provide the value.",
+ "raw_content": "<answer>33.26%</answer>",
+ "usage": {
+  "prompt_tokens": 152558,
+  "completion_tokens": 322,
+  "total_tokens": 152880,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.28,
+ "answer_tag_found": true,
+ "docfinqa_row": 102
+}

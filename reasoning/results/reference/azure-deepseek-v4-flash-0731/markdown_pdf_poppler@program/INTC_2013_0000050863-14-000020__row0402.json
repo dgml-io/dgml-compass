@@ -1,0 +1,72 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0402",
+ "format": "markdown_pdf_poppler",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "what percentage of major facilities by square footage are leased as of december 28 , 2013?",
+ "gold": "15%",
+ "finqa_id": "INTC/2013/page_29.pdf-2",
+ "source_page": "page_29",
+ "ticker": "INTC",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/markdown_pdf_poppler/INTC_2013_0000050863-14-000020.md",
+ "doc_chars": 547400,
+ "prompt_chars": 547579,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 547400,
+ "original_chars": 547400,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 97025,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 343,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "15.118397",
+ "reasoning": "We need answer percentage of major facilities by square footage leased as of Dec 28 2013. From properties table: Owned 46.6, Leased 8.3, Total 54.9 (square feet in millions). Leased percentage = 8.3 / 54.9 * 100. Compute. 8.3/54.9 = 0.15118... = 15.12%. Need answer. Evidence: 8.3 | Leased facilities, 54.9 | Total facilities. Program divide(8.3,54.9) maybe multiply? The program should be exact? They want value. We can provide 15.1%? The question asks percentage. Use divide(8.3,54.9) then maybe multiply by 100? The program is nested calls over figures as printed. We can do multiply(divide(8.3,54.9),100). But they said a figure that is itself answer is its own program. We'll do multiply(divide(8.3,54.9),100). Final answer inside tags with value only, no units unless asked. They ask percentage, so include %? \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what percentage\" so include number maybe 15.1. I'll put 15.1.",
+ "raw_content": "<evidence>\n8.3 | Leased facilities\n54.9 | Total facilities\n</evidence>\n<program>multiply(divide(8.3, 54.9), 100)</program>\n<answer>15.1</answer>",
+ "usage": {
+  "prompt_tokens": 97333,
+  "completion_tokens": 343,
+  "total_tokens": 97676,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 97280
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.02,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "8.3",
+   "element": "Leased facilities",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "54.9",
+   "element": "Total facilities",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(8.3, 54.9), 100)",
+ "answer_model": "15.1",
+ "program_value": 15.118397085610201,
+ "docfinqa_row": 402
+}

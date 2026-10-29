@@ -1,0 +1,53 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0322",
+ "format": "dgml",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was the change in millions of total long-term debt net from 2014 to 2015?",
+ "gold": "9119",
+ "finqa_id": "LMT/2015/page_99.pdf-3",
+ "source_page": "page_99",
+ "ticker": "LMT",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml/LMT_2015_0001193125-16-476010.dgml.xml",
+ "doc_chars": 868444,
+ "prompt_chars": 868611,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 868444,
+ "original_chars": 868444,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 194482,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1478,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "8,163",
+ "reasoning": "We need the change in total long-term debt net from 2014 to 2015. From balance sheet: Long-term debt, net 2015: 14,305; 2014: 6,142. But also current maturities of long-term debt: 2015: 956; 2014: 0. Total debt net? The question says \"total long-term debt net\" - likely the line item \"Long-term debt, net\" on balance sheet. But also there is \"Total debt, net\" in selected financial data: 2015: 15,261; 2014: 6,142. That includes current maturities. The question says \"total long-term debt net\" - ambiguous. In the balance sheet, \"Long-term debt, net\" is 14,305 in 2015 and 6,142 in 2014. But \"Total debt, net\" in selected data is 15,261 and 6,142. The question says \"total long-term debt net\" - likely they mean the line item \"Long-term debt, net\" on the balance sheet. But the phrase \"total long-term debt net\" might refer to the total debt net. Let's check the document: In Selected Financial Data, there is \"Total debt, net (e)\" with 2015: 15,261, 2014: 6,142. In balance sheet, \"Long-term debt, net\" is 14,305 and 6,142. The question says \"total long-term debt net\" - maybe they mean the total debt net. But the wording \"total long-term debt net\" is odd. Let's read the question: \"what was the change in millions of total long-term debt net from 2014 to 2015?\" It might be asking for the change in the balance sheet line \"Long-term debt, net\". But that line is just \"Long-term debt, net\" not \"total\". However, in the balance sheet, there is also \"Current maturities of long-term debt\" which is separate. The total debt would be current + long-term. The selected data has \"Total debt, net\" which is 15,261 in 2015 and 6,142 in 2014. That is the total debt. The question says \"total long-term debt net\" - maybe they mean \"total debt, net\" but they wrote \"long-term\". Let's see the exact wording: \"total long-term debt net\" - could be a misphrasing. In the document, the balance sheet line is \"Long-term debt, net\" and the selected data line is \"Total debt, net\". The question says \"total long-term debt net\" - that might be a combination. But likely they want the change in the balance sheet line \"Long-term debt, net\" because that is the long-term debt. However, the change from 2014 to 2015 for that line is 14,305 - 6,142 = 8,163 million. For total debt net, it's 15,261 - 6,142 = 9,119 million. Which one is correct? The question says \"total long-term debt net\" - if they meant the total debt, they would say \"total debt net\". But they said \"total long-term debt net\" - maybe they mean the total of long-term debt including current maturities? Actually, the balance sheet has \"Current maturities of long-term debt\" and \"Long-term debt, net\". The sum is total debt. The selected data has \"Total debt, net\" which is 15,261. That includes current maturities. The question says \"total long-term debt net\" - that could be interpreted as the total debt (which is long-term debt including current portion). But the phrase \"long-term debt net\" is the line item. Adding \"total\" might be redundant. Let's check the document: In the balance sheet, the line is \"Long-term debt, net\" and there is also \"Current maturities of long-term debt\". The selected data has \"Total debt, net\". The question says \"total long-term debt net\" - I think they mean the line \"Long-term debt, net\" on the balance sheet, but they added \"total\" mistakenly. However, to be safe, we should see if the question is from a context where they refer to \"total long-term debt\" as the sum. But the document explicitly has \"Total debt, net\" in selected financial data. The question says \"total long-term debt net\" - that is not exactly \"Total debt, net\". It says \"long-term debt net\" which is the balance sheet line. So I'll go with the balance sheet line: 14,305 - 6,142 = 8,163. But let's verify: In the balance sheet, 2015 Long-term debt, net = 14,305; 2014 = 6,142. Change = 8,163. In the selected data, Total debt, net 2015 = 15,261; 2014 = 6,142; change = 9,119. The question says \"total long-term debt net\" - if they meant the total debt, they would say \"total debt net\". So I think they mean the long-term debt net line. But the word \"total\" might be a mistake. Let's read the question exactly: \"what was the change in millions of total long-term debt net from 2014 to 2015?\" It says \"total long-term debt net\" - that could be parsed as \"total (long-term debt net)\" meaning the total of the long-term debt net. But the line is already \"Long-term debt, net\". So the change is 8,163. I'll answer that.\n\nBut let's double-check the numbers: In the balance sheet, 2015 Long-term debt, net = 14,305; 2014 = 6,142. So change = 14,305 - 6,142 = 8,163. In the selected data, Total debt, net = 15,261 and 6,142, change = 9,119. The question says \"total long-term debt net\" - I think they mean the line \"Long-term debt, net\" because they say \"long-term debt net\". The word \"total\" might be a typo. I'll go with 8,163.\n\nBut let's see if there is any other mention: In the MD&A, they say \"Our outstanding debt, net of unamortized discounts and deferred financing costs, amounted to $15.3 billion at December 31, 2015\" - that is total debt. But the balance sheet line is 14,305. The question specifically says \"total long-term debt net\" - maybe they want the total debt net. However, the phrase \"long-term debt net\" is the line item. I'll answer 8,163.\n\nI'll put the answer inside <answer> tags.",
+ "raw_content": "<answer>8,163</answer>",
+ "usage": {
+  "prompt_tokens": 194631,
+  "completion_tokens": 1478,
+  "total_tokens": 196109,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 194560
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.67,
+ "answer_tag_found": true,
+ "docfinqa_row": 322
+}

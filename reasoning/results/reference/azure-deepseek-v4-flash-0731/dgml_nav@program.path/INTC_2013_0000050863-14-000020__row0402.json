@@ -1,0 +1,90 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0402",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "what percentage of major facilities by square footage are leased as of december 28 , 2013?",
+ "gold": "15%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "INTC_2013_0000050863-14-000020.outline.txt",
+ "doc_source": "INTC_2013_0000050863-14-000020.dgml.xml",
+ "outline_chars": 102835,
+ "predicted_xpaths": [
+  "/chunk/Report/UnresolvedStaffCommentsStatus/Report/FacilitySquareFootage",
+  "/chunk/Report/UnresolvedStaffCommentsStatus/Report/table",
+  "/chunk/Report/UnresolvedStaffCommentsStatus/Report/FacilityOwnershipType"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 3952,
+ "r1_usage": {
+  "prompt_tokens": 25716,
+  "completion_tokens": 1002,
+  "total_tokens": 26718,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 25600
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/Report/UnresolvedStaffCommentsStatus/Report/FacilitySquareFootage",
+  "/chunk/Report/UnresolvedStaffCommentsStatus/Report/table",
+  "/chunk/Report/UnresolvedStaffCommentsStatus/Report/FacilityOwnershipType"
+ ],
+ "content_chars": 4287,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "15.118397",
+ "reasoning": "We need percentage of leased facilities by square footage. Total leased = 8.3 million, total facilities = 54.9 million. Percentage = 8.3/54.9 * 100. Compute.",
+ "raw_content": "<evidence>8.3 | /chunk/Report/UnresolvedStaffCommentsStatus/Report/FacilitySquareFootage/FacilitySquareFootage/Leased facilities2/Total\n54.9 | /chunk/Report/UnresolvedStaffCommentsStatus/Report/FacilitySquareFootage/FacilitySquareFootage/Total facilities/Total\n</evidence>\n\n<program>multiply(divide(8.3, 54.9), 100)</program>\n\n<answer>15.1183967204</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1358,
+  "completion_tokens": 160,
+  "total_tokens": 1518,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 1358,
+   "completion_tokens": 160,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "8.3",
+   "element": "chunk/Report/UnresolvedStaffCommentsStatus/Report/FacilitySquareFootage/FacilitySquareFootage/Leased facilities2/Total",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "54.9",
+   "element": "chunk/Report/UnresolvedStaffCommentsStatus/Report/FacilitySquareFootage/FacilitySquareFootage/Total facilities/Total",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(8.3, 54.9), 100)",
+ "answer_model": "15.1183967204",
+ "program_value": 15.118397085610201,
+ "elapsed_s": 6.09
+}

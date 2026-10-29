@@ -1,0 +1,61 @@
+{
+ "id": "APD_2016_0001193125-16-773346__row0332",
+ "key": "APD_2016_0001193125-16-773346",
+ "question": "considering the years 2014-2016 , what is the lowest interest incurred observed?",
+ "gold": "148.4",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "APD_2016_0001193125-16-773346.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/ManagementDiscussion/InterestExpense/InterestExpense/InterestIncurred"
+ ],
+ "r1_reasoning_chars": 0,
+ "r1_retried": true,
+ "r1_usage": {
+  "prompt_tokens": 30008,
+  "completion_tokens": 11,
+  "total_tokens": 30019,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ManagementDiscussion/InterestExpense/InterestExpense/InterestIncurred"
+ ],
+ "content_chars": 1840,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "148.4",
+ "reasoning": "We need answer. Need identify years 2014-2016? The excerpt has three amounts for Interest incurred: $148.4, $152.6, $158.1. Need lowest = 148.4. Need evidence figures. Program just 148.4? But question asks lowest interest incurred observed. So answer 148.4. Need include evidence lines.",
+ "raw_content": "<evidence>$148.4 | InterestIncurredAmount</evidence>\n<evidence>$152.6 | InterestIncurredAmount</evidence>\n<evidence>$158.1 | InterestIncurredAmount</evidence>\n<program>148.4</program>\n<answer>148.4</answer>",
+ "r2_usage": {
+  "prompt_tokens": 781,
+  "completion_tokens": 142,
+  "total_tokens": 923,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$148.4",
+   "element": "InterestIncurredAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "148.4",
+ "answer_model": "148.4",
+ "program_value": 148.4,
+ "elapsed_s": 44.45,
+ "outline_source": "APD_2016_0001193125-16-773346.outline.txt",
+ "outline_chars": 118036
+}

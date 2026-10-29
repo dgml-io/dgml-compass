@@ -1,0 +1,59 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0552",
+ "format": "dgml",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "in 2014 what was the ratio of the estimated future benefit payments due in 2015 compared to the amount after 2020",
+ "gold": "0.15",
+ "finqa_id": "LMT/2014/page_91.pdf-4",
+ "source_page": "page_91",
+ "ticker": "LMT",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/dgml/LMT_2014_0001193125-15-038681.dgml.xml",
+ "doc_chars": 698763,
+ "prompt_chars": 698965,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 698763,
+ "original_chars": 698763,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 156682,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "stop",
+   "completion_tokens": 787,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 1,
+ "ok": true,
+ "answer": "0.1541",
+ "reasoning": "We need the ratio of estimated future benefit payments due in 2015 compared to the amount after 2020. From Note 9, table \"Expected benefit payments\" for qualified defined benefit pension plans: 2015: $2,070 million; 2020-2024: $13,430 million. But the question says \"estimated future benefit payments due in 2015 compared to the amount after 2020\". It might refer to the total for 2020-2024? Or \"after 2020\" meaning the 2020-2024 column? The table has columns 2015, 2016, 2017, 2018, 2019, 2020-2024. So \"after 2020\" likely means the 2020-2024 column. The ratio is 2070 / 13430 = 0.1541... So ratio = 2070/13430 = 0.1541. Or maybe they want the ratio of 2015 to the amount after 2020 (i.e., 2020-2024). The question says \"compared to the amount after 2020\" - could be the amount in the \"2020 - 2024\" column. So ratio = 2070/13430 = 0.1541. But check if they want for all plans? The table has two rows: qualified defined benefit pension plans and retiree medical and life insurance plans. The question says \"estimated future benefit payments\" without specifying which plan. Probably they mean the total? But the table gives separate rows. The question likely refers to the qualified defined benefit pension plans because that's the main one. But it says \"estimated future benefit payments\" - maybe they want the combined? Let's see: The table shows for qualified defined benefit pension plans: 2015: 2070, 2020-2024: 13430. For retiree medical: 2015: 190, 2020-2024: 1020. If combined, 2015 total = 2070+190=2260, 2020-2024 total = 13430+1020=14450. Ratio = 2260/14450 = 0.1564. But the question says \"the amount after 2020\" - could be the 2020-2024 column. It doesn't specify which plan. The document has a table \"Estimated future benefit payments\" with two rows. The question likely expects the ratio for the qualified defined benefit pension plans because that's the primary. But to be safe, we need to interpret. The question: \"in 2014 what was the ratio of the estimated future benefit payments due in 2015 compared to the amount after 2020\" - \"after 2020\" might mean the column \"2020 - 2024\". So ratio = 2070 / 13430 = 0.1541. Or if they want the total, it's 2260/14450 = 0.1564. But the question says \"the estimated future benefit payments\" - singular? It might refer to the qualified defined benefit pension plans because that's the main one. Also the table is presented in Note 9 under \"Contributions and Expected Benefit Payments\". The question likely wants the ratio for the qualified defined benefit pension plans. Let's compute: 2070/13430 = 0.1541. I'll provide that. But let's check if there is any other \"after 2020\" amount. The table has \"2020 - 2024\" as the last column. So ratio = 2070/13430 = 0.1541. I'll answer with that.",
+ "raw_content": "<answer>0.1541</answer>",
+ "usage": {
+  "prompt_tokens": 156838,
+  "completion_tokens": 787,
+  "total_tokens": 157625,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 156672
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.17,
+ "answer_tag_found": true,
+ "docfinqa_row": 552
+}

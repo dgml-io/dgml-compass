@@ -1,0 +1,74 @@
+{
+ "id": "NCLH_2018_0001144204-19-010508__row0081",
+ "format": "dgml",
+ "key": "NCLH_2018_0001144204-19-010508",
+ "question": "what is the percentage change in capitalized interest from 2017 to 2018?",
+ "gold": "4.8%",
+ "finqa_id": "NCLH/2018/page_64.pdf-1",
+ "source_page": "page_64",
+ "ticker": "NCLH",
+ "fiscal_year": "2018",
+ "source_file": "data/docs/dgml/NCLH_2018_0001144204-19-010508.dgml.xml",
+ "doc_chars": 652616,
+ "prompt_chars": 652777,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 652616,
+ "original_chars": 652616,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 154094,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 222,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "4.827586",
+ "reasoning": "We need percentage change in capitalized interest from 2017 to 2018. Find figures: capitalized interest 2018 = $30.4 million, 2017 = $29.0 million. Percentage change = (30.4 - 29.0)/29.0 * 100 = 1.4/29.0 = 0.048275... = 4.8276%. Need answer as percentage. Use exact figures as printed: 30.4 and 29.0. Program: multiply(divide(subtract(30.4, 29.0), 29.0), 100). Evidence: 30.4 | CapitalizedInterestAmount, 29.0 | CapitalizedInterestAmount.",
+ "raw_content": "<evidence>\n30.4 | CapitalizedInterestAmount\n29.0 | CapitalizedInterestAmount\n</evidence>\n<program>multiply(divide(subtract(30.4, 29.0), 29.0), 100)</program>\n<answer>4.827586206896552%</answer>",
+ "usage": {
+  "prompt_tokens": 154398,
+  "completion_tokens": 222,
+  "total_tokens": 154620,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.62,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "30.4",
+   "element": "CapitalizedInterestAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "29.0",
+   "element": "CapitalizedInterestAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(30.4, 29.0), 29.0), 100)",
+ "answer_model": "4.827586206896552%",
+ "program_value": 4.827586206896547,
+ "docfinqa_row": 81
+}

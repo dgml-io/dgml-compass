@@ -1,0 +1,1047 @@
+{
+ "docset": "hcqfkilviuq3",
+ "derived_from": "hcqfkilviuq3_z4ervk9ic0oo.ref.json",
+ "spec_source": "curated",
+ "note": "ComplexType reference: groups of flat-ref answers that belong together (table rows / entities / itemized lists). Values are the flat ref's texts (token provenance stripped). Relations are document-verified: row instances must be token-local in the document's token stream AND (where a reference XML exists) co-occur inside one element; types failing the co-occurrence gate are dropped. Per file, a type maps to a list of instances, an explicit [] when the document genuinely has no instance of the type (predicting one there is an instance false-positive), or null when the gold could not be verified for that file (metrics must SKIP null, never treat it as empty). The flat ref is unchanged and remains the value-level gold.",
+ "types": {
+  "ClientInfo": {
+   "scope": "group",
+   "members": [
+    "Client+Name",
+    "Client+Address"
+   ]
+  },
+  "CompanyInfo": {
+   "scope": "group",
+   "members": [
+    "Service+Provider+Name",
+    "Company+Address"
+   ],
+   "optional": [
+    "Company+Phone+Number"
+   ]
+  },
+  "AgreementTerm": {
+   "scope": "group",
+   "members": [
+    "Agreement+Effective+Date",
+    "Agreement+Expiration+Date"
+   ]
+  },
+  "ProjectSchedule": {
+   "scope": "group",
+   "members": [
+    "Project+Start+Date",
+    "Contract+End+Date"
+   ]
+  },
+  "SOWSoftwareList": {
+   "scope": "list",
+   "members": [
+    "SOW+Itemized+Softwares"
+   ]
+  },
+  "SOWServiceList": {
+   "scope": "list",
+   "members": [
+    "SOW+Itemized+Services"
+   ]
+  }
+ },
+ "instances": {
+  "8s6bfdik80wl": {
+   "ClientInfo": [
+    {
+     "Client+Name": "Daltech , Inc.",
+     "Client+Address": "701 1st St , Kirkland , WA 98033"
+    }
+   ],
+   "CompanyInfo": [
+    {
+     "Service+Provider+Name": "MagicSoft , Inc.",
+     "Company+Address": "600 4th Ave , Seattle , WA 98104"
+    }
+   ],
+   "AgreementTerm": [
+    {
+     "Agreement+Effective+Date": "February 15 , 2021",
+     "Agreement+Expiration+Date": "May 31 , 2025"
+    }
+   ],
+   "ProjectSchedule": [
+    {
+     "Project+Start+Date": "03/15/2021",
+     "Contract+End+Date": "07/01/2021"
+    }
+   ],
+   "SOWSoftwareList": [
+    {
+     "SOW+Itemized+Softwares": [
+      "MagicSoft Mobile x 250 seats",
+      "MagicSoft Connect x 250 seats",
+      "MagicSoft Hub Connector"
+     ]
+    }
+   ],
+   "SOWServiceList": [
+    {
+     "SOW+Itemized+Services": [
+      "Initial Setup",
+      "Profile Customizations",
+      "Connector Enablement"
+     ]
+    }
+   ]
+  },
+  "aqr8cxjhs0yg": {
+   "ClientInfo": [
+    {
+     "Client+Name": "Bioholding , Inc.",
+     "Client+Address": "Prenzlauer Allee 10 , Leipzig , Freistaat Sachsen 04129 , Germany"
+    }
+   ],
+   "CompanyInfo": [
+    {
+     "Service+Provider+Name": "Magicsoft , Inc.",
+     "Company+Address": "600 4th Ave , Seattle , WA 98104",
+     "Company+Phone+Number": "555.555.0125"
+    }
+   ],
+   "AgreementTerm": [
+    {
+     "Agreement+Effective+Date": "June 1 , 2021",
+     "Agreement+Expiration+Date": "May 31 , 2025"
+    }
+   ],
+   "ProjectSchedule": [
+    {
+     "Project+Start+Date": "07/01/2021",
+     "Contract+End+Date": "10/01/2021"
+    }
+   ],
+   "SOWSoftwareList": [
+    {
+     "SOW+Itemized+Softwares": [
+      "MagicSoft Mobile x 50 seats",
+      "MagicSoft Connect x 50 seats",
+      "MagicSoft Hub Connector"
+     ]
+    }
+   ],
+   "SOWServiceList": [
+    {
+     "SOW+Itemized+Services": [
+      "Initial Setup",
+      "Profile Customizations",
+      "Connector Enablement"
+     ]
+    }
+   ]
+  },
+  "bhhvquefu01n": {
+   "ClientInfo": [
+    {
+     "Client+Name": "Vector , Inc.",
+     "Client+Address": "8741 Hamlet Ave S , Seattle , WA 98118"
+    }
+   ],
+   "CompanyInfo": [
+    {
+     "Service+Provider+Name": "Magicsoft , Inc.",
+     "Company+Address": "600 4th Ave , Seattle , WA 98104",
+     "Company+Phone+Number": "555.555.0125"
+    }
+   ],
+   "AgreementTerm": [
+    {
+     "Agreement+Effective+Date": "July 1 , 2021",
+     "Agreement+Expiration+Date": "November 30 , 2025"
+    }
+   ],
+   "ProjectSchedule": [
+    {
+     "Project+Start+Date": "07/15/2021",
+     "Contract+End+Date": "10/30/2021"
+    }
+   ],
+   "SOWSoftwareList": [
+    {
+     "SOW+Itemized+Softwares": [
+      "MagicSoft Mobile x 50 seats",
+      "MagicSoft Connect x 50 seats",
+      "MagicSoft Hub Connector"
+     ]
+    }
+   ],
+   "SOWServiceList": [
+    {
+     "SOW+Itemized+Services": [
+      "Initial Setup",
+      "Profile Customizations",
+      "Connector Enablement"
+     ]
+    }
+   ]
+  },
+  "brcy27dwwu6i": {
+   "ClientInfo": [
+    {
+     "Client+Name": "Finesse , Inc.",
+     "Client+Address": "8430 S 114th St , Seattle , WA , 98178"
+    }
+   ],
+   "CompanyInfo": [
+    {
+     "Service+Provider+Name": "Magicsoft , Inc.",
+     "Company+Address": "600 4th Ave , Seattle , WA 98104",
+     "Company+Phone+Number": "555.555.0125"
+    }
+   ],
+   "AgreementTerm": [
+    {
+     "Agreement+Effective+Date": "June 15 , 2021",
+     "Agreement+Expiration+Date": "May 31 , 2025"
+    }
+   ],
+   "ProjectSchedule": [
+    {
+     "Project+Start+Date": "06/30/2021",
+     "Contract+End+Date": "09/30/2021"
+    }
+   ],
+   "SOWSoftwareList": [
+    {
+     "SOW+Itemized+Softwares": [
+      "MagicSoft Mobile x 50 seats",
+      "MagicSoft Connect x 50 seats",
+      "MagicSoft Hub Connector"
+     ]
+    }
+   ],
+   "SOWServiceList": [
+    {
+     "SOW+Itemized+Services": [
+      "Initial Setup",
+      "Profile Customizations",
+      "Connector Enablement"
+     ]
+    }
+   ]
+  },
+  "c43kqdku1eeu": {
+   "ClientInfo": [
+    {
+     "Client+Name": "Kazuya , Inc.",
+     "Client+Address": "710 - 6998 15th Ave NW , Seattle , WA 98117"
+    }
+   ],
+   "CompanyInfo": [
+    {
+     "Service+Provider+Name": "MagicSoft , Inc.",
+     "Company+Address": "600 4th Ave , Seattle , WA 98104"
+    }
+   ],
+   "AgreementTerm": [
+    {
+     "Agreement+Effective+Date": "December 1 , 2021",
+     "Agreement+Expiration+Date": "May 31 , 2025"
+    }
+   ],
+   "ProjectSchedule": [
+    {
+     "Project+Start+Date": "07/01/2021",
+     "Contract+End+Date": "10/01/2021"
+    }
+   ],
+   "SOWSoftwareList": [
+    {
+     "SOW+Itemized+Softwares": [
+      "MagicSoft Mobile x 100 seats",
+      "MagicSoft Connect x 100 seats",
+      "MagicSoft Hub Connector"
+     ]
+    }
+   ],
+   "SOWServiceList": [
+    {
+     "SOW+Itemized+Services": [
+      "Initial Setup",
+      "Profile Customizations",
+      "Connector Enablement"
+     ]
+    }
+   ]
+  },
+  "dlk6ujsjp0cr": {
+   "ClientInfo": [
+    {
+     "Client+Name": "Echo , Inc.",
+     "Client+Address": "401 Broadway E , Seattle , WA 98102"
+    }
+   ],
+   "CompanyInfo": [
+    {
+     "Service+Provider+Name": "MagicSoft , Inc.",
+     "Company+Address": "600 4th Ave , Seattle , WA 98104",
+     "Company+Phone+Number": "555.555.0125"
+    }
+   ],
+   "AgreementTerm": [
+    {
+     "Agreement+Effective+Date": "June 1 , 2021",
+     "Agreement+Expiration+Date": "May 31 , 2025"
+    }
+   ],
+   "ProjectSchedule": [
+    {
+     "Project+Start+Date": "06/15/2021",
+     "Contract+End+Date": "09/30/2021"
+    }
+   ],
+   "SOWSoftwareList": [
+    {
+     "SOW+Itemized+Softwares": [
+      "MagicSoft Mobile x 100 seats",
+      "MagicSoft Connect x 100 seats"
+     ]
+    }
+   ],
+   "SOWServiceList": [
+    {
+     "SOW+Itemized+Services": [
+      "Initial Setup",
+      "Profile Customizations",
+      "Connector Enablement"
+     ]
+    }
+   ]
+  },
+  "doyyxop5kwbn": {
+   "ClientInfo": [
+    {
+     "Client+Name": "Flowpoint , Inc.",
+     "Client+Address": "1648 NW Market St , Seattle , WA 98107"
+    }
+   ],
+   "CompanyInfo": [
+    {
+     "Service+Provider+Name": "Magicsoft , Inc.",
+     "Company+Address": "600 4th Ave , Seattle , WA 98104",
+     "Company+Phone+Number": "555.555.0125"
+    }
+   ],
+   "AgreementTerm": [
+    {
+     "Agreement+Effective+Date": "June 15 , 2021",
+     "Agreement+Expiration+Date": "May 31 , 2025"
+    }
+   ],
+   "ProjectSchedule": [
+    {
+     "Project+Start+Date": "06/15/2021",
+     "Contract+End+Date": "09/30/2021"
+    }
+   ],
+   "SOWSoftwareList": [
+    {
+     "SOW+Itemized+Softwares": [
+      "MagicSoft Mobile x 50 seats",
+      "MagicSoft Connect x 50 seats",
+      "MagicSoft Hub Connector"
+     ]
+    }
+   ],
+   "SOWServiceList": [
+    {
+     "SOW+Itemized+Services": [
+      "Initial Setup",
+      "Profile Customizations",
+      "Connector Enablement"
+     ]
+    }
+   ]
+  },
+  "fqs9vmq2zkkc": {
+   "ClientInfo": [
+    {
+     "Client+Name": "Hottechi , Inc.",
+     "Client+Address": "Ziegelstrasse 15 , Johanniskirchen , Freistaat Bayern 84379"
+    }
+   ],
+   "CompanyInfo": [
+    {
+     "Service+Provider+Name": "Magicsoft , Inc.",
+     "Company+Address": "600 4th Ave , Seattle , WA 98104",
+     "Company+Phone+Number": "555.555.0125"
+    }
+   ],
+   "AgreementTerm": [
+    {
+     "Agreement+Effective+Date": "May 1 , 2021",
+     "Agreement+Expiration+Date": "May 31 , 2025"
+    }
+   ],
+   "ProjectSchedule": [
+    {
+     "Project+Start+Date": "05/15/2021",
+     "Contract+End+Date": "09/01/2021"
+    }
+   ],
+   "SOWSoftwareList": [
+    {
+     "SOW+Itemized+Softwares": [
+      "MagicSoft Mobile x 50 seats",
+      "MagicSoft Connect x 50 seats",
+      "MagicSoft Hub Connector"
+     ]
+    }
+   ],
+   "SOWServiceList": [
+    {
+     "SOW+Itemized+Services": [
+      "Initial Setup",
+      "Profile Customizations",
+      "Connector Enablement"
+     ]
+    }
+   ]
+  },
+  "hnzpgv5bo02j": {
+   "ClientInfo": [
+    {
+     "Client+Name": "Echo , Inc.",
+     "Client+Address": "401 Broadway E , Seattle , WA 98102"
+    }
+   ],
+   "CompanyInfo": [
+    {
+     "Service+Provider+Name": "MagicSoft , Inc.",
+     "Company+Address": "600 4th Ave , Seattle , WA 98104",
+     "Company+Phone+Number": "555.555.0125"
+    }
+   ],
+   "AgreementTerm": [
+    {
+     "Agreement+Effective+Date": "June 1 , 2021",
+     "Agreement+Expiration+Date": "May 31 , 2025"
+    }
+   ],
+   "ProjectSchedule": [
+    {
+     "Project+Start+Date": "06/15/2021",
+     "Contract+End+Date": "09/30/2021"
+    }
+   ],
+   "SOWSoftwareList": [
+    {
+     "SOW+Itemized+Softwares": [
+      "MagicSoft Mobile x 100 seats",
+      "MagicSoft Connect x 100 seats"
+     ]
+    }
+   ],
+   "SOWServiceList": [
+    {
+     "SOW+Itemized+Services": [
+      "Initial Setup",
+      "Profile Customizations",
+      "Connector Enablement"
+     ]
+    }
+   ]
+  },
+  "lhd4utjrkw0e": {
+   "ClientInfo": [
+    {
+     "Client+Name": "Propellant , Inc.",
+     "Client+Address": "7521 8th Ave NW , Seattle , WA 98117"
+    }
+   ],
+   "CompanyInfo": [
+    {
+     "Service+Provider+Name": "Magicsoft , Inc.",
+     "Company+Address": "600 4th Ave , Seattle , WA 98104",
+     "Company+Phone+Number": "555.555.0125"
+    }
+   ],
+   "AgreementTerm": [
+    {
+     "Agreement+Effective+Date": "April 1 , 2021",
+     "Agreement+Expiration+Date": "May 31 , 2025"
+    }
+   ],
+   "ProjectSchedule": [
+    {
+     "Project+Start+Date": "04/01/2021",
+     "Contract+End+Date": "10/15/2021"
+    }
+   ],
+   "SOWSoftwareList": [
+    {
+     "SOW+Itemized+Softwares": [
+      "MagicSoft Mobile x 50 seats",
+      "MagicSoft Connect x 50 seats",
+      "MagicSoft Hub Connector"
+     ]
+    }
+   ],
+   "SOWServiceList": [
+    {
+     "SOW+Itemized+Services": [
+      "Initial Setup",
+      "Profile Customizations",
+      "Connector Enablement"
+     ]
+    }
+   ]
+  },
+  "lpdbstjfeoxk": {
+   "ClientInfo": [
+    {
+     "Client+Name": "Inity , Inc.",
+     "Client+Address": "Alsterkrugchaussee 16 , Obernzenn , Freistaat Bayern 91619"
+    }
+   ],
+   "CompanyInfo": [
+    {
+     "Service+Provider+Name": "MagicSoft , Inc.",
+     "Company+Address": "600 4th Ave , Seattle , WA 98104",
+     "Company+Phone+Number": "555.555.0125"
+    }
+   ],
+   "AgreementTerm": [
+    {
+     "Agreement+Effective+Date": "June 15 , 2021",
+     "Agreement+Expiration+Date": "May 31 , 2025"
+    }
+   ],
+   "ProjectSchedule": [
+    {
+     "Project+Start+Date": "06/15/2021",
+     "Contract+End+Date": "09/30/2021"
+    }
+   ],
+   "SOWSoftwareList": [
+    {
+     "SOW+Itemized+Softwares": [
+      "MagicSoft Mobile x 20 seats",
+      "MagicSoft Connect x 20 seats",
+      "MagicSoft Hub Connector"
+     ]
+    }
+   ],
+   "SOWServiceList": [
+    {
+     "SOW+Itemized+Services": [
+      "Initial Setup",
+      "Profile Customizations",
+      "Connector Enablement"
+     ]
+    }
+   ]
+  },
+  "lqehvrxb8egq": {
+   "ClientInfo": [
+    {
+     "Client+Name": "Finesse , Inc.",
+     "Client+Address": "8430 S 114th St , Seattle , WA , 98178"
+    }
+   ],
+   "CompanyInfo": [
+    {
+     "Service+Provider+Name": "Magicsoft , Inc.",
+     "Company+Address": "600 4th Ave , Seattle , WA 98104",
+     "Company+Phone+Number": "555.555.0125"
+    }
+   ],
+   "AgreementTerm": [
+    {
+     "Agreement+Effective+Date": "June 15 , 2021",
+     "Agreement+Expiration+Date": "May 31 , 2025"
+    }
+   ],
+   "ProjectSchedule": [
+    {
+     "Project+Start+Date": "06/30/2021",
+     "Contract+End+Date": "09/30/2021"
+    }
+   ],
+   "SOWSoftwareList": [
+    {
+     "SOW+Itemized+Softwares": [
+      "MagicSoft Mobile x 50 seats",
+      "MagicSoft Connect x 50 seats",
+      "MagicSoft Hub Connector"
+     ]
+    }
+   ],
+   "SOWServiceList": [
+    {
+     "SOW+Itemized+Services": [
+      "Initial Setup",
+      "Profile Customizations",
+      "Connector Enablement"
+     ]
+    }
+   ]
+  },
+  "ov6ufyhgk2va": {
+   "ClientInfo": [
+    {
+     "Client+Name": "Hottechi , Inc.",
+     "Client+Address": "Ziegelstrasse 15 , Johanniskirchen , Freistaat Bayern 84379"
+    }
+   ],
+   "CompanyInfo": [
+    {
+     "Service+Provider+Name": "Magicsoft , Inc.",
+     "Company+Address": "600 4th Ave , Seattle , WA 98104",
+     "Company+Phone+Number": "555.555.0125"
+    }
+   ],
+   "AgreementTerm": [
+    {
+     "Agreement+Effective+Date": "May 1 , 2021",
+     "Agreement+Expiration+Date": "May 31 , 2025"
+    }
+   ],
+   "ProjectSchedule": [
+    {
+     "Project+Start+Date": "05/15/2021",
+     "Contract+End+Date": "09/01/2021"
+    }
+   ],
+   "SOWSoftwareList": [
+    {
+     "SOW+Itemized+Softwares": [
+      "MagicSoft Mobile x 50 seats",
+      "MagicSoft Connect x 50 seats",
+      "MagicSoft Hub Connector"
+     ]
+    }
+   ],
+   "SOWServiceList": [
+    {
+     "SOW+Itemized+Services": [
+      "Initial Setup",
+      "Profile Customizations",
+      "Connector Enablement"
+     ]
+    }
+   ]
+  },
+  "puiwoavikks6": {
+   "ClientInfo": [
+    {
+     "Client+Name": "Vector , Inc.",
+     "Client+Address": "8741 Hamlet Ave S , Seattle , WA 98118"
+    }
+   ],
+   "CompanyInfo": [
+    {
+     "Service+Provider+Name": "Magicsoft , Inc.",
+     "Company+Address": "600 4th Ave , Seattle , WA 98104",
+     "Company+Phone+Number": "555.555.0125"
+    }
+   ],
+   "AgreementTerm": [
+    {
+     "Agreement+Effective+Date": "July 1 , 2021",
+     "Agreement+Expiration+Date": "November 30 , 2025"
+    }
+   ],
+   "ProjectSchedule": [
+    {
+     "Project+Start+Date": "07/15/2021",
+     "Contract+End+Date": "10/30/2021"
+    }
+   ],
+   "SOWSoftwareList": [
+    {
+     "SOW+Itemized+Softwares": [
+      "MagicSoft Mobile x 50 seats",
+      "MagicSoft Connect x 50 seats",
+      "MagicSoft Hub Connector"
+     ]
+    }
+   ],
+   "SOWServiceList": [
+    {
+     "SOW+Itemized+Services": [
+      "Initial Setup",
+      "Profile Customizations",
+      "Connector Enablement"
+     ]
+    }
+   ]
+  },
+  "tsdayegpuiue": {
+   "ClientInfo": [
+    {
+     "Client+Name": "Zillilee , Inc.",
+     "Client+Address": "710 - 6998 15th Ave NW , Seattle , WA 98117"
+    }
+   ],
+   "CompanyInfo": [
+    {
+     "Service+Provider+Name": "MagicSoft , Inc.",
+     "Company+Address": "600 4th Ave , Seattle , WA 98104"
+    }
+   ],
+   "AgreementTerm": [
+    {
+     "Agreement+Effective+Date": "June 1 , 2021",
+     "Agreement+Expiration+Date": "May 31 , 2025"
+    }
+   ],
+   "ProjectSchedule": [
+    {
+     "Project+Start+Date": "07/01/2021",
+     "Contract+End+Date": "10/01/2021"
+    }
+   ],
+   "SOWSoftwareList": [
+    {
+     "SOW+Itemized+Softwares": [
+      "MagicSoft Mobile x 50 seats",
+      "MagicSoft Connect x 50 seats",
+      "MagicSoft Hub Connector"
+     ]
+    }
+   ],
+   "SOWServiceList": [
+    {
+     "SOW+Itemized+Services": [
+      "Initial Setup",
+      "Profile Customizations",
+      "Connector Enablement"
+     ]
+    }
+   ]
+  },
+  "vmdbpkjjceui": {
+   "ClientInfo": [
+    {
+     "Client+Name": "Bioplex , Inc.",
+     "Client+Address": "709 N La Brea Ave , Los Angeles , CA 90038"
+    }
+   ],
+   "CompanyInfo": [
+    {
+     "Service+Provider+Name": "Magicsoft , Inc.",
+     "Company+Address": "600 4th Ave , Seattle , WA 98104",
+     "Company+Phone+Number": "555.555.0125"
+    }
+   ],
+   "AgreementTerm": [
+    {
+     "Agreement+Effective+Date": "January 15 , 20212",
+     "Agreement+Expiration+Date": "February 15 , 2022"
+    }
+   ],
+   "ProjectSchedule": [
+    {
+     "Project+Start+Date": "02/15/2022",
+     "Contract+End+Date": "06/01/2022"
+    }
+   ],
+   "SOWSoftwareList": [
+    {
+     "SOW+Itemized+Softwares": [
+      "MagicSoft Mobile x 50 seats",
+      "MagicSoft Connect x 50 seats",
+      "MagicSoft Hub Connector"
+     ]
+    }
+   ],
+   "SOWServiceList": [
+    {
+     "SOW+Itemized+Services": [
+      "Initial Setup",
+      "Profile Customizations",
+      "Connector Enablement"
+     ]
+    }
+   ]
+  },
+  "vnams7s4zkca": {
+   "ClientInfo": [
+    {
+     "Client+Name": "Blackzim , Inc.",
+     "Client+Address": "218 Castaneda Ave , San Francisco , CA 94116"
+    }
+   ],
+   "CompanyInfo": [
+    {
+     "Service+Provider+Name": "Magicsoft , Inc.",
+     "Company+Address": "600 4th Ave , Seattle , WA 98104",
+     "Company+Phone+Number": "555.555.0125"
+    }
+   ],
+   "AgreementTerm": [
+    {
+     "Agreement+Effective+Date": "January 15 , 2022",
+     "Agreement+Expiration+Date": "January 15 , 2025"
+    }
+   ],
+   "ProjectSchedule": [
+    {
+     "Project+Start+Date": "01/15/2022",
+     "Contract+End+Date": "03/31/2022"
+    }
+   ],
+   "SOWSoftwareList": [
+    {
+     "SOW+Itemized+Softwares": [
+      "MagicSoft Mobile x 50 seats",
+      "MagicSoft Connect x 50 seats",
+      "MagicSoft Hub Connector"
+     ]
+    }
+   ],
+   "SOWServiceList": [
+    {
+     "SOW+Itemized+Services": [
+      "Initial Setup",
+      "Profile Customizations",
+      "Connector Enablement"
+     ]
+    }
+   ]
+  },
+  "vtwpmtzfbkeq": {
+   "ClientInfo": [
+    {
+     "Client+Name": "Flowpoint , Inc.",
+     "Client+Address": "1648 NW Market St , Seattle , WA 98107"
+    }
+   ],
+   "CompanyInfo": [
+    {
+     "Service+Provider+Name": "MagicSoft , Inc.",
+     "Company+Address": "600 4th Ave , Seattle , WA 98104",
+     "Company+Phone+Number": "555.555.0125"
+    }
+   ],
+   "AgreementTerm": [
+    {
+     "Agreement+Effective+Date": "June 15 , 2021",
+     "Agreement+Expiration+Date": "May 31 , 2025"
+    }
+   ],
+   "ProjectSchedule": [
+    {
+     "Project+Start+Date": "06/15/2021",
+     "Contract+End+Date": "09/30/2021"
+    }
+   ],
+   "SOWSoftwareList": [
+    {
+     "SOW+Itemized+Softwares": [
+      "MagicSoft Mobile x 50 seats",
+      "MagicSoft Connect x 50 seats",
+      "MagicSoft Hub Connector"
+     ]
+    }
+   ],
+   "SOWServiceList": [
+    {
+     "SOW+Itemized+Services": [
+      "Initial Setup",
+      "Profile Customizations",
+      "Connector Enablement"
+     ]
+    }
+   ]
+  },
+  "xcnmwfkvec8a": {
+   "ClientInfo": [
+    {
+     "Client+Name": "Bioplex , Inc.",
+     "Client+Address": "709 N La Brea Ave , Los Angeles , CA 90038"
+    }
+   ],
+   "CompanyInfo": [
+    {
+     "Service+Provider+Name": "MagicSoft , Inc.",
+     "Company+Address": "600 4th Ave , Seattle , WA 98104"
+    }
+   ],
+   "AgreementTerm": [
+    {
+     "Agreement+Effective+Date": "January 15 , 2021",
+     "Agreement+Expiration+Date": "December 31 , 2025"
+    }
+   ],
+   "ProjectSchedule": [
+    {
+     "Project+Start+Date": "03/03/2021",
+     "Contract+End+Date": "06/01/2021"
+    }
+   ],
+   "SOWSoftwareList": [
+    {
+     "SOW+Itemized+Softwares": [
+      "MagicSoft Mobile x 25 seats",
+      "MagicSoft Connect x 25 seats",
+      "MagicSoft Hub Connector"
+     ]
+    }
+   ],
+   "SOWServiceList": [
+    {
+     "SOW+Itemized+Services": [
+      "Initial Setup",
+      "Profile Customizations",
+      "Connector Enablement"
+     ]
+    }
+   ]
+  },
+  "ypjwk5j7rkib": {
+   "ClientInfo": [
+    {
+     "Client+Name": "Kazuya , Inc.",
+     "Client+Address": "710 - 6998 15th Ave NW , Seattle , WA 98117"
+    }
+   ],
+   "CompanyInfo": [
+    {
+     "Service+Provider+Name": "Magicsoft , Inc.",
+     "Company+Address": "600 4th Ave , Seattle , WA 98104",
+     "Company+Phone+Number": "555.555.0125"
+    }
+   ],
+   "AgreementTerm": [
+    {
+     "Agreement+Effective+Date": "December 1 , 2021",
+     "Agreement+Expiration+Date": "December 1 , 2025"
+    }
+   ],
+   "ProjectSchedule": [
+    {
+     "Project+Start+Date": "07/01/2021",
+     "Contract+End+Date": "10/01/2021"
+    }
+   ],
+   "SOWSoftwareList": [
+    {
+     "SOW+Itemized+Softwares": [
+      "MagicSoft Mobile x 50 seats",
+      "MagicSoft Connect x 50 seats",
+      "MagicSoft Hub Connector"
+     ]
+    }
+   ],
+   "SOWServiceList": [
+    {
+     "SOW+Itemized+Services": [
+      "Initial Setup",
+      "Profile Customizations",
+      "Connector Enablement"
+     ]
+    }
+   ]
+  },
+  "zftrkqzh8esq": {
+   "ClientInfo": [
+    {
+     "Client+Name": "Bioplex , Inc.",
+     "Client+Address": "709 N La Brea Ave , Los Angeles , CA 90038"
+    }
+   ],
+   "CompanyInfo": [
+    {
+     "Service+Provider+Name": "MagicSoft , Inc.",
+     "Company+Address": "600 4th Ave , Seattle , WA 98104"
+    }
+   ],
+   "AgreementTerm": [
+    {
+     "Agreement+Effective+Date": "January 15 , 2021",
+     "Agreement+Expiration+Date": "December 31 , 2025"
+    }
+   ],
+   "ProjectSchedule": [
+    {
+     "Project+Start+Date": "03/03/2021",
+     "Contract+End+Date": "06/01/2021"
+    }
+   ],
+   "SOWSoftwareList": [
+    {
+     "SOW+Itemized+Softwares": [
+      "MagicSoft Mobile x 25 seats",
+      "MagicSoft Connect x 25 seats",
+      "MagicSoft Hub Connector"
+     ]
+    }
+   ],
+   "SOWServiceList": [
+    {
+     "SOW+Itemized+Services": [
+      "Initial Setup",
+      "Profile Customizations",
+      "Connector Enablement"
+     ]
+    }
+   ]
+  }
+ },
+ "validation": {
+  "ClientInfo": {
+   "files": 21,
+   "instances": 21,
+   "empty_files": 0,
+   "dropped_files": 0,
+   "xml_checked": 0,
+   "xml_ok": 0,
+   "accepted": true
+  },
+  "CompanyInfo": {
+   "files": 21,
+   "instances": 21,
+   "empty_files": 0,
+   "dropped_files": 0,
+   "xml_checked": 0,
+   "xml_ok": 0,
+   "accepted": true
+  },
+  "AgreementTerm": {
+   "files": 21,
+   "instances": 21,
+   "empty_files": 0,
+   "dropped_files": 0,
+   "xml_checked": 0,
+   "xml_ok": 0,
+   "accepted": true
+  },
+  "ProjectSchedule": {
+   "files": 21,
+   "instances": 21,
+   "empty_files": 0,
+   "dropped_files": 0,
+   "xml_checked": 0,
+   "xml_ok": 0,
+   "accepted": true
+  },
+  "SOWSoftwareList": {
+   "files": 21,
+   "instances": 21,
+   "empty_files": 0,
+   "dropped_files": 0,
+   "xml_checked": 0,
+   "xml_ok": 0,
+   "accepted": true
+  },
+  "SOWServiceList": {
+   "files": 21,
+   "instances": 21,
+   "empty_files": 0,
+   "dropped_files": 0,
+   "xml_checked": 0,
+   "xml_ok": 0,
+   "accepted": true
+  }
+ }
+}

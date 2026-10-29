@@ -1,0 +1,72 @@
+{
+ "id": "AMT_2016_0001053507-17-000009__row0725",
+ "format": "markdown_pdf",
+ "key": "AMT_2016_0001053507-17-000009",
+ "question": "what is the net change in the balance of unrecognized tax benefits during 2016?",
+ "gold": "79437",
+ "finqa_id": "AMT/2016/page_125.pdf-1",
+ "source_page": "page_125",
+ "ticker": "AMT",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf/AMT_2016_0001053507-17-000009.md",
+ "doc_chars": 486538,
+ "prompt_chars": 486706,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 486538,
+ "original_chars": 486538,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 115908,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 214,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "79437",
+ "reasoning": "We need the net change in unrecognized tax benefits during 2016. From note 12, reconciliation: Balance at January 1, 2016 = $28,114 thousand. Balance at December 31, 2016 = $107,551 thousand. Net change = 107,551 - 28,114 = 79,437 thousand. Or we can sum additions and reductions: additions current year 82,912, foreign currency -307, reduction lapse -3,168. Net = 82,912 - 307 - 3,168 = 79,437. So answer 79,437 (in thousands). The question asks \"net change in the balance\" - likely in thousands. Provide value.",
+ "raw_content": "<evidence>28,114 | Balance at January 1 (unrecognized tax benefits reconciliation)\n107,551 | Balance at December 31 (unrecognized tax benefits reconciliation)</evidence>\n<program>subtract(107551, 28114)</program>\n<answer>79,437</answer>",
+ "usage": {
+  "prompt_tokens": 116213,
+  "completion_tokens": 214,
+  "total_tokens": 116427,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.63,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "28,114",
+   "element": "Balance at January 1 (unrecognized tax benefits reconciliation)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "107,551",
+   "element": "Balance at December 31 (unrecognized tax benefits reconciliation)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(107551, 28114)",
+ "answer_model": "79,437",
+ "program_value": 79437.0,
+ "docfinqa_row": 725
+}

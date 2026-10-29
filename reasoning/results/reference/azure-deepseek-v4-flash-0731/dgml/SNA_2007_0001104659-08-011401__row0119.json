@@ -1,0 +1,50 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0119",
+ "format": "dgml",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what was the percentage change in the minority interest from 2005 to 2006",
+ "gold": "-32.4%",
+ "finqa_id": "SNA/2007/page_69.pdf-3",
+ "source_page": "page_69",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml/SNA_2007_0001104659-08-011401.dgml.xml",
+ "doc_chars": 646204,
+ "prompt_chars": 646366,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 646204,
+ "original_chars": 646204,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 157120,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 366,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "5.7%",
+ "reasoning": "We need percentage change in minority interest from 2005 to 2006. Minority interests line: in income statement, \"Minority interests and equity earnings (loss), net of tax\" for 2006 is (3.7), 2005 is (1.4). But question says \"minority interest\" specifically. In note 1, there is breakdown: Minority interests: 2007 (4.9), 2006 (3.7), 2005 (3.5). Equity earnings separate. So minority interest (not including equity earnings) from 2005 to 2006: 3.5 to 3.7. Percentage change = (3.7-3.5)/3.5 = 0.2/3.5 = 5.7142857% increase. But the question might refer to the line \"Minority interests and equity earnings (loss), net of tax\" which is (1.4) to (3.7). That is a change from -1.4 to -3.7, percentage change? Usually percentage change on negative numbers is ambiguous. The question says \"minority interest\" not \"minority interests and equity earnings\". In the document, there is a specific breakdown in Note 1: \"Minority interests\" line. So answer 5.7% increase. Let's compute precisely: (3.7-3.5)/3.5 = 0.2/3.5 = 0.057142857 = 5.7142857%. So answer 5.7% or 5.71%. The question asks \"percentage change\" so give number. I'll put 5.7% inside tags.",
+ "raw_content": "<answer>5.7%</answer>",
+ "usage": {
+  "prompt_tokens": 157266,
+  "completion_tokens": 366,
+  "total_tokens": 157632,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.98,
+ "answer_tag_found": true,
+ "docfinqa_row": 119
+}

@@ -1,0 +1,53 @@
+{
+ "id": "NCLH_2018_0001144204-19-010508__row0854",
+ "format": "markdown_pdf",
+ "key": "NCLH_2018_0001144204-19-010508",
+ "question": "what percentage of future commitments for service , maintenance and other business enhancement capital expenditure contracts are paid in the first year to the third year?",
+ "gold": "2.7%",
+ "finqa_id": "NCLH/2018/page_64.pdf-3",
+ "source_page": "page_64",
+ "ticker": "NCLH",
+ "fiscal_year": "2018",
+ "source_file": "data/docs/markdown_pdf/NCLH_2018_0001144204-19-010508.md",
+ "doc_chars": 382420,
+ "prompt_chars": 382679,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 382420,
+ "original_chars": 382420,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 88879,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 537,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "49.3%",
+ "reasoning": "We need to find future commitments for service, maintenance and other Business Enhancement Capital Expenditure contracts. In the contractual obligations table, \"Other\" includes future commitments for service, maintenance and other Business Enhancement Capital Expenditure contracts. The table shows total $1,381,518 thousand, with less than 1 year $248,107, 1-3 years $433,161, 3-5 years $354,454, more than 5 years $345,796. The question asks: what percentage of future commitments for service, maintenance and other business enhancement capital expenditure contracts are paid in the first year to the third year? That means the sum of less than 1 year and 1-3 years? Or \"first year to the third year\" could mean years 1-3 inclusive? Typically \"first year to the third year\" means the first three years, i.e., less than 1 year plus 1-3 years. But careful: the table has \"Less than 1 year\" and \"1-3 years\". So first year to third year would be the sum of those two categories. So total = 248,107 + 433,161 = 681,268. Then percentage = 681,268 / 1,381,518 = 0.4931... = 49.31%. Let's compute precisely: 681,268 / 1,381,518 = 0.4931... 1,381,518 * 0.49 = 676,943.82, difference 4,324.18, so about 0.4931. So 49.3%. But the question says \"first year to the third year\" - could also mean years 1,2,3? The table has \"Less than 1 year\" (year 1) and \"1-3 years\" (years 2-3) so that covers years 1-3. So answer is 49.3%. Let's double-check the numbers from the table: In the contractual obligations table, \"Other (6)\" row: Total $1,381,518, Less than 1 year $248,107, 1-3 years $433,161, 3-5 years $354,454, More than 5 years $345,796. So sum of first two = 681,268. Percentage = 681,268 / 1,381,518 = 0.4931... So answer 49.3%. I'll put that in the answer tags.",
+ "raw_content": "<answer>49.3%</answer>",
+ "usage": {
+  "prompt_tokens": 89034,
+  "completion_tokens": 537,
+  "total_tokens": 89571,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 88832
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.95,
+ "answer_tag_found": true,
+ "docfinqa_row": 854
+}

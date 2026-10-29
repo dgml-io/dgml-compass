@@ -1,0 +1,74 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0635",
+ "format": "dgml",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "based on the cash dividends paid , how many common stock shares were outstanding?",
+ "gold": "58909091",
+ "finqa_id": "SNA/2007/page_49.pdf-2",
+ "source_page": "page_49",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml/SNA_2007_0001104659-08-011401.dgml.xml",
+ "doc_chars": 646204,
+ "prompt_chars": 646374,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 646204,
+ "original_chars": 646204,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 157120,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1051,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "58.378378",
+ "reasoning": "We need answer question: \"based on the cash dividends paid , how many common stock shares were outstanding?\" Need infer from cash dividends paid and per share dividend. Cash dividends paid in 2007 totaled $64.8 million, dividends paid per common share $1.11. So shares outstanding = 64.8 million / 1.11 = 58.378... million. But question asks \"how many common stock shares were outstanding?\" Could be based on cash dividends paid. Need compute. Use figures: Cash dividends paid in 2007 $64.8 million, dividends paid per share $1.11. 64.8/1.11 = 58.378378... million shares. But maybe they want number of shares outstanding at year end? The document gives shares outstanding as of Dec 29, 2007: 57,429,139 shares. But question says \"based on the cash dividends paid\" - likely compute from dividends. Let's parse: \"based on the cash dividends paid , how many common stock shares were outstanding?\" Could be asking to derive from total dividends paid and per share dividend. The document has \"Cash dividends paid in 2007, 2006 and 2005 totaled $64.8 million, $63.6 million and $57.8 million, respectively.\" And \"Cash dividends paid per common share $1.11\" for 2007. So shares = 64.8 / 1.11 = 58.378... million. But note \"Cash dividends paid per common share\" in selected data is 1.11 for 2007. Also in dividend policy: \"Quarterly dividends declared were $0.30 in the fourth quarter and $0.27 in the first three quarters ($1.11 per share for the year).\" So yes.\n\nNeed provide evidence and program. Answer likely 58.378 million shares. But question asks \"how many common stock shares were outstanding?\" Could be \"based on cash dividends paid\" - maybe they want number of shares outstanding at time of dividend? The computed number is average? Actually cash dividends paid total divided by per share dividend gives number of shares that received dividends, which approximates shares outstanding during year. But the document also states \"At December 29, 2007, Snap-on had 57,429,139 shares of common stock outstanding.\" That is a direct figure. But question says \"based on the cash dividends paid\" - so they want computation. Let's read exact: \"based on the cash dividends paid , how many common stock shares were outstanding?\" It might be a trick: cash dividends paid total $64.8 million, per share $1.11, so shares = 64.8/1.11 = 58.378... million. But the actual shares outstanding at year end is 57,429,139. Which one is asked? The phrase \"based on the cash dividends paid\" suggests using that. We'll compute.\n\nNeed list evidence: $64.8 million | DividendPaymentTotal (or Cash dividends paid in 2007), $1.11 | DividendPerShare (Cash dividends paid per common share). Then program divide(64.8, 1.11) = 58.378378... The answer should be a number, maybe 58.4 million shares. But question asks \"how many common stock shares were outstanding?\" Could be \"58,378,378 shares\" approximately. Let's compute exactly: 64.8 / 1.11 = 58.378378... million = 58,378,378.378... So answer 58,378,378 shares (approx). But note the document gives shares outstanding as of Feb 15, 2008: 57,690,539 shares, and Dec 29, 2007: 57,429,139. The computed from dividends is different because dividends paid per share is based on declared dividends, and total dividends paid may include shares outstanding at different times. But the question explicitly says \"based on the cash dividends paid\" so we use that.\n\nLet's produce final answer inside <answer> tags with value only. Probably \"58,378,378\" or \"58.4 million\". The instruction: \"containing only the value itself with no explanation or units unless the question asks for them.\" So answer: 58,378,378. But maybe they expect \"58.4 million\" - but value only. I'll put 58,378,378.\n\nNeed evidence lines: \n64.8 million | Cash dividends paid in 2007 (DividendPaymentTotal)\n1.11 | Cash dividends paid per common share (DividendPerShare)\n\nProgram: divide(64.8, 1.11)\n\nLet's final.",
+ "raw_content": "<evidence>\n64.8 million | Cash dividends paid in 2007 (DividendPaymentTotal)\n1.11 | Cash dividends paid per common share (DividendPerShare)\n</evidence>\n<program>divide(64.8, 1.11)</program>\n<answer>58,378,378</answer>",
+ "usage": {
+  "prompt_tokens": 157422,
+  "completion_tokens": 1051,
+  "total_tokens": 158473,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 157184
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.13,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "64.8 million",
+   "element": "Cash dividends paid in 2007 (DividendPaymentTotal)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1.11",
+   "element": "Cash dividends paid per common share (DividendPerShare)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(64.8, 1.11)",
+ "answer_model": "58,378,378",
+ "program_value": 58.37837837837837,
+ "docfinqa_row": 635
+}

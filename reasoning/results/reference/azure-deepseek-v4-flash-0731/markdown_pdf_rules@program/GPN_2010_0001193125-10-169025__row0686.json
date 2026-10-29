@@ -1,0 +1,90 @@
+{
+ "id": "GPN_2010_0001193125-10-169025__row0686",
+ "format": "markdown_pdf_rules",
+ "key": "GPN_2010_0001193125-10-169025",
+ "question": "what is the percentage change in the after-tax share-based compensation cost from 2009 to 2010?",
+ "gold": "25.5%",
+ "finqa_id": "GPN/2010/page_87.pdf-2",
+ "source_page": "page_87",
+ "ticker": "GPN",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/markdown_pdf_rules/GPN_2010_0001193125-10-169025.md",
+ "doc_chars": 316684,
+ "prompt_chars": 316868,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 316684,
+ "original_chars": 316684,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 70390,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "stop",
+   "completion_tokens": 497,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 1,
+ "ok": true,
+ "answer": "0.255319",
+ "reasoning": "We need percentage change in after-tax share-based compensation cost from 2009 to 2010. Need after-tax cost. Document gives share-based compensation cost pre-tax and income tax benefit. For 2010: cost $18.1 million, tax benefit $6.3 million. For 2009: cost $14.6 million, tax benefit $5.2 million. After-tax = cost - tax benefit. 2010: 18.1 - 6.3 = 11.8. 2009: 14.6 - 5.2 = 9.4. Percentage change = (11.8 - 9.4)/9.4 = 2.4/9.4 = 0.255319... = 25.53%. Need exact figures from document. The table says \"Share-based compensation cost $18.1 $14.6 $13.8\" and \"Income tax benefit $ (6.3) $ (5.2) $ (4.9)\". These are in millions. So compute.\n\nEvidence: 18.1 | Share-based compensation cost 2010; 6.3 | Income tax benefit 2010; 14.6 | Share-based compensation cost 2009; 5.2 | Income tax benefit 2009.\n\nProgram: divide(subtract(subtract(18.1, 6.3), subtract(14.6, 5.2)), subtract(14.6, 5.2)) = divide(subtract(11.8, 9.4), 9.4) = divide(2.4, 9.4) = 0.255319... So answer as percentage? The question asks percentage change. Provide value maybe 25.53% or 25.5%. Usually give number. We'll put 25.53.",
+ "raw_content": "<evidence>\n18.1 | Share-based compensation cost 2010\n6.3 | Income tax benefit 2010\n14.6 | Share-based compensation cost 2009\n5.2 | Income tax benefit 2009\n</evidence>\n\n<program>\ndivide(subtract(subtract(18.1, 6.3), subtract(14.6, 5.2)), subtract(14.6, 5.2))\n</program>\n\n<answer>25.53</answer>",
+ "usage": {
+  "prompt_tokens": 70699,
+  "completion_tokens": 497,
+  "total_tokens": 71196,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 70656
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.5,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "18.1",
+   "element": "Share-based compensation cost 2010",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6.3",
+   "element": "Income tax benefit 2010",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "14.6",
+   "element": "Share-based compensation cost 2009",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "5.2",
+   "element": "Income tax benefit 2009",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(subtract(18.1, 6.3), subtract(14.6, 5.2)), subtract(14.6, 5.2))",
+ "answer_model": "25.53",
+ "program_value": 0.25531914893617047,
+ "docfinqa_row": 686
+}

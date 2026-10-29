@@ -1,0 +1,67 @@
+{
+ "id": "APD_2016_0001193125-16-773346__row0434",
+ "format": "dgml",
+ "key": "APD_2016_0001193125-16-773346",
+ "question": "considering the years 2014-2016 , what is the highest interest expense observed?",
+ "gold": "125.1",
+ "finqa_id": "APD/2016/page_39.pdf-1",
+ "source_page": "page_39",
+ "ticker": "APD",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/dgml/APD_2016_0001193125-16-773346.dgml.xml",
+ "doc_chars": 924924,
+ "prompt_chars": 925093,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 924924,
+ "original_chars": 924924,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 222653,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 111,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "125.1",
+ "reasoning": "We need answer question: considering years 2014-2016, what is highest interest expense observed? Need find interest expense figures. In document, interest expense table: 2016 $115.5, 2015 $103.5, 2014 $125.1. Highest is 2014 $125.1. Need provide evidence and program.",
+ "raw_content": "<evidence>\n$125.1 | Interest Expense (2014)\n</evidence>\n<program>125.1</program>\n<answer>125.1</answer>",
+ "usage": {
+  "prompt_tokens": 222958,
+  "completion_tokens": 111,
+  "total_tokens": 223069,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 22.39,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$125.1",
+   "element": "Interest Expense (2014)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "125.1",
+ "answer_model": "125.1",
+ "program_value": 125.1,
+ "docfinqa_row": 434
+}

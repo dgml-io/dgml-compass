@@ -1,0 +1,73 @@
+{
+ "id": "CMCSA_2015_0001193125-16-452423__row0102",
+ "format": "markdown_pdf_plumber",
+ "key": "CMCSA_2015_0001193125-16-452423",
+ "question": "what was the percentage cable distribution systems capital expenditures of the capital expenditures incurred in cable communications segment capital expenditures in 2014?",
+ "gold": "33%",
+ "finqa_id": "CMCSA/2015/page_67.pdf-2",
+ "source_page": "page_67",
+ "ticker": "CMCSA",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_plumber/CMCSA_2015_0001193125-16-452423.md",
+ "doc_chars": 544523,
+ "prompt_chars": 544782,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 544523,
+ "original_chars": 544523,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 120058,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 252,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "33.2629%",
+ "reasoning": "We need answer percentage cable distribution systems capital expenditures of capital expenditures incurred in cable communications segment in 2014. From document: table \"Capital Expenditures\" in MD&A: Year ended December 31 (in millions) 2015 2014 2013: Cable distribution system $2,424 $2,047 $1,819; Customer premise equipment 3,698 3,397 2,990; Other equipment 756 613 527; Buildings and building improvements 156 97 67; Total $7,034 $6,154 $5,403. So 2014 cable distribution system = 2,047, total = 6,154. Percentage = 2047/6154 = ? Compute. 2047/6154 ≈ 0.33263 = 33.26%. Need answer. Evidence: 2,047 | Cable distribution system; 6,154 | Total. Program divide(2047, 6154). Final answer inside tags.",
+ "raw_content": "<evidence>\n2,047 | Cable distribution system\n6,154 | Total\n</evidence>\n<program>divide(2047, 6154)</program>\n<answer>33.26%</answer>",
+ "usage": {
+  "prompt_tokens": 120371,
+  "completion_tokens": 252,
+  "total_tokens": 120623,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 120320
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.55,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "2,047",
+   "element": "Cable distribution system",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6,154",
+   "element": "Total",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(2047, 6154)",
+ "answer_model": "33.26%",
+ "program_value": 0.33262918427039323,
+ "docfinqa_row": 102
+}

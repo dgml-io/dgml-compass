@@ -1,0 +1,75 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0273",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what was the return on total assets during 2014?",
+ "gold": "5.4%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "HII_2017_0001501585-18-000006.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/SelectedFinancialMetric/UnregisteredSalesOfEquity/SelectedFinancialDataFiveYear"
+ ],
+ "r1_reasoning_chars": 3083,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 22156,
+  "completion_tokens": 759,
+  "total_tokens": 22915,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/SelectedFinancialMetric/UnregisteredSalesOfEquity/SelectedFinancialDataFiveYear"
+ ],
+ "content_chars": 7401,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "0.054389",
+ "reasoning": "We need answer return on total assets during 2014. Need compute from figures. Return on total assets typically net income / average total assets, or net earnings / total assets. Need determine. Document has net earnings 338 for 2014, total assets 6,239 for 2014, and 6,190 for 2013. Return on total assets = net income / average total assets = 338 / ((6239+6190)/2) = 338 / 6214.5 = 0.05439 = 5.44%. Or if using ending assets 338/6239=5.42%. Need know convention. Question \"return on total assets during 2014\" likely from financial analysis, often net income / average total assets. Need compute. We have figures. Need cite figures. Use net earnings 338, total assets 2014 6,239, total assets 2013 6,190. Compute average. Program: divide(338, divide(add(6239,6190),2)). Need answer maybe 0.0544 or 5.44%. The question asks \"what was the return on total assets during 2014?\" likely percentage. We'll output numeric maybe 5.44. Need ensure exact. Let's compute: 6239+6190=12429, /2=6214.5, 338/6214.5 = 0.054389... = 5.4389%. If using ending assets 338/6239=0.054175=5.4175%. Which is expected? Need infer from document. The table has five-year selected financial data. Return on total assets is a ratio. Usually computed as net earnings / average total assets. We'll use average. Need evidence lines.",
+ "raw_content": "<evidence>\n338 | Net earnings (loss) 2014\n6,239 | Total assets 2014\n6,190 | Total assets 2013\n</evidence>\n<program>divide(338, divide(add(6239, 6190), 2))</program>\n<answer>5.44</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2112,
+  "completion_tokens": 442,
+  "total_tokens": 2554,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "338",
+   "element": "Net earnings (loss) 2014",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6,239",
+   "element": "Total assets 2014",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6,190",
+   "element": "Total assets 2013",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(338, divide(add(6239, 6190), 2))",
+ "answer_model": "5.44",
+ "program_value": 0.054388929117386756,
+ "elapsed_s": 5.9,
+ "outline_source": "HII_2017_0001501585-18-000006.outline.txt",
+ "outline_chars": 86768
+}

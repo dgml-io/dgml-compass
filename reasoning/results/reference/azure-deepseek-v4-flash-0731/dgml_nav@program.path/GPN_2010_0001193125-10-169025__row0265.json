@@ -1,0 +1,81 @@
+{
+ "id": "GPN_2010_0001193125-10-169025__row0265",
+ "key": "GPN_2010_0001193125-10-169025",
+ "question": "what is the total fair value of non-vested shares as of may 31 , 2010?",
+ "gold": "29946",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "GPN_2010_0001193125-10-169025.outline.txt",
+ "doc_source": "GPN_2010_0001193125-10-169025.dgml.xml",
+ "outline_chars": 88725,
+ "predicted_xpaths": [
+  "/chunk/NotesToFinancialStatementsContinuation/RestrictedStock/table"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 3038,
+ "r1_usage": {
+  "prompt_tokens": 22309,
+  "completion_tokens": 758,
+  "total_tokens": 23067,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/NotesToFinancialStatementsContinuation/RestrictedStock/table"
+ ],
+ "content_chars": 5299,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "29946",
+ "reasoning": "We need answer total fair value of non-vested shares as of May 31, 2010. Table gives non-vested at May 31, 2010: shares 713 (thousands) and weighted average grant-date fair value $42. Total fair value = 713 * 42 = 29,946 thousand dollars = $29.946 million. Need compute. Figures: 713, 42. Use multiply.",
+ "raw_content": "<evidence>713 | /chunk/NotesToFinancialStatementsContinuation/RestrictedStock/table/RestrictedStock/NonVestedShares\n42 | /chunk/NotesToFinancialStatementsContinuation/RestrictedStock/table/RestrictedStock/RestrictedStockGrantValue\n</evidence>\n<program>multiply(713, 42)</program>\n<answer>29946</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1729,
+  "completion_tokens": 181,
+  "total_tokens": 1910,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 1729,
+   "completion_tokens": 181,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "713",
+   "element": "chunk/NotesToFinancialStatementsContinuation/RestrictedStock/table/RestrictedStock/NonVestedShares",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "42",
+   "element": "chunk/NotesToFinancialStatementsContinuation/RestrictedStock/table/RestrictedStock/RestrictedStockGrantValue",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(713, 42)",
+ "answer_model": "29946",
+ "program_value": 29946.0,
+ "elapsed_s": 5.86
+}

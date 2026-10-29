@@ -1,0 +1,53 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0200",
+ "format": "markdown_pdf_plumber",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the interest expense in 2015 assuming that all the debt is interest bearing debt , ( in billions ) ?",
+ "gold": "0.86",
+ "finqa_id": "PM/2015/page_85.pdf-3",
+ "source_page": "page_85",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_plumber/PM_2015_0001413329-16-000076.md",
+ "doc_chars": 557384,
+ "prompt_chars": 557581,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 557384,
+ "original_chars": 557384,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 137284,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 245,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1.132",
+ "reasoning": "We need answer interest expense in 2015 assuming all debt is interest bearing debt, in billions. From financial statements: Interest expense, net for 2015 is $1,008 million. But question says \"interest expense\" not net? It says \"interest expense in 2015 assuming that all the debt is interest bearing debt\". The document has Interest expense, net = 1,008 million. Also Note 14: Interest expense $1,132 million, Interest income (124), net 1,008. The question asks \"interest expense\" not net. So use $1,132 million = 1.132 billion. But check wording: \"what is the interest expense in 2015 assuming that all the debt is interest bearing debt , ( in billions ) ?\" It might be asking for interest expense from income statement. The consolidated statements of earnings show \"Interest expense, net (Note 14) 1,008\". Note 14 gives Interest expense $1,132. So answer 1.132. But maybe they want net? The question says \"interest expense\" not \"net\". So 1.132 billion.",
+ "raw_content": "<answer>1.132</answer>",
+ "usage": {
+  "prompt_tokens": 137437,
+  "completion_tokens": 245,
+  "total_tokens": 137682,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 137216
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.48,
+ "answer_tag_found": true,
+ "docfinqa_row": 200
+}

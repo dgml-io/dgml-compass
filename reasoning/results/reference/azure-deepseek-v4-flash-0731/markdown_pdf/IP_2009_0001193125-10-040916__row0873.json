@@ -1,0 +1,53 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0873",
+ "format": "markdown_pdf",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "considering the years 2011-2012 , what is the variation observed in the lease obligations?",
+ "gold": "24",
+ "finqa_id": "IP/2009/page_45.pdf-3",
+ "source_page": "page_45",
+ "ticker": "IP",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/markdown_pdf/IP_2009_0001193125-10-040916.md",
+ "doc_chars": 445162,
+ "prompt_chars": 445341,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 445162,
+ "original_chars": 445162,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 104101,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 280,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-24",
+ "reasoning": "We need to find lease obligations for 2011 and 2012. The document has a table of contractual obligations at December 31, 2009: \"Lease obligations\" row: 2010: $177, 2011: $148, 2012: $124, 2013: $96, 2014: $79, Thereafter: $184. So for 2011 it's 148, 2012 it's 124. Variation from 2011 to 2012 is 124 - 148 = -24 million. The question asks \"what is the variation observed in the lease obligations?\" considering years 2011-2012. So the variation is a decrease of $24 million. We should answer with the value, likely -24 or 24 decrease. The instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So we can put -24 or 24? The question asks \"what is the variation observed?\" Typically variation could be the change, so -24 million. But to be safe, we can state -24. Or maybe they want the difference in absolute terms? The question says \"variation observed\" which implies the change. I'll put -24.",
+ "raw_content": "<answer>-24</answer>",
+ "usage": {
+  "prompt_tokens": 104249,
+  "completion_tokens": 280,
+  "total_tokens": 104529,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 104192
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.47,
+ "answer_tag_found": true,
+ "docfinqa_row": 873
+}

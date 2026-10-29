@@ -1,0 +1,74 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0408",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what portion of the equity compensation plan approved by security holders remains available for future issuance?",
+ "gold": "90.1%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "HII_2017_0001501585-18-000006.outline.txt",
+ "doc_source": "HII_2017_0001501585-18-000006.dgml.xml",
+ "outline_chars": 86768,
+ "predicted_xpaths": [
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 2109,
+ "r1_usage": {
+  "prompt_tokens": 22166,
+  "completion_tokens": 489,
+  "total_tokens": 22655,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation"
+ ],
+ "content_chars": 4675,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "4087587",
+ "reasoning": "We need to find the portion of the equity compensation plan approved by security holders that remains available for future issuance. The table shows for \"Equity compensation plans approved by security holders\": Number of Securities to be Issued Upon Exercise of Outstanding Options, Warrants and Rights = 448,859; Weighted-Average Exercise Price = $0.00; Number of Securities Remaining Available for Future Issuance Under Equity Compensation Plans (Excluding Securities Reflected in Column (a)) = 4,087,587.\n\nThe question asks \"what portion of the equity compensation plan approved by security holders remains available for future issuance?\" This likely means the number of securities remaining available for future issuance under the approved plans, which is 4,087,587. Or it could mean the fraction of total approved plan shares that remain available. But the table gives the number remaining available. The question says \"what portion\" - could be interpreted as the number. In financial documents, \"portion\" might mean the amount. But let's check: The table has column (c) \"Number of Securities Remaining Available for Future Issuance Under Equity Compensation Plans (Excluding Securities Reflected in Column (a))\". For approved plans, that is 4,087,587. So the answer is 4,087,587.\n\nBut the question might ask for the portion as a fraction of total shares authorized? The table doesn't give total authorized. It gives outstanding and remaining. The \"portion\" could be the number remaining. I think the answer is 4,087,587.\n\nLet's read the question: \"what portion of the equity compensation plan approved by security holders remains available for future issuance?\" That is exactly the column (c) for the approved plans row. So answer is 4,087,587.\n\nWe need to provide evidence: the figure 4,087,587 from the path /chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation/EquityCompensationPlanInformation/table/EquityCompensationPlan[3]/EquityPlanSharesAvailable? Actually the row for approved plans is the third row (after header and column reference). The path should be something like /chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation/table/EquityCompensationPlan[3]/EquityPlanSharesAvailable. But the region path is given as /chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation. The table is inside that. We'll cite the value as printed: 4,087,587.\n\nThe program is just the figure itself.\n\nSo final answer: 4087587.",
+ "raw_content": "<evidence>4,087,587 | /chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation/table/EquityCompensationPlan[3]/EquityPlanSharesAvailable</evidence>\n<program>4087587</program>\n<answer>4087587</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1463,
+  "completion_tokens": 610,
+  "total_tokens": 2073,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 1463,
+   "completion_tokens": 610,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "4,087,587",
+   "element": "chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation/table/EquityCompensationPlan[3]/EquityPlanSharesAvailable",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "4087587",
+ "answer_model": "4087587",
+ "program_value": 4087587.0,
+ "elapsed_s": 5.5
+}

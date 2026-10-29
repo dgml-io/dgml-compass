@@ -1,0 +1,53 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0566",
+ "format": "markdown_pdf",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "as of december 31 , 2008 , what was the percent of the maturities in 2012 of the aggregate carrying value of long-term debt , including capital leases",
+ "gold": "45.3%",
+ "finqa_id": "AMT/2008/page_94.pdf-1",
+ "source_page": "page_94",
+ "ticker": "AMT",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf/AMT_2008_0001193125-09-039177.md",
+ "doc_chars": 417265,
+ "prompt_chars": 417504,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 417265,
+ "original_chars": 417265,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 94052,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 278,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "45.3%",
+ "reasoning": "We need to find the maturities in 2012 of long-term debt including capital leases as of Dec 31, 2008. From note 6, \"Maturities\" table: 2012: $1,962,822 thousand. Total cash obligations: $4,332,366 thousand. But the question asks \"percent of the maturities in 2012 of the aggregate carrying value of long-term debt, including capital leases\". The aggregate carrying value is $4,333,146 (from balance sheet or note). But the table says \"Total cash obligations\" is $4,332,366, and then unamortized discounts and premiums net $780, so carrying value is $4,333,146. The maturities in 2012 are $1,962,822. So percent = 1,962,822 / 4,333,146 * 100 = approximately 45.3%. Let's compute: 1,962,822 / 4,333,146 = 0.4529... so 45.3%. Alternatively, if they mean of the total cash obligations, it's 1,962,822 / 4,332,366 = 45.3% as well. So answer is about 45.3%.",
+ "raw_content": "<answer>45.3%</answer>",
+ "usage": {
+  "prompt_tokens": 94216,
+  "completion_tokens": 278,
+  "total_tokens": 94494,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 93952
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.68,
+ "answer_tag_found": true,
+ "docfinqa_row": 566
+}

@@ -1,0 +1,53 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0069",
+ "format": "markdown_pdf_plumber",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what portion of the total investment is allocated to mutual funds in 2011?",
+ "gold": "65.1%",
+ "finqa_id": "ADI/2011/page_81.pdf-1",
+ "source_page": "page_81",
+ "ticker": "ADI",
+ "fiscal_year": "2011",
+ "source_file": "data/docs/markdown_pdf_plumber/ADI_2011_0000950123-11-099928.md",
+ "doc_chars": 392657,
+ "prompt_chars": 392820,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 392657,
+ "original_chars": 392657,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93158,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 265,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "34.9%",
+ "reasoning": "We need to find the portion of total investment allocated to mutual funds in 2011. The document mentions deferred compensation plan investments. In Note 7, it says: \"Investments in The Analog Devices, Inc. Deferred Compensation Plan (the Deferred Compensation Plan) are classified as trading. The components of the investments as of October 29, 2011 and October 30, 2010 were as follows: 2011: Money market funds $17,187, Mutual funds $9,223, Total $26,410. 2010: Money market funds $1,840, Mutual funds $6,850, Total $8,690.\" So the total investment in 2011 is $26,410 (in thousands). Mutual funds are $9,223. So portion = 9,223 / 26,410 = 0.3492... approximately 34.9%. The question asks \"what portion of the total investment is allocated to mutual funds in 2011?\" So answer as a percentage or fraction. Probably give as a percentage. Let's compute: 9223/26410 = 0.3492... so 34.92%. We'll put that inside <answer> tags.",
+ "raw_content": "<answer>34.9%</answer>",
+ "usage": {
+  "prompt_tokens": 93302,
+  "completion_tokens": 265,
+  "total_tokens": 93567,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 90112
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.92,
+ "answer_tag_found": true,
+ "docfinqa_row": 69
+}

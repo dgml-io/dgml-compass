@@ -1,0 +1,78 @@
+{
+ "id": "APD_2016_0001193125-16-773346__row0434",
+ "key": "APD_2016_0001193125-16-773346",
+ "question": "considering the years 2014-2016 , what is the highest interest expense observed?",
+ "gold": "125.1",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "APD_2016_0001193125-16-773346.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/ManagementDiscussion/InterestExpense"
+ ],
+ "r1_reasoning_chars": 2566,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 29990,
+  "completion_tokens": 667,
+  "total_tokens": 30657,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 29952
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/ManagementDiscussion/InterestExpense"
+ ],
+ "content_chars": 67066,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "125.1",
+ "reasoning": "We need answer highest interest expense observed 2014-2016. From table: Interest Expense row: $115.5 (2016?), $103.5 (2015?), $125.1 (2014?). Need determine order. Table header likely 2016, 2015, 2014. So values: 2016 $115.5, 2015 $103.5, 2014 $125.1. Highest is $125.1. Need evidence and program.",
+ "raw_content": "<evidence>\n$115.5 | InterestExpenseAmount\n$103.5 | InterestExpenseAmount\n$125.1 | InterestExpenseAmount\n</evidence>\n<program>max(115.5, 103.5, 125.1)</program>\n<answer>125.1</answer>",
+ "r2_usage": {
+  "prompt_tokens": 15454,
+  "completion_tokens": 171,
+  "total_tokens": 15625,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$115.5",
+   "element": "InterestExpenseAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$103.5",
+   "element": "InterestExpenseAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$125.1",
+   "element": "InterestExpenseAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "max(115.5, 103.5, 125.1)",
+ "answer_model": "125.1",
+ "program_value": null,
+ "elapsed_s": 5.02,
+ "outline_source": "APD_2016_0001193125-16-773346.outline.txt",
+ "outline_chars": 118036
+}

@@ -1,0 +1,77 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0518",
+ "format": "markdown_pdf_rules",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what is the value , in millions of dollars , of the total issuable stock in 2014?",
+ "gold": "162.2",
+ "finqa_id": "EW/2016/page_94.pdf-1",
+ "source_page": "page_94",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf_rules/EW_2016_0001099800-17-000008.md",
+ "doc_chars": 314607,
+ "prompt_chars": 314777,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 314607,
+ "original_chars": 314607,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 69815,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "stop",
+   "completion_tokens": 1850,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 1,
+ "ok": true,
+ "answer": "350",
+ "reasoning": "We need answer: \"what is the value, in millions of dollars, of the total issuable stock in 2014?\" Need interpret. \"total issuable stock\" maybe from stock plans? In 2014? Could refer to \"shares of common stock available for issuance under the Program\" in 2016? But question asks 2014. Need find in document. There is \"Common stock, $1.00 par value, 350.0 shares authorized\" but that's shares not value. \"total issuable stock\" might be \"authorized shares\" value? Or \"stockholders' equity\" common stock par value? In 2014 balance sheet? Not given directly, but statement of stockholders' equity shows balance at Dec 31, 2014: Common Stock par value $128.9 million, Additional paid-in capital $878.4, etc. But \"total issuable stock\" maybe \"authorized shares\" 350.0 million shares * $1 par = $350 million? But question says \"in millions of dollars\" and \"2014\". Could be from \"Common stock, $1.00 par value, 350.0 shares authorized\" - that's 350.0 shares (in millions) so value $350.0 million. But \"issuable\" might mean authorized but unissued? Need parse.\n\nQuestion: \"what is the value , in millions of dollars , of the total issuable stock in 2014?\" Likely from a financial document question. \"total issuable stock\" might refer to \"authorized shares\" of common stock. In 2014, the company had authorized 350.0 million shares of common stock, par value $1.00 per share. So total value = 350.0 * $1 = $350.0 million. But is that \"issuable\"? The balance sheet says \"Common stock, $1.00 par value, 350.0 shares authorized, ...\" So yes.\n\nBut check if there is any other \"issuable\" in document. \"shares of common stock available for issuance under the Program was 107.8 million shares\" in 2016, not 2014. \"authorized for issuance under ESPP was 13.8 million shares.\" Not 2014. \"Nonemployee Directors Program aggregate 2.8 million shares authorized.\" Not 2014.\n\nQuestion specifically \"in 2014\" - maybe from selected financial data? There is \"Common stock, $1.00 par value, 350.0 shares authorized\" in balance sheet as of Dec 31, 2016 and 2015, not 2014. But the company's authorized shares likely same in 2014? The document doesn't give 2014 balance sheet. However, statement of stockholders' equity shows common stock issued and outstanding at Dec 31, 2014: shares 128.9 (issued) and 21.1 treasury? Actually \"Common Stock\" column shows shares and par value. At Dec 31, 2014: Common Stock shares 128.9, par value $128.9 million. That is issued shares, not authorized. \"Total issuable stock\" might mean \"authorized shares\" which is 350.0 million, but not stated for 2014. The question might be asking \"total issuable stock\" meaning \"authorized capital stock\" value? In 2014, the company had authorized 350.0 million shares of $1 par value common stock, so $350 million. But the document only shows authorized shares in 2016/2015 balance sheet. It doesn't explicitly state for 2014. However, it's reasonable to assume same. But the question asks \"in 2014\" - maybe from \"Selected Financial Data\" table? That table has \"Common stock information\" but not authorized shares. It has net income per share etc. No.\n\nLet's read the question: \"what is the value , in millions of dollars , of the total issuable stock in 2014?\" Could be from a different context: \"total issuable stock\" might refer to \"shares authorized for issuance under stock plans\" in 2014? The document mentions \"Under the amended Program, the number of shares of common stock available for issuance under the Program was 107.8 million shares.\" That's 2016. Not 2014. \"The Company has an employee stock purchase plan ... authorized for issuance under the ESPP was 13.8 million shares.\" Not 2014.\n\nMaybe \"total issuable stock\" means \"common stock authorized\" - in the balance sheet, \"Common stock, $1.00 par value, 350.0 shares authorized\" - that is 350.0 million shares, par value $1, so value $350.0 million. The question asks \"in millions of dollars\" so answer 350.0. But need evidence. The balance sheet shows as of Dec 31, 2016 and 2015, not 2014. But the company's authorized shares likely unchanged. The question might be from a dataset where answer is 350.0.\n\nLet's see if there is any other figure: \"Common stock, $1.00 par value, 350.0 shares authorized, 242.6 and 239.1 shares issued, and 211.6 and 215.4 shares outstanding, respectively\" - that's 2016 and 2015. For 2014, statement of stockholders' equity shows \"Common Stock\" shares 128.9 at Dec 31, 2014, but that's issued shares, not authorized. \"Total issuable stock\" could be \"authorized but unissued\" = 350 - issued? But \"total issuable\" might mean \"authorized\" (maximum that can be issued). The par value is $1, so value = 350.0 million dollars.\n\nGiven the question wording \"total issuable stock\" - in accounting, \"authorized stock\" is the maximum number of shares that can be issued. So value = authorized shares * par value = 350.0 * $1 = $350.0 million.\n\nI'll answer 350.0. Evidence: \"Common stock, $1.00 par value, 350.0 shares authorized\" from balance sheet. But note that is 2016/2015, not 2014. However, the question says \"in 2014\" - maybe the authorized shares were the same. The document doesn't explicitly state for 2014, but it's a reasonable assumption. Alternatively, maybe the answer is NOT_FOUND because no 2014 authorized shares. But the question likely expects using the balance sheet figure. Let's check if there is any mention of \"authorized\" in 2014 context. The statement of stockholders' equity for 2014 shows \"Common Stock\" shares 128.9 at end of 2014, but that's issued. The authorized is not shown. However, the company's certificate of incorporation (Exhibit 3.1) might specify, but not in document. So the only authorized figure is 350.0 in the balance sheet for 2016/2015. The question asks \"in 2014\" - maybe they want the par value of issued common stock at end of 2014? That is $128.9 million. But \"total issuable\" is not \"issued\". \"Issuable\" means available to be issued, i.e., authorized but unissued? Or \"total issuable stock\" could be \"authorized capital stock\" which is 350.0.\n\nLet's parse: \"total issuable stock\" - in some contexts, \"authorized shares\" are sometimes called \"issuable shares\". The value would be par value * number of authorized shares. So 350.0.\n\nI'll provide evidence: \"Common stock, $1.00 par value, 350.0 shares authorized\" from Consolidated Balance Sheets (2016/2015). Then answer 350.0.\n\nBut the instruction says \"Cite only figures you actually read.\" I read that. Also need program: multiply(350.0, 1.00) or just 350.0? The figure is 350.0 shares, par value $1.00. So program multiply(350.0, 1.00) = 350.0. But the value is already in millions of dollars because shares in millions and par $1. So answer 350.0.\n\nI'll do that.",
+ "raw_content": "<evidence>\n350.0 shares authorized | Consolidated Balance Sheets (Common stock, $1.00 par value)\n$1.00 par value | Consolidated Balance Sheets (Common stock)\n</evidence>\n\n<program>\nmultiply(350.0, 1.00)\n</program>\n\n<answer>350.0</answer>",
+ "usage": {
+  "prompt_tokens": 70123,
+  "completion_tokens": 1850,
+  "total_tokens": 71973,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 21.42,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "350.0 shares authorized",
+   "element": "Consolidated Balance Sheets (Common stock, $1.00 par value)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$1.00 par value",
+   "element": "Consolidated Balance Sheets (Common stock)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(350.0, 1.00)",
+ "answer_model": "350.0",
+ "program_value": 350.0,
+ "docfinqa_row": 518
+}

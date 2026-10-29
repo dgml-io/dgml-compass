@@ -1,0 +1,50 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0173",
+ "format": "markdown_pdf_plumber",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what portion of the adjusted consolidated cash flow for the twelve months ended december 31 , 2005 is related to non-tower cash flow?",
+ "gold": "-5.8%",
+ "finqa_id": "AMT/2005/page_54.pdf-1",
+ "source_page": "page_54",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/markdown_pdf_plumber/AMT_2005_0001193125-06-054224.md",
+ "doc_chars": 493545,
+ "prompt_chars": 493767,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 493545,
+ "original_chars": 493545,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 121512,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 732,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-0.0575",
+ "reasoning": "We need to find the portion of adjusted consolidated cash flow related to non-tower cash flow. From the document, in the section \"Information Presented Pursuant to the Indentures of our 7.50% Notes, 7.125% Notes and ATI 7.25% Notes\", there is a table:\n\nTower Cash Flow, for the three months ended December 31, 2005 $ 139,590\nConsolidated Cash Flow, for the twelve months ended December 31, 2005 $ 498,266\nLess: Tower Cash Flow, for the twelve months ended December 31, 2005 (524,804)\nPlus: four times Tower Cash Flow, for the three months ended December 31, 2005 558,360\nAdjusted Consolidated Cash Flow, for the twelve months ended December 31, 2005 $ 531,822\nNon-Tower Cash Flow, for the twelve months ended December 31, 2005 $ (30,584)\n\nSo non-tower cash flow is -30,584. The question asks: \"what portion of the adjusted consolidated cash flow for the twelve months ended december 31 , 2005 is related to non-tower cash flow?\" That likely means the ratio or percentage. So we compute non-tower cash flow / adjusted consolidated cash flow = -30,584 / 531,822 ≈ -0.0575 or -5.75%. But the question says \"portion\" which could be a fraction. Alternatively, it might ask for the amount itself? But it says \"portion\" meaning what fraction. Let's compute: -30,584 / 531,822 = -0.0575. So about -5.75%. But the answer should be a value. Possibly they want the percentage. The question: \"what portion of the adjusted consolidated cash flow ... is related to non-tower cash flow?\" So we give the ratio. Since it's negative, we can state -5.75% or -0.0575. But the instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for a portion, so we can give a decimal or percentage. Typically, portion could be a fraction. I'll give the decimal: -0.0575. But to be precise, compute: 30584/531822 = 0.0575. So -0.0575. Or -5.75%. Since it says \"portion\", I'll give the decimal. Let's compute exactly: 30584 / 531822 = 0.0575 (approx). So answer: -0.0575. But maybe they want the absolute value? The question says \"related to non-tower cash flow\" which is negative, so portion is negative. I'll put -0.0575. Alternatively, they might want the percentage: -5.75%. I'll put -5.75% but the instruction says no units unless asked. The question asks for portion, so a percentage is fine. I'll put -5.75%. But to be safe, I'll put the decimal. Let's see: The document gives Non-Tower Cash Flow as -30,584 and Adjusted Consolidated Cash Flow as 531,822. So portion = -30,584 / 531,822 = -0.0575. I'll put -0.0575.",
+ "raw_content": "<answer>-0.0575</answer>",
+ "usage": {
+  "prompt_tokens": 121670,
+  "completion_tokens": 732,
+  "total_tokens": 122402,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.97,
+ "answer_tag_found": true,
+ "docfinqa_row": 173
+}

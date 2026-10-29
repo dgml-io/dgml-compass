@@ -1,0 +1,53 @@
+{
+ "id": "CMCSA_2015_0001193125-16-452423__row0908",
+ "format": "markdown_pdf_rules",
+ "key": "CMCSA_2015_0001193125-16-452423",
+ "question": "based on the review of the reconciliation of unrecognized tax benefits what was the change in 2014",
+ "gold": "530",
+ "finqa_id": "CMCSA/2015/page_112.pdf-3",
+ "source_page": "page_112",
+ "ticker": "CMCSA",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_rules/CMCSA_2015_0001193125-16-452423.md",
+ "doc_chars": 564207,
+ "prompt_chars": 564394,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 564207,
+ "original_chars": 564207,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 125792,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 392,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-530",
+ "reasoning": "We need to find the reconciliation of unrecognized tax benefits. In Comcast's notes, Note 15: Income Taxes, there is a table \"Reconciliation of Unrecognized Tax Benefits\". It shows balance January 1, additions, reductions, etc. The question asks: \"based on the review of the reconciliation of unrecognized tax benefits what was the change in 2014\". The change in 2014 would be the net change from beginning to end of 2014. The table shows for 2014: Balance January 1 = $1,701 million, Balance December 31 = $1,171 million. So the change is 1,171 - 1,701 = -530 million. Alternatively, the net change is the sum of additions and reductions. But the question likely expects the net change. The table also shows that in 2014, there was a reduction in accruals that decreased income tax expense by $759 million, but that is a different figure. The reconciliation shows the change in unrecognized tax benefits. So the change is -$530 million. But let's confirm: The table shows 2014: Balance Jan 1 $1,701, additions current year $63, additions prior years $111, reductions prior years ($220), reductions due to statute ($448), settlements ($36). Sum: 1701+63+111-220-448-36 = 1171. So net change = -530. So answer is -530 (in millions). The question says \"what was the change in 2014\" so we can give the number. Since it's a decrease, we can say -530 or 530 decrease. The answer should be just the value. Probably -530. But the question might expect the absolute change? It says \"change\" so we can give -530. I'll put -530.",
+ "raw_content": "<answer>-530</answer>",
+ "usage": {
+  "prompt_tokens": 125941,
+  "completion_tokens": 392,
+  "total_tokens": 126333,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 125696
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 14.55,
+ "answer_tag_found": true,
+ "docfinqa_row": 908
+}

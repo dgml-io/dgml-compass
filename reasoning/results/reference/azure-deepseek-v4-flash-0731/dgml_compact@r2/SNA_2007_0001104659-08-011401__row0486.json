@@ -1,0 +1,53 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0486",
+ "format": "dgml_compact",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what is the roi in snap-on if the investment was made at the end of 2005 and sold at the end of 2007?",
+ "gold": "34.8%",
+ "finqa_id": "SNA/2007/page_29.pdf-2",
+ "source_page": "page_29",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml_compact/SNA_2007_0001104659-08-011401.dgml.txt",
+ "doc_chars": 428718,
+ "prompt_chars": 428908,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 428718,
+ "original_chars": 428718,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 97509,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 494,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "33.97%",
+ "reasoning": "We need ROI from end of 2005 to end of 2007. Need stock price at end of 2005 and end of 2007. From document: fiscal year-end per share price: 2005: $37.56, 2007: $48.13 (from Selected Financial Data). Also dividends paid per share: 2006: $1.08, 2007: $1.11. But ROI typically includes dividends if total return. The question says \"roi in snap-on if the investment was made at the end of 2005 and sold at the end of 2007\" - likely total return including dividends. Need compute: buy at end 2005 price $37.56, sell at end 2007 price $48.13, plus dividends received during holding period: 2006 and 2007 dividends per share: $1.08 + $1.11 = $2.19. Total return = (48.13 + 2.19 - 37.56)/37.56 = (50.32 - 37.56)/37.56 = 12.76/37.56 = 0.3397... = 33.97%. Alternatively if just price appreciation: (48.13-37.56)/37.56 = 10.57/37.56 = 0.2814 = 28.14%. The question says \"roi\" - typically includes dividends. But check if they ask \"investment was made at the end of 2005 and sold at the end of 2007\" - that's two years. The document gives per share price at fiscal year end. Also dividends paid per share: 2006 $1.08, 2007 $1.11. So total return = (48.13 + 1.08 + 1.11 - 37.56)/37.56 = 33.97%. I'll answer with that. But need to be careful: The question might expect just price appreciation? Usually ROI includes dividends. I'll provide the value as a percentage. The answer should be inside <answer> tags. I'll put 33.97% or 0.3397? The question asks \"what is the roi\" - likely percentage. I'll put 33.97%.",
+ "raw_content": "<answer>33.97%</answer>",
+ "usage": {
+  "prompt_tokens": 97666,
+  "completion_tokens": 494,
+  "total_tokens": 98160,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 97536
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.11,
+ "answer_tag_found": true,
+ "docfinqa_row": 486
+}

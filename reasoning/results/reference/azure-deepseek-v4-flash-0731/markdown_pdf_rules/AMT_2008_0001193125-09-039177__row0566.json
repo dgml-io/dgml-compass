@@ -1,0 +1,53 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0566",
+ "format": "markdown_pdf_rules",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "as of december 31 , 2008 , what was the percent of the maturities in 2012 of the aggregate carrying value of long-term debt , including capital leases",
+ "gold": "45.3%",
+ "finqa_id": "AMT/2008/page_94.pdf-1",
+ "source_page": "page_94",
+ "ticker": "AMT",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_rules/AMT_2008_0001193125-09-039177.md",
+ "doc_chars": 413481,
+ "prompt_chars": 413720,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 413481,
+ "original_chars": 413481,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93036,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 462,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "45.3%",
+ "reasoning": "We need to find the maturities of long-term debt as of Dec 31, 2008. In note 6, there is a table \"Maturities\" showing aggregate carrying value of long-term debt, including capital leases, for next five years and thereafter. The table shows:\n\n2009: $1,837\n2010: $60,989\n2011: $1,018\n2012: $1,962,822\n2013: $646\nThereafter: $2,305,054\nTotal cash obligations: $4,332,366\nUnamortized discounts and premiums, net: $780\nBalance as of Dec 31, 2008: $4,333,146\n\nThe question asks: \"as of december 31 , 2008 , what was the percent of the maturities in 2012 of the aggregate carrying value of long-term debt , including capital leases\"\n\nSo we need the percentage that 2012 maturities represent of the aggregate carrying value. The aggregate carrying value is $4,333,146 (the balance). The maturities in 2012 are $1,962,822. So percentage = (1,962,822 / 4,333,146) * 100.\n\nCompute: 1,962,822 / 4,333,146 ≈ 0.4529, so 45.29%. Let's compute precisely: 4,333,146 * 0.45 = 1,949,915.7, difference 12,906.3, so about 0.00298 more, so 0.45298, so 45.3%.\n\nBut note: The table says \"aggregate carrying value of long-term debt, including capital leases\" and the balance is $4,333,146. The maturities in 2012 are $1,962,822. So percentage is 45.3%.\n\nWe should answer with the value only, no units. So <answer>45.3%</answer> or maybe 45.29%? The question asks for percent, so we can give a number. I'll give 45.3%.",
+ "raw_content": "<answer>45.3%</answer>",
+ "usage": {
+  "prompt_tokens": 93200,
+  "completion_tokens": 462,
+  "total_tokens": 93662,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 92928
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.9,
+ "answer_tag_found": true,
+ "docfinqa_row": 566
+}

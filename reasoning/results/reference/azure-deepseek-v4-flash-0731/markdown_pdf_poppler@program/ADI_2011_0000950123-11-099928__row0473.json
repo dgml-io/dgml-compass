@@ -1,0 +1,67 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0473",
+ "format": "markdown_pdf_poppler",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what is the yearly interest expense incurred from the $ 375 million note with a fixed rate?",
+ "gold": "11.3",
+ "finqa_id": "ADI/2011/page_50.pdf-2",
+ "source_page": "page_50",
+ "ticker": "ADI",
+ "fiscal_year": "2011",
+ "source_file": "data/docs/markdown_pdf_poppler/ADI_2011_0000950123-11-099928.md",
+ "doc_chars": 465742,
+ "prompt_chars": 465922,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 465742,
+ "original_chars": 465742,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 78562,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 860,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "11.25",
+ "reasoning": "We need answer: yearly interest expense from $375 million note with fixed rate. There are two notes: 5.0% senior unsecured notes due 2014, and 3.0% notes due 2016. Question says \"$375 million note with a fixed rate\" - likely the 5.0% note? But note that 5.0% note is swapped to variable, so interest expense may be based on swap. However question asks \"yearly interest expense incurred from the $375 million note with a fixed rate?\" Could be the 3.0% note? The 3.0% note is fixed rate, not hedged. The 5.0% note is hedged with swap, so effective interest is variable. The question says \"the $375 million note with a fixed rate\" - there are two $375 million notes, one 5.0% fixed but swapped, one 3.0% fixed. Which one? The 3.0% note is fixed rate and not hedged. The 5.0% note is also fixed rate but swapped. The question likely refers to the 3.0% note because it says \"with a fixed rate\" - but both have fixed rates. However the 5.0% note's fixed rate is swapped to variable, so the interest expense incurred is not fixed. The 3.0% note is fixed. So yearly interest expense = 3.0% * $375 million = $11.25 million. Check document: \"3.0% senior unsecured notes due April 15, 2016\" issued April 4, 2011. Interest expense for fiscal 2011? The question asks \"yearly interest expense incurred from the $375 million note with a fixed rate?\" Could be annual interest expense, not fiscal year. So $375,000,000 * 3% = $11,250,000. But note that the note was issued in April 2011, so fiscal 2011 interest expense would be partial. But question says \"yearly interest expense\" - likely annual. Also there is a 5.0% note but it is swapped, so the fixed rate is not the actual interest expense. The 3.0% note is fixed. So answer $11.25 million.\n\nEvidence: \"3.0% senior unsecured notes due April 15, 2016\" and \"$375 million aggregate principal amount\" from Note 16 or MD&A. Also \"3.0% Notes\" with semi-annual fixed interest payments. So compute multiply(375, 0.03) = 11.25 (in millions). But need exact figure as printed? The document has \"$375 million\" and \"3.0%\". So program multiply(375, 0.03) = 11.25. Answer in millions? The question asks \"yearly interest expense\" - likely in dollars. We can give $11.25 million. But final answer should be value only, no units unless asked. The question doesn't specify units, but typical answer is 11.25 (in millions). We'll put 11.25.\n\nLet's ensure no other interpretation. The 5.0% note has fixed rate 5.0% but swapped to variable, so interest expense is based on LIBOR+2.05%. The question says \"with a fixed rate\" - the 3.0% note is fixed. So answer 11.25.\n\nEvidence: \"$375 million aggregate principal amount of 3.0% senior unsecured notes due April 15, 2016\" from Note 16. Also \"3.0% Notes\" with semi-annual fixed interest payments. So compute 375 * 0.03 = 11.25.\n\nFinal answer inside <answer>11.25</answer>",
+ "raw_content": "<evidence>$375 million aggregate principal amount of 3.0% senior unsecured notes due April 15, 2016 | Note 16 - Debt</evidence>\n<program>multiply(375, 0.03)</program>\n<answer>11.25</answer>",
+ "usage": {
+  "prompt_tokens": 78869,
+  "completion_tokens": 860,
+  "total_tokens": 79729,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 77824
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 18.12,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$375 million aggregate principal amount of 3.0% senior unsecured notes due April 15, 2016",
+   "element": "Note 16 - Debt",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(375, 0.03)",
+ "answer_model": "11.25",
+ "program_value": 11.25,
+ "docfinqa_row": 473
+}

@@ -1,0 +1,74 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0298",
+ "format": "dgml",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what is the percentage change in the expected minimum payments from 2014 to 2015?",
+ "gold": "-18.7%",
+ "finqa_id": "GPN/2013/page_92.pdf-2",
+ "source_page": "page_92",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/dgml/GPN_2013_0001123360-13-000025.dgml.xml",
+ "doc_chars": 611417,
+ "prompt_chars": 611587,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 611417,
+ "original_chars": 611417,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 141594,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 309,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-18.7393%",
+ "reasoning": "We need answer percentage change in expected minimum payments from 2014 to 2015. Need find figures. Document has \"Future minimum lease payments\" table: 2014 $11,057, 2015 $8,985. Also contractual obligations table has operating leases and purchase obligations: less than 1 year $35,935, 1-3 years $65,153 etc. But question \"expected minimum payments\" likely refers to future minimum lease payments? Need identify. The question says \"expected minimum payments from 2014 to 2015\" - likely from lease commitments table. There is also debt maturity schedule but that's debt. \"minimum payments\" often lease. The table \"Future minimum lease payments\" has 2014 $11,057, 2015 $8,985. Percentage change = (8985-11057)/11057 = -2072/11057 = -0.18739... = -18.74%. Need compute. Use figures as printed: 11,057 and 8,985. Program: divide(subtract(8985, 11057), 11057). Answer -18.74% maybe. Need evidence list.",
+ "raw_content": "<evidence>\n$ 11,057 | FutureLeasePayment 2014\n8,985 | FutureLeasePayment 2015\n</evidence>\n<program>divide(subtract(8985, 11057), 11057)</program>\n<answer>-18.74%</answer>",
+ "usage": {
+  "prompt_tokens": 141900,
+  "completion_tokens": 309,
+  "total_tokens": 142209,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 12.45,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 11,057",
+   "element": "FutureLeasePayment 2014",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "8,985",
+   "element": "FutureLeasePayment 2015",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(8985, 11057), 11057)",
+ "answer_model": "-18.74%",
+ "program_value": -0.1873926019716017,
+ "docfinqa_row": 298
+}

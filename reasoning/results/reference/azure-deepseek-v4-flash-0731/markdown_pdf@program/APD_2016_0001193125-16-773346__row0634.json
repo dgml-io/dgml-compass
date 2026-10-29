@@ -1,0 +1,72 @@
+{
+ "id": "APD_2016_0001193125-16-773346__row0634",
+ "format": "markdown_pdf",
+ "key": "APD_2016_0001193125-16-773346",
+ "question": "considering the 2016's special terminations settlements and curtailments , what is the percentage of pension settlement losses concerning the total value?",
+ "gold": "87.67%",
+ "finqa_id": "APD/2016/page_57.pdf-1",
+ "source_page": "page_57",
+ "ticker": "APD",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf/APD_2016_0001193125-16-773346.md",
+ "doc_chars": 434740,
+ "prompt_chars": 434983,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 434740,
+ "original_chars": 434740,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 105848,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 713,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "87.6712%",
+ "reasoning": "We need answer question: \"considering the 2016's special terminations settlements and curtailments , what is the percentage of pension settlement losses concerning the total value?\"\n\nWe need find figures. In document, pension expense table: 2016 Pension expense $68.1, special terminations, settlements, and curtailments (included above) $7.3. Also pension settlement loss recognized $6.4 in 2016 (from income statement and notes). The question: \"considering the 2016's special terminations settlements and curtailments, what is the percentage of pension settlement losses concerning the total value?\" Likely ask: pension settlement losses as percentage of total special terminations settlements and curtailments. Total special terminations, settlements, and curtailments = $7.3. Pension settlement losses = $6.4. Percentage = 6.4 / 7.3 = 87.671...%. Or maybe \"total value\" refers to pension expense $68.1? But wording: \"considering the 2016's special terminations settlements and curtailments, what is the percentage of pension settlement losses concerning the total value?\" Could be percentage of pension settlement losses within the special terminations settlements and curtailments total. The special terminations, settlements, and curtailments line includes pension settlement losses of $6.4, special termination benefits $2.0, curtailment gains $1.1 (from MD&A: \"Special items of $7.3 included pension settlement losses of $6.4, special termination benefits of $2.0, and curtailment gains of $1.1.\" Note that 6.4 + 2.0 - 1.1 = 7.3. So pension settlement losses as percentage of total special items = 6.4/7.3 = 87.67%. Alternatively, pension settlement losses as percentage of total pension expense? But question says \"concerning the total value\" likely total special terminations settlements and curtailments. Let's parse: \"considering the 2016's special terminations settlements and curtailments , what is the percentage of pension settlement losses concerning the total value?\" So total value = special terminations settlements and curtailments total. So answer 87.7% (approx). Need provide evidence and program.\n\nEvidence: 6.4 | Pension settlement loss (2016) from income statement/notes; 7.3 | Special terminations, settlements, and curtailments (included above) from Pension Expense table. Also maybe 2.0 and 1.1 but not needed.\n\nProgram: divide(6.4, 7.3) = 0.876712... percentage 87.67%. Final answer inside <answer>87.7%</answer> or 87.67%. The question asks percentage, so include % sign? \"Give final answer inside tags containing only value itself with no explanation or units unless question asks for them.\" It asks percentage, so include %? Usually value with % sign. I'll put 87.7%.",
+ "raw_content": "<evidence>\n6.4 | Pension settlement loss (2016)\n7.3 | Special terminations, settlements, and curtailments (included above) (2016)\n</evidence>\n\n<program>\ndivide(6.4, 7.3)\n</program>\n\n<answer>87.7%</answer>",
+ "usage": {
+  "prompt_tokens": 106163,
+  "completion_tokens": 713,
+  "total_tokens": 106876,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 105984
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.18,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "6.4",
+   "element": "Pension settlement loss (2016)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "7.3",
+   "element": "Special terminations, settlements, and curtailments (included above) (2016)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(6.4, 7.3)",
+ "answer_model": "87.7%",
+ "program_value": 0.8767123287671234,
+ "docfinqa_row": 634
+}

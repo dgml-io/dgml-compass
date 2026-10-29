@@ -1,0 +1,66 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0614",
+ "format": "markdown_pdf_plumber",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what portion of the equity compensation plan approved by security holders is to be issued upon the exercise of options warrants and rights?",
+ "gold": "9.9%",
+ "finqa_id": "HII/2017/page_124.pdf-1",
+ "source_page": "page_124",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/markdown_pdf_plumber/HII_2017_0001501585-18-000006.md",
+ "doc_chars": 479340,
+ "prompt_chars": 479568,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 479340,
+ "original_chars": 479340,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 106334,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 769,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "448859",
+ "reasoning": "We need answer: \"what portion of the equity compensation plan approved by security holders is to be issued upon the exercise of options warrants and rights?\" From table: Number of Securities to be Issued Upon Exercise of Outstanding Options, Warrants and Rights (a) for approved plans: 448,859. Total approved? The question asks portion of the equity compensation plan approved by security holders is to be issued upon exercise. Probably ratio of 448,859 to total? Need interpret. \"what portion\" maybe fraction of the plan? The table has column (a) number to be issued upon exercise, column (c) remaining available. For approved plans: (a)=448,859, (c)=4,087,587. Total approved plan shares? The portion to be issued upon exercise = 448,859 / (448,859 + 4,087,587) = 448,859 / 4,536,446 ≈ 0.09894. But question wording: \"what portion of the equity compensation plan approved by security holders is to be issued upon the exercise of options warrants and rights?\" Could be asking for the number? \"portion\" suggests fraction. Need compute. Let's compute exactly: 448,859 / (448,859+4,087,587) = 448,859 / 4,536,446. Let's calculate. 4,536,446 * 0.099 = 449,108.154, slightly high. 0.09894 * 4,536,446 = 448,? 4,536,446*0.0989 = 448,? 4,536,446*0.1=453,644.6 minus 4,536,446*0.0011=4,990.09 => 448,654.5. Need 448,859, difference 204.5, /4,536,446=0.0000451. So 0.0989451. So ~9.89%. But maybe they want just 448,859? The question says \"what portion ... is to be issued upon the exercise\" - In table, column (a) is \"Number of Securities to be Issued Upon Exercise of Outstanding Options, Warrants and Rights\". For approved plans, that is 448,859. But \"portion\" might mean fraction of total plan. The table has total row: 448,859 and 4,087,587. The question specifically \"equity compensation plan approved by security holders\" - row. It asks \"what portion ... is to be issued upon the exercise\" - likely the number in column (a) for that row. But \"portion\" could be ratio. Let's read exact: \"what portion of the equity compensation plan approved by security holders is to be issued upon the exercise of options warrants and rights?\" The table header: \"Number of Securities to be Issued Upon Exercise of Outstanding Options, Warrants and Rights\" - that is the portion. So answer 448,859. But \"portion\" might ask for fraction of total authorized? The table has \"Equity compensation plans approved by security holders\" row with (a) 448,859. The question asks \"what portion of the equity compensation plan approved by security holders is to be issued upon the exercise...\" That is exactly column (a). So answer 448,859. Need evidence: value 448,859 | element \"Equity compensation plans approved by security holders\" row. Program: 448859. Final answer inside tags.",
+ "raw_content": "<evidence>\n448,859 | Equity compensation plans approved by security holders\n</evidence>\n<program>\n448859\n</program>\n<answer>448,859</answer>",
+ "usage": {
+  "prompt_tokens": 106646,
+  "completion_tokens": 769,
+  "total_tokens": 107415,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 106496
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.09,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "448,859",
+   "element": "Equity compensation plans approved by security holders",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "448859",
+ "answer_model": "448,859",
+ "program_value": 448859.0,
+ "docfinqa_row": 614
+}

@@ -1,0 +1,61 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0594",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what portion of the total interest expense is related to unpaid taxes in 2007?",
+ "gold": "16.7%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "FIS_2007_0000892569-08-000207.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/RegistrantName/Financial/Financial/IncomeTaxExpenseAmount"
+ ],
+ "r1_reasoning_chars": 3462,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 23029,
+  "completion_tokens": 826,
+  "total_tokens": 23855,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/RegistrantName/Financial/Financial/IncomeTaxExpenseAmount"
+ ],
+ "content_chars": 3627,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need: portion of total interest expense related to unpaid taxes in 2007. The document gives interest expense for unpaid taxes: $1.4 million for year ended Dec 31, 2007. But we need total interest expense? The question asks \"what portion of the total interest expense is related to unpaid taxes in 2007?\" That implies we need total interest expense figure. The excerpt does not provide total interest expense. It only gives the amount related to unpaid taxes. So we cannot compute portion. Maybe \"portion\" means the amount itself? But question says \"portion of the total interest expense\" - likely ratio. Without total, NOT_FOUND. Check if any other region has total interest expense? The provided regions only include income tax expense and unrecognized tax benefits. No total interest expense. So answer NOT_FOUND.\n\nBut let's be careful: The question might be from a document where total interest expense is elsewhere, but the excerpt given doesn't include it. The instruction says \"given excerpts from one document, selected because they should contain the answer\". If not, NOT_FOUND. So answer NOT_FOUND.\n\nEvidence: $1.4 million | InterestExpenseAmount (for unpaid taxes). But we need total. No total. So NOT_FOUND.",
+ "raw_content": "<evidence>$1.4 million | InterestExpenseAmount (for unpaid taxes, year ended December 31, 2007)</evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1214,
+  "completion_tokens": 309,
+  "total_tokens": 1523,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$1.4 million",
+   "element": "InterestExpenseAmount (for unpaid taxes, year ended December 31, 2007)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 9.11,
+ "outline_source": "FIS_2007_0000892569-08-000207.outline.txt",
+ "outline_chars": 91339
+}

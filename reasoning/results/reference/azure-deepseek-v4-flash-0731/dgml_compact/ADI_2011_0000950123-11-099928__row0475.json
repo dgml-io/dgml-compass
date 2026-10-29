@@ -1,0 +1,50 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0475",
+ "format": "dgml_compact",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what is the net change in the total investment from 2010 to 2011?",
+ "gold": "17720",
+ "finqa_id": "ADI/2011/page_81.pdf-2",
+ "source_page": "page_81",
+ "ticker": "ADI",
+ "fiscal_year": "2011",
+ "source_file": "data/docs/dgml_compact/ADI_2011_0000950123-11-099928.dgml.txt",
+ "doc_chars": 439213,
+ "prompt_chars": 439367,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 439213,
+ "original_chars": 439213,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 94232,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1250,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "904,694",
+ "reasoning": "We need to find net change in total investment from 2010 to 2011. The document likely refers to \"total investment\" as cash and cash equivalents plus short-term investments? Or maybe \"total investments\" as in the balance sheet? The question says \"total investment\" - could be \"cash and cash equivalents and short-term investments\" or \"total assets\"? But likely they mean the total of cash and cash equivalents and short-term investments, as that is often called \"total cash and investments\". Let's check the document.\n\nIn the balance sheet: Cash and cash equivalents 2011: $1,405,100; 2010: $1,070,000. Short-term investments 2011: $2,187,362; 2010: $1,617,768. So total cash and short-term investments 2011 = 1,405,100 + 2,187,362 = 3,592,462. 2010 = 1,070,000 + 1,617,768 = 2,687,768. Net change = 3,592,462 - 2,687,768 = 904,694. But the document also mentions \"cash and cash equivalents and short-term investments\" as $3,592.5 million in the MD&A. So that matches.\n\nAlternatively, \"total investment\" might refer to \"total assets\"? But that is not typically called investment. The question says \"net change in the total investment\" - likely they mean the change in the total of cash and investments. Let's see if there is any other \"investment\" line. There is \"Other investments\" but that is small. The most common interpretation is cash + short-term investments.\n\nLet's compute: 2011: 1,405,100 + 2,187,362 = 3,592,462. 2010: 1,070,000 + 1,617,768 = 2,687,768. Difference = 904,694. In thousands, so $904,694 thousand = $904.694 million. The document says \"net increase in cash and cash equivalents of $335.1 million\" but that is just cash. The total investments change is larger.\n\nAlternatively, maybe they mean \"total investments\" as in the balance sheet line \"Other investments\" plus \"short-term investments\"? But that is unlikely.\n\nGiven the phrasing \"total investment\" I think it's cash + short-term investments. Let's check if the document explicitly states \"total cash and cash equivalents and short-term investments\" as a figure. In the MD&A: \"At October 29, 2011, our principal source of liquidity was $3,592.5 million of cash and cash equivalents and short-term investments\". And in the risk factors: \"At October 29, 2011, our principal source of liquidity was $3,592.5 million of cash and cash equivalents and short-term investments.\" So that is the total. For 2010, we can compute from balance sheet: 1,070,000 + 1,617,768 = 2,687,768. So net change = 3,592,462 - 2,687,768 = 904,694 thousand = $904.694 million. But the question asks \"net change in the total investment\" - maybe they want the change in the total of cash and investments? Or maybe they want the change in \"total assets\"? But that is not investment.\n\nLet's see if there is any other \"investment\" line. There is \"Other investments\" which is small. But the question says \"total investment\" - could be the sum of cash, short-term investments, and other investments? But that is not typical.\n\nGiven the context, I think it's cash + short-term investments. Let's compute exactly: 2011: 1,405,100 + 2,187,362 = 3,592,462. 2010: 1,070,000 + 1,617,768 = 2,687,768. Difference = 904,694. So the net change is an increase of $904,694 thousand.\n\nBut the question might be asking for the net change in \"total investment\" as in the total of all investments? The balance sheet has \"Other investments\" of 2,951 in 2011 and 1,317 in 2010. If we include that, total investments = cash + short-term + other investments? But that is not usually called \"total investment\". The phrase \"total investment\" is ambiguous.\n\nLet's check the document for any line item called \"total investments\". There is no such line. The balance sheet has \"Cash and cash equivalents\", \"Short-term investments\", \"Other investments\". The MD&A refers to \"cash and cash equivalents and short-term investments\" as a combined figure. So I'll go with that.\n\nThus net change = 904,694 thousand. But the question asks for the value, likely in dollars. Since the document uses thousands, we should present in thousands? The answer should be a number. I'll put 904,694 (in thousands) or $904.7 million? The question doesn't specify units. Usually in such questions, they expect the number as in the document. Since the document reports in thousands, I'll give 904,694. But let's see if there is any other interpretation.\n\nAlternatively, maybe they mean \"total investment\" as in the total of property, plant and equipment? No.\n\nI'll answer with 904,694.\n\nBut let's double-check: The question says \"net change in the total investment from 2010 to 2011\". Could be the change in \"total assets\"? That is 5,277,635 - 4,328,831 = 948,804. But that is not investment.\n\nGiven the context, I think it's cash + short-term investments.\n\nI'll provide the answer as 904,694.",
+ "raw_content": "<answer>904,694</answer>",
+ "usage": {
+  "prompt_tokens": 94378,
+  "completion_tokens": 1250,
+  "total_tokens": 95628,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 20.39,
+ "answer_tag_found": true,
+ "docfinqa_row": 475
+}

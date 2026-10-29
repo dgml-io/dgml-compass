@@ -1,0 +1,70 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0242",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "is the weighted average useful life ( years ) for purchased technology greater than localization?",
+ "gold": "yes",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "ADBE_2008_0000796343-09-000007.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/ConsolidatedCashFlow/IntangibleAssetsPolicy/table"
+ ],
+ "r1_reasoning_chars": 4071,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 25368,
+  "completion_tokens": 1030,
+  "total_tokens": 26398,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ConsolidatedCashFlow/IntangibleAssetsPolicy/table"
+ ],
+ "content_chars": 3753,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "1",
+ "reasoning": "We need answer yes/no. Figures: purchased technology 4, localization 1. 4 > 1 yes. Need evidence and program.",
+ "raw_content": "<evidence>4 | IntangibleAssetUsefulLife: Purchased technology\n1 | IntangibleAssetUsefulLife: Localization</evidence>\n<program>greater(4, 1)</program>\n<answer>true</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1099,
+  "completion_tokens": 80,
+  "total_tokens": 1179,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "4",
+   "element": "IntangibleAssetUsefulLife: Purchased technology",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1",
+   "element": "IntangibleAssetUsefulLife: Localization",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "greater(4, 1)",
+ "answer_model": "true",
+ "program_value": 1.0,
+ "elapsed_s": 11.27,
+ "outline_source": "ADBE_2008_0000796343-09-000007.outline.txt",
+ "outline_chars": 99180
+}

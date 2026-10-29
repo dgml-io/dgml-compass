@@ -1,0 +1,68 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0157",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "what percentage of major facilities by square footage are owned as of december 28 , 2013?",
+ "gold": "85%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "INTC_2013_0000050863-14-000020.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/Report/UnresolvedStaffCommentsStatus/Report/FacilitySquareFootage"
+ ],
+ "r1_reasoning_chars": 1682,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 25716,
+  "completion_tokens": 382,
+  "total_tokens": 26098,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/Report/UnresolvedStaffCommentsStatus/Report/FacilitySquareFootage"
+ ],
+ "content_chars": 1886,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "84.881603",
+ "reasoning": "We need answer percentage owned. Figures: owned total 46.6, total 54.9. Percentage = 46.6/54.9*100. Need compute. Evidence values. Program divide(46.6,54.9)*100? Use multiply(divide(46.6,54.9),100). Compute: 46.6/54.9 = 0.848816... *100 = 84.8816%. Need answer maybe 84.9%. Let's compute precisely: 54.9*0.85=46.665, so 46.6/54.9=0.848816, 84.88%. Answer 84.9%.",
+ "raw_content": "<evidence>46.6 | Owned facilities Total\n54.9 | Total facilities Total</evidence>\n<program>multiply(divide(46.6, 54.9), 100)</program>\n<answer>84.9</answer>",
+ "r2_usage": {
+  "prompt_tokens": 834,
+  "completion_tokens": 201,
+  "total_tokens": 1035,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "46.6",
+   "element": "Owned facilities Total",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "54.9",
+   "element": "Total facilities Total",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(46.6, 54.9), 100)",
+ "answer_model": "84.9",
+ "program_value": 84.8816029143898,
+ "elapsed_s": 4.83,
+ "outline_source": "INTC_2013_0000050863-14-000020.outline.txt",
+ "outline_chars": 102835
+}

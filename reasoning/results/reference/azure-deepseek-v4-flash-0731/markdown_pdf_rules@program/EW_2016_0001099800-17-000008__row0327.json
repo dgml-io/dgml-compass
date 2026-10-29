@@ -1,0 +1,72 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0327",
+ "format": "markdown_pdf_rules",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what is the current ratio?",
+ "gold": "-0.85",
+ "finqa_id": "EW/2016/page_79.pdf-3",
+ "source_page": "page_79",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf_rules/EW_2016_0001099800-17-000008.md",
+ "doc_chars": 314607,
+ "prompt_chars": 314722,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 314607,
+ "original_chars": 314607,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 69815,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 161,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "4.206573",
+ "reasoning": "We need current ratio = current assets / current liabilities. From balance sheet: total current assets 2,240.0, total current liabilities 532.5. So ratio = 2240/532.5 = 4.206... compute. 2240/532.5 = 4.20657... Let's compute precisely: 532.5*4 = 2130, remainder 110, 110/532.5=0.20657, so 4.2066. Answer as value.",
+ "raw_content": "<evidence>\n2,240.0 | Total current assets\n532.5 | Total current liabilities\n</evidence>\n<program>divide(2240.0, 532.5)</program>\n<answer>4.2066</answer>",
+ "usage": {
+  "prompt_tokens": 70108,
+  "completion_tokens": 161,
+  "total_tokens": 70269,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 69888
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 1.94,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "2,240.0",
+   "element": "Total current assets",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "532.5",
+   "element": "Total current liabilities",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(2240.0, 532.5)",
+ "answer_model": "4.2066",
+ "program_value": 4.206572769953052,
+ "docfinqa_row": 327
+}

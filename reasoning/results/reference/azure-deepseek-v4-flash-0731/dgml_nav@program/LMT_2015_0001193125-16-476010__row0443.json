@@ -1,0 +1,77 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0443",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what were average net sales for mfc from 2013 to 2015 in millions?",
+ "gold": "6886",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "LMT_2015_0001193125-16-476010.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/FilingPartDesignation/CostOfSalesAnalysis/BusinessSegmentResults/SegmentNetSalesAndOperatingProfit/SegmentNetSales",
+  "/chunk/FilingPartDesignation/CostOfSalesAnalysis/BusinessSegmentResults/SegmentNetSalesAndOperatingProfit"
+ ],
+ "r1_reasoning_chars": 6331,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 28884,
+  "completion_tokens": 1617,
+  "total_tokens": 30501,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/FilingPartDesignation/CostOfSalesAnalysis/BusinessSegmentResults/SegmentNetSalesAndOperatingProfit/SegmentNetSales",
+  "/chunk/FilingPartDesignation/CostOfSalesAnalysis/BusinessSegmentResults/SegmentNetSalesAndOperatingProfit"
+ ],
+ "content_chars": 36166,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "6885.666667",
+ "reasoning": "We need average net sales for MFC (Missiles and Fire Control) from 2013 to 2015. From the segment net sales table, MFC net sales: 2015: 6,770; 2014: 7,092; 2013: 6,795. Average = (6770+7092+6795)/3 = 20657/3 = 6885.666... So approximately 6885.67. The question asks \"in millions\" so answer is 6885.67 (or 6885.7). We'll provide exact value. Need evidence: list figures. Program: divide(add(6770, add(7092, 6795)), 3). But careful: the figures are printed as \"6,770\" etc. We'll use numbers without commas.",
+ "raw_content": "<evidence>6,770 | MfcNetSales (2015)\n7,092 | MfcNetSales (2014)\n6,795 | MfcNetSales (2013)\n</evidence>\n<program>divide(add(6770, add(7092, 6795)), 3)</program>\n<answer>6885.67</answer>",
+ "r2_usage": {
+  "prompt_tokens": 9193,
+  "completion_tokens": 251,
+  "total_tokens": 9444,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "6,770",
+   "element": "MfcNetSales (2015)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "7,092",
+   "element": "MfcNetSales (2014)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "6,795",
+   "element": "MfcNetSales (2013)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(6770, add(7092, 6795)), 3)",
+ "answer_model": "6885.67",
+ "program_value": 6885.666666666667,
+ "elapsed_s": 9.75,
+ "outline_source": "LMT_2015_0001193125-16-476010.outline.txt",
+ "outline_chars": 116705
+}

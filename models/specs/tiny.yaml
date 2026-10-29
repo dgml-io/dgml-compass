@@ -1,0 +1,11 @@
+# Start small: one document of one bundled docset, Haiku 5.5 in both slots, one draw (a few
+# cents). Run it before a sweep, then one full docset, then the sweep. One-document runs score
+# low on extraction (dgml names tags across a docset's documents), so do not judge models on it.
+# Price it first: dgc plan -e specs/tiny.yaml
+name: tiny
+corpus: {docsets: {include: [z4ervk9ic0oo/8frgx7rlbew3]}, max_files_per_docset: 1, sampling: fixed}
+axes: {}
+fixed: {generation.model: anthropic/claude-haiku-5-5, generation.label_model: anthropic/claude-haiku-5-5}
+draws: 1
+budget_usd: 2
+seed: 20260917

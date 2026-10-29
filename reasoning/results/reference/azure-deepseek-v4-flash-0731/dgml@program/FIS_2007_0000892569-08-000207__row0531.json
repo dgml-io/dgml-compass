@@ -1,0 +1,74 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0531",
+ "format": "dgml",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what is the percentage change in rent expense from 2006 yo 2007?",
+ "gold": "30.6%",
+ "finqa_id": "FIS/2007/page_94.pdf-3",
+ "source_page": "page_94",
+ "ticker": "FIS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml/FIS_2007_0000892569-08-000207.dgml.xml",
+ "doc_chars": 680888,
+ "prompt_chars": 681041,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 680888,
+ "original_chars": 680888,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 160676,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 254,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "30.5521%",
+ "reasoning": "We need percentage change in rent expense from 2006 to 2007. Rent expense incurred under all operating leases: 2007 $106.4 million, 2006 $81.5 million. Percentage change = (106.4-81.5)/81.5 = 24.9/81.5 = 0.3055... = 30.55%. Need exact. Use figures as printed: $106.4 million and $81.5 million. Compute divide(subtract(106.4, 81.5), 81.5) = 0.3055... = 30.55%. Answer as percentage? The question asks \"percentage change\" so answer 30.55% or 30.5%. We'll give 30.55%.",
+ "raw_content": "<evidence>\n$106.4 million | OperatingExpenseAmount (Rent expense incurred under all operating leases during 2007)\n$81.5 million | OperatingExpenseAmount (Rent expense incurred under all operating leases during 2006)\n</evidence>\n<program>divide(subtract(106.4, 81.5), 81.5)</program>\n<answer>30.55%</answer>",
+ "usage": {
+  "prompt_tokens": 160980,
+  "completion_tokens": 254,
+  "total_tokens": 161234,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 21.82,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$106.4 million",
+   "element": "OperatingExpenseAmount (Rent expense incurred under all operating leases during 2007)",
+   "element_found": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$81.5 million",
+   "element": "OperatingExpenseAmount (Rent expense incurred under all operating leases during 2006)",
+   "element_found": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(subtract(106.4, 81.5), 81.5)",
+ "answer_model": "30.55%",
+ "program_value": 0.3055214723926381,
+ "docfinqa_row": 531
+}

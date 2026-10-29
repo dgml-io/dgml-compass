@@ -1,0 +1,59 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0372",
+ "format": "dgml",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what is the combined number of equity compensation plans approved by security holders",
+ "gold": "4536446",
+ "finqa_id": "HII/2017/page_124.pdf-4",
+ "source_page": "page_124",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/dgml/HII_2017_0001501585-18-000006.dgml.xml",
+ "doc_chars": 733855,
+ "prompt_chars": 734029,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 733855,
+ "original_chars": 733855,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 164566,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 283,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "2",
+ "reasoning": "We need answer combined number of equity compensation plans approved by security holders. Document says \"Equity compensation plans approved by security holders\" row: Number of securities to be issued upon exercise of outstanding options, warrants and rights: 448,859; weighted-average exercise price $0.00; number remaining available 4,087,587. But question asks \"combined number of equity compensation plans approved by security holders\" - likely number of plans? The table has plan category \"Equity compensation plans approved by security holders\" and \"not approved\". The combined number of plans? It might be asking for number of plans approved by security holders. The document mentions 2011 Plan and 2012 Plan both approved by security holders. So combined number = 2. But question wording \"combined number of equity compensation plans approved by security holders\" - maybe from table? The table lists one row for approved plans, not count. But there are two plans: 2011 and 2012. The question likely expects 2. Let's verify: \"Equity compensation plans approved by security holders\" row has no count of plans. But the text says \"HII had stock-based compensation awards outstanding under the following plans: the 2011 Plan and the 2012 Plan.\" Both approved by security holders. So combined number = 2. Answer 2.",
+ "raw_content": "<answer>2</answer>",
+ "usage": {
+  "prompt_tokens": 164867,
+  "completion_tokens": 283,
+  "total_tokens": 165150,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.74,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": null,
+ "answer_model": "2",
+ "program_value": null,
+ "docfinqa_row": 372
+}

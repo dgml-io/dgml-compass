@@ -1,0 +1,73 @@
+{
+ "id": "IP_2007_0001193125-08-042850__row0073",
+ "format": "markdown_pdf_plumber",
+ "key": "IP_2007_0001193125-08-042850",
+ "question": "what percentage of industrial packaging sales where represented by european industrial packaging net sales in 2007?",
+ "gold": "21%",
+ "finqa_id": "IP/2007/page_31.pdf-1",
+ "source_page": "page_31",
+ "ticker": "IP",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_plumber/IP_2007_0001193125-08-042850.md",
+ "doc_chars": 478788,
+ "prompt_chars": 478992,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 478788,
+ "original_chars": 478788,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 118162,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 196,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "20.5529%",
+ "reasoning": "We need to find European Industrial Packaging net sales 2007 and total Industrial Packaging sales 2007. From document: Industrial Packaging net sales 2007 = $5,245 million (from segment table). European Industrial Packaging net sales 2007 = $1,078 million (from European Sales by Industry Segment table). So percentage = 1078/5245 * 100. Compute: 1078/5245 = 0.2055... = 20.55%. Let's compute precisely: 5245 * 0.2055 = 1077.8, so ~20.55%. Answer as percentage.",
+ "raw_content": "<evidence>\n$5,245 | Industrial Packaging net sales 2007 (Net Sales table)\n$1,078 | European Sales by Industry Segment - Industrial Packaging 2007\n</evidence>\n<program>divide(1078, 5245)</program>\n<answer>20.55%</answer>",
+ "usage": {
+  "prompt_tokens": 118469,
+  "completion_tokens": 196,
+  "total_tokens": 118665,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 118272
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.14,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$5,245",
+   "element": "Industrial Packaging net sales 2007 (Net Sales table)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$1,078",
+   "element": "European Sales by Industry Segment - Industrial Packaging 2007",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(1078, 5245)",
+ "answer_model": "20.55%",
+ "program_value": 0.20552907530981887,
+ "docfinqa_row": 73
+}

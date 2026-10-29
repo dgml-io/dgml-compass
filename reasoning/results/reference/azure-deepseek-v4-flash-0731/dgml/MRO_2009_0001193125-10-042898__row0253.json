@@ -1,0 +1,56 @@
+{
+ "id": "MRO_2009_0001193125-10-042898__row0253",
+ "format": "dgml",
+ "key": "MRO_2009_0001193125-10-042898",
+ "question": "what was highest net rental expense in millions?",
+ "gold": "267",
+ "finqa_id": "MRO/2009/page_139.pdf-2",
+ "source_page": "page_139",
+ "ticker": "MRO",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/dgml/MRO_2009_0001193125-10-042898.dgml.xml",
+ "doc_chars": 905450,
+ "prompt_chars": 905587,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": true,
+ "truncation": "head",
+ "kept_chars": 905340,
+ "original_chars": 1110151,
+ "kept_fraction": 0.8155,
+ "est_doc_tokens": 264731,
+ "est_kept_tokens": 212186,
+ "budget_tokens": 240000,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 235,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "The question asks for the highest net rental expense in millions. I need to find rental expense figures in the document. The document is a 10-K for Marathon Oil Corporation. I need to search for \"rental\" or \"rent\" in the document.\n\nLooking through the document, I see \"Leases\" section (Note 25) but it was truncated. The document says \"this document was truncated to fit the context window; the excerpt above may not contain the answer.\"\n\nLet me search for \"rental\" in the provided text. I see \"Operating lease obligations\" in the contractual cash obligations table, but that's not rental expense. I don't see any explicit \"rental expense\" figure in the visible portion.\n\nThe question asks for \"highest net rental expense in millions\" - this would typically be found in a leases note, which is Note 25, but that section is truncated. The document explicitly states it was truncated and may not contain the answer.\n\nSince the document does not contain the rental expense figures (the leases note is cut off), the answer should be NOT_FOUND.",
+ "raw_content": "<answer>NOT_FOUND</answer>",
+ "usage": {
+  "prompt_tokens": 212345,
+  "completion_tokens": 235,
+  "total_tokens": 212580,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 212224
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.84,
+ "answer_tag_found": true,
+ "docfinqa_row": 253
+}

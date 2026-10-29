@@ -1,0 +1,74 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0450",
+ "format": "markdown_pdf_plumber",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "is the weighted average useful life ( years ) for trademarks greater than customer contracts and relationships?",
+ "gold": "no",
+ "finqa_id": "ADBE/2008/page_74.pdf-3",
+ "source_page": "page_74",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_plumber/ADBE_2008_0000796343-09-000007.md",
+ "doc_chars": 913121,
+ "prompt_chars": 913321,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 913121,
+ "original_chars": 913121,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 209296,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 136,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "5",
+ "reasoning": "We need answer question: is weighted average useful life for trademarks greater than customer contracts and relationships? From Note 1 table: Purchased technology 4, Localization 1, Trademarks 5, Customer contracts and relationships 6, Other intangibles 3. So trademarks 5 < customer contracts 6. Answer no. Need evidence and program.",
+ "raw_content": "<evidence>\nTrademarks | 5 | Note 1 Significant Accounting Policies - Intangible assets useful lives\nCustomer contracts and relationships | 6 | Note 1 Significant Accounting Policies - Intangible assets useful lives\n</evidence>\n\n<program>5</program>\n\n<answer>No</answer>",
+ "usage": {
+  "prompt_tokens": 209602,
+  "completion_tokens": 136,
+  "total_tokens": 209738,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 14.11,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "Trademarks",
+   "element": "5 | Note 1 Significant Accounting Policies - Intangible assets useful lives",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "Customer contracts and relationships",
+   "element": "6 | Note 1 Significant Accounting Policies - Intangible assets useful lives",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "5",
+ "answer_model": "No",
+ "program_value": 5.0,
+ "docfinqa_row": 450
+}

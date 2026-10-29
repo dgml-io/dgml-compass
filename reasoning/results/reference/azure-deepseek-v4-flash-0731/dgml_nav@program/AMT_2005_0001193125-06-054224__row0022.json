@@ -1,0 +1,61 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0022",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what is the total value of net operating loss carryforwards?",
+ "gold": "4575515",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "AMT_2005_0001193125-06-054224.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/IncomeTaxes/FinancialStatementHeader/NetOperatingLossCarryforwards"
+ ],
+ "r1_reasoning_chars": 1251,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 28582,
+  "completion_tokens": 327,
+  "total_tokens": 28909,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/IncomeTaxes/FinancialStatementHeader/NetOperatingLossCarryforwards"
+ ],
+ "content_chars": 5275,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "4575515",
+ "reasoning": "We need answer total value of net operating loss carryforwards. Document gives federal and state NOL carryforwards approximately $2.2 billion and $2.4 billion respectively, and table totals $2,157,503 thousand federal and $2,418,012 thousand state. Total = sum = 4,575,515 thousand = $4.575515 billion. Question asks total value. Need compute. Use figures from table totals. Evidence: $2,157,503 | FederalNetOperatingLossExpirationTotal; $2,418,012 | StateNetOperatingLossExpirationTotal. Program add(2157503, 2418012) = 4575515. Answer likely 4,575,515 (in thousands) or $4.6 billion. The question \"total value\" maybe in dollars? The table in thousands. We should output value only, no units unless asked. But question asks total value, likely numeric. We'll output 4575515.",
+ "raw_content": "<evidence>$2,157,503 | FederalNetOperatingLossExpirationTotal</evidence>\n<evidence>$2,418,012 | StateNetOperatingLossExpirationTotal</evidence>\n<program>add(2157503, 2418012)</program>\n<answer>4575515</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1533,
+  "completion_tokens": 268,
+  "total_tokens": 1801,
+  "audio_prompt_tokens": 0
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$2,157,503",
+   "element": "FederalNetOperatingLossExpirationTotal",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "add(2157503, 2418012)",
+ "answer_model": "4575515",
+ "program_value": 4575515.0,
+ "elapsed_s": 5.53,
+ "outline_source": "AMT_2005_0001193125-06-054224.outline.txt",
+ "outline_chars": 112419
+}

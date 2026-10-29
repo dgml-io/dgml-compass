@@ -1,0 +1,61 @@
+{
+ "id": "UPS_2007_0001193125-08-043891__row0608",
+ "key": "UPS_2007_0001193125-08-043891",
+ "question": "what portion of total expected cash outflow for capital leases is due in 2018?",
+ "gold": "17.4%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "UPS_2007_0001193125-08-043891.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/PartII/LiquidityAndCapitalResources/FinancingCashFlowDiscussion/ContractualObligationsCommitments",
+  "/chunk/PartII/LiquidityAndCapitalResources/FinancingCashFlowDiscussion/ContractualObligationsCommitments/table",
+  "/chunk/PartII/LiquidityAndCapitalResources/FinancingCashFlowDiscussion/ContractualObligationsCommitments/table/ContractualObligationsByYear"
+ ],
+ "r1_reasoning_chars": 3195,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 19633,
+  "completion_tokens": 812,
+  "total_tokens": 20445,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/PartII/LiquidityAndCapitalResources/FinancingCashFlowDiscussion/ContractualObligationsCommitments",
+  "/chunk/PartII/LiquidityAndCapitalResources/FinancingCashFlowDiscussion/ContractualObligationsCommitments/table",
+  "/chunk/PartII/LiquidityAndCapitalResources/FinancingCashFlowDiscussion/ContractualObligationsCommitments/table/ContractualObligationsByYear"
+ ],
+ "content_chars": 29303,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer portion of total expected cash outflow for capital leases due in 2018. Document table has years 2008, 2009, 2010, 2011, 2012, After 2012. No 2018 specifically. The \"After 2012\" includes 2013+ but not broken out. So cannot determine 2018. Also note question asks 2018, but table as of Dec 31 2007 has 2008 etc. No 2018. So NOT_FOUND. Need evidence? We can cite table rows. But answer NOT_FOUND.",
+ "raw_content": "<evidence>No figure for 2018 capital lease outflow is present; the table only lists 2008, 2009, 2010, 2011, 2012, and After 2012.</evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 7057,
+  "completion_tokens": 193,
+  "total_tokens": 7250,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 5.91,
+ "outline_source": "UPS_2007_0001193125-08-043891.outline.txt",
+ "outline_chars": 77634
+}

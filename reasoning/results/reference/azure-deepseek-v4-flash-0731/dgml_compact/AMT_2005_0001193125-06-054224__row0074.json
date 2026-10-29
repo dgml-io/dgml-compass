@@ -1,0 +1,50 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0074",
+ "format": "dgml_compact",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what portion of the adjusted consolidated cash flow for the twelve months ended december 31 , 2005 is related to tower cash flow?",
+ "gold": "105.0%",
+ "finqa_id": "AMT/2005/page_54.pdf-2",
+ "source_page": "page_54",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/dgml_compact/AMT_2005_0001193125-06-054224.dgml.txt",
+ "doc_chars": 570128,
+ "prompt_chars": 570346,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 570128,
+ "original_chars": 570128,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 127365,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1301,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "98.7%",
+ "reasoning": "We need to find the portion of adjusted consolidated cash flow related to tower cash flow. The document has a table under \"Information Presented Pursuant to the Indentures...\" with Tower Cash Flow and Adjusted Consolidated Cash Flow. Specifically: \"Tower Cash Flow, for the twelve months ended December 31, 2005 | (524,804)\" and \"Adjusted Consolidated Cash Flow, for the twelve months ended December 31, 2005 | $ 531,822\". Also \"Non-Tower Cash Flow\" is -30,584. The question asks: what portion of the adjusted consolidated cash flow for the twelve months ended December 31, 2005 is related to tower cash flow? That is the ratio of tower cash flow to adjusted consolidated cash flow. Tower cash flow is 524,804 (absolute value? It's shown as negative? Actually the table shows: \"Tower Cash Flow, for the twelve months ended December 31, 2005 | (524,804)\" with parentheses indicating negative? But then \"Adjusted Consolidated Cash Flow\" is 531,822. And \"Non-Tower Cash Flow\" is (30,584). So tower cash flow is 524,804 (positive? Actually the parentheses might indicate negative, but then adjusted = tower + non-tower? 524,804 + (-30,584) = 494,220, not 531,822. Wait, the table has: \"Tower Cash Flow, for the three months ended December 31, 2005 | $ 139,590\", \"Consolidated Cash Flow, for the twelve months ended December 31, 2005 | $ 498,266\", \"Less: Tower Cash Flow, for the twelve months ended December 31, 2005 | (524,804)\", \"Plus: four times Tower Cash Flow, for the three months ended December 31, 2005 | 558,360\", \"Adjusted Consolidated Cash Flow, for the twelve months ended December 31, 2005 | $ 531,822\", \"Non-Tower Cash Flow, for the twelve months ended December 31, 2005 | $ (30,584)\". So the adjusted consolidated cash flow is 531,822. The tower cash flow for the twelve months is 524,804 (positive? It's shown as (524,804) but that might be a subtraction in the calculation. Actually the line \"Less: Tower Cash Flow, for the twelve months ended December 31, 2005 | (524,804)\" indicates that it is subtracted. So the tower cash flow amount is 524,804. The question asks \"what portion of the adjusted consolidated cash flow ... is related to tower cash flow?\" That is the ratio: tower cash flow / adjusted consolidated cash flow = 524,804 / 531,822 ≈ 0.9868 or 98.68%. But we need to be careful: the question might be asking for the percentage. The answer should be a number. Let's compute: 524,804 / 531,822 = 0.9868... So approximately 98.7%. But the question says \"what portion\" - could be a fraction or percentage. Usually they want a percentage. Let's compute exactly: 524804 / 531822 = 0.9868... So 98.68%. But we should check if the tower cash flow is the absolute value? The line says \"Less: Tower Cash Flow\" so it's a positive number being subtracted. So the tower cash flow is 524,804. So the portion is 524,804/531,822. Let's compute: 531,822 - 524,804 = 7,018, so ratio = 1 - 7018/531822 = 1 - 0.0132 = 0.9868. So 98.68%. The answer should be a percentage. The question asks \"what portion\" - could be expressed as a decimal or percentage. I'll give the percentage. But the instruction says \"Give your final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what portion\" - so we can give a percentage. I'll give 98.7% or 98.68%. Let's compute precisely: 524804 / 531822 = 0.9868... Let's do division: 531822 * 0.9868 = 524,804? Actually 531822 * 0.9868 = 524,804? 531822*0.9868 = 524,804? Let's compute: 531822 * 0.9868 = 531822*(1 - 0.0132) = 531822 - 531822*0.0132 = 531822 - 7018.05 = 524803.95, so approximately 524804. So ratio is 0.9868. So 98.68%. I'll put 98.7% or 98.68%. The question says \"what portion\" - could be a fraction. I'll put 98.7% as a percentage. But to be safe, I'll put the decimal 0.9868? The instruction says \"no explanation or units unless the question asks for them.\" The question asks \"what portion\" - portion can be a fraction or percentage. I'll put 98.7% as a percentage. But maybe they want the ratio as a decimal. I'll put 0.9868. Let's see the context: The document gives numbers in thousands. So the ratio is 524,804/531,822 = 0.9868. I'll put 98.7% or 0.987. I'll put 98.7% as the answer. But to be precise, I'll put 98.68%. Let's compute exactly: 524804/531822 = 0.9868... I'll put 98.7% as a rounded value. The question says \"what portion\" - I'll give the percentage. I'll put 98.7% inside the answer tags.",
+ "raw_content": "<answer>98.7%</answer>",
+ "usage": {
+  "prompt_tokens": 127520,
+  "completion_tokens": 1301,
+  "total_tokens": 128821,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 16.0,
+ "answer_tag_found": true,
+ "docfinqa_row": 74
+}

@@ -1,0 +1,77 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0139",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was average net sales for space systems in millions from 2013 to 2015?",
+ "gold": "9198",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "LMT_2015_0001193125-16-476010.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/FilingPartDesignation/CostOfSalesAnalysis/BusinessSegmentResults/SegmentNetSalesAndOperatingProfit/SegmentNetSalesTableHeader",
+  "/chunk/FilingPartDesignation/CostOfSalesAnalysis/BusinessSegmentResults/SegmentNetSalesAndOperatingProfit/SegmentNetSales/SpaceSystemsNetSales"
+ ],
+ "r1_reasoning_chars": 3956,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 28884,
+  "completion_tokens": 939,
+  "total_tokens": 29823,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/FilingPartDesignation/CostOfSalesAnalysis/BusinessSegmentResults/SegmentNetSalesAndOperatingProfit/SegmentNetSalesTableHeader",
+  "/chunk/FilingPartDesignation/CostOfSalesAnalysis/BusinessSegmentResults/SegmentNetSalesAndOperatingProfit/SegmentNetSales/SpaceSystemsNetSales"
+ ],
+ "content_chars": 2828,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "9198.333333",
+ "reasoning": "We need average of Space Systems net sales for 2013, 2014, 2015. The table header shows 2015, 2014, 2013 order. Space Systems values: 9,105 (2015), 9,202 (2014), 9,288 (2013). Average = (9105+9202+9288)/3 = 9198.333... Need answer in millions? The values are in millions, so average is 9198.33. The question asks \"in millions\" so answer numeric. We'll provide evidence and program.",
+ "raw_content": "<evidence>9,105 | SpaceSystemsNetSales (2015)\n9,202 | SpaceSystemsNetSales (2014)\n9,288 | SpaceSystemsNetSales (2013)</evidence>\n<program>divide(add(add(9105, 9202), 9288), 3)</program>\n<answer>9198.333333333334</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1075,
+  "completion_tokens": 203,
+  "total_tokens": 1278,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "9,105",
+   "element": "SpaceSystemsNetSales (2015)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "9,202",
+   "element": "SpaceSystemsNetSales (2014)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "9,288",
+   "element": "SpaceSystemsNetSales (2013)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(add(9105, 9202), 9288), 3)",
+ "answer_model": "9198.333333333334",
+ "program_value": 9198.333333333334,
+ "elapsed_s": 7.22,
+ "outline_source": "LMT_2015_0001193125-16-476010.outline.txt",
+ "outline_chars": 116705
+}

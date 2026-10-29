@@ -1,0 +1,84 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0722",
+ "format": "dgml",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "what was map's 3 year growth of gasoline production?",
+ "gold": "3.7%",
+ "finqa_id": "MRO/2003/page_45.pdf-3",
+ "source_page": "page_45",
+ "ticker": "MRO",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/dgml/MRO_2003_0001193125-04-036535.dgml.xml",
+ "doc_chars": 894793,
+ "prompt_chars": 894934,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": true,
+ "truncation": "head",
+ "kept_chars": 894683,
+ "original_chars": 1111982,
+ "kept_fraction": 0.8046,
+ "est_doc_tokens": 266687,
+ "est_kept_tokens": 211360,
+ "budget_tokens": 240000,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 398,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-2.4096%",
+ "reasoning": "We need answer question: \"what was map's 3 year growth of gasoline production?\" Need find MAP gasoline production figures for 2003, 2002, 2001. In document, there is \"Refined Product Yields\" table with Gasoline: 2003 567, 2002 581, 2001 581 (thousands of barrels per day). \"3 year growth\" likely from 2001 to 2003? Or maybe 2003 vs 2001? Need compute growth. Could be percentage change over 3 years: (567-581)/581 = -14/581 = -2.41%? Or maybe from 2001 to 2003. The question says \"map's 3 year growth of gasoline production\" - likely the change over the three-year period from 2001 to 2003. Need compute. Use figures: 2001 581, 2003 567. Growth = (567-581)/581 = -14/581 = -0.024096... = -2.41%. Or maybe they want absolute change? The question asks \"growth\" likely percentage. We'll provide answer as -2.4% or -2.41%. Need evidence: 567 | RefinedProductYield (Gasoline 2003), 581 | RefinedProductYield (Gasoline 2002), 581 | RefinedProductYield (Gasoline 2001). Program: divide(subtract(567, 581), 581). Final answer inside <answer> tags.",
+ "raw_content": "<evidence>\n567 | RefinedProductYield (Gasoline 2003)\n581 | RefinedProductYield (Gasoline 2002)\n581 | RefinedProductYield (Gasoline 2001)\n</evidence>\n<program>\ndivide(subtract(567, 581), 581)\n</program>\n<answer>-2.41%</answer>",
+ "usage": {
+  "prompt_tokens": 211681,
+  "completion_tokens": 398,
+  "total_tokens": 212079,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 211456
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.41,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "567",
+   "element": "RefinedProductYield (Gasoline 2003)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "581",
+   "element": "RefinedProductYield (Gasoline 2002)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "581",
+   "element": "RefinedProductYield (Gasoline 2001)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(567, 581), 581)",
+ "answer_model": "-2.41%",
+ "program_value": -0.024096385542168676,
+ "docfinqa_row": 722
+}

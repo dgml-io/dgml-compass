@@ -1,0 +1,53 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0451",
+ "format": "dgml",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "what was the percent of the total number of securities to be issued upon exercise of outstanding options that was securities to be issued upon exercise of outstanding options",
+ "gold": "99.5%",
+ "finqa_id": "CME/2010/page_123.pdf-3",
+ "source_page": "page_123",
+ "ticker": "CME",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/dgml/CME_2010_0001193125-11-050252.dgml.xml",
+ "doc_chars": 731824,
+ "prompt_chars": 732087,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 731824,
+ "original_chars": 731824,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 170125,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 812,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "100%",
+ "reasoning": "We need answer percent of total number of securities to be issued upon exercise of outstanding options that was securities to be issued upon exercise of outstanding options? The question is oddly phrased: \"what was the percent of the total number of securities to be issued upon exercise of outstanding options that was securities to be issued upon exercise of outstanding options\" That is 100%? But likely they want from equity compensation table: total outstanding options 1,217,121, approved 1,211,143, not approved 5,978. Percent of total that was approved? The question says \"percent of the total number of securities to be issued upon exercise of outstanding options that was securities to be issued upon exercise of outstanding options\" - maybe they want the percentage of total that was approved? Or not approved? The wording: \"what was the percent of the total number of securities to be issued upon exercise of outstanding options that was securities to be issued upon exercise of outstanding options\" It repeats. Possibly they want the percentage of total that was approved by security holders? Let's parse: \"what was the percent of the total number of securities to be issued upon exercise of outstanding options that was securities to be issued upon exercise of outstanding options\" That is tautological. Maybe they meant \"what was the percent of the total number of securities to be issued upon exercise of outstanding options that was securities to be issued upon exercise of outstanding options not approved by security holders\"? But the question as given is exactly that. It might be a trick: 100%. But let's check the table: Total outstanding options 1,217,121. Approved 1,211,143, not approved 5,978. The percent of total that was approved = 1,211,143/1,217,121 = 99.508...%. Not approved = 0.491...%. The question says \"that was securities to be issued upon exercise of outstanding options\" - maybe they want the percentage of total that was approved? The phrase \"that was securities to be issued upon exercise of outstanding options\" is ambiguous. But the question likely from a dataset asking: \"what was the percent of the total number of securities to be issued upon exercise of outstanding options that was securities to be issued upon exercise of outstanding options\" Actually it might be a typo: \"what was the percent of the total number of securities to be issued upon exercise of outstanding options that was securities to be issued upon exercise of outstanding options\" Could be they want the percentage of total that was approved by security holders? The table has columns: (a) Number of Securities to be Issued Upon Exercise of Outstanding Options, (b) Weighted-Average Exercise Price, (c) Number of Securities Remaining Available. The question: \"what was the percent of the total number of securities to be issued upon exercise of outstanding options that was securities to be issued upon exercise of outstanding options\" That is 100% because it's the same category. But maybe they meant \"that was securities to be issued upon exercise of outstanding options not approved by security holders\"? The question as written: \"what was the percent of the total number of securities to be issued upon exercise of outstanding options that was securities to be issued upon exercise of outstanding options\" It repeats exactly. So answer is 100%. But let's see if there is any other interpretation. The document has a table with \"Equity compensation plans approved by security holders\" and \"not approved\". The total is 1,217,121. The percent of total that was approved is 99.5%. The percent that was not approved is 0.49%. The question says \"that was securities to be issued upon exercise of outstanding options\" - maybe they want the percentage of total that was approved? But the phrase \"that was securities to be issued upon exercise of outstanding options\" is the same as the numerator. So it's 100%. I'll answer 100%.",
+ "raw_content": "<answer>100%</answer>",
+ "usage": {
+  "prompt_tokens": 170283,
+  "completion_tokens": 812,
+  "total_tokens": 171095,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 170240
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.72,
+ "answer_tag_found": true,
+ "docfinqa_row": 451
+}

@@ -1,0 +1,75 @@
+{
+ "id": "IP_2007_0001193125-08-042850__row0062",
+ "format": "dgml",
+ "key": "IP_2007_0001193125-08-042850",
+ "question": "what percentage of december 31 , 2007 , total future minimum commitments under existing non-cancelable operating leases and purchase obligations were due to purchase obligations for the year of 2008?",
+ "gold": "93%",
+ "finqa_id": "IP/2007/page_75.pdf-1",
+ "source_page": "page_75",
+ "ticker": "IP",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml/IP_2007_0001193125-08-042850.dgml.xml",
+ "doc_chars": 914092,
+ "prompt_chars": 914380,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 914092,
+ "original_chars": 914092,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 217793,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 370,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "93.4897%",
+ "reasoning": "We need answer question. Need find figures. Question: \"what percentage of december 31 , 2007 , total future minimum commitments under existing non-cancelable operating leases and purchase obligations were due to purchase obligations for the year of 2008?\"\n\nWe need identify table in document: \"At December 31, 2007, total future minimum commitments under existing non-cancelable operating leases and purchase obligations were as follows:\" There is table with 2008: Lease obligations $136, Purchase obligations $1,953, Total $2,089. Also another table in MD&A \"Contractual obligations\" has total $2,356 etc but that includes debt. The question specifically \"total future minimum commitments under existing non-cancelable operating leases and purchase obligations\" - that's Note 10 table. So purchase obligations 2008 = 1,953, total 2008 = 2,089. Percentage = 1953/2089 = ? Compute. 1953/2089 ≈ 0.9349 = 93.49%. Need exact. Let's compute: 2089*0.935 = 1953.215? 2089*0.935 = 1953.215. So 1953/2089 = 0.934897... 93.49%. Answer likely 93.5%. Need evidence figures. Use values as printed: $1,953 and $2,089. Program divide(1953, 2089). Final answer inside tags.",
+ "raw_content": "<evidence>\n$1,953 | Purchase obligations 2008\n$2,089 | Total 2008 (Note 10 commitments table)\n</evidence>\n<program>divide(1953, 2089)</program>\n<answer>93.5%</answer>",
+ "usage": {
+  "prompt_tokens": 218119,
+  "completion_tokens": 370,
+  "total_tokens": 218489,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 15.91,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$1,953",
+   "element": "Purchase obligations 2008",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$2,089",
+   "element": "Total 2008 (Note 10 commitments table)",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(1953, 2089)",
+ "answer_model": "93.5%",
+ "program_value": 0.9348970799425562,
+ "docfinqa_row": 62
+}

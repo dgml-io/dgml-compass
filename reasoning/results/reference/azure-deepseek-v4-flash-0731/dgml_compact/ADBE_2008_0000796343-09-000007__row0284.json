@@ -1,0 +1,53 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0284",
+ "format": "dgml_compact",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "what is the yearly amortization rate for the purchased technology?",
+ "gold": "25%",
+ "finqa_id": "ADBE/2008/page_74.pdf-1",
+ "source_page": "page_74",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml_compact/ADBE_2008_0000796343-09-000007.dgml.txt",
+ "doc_chars": 545889,
+ "prompt_chars": 546044,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 545889,
+ "original_chars": 545889,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 114389,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 360,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "25%",
+ "reasoning": "The question asks for the yearly amortization rate for purchased technology. I need to find the relevant information in the document.\n\nLooking at the document, in the \"IntangibleAssetsPolicy\" section, there's a table:\n\"IntangibleAssetUsefulLife: Weighted Average Useful Life (Years)\nIntangibleAssetUsefulLife: Purchased technology | 4\"\n\nSo the weighted average useful life for purchased technology is 4 years. The yearly amortization rate would be 1/4 = 25%.\n\nAlso, in Note 5, there's a table showing expected amortization for purchased technology:\n\"ExpectedAmortizationByYear: 2009 | $ 56,230 | $ 79,371\"\nThe purchased technology net is $72,800, and the 2009 amortization is $56,230. That's about 77%, not a straight-line rate.\n\nBut the question asks for the \"yearly amortization rate\" - this likely refers to the useful life of 4 years, meaning 25% per year.\n\nLet me check the document again. In the \"IntangibleAssetsPolicy\" section:\n\"IntangibleAssetsPolicy: Our intangible assets are amortized over their estimated useful lives of 1 to 13 years as shown in the table below. Amortization is based on the pattern in which the economic benefits of the intangible asset will be consumed.\ntable:\nIntangibleAssetUsefulLife: Weighted Average Useful Life (Years)\nIntangibleAssetUsefulLife: Purchased technology | 4\"\n\nSo purchased technology has a weighted average useful life of 4 years. The yearly amortization rate would be 25% (1/4).\n\nThe answer should be 25%.",
+ "raw_content": "<answer>25%</answer>",
+ "usage": {
+  "prompt_tokens": 114529,
+  "completion_tokens": 360,
+  "total_tokens": 114889,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 110592
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.45,
+ "answer_tag_found": true,
+ "docfinqa_row": 284
+}

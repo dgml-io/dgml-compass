@@ -1,0 +1,53 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0566",
+ "format": "markdown_pdf_poppler",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "as of december 31 , 2008 , what was the percent of the maturities in 2012 of the aggregate carrying value of long-term debt , including capital leases",
+ "gold": "45.3%",
+ "finqa_id": "AMT/2008/page_94.pdf-1",
+ "source_page": "page_94",
+ "ticker": "AMT",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_poppler/AMT_2008_0001193125-09-039177.md",
+ "doc_chars": 503442,
+ "prompt_chars": 503681,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 503442,
+ "original_chars": 503442,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 94268,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1243,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "45.30",
+ "reasoning": "We need to find the maturities of long-term debt as of Dec 31, 2008. In note 6, there is a table \"Maturities\" showing aggregate carrying value of long-term debt, including capital leases, for next five years and thereafter. The table shows:\n\n2009: $1,837\n2010: $60,989\n2011: $1,018\n2012: $1,962,822\n2013: $646\nThereafter: $2,305,054\nTotal cash obligations: $4,332,366\n\nBut the question asks: \"as of december 31 , 2008 , what was the percent of the maturities in 2012 of the aggregate carrying value of long-term debt , including capital leases\"\n\nSo we need the percentage that 2012 maturities represent of the total aggregate carrying value. The total cash obligations is $4,332,366. But the carrying value of long-term obligations is $4,333,146 (from balance sheet). The table says \"aggregate carrying value of long-term debt, including capital leases\" but the table shows cash obligations. Actually the table header says \"aggregate carrying value of long-term debt, including capital leases\" but the numbers are cash obligations. The total cash obligations is $4,332,366. The carrying value is $4,333,146. The difference is unamortized discounts and premiums. The question says \"aggregate carrying value of long-term debt, including capital leases\" so we should use the carrying value? But the table gives cash obligations. However, the table is titled \"Maturities\" and shows \"aggregate carrying value of long-term debt, including capital leases\" but the numbers are principal payments. Actually the note says: \"As of December 31, 2008, aggregate carrying value of long-term debt, including capital leases, for the next five years and thereafter are estimated to be (in thousands):\" and then shows the table. So the numbers are the carrying values? But they sum to $4,332,366, while the balance sheet shows $4,333,146. The difference is $780 which is unamortized discounts and premiums. The table says \"Total cash obligations\" and then \"Unamortized discounts and premiums, net\" and then \"Balance as of December 31, 2008\". So the table shows cash obligations (principal payments) and then adjusts to get carrying value. So the question asks for the percent of maturities in 2012 of the aggregate carrying value. So we need to compute 2012 maturities / total carrying value. The 2012 maturities are $1,962,822. The total carrying value is $4,333,146. So percentage = 1,962,822 / 4,333,146 * 100 = ?\n\nCompute: 1,962,822 / 4,333,146 ≈ 0.4529, so 45.29%. Let's compute precisely: 4,333,146 * 0.45 = 1,949,915.7, difference 12,906.3, so 0.00298, so 0.45298, so 45.30% approximately. But we should use the exact numbers. Alternatively, the question might expect the percentage of the total cash obligations? But it says \"aggregate carrying value\" so we use the carrying value. The table gives the cash obligations, but the carrying value is the balance. The question says \"as of december 31 , 2008 , what was the percent of the maturities in 2012 of the aggregate carrying value of long-term debt , including capital leases\" So we need the percentage of the 2012 maturities relative to the total carrying value. The total carrying value is $4,333,146. The 2012 maturities are $1,962,822. So percentage = 1,962,822 / 4,333,146 * 100 = 45.30% (rounded). Let's compute exactly: 1,962,822 / 4,333,146 = 0.45298... so 45.30% if rounding to two decimals. But the answer might be expected as a number without units. The question asks for the percent, so we give the number.\n\nWe'll answer 45.30% or 45.3%. But let's check if there is any other interpretation. The table shows \"Maturities\" and the total cash obligations is $4,332,366. If we use that as denominator, then 1,962,822 / 4,332,366 = 0.4530 as well, almost same. But the question explicitly says \"aggregate carrying value\" so we use the carrying value. The carrying value is $4,333,146. So we'll use that.\n\nThus answer: 45.30% (or 45.3%). We'll put the number without % sign? The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for the percent, so we can give the number. Usually they want the numeric value. So we'll put 45.30 or 45.3. I'll put 45.30.\n\nBut let's double-check the numbers: In the table, 2012 is $1,962,822. Total cash obligations is $4,332,366. The carrying value is $4,333,146. So percentage = 1,962,822 / 4,333,146 = 0.45298... So 45.30% if rounding to two decimals. I'll answer 45.30.\n\nAlternatively, if they want the percentage as a decimal? No, they ask \"what was the percent\" so we give the number.\n\nThus final answer: 45.30",
+ "raw_content": "<answer>45.30</answer>",
+ "usage": {
+  "prompt_tokens": 94433,
+  "completion_tokens": 1243,
+  "total_tokens": 95676,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 94208
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 25.36,
+ "answer_tag_found": true,
+ "docfinqa_row": 566
+}

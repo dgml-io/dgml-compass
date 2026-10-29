@@ -1,0 +1,67 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0200",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the interest expense in 2015 assuming that all the debt is interest bearing debt , ( in billions ) ?",
+ "gold": "0.86",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "PM_2015_0001413329-16-000076.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/Income/header",
+  "/chunk/Income/table/InterestExpenseAmount"
+ ],
+ "r1_reasoning_chars": 2594,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 39611,
+  "completion_tokens": 618,
+  "total_tokens": 40229,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/Income/header",
+  "/chunk/Income/table/InterestExpenseAmount"
+ ],
+ "content_chars": 2856,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "1.008",
+ "reasoning": "We need answer interest expense 2015. Document shows Interest expense, net (Note 14) 1,008 in millions. Question asks assuming all debt is interest bearing debt, in billions. The interest expense is net, but question says assuming all debt is interest bearing debt - maybe need gross interest expense? But document only gives net. Need check if there is note 14 with gross? The excerpt only income statement. The question wording \"assuming that all the debt is interest bearing debt\" might be from a different context? But we only have income statement. Interest expense net is 1,008 million = 1.008 billion. If they ask interest expense in 2015, likely 1,008 million = 1.008 billion. But \"assuming all debt is interest bearing debt\" might imply need to compute from balance sheet? Not in excerpt. So answer 1.008. Need evidence: Interest expense, net (Note 14) | 1,008 (in millions). Convert to billions: 1,008 / 1000 = 1.008. Program: divide(1008, 1000). But figure printed as 1,008 with commas. Use 1008.",
+ "raw_content": "<evidence>1,008 | InterestExpenseAmount (Interest expense, net (Note 14))</evidence>\n<program>divide(1008, 1000)</program>\n<answer>1.008</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1282,
+  "completion_tokens": 298,
+  "total_tokens": 1580,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,008",
+   "element": "InterestExpenseAmount (Interest expense, net (Note 14))",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(1008, 1000)",
+ "answer_model": "1.008",
+ "program_value": 1.008,
+ "elapsed_s": 8.71,
+ "outline_source": "PM_2015_0001413329-16-000076.outline.txt",
+ "outline_chars": 156714
+}

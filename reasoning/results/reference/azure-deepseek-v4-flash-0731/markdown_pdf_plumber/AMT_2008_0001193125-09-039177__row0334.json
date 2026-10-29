@@ -1,0 +1,59 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0334",
+ "format": "markdown_pdf_plumber",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "what will be the balance of aggregate carrying value of long-term debt as of december 31 , 2009?",
+ "gold": "4331309",
+ "finqa_id": "AMT/2008/page_94.pdf-2",
+ "source_page": "page_94",
+ "ticker": "AMT",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_plumber/AMT_2008_0001193125-09-039177.md",
+ "doc_chars": 448607,
+ "prompt_chars": 448792,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 448607,
+ "original_chars": 448607,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 105711,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "stop",
+   "completion_tokens": 544,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 1,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need to find the balance of aggregate carrying value of long-term debt as of December 31, 2009. The document provides a table \"Maturities\" in note 6 (Long-Term Obligations) that shows aggregate carrying value of long-term debt for future years. Specifically, it shows for 2009: $1,837 thousand. But that is the carrying value of long-term debt due in 2009? Actually the table says \"aggregate carrying value of long-term debt, including capital leases, for the next five years and thereafter are estimated to be (in thousands):\" and lists 2009: $1,837, 2010: $60,989, etc. That is the amount of principal payments due in each year, not the balance outstanding at that date. The question asks \"balance of aggregate carrying value of long-term debt as of December 31, 2009\". That would be the total carrying value of long-term obligations outstanding at that date, which is not directly given. However, we can compute it from the balance sheet as of Dec 31, 2008: total long-term obligations were $4,333,146 thousand. Then we need to subtract the principal payments due in 2009? But the carrying value includes discounts/premiums. The table shows \"Total cash obligations\" and then \"Unamortized discounts and premiums, net\" to reconcile to balance. So the carrying value as of Dec 31, 2008 is $4,333,146. To get the balance as of Dec 31, 2009, we would need to know the payments made during 2009 and any new borrowings. But the document is for fiscal year 2008, so it does not provide future events. The question asks \"what will be the balance\" - that is a future projection. The document does not contain that information. It only gives the maturity schedule of principal payments, not the outstanding balance at future dates. The question might be interpreted as: what is the carrying value of long-term debt that matures in 2009? But that is $1,837 thousand. However, the question says \"balance of aggregate carrying value\" which is the total outstanding. Since we don't have future events, the answer is NOT_FOUND.\n\nAlternatively, maybe they want the amount of long-term debt due in 2009 from the maturity table? But the phrasing \"balance of aggregate carrying value\" suggests the total outstanding at that date. The document does not provide a projected balance. So NOT_FOUND.\n\nI'll answer NOT_FOUND.",
+ "raw_content": "<answer>NOT_FOUND</answer>",
+ "usage": {
+  "prompt_tokens": 105863,
+  "completion_tokens": 544,
+  "total_tokens": 106407,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 105728
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.29,
+ "answer_tag_found": true,
+ "docfinqa_row": 334
+}

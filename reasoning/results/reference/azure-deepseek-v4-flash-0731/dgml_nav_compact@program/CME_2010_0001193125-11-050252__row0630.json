@@ -1,0 +1,73 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0630",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "whats is the percentage of equity compensation plans that were not approved by security holders?",
+ "gold": "0.491%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "CME_2010_0001193125-11-050252.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/Part/SecurityOwnership/EquityCompensationPlanInformation",
+  "/chunk/Part/SecurityOwnership/EquityCompensationPlanInformation/table"
+ ],
+ "r1_reasoning_chars": 3098,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 22564,
+  "completion_tokens": 715,
+  "total_tokens": 23279,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/Part/SecurityOwnership/EquityCompensationPlanInformation",
+  "/chunk/Part/SecurityOwnership/EquityCompensationPlanInformation/table"
+ ],
+ "content_chars": 6870,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "0.491159",
+ "reasoning": "We need percentage of equity compensation plans not approved by security holders. The table shows number of securities to be issued upon exercise of outstanding options: approved 1,211,143; not approved 5,978; total 1,217,121. Percentage = 5,978 / 1,217,121 * 100. Compute.",
+ "raw_content": "<evidence>\n5,978 | Equity compensation plans not approved by security holders (Number of Securities to be Issued Upon Exercise of Outstanding Options)\n1,217,121 | Total (Number of Securities to be Issued Upon Exercise of Outstanding Options)\n</evidence>\n<program>multiply(divide(5978, 1217121), 100)</program>\n<answer>0.4912</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1777,
+  "completion_tokens": 156,
+  "total_tokens": 1933,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "5,978",
+   "element": "Equity compensation plans not approved by security holders (Number of Securities to be Issued Upon Exercise of Outstanding Options)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1,217,121",
+   "element": "Total (Number of Securities to be Issued Upon Exercise of Outstanding Options)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "multiply(divide(5978, 1217121), 100)",
+ "answer_model": "0.4912",
+ "program_value": 0.49115905485157185,
+ "elapsed_s": 7.81,
+ "outline_source": "CME_2010_0001193125-11-050252.outline.txt",
+ "outline_chars": 87444
+}

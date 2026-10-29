@@ -1,0 +1,72 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0624",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "in 2005 what was the percentage of the federal nol set to expire between 2016 to 2020",
+ "gold": "18.4%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "AMT_2005_0001193125-06-054224.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/IncomeTaxes/FinancialStatementHeader/table/NetOperatingLossExpiration",
+  "/chunk/IncomeTaxes"
+ ],
+ "r1_reasoning_chars": 4937,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 28605,
+  "completion_tokens": 1241,
+  "total_tokens": 29846,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/IncomeTaxes/FinancialStatementHeader/table/NetOperatingLossExpiration",
+  "/chunk/IncomeTaxes"
+ ],
+ "content_chars": 135355,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "18.432929",
+ "reasoning": "We need answer percentage of federal NOL expiring 2016-2020 in 2005. Need compute from table. Federal NOL expiration: 2016 to 2020 = 397,691. Total federal = 2,157,503. Percentage = 397,691 / 2,157,503 * 100. Compute. Let's calculate. 397,691 / 2,157,503 ≈ 0.18433? 2,157,503 * 0.184 = 397,? 2,157,503*0.18=388,350.54; remainder 9,340.46; /2,157,503=0.00433; total 0.18433 -> 18.433%. More precisely 18.43%. Need answer as percentage. Use figures as printed. Evidence: 397,691 | FederalNetOperatingLossExpiration (2016 to 2020); 2,157,503 | FederalNetOperatingLossExpirationTotal. Program: multiply(divide(397691, 2157503), 100).",
+ "raw_content": "<evidence>397,691 | FederalNetOperatingLossExpiration (2016 to 2020)\n2,157,503 | FederalNetOperatingLossExpirationTotal</evidence>\n<program>multiply(divide(397691, 2157503), 100)</program>\n<answer>18.43</answer>",
+ "r2_usage": {
+  "prompt_tokens": 31783,
+  "completion_tokens": 299,
+  "total_tokens": 32082,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "397,691",
+   "element": "FederalNetOperatingLossExpiration (2016 to 2020)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "2,157,503",
+   "element": "FederalNetOperatingLossExpirationTotal",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(397691, 2157503), 100)",
+ "answer_model": "18.43",
+ "program_value": 18.432929177850507,
+ "elapsed_s": 12.62,
+ "outline_source": "AMT_2005_0001193125-06-054224.outline.txt",
+ "outline_chars": 112419
+}

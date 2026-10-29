@@ -1,0 +1,61 @@
+{
+ "id": "APD_2016_0001193125-16-773346__row0104",
+ "key": "APD_2016_0001193125-16-773346",
+ "question": "considering the years 2015-2016 , what is the decrease observed in the cash contributions to funded plans and benefit payments for unfunded plans?",
+ "gold": "42.32%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "APD_2016_0001193125-16-773346.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/RetirementBenefits/PensionPlanAssets/EquitySecuritiesFairValue/PensionContributionsAndBenefitPayments"
+ ],
+ "r1_reasoning_chars": 2901,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 30016,
+  "completion_tokens": 722,
+  "total_tokens": 30738,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/RetirementBenefits/PensionPlanAssets/EquitySecuritiesFairValue/PensionContributionsAndBenefitPayments"
+ ],
+ "content_chars": 5704,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer. Need find figures for 2015 and 2016 contributions. Excerpt only mentions 2016 $79.3 and 2017 anticipated $65-$85. No 2015 figure. Maybe elsewhere? The region only has 2016. Question asks decrease observed in years 2015-2016. Need 2015 and 2016. Document excerpt doesn't include 2015. Could be NOT_FOUND. But maybe \"decrease observed\" means from 2015 to 2016, need both. Only 2016 given. So NOT_FOUND. Need evidence maybe $79.3 | PensionContributionsAndBenefitPayments. But no 2015. Answer NOT_FOUND.",
+ "raw_content": "<evidence>$79.3 | PensionContributionsAndBenefitPayments</evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1631,
+  "completion_tokens": 188,
+  "total_tokens": 1819,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$79.3",
+   "element": "PensionContributionsAndBenefitPayments",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 5.52,
+ "outline_source": "APD_2016_0001193125-16-773346.outline.txt",
+ "outline_chars": 118036
+}

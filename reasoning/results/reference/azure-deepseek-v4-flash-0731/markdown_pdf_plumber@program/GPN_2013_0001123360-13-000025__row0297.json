@@ -1,0 +1,74 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0297",
+ "format": "markdown_pdf_plumber",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what is the total fair value of the granted shares in 2013 , ( in thousands ) ?",
+ "gold": "24684",
+ "finqa_id": "GPN/2013/page_87.pdf-1",
+ "source_page": "page_87",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/markdown_pdf_plumber/GPN_2013_0001123360-13-000025.md",
+ "doc_chars": 385288,
+ "prompt_chars": 385456,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 385288,
+ "original_chars": 385288,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 88373,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 243,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "24684",
+ "reasoning": "We need answer: \"what is the total fair value of the granted shares in 2013, (in thousands)?\" Need find in document. Likely restricted stock granted shares and fair value. In Note 11 restricted stock table: Granted 561 shares (thousands) with weighted average grant-date fair value $44. Total fair value = 561 * 44 = 24,684 thousand. But question says \"granted shares\" maybe stock options? There were no options granted. Also employee stock purchase plan? \"granted shares\" likely restricted stock awards granted. The table shows \"Granted 561\" and \"Weighted Average Grant-Date Fair Value 44\". So total fair value = 561*44 = 24,684. Need evidence: value 561 | Granted (restricted stock table), 44 | Weighted Average Grant-Date Fair Value. Program multiply(561, 44). Answer 24684.",
+ "raw_content": "<evidence>\n561 | Granted (restricted stock awards table)\n44 | Weighted Average Grant-Date Fair Value\n</evidence>\n<program>multiply(561, 44)</program>\n<answer>24684</answer>",
+ "usage": {
+  "prompt_tokens": 88680,
+  "completion_tokens": 243,
+  "total_tokens": 88923,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.87,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "561",
+   "element": "Granted (restricted stock awards table)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "44",
+   "element": "Weighted Average Grant-Date Fair Value",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(561, 44)",
+ "answer_model": "24684",
+ "program_value": 24684.0,
+ "docfinqa_row": 297
+}

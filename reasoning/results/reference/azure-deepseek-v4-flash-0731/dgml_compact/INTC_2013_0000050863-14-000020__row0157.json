@@ -1,0 +1,53 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0157",
+ "format": "dgml_compact",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "what percentage of major facilities by square footage are owned as of december 28 , 2013?",
+ "gold": "85%",
+ "finqa_id": "INTC/2013/page_29.pdf-1",
+ "source_page": "page_29",
+ "ticker": "INTC",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/dgml_compact/INTC_2013_0000050863-14-000020.dgml.txt",
+ "doc_chars": 546358,
+ "prompt_chars": 546536,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 546358,
+ "original_chars": 546358,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 118559,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 345,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "84.9%",
+ "reasoning": "We need to find the percentage of major facilities by square footage that are owned as of December 28, 2013. From the document, in the Properties section, there is a table:\n\n\"FacilitySquareFootage: As of December 28, 2013, our major facilities consisted of:\ntable:\n  (Square Feet in Millions) | United States | Other Countries | Total\n  Owned facilities1 | 29.9 | 16.7 | 46.6\n  Leased facilities2 | 2.3 | 6.0 | 8.3\n  Total facilities | 32.2 | 22.7 | 54.9\"\n\nSo owned total = 46.6 million sq ft, total = 54.9 million sq ft. Percentage = 46.6 / 54.9 * 100 = approximately 84.88%. Let's compute: 46.6/54.9 = 0.8488... so about 84.9%. The question asks \"what percentage of major facilities by square footage are owned\". So answer is 84.9% or 85%? We'll give the exact value: 84.9% (or 84.88%). Since the question doesn't specify rounding, we can give 84.9% or 85%. But the document gives numbers to one decimal, so we can compute precisely: 46.6/54.9 = 0.848816... so 84.88% which rounds to 84.9%. We'll put 84.9% inside the answer.",
+ "raw_content": "<answer>84.9%</answer>",
+ "usage": {
+  "prompt_tokens": 118707,
+  "completion_tokens": 345,
+  "total_tokens": 119052,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 118528
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.59,
+ "answer_tag_found": true,
+ "docfinqa_row": 157
+}

@@ -1,0 +1,53 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0566",
+ "format": "markdown_pdf_plumber",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "as of december 31 , 2008 , what was the percent of the maturities in 2012 of the aggregate carrying value of long-term debt , including capital leases",
+ "gold": "45.3%",
+ "finqa_id": "AMT/2008/page_94.pdf-1",
+ "source_page": "page_94",
+ "ticker": "AMT",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_plumber/AMT_2008_0001193125-09-039177.md",
+ "doc_chars": 448607,
+ "prompt_chars": 448846,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 448607,
+ "original_chars": 448607,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 105711,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 372,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "45.3%",
+ "reasoning": "We need to find the aggregate carrying value of long-term debt including capital leases as of Dec 31, 2008, and the maturities in 2012. From note 6, \"Maturities\" table: As of December 31, 2008, aggregate carrying value of long-term debt, including capital leases, for the next five years and thereafter are estimated to be (in thousands): 2009: 1,837; 2010: 60,989; 2011: 1,018; 2012: 1,962,822; 2013: 646; Thereafter: 2,305,054. Total cash obligations: 4,332,366. Then unamortized discounts and premiums, net: 780, so balance is 4,333,146. The question asks: \"as of december 31 , 2008 , what was the percent of the maturities in 2012 of the aggregate carrying value of long-term debt , including capital leases\" So we need the percentage that 2012 maturities (1,962,822) represent of the aggregate carrying value (4,333,146). Compute: 1,962,822 / 4,333,146 = 0.4529... so about 45.3%. Let's compute precisely: 1,962,822 / 4,333,146 = 0.4529... 4,333,146 * 0.45 = 1,949,915.7, difference 12,906.3, /4,333,146 = 0.00298, so 0.45298, so 45.3%. So answer 45.3%.",
+ "raw_content": "<answer>45.3%</answer>",
+ "usage": {
+  "prompt_tokens": 105876,
+  "completion_tokens": 372,
+  "total_tokens": 106248,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 105728
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.72,
+ "answer_tag_found": true,
+ "docfinqa_row": 566
+}

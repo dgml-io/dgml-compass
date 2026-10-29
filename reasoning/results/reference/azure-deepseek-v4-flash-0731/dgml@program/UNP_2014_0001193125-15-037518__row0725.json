@@ -1,0 +1,75 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0725",
+ "format": "dgml",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "what was the percentage change in total expense for repairs and maintenance from 2012 to 2013?",
+ "gold": "10%",
+ "finqa_id": "UNP/2014/page_75.pdf-3",
+ "source_page": "page_75",
+ "ticker": "UNP",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/dgml/UNP_2014_0001193125-15-037518.dgml.xml",
+ "doc_chars": 655633,
+ "prompt_chars": 655816,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 655633,
+ "original_chars": 655633,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 153615,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 296,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.095238",
+ "reasoning": "We need percentage change in total expense for repairs and maintenance from 2012 to 2013. Document states: \"Total expense for repairs and maintenance incurred was $2.4 billion for 2014, $2.3 billion for 2013, and $2.1 billion for 2012.\" So 2013 = 2.3, 2012 = 2.1. Percentage change = (2.3-2.1)/2.1 = 0.2/2.1 = 0.095238... = 9.5238%. Need answer as percentage. Probably 9.5% or 9.52%. The question asks \"what was the percentage change\" - likely compute. We'll give 9.5% or 9.52%. Use exact: 0.2/2.1 = 0.095238... = 9.5238%. We'll output 9.5% or 9.52%. The benchmark expects numeric value maybe 9.52. We'll put 9.52.",
+ "raw_content": "<evidence>\n$2.3 billion | RepairsAndMaintenancePolicy (2013)\n$2.1 billion | RepairsAndMaintenancePolicy (2012)\n</evidence>\n<program>divide(subtract(2.3, 2.1), 2.1)</program>\n<answer>9.52</answer>",
+ "usage": {
+  "prompt_tokens": 153923,
+  "completion_tokens": 296,
+  "total_tokens": 154219,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 153856
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.42,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$2.3 billion",
+   "element": "RepairsAndMaintenancePolicy (2013)",
+   "element_found": true,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$2.1 billion",
+   "element": "RepairsAndMaintenancePolicy (2012)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(subtract(2.3, 2.1), 2.1)",
+ "answer_model": "9.52",
+ "program_value": 0.09523809523809511,
+ "docfinqa_row": 725
+}

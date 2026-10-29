@@ -1,0 +1,63 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0727",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "what was the percentage change in fuel surcharge program freight revenue from 2013 to 2014?",
+ "gold": "8%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "UNP_2014_0001193125-15-037518.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/ManagementDiscussionAndAnalysis/ResultsOfOperations/OperatingRevenues/FuelSurchargeRevenue",
+  "/chunk/ManagementDiscussionAndAnalysis/Executive/OperatingResults/ol/FreightRevenue/FuelSurchargeChangePercent"
+ ],
+ "r1_reasoning_chars": 2102,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 19891,
+  "completion_tokens": 519,
+  "total_tokens": 20410,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ManagementDiscussionAndAnalysis/ResultsOfOperations/OperatingRevenues/FuelSurchargeRevenue",
+  "/chunk/ManagementDiscussionAndAnalysis/Executive/OperatingResults/ol/FreightRevenue/FuelSurchargeChangePercent"
+ ],
+ "content_chars": 4909,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "6",
+ "reasoning": "We need percentage change from 2013 to 2014. Document states fuel surcharge revenues: 2014 $2.8 billion, 2013 $2.6 billion. Percentage change = (2.8-2.6)/2.6 = 0.2/2.6 = 0.076923... = 7.6923%. But document also says \"Fuel surcharge in 2014 increased 6% driven by our 7% carloadings increase.\" Wait, that's a stated percentage change. The question asks \"what was the percentage change in fuel surcharge program freight revenue from 2013 to 2014?\" The document explicitly says \"Fuel surcharge in 2014 increased 6%\". Also in executive summary: \"Our fuel surcharge increased 6% versus 2013\". So the answer is 6%. But let's check: The figures $2.8 and $2.6 give 7.7%, but the document says 6%. Which is correct? The question likely expects the document's stated percentage change. The document says \"Fuel surcharge in 2014 increased 6%\". So answer 6%. We should use the stated percentage. The evidence: \"6%\" from FuelSurchargeRevenue paragraph and \"6%\" from FuelSurchargeChangePercent. The program should be just 6%? But the question asks percentage change, and the document gives it directly. So program: 6%? But the benchmark expects a numeric value. We'll output 6. But careful: The document says \"increased 6%\" meaning percentage change is 6%. So answer 6.\n\nWe need to list evidence figures. The figures: $2.8 billion, $2.6 billion, 6%. But the question asks percentage change, and the document explicitly states 6%. We can cite the 6% figure. Also the revenue figures to compute if needed, but the stated percentage is authoritative. The program could be just 6%? But the program expects nested calls over figures as printed. If we use 6% as a figure, it's a percentage. The program can be just 6? But the instruction says \"A figure that is itself the answer is its own program.\" So we can output 6. But we need to list evidence. Let's list the 6% from FuelSurchargeChangePercent and the 6% from FuelSurchargeRevenue. Also the revenue figures for context. But the answer is 6.\n\nLet's produce evidence lines: \"6% | FuelSurchargeChangePercent\" and \"6% | FuelSurchargeRevenue\" and maybe \"$2.8 billion | FinancialAmount\" and \"$2.6 billion | FinancialAmount\". But the question asks percentage change, and the document gives it. We'll cite the 6% figures.\n\nProgram: 6 (or 6%). The benchmark likely expects numeric 6. We'll put 6.\n\nLet's write final.",
+ "raw_content": "<evidence>6% | FuelSurchargeChangePercent</evidence>\n<evidence>6% | FuelSurchargeRevenue</evidence>\n<evidence>$2.8 billion | FinancialAmount</evidence>\n<evidence>$2.6 billion | FinancialAmount</evidence>\n<program>6</program>\n<answer>6</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1392,
+  "completion_tokens": 694,
+  "total_tokens": 2086,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "6%",
+   "element": "FuelSurchargeChangePercent",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "6",
+ "answer_model": "6",
+ "program_value": 6.0,
+ "elapsed_s": 6.95,
+ "outline_source": "UNP_2014_0001193125-15-037518.outline.txt",
+ "outline_chars": 77599
+}

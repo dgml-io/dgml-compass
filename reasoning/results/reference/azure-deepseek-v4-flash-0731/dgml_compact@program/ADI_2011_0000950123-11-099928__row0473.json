@@ -1,0 +1,72 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0473",
+ "format": "dgml_compact",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what is the yearly interest expense incurred from the $ 375 million note with a fixed rate?",
+ "gold": "11.3",
+ "finqa_id": "ADI/2011/page_50.pdf-2",
+ "source_page": "page_50",
+ "ticker": "ADI",
+ "fiscal_year": "2011",
+ "source_file": "data/docs/dgml_compact/ADI_2011_0000950123-11-099928.dgml.txt",
+ "doc_chars": 439213,
+ "prompt_chars": 439393,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 439213,
+ "original_chars": 439213,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 94232,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 449,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "11250000",
+ "reasoning": "We need answer yearly interest expense from $375 million note with fixed rate. There are two notes: 5.0% due 2014 and 3.0% due 2016. Question says \"the $375 million note with a fixed rate\" - both are fixed rate? 5.0% and 3.0%. But maybe \"the $375 million note with a fixed rate\" refers to 3.0% note? Need identify. The document mentions $375 million 3.0% senior unsecured notes due April 15, 2016, fixed rate. Interest expense? Yearly interest expense = principal * rate = 375,000,000 * 3% = 11,250,000. But note issued April 4, 2011, so fiscal 2011 interest expense partial? Question asks \"yearly interest expense incurred from the $375 million note with a fixed rate\" - likely annual interest expense = $11.25 million. But check if there is a 5% note also fixed but hedged. The phrase \"with a fixed rate\" might distinguish from variable? Both have fixed rates. But the 5% note is swapped to variable, so its effective interest is variable. The 3% note is fixed and not hedged. So yearly interest expense = 3% * $375M = $11.25M. Need evidence: $375 million aggregate principal amount of 3.0% senior unsecured notes due April 15, 2016. Also interest rate 3.0%. Compute multiply(375,000,000, 0.03) = 11,250,000. But maybe in thousands? The document uses thousands. The question asks yearly interest expense, likely in dollars. Answer $11,250,000. Let's provide evidence.",
+ "raw_content": "<evidence>\n$375 million aggregate principal amount of 3.0% senior unsecured notes due April 15, 2016 | DebtInstrumentName\n3.0% | InterestRate\n</evidence>\n<program>multiply(375000000, 0.03)</program>\n<answer>11250000</answer>",
+ "usage": {
+  "prompt_tokens": 94538,
+  "completion_tokens": 449,
+  "total_tokens": 94987,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 94208
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 14.26,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$375 million aggregate principal amount of 3.0% senior unsecured notes due April 15, 2016",
+   "element": "DebtInstrumentName",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "3.0%",
+   "element": "InterestRate",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(375000000, 0.03)",
+ "answer_model": "11250000",
+ "program_value": 11250000.0,
+ "docfinqa_row": 473
+}

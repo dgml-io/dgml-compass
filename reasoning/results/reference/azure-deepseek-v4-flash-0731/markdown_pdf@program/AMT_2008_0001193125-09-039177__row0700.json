@@ -1,0 +1,71 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0700",
+ "format": "markdown_pdf",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "in 2006 what was percentage change in the employee separations liabilities",
+ "gold": "-65.1%",
+ "finqa_id": "AMT/2008/page_107.pdf-2",
+ "source_page": "page_107",
+ "ticker": "AMT",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf/AMT_2008_0001193125-09-039177.md",
+ "doc_chars": 417265,
+ "prompt_chars": 417428,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 417265,
+ "original_chars": 417265,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 94052,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 471,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-65.0479%",
+ "reasoning": "We need to find employee separations liabilities in 2006. The table in note 14 shows activity for employee separations. It shows liability as of Dec 31, 2005: $20,963 (thousands). Then 2006 expense $496, cash payments $12,389, other $1,743 (negative? Actually the table shows \"Other\" column with -1,743? Let's parse: The table has columns: Liability as of Dec 31, 2005 | 2006 Expense | 2006 Cash Payments | Other | Liability as of Dec 31, 2006 | ... The row for employee separations: $20,963 | $496 | $(12,389) | $(1,743) | $7,327 | ... So liability at end 2006 = 7,327. Percentage change from 2005 to 2006: (7,327 - 20,963)/20,963 = -13,636/20,963 = -0.6505... = -65.05%. So percentage change is -65.05% (decrease). The question asks \"in 2006 what was percentage change in the employee separations liabilities\" - likely from beginning to end of 2006. So answer -65.05% or -65.0%. We'll provide as -65.05% or -65.0%. The program: divide(subtract(7327, 20963), 20963) = -0.6505... So answer -65.05% (or -65.0%). We'll put -65.05% inside answer. But the instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for percentage change, so we can give -65.05% or -65.0%. We'll give -65.05%.",
+ "raw_content": "<evidence>\n20,963 | Employee separations liability as of December 31, 2005\n7,327 | Employee separations liability as of December 31, 2006\n</evidence>\n<program>divide(subtract(7327, 20963), 20963)</program>\n<answer>-65.05%</answer>",
+ "usage": {
+  "prompt_tokens": 94354,
+  "completion_tokens": 471,
+  "total_tokens": 94825,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.9,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "20,963",
+   "element": "Employee separations liability as of December 31, 2005",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "7,327",
+   "element": "Employee separations liability as of December 31, 2006",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(subtract(7327, 20963), 20963)",
+ "answer_model": "-65.05%",
+ "program_value": -0.6504794161141058,
+ "docfinqa_row": 700
+}

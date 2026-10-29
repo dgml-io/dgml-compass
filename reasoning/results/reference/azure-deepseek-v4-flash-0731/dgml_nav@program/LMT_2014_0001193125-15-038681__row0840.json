@@ -1,0 +1,77 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0840",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "what was the average weighted average common shares outstanding for diluted computations from 2012 to 2014",
+ "gold": "325.7",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "LMT_2014_0001193125-15-038681.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/Financial/EarningsPerShare",
+  "/chunk/Financial/EarningsPerShare/table"
+ ],
+ "r1_reasoning_chars": 2776,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 16119,
+  "completion_tokens": 723,
+  "total_tokens": 16842,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/Financial/EarningsPerShare",
+  "/chunk/Financial/EarningsPerShare/table"
+ ],
+ "content_chars": 74262,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "325.766667",
+ "reasoning": "We need average of 322.4, 326.5, 328.4. Compute (322.4+326.5+328.4)/3 = 977.3/3 = 325.766666... So answer 325.7667. Need evidence figures.",
+ "raw_content": "<evidence>322.4 | Weighted average common shares outstanding for diluted computations (2014)\n326.5 | Weighted average common shares outstanding for diluted computations (2013)\n328.4 | Weighted average common shares outstanding for diluted computations (2012)\n</evidence>\n<program>divide(add(add(322.4, 326.5), 328.4), 3)</program>\n<answer>325.7666666666667</answer>",
+ "r2_usage": {
+  "prompt_tokens": 16343,
+  "completion_tokens": 158,
+  "total_tokens": 16501,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "322.4",
+   "element": "Weighted average common shares outstanding for diluted computations (2014)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "326.5",
+   "element": "Weighted average common shares outstanding for diluted computations (2013)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "328.4",
+   "element": "Weighted average common shares outstanding for diluted computations (2012)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(add(322.4, 326.5), 328.4), 3)",
+ "answer_model": "325.7666666666667",
+ "program_value": 325.76666666666665,
+ "elapsed_s": 5.26,
+ "outline_source": "LMT_2014_0001193125-15-038681.outline.txt",
+ "outline_chars": 64445
+}

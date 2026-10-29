@@ -1,0 +1,68 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0247",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the percentage increase in total accumulated other comprehensive losses from 2013 to 2014?",
+ "gold": "62.9%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "PM_2015_0001413329-16-000076.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/Financial/BalanceSheet/StockholdersEquity/table/AccumulatedOtherComprehensiveLoss"
+ ],
+ "r1_reasoning_chars": 1551,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 39603,
+  "completion_tokens": 393,
+  "total_tokens": 39996,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/Financial/BalanceSheet/StockholdersEquity/table/AccumulatedOtherComprehensiveLoss"
+ ],
+ "content_chars": 2743,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need percentage increase from 2013 to 2014. The region shows Accumulated other comprehensive losses: (9,402) and (6,826). Which is 2015 and 2014? The header says \"Common stock, no par value (2,109,316,331 shares issued in 2015 and 2014)\" so columns are 2015 and 2014. The row has two values: (9,402) and (6,826). Likely first is 2015, second is 2014. But question asks from 2013 to 2014. We need 2013 and 2014. The excerpt only shows 2015 and 2014 columns. No 2013. So NOT_FOUND. But maybe the question is from 2013 to 2014, and the values are 2014 and 2013? The header says 2015 and 2014, so no. The row has two values, likely 2015 and 2014. So no 2013. Thus NOT_FOUND.\n\nBut let's double-check: The region path says AccumulatedOtherComprehensiveLoss, and the row has two tds. The column headers are not explicitly shown for the numbers, but the CommonStock row says \"shares issued in 2015 and 2014\" so columns are 2015 and 2014. So the values are 2015: (9,402) and 2014: (6,826). No 2013. So cannot compute.\n\nThus answer NOT_FOUND.",
+ "raw_content": "<evidence>\n(9,402) | AccumulatedOtherComprehensiveLoss (2015 column)\n(6,826) | AccumulatedOtherComprehensiveLoss (2014 column)\n</evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1047,
+  "completion_tokens": 389,
+  "total_tokens": 1436,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "(9,402)",
+   "element": "AccumulatedOtherComprehensiveLoss (2015 column)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "(6,826)",
+   "element": "AccumulatedOtherComprehensiveLoss (2014 column)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 6.04,
+ "outline_source": "PM_2015_0001413329-16-000076.outline.txt",
+ "outline_chars": 156714
+}

@@ -1,0 +1,81 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0046",
+ "format": "markdown_pdf_poppler",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what was the average currency translation adjustments from 2013 to 2015 in millions?",
+ "gold": "-6806",
+ "finqa_id": "PM/2015/page_127.pdf-4",
+ "source_page": "page_127",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_poppler/PM_2015_0001413329-16-000076.md",
+ "doc_chars": 669314,
+ "prompt_chars": 669487,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 669314,
+ "original_chars": 669314,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 116308,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 215,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-4088.333333",
+ "reasoning": "We need answer. Need compute average currency translation adjustments from 2013 to 2015. Need figures. From accumulated other comprehensive losses: currency translation adjustments at Dec 31 2013 = -2,207; 2014 = -3,929; 2015 = -6,129. Average = (-2207 + -3929 + -6129)/3 = -12265/3 = -4088.333... in millions. Need answer value. Evidence list figures. Program average.",
+ "raw_content": "<evidence>\n-2,207 | Accumulated other comprehensive losses - Currency translation adjustments at December 31, 2013\n-3,929 | Accumulated other comprehensive losses - Currency translation adjustments at December 31, 2014\n-6,129 | Accumulated other comprehensive losses - Currency translation adjustments at December 31, 2015\n</evidence>\n\n<program>\ndivide(add(add(-2207, -3929), -6129), 3)\n</program>\n\n<answer>-4088.33</answer>",
+ "usage": {
+  "prompt_tokens": 116614,
+  "completion_tokens": 215,
+  "total_tokens": 116829,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.86,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "2,207",
+   "element": "Accumulated other comprehensive losses - Currency translation adjustments at December 31, 2013",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "3,929",
+   "element": "Accumulated other comprehensive losses - Currency translation adjustments at December 31, 2014",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "6,129",
+   "element": "Accumulated other comprehensive losses - Currency translation adjustments at December 31, 2015",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(add(add(-2207, -3929), -6129), 3)",
+ "answer_model": "-4088.33",
+ "program_value": -4088.3333333333335,
+ "docfinqa_row": 46
+}

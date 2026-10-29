@@ -1,0 +1,70 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0670",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what is the percentage change in fair value of forward exchange contracts asset from 2010 to 2011?",
+ "gold": "-65.9%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "ADI_2011_0000950123-11-099928.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/MarketRisk/ForeignCurrencyExposureDescription/ForeignExchangeSensitivity",
+  "/chunk/MarketRisk/ForeignCurrencyExposureDescription/ForeignExchangeSensitivity/ForwardExchangeSensitivity"
+ ],
+ "r1_reasoning_chars": 3994,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 24731,
+  "completion_tokens": 934,
+  "total_tokens": 25665,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 24576
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/MarketRisk/ForeignCurrencyExposureDescription/ForeignExchangeSensitivity",
+  "/chunk/MarketRisk/ForeignCurrencyExposureDescription/ForeignExchangeSensitivity/ForwardExchangeSensitivity"
+ ],
+ "content_chars": 7462,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "-65.931643",
+ "reasoning": "We need percentage change from 2010 to 2011 for fair value of forward exchange contracts asset. Values: 2011 = 2,472; 2010 = 7,256. Percentage change = (2472 - 7256)/7256 * 100. Compute: 2472-7256 = -4784. Divide by 7256 = -0.6593... *100 = -65.93%. So answer -65.93% (or -65.9%). Need exact? The question asks percentage change. We'll provide value. Use evidence figures.",
+ "raw_content": "<evidence>\n$ 2,472 | ForwardContractFairValue (October 29, 2011)\n$ 7,256 | ForwardContractFairValue (October 30, 2010)\n</evidence>\n<program>multiply(divide(subtract(2472, 7256), 7256), 100)</program>\n<answer>-65.93</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1907,
+  "completion_tokens": 205,
+  "total_tokens": 2112,
+  "audio_prompt_tokens": 0
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 2,472",
+   "element": "ForwardContractFairValue (October 29, 2011)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$ 7,256",
+   "element": "ForwardContractFairValue (October 30, 2010)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(2472, 7256), 7256), 100)",
+ "answer_model": "-65.93",
+ "program_value": -65.9316427783903,
+ "elapsed_s": 5.45,
+ "outline_source": "ADI_2011_0000950123-11-099928.outline.txt",
+ "outline_chars": 98954
+}

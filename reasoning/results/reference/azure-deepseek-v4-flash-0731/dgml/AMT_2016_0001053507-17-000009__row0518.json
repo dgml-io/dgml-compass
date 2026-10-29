@@ -1,0 +1,50 @@
+{
+ "id": "AMT_2016_0001053507-17-000009__row0518",
+ "format": "dgml",
+ "key": "AMT_2016_0001053507-17-000009",
+ "question": "what were the average tax penalties from 2014 to 2016 in millions",
+ "gold": "6.3",
+ "finqa_id": "AMT/2016/page_125.pdf-4",
+ "source_page": "page_125",
+ "ticker": "AMT",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/dgml/AMT_2016_0001053507-17-000009.dgml.xml",
+ "doc_chars": 929244,
+ "prompt_chars": 929398,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 929244,
+ "original_chars": 929244,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 223326,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 195,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "6.3",
+ "reasoning": "The question asks for the average tax penalties from 2014 to 2016 in millions.\n\nFrom the document, in the Income Taxes section (note 12), there is a line: \"The Company recorded penalties and tax-related interest expense to the tax provision of $9.2 million, $3.2 million and $6.5 million for the years ended December 31, 2016, 2015 and 2014, respectively.\"\n\nSo penalties: 2016 = 9.2, 2015 = 3.2, 2014 = 6.5.\n\nAverage = (9.2 + 3.2 + 6.5) / 3 = 18.9 / 3 = 6.3 million.\n\nThe question asks for the average tax penalties from 2014 to 2016 in millions. So answer is 6.3.",
+ "raw_content": "<answer>6.3</answer>",
+ "usage": {
+  "prompt_tokens": 223471,
+  "completion_tokens": 195,
+  "total_tokens": 223666,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 47.56,
+ "answer_tag_found": true,
+ "docfinqa_row": 518
+}

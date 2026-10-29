@@ -1,0 +1,68 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0514",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was the change in the total long-term debt net from 2014 to 2015 in millions",
+ "gold": "9119",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "LMT_2015_0001193125-16-476010.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/ConsolidatedBalanceSheets/table/LongTermDebtNetBalance"
+ ],
+ "r1_reasoning_chars": 4144,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 28889,
+  "completion_tokens": 1031,
+  "total_tokens": 29920,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 28672
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/ConsolidatedBalanceSheets/table/LongTermDebtNetBalance"
+ ],
+ "content_chars": 2890,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "8163",
+ "reasoning": "We need answer change in long-term debt net from 2014 to 2015. Need identify which amounts correspond to 2015 and 2014. The row Long-term debt, net has two amounts: 14,305 and 6,142. Typically balance sheet columns: current year then prior year. So 2015 = 14,305, 2014 = 6,142. Change = 14,305 - 6,142 = 8,163. Need answer in millions? The amounts are in millions? The question says \"in millions\" so answer 8163. Need evidence figures.",
+ "raw_content": "<evidence>14,305 | LongTermDebtNetBalance/DebtPrincipalAmount (first)\n6,142 | LongTermDebtNetBalance/DebtPrincipalAmount (second)</evidence>\n<program>subtract(14305, 6142)</program>\n<answer>8163</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1096,
+  "completion_tokens": 194,
+  "total_tokens": 1290,
+  "audio_prompt_tokens": 0
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "14,305",
+   "element": "LongTermDebtNetBalance/DebtPrincipalAmount (first)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "6,142",
+   "element": "LongTermDebtNetBalance/DebtPrincipalAmount (second)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(14305, 6142)",
+ "answer_model": "8163",
+ "program_value": 8163.0,
+ "elapsed_s": 5.09,
+ "outline_source": "LMT_2015_0001193125-16-476010.outline.txt",
+ "outline_chars": 116705
+}

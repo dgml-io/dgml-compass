@@ -1,0 +1,73 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0014",
+ "format": "dgml_compact",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "the combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable was what percent of the total ending balance as of november 28 2008?",
+ "gold": "11.0%",
+ "finqa_id": "ADBE/2008/page_89.pdf-3",
+ "source_page": "page_89",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml_compact/ADBE_2008_0000796343-09-000007.dgml.txt",
+ "doc_chars": 545889,
+ "prompt_chars": 546199,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 545889,
+ "original_chars": 545889,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 114389,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 471,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "10.963891",
+ "reasoning": "We need answer: combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable was what percent of total ending balance as of Nov 28 2008? Need find figures. Document has: \"As of November 28, 2008, the combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable was approximately $15.3 million.\" And total ending balance? \"Ending balance as of November 28, 2008 | $ 139,549\" (unrecognized tax benefits). Also \"gross liability for unrecognized tax benefits at November 28, 2008 of $139.5 million is exclusive of interest and penalties.\" So total ending balance likely $139,549 thousand. Percent = 15.3 / 139.549 *100 = 10.96% approx. Need compute. Use figures as printed: $15.3 million and $139,549 (thousands). Convert: 15.3 / 139.549 *100 = 10.963... Let's compute precisely: 15.3 / 139.549 = 0.10963, *100 = 10.963%. Answer maybe 11%. Need provide evidence and program. Use divide(multiply(15.3,100),139.549) but units: 15.3 million vs 139,549 thousand = 139.549 million. So divide(multiply(15.3,100),139.549) = 10.963... Good.\n\nNeed final answer inside <answer> tags only value. Probably 10.96% or 11%. The question asks \"what percent\" so include %? The instruction says no units unless question asks. It asks percent, so include % sign? Usually answer value with % maybe. We'll put 10.96%.",
+ "raw_content": "<evidence>\n$15.3 million | UnrecognizedTaxBenefitInterestAndPenalties\n$139,549 | UnrecognizedTaxBenefitRollforward ending balance\n</evidence>\n<program>divide(multiply(15.3, 100), 139.549)</program>\n<answer>10.96%</answer>",
+ "usage": {
+  "prompt_tokens": 114718,
+  "completion_tokens": 471,
+  "total_tokens": 115189,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.71,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$15.3 million",
+   "element": "UnrecognizedTaxBenefitInterestAndPenalties",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$139,549",
+   "element": "UnrecognizedTaxBenefitRollforward ending balance",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(multiply(15.3, 100), 139.549)",
+ "answer_model": "10.96%",
+ "program_value": 10.963890819712072,
+ "docfinqa_row": 14
+}

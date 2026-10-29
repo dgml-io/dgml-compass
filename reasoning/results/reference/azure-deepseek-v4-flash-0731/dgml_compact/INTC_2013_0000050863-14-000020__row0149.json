@@ -1,0 +1,50 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0149",
+ "format": "dgml_compact",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "what was the percent of the impairment charges to the net revenue in 2013",
+ "gold": "0.5%",
+ "finqa_id": "INTC/2013/page_33.pdf-2",
+ "source_page": "page_33",
+ "ticker": "INTC",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/dgml_compact/INTC_2013_0000050863-14-000020.dgml.txt",
+ "doc_chars": 546358,
+ "prompt_chars": 546520,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 546358,
+ "original_chars": 546358,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 118559,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 834,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.46%",
+ "reasoning": "We need to find impairment charges and net revenue in 2013. From the document, net revenue 2013 = $52,708 million. Impairment charges? There are various impairment charges: restructuring and asset impairment charges = $240 million in 2013. Also impairments of non-marketable equity investments, etc. But the question says \"the impairment charges\" likely refers to the total impairment charges? Possibly the restructuring and asset impairment charges? Or maybe the sum of all impairment charges? The question is ambiguous. Let's see if there is a specific line item. In the income statement, there is \"Restructuring and asset impairment charges\" of $240 million. Also there are impairment charges within gains/losses on equity investments: impairment charges of $123 million in 2013 (from Note 21). Also impairments of long-lived assets? But those are included in various places. The question likely refers to the \"restructuring and asset impairment charges\" as that is a line item. But it says \"impairment charges\" not \"restructuring and asset impairment charges\". Could be the total impairment charges? Let's check the document for \"impairment charges\" specifically. In Note 21, there is a line \"Impairment charges\" of $123 million. Also in the MD&A, there is mention of impairments of non-marketable equity investments, etc. But the question asks \"the percent of the impairment charges to the net revenue in 2013\". Possibly they want the ratio of the total impairment charges? But there are multiple. Perhaps they mean the \"restructuring and asset impairment charges\" which is a line item. Let's see if there is any other impairment charge. In the income statement, there is \"Restructuring and asset impairment charges\" of $240 million. That is the only line with \"impairment\" in the income statement. So likely that is the impairment charge. So percent = 240 / 52708 * 100 = 0.4553% approximately. Let's compute: 240/52708 = 0.004553... so 0.4553%. Round to maybe 0.46%? The question asks for the percent, so answer as a number. I'll put 0.46% or 0.4553%? Usually they want a number. I'll compute exactly: 240/52708 = 0.004553... so 0.4553%. I'll put 0.46% if rounding. But the instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for percent, so include %? It says \"percent\" so maybe include the number with % sign. I'll put 0.46% or 0.4553%? I'll put 0.46% as a reasonable rounding. But to be precise, I'll put 0.4553%? Let's see if there is any other interpretation. Could be the sum of all impairment charges? But the question says \"the impairment charges\" singular? Actually \"the impairment charges\" could refer to the line item. I'll go with 240/52708. Let me compute: 240/52708 = 0.004553... so 0.4553%. I'll answer 0.46% if rounding to two decimals. But the instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself\". So I'll put 0.46% or 0.4553%? I'll put 0.46% as a percentage. But to be safe, I'll put 0.4553%? Actually, let me check if there is any other impairment charge that is more relevant. In the MD&A, they mention \"restructuring and asset impairment charges of $240 million\". So that is the one. So answer is 0.46% (rounded). I'll put 0.46%.",
+ "raw_content": "<answer>0.46%</answer>",
+ "usage": {
+  "prompt_tokens": 118704,
+  "completion_tokens": 834,
+  "total_tokens": 119538,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 18.7,
+ "answer_tag_found": true,
+ "docfinqa_row": 149
+}

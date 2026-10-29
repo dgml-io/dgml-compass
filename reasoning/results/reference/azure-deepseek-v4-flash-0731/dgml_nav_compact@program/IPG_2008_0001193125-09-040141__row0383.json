@@ -1,0 +1,65 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0383",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "what portion of the total estimated future contingent acquisition obligation is due in the 12 months?",
+ "gold": "19.3%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "IPG_2008_0001193125-09-040141.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/NotesContinuationHeader/CommitmentsAndContingencies/ContingentAcquisitionObligations"
+ ],
+ "r1_reasoning_chars": 2002,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 23070,
+  "completion_tokens": 502,
+  "total_tokens": 23572,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/NotesContinuationHeader/CommitmentsAndContingencies/ContingentAcquisitionObligations"
+ ],
+ "content_chars": 8338,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "0.193102",
+ "reasoning": "We need answer portion of total estimated future contingent acquisition obligation due in 12 months. Need identify total estimated future contingent acquisition obligation and amount due in 12 months. The table: Total contingent acquisition payments total 402.8, and 2009 amount 79.3. But then less cash compensation expense included above, total 397.2. The question says \"total estimated future contingent acquisition obligation\" likely the total in table? Need determine. The table header: \"estimated future contingent acquisition obligations payable in cash\" with rows: Deferred acquisition payments, Put and call options, Total contingent acquisition payments, Less cash compensation expense included above, Total. The \"Total\" row is $397.2 total, and 2009 is $76.7. The question asks \"what portion of the total estimated future contingent acquisition obligation is due in the 12 months?\" The 12 months likely 2009. Portion = 76.7 / 397.2. But need check if \"total estimated future contingent acquisition obligation\" refers to total contingent acquisition payments 402.8? The table says \"Total contingent acquisition payments\" 402.8, then less cash compensation expense included above 5.6, total 397.2. The question wording \"total estimated future contingent acquisition obligation\" might refer to the total liability recorded? The text: \"our estimated future contingent acquisition obligations payable in cash are as follows:\" table. The table's final total is 397.2. The \"Total contingent acquisition payments\" is gross, but \"Less cash compensation expense included above\" means some are compensation expense not acquisition obligation. So the net total is 397.2. The amount due in 2009 is 76.7. So portion = 76.7 / 397.2. Need compute. Let's compute exactly: 76.7 / 397.2. 397.2 * 0.193 = 76.6596, so about 0.1931. Let's calculate more precisely. 76.7 / 397.2 = 0.193101... Let's do division: 397.2 * 0.193 = 76.6596, remainder 0.0404, /397.2=0.0001017, so 0.1931017. So about 19.31%. The question asks \"what portion\" maybe fraction. We can answer as decimal or percentage? It says portion, likely fraction. We'll provide value maybe 0.1931. Need evidence figures: 76.7 and 397.2 from table. Also maybe 2009 total. We'll cite.\n\nNeed final answer inside <answer> tags only value. Probably 0.1931 or 19.31%? The question \"what portion\" could be answered as a fraction. The benchmark expects numeric value. We'll output 0.1931 maybe. But need be precise. Let's compute exact fraction: 76.7/397.2 = 767/3972? Multiply by 10: 767/3972. Simplify? 767 is prime? 767/13=59? 13*59=767. 3972/13=305.538? 13*305=3965, no. So fraction 767/3972. Decimal 0.193101712... Let's compute: 767/3972. 3972*0.1931=766.9932? 3972*0.1931 = 3972*0.19=754.68, plus 0.0031*3972=12.3132, total 766.9932, so 767/3972=0.1931017. So 0.1931.\n\nNeed evidence: \"76.7 | Total row 2009\" and \"397.2 | Total row Total\". Also maybe \"Total contingent acquisition payments\" 402.8? But we use net total. Let's include evidence lines.\n\nProgram: divide(76.7, 397.2). Need use figures as printed. The figures are \"$76.7\" and \"$397.2\". We'll use 76.7 and 397.2.\n\nFinal answer inside <answer>0.1931</answer>.",
+ "raw_content": "<evidence>76.7 | Total row, 2009 column</evidence>\n<evidence>397.2 | Total row, Total column</evidence>\n<program>divide(76.7, 397.2)</program>\n<answer>0.1931</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2173,
+  "completion_tokens": 949,
+  "total_tokens": 3122,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "76.7",
+   "element": "Total row, 2009 column",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(76.7, 397.2)",
+ "answer_model": "0.1931",
+ "program_value": 0.19310171198388723,
+ "elapsed_s": 6.82,
+ "outline_source": "IPG_2008_0001193125-09-040141.outline.txt",
+ "outline_chars": 90097
+}

@@ -1,0 +1,53 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0830",
+ "format": "markdown_pdf_rules",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "for natural gas options in place to manage the price risk , what is the change in the percentage of the anticipated natural gas purchases hedged between the first quarter of 2004 and the second quarter of 2004?",
+ "gold": "10",
+ "finqa_id": "MRO/2003/page_84.pdf-1",
+ "source_page": "page_84",
+ "ticker": "MRO",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/markdown_pdf_rules/MRO_2003_0001193125-04-036535.md",
+ "doc_chars": 450627,
+ "prompt_chars": 450926,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 450627,
+ "original_chars": 450627,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 105244,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 370,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "10",
+ "reasoning": "We need to find the relevant figures. The question: \"for natural gas options in place to manage the price risk, what is the change in the percentage of the anticipated natural gas purchases hedged between the first quarter of 2004 and the second quarter of 2004?\" Look in the document. In the RM&T segment discussion under \"Commodity Price Risk\" or similar. There is a section: \"In addition, natural gas options are in place to manage the price risk associated with approximately 60% of the anticipated natural gas purchases for refinery use through the first quarter of 2004 and 50% through the second quarter of 2004.\" So the change is from 60% to 50%, which is a decrease of 10 percentage points. The question asks \"what is the change in the percentage\" - likely the difference, so 10% decrease. But careful: it says \"change in the percentage\" - could be -10 percentage points. The answer should be the value. Probably \"10 percentage points\" or \"-10%\". The question asks \"what is the change\" - so we can state the change. Since it's a decrease, we can say 10 percentage points decrease. But the instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for the change in percentage, so we can give \"10\" or \"-10\"? It says \"change in the percentage\" - typically we'd say the change is 10 percentage points (decrease). But to be safe, we can give the absolute change: 10. Or maybe they want the difference: 60-50=10. So answer: 10.",
+ "raw_content": "<answer>10</answer>",
+ "usage": {
+  "prompt_tokens": 105416,
+  "completion_tokens": 370,
+  "total_tokens": 105786,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 105216
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.86,
+ "answer_tag_found": true,
+ "docfinqa_row": 830
+}

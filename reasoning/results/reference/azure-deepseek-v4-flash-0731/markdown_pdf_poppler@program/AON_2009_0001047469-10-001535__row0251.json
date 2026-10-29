@@ -1,0 +1,73 @@
+{
+ "id": "AON_2009_0001047469-10-001535__row0251",
+ "format": "markdown_pdf_poppler",
+ "key": "AON_2009_0001047469-10-001535",
+ "question": "what was the total revenues in 2009 based on the consulting segment generated 17% ( 17 % ) of our consolidated total revenues in millions",
+ "gold": "7452.94",
+ "finqa_id": "AON/2009/page_48.pdf-3",
+ "source_page": "page_48",
+ "ticker": "AON",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/markdown_pdf_poppler/AON_2009_0001047469-10-001535.md",
+ "doc_chars": 512066,
+ "prompt_chars": 512292,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 512066,
+ "original_chars": 512066,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 88751,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "stop",
+   "completion_tokens": 356,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 1,
+ "ok": true,
+ "answer": "7595",
+ "reasoning": "We need answer total revenues in 2009 based on consulting segment generated 17% of consolidated total revenues. Document says Consulting segment generated approximately 17% of consolidated total revenues in 2009. Also total revenue 2009 = $7,595 million. So 17% of 7595 = 1291.15? But question wording: \"what was the total revenues in 2009 based on the consulting segment generated 17% (17%) of our consolidated total revenues in millions\" Could be asking total revenues? Actually consulting segment revenue is $1,267 million. The statement says Consulting segment generated approximately 17% of consolidated total revenues. Total revenue is $7,595. So answer likely $7,595 million. But question says \"based on the consulting segment generated 17% ... of our consolidated total revenues\" maybe they want total revenues? Let's parse: \"what was the total revenues in 2009 based on the consulting segment generated 17% ( 17 % ) of our consolidated total revenues in millions\" Could be asking total revenues? The document gives total revenue $7,595. Also consulting segment revenue $1,267. 17% of 7595 = 1291.15, close to 1267. But they ask \"total revenues in 2009\" - likely $7,595. We'll answer $7,595. Evidence: Total revenue $7,595 from Consolidated Statements of Income. Also consulting segment revenue $1,267. But question asks total revenues, so use 7,595.",
+ "raw_content": "<evidence>7,595 | Consolidated Statements of Income - Total revenue</evidence>\n<program>7595</program>\n<answer>7,595</answer>",
+ "usage": {
+  "prompt_tokens": 89070,
+  "completion_tokens": 356,
+  "total_tokens": 89426,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.41,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "7,595",
+   "element": "Consolidated Statements of Income - Total revenue",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "7595",
+ "answer_model": "7,595",
+ "program_value": 7595.0,
+ "docfinqa_row": 251
+}

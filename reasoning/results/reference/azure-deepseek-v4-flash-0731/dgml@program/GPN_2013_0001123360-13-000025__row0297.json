@@ -1,0 +1,74 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0297",
+ "format": "dgml",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what is the total fair value of the granted shares in 2013 , ( in thousands ) ?",
+ "gold": "24684",
+ "finqa_id": "GPN/2013/page_87.pdf-1",
+ "source_page": "page_87",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/dgml/GPN_2013_0001123360-13-000025.dgml.xml",
+ "doc_chars": 611417,
+ "prompt_chars": 611585,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 611417,
+ "original_chars": 611417,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 141594,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 477,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "24684",
+ "reasoning": "We need answer question: \"what is the total fair value of the granted shares in 2013, (in thousands)?\" Need find in document. Likely restricted stock granted fair value? The question asks \"total fair value of the granted shares in 2013\". Could be from restricted stock rollforward: Granted 561 shares (thousands) with weighted average grant-date fair value $44. So total fair value = 561 * 44 = 24,684 thousand. But need check if there are other grants? Stock options granted none in 2013. Employee stock purchase plan? \"weighted average grant-date fair value of each designated share purchased under this plan during years ... was $6\" but that's not granted shares? The question likely from restricted stock table: \"Granted\" 561 shares, weighted average fair value $44. So total fair value = 561*44 = 24,684 (in thousands). But need verify if \"granted shares\" includes restricted stock only? The document says \"The following table summarizes the changes in non-vested restricted stock awards\" with Granted 561, AwardFairValue 44. So total fair value = 561*44 = 24,684. But maybe there are also performance units? The table includes restricted stock awards including PRSUs and TSRs? It says \"restricted stock program (including PRSUs and TSRs)\" in earlier. So yes.\n\nNeed provide evidence: value 561 | AwardQuantity (Granted row), 44 | AwardFairValue (Granted row). Program: multiply(561, 44) = 24684. Answer in thousands: 24684.\n\nBut let's be careful: The question says \"total fair value of the granted shares in 2013\" - could be from \"Restricted StockVestedFairValue\" or \"total fair value of share awards vested\" not granted. But \"granted\" specifically. So yes.\n\nNeed final answer inside <answer>24684</answer>. Also evidence and program.",
+ "raw_content": "<evidence>561 | AwardQuantity (Granted row, Restricted Stock Rollforward)\n44 | AwardFairValue (Granted row, Restricted Stock Rollforward)</evidence>\n<program>multiply(561, 44)</program>\n<answer>24684</answer>",
+ "usage": {
+  "prompt_tokens": 141901,
+  "completion_tokens": 477,
+  "total_tokens": 142378,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 15.45,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "561",
+   "element": "AwardQuantity (Granted row, Restricted Stock Rollforward)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "44",
+   "element": "AwardFairValue (Granted row, Restricted Stock Rollforward)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(561, 44)",
+ "answer_model": "24684",
+ "program_value": 24684.0,
+ "docfinqa_row": 297
+}

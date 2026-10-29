@@ -1,0 +1,81 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0443",
+ "format": "markdown_pdf",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what were average net sales for mfc from 2013 to 2015 in millions?",
+ "gold": "6886",
+ "finqa_id": "LMT/2015/page_54.pdf-1",
+ "source_page": "page_54",
+ "ticker": "LMT",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf/LMT_2015_0001193125-16-476010.md",
+ "doc_chars": 503247,
+ "prompt_chars": 503402,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 503247,
+ "original_chars": 503247,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 108132,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 178,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "6885.666667",
+ "reasoning": "We need average net sales for MFC from 2013 to 2015. From segment results: MFC net sales 2015 $6,770, 2014 $7,092, 2013 $6,795. Average = (6770+7092+6795)/3 = 20657/3 = 6885.666... So 6885.67 (in millions). Use exact figures.",
+ "raw_content": "<evidence>\n$6,770 | Missiles and Fire Control net sales 2015\n$7,092 | Missiles and Fire Control net sales 2014\n$6,795 | Missiles and Fire Control net sales 2013\n</evidence>\n<program>divide(add(6770, add(7092, 6795)), 3)</program>\n<answer>6885.67</answer>",
+ "usage": {
+  "prompt_tokens": 108438,
+  "completion_tokens": 178,
+  "total_tokens": 108616,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.3,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$6,770",
+   "element": "Missiles and Fire Control net sales 2015",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$7,092",
+   "element": "Missiles and Fire Control net sales 2014",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$6,795",
+   "element": "Missiles and Fire Control net sales 2013",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(add(6770, add(7092, 6795)), 3)",
+ "answer_model": "6885.67",
+ "program_value": 6885.666666666667,
+ "docfinqa_row": 443
+}

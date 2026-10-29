@@ -1,0 +1,118 @@
+{
+ "id": "UPS_2007_0001193125-08-043891__row0080",
+ "key": "UPS_2007_0001193125-08-043891",
+ "question": "what is the total in millions of expected cash outflow to satisfy contractual obligations and commitments as of december 31 , 2007?",
+ "gold": "28809",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "UPS_2007_0001193125-08-043891.outline.txt",
+ "doc_source": "UPS_2007_0001193125-08-043891.dgml.xml",
+ "outline_chars": 77634,
+ "predicted_xpaths": [
+  "/chunk/PartII/LiquidityAndCapitalResources/FinancingCashFlowDiscussion/ContractualObligationsCommitments",
+  "/chunk/PartII/LiquidityAndCapitalResources/FinancingCashFlowDiscussion/ContractualObligationsCommitments/table"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 3329,
+ "r1_usage": {
+  "prompt_tokens": 19651,
+  "completion_tokens": 806,
+  "total_tokens": 20457,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/PartII/LiquidityAndCapitalResources/FinancingCashFlowDiscussion/ContractualObligationsCommitments",
+  "/chunk/PartII/LiquidityAndCapitalResources/FinancingCashFlowDiscussion/ContractualObligationsCommitments/table"
+ ],
+ "content_chars": 38365,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "28809",
+ "reasoning": "We need answer total expected cash outflow. Table has totals per category. Need sum all totals: capital leases 619, operating leases 1782, debt principal 10527, debt interest 8026, purchase commitments 3828, pension fundings 3465, other liabilities 562. Sum. Let's compute: 619+1782=2401; +10527=12928; +8026=20954; +3828=24782; +3465=28247; +562=28809. So answer 28809. Need evidence figures.",
+ "raw_content": "<evidence>\n$ 619 | /chunk/PartII/LiquidityAndCapitalResources/FinancingCashFlowDiscussion/ContractualObligationsCommitments/table/ContractualObligationsByYear/CapitalLeasesTotalAmount\n$ 1,782 | /chunk/PartII/LiquidityAndCapitalResources/FinancingCashFlowDiscussion/ContractualObligationsCommitments/table/ContractualObligationsByYear/OperatingLeasesTotalAmount\n$10,527 | /chunk/PartII/LiquidityAndCapitalResources/FinancingCashFlowDiscussion/ContractualObligationsCommitments/table/ContractualObligationsByYear/DebtPrincipalTotalAmount\n$8,026 | /chunk/PartII/LiquidityAndCapitalResources/FinancingCashFlowDiscussion/ContractualObligationsCommitments/table/ContractualObligationsByYear/DebtInterestTotalAmount\n$ 3,828 | /chunk/PartII/LiquidityAndCapitalResources/FinancingCashFlowDiscussion/ContractualObligationsCommitments/table/ContractualObligationsByYear/PurchaseCommitmentsTotalAmount\n$ 3,465 | /chunk/PartII/LiquidityAndCapitalResources/FinancingCashFlowDiscussion/ContractualObligationsCommitments/table/ContractualObligationsByYear/PensionFundingsTotalAmount\n$ 562 | /chunk/PartII/LiquidityAndCapitalResources/FinancingCashFlowDiscussion/ContractualObligationsCommitments/table/ContractualObligationsByYear/OtherLiabilitiesTotalAmount\n</evidence>\n\n<program>add(add(add(add(add(add(619, 1782), 10527), 8026), 3828), 3465), 562)</program>\n\n<answer>28809</answer>",
+ "r2_usage": {
+  "prompt_tokens": 8979,
+  "completion_tokens": 509,
+  "total_tokens": 9488,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 8979,
+   "completion_tokens": 509,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "$ 619",
+   "element": "chunk/PartII/LiquidityAndCapitalResources/FinancingCashFlowDiscussion/ContractualObligationsCommitments/table/ContractualObligationsByYear/CapitalLeasesTotalAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$ 1,782",
+   "element": "chunk/PartII/LiquidityAndCapitalResources/FinancingCashFlowDiscussion/ContractualObligationsCommitments/table/ContractualObligationsByYear/OperatingLeasesTotalAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$10,527",
+   "element": "chunk/PartII/LiquidityAndCapitalResources/FinancingCashFlowDiscussion/ContractualObligationsCommitments/table/ContractualObligationsByYear/DebtPrincipalTotalAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$8,026",
+   "element": "chunk/PartII/LiquidityAndCapitalResources/FinancingCashFlowDiscussion/ContractualObligationsCommitments/table/ContractualObligationsByYear/DebtInterestTotalAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$ 3,828",
+   "element": "chunk/PartII/LiquidityAndCapitalResources/FinancingCashFlowDiscussion/ContractualObligationsCommitments/table/ContractualObligationsByYear/PurchaseCommitmentsTotalAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$ 3,465",
+   "element": "chunk/PartII/LiquidityAndCapitalResources/FinancingCashFlowDiscussion/ContractualObligationsCommitments/table/ContractualObligationsByYear/PensionFundingsTotalAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$ 562",
+   "element": "chunk/PartII/LiquidityAndCapitalResources/FinancingCashFlowDiscussion/ContractualObligationsCommitments/table/ContractualObligationsByYear/OtherLiabilitiesTotalAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "add(add(add(add(add(add(619, 1782), 10527), 8026), 3828), 3465), 562)",
+ "answer_model": "28809",
+ "program_value": 28809.0,
+ "elapsed_s": 6.64
+}

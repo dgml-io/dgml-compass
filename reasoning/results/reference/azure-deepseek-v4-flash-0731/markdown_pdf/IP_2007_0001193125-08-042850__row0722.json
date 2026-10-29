@@ -1,0 +1,50 @@
+{
+ "id": "IP_2007_0001193125-08-042850__row0722",
+ "format": "markdown_pdf",
+ "key": "IP_2007_0001193125-08-042850",
+ "question": "at december 31 , 2007 , what was the percent of the total future minimum commitments under existing non-cancelable operat- ing leases for purchase obligations",
+ "gold": "72.1%",
+ "finqa_id": "IP/2007/page_75.pdf-3",
+ "source_page": "page_75",
+ "ticker": "IP",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf/IP_2007_0001193125-08-042850.md",
+ "doc_chars": 437826,
+ "prompt_chars": 438073,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 437826,
+ "original_chars": 437826,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 103241,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 881,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "88.15",
+ "reasoning": "We need to find the percent of total future minimum commitments under existing non-cancelable operating leases for purchase obligations. The question is a bit ambiguous: \"percent of the total future minimum commitments under existing non-cancelable operating leases for purchase obligations\" likely means: what percentage of the total future minimum commitments (which include both lease obligations and purchase obligations) is attributable to purchase obligations? Or maybe it asks for the percentage that operating leases represent? The phrasing: \"percent of the total future minimum commitments under existing non-cancelable operating leases for purchase obligations\" could be interpreted as: the percentage that purchase obligations constitute of the total future minimum commitments (which are under existing non-cancelable operating leases? Actually the table shows \"Lease obligations\" and \"Purchase obligations\" under \"Total future minimum commitments under existing non-cancelable operating leases and purchase obligations\". So the total future minimum commitments are the sum of lease obligations and purchase obligations. The question asks: \"what was the percent of the total future minimum commitments under existing non-cancelable operating leases for purchase obligations\" - that is, what percent of the total is purchase obligations? Or maybe it asks for the percent that operating leases are of the total? The wording \"for purchase obligations\" suggests we want the percentage that purchase obligations represent of the total. Let's read the document: In Note 10, there is a table: \"At December 31, 2007, total future minimum commitments under existing non-cancelable operating leases and purchase obligations were as follows:\" with rows: Lease obligations, Purchase obligations, Total. The numbers: Lease obligations: 2008:136, 2009:116, 2010:101, 2011:84, 2012:67, Thereafter:92. Purchase obligations: 2008:1953, 2009:294, 2010:261, 2011:235, 2012:212, Thereafter:1480. Total: 2008:2089, 2009:410, 2010:362, 2011:319, 2012:279, Thereafter:1572. So total future minimum commitments is the sum of all years. We need the total for all years. Compute total lease obligations: 136+116+101+84+67+92 = let's sum: 136+116=252, +101=353, +84=437, +67=504, +92=596. So lease total = 596. Purchase total: 1953+294+261+235+212+1480 = 1953+294=2247, +261=2508, +235=2743, +212=2955, +1480=4435. So purchase total = 4435. Total = 596+4435 = 5031. The question asks: \"what was the percent of the total future minimum commitments under existing non-cancelable operating leases for purchase obligations\" - that is, what percent of the total is purchase obligations? So percentage = (4435 / 5031) * 100. Compute: 4435/5031 ≈ 0.8815, so 88.15%. Alternatively, if they meant the percent that operating leases are of the total, that would be 596/5031 ≈ 11.85%. But the phrasing \"for purchase obligations\" suggests we want the purchase obligations percentage. Also note the question says \"under existing non-cancelable operating leases\" but the table is for \"operating leases and purchase obligations\". So the total future minimum commitments are under both. So the percent of the total that is for purchase obligations is 88.15%. Let's compute precisely: 4435 / 5031 = 0.8815... 5031*0.88 = 4427.28, remainder 7.72, so 0.8815. So 88.15%. I'll round to 88.2% or 88.15%. The answer should be a number. I'll put 88.15% or 88.2%. Since the question asks for percent, I'll give the value. I'll put 88.15.",
+ "raw_content": "<answer>88.15</answer>",
+ "usage": {
+  "prompt_tokens": 103403,
+  "completion_tokens": 881,
+  "total_tokens": 104284,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.11,
+ "answer_tag_found": true,
+ "docfinqa_row": 722
+}

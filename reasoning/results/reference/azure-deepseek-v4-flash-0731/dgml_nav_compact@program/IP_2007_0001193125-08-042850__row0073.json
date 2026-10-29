@@ -1,0 +1,71 @@
+{
+ "id": "IP_2007_0001193125-08-042850__row0073",
+ "key": "IP_2007_0001193125-08-042850",
+ "question": "what percentage of industrial packaging sales where represented by european industrial packaging net sales in 2007?",
+ "gold": "21%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "IP_2007_0001193125-08-042850.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/ManagementDiscussionAndAnalysis/IndustrySegmentResults/IndustrialPackagingSegment"
+ ],
+ "r1_reasoning_chars": 3996,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 35278,
+  "completion_tokens": 912,
+  "total_tokens": 36190,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ManagementDiscussionAndAnalysis/IndustrySegmentResults/IndustrialPackagingSegment"
+ ],
+ "content_chars": 28030,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "20.972355",
+ "reasoning": "We need to compute percentage of industrial packaging sales represented by European industrial packaging net sales in 2007. From document: Industrial Packaging segment sales 2007 = $5,245 million (from table). European Industrial Packaging net sales 2007 = $1.1 billion = $1,100 million. Percentage = 1100 / 5245 * 100. Compute.",
+ "raw_content": "<evidence>\n$5,245 | IndustrialPackagingSalesByYear\n$1.1 billion | EuropeanIndustrialPackagingResults SegmentSalesAmount\n</evidence>\n<program>multiply(divide(1100, 5245), 100)</program>",
+ "r2_usage": {
+  "prompt_tokens": 6706,
+  "completion_tokens": 132,
+  "total_tokens": 6838,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$5,245",
+   "element": "IndustrialPackagingSalesByYear",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$1.1 billion",
+   "element": "EuropeanIndustrialPackagingResults SegmentSalesAmount",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "multiply(divide(1100, 5245), 100)",
+ "answer_model": null,
+ "program_value": 20.972354623450904,
+ "elapsed_s": 6.12,
+ "outline_source": "IP_2007_0001193125-08-042850.outline.txt",
+ "outline_chars": 139969
+}

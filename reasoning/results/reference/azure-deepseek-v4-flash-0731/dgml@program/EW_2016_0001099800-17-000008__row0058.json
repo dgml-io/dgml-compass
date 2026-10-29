@@ -1,0 +1,75 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0058",
+ "format": "dgml",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what percentage of the total cash purchase price net of cash acquired was represented by ipr&d?",
+ "gold": "59%",
+ "finqa_id": "EW/2016/page_79.pdf-4",
+ "source_page": "page_79",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/dgml/EW_2016_0001099800-17-000008.dgml.xml",
+ "doc_chars": 575186,
+ "prompt_chars": 575370,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 575186,
+ "original_chars": 575186,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 133782,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 344,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "59.356451",
+ "reasoning": "We need answer question: \"what percentage of the total cash purchase price net of cash acquired was represented by ipr&d?\" This likely refers to CardiAQ acquisition. In Note 7, purchase price allocation: IPR&D $190.0 million, total cash purchase price net of cash acquired $320.1 million. Percentage = 190.0 / 320.1 * 100 = 59.356...%. Need compute. Use figures: IPR&D 190.0, total cash purchase price net of cash acquired 320.1. Compute divide(190.0, 320.1) = 0.59356... *100 = 59.36%. Answer as percentage. Need evidence: 190.0 | IPR&D in CardiAQ purchase price allocation; 320.1 | Total cash purchase price, net of cash acquired. Program: multiply(divide(190.0, 320.1), 100). Final answer inside <answer>59.36%</answer> maybe with no units? Question asks percentage, so include %? The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" It asks \"what percentage\" so include %? Usually value with % sign. I'll put 59.36%.",
+ "raw_content": "<evidence>\n190.0 | IPR&D (CardiAQ purchase price allocation)\n320.1 | Total cash purchase price, net of cash acquired (CardiAQ purchase price allocation)\n</evidence>\n<program>multiply(divide(190.0, 320.1), 100)</program>\n<answer>59.36%</answer>",
+ "usage": {
+  "prompt_tokens": 134089,
+  "completion_tokens": 344,
+  "total_tokens": 134433,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 22.43,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "190.0",
+   "element": "IPR&D (CardiAQ purchase price allocation)",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "320.1",
+   "element": "Total cash purchase price, net of cash acquired (CardiAQ purchase price allocation)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "multiply(divide(190.0, 320.1), 100)",
+ "answer_model": "59.36%",
+ "program_value": 59.35645110902843,
+ "docfinqa_row": 58
+}

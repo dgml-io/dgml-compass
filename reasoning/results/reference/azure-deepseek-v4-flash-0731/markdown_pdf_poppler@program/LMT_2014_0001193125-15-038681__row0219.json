@@ -1,0 +1,74 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0219",
+ "format": "markdown_pdf_poppler",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "what was the percent of the increase in the backlog from 2012 to 2013",
+ "gold": "13.3%",
+ "finqa_id": "LMT/2014/page_50.pdf-1",
+ "source_page": "page_50",
+ "ticker": "LMT",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf_poppler/LMT_2014_0001193125-15-038681.md",
+ "doc_chars": 497433,
+ "prompt_chars": 497591,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 497433,
+ "original_chars": 497433,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 91740,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 260,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.36452",
+ "reasoning": "We need answer percent increase in backlog from 2012 to 2013. Backlog: 2012 $82,300 million, 2013 $82,600 million. Increase = 300 / 82,300 = 0.003645... = 0.3645%. Need percent. Use figures from document: Backlog at Dec 31, 2012 $82,300, 2013 $82,600. Compute divide(subtract(82600,82300),82300) * 100? Program should be exact. We can output percent value. Evidence: 82,600 | Backlog 2013; 82,300 | Backlog 2012. Answer with value maybe 0.36% or 0.3645%. The question asks \"what was the percent of the increase\" - likely 0.36%. We'll provide numeric.",
+ "raw_content": "<evidence>\n82,600 | Backlog at December 31, 2013\n82,300 | Backlog at December 31, 2012\n</evidence>\n<program>multiply(divide(subtract(82600, 82300), 82300), 100)</program>\n<answer>0.3645</answer>",
+ "usage": {
+  "prompt_tokens": 92047,
+  "completion_tokens": 260,
+  "total_tokens": 92307,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.07,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "82,600",
+   "element": "Backlog at December 31, 2013",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "82,300",
+   "element": "Backlog at December 31, 2012",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(subtract(82600, 82300), 82300), 100)",
+ "answer_model": "0.3645",
+ "program_value": 0.3645200486026731,
+ "docfinqa_row": 219
+}

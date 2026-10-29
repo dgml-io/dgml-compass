@@ -1,0 +1,72 @@
+{
+ "id": "NCLH_2018_0001144204-19-010508__row0338",
+ "key": "NCLH_2018_0001144204-19-010508",
+ "question": "what is the percentage change in capital expenditures from 2017 to 2018?",
+ "gold": "33.3%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "NCLH_2018_0001144204-19-010508.outline.txt",
+ "doc_source": "NCLH_2018_0001144204-19-010508.dgml.xml",
+ "outline_chars": 75680,
+ "predicted_xpaths": [
+  "/chunk/RiskFactors/ManagementDiscussionAnalysis/LiquidityAndCapitalResources/FutureCapitalCommitments/FutureCapitalCommitment/CapitalExpenditureAmount",
+  "/chunk/RiskFactors/ManagementDiscussionAnalysis/LiquidityAndCapitalResources/FutureCapitalCommitments/FutureCapitalCommitment",
+  "/chunk/RiskFactors/ManagementDiscussionAnalysis/LiquidityAndCapitalResources/FutureCapitalCommitments/header",
+  "/chunk/RiskFactors/ManagementDiscussionAnalysis/LiquidityAndCapitalResources/FutureCapitalCommitments"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 1537,
+ "r1_usage": {
+  "prompt_tokens": 19075,
+  "completion_tokens": 396,
+  "total_tokens": 19471,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/RiskFactors/ManagementDiscussionAnalysis/LiquidityAndCapitalResources/FutureCapitalCommitments/FutureCapitalCommitment/CapitalExpenditureAmount",
+  "/chunk/RiskFactors/ManagementDiscussionAnalysis/LiquidityAndCapitalResources/FutureCapitalCommitments/FutureCapitalCommitment",
+  "/chunk/RiskFactors/ManagementDiscussionAnalysis/LiquidityAndCapitalResources/FutureCapitalCommitments/header",
+  "/chunk/RiskFactors/ManagementDiscussionAnalysis/LiquidityAndCapitalResources/FutureCapitalCommitments"
+ ],
+ "content_chars": 23697,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need percentage change in capital expenditures from 2017 to 2018. The document excerpts provided do not contain actual capital expenditures for 2017 and 2018. They contain future capital commitments, cash flows from investing activities, etc. There is no explicit \"capital expenditures\" figure for 2017 and 2018. The investing cash flow amounts are $1.5 billion in 2018 and $1.4 billion in 2017, but those are net cash used in investing activities, not capital expenditures. The question asks for capital expenditures specifically. The document may have a line item \"capital expenditures\" elsewhere, but not in these excerpts. The excerpts include \"Future capital commitments\" and \"Sources and Uses of Cash\" but no capital expenditure amounts for 2017/2018. There is \"Capitalized interest\" but not capital expenditures. So we cannot compute. We should output NOT_FOUND.\n\nBut let's double-check: The question might be answerable from the investing cash flow? No, that's not capital expenditures. The document might have a \"Capital Expenditures\" line in the cash flow statement, but not in the provided excerpts. The excerpts are from MD&A, not the financial statements. So NOT_FOUND.\n\nWe need to list evidence figures we use. We don't use any because we can't compute. But the instruction says \"list every figure you use\" - we use none. So evidence empty. Program? We can't compute. So answer NOT_FOUND.\n\nBut maybe the question expects percentage change from 2017 to 2018 in capital expenditures, and the document has \"Net cash used in investing activities\" which might be a proxy? No, that's not capital expenditures. The question specifically says capital expenditures. So NOT_FOUND.\n\nI'll output NOT_FOUND.",
+ "raw_content": "<evidence></evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 5809,
+  "completion_tokens": 396,
+  "total_tokens": 6205,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 5809,
+   "completion_tokens": 396,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 5.37
+}

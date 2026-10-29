@@ -1,0 +1,74 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0423",
+ "format": "markdown_pdf_poppler",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "was was the total amount spent on stock repurchases in december 2012?",
+ "gold": "7662592",
+ "finqa_id": "AMT/2012/page_50.pdf-2",
+ "source_page": "page_50",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/markdown_pdf_poppler/AMT_2012_0001193125-13-077821.md",
+ "doc_chars": 669235,
+ "prompt_chars": 669393,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 669235,
+ "original_chars": 669235,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 120190,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 534,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "7662592",
+ "reasoning": "We need answer: total amount spent on stock repurchases in December 2012. From document: Issuer Purchases of Equity Securities table: December 2012 repurchased 102,400 shares, average price $74.83, but aggregate? The table shows total number and average price, not dollar amount. However text: \"During the three months ended December 31, 2012, we repurchased 619,314 shares ... for an aggregate of approximately $46.0 million, including commissions and fees\". That's for quarter. For December specifically, we can compute shares * average price = 102,400 * 74.83 = 7,662,592? But that excludes commissions and fees. The question asks \"total amount spent on stock repurchases in december 2012\" - likely from table? The table gives average price paid per share excluding commissions and fees. The footnote says average price per share calculated using aggregate price, excluding commissions and fees. So amount spent on shares = 102,400 * 74.83 = $7,662,592. But \"total amount spent\" might include commissions and fees? The document doesn't give December-specific aggregate including fees. The quarterly aggregate is $46.0 million including fees. For December, we can compute from shares and average price. But question likely expects that figure. Let's check if any other mention: \"During the three months ended December 31, 2012, we repurchased 619,314 shares ... for an aggregate of approximately $46.0 million\" That's quarter. December specifically: table row December 2012: 102,400 shares, average price $74.83. So product = 7,662,592. But note average price excludes commissions and fees. The question says \"total amount spent\" - could be interpreted as purchase price of shares. We'll compute 102,400 * 74.83 = 7,662,592. Alternatively, maybe they want the aggregate dollar value of shares that may yet be purchased? No.\n\nLet's produce evidence: 102,400 | December 2012 row, 74.83 | average price per share. Program multiply(102400, 74.83) = 7,662,592. Answer with value only.",
+ "raw_content": "<evidence>\n102,400 | December 2012 row\n74.83 | Average Price Paid per Share (December 2012)\n</evidence>\n<program>multiply(102400, 74.83)</program>\n<answer>7662592</answer>",
+ "usage": {
+  "prompt_tokens": 120495,
+  "completion_tokens": 534,
+  "total_tokens": 121029,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 12.13,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "102,400",
+   "element": "December 2012 row",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "74.83",
+   "element": "Average Price Paid per Share (December 2012)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(102400, 74.83)",
+ "answer_model": "7662592",
+ "program_value": 7662592.0,
+ "docfinqa_row": 423
+}

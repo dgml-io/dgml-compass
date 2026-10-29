@@ -1,0 +1,74 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0777",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what was the percentage increase of total deferred compensation plan investments from 2010 to 2011?\\\\n",
+ "gold": "204%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "ADI_2011_0000950123-11-099928.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/NotesToFinancial/DeferredCompensationPlanInvestments",
+  "/chunk/NotesToFinancial/DeferredCompensationPlanInvestments/table",
+  "/chunk/NotesToFinancial/DeferredCompensationPlanInvestments/table/DeferredCompensationPlanInvestments/DeferredCompensationInvestmentTotal"
+ ],
+ "r1_reasoning_chars": 4113,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 24732,
+  "completion_tokens": 1170,
+  "total_tokens": 25902,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/NotesToFinancial/DeferredCompensationPlanInvestments",
+  "/chunk/NotesToFinancial/DeferredCompensationPlanInvestments/table",
+  "/chunk/NotesToFinancial/DeferredCompensationPlanInvestments/table/DeferredCompensationPlanInvestments/DeferredCompensationInvestmentTotal"
+ ],
+ "content_chars": 31131,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "203.912543",
+ "reasoning": "We need percentage increase from 2010 to 2011. Total 2011 = 26,410; 2010 = 8,690. Percentage increase = (26410 - 8690)/8690 * 100. Compute: difference = 17720; divide by 8690 = 2.039...? Let's compute: 17720/8690 = 2.039... Actually 8690*2 = 17380, remainder 340, 340/8690=0.0391, so 2.0391, times 100 = 203.91%. So answer ~203.9%. Need evidence figures: 26,410 and 8,690. Program: multiply(divide(subtract(26410, 8690), 8690), 100). But question asks percentage increase, so answer numeric percentage. Provide inside <answer>203.9</answer> maybe with one decimal. Let's compute exactly: 17720/8690 = 2.039... 8690*2.04 = 17727.6, so 2.0391. 203.91%. I'll answer 203.9.",
+ "raw_content": "<evidence>\n$ 26,410 | Total Deferred Compensation Plan investments (2011)\n$ 8,690 | Total Deferred Compensation Plan investments (2010)\n</evidence>\n<program>multiply(divide(subtract(26410, 8690), 8690), 100)</program>\n<answer>203.9</answer>",
+ "r2_usage": {
+  "prompt_tokens": 8071,
+  "completion_tokens": 325,
+  "total_tokens": 8396,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 26,410",
+   "element": "Total Deferred Compensation Plan investments (2011)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ 8,690",
+   "element": "Total Deferred Compensation Plan investments (2010)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(26410, 8690), 8690), 100)",
+ "answer_model": "203.9",
+ "program_value": 203.91254315304948,
+ "elapsed_s": 8.41,
+ "outline_source": "ADI_2011_0000950123-11-099928.outline.txt",
+ "outline_chars": 98954
+}

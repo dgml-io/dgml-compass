@@ -1,0 +1,50 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0372",
+ "format": "markdown_pdf_poppler",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what is the combined number of equity compensation plans approved by security holders",
+ "gold": "4536446",
+ "finqa_id": "HII/2017/page_124.pdf-4",
+ "source_page": "page_124",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/markdown_pdf_poppler/HII_2017_0001501585-18-000006.md",
+ "doc_chars": 528384,
+ "prompt_chars": 528558,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 528384,
+ "original_chars": 528384,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 97412,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 666,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "2",
+ "reasoning": "We need to find the combined number of equity compensation plans approved by security holders. The document has a table \"Equity Compensation Plan Information\" in Item 12. It shows a table with rows: \"Equity compensation plans approved by security holders\" and \"Equity compensation plans not approved by security holders\". The question asks for the combined number of equity compensation plans approved by security holders. But the table shows number of securities, not number of plans. The question says \"combined number of equity compensation plans approved by security holders\" - that might be a misinterpretation. Actually, the table lists two categories: approved and not approved. The question asks for the combined number of equity compensation plans approved by security holders. But the table doesn't list the number of plans, it lists securities. However, the question might be asking for the number of plans, but the document doesn't explicitly state the number of plans. It says \"Equity compensation plans approved by security holders\" and \"Equity compensation plans not approved by security holders\" as categories. The number of plans is not given. The table shows securities to be issued and remaining available. So the question might be asking for the number of plans, but that information is not directly given. Alternatively, it might be asking for the total number of securities under approved plans? But the question says \"combined number of equity compensation plans approved by security holders\" - that is ambiguous. Possibly it's a trick: the document says there are two plans: the 2011 Plan and the 2012 Plan, both approved by security holders. But the question asks for the combined number of equity compensation plans approved by security holders. In the text, it says \"As of December 31, 2017, HII had stock-based compensation awards outstanding under the following plans: the 2011 Plan and the 2012 Plan.\" Both were approved by security holders (the 2011 Plan was approved by the sole stockholder prior to spin-off, and the 2012 Plan was approved by stockholders). So the combined number is 2. But the question might be looking for the number of plans, not securities. The table doesn't give a count of plans, but the text does. So answer is 2.\n\nLet's confirm: In the section \"Stock Compensation Plans\" it says: \"As of December 31, 2017, HII had stock-based compensation awards outstanding under the following plans: the Huntington Ingalls Industries, Inc. 2011 Long-Term Incentive Stock Plan (the \"2011 Plan\") and the Huntington Ingalls Industries, Inc. 2012 Long-Term Incentive Stock Plan (the \"2012 Plan\").\" And later: \"On March 23, 2012, the Company's board of directors adopted the 2012 Plan, subject to stockholder approval, and the Company's stockholders approved the 2012 Plan on May 2, 2012.\" And for the 2011 Plan: \"the 2011 Plan, which was approved by the sole stockholder of HII prior to its spin-off from Northrop Grumman Corporation.\" So both are approved by security holders. So combined number is 2.\n\nThus answer: 2.",
+ "raw_content": "<answer>2</answer>",
+ "usage": {
+  "prompt_tokens": 97555,
+  "completion_tokens": 666,
+  "total_tokens": 98221,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.49,
+ "answer_tag_found": true,
+ "docfinqa_row": 372
+}

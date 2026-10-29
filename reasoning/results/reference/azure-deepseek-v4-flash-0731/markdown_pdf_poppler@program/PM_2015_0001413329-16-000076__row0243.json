@@ -1,0 +1,72 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0243",
+ "format": "markdown_pdf_poppler",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the percentage change in the weighted-average discount rate for non-u.s . pension plans from 2014 to 2015?",
+ "gold": "-12.5%",
+ "finqa_id": "PM/2015/page_38.pdf-2",
+ "source_page": "page_38",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_poppler/PM_2015_0001413329-16-000076.md",
+ "doc_chars": 669314,
+ "prompt_chars": 669517,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 669314,
+ "original_chars": 669314,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 116308,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 767,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-12.5",
+ "reasoning": "We need to find the weighted-average discount rate for non-U.S. pension plans in 2014 and 2015. From the document, in the section \"Critical Accounting Estimates\" or in Note 13? There is a table: \"Weighted-average discount rate assumptions for pensions and postretirement plans are as follows:\" with 2015 and 2014. For non-U.S. pension plans: 1.68% in 2015, 1.92% in 2014. The question asks percentage change from 2014 to 2015. So compute (1.68 - 1.92)/1.92 * 100 = -0.24/1.92 = -0.125 = -12.5%. So percentage change is -12.5%. Or we can say decrease of 12.5%. The answer should be the value. We'll put -12.5% or -12.5? The question asks \"percentage change\" so likely -12.5%. We'll output -12.5% inside answer tags. But the instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for percentage change, so we can include % sign? Typically they want the number. I'll put -12.5% or -12.5? The instruction says \"no explanation or units unless the question asks for them.\" The question asks for percentage change, so the unit is percent. I'll put -12.5%. But to be safe, maybe just -12.5. However, the benchmark might expect a number. I'll put -12.5% inside answer. But the instruction says \"containing only the value itself\" - so maybe just -12.5. I'll put -12.5%? Let's see typical. I'll put -12.5% but the instruction says \"no units unless the question asks for them\" - the question asks for percentage change, so % is appropriate. I'll put -12.5%.\n\nEvidence: we need to list figures used. The figures are 1.68% and 1.92% from the table. The element name? The table is under \"Critical Accounting Estimates\" or in the MD&A. The row label is \"Non-U.S. pension plans\" and columns 2015 and 2014. So we'll list them.\n\nProgram: subtract(1.68, 1.92) / 1.92 * 100? But the program uses functions add, subtract, multiply, divide, exp. So we can do multiply(divide(subtract(1.68, 1.92), 1.92), 100). But the program is executed by benchmark, so we need to use the exact figures as printed. They are printed as 1.68% and 1.92%? Actually the table shows \"1.68%\" and \"1.92%\". We'll use 1.68 and 1.92. So program: multiply(divide(subtract(1.68, 1.92), 1.92), 100) which gives -12.5. Or we can just output -12.5. But the program should be exact. I'll write that.\n\nNow final answer.",
+ "raw_content": "<evidence>\n1.68% | Non-U.S. pension plans 2015\n1.92% | Non-U.S. pension plans 2014\n</evidence>\n<program>\nmultiply(divide(subtract(1.68, 1.92), 1.92), 100)\n</program>\n<answer>-12.5%</answer>",
+ "usage": {
+  "prompt_tokens": 116623,
+  "completion_tokens": 767,
+  "total_tokens": 117390,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 116480
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.42,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1.68%",
+   "element": "Non-U.S. pension plans 2015",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1.92%",
+   "element": "Non-U.S. pension plans 2014",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(1.68, 1.92), 1.92), 100)",
+ "answer_model": "-12.5%",
+ "program_value": -12.5,
+ "docfinqa_row": 243
+}

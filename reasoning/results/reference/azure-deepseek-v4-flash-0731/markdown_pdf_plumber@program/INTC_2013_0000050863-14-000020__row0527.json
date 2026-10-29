@@ -1,0 +1,72 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0527",
+ "format": "markdown_pdf_plumber",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "what was the percent of the change in the net revenues from dec . 282012 dec . 29 2013",
+ "gold": "-1.2%",
+ "finqa_id": "INTC/2013/page_33.pdf-1",
+ "source_page": "page_33",
+ "ticker": "INTC",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/markdown_pdf_plumber/INTC_2013_0000050863-14-000020.md",
+ "doc_chars": 427435,
+ "prompt_chars": 427610,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 427435,
+ "original_chars": 427435,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 98063,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 146,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-1.1867%",
+ "reasoning": "We need answer percent change in net revenues from 2012 to 2013. Net revenue 2013 52,708, 2012 53,341. Change = (52,708-53,341)/53,341 = -633/53,341 = -1.1867% approx -1.2%. Question says \"percent of the change\" likely -1.2%. Need evidence figures.",
+ "raw_content": "<evidence>\n52,708 | Net revenue 2013\n53,341 | Net revenue 2012\n</evidence>\n<program>divide(subtract(52708, 53341), 53341)</program>\n<answer>-1.2%</answer>",
+ "usage": {
+  "prompt_tokens": 98376,
+  "completion_tokens": 146,
+  "total_tokens": 98522,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 98304
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.18,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "52,708",
+   "element": "Net revenue 2013",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "53,341",
+   "element": "Net revenue 2012",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(52708, 53341), 53341)",
+ "answer_model": "-1.2%",
+ "program_value": -0.011867044112408841,
+ "docfinqa_row": 527
+}

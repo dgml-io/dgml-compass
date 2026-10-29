@@ -1,0 +1,74 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0379",
+ "format": "markdown_pdf_poppler",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "in 2004 what was the ratio of the snap-on incorporated to the peer group perfomance",
+ "gold": "0.86",
+ "finqa_id": "SNA/2007/page_29.pdf-1",
+ "source_page": "page_29",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_poppler/SNA_2007_0001104659-08-011401.md",
+ "doc_chars": 416845,
+ "prompt_chars": 417017,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 416845,
+ "original_chars": 416845,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 79065,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 514,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.857237",
+ "reasoning": "We need answer question: \"in 2004 what was the ratio of the snap-on incorporated to the peer group perfomance\" Need find data. Document has Five-year Stock Performance Graph table with fiscal year ended Dec 31, 2004: Snap-on Incorporated 130.66, Peer Group 152.42. Ratio = 130.66 / 152.42. Compute. Need provide evidence and program. Final answer inside <answer> tags only value. Let's compute: 130.66 / 152.42 = ? 152.42 * 0.857 = 130.6 approx. Let's calculate precisely: 130.66 / 152.42. Use division. 152.42 * 0.857 = 130.624? 152.42*0.857 = 130.624? 152.42*0.85=129.557, plus 0.007*152.42=1.067 =>130.624. So 0.8572. 152.42*0.8572=130.66? 152.42*0.8572 = 130.654? Let's do exact: 130.66/152.42. Use calculator mentally: 152.42 * 0.8572 = 152.42*(0.8 + 0.0572) = 121.936 + 8.718? 152.42*0.0572 = 8.718? 152.42*0.05=7.621, *0.0072=1.097, total 8.718, sum 130.654. So 0.85724. Ratio ~0.8572. Could express as 0.857. The question asks ratio, likely numeric. Provide answer 0.8572. Need evidence: value 130.66 | Snap-on Incorporated (fiscal year ended December 31, 2004), 152.42 | Peer Group. Program divide(130.66, 152.42). Final answer inside <answer>0.8572</answer>.",
+ "raw_content": "<evidence>130.66 | Snap-on Incorporated (Fiscal Year Ended December 31, 2004)\n152.42 | Peer Group (Fiscal Year Ended December 31, 2004)</evidence>\n<program>divide(130.66, 152.42)</program>\n<answer>0.8572</answer>",
+ "usage": {
+  "prompt_tokens": 79374,
+  "completion_tokens": 514,
+  "total_tokens": 79888,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 79104
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.11,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "130.66",
+   "element": "Snap-on Incorporated (Fiscal Year Ended December 31, 2004)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "152.42",
+   "element": "Peer Group (Fiscal Year Ended December 31, 2004)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(130.66, 152.42)",
+ "answer_model": "0.8572",
+ "program_value": 0.8572365831255742,
+ "docfinqa_row": 379
+}

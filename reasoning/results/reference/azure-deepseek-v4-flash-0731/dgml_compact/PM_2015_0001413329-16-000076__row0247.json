@@ -1,0 +1,53 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0247",
+ "format": "dgml_compact",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the percentage increase in total accumulated other comprehensive losses from 2013 to 2014?",
+ "gold": "62.9%",
+ "finqa_id": "PM/2015/page_127.pdf-2",
+ "source_page": "page_127",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml_compact/PM_2015_0001413329-16-000076.dgml.txt",
+ "doc_chars": 654685,
+ "prompt_chars": 654872,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 654685,
+ "original_chars": 654685,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 144584,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 725,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "62.9%",
+ "reasoning": "We need to find total accumulated other comprehensive losses for 2013 and 2014. From the document, in Note 17. Accumulated Other Comprehensive Losses, we have a table:\n\nAccumulatedOtherComprehensiveLoss: (in millions) | 2015 | 2014 | 2013\nCurrency translation adjustments | (6,129) | (3,929) | (2,207)\nPension and other benefits | (3,332) | (3,020) | (2,046)\nDerivatives accounted for as hedges | 59 | 123 | 63\nTotal accumulated other comprehensive losses | (9,402) | (6,826) | (4,190)\n\nSo total AOCL for 2013 is (4,190) and for 2014 is (6,826). The question asks: \"what is the percentage increase in total accumulated other comprehensive losses from 2013 to 2014?\" Since these are negative numbers, we need to interpret \"increase\" in magnitude? Typically, percentage increase from a negative base is ambiguous. But the question likely means the change in the absolute value? Or the percentage change in the value? Let's compute: from -4,190 to -6,826. The change is -6,826 - (-4,190) = -2,636. That is a decrease in value (more negative). But \"increase in total accumulated other comprehensive losses\" might mean the increase in the magnitude of losses. So the magnitude increased from 4,190 to 6,826. The percentage increase in magnitude is (6,826 - 4,190)/4,190 * 100 = (2,636/4,190)*100 ≈ 62.9%. Alternatively, if they mean the percentage change in the signed value, it would be ( -6,826 - (-4,190) ) / (-4,190) * 100 = (-2,636)/(-4,190)*100 = 62.9% as well? Actually, the formula for percentage change is (new - old)/old * 100. If old = -4,190, new = -6,826, then (new - old) = -2,636, divided by old (-4,190) gives 0.629, so 62.9% increase? But that is a positive percentage because both numerator and denominator are negative. So the percentage change is +62.9%. That is an increase in the magnitude of losses. So the answer is approximately 62.9%. Let's compute precisely: 2636/4190 = 0.6291... so 62.91%. The question asks for the percentage increase, so we can give 62.9% or 63%. Let's check if there is any other interpretation. The document says \"total accumulated other comprehensive losses\" which is a negative number. The increase from 2013 to 2014 is from -4,190 to -6,826, which is a larger loss. So the percentage increase in the loss amount is 62.9%. I'll provide that.\n\nWe need to output only the value inside <answer> tags. So <answer>62.9%</answer> or maybe 63%? Let's compute exactly: 2636/4190 = 0.629117... so 62.91%. I'll give 62.9%.",
+ "raw_content": "<answer>62.9%</answer>",
+ "usage": {
+  "prompt_tokens": 144732,
+  "completion_tokens": 725,
+  "total_tokens": 145457,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 144640
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.1,
+ "answer_tag_found": true,
+ "docfinqa_row": 247
+}

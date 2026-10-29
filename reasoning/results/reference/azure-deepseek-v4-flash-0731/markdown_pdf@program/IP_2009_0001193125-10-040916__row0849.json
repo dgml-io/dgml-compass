@@ -1,0 +1,72 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0849",
+ "format": "markdown_pdf",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "at december 31 , 2009 , total future minimum commitments under existing non-cancelable leases and purchase obligations what was the percent of the lease obligations compared to the purchase obligations in 2012",
+ "gold": "16.6%",
+ "finqa_id": "IP/2009/page_84.pdf-3",
+ "source_page": "page_84",
+ "ticker": "IP",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/markdown_pdf/IP_2009_0001193125-10-040916.md",
+ "doc_chars": 445162,
+ "prompt_chars": 445460,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 445162,
+ "original_chars": 445162,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 104101,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 310,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "19.903692",
+ "reasoning": "We need answer question: at Dec 31 2009, total future minimum commitments under existing non-cancelable leases and purchase obligations, what was percent of lease obligations compared to purchase obligations in 2012.\n\nFrom Note 11: table: 2010,2011,2012,2013,2014,Thereafter. Lease obligations: 2010 177, 2011 148, 2012 124, 2013 96, 2014 79, Thereafter 184. Purchase obligations: 2012 623. So lease obligations in 2012 = 124, purchase obligations in 2012 = 623. Percent of lease compared to purchase = 124/623 *100 = 19.903...% ~19.9%. Need answer value. Evidence: 124 | Lease obligations 2012, 623 | Purchase obligations 2012. Program divide(124,623) maybe multiply by 100? The question asks percent, so answer 19.9? We can give 19.9. But instructions: final answer inside tags containing only value. Use evidence and program. Program: multiply(divide(124,623),100) = 19.9037. Use exact figures as printed.",
+ "raw_content": "<evidence>\n124 | Lease obligations 2012\n623 | Purchase obligations 2012\n</evidence>\n<program>multiply(divide(124, 623), 100)</program>\n<answer>19.9</answer>",
+ "usage": {
+  "prompt_tokens": 104429,
+  "completion_tokens": 310,
+  "total_tokens": 104739,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 104192
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.06,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "124",
+   "element": "Lease obligations 2012",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "623",
+   "element": "Purchase obligations 2012",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(124, 623), 100)",
+ "answer_model": "19.9",
+ "program_value": 19.903691813804173,
+ "docfinqa_row": 849
+}

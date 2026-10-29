@@ -1,0 +1,53 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0439",
+ "format": "markdown_pdf_plumber",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "how much more , in percent , was spent on october shares than november shares?",
+ "gold": "1229%",
+ "finqa_id": "IPG/2008/page_21.pdf-1",
+ "source_page": "page_21",
+ "ticker": "IPG",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_plumber/IPG_2008_0001193125-09-040141.md",
+ "doc_chars": 407053,
+ "prompt_chars": 407220,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 407053,
+ "original_chars": 407053,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 104214,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 655,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1129.09%",
+ "reasoning": "We need answer question: \"how much more , in percent , was spent on october shares than november shares?\" Need find October and November share purchases from document. In Item 5 repurchase table: October 1-31: 29,704 shares, average price $5.99. November 1-30: 4,468 shares, average price $3.24. \"spent\" means total cost = shares * price. October spent = 29,704 * 5.99 = ? 29,704*5.99 = 29,704*6 - 29,704*0.01 = 178,224 - 297.04 = 177,926.96. November spent = 4,468 * 3.24 = 4,468*3 + 4,468*0.24 = 13,404 + 1,072.32 = 14,476.32. Difference = 177,926.96 - 14,476.32 = 163,450.64. Percent more = difference / November * 100 = 163,450.64 / 14,476.32 * 100. Compute: 14,476.32 * 11 = 159,239.52; difference 163,450.64 - 159,239.52 = 4,211.12; 4,211.12/14,476.32 = 0.2909; so 11.2909? Actually 11 + 0.2909 = 11.2909, so 1129.09%? Wait 163,450.64 / 14,476.32 = 11.29 approximately. So percent more = 1129%. Let's compute precisely: 14,476.32 * 11.29 = 14,476.32*11 + 14,476.32*0.29 = 159,239.52 + 4,198.13 = 163,437.65, close. So about 1129.1%. But question \"how much more, in percent, was spent on october shares than november shares?\" Could be asking percentage increase from November to October. Answer 1129% (approx). Need final answer inside <answer> tags with value only. Probably 1129.1% or 1129%. Let's compute exact: October cost = 29,704 * 5.99 = 177,926.96. November = 4,468 * 3.24 = 14,476.32. Difference = 163,450.64. Percent = (163,450.64 / 14,476.32)*100 = 1129.09% (since 14,476.32*11.2909 = 163,450.64). So answer 1129.09%. But note table says \"Total Average Price Paid per Share\" for October 5.99, November 3.24. Yes.\n\nFinal answer: <answer>1129.09%</answer>",
+ "raw_content": "<answer>1129.09%</answer>",
+ "usage": {
+  "prompt_tokens": 104360,
+  "completion_tokens": 655,
+  "total_tokens": 105015,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 104192
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.61,
+ "answer_tag_found": true,
+ "docfinqa_row": 439
+}

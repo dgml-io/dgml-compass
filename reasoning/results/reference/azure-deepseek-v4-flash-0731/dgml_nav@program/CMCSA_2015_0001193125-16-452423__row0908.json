@@ -1,0 +1,68 @@
+{
+ "id": "CMCSA_2015_0001193125-16-452423__row0908",
+ "key": "CMCSA_2015_0001193125-16-452423",
+ "question": "based on the review of the reconciliation of unrecognized tax benefits what was the change in 2014",
+ "gold": "530",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "CMCSA_2015_0001193125-16-452423.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/section/IncomeTax/UnrecognizedTaxBenefitRollforward"
+ ],
+ "r1_reasoning_chars": 1978,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 34060,
+  "completion_tokens": 553,
+  "total_tokens": 34613,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/section/IncomeTax/UnrecognizedTaxBenefitRollforward"
+ ],
+ "content_chars": 12739,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "-530",
+ "reasoning": "We need answer change in 2014 in reconciliation of unrecognized tax benefits. Need interpret \"change in 2014\" likely net change in balance during 2014. Balance Jan 1 2014 = $1,701 million (from 2014 column? Actually table columns: 2015, 2014, 2013. Balance Jan 1: 2015 $1,171, 2014 $1,701, 2013 $1,573. Balance Dec 31: 2015 $1,136, 2014 $1,171, 2013 $1,701. So change in 2014 = Dec31 2014 - Jan1 2014 = 1,171 - 1,701 = -530. Or could be sum of additions/reductions in 2014 column: 63+111+0-220-448-36 = -530. So answer -530 (in millions). Need provide evidence figures. Use values as printed: $1,171 and $1,701. But careful: Balance Jan 1 2014 is $1,701 (in 2014 column? Actually row Balance, January 1: columns 2015 $1,171, 2014 $1,701, 2013 $1,573. Yes). Balance Dec 31 2014 is $1,171 (in 2014 column? Row Balance, December 31: 2015 $1,136, 2014 $1,171, 2013 $1,701). So change = 1,171 - 1,701 = -530. Need answer maybe -530. The question \"what was the change in 2014\" likely net decrease of $530 million. We'll provide evidence and program.",
+ "raw_content": "<evidence>\n$ 1,171 | Balance, December 31 (2014 column)\n$ 1,701 | Balance, January 1 (2014 column)\n</evidence>\n<program>subtract(1171, 1701)</program>\n<answer>-530</answer>",
+ "r2_usage": {
+  "prompt_tokens": 3297,
+  "completion_tokens": 438,
+  "total_tokens": 3735,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 1,171",
+   "element": "Balance, December 31 (2014 column)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ 1,701",
+   "element": "Balance, January 1 (2014 column)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(1171, 1701)",
+ "answer_model": "-530",
+ "program_value": -530.0,
+ "elapsed_s": 17.41,
+ "outline_source": "CMCSA_2015_0001193125-16-452423.outline.txt",
+ "outline_chars": 134140
+}

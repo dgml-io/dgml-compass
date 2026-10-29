@@ -1,0 +1,50 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0630",
+ "format": "dgml_compact",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "whats is the percentage of equity compensation plans that were not approved by security holders?",
+ "gold": "0.491%",
+ "finqa_id": "CME/2010/page_123.pdf-1",
+ "source_page": "page_123",
+ "ticker": "CME",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/dgml_compact/CME_2010_0001193125-11-050252.dgml.txt",
+ "doc_chars": 521543,
+ "prompt_chars": 521728,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 521543,
+ "original_chars": 521543,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 112341,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 940,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.49%",
+ "reasoning": "We need to find the percentage of equity compensation plans not approved by security holders. The document has a table in Item 12: Equity Compensation Plan Information. It shows:\n\nEquity compensation plans approved by security holders: 1,211,143 options, weighted avg exercise price $308.10, remaining available 5,156,223.\nEquity compensation plans not approved by security holders: 5,978 options, exercise price $22.00, remaining available —.\nTotal: 1,217,121 options.\n\nThe question asks: \"whats is the percentage of equity compensation plans that were not approved by security holders?\" This could be interpreted as the percentage of total options outstanding that are under plans not approved, or the percentage of plans (count) not approved. But the table gives number of securities to be issued upon exercise of outstanding options. The question says \"percentage of equity compensation plans\" - likely the percentage of outstanding options under non-approved plans. Or maybe the percentage of the total number of plans? But the table only gives counts of options. The most reasonable interpretation: the percentage of outstanding options that are under plans not approved by security holders. That would be 5,978 / 1,217,121 * 100 ≈ 0.491%. Alternatively, if they mean the percentage of the total number of plans (approved vs not approved), there are two categories: approved and not approved. But the table lists two rows: approved and not approved. The percentage of plans not approved would be 1 out of 2? That seems unlikely. The question likely refers to the proportion of equity compensation (options) not approved. Let's compute: 5,978 / 1,217,121 = 0.00491, so 0.49%. But the question says \"percentage of equity compensation plans\" - maybe they want the percentage of the total number of plans? But the table doesn't give number of plans, just options. The document says \"Equity compensation plans approved by security holders\" and \"not approved\". The percentage of plans not approved could be 50% if there are two categories, but that's not meaningful. Usually in such contexts, they ask for the percentage of shares or options. I'll compute the percentage of outstanding options under non-approved plans.\n\nLet's compute exactly: 5,978 / 1,217,121 = 0.004911... so 0.4911%. Round to one decimal? The question doesn't specify. I'll give 0.49% or 0.5%. But let's see if there is any other interpretation. The question: \"whats is the percentage of equity compensation plans that were not approved by security holders?\" Could be asking for the percentage of the total number of plans (i.e., out of all equity compensation plans, what percentage were not approved). But the table only shows two categories: approved and not approved. There is no count of plans, only options. However, the table header says \"Number of Securities to be Issued Upon Exercise of Outstanding Options\" - so it's about options. So the percentage of options under non-approved plans is the answer.\n\nI'll compute: 5978 / 1217121 = 0.004911... = 0.4911%. So answer: 0.49% or 0.5%. I'll put 0.49% inside the answer tags. But the instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for percentage, so I should include the % sign? It says \"no explanation or units unless the question asks for them.\" The question asks for percentage, so I can include the % sign. I'll put 0.49% or 0.5%. Let me be precise: 5978/1217121 = 0.004911... so 0.4911%. I'll round to two decimals: 0.49%. Or maybe they want the percentage of plans (i.e., 50%?) but that seems unlikely. I'll go with 0.49%.\n\nLet me double-check the numbers: The table shows approved: 1,211,143; not approved: 5,978; total: 1,217,121. So percentage = 5,978 / 1,217,121 * 100 = 0.4911%. So answer: 0.49%.\n\nI'll put <answer>0.49%</answer>.",
+ "raw_content": "<answer>0.49%</answer>",
+ "usage": {
+  "prompt_tokens": 112485,
+  "completion_tokens": 940,
+  "total_tokens": 113425,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.68,
+ "answer_tag_found": true,
+ "docfinqa_row": 630
+}

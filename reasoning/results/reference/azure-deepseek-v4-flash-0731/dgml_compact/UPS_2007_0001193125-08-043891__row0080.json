@@ -1,0 +1,50 @@
+{
+ "id": "UPS_2007_0001193125-08-043891__row0080",
+ "format": "dgml_compact",
+ "key": "UPS_2007_0001193125-08-043891",
+ "question": "what is the total in millions of expected cash outflow to satisfy contractual obligations and commitments as of december 31 , 2007?",
+ "gold": "28809",
+ "finqa_id": "UPS/2007/page_49.pdf-1",
+ "source_page": "page_49",
+ "ticker": "UPS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml_compact/UPS_2007_0001193125-08-043891.dgml.txt",
+ "doc_chars": 424830,
+ "prompt_chars": 425050,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 424830,
+ "original_chars": 424830,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93585,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 288,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "28809",
+ "reasoning": "We need the total expected cash outflow for contractual obligations and commitments as of Dec 31, 2007. In the document, under \"Contractual ObligationsCommitments\" there is a table with columns: Year, Capital Leases, Operating Leases, Debt Principal, Debt Interest, Purchase Commitments, Pension Fundings, Other Liabilities. The total row shows: Total | $ 619 | $ 1,782 | $10,527 | $8,026 | $ 3,828 | $ 3,465 | $ 562. The question asks \"total in millions of expected cash outflow to satisfy contractual obligations and commitments\". That total is the sum of all columns? The table's total row gives each column total. The overall total would be sum of those: 619+1782+10527+8026+3828+3465+562 = let's compute: 619+1782=2401; +10527=12928; +8026=20954; +3828=24782; +3465=28247; +562=28809. So total is 28,809 million. But the question might be asking for the total of the table, which is the sum of all categories. The table header says \"expected cash outflow to satisfy our contractual obligations and commitments\". So answer 28809.",
+ "raw_content": "<answer>28809</answer>",
+ "usage": {
+  "prompt_tokens": 93739,
+  "completion_tokens": 288,
+  "total_tokens": 94027,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.35,
+ "answer_tag_found": true,
+ "docfinqa_row": 80
+}

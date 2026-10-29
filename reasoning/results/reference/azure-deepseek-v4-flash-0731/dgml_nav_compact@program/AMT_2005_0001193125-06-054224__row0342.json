@@ -1,0 +1,64 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0342",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what percentage of long-term financing was classified as current at the end of 2005?",
+ "gold": "4%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "AMT_2005_0001193125-06-054224.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/DocumentTableOf/DocumentTableOf/FinancingArrangements/LongTermFinancingBalances"
+ ],
+ "r1_reasoning_chars": 2879,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 28592,
+  "completion_tokens": 716,
+  "total_tokens": 29308,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/DocumentTableOf/DocumentTableOf/FinancingArrangements/LongTermFinancingBalances"
+ ],
+ "content_chars": 2187,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "4.48751",
+ "reasoning": "We need answer percentage of long-term financing classified as current at end of 2005. From table: Total long-term financing 3,613,429; Less current portion of other long-term obligations (162,153); Long-term debt 3,451,276. So current portion is 162,153. Percentage = 162,153 / 3,613,429 * 100. Compute. Need evidence figures. Also note \"current portion of other long-term obligations\" is the current portion. So percentage = 162153 / 3613429 * 100 = 4.487... Let's compute precisely. 162153 / 3613429 = 0.044875? 3613429 * 0.0449 = 162,? 3,613,429 * 0.0449 = 162,? 3,613,429*0.04=144,537.16; *0.0049=17,705.8; sum 162,242.96 slightly high. So 0.044875? Let's do exact: 162153 / 3613429. Use calculator mental: 3613429 * 0.04487 = 162,? 3,613,429*0.044 = 158,990.876; *0.00087=3,143.68; sum 162,134.56; need 18.44 more; /3,613,429=0.0000051; so 0.0448751. So 4.4875%. Answer likely 4.5% or 4.49%. Need final value only. Use program divide(162153, 3613429) then multiply by 100? The program should compute percentage. The question asks percentage, so program multiply(divide(162153, 3613429), 100). But figures as printed: 162,153 and 3,613,429. Use numbers without commas. Evidence lines.",
+ "raw_content": "<evidence>162,153 | Less current portion of other long-term obligations</evidence>\n<evidence>3,613,429 | Total</evidence>\n<program>multiply(divide(162153, 3613429), 100)</program>\n<answer>4.4875</answer>",
+ "r2_usage": {
+  "prompt_tokens": 898,
+  "completion_tokens": 480,
+  "total_tokens": 1378,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "162,153",
+   "element": "Less current portion of other long-term obligations",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(162153, 3613429), 100)",
+ "answer_model": "4.4875",
+ "program_value": 4.487510339901517,
+ "elapsed_s": 8.29,
+ "outline_source": "AMT_2005_0001193125-06-054224.outline.txt",
+ "outline_chars": 112419
+}

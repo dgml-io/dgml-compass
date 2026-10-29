@@ -1,0 +1,81 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0126",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "if the total fin 48 gross liability for unrecognized tax benefits at november 28 , 2008 were recognized in the future , is the amount of unrecognized tax benefits that would decrease the effective tax rate greater than the amount that would decrease goodwill?",
+ "gold": "no",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "ADBE_2008_0000796343-09-000007.outline.txt",
+ "doc_source": "ADBE_2008_0000796343-09-000007.dgml.xml",
+ "outline_chars": 99180,
+ "predicted_xpaths": [
+  "/chunk/TableOfContentsMarker/IncomeTaxes/FIN48Rollforward/UnrecognizedTaxBenefitImpact"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 930,
+ "r1_usage": {
+  "prompt_tokens": 25438,
+  "completion_tokens": 239,
+  "total_tokens": 25677,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/TableOfContentsMarker/IncomeTaxes/FIN48Rollforward/UnrecognizedTaxBenefitImpact"
+ ],
+ "content_chars": 6272,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "no",
+ "reasoning": "We need answer yes/no. Figures: effective tax rate impact $57.7 million, goodwill impact $68.9 million. Compare: 57.7 < 68.9, so not greater. Answer no. Need evidence and program.",
+ "raw_content": "<evidence>$57.7 million | /chunk/TableOfContentsMarker/IncomeTaxes/FIN48Rollforward/UnrecognizedTaxBenefitImpact/UnrecognizedTaxBenefitImpact/EffectiveTaxRateImpactAmount\n$68.9 million | /chunk/TableOfContentsMarker/IncomeTaxes/FIN48Rollforward/UnrecognizedTaxBenefitImpact/UnrecognizedTaxBenefitImpact/GoodwillImpactAmount</evidence>\n<program>less(57.7, 68.9)</program>\n<answer>no</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1916,
+  "completion_tokens": 170,
+  "total_tokens": 2086,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 1916,
+   "completion_tokens": 170,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "$57.7 million",
+   "element": "chunk/TableOfContentsMarker/IncomeTaxes/FIN48Rollforward/UnrecognizedTaxBenefitImpact/UnrecognizedTaxBenefitImpact/EffectiveTaxRateImpactAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$68.9 million",
+   "element": "chunk/TableOfContentsMarker/IncomeTaxes/FIN48Rollforward/UnrecognizedTaxBenefitImpact/UnrecognizedTaxBenefitImpact/GoodwillImpactAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "less(57.7, 68.9)",
+ "answer_model": "no",
+ "program_value": null,
+ "elapsed_s": 4.95
+}

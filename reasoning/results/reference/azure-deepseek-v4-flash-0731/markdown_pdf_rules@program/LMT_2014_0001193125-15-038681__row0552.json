@@ -1,0 +1,90 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0552",
+ "format": "markdown_pdf_rules",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "in 2014 what was the ratio of the estimated future benefit payments due in 2015 compared to the amount after 2020",
+ "gold": "0.15",
+ "finqa_id": "LMT/2014/page_91.pdf-4",
+ "source_page": "page_91",
+ "ticker": "LMT",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf_rules/LMT_2014_0001193125-15-038681.md",
+ "doc_chars": 436977,
+ "prompt_chars": 437179,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 436977,
+ "original_chars": 436977,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 95659,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "stop",
+   "completion_tokens": 904,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 1,
+ "ok": true,
+ "answer": "0.156401",
+ "reasoning": "We need ratio of estimated future benefit payments due in 2015 compared to amount after 2020 (2020-2024). From Note 9 table: Qualified defined benefit pension plans: 2015 $2,070, 2020-2024 $13,430. Retiree medical and life insurance plans: 2015 $190, 2020-2024 $1,020. The question says \"estimated future benefit payments\" - likely total for all plans? The table has two rows. The question says \"the estimated future benefit payments due in 2015 compared to the amount after 2020\" - ambiguous. Could be for qualified defined benefit pension plans? Or combined? The table is \"estimated future benefit payments\" for both. The question likely refers to the total? But it says \"the amount after 2020\" - the column is \"2020 - 2024\". So ratio = 2015 total / 2020-2024 total. Compute total 2015 = 2070+190 = 2260. Total 2020-2024 = 13430+1020 = 14450. Ratio = 2260/14450 = 0.1564... Or maybe they want just qualified plans? The question says \"estimated future benefit payments\" without specifying plan type. The table includes both. Usually they might ask for qualified defined benefit pension plans? But the question says \"the estimated future benefit payments\" - the table has two rows. I'll use combined. But let's check if there is any other mention. The table is in Note 9. The question: \"in 2014 what was the ratio of the estimated future benefit payments due in 2015 compared to the amount after 2020\" - \"after 2020\" might mean the column \"2020 - 2024\" which is after 2020. So ratio = 2015 / (2020-2024). Use combined. Compute 2260/14450 = 0.1564. Or maybe they want just qualified? Let's see if the question says \"the estimated future benefit payments\" - the table has two categories. Usually they might ask for qualified defined benefit pension plans because that's the main. But the question doesn't specify. I'll use combined. Alternatively, could be \"due in 2015\" vs \"after 2020\" meaning the sum of 2020-2024? Yes.\n\nLet me compute exactly: 2260/14450 = 0.1564 (approx). Or as a ratio 2260:14450 simplifies? Divide by 10: 226/1445. That's it. But the answer should be a number. I'll give decimal.\n\nBut let's double-check the figures: 2015 qualified 2,070; retiree 190 -> 2,260. 2020-2024 qualified 13,430; retiree 1,020 -> 14,450. Ratio = 2260/14450 = 0.1564. Alternatively, if only qualified: 2070/13430 = 0.1541. Which one is more likely? The question says \"estimated future benefit payments\" - the table is titled \"estimated future benefit payments\" and includes both. So combined.\n\nI'll provide evidence with values and elements. The element names are the table rows? The document has table with rows \"Qualified defined benefit pension plans\" and \"Retiree medical and life insurance plans\". So I'll cite those.\n\nProgram: divide(add(2070,190), add(13430,1020)) = divide(2260,14450) = 0.1564.\n\nAnswer: 0.1564 (or 0.156). I'll put 0.1564.\n\nLet me produce.",
+ "raw_content": "<evidence>\n2,070 | Qualified defined benefit pension plans - 2015\n190 | Retiree medical and life insurance plans - 2015\n13,430 | Qualified defined benefit pension plans - 2020-2024\n1,020 | Retiree medical and life insurance plans - 2020-2024\n</evidence>\n\n<program>divide(add(2070, 190), add(13430, 1020))</program>\n\n<answer>0.1564</answer>",
+ "usage": {
+  "prompt_tokens": 95974,
+  "completion_tokens": 904,
+  "total_tokens": 96878,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 95744
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.34,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "2,070",
+   "element": "Qualified defined benefit pension plans - 2015",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "190",
+   "element": "Retiree medical and life insurance plans - 2015",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "13,430",
+   "element": "Qualified defined benefit pension plans - 2020-2024",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1,020",
+   "element": "Retiree medical and life insurance plans - 2020-2024",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(2070, 190), add(13430, 1020))",
+ "answer_model": "0.1564",
+ "program_value": 0.156401384083045,
+ "docfinqa_row": 552
+}

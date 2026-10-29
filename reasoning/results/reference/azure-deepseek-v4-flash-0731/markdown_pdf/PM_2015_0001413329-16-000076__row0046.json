@@ -1,0 +1,50 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0046",
+ "format": "markdown_pdf",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what was the average currency translation adjustments from 2013 to 2015 in millions?",
+ "gold": "-6806",
+ "finqa_id": "PM/2015/page_127.pdf-4",
+ "source_page": "page_127",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf/PM_2015_0001413329-16-000076.md",
+ "doc_chars": 504705,
+ "prompt_chars": 504878,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 504705,
+ "original_chars": 504705,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 122013,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1695,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-4088.33",
+ "reasoning": "We need to find currency translation adjustments for 2013, 2014, 2015. From the consolidated statements of comprehensive earnings: for 2015, change in currency translation adjustments: unrealized gains/losses net of taxes -2,248, plus gains transferred to earnings -1? Actually the line: \"Change in currency translation adjustments: Unrealized gains (losses), net of income taxes of ($143) in 2015, ($161) in 2014 and $227 in 2013\" gives amounts: 2015: -2,248; 2014: -1,746; 2013: -1,876. Also there is \"(Gains)/losses transferred to earnings\" of -1, -5, -12 for 2015, 2014, 2013 respectively. So total change in currency translation adjustments for each year: 2015: -2,248 + (-1) = -2,249? Actually the statement shows \"Change in currency translation adjustments: Unrealized gains (losses) ... (2,248) ... (Gains)/losses transferred to earnings ... (1)\" so total change is -2,249? But the question asks \"average currency translation adjustments from 2013 to 2015\" - likely the average of the annual changes? Or the average balance? The phrase \"currency translation adjustments\" might refer to the accumulated other comprehensive losses component. In Note 17, accumulated other comprehensive losses shows currency translation adjustments at Dec 31: 2015: -6,129; 2014: -3,929; 2013: -2,207. The question says \"average currency translation adjustments from 2013 to 2015\" - could be average of the balances at year-end? Or average of the annual changes? Typically \"currency translation adjustments\" might refer to the cumulative balance. But the phrasing \"from 2013 to 2015\" suggests over that period. Could be the average of the three year-end balances: (-2,207 + -3,929 + -6,129)/3 = (-12,265)/3 = -4,088.33. Or average of the changes: (-1,876 + -1,746 + -2,248)/3 = (-5,870)/3 = -1,956.67. But note the changes include the transferred gains? The statement shows the total change in other comprehensive earnings for currency translation adjustments is the sum of those two lines. For 2015: -2,248 + (-1) = -2,249? Actually the line says \"(Gains)/losses transferred to earnings, net of income taxes of $- in 2015, $- in 2014 and $- in 2013\" but the amounts are -1, -5, -12. So total change for 2015 is -2,249? But the statement of comprehensive earnings shows \"Total other comprehensive losses\" for 2015 is -2,622, which includes all components. The currency translation adjustment change is -2,249? Let's check: In the statement, the first line under \"Change in currency translation adjustments:\" is \"Unrealized gains (losses), net of income taxes of ($143) in 2015, ($161) in 2014 and $227 in 2013\" with amounts (2,248), (1,746), (1,876). Then next line \"(Gains)/losses transferred to earnings, net of income taxes of $- in 2015, $- in 2014 and $- in 2013\" with amounts (1), (5), (12). So the total change in currency translation adjustments for each year is the sum: 2015: -2,248 + (-1) = -2,249? But the sign: the line says \"(Gains)/losses transferred to earnings\" - if it's a gain transferred, it would be negative? Actually the amount is -1, meaning a gain of 1? The text says \"(Gains)/losses transferred to earnings\" - so if it's a gain, it's negative. So the total change is -2,248 + (-1) = -2,249? But the statement of comprehensive earnings shows \"Total other comprehensive losses\" for 2015 is -2,622, which includes pension etc. So the currency translation adjustment change is -2,249? However, the accumulated other comprehensive losses balance for currency translation adjustments at Dec 31, 2015 is -6,129, and at Dec 31, 2014 is -3,929, so the change is -2,200? That doesn't match -2,249. Let's check: -3,929 to -6,129 is a change of -2,200. But the statement shows -2,248 for unrealized and -1 for transferred, total -2,249. There might be rounding or other items. Actually the balance at Dec 31, 2014 is -3,929, and at Dec 31, 2015 is -6,129, difference -2,200. But the statement shows -2,248 + (-1) = -2,249. There is a discrepancy of 49. Possibly the balance includes other items? Or the statement of comprehensive earnings includes the effect of the sale of subsidiary shares? Actually the statement of stockholders' equity shows other comprehensive earnings (losses) for 2015 of -2,576 for PMI, and the total other comprehensive losses is -2,622, with noncontrolling interests -46. So the PMI portion is -2,576. The currency translation adjustment change for PMI might be different. The question asks \"average currency translation adjustments from 2013 to 2015\" - likely the average of the year-end balances of the accumulated other comprehensive losses component. That is a common metric. The balances are given in Note 17: 2013: -2,207; 2014: -3,929; 2015: -6,129. Average = (-2,207 + -3,929 + -6,129)/3 = -12,265/3 = -4,088.33. But the question says \"in millions\" so we can give -4,088.33 or round to -4,088. Alternatively, if they mean the average annual change, that would be (-1,876 + -1,746 + -2,248)/3 = -5,870/3 = -1,956.67. But the phrase \"currency translation adjustments\" often refers to the cumulative translation adjustment account. The question says \"average currency translation adjustments from 2013 to 2015\" - that could be the average of the balances at the end of each year. I'll go with that.\n\nLet me confirm the numbers from the document. In Note 17, the table shows:\n\n| (Losses) Earnings | At December 31, |\n| 2015 | 2014 | 2013 |\n| Currency translation adjustments | $(6,129) | $(3,929) | $(2,207) |\n\nSo average = (-6,129 + -3,929 + -2,207)/3 = -12,265/3 = -4,088.333... So answer -4,088.33 or -4,088. The question asks \"in millions\" so we can give -4,088.33. I'll put -4088.33.\n\nBut let me double-check if there is any other interpretation. The question might be from a financial analysis perspective, asking for the average of the annual changes. However, the wording \"currency translation adjustments\" typically refers to the cumulative account. Also the question says \"from 2013 to 2015\" which could mean the average over that period, i.e., the average of the three year-end balances. I'll go with that.\n\nThus final answer: -4088.33 (or -4088). I'll put -4088.33.",
+ "raw_content": "<answer>-4088.33</answer>",
+ "usage": {
+  "prompt_tokens": 122159,
+  "completion_tokens": 1695,
+  "total_tokens": 123854,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 13.46,
+ "answer_tag_found": true,
+ "docfinqa_row": 46
+}

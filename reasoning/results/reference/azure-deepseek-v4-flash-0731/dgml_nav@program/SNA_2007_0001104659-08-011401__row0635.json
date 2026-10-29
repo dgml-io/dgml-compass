@@ -1,0 +1,63 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0635",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "based on the cash dividends paid , how many common stock shares were outstanding?",
+ "gold": "58909091",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "SNA_2007_0001104659-08-011401.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/MarketForCommonEquity/MarketForCommonEquityDescription/SharesOutstandingCount",
+  "/chunk/Document/Document/ul/li/p/SharesOutstandingCount"
+ ],
+ "r1_reasoning_chars": 3997,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 22361,
+  "completion_tokens": 917,
+  "total_tokens": 23278,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/MarketForCommonEquity/MarketForCommonEquityDescription/SharesOutstandingCount",
+  "/chunk/Document/Document/ul/li/p/SharesOutstandingCount"
+ ],
+ "content_chars": 1118,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "57429139",
+ "reasoning": "We need answer. Need parse question: \"based on the cash dividends paid, how many common stock shares were outstanding?\" The excerpts include shares outstanding counts, not cash dividends. Need determine if enough info? The question asks based on cash dividends paid, likely need compute shares outstanding = cash dividends paid / dividend per share? But document excerpts don't include cash dividends or per share. However there are shares outstanding counts directly. The question wording \"based on the cash dividends paid\" might be from a table where cash dividends paid and per share amounts given, but region only has shares outstanding. Need answer likely 57,429,139 or 57,690,539? Need identify which is relevant. The question asks \"based on the cash dividends paid , how many common stock shares were outstanding?\" Maybe from statement of cash flows: cash dividends paid and dividends per share? But no. The excerpts show two counts: as of Dec 29, 2007: 57,429,139; as of Feb 15, 2008: 57,690,539. Which one? The question says \"based on the cash dividends paid\" - maybe in cash flow statement, \"Cash dividends paid\" and \"Dividends per share\" to compute shares? But not in region. The region only has shares outstanding count. The answer might be 57,429,139 (as of Dec 29, 2007) because that's the fiscal year end? Need see context: \"As of December 29, 2007, Snap-on had 57,429,139 shares of common stock outstanding.\" And \"As of February 15, 2008, there were 57,690,539 shares.\" The question asks \"based on the cash dividends paid\" - maybe from a table \"Cash dividends paid per common share\" and \"Cash dividends paid\" to compute weighted average shares? But no.\n\nLet's reason: The question likely from a financial statement analysis task: \"based on the cash dividends paid, how many common stock shares were outstanding?\" In a statement of cash flows, \"Cash dividends paid\" is a total, and \"Dividends per share\" is given, so shares = total / per share. But the provided excerpts don't include those. However the region includes SharesOutstandingCount directly. The instruction says \"You are given excerpts from one document, selected because they should contain the answer\". So the answer is in the excerpts. The excerpts contain two shares outstanding counts. Which one is \"based on the cash dividends paid\"? Maybe the cash dividends paid section in the statement of cash flows has a line \"Cash dividends paid\" and a note \"Dividends per share\" and \"Shares outstanding\" at end. But the region path is MarketForCommonEquity, not cash flow. The question might be a trick: \"based on the cash dividends paid\" means from the cash dividends paid line in the statement of cash flows, you can infer shares outstanding if you know dividend per share. But no dividend per share in excerpts. However the excerpts directly give shares outstanding. So answer is one of those.\n\nNeed decide. The question says \"based on the cash dividends paid , how many common stock shares were outstanding?\" The phrase \"based on the cash dividends paid\" might be a distractor. The document excerpt has \"SharesOutstandingCount\" with values. The answer likely 57,429,139 because that is the number of shares outstanding as of the fiscal year end (December 29, 2007) and the cash dividends paid relate to that year. The other is as of February 15, 2008, a later date. The question asks \"were outstanding\" (past tense) likely at year end. Also the first region has \"57,429,139 shares of common stock outstanding.\" The second region has \"57,690,539 shares\" but no \"common stock\" maybe. The first is more directly \"common stock shares outstanding.\" So answer 57,429,139.\n\nBut need evidence: list figures used. We'll cite 57,429,139 from SharesOutstandingCount. Also maybe 57,690,539? But we only need one. The program is just the figure.\n\nNeed final answer inside <answer>57,429,139</answer>. Also evidence and program.",
+ "raw_content": "<evidence>57,429,139 | SharesOutstandingCount</evidence>\n<program>57429139</program>\n<answer>57,429,139</answer>",
+ "r2_usage": {
+  "prompt_tokens": 610,
+  "completion_tokens": 919,
+  "total_tokens": 1529,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "57,429,139",
+   "element": "SharesOutstandingCount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "57429139",
+ "answer_model": "57,429,139",
+ "program_value": 57429139.0,
+ "elapsed_s": 8.38,
+ "outline_source": "SNA_2007_0001104659-08-011401.outline.txt",
+ "outline_chars": 89754
+}

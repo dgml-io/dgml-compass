@@ -1,0 +1,53 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0046",
+ "format": "markdown_pdf_plumber",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what was the average currency translation adjustments from 2013 to 2015 in millions?",
+ "gold": "-6806",
+ "finqa_id": "PM/2015/page_127.pdf-4",
+ "source_page": "page_127",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_plumber/PM_2015_0001413329-16-000076.md",
+ "doc_chars": 557384,
+ "prompt_chars": 557557,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 557384,
+ "original_chars": 557384,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 137284,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 765,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-1963",
+ "reasoning": "We need to find currency translation adjustments for 2013, 2014, 2015. From the consolidated statements of comprehensive earnings, we have \"Change in currency translation adjustments\" line. For 2015: unrealized gains (losses) net of taxes: (2,248) plus gains transferred to earnings: (1) -> total change? Actually the line \"Change in currency translation adjustments\" is the sum of those two? In the statement, it shows \"Change in currency translation adjustments:\" then \"Unrealized gains (losses)...\" and \"(Gains)/losses transferred to earnings...\" So the total change in currency translation adjustments is the sum of those two lines. For 2015: (2,248) + (-1) = -2,249? But note the numbers are in millions. For 2014: (1,746) + (-5) = -1,751. For 2013: (1,876) + (-12) = -1,888. But wait, the statement shows \"Change in currency translation adjustments:\" with those two lines. However, the total other comprehensive losses is the sum of all components. But the question asks \"average currency translation adjustments from 2013 to 2015\". That likely means the average of the annual changes in currency translation adjustments. So compute average of -2,249, -1,751, -1,888? Let's check the numbers: For 2015: unrealized (2,248) and transferred (1) -> total -2,249. For 2014: (1,746) and (5) -> -1,751. For 2013: (1,876) and (12) -> -1,888. Sum = -2,249 -1,751 -1,888 = -5,888. Average = -5,888/3 = -1,962.666... So approximately -1,963 million. But the question says \"in millions\" so answer as -1963? Or maybe they want the average of the \"currency translation adjustments\" line as reported? Actually the statement of comprehensive earnings shows \"Change in currency translation adjustments:\" and then the two lines. The total change is the sum. So average is -1,962.67. Round to nearest million? The question says \"in millions\" so we can give -1,963. But let's double-check the numbers: In the document, for 2015: \"Unrealized gains (losses), net of income taxes of ($143) in 2015, ($161) in 2014 and $227 in 2013 (2,248) (1,746) (1,876)\" and \"(Gains)/losses transferred to earnings, net of income taxes of $- in 2015, $- in 2014 and $- in 2013 (1) (5) (12)\". So indeed the numbers are (2,248) and (1) for 2015, etc. So total change is -2,249, -1,751, -1,888. Average = -1,962.67. So answer -1963. But maybe they want the average of the \"currency translation adjustments\" as a line item? Actually the question says \"average currency translation adjustments\" which might refer to the balance in accumulated other comprehensive losses? But that is a balance, not a change. The question says \"from 2013 to 2015\" which suggests the annual changes. So I'll go with average of annual changes.\n\nThus answer: -1963 (in millions). I'll put that.",
+ "raw_content": "<answer>-1963</answer>",
+ "usage": {
+  "prompt_tokens": 137431,
+  "completion_tokens": 765,
+  "total_tokens": 138196,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 137216
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.53,
+ "answer_tag_found": true,
+ "docfinqa_row": 46
+}

@@ -1,0 +1,50 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0555",
+ "format": "dgml",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "if the fuel surcharge grows by the same rate as in 2014what would expected 2015 revenues be in billions?",
+ "gold": "3.0",
+ "finqa_id": "UNP/2014/page_25.pdf-1",
+ "source_page": "page_25",
+ "ticker": "UNP",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/dgml/UNP_2014_0001193125-15-037518.dgml.xml",
+ "doc_chars": 655633,
+ "prompt_chars": 655826,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 655633,
+ "original_chars": 655633,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 153615,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 212,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "2.968",
+ "reasoning": "We need answer question: \"if the fuel surcharge grows by the same rate as in 2014 what would expected 2015 revenues be in billions?\" Need find fuel surcharge revenue 2014 and growth rate. Document: fuel surcharge revenue 2014 $2.8 billion, 2013 $2.6 billion, 2012 $2.6 billion. In 2014 increased 6% driven by 7% carloadings increase. So if grows by same rate as in 2014 (6%), expected 2015 fuel surcharge = 2.8 * 1.06 = 2.968 billion. But question says \"expected 2015 revenues\" maybe fuel surcharge revenues? It says \"if the fuel surcharge grows by the same rate as in 2014 what would expected 2015 revenues be in billions?\" Likely fuel surcharge revenue. So answer 2.968. Need final inside <answer> tags.",
+ "raw_content": "<answer>2.968</answer>",
+ "usage": {
+  "prompt_tokens": 153769,
+  "completion_tokens": 212,
+  "total_tokens": 153981,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.58,
+ "answer_tag_found": true,
+ "docfinqa_row": 555
+}

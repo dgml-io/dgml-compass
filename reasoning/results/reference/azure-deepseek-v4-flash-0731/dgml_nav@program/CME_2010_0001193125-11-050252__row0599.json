@@ -1,0 +1,68 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0599",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "what is the total value of the approved equity compensation plans in 2005 , in millions of dollars?",
+ "gold": "375.15",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "CME_2010_0001193125-11-050252.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/Part/SecurityOwnership/EquityCompensationPlanInformation"
+ ],
+ "r1_reasoning_chars": 2597,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 22574,
+  "completion_tokens": 587,
+  "total_tokens": 23161,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/Part/SecurityOwnership/EquityCompensationPlanInformation"
+ ],
+ "content_chars": 4835,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "373.153158",
+ "reasoning": "We need answer total value of approved equity compensation plans in 2005, in millions. Need interpret. The table gives number of securities to be issued upon exercise of outstanding options, weighted-average exercise price, and remaining available. \"total value\" maybe number of securities * weighted-average exercise price? For approved plans: 1,211,143 shares at $308.10 = value? But question says \"in 2005\" maybe from document? The table is from a 10-K? It says 2005 Director Stock Plan etc. But \"total value of the approved equity compensation plans in 2005\" could be from another table? The excerpt only has this table. Need compute total value of approved equity compensation plans? Could be \"Number of Securities to be Issued Upon Exercise of Outstanding Options\" times weighted-average exercise price for approved plans. That gives 1,211,143 * 308.10 = ? Let's compute: 1,211,143 * 308.10 = 1,211,143*308 + *0.1? Actually 308.10 = 308.1. 1,211,143 * 308.1 = 1,211,143*300 = 363,342,900; *8.1 = 9,810,258.3; sum = 373,153,158.3. In millions = 373.1531583. But question asks \"total value of the approved equity compensation plans in 2005\" maybe \"in millions of dollars\" so answer 373.15? But need check if \"approved equity compensation plans\" includes both approved and not approved? The question specifically \"approved equity compensation plans\" so use approved row. But \"in 2005\" might refer to fiscal year? The document is CME Group 10-K? The table is as of some date. The question says \"in 2005\" maybe from a different context? The excerpt includes \"2005 Director Stock Plan\" but not a value. Could be asking \"total value of the approved equity compensation plans in 2005\" meaning the aggregate intrinsic value? No, table gives weighted-average exercise price and number of options. The \"total value\" of options outstanding is number * exercise price? That is not market value, it's aggregate exercise price. But question says \"total value of the approved equity compensation plans\" maybe from a different table in document? The region only has this table. The question might be from a dataset where answer is computed from table: \"Number of securities to be issued upon exercise of outstanding options\" times \"weighted-average exercise price\" for approved plans. Let's see if there is any other figure: The table has \"Equity compensation plans approved by security holders\" with 1,211,143 and $308.10. The total row has 1,217,121 and 5,156,223. The \"not approved\" has 5,978 at $22.00. The question asks \"total value of the approved equity compensation plans in 2005\" - maybe \"in 2005\" refers to the year of the plan? The 2005 Director Stock Plan is one of the plans. But \"total value\" might be the sum of shares remaining available for future issuance? No, that's shares, not value. Could be \"total value\" = number of securities to be issued upon exercise * weighted-average exercise price for approved plans. Let's compute exactly: 1,211,143 * 308.10 = ?\n\nLet's do precise: 1,211,143 * 308.10 = 1,211,143 * 308 + 1,211,143 * 0.10 = 1,211,143*308 = 1,211,143*(300+8) = 363,342,900 + 9,689,144 = 373,032,044; plus 121,114.3 = 373,153,158.3. In millions = 373.1531583. Round to maybe 373.2? The question asks \"in millions of dollars\" so answer 373.1531583? Usually they want a number like 373.2. But need see if \"total value\" might be \"aggregate intrinsic value\" which would require market price, not given. So likely this.\n\nBut let's read the question: \"what is the total value of the approved equity compensation plans in 2005 , in millions of dollars?\" It might be from a table in a 10-K that has \"Equity Compensation Plan Information\" as of Dec 31, 2005? The table header doesn't show date. The \"2005\" might be the fiscal year. The approved plans row includes all approved plans, not just 2005. So answer is 373.1531583 million.\n\nNeed provide evidence: figures used: 1,211,143 | OutstandingOptionCount (approved row), $ 308.10 | ShareWeightedExercisePrice (approved row). Then program multiply(1211143, 308.10) but need use as printed? The value is \"$ 308.10\" with dollar sign. We can use 308.10. Program: divide(multiply(1211143, 308.10), 1000000) to get millions? Actually multiply gives dollars, then divide by 1,000,000 to get millions. But the question asks \"in millions of dollars\" so answer should be 373.1531583. The program should output that. So program: divide(multiply(1211143, 308.10), 1000000). But the benchmark expects exact? It will execute. Use numbers as printed: 1,211,143 has commas; we can write 1211143. 308.10 as 308.10. So program: divide(multiply(1211143, 308.10), 1000000). That yields 373.1531583.\n\nBut wait: The question says \"total value of the approved equity compensation plans\" - could be \"Number of Securities Remaining Available for Future Issuance\" times something? No, that's shares, not value. The \"value\" of plans might be the aggregate market value of shares to be issued? Not given. The only value-related numbers are exercise prices. So yes.\n\nLet's ensure no other figures: The table also has \"Total\" row with 1,217,121 and 5,156,223. But approved row is specific. The question says \"approved equity compensation plans\" so use approved row.\n\nThus final answer: 373.1531583 (or 373.2). The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"in millions of dollars\" so the value is 373.1531583. We can put 373.1531583. But maybe they expect rounding to one decimal? The question says \"in millions of dollars\" not \"rounded\". So exact.\n\nLet's produce evidence and program.",
+ "raw_content": "<evidence>\n1,211,143 | OutstandingOptionCount (Equity compensation plans approved by security holders)\n$ 308.10 | ShareWeightedExercisePrice (Equity compensation plans approved by security holders)\n</evidence>\n<program>\ndivide(multiply(1211143, 308.10), 1000000)\n</program>\n<answer>373.1531583</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1384,
+  "completion_tokens": 1559,
+  "total_tokens": 2943,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,211,143",
+   "element": "OutstandingOptionCount (Equity compensation plans approved by security holders)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$ 308.10",
+   "element": "ShareWeightedExercisePrice (Equity compensation plans approved by security holders)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(multiply(1211143, 308.10), 1000000)",
+ "answer_model": "373.1531583",
+ "program_value": 373.15315830000003,
+ "elapsed_s": 12.47,
+ "outline_source": "CME_2010_0001193125-11-050252.outline.txt",
+ "outline_chars": 87444
+}

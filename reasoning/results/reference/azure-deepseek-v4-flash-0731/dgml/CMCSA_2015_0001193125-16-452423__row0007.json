@@ -1,0 +1,53 @@
+{
+ "id": "CMCSA_2015_0001193125-16-452423__row0007",
+ "format": "dgml",
+ "key": "CMCSA_2015_0001193125-16-452423",
+ "question": "what was the change in unrecognized tax benefits from the end of 2014 to the end of 2015?",
+ "gold": "-35",
+ "finqa_id": "CMCSA/2015/page_112.pdf-2",
+ "source_page": "page_112",
+ "ticker": "CMCSA",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml/CMCSA_2015_0001193125-16-452423.dgml.xml",
+ "doc_chars": 907858,
+ "prompt_chars": 908036,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": true,
+ "truncation": "head",
+ "kept_chars": 907748,
+ "original_chars": 1078239,
+ "kept_fraction": 0.8419,
+ "est_doc_tokens": 250309,
+ "est_kept_tokens": 210513,
+ "budget_tokens": 240000,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 202,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-35",
+ "reasoning": "The question asks for the change in unrecognized tax benefits from the end of 2014 to the end of 2015.\n\nFrom the document, in Note 15: Income Taxes, there is a \"Reconciliation of Unrecognized Tax Benefits\" table.\n\nThe table shows:\nBalance, January 1 (2015) = $1,171 million\nBalance, December 31 (2015) = $1,136 million\n\nSo the change from end of 2014 to end of 2015 is $1,136 - $1,171 = -$35 million.\n\nThe question asks \"what was the change in unrecognized tax benefits from the end of 2014 to the end of 2015?\" So the change is a decrease of $35 million.\n\nThe answer should be -35 (in millions) or just the value. The question doesn't specify units, but the document uses millions. I'll provide -35.",
+ "raw_content": "<answer>-35</answer>",
+ "usage": {
+  "prompt_tokens": 210687,
+  "completion_tokens": 202,
+  "total_tokens": 210889,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 15.24,
+ "answer_tag_found": true,
+ "docfinqa_row": 7
+}

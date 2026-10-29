@@ -1,0 +1,72 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0762",
+ "format": "markdown_pdf",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "what percentage of contractual obligations for future payments under existing debt and lease commitments and purchase obligations at december 31 , 2009 due in 2012 are maturities of long-term debt?",
+ "gold": "21%",
+ "finqa_id": "IP/2009/page_45.pdf-2",
+ "source_page": "page_45",
+ "ticker": "IP",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/markdown_pdf/IP_2009_0001193125-10-040916.md",
+ "doc_chars": 445162,
+ "prompt_chars": 445448,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 445162,
+ "original_chars": 445162,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 104101,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 156,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "21.0359%",
+ "reasoning": "We need answer percentage of contractual obligations due in 2012 that are maturities of long-term debt. Table: 2012 total $946, maturities long-term debt $199. Percentage = 199/946 = 21.0359...%. Need compute. Evidence: 199 | Maturities of long-term debt (a) 2012; 946 | Total (d) 2012. Program divide(199,946). Answer 21.04% maybe.",
+ "raw_content": "<evidence>\n199 | Maturities of long-term debt (a) 2012\n946 | Total (d) 2012\n</evidence>\n<program>divide(199, 946)</program>\n<answer>21.04%</answer>",
+ "usage": {
+  "prompt_tokens": 104426,
+  "completion_tokens": 156,
+  "total_tokens": 104582,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 104192
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.07,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "199",
+   "element": "Maturities of long-term debt (a) 2012",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "946",
+   "element": "Total (d) 2012",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(199, 946)",
+ "answer_model": "21.04%",
+ "program_value": 0.21035940803382663,
+ "docfinqa_row": 762
+}

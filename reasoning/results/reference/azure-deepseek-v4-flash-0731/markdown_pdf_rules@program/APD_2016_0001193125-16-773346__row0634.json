@@ -1,0 +1,70 @@
+{
+ "id": "APD_2016_0001193125-16-773346__row0634",
+ "format": "markdown_pdf_rules",
+ "key": "APD_2016_0001193125-16-773346",
+ "question": "considering the 2016's special terminations settlements and curtailments , what is the percentage of pension settlement losses concerning the total value?",
+ "gold": "87.67%",
+ "finqa_id": "APD/2016/page_57.pdf-1",
+ "source_page": "page_57",
+ "ticker": "APD",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf_rules/APD_2016_0001193125-16-773346.md",
+ "doc_chars": 420525,
+ "prompt_chars": 420768,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 420525,
+ "original_chars": 420525,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 98472,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 533,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "87.6712%",
+ "reasoning": "We need answer question: \"considering the 2016's special terminations settlements and curtailments , what is the percentage of pension settlement losses concerning the total value?\"\n\nWe need find figures. In document, Pension Benefits section has table \"Pension Expense\" with 2016: Pension expense $68.1, Special terminations, settlements, and curtailments (included above) $7.3. Also text: \"Special items of $7.3 included pension settlement losses of $6.4, special termination benefits of $2.0, and curtailment gains of $1.1.\" So pension settlement losses = $6.4. Total value? \"special terminations settlements and curtailments\" total is $7.3. Percentage of pension settlement losses concerning the total value = 6.4 / 7.3 = 0.876712... = 87.67%. Or maybe \"total value\" refers to pension expense $68.1? The question: \"considering the 2016's special terminations settlements and curtailments , what is the percentage of pension settlement losses concerning the total value?\" It asks percentage of pension settlement losses concerning the total value (of special terminations settlements and curtailments). So 6.4/7.3 = 87.67%. Need provide evidence and program.\n\nEvidence: 6.4 | Pension settlement loss (2016) from text; 7.3 | Special terminations, settlements, and curtailments (included above) from Pension Expense table. Also maybe 6.4 from \"Special items of $7.3 included pension settlement losses of $6.4\". Use exact figures.\n\nProgram: divide(6.4, 7.3) = 0.876712... Answer as percentage? The question asks \"what is the percentage\" so answer should be 87.67% or 87.7%. The instruction: final answer inside tags containing only value itself with no explanation or units unless question asks for them. It asks percentage, so include %? Usually value with % sign. We'll put 87.67%.",
+ "raw_content": "<evidence>6.4 | Pension settlement loss (2016) - text \"Special items of $7.3 included pension settlement losses of $6.4\"\n7.3 | Special terminations, settlements, and curtailments (included above) - Pension Expense table 2016</evidence>\n<program>divide(6.4, 7.3)</program>\n<answer>87.67%</answer>",
+ "usage": {
+  "prompt_tokens": 98787,
+  "completion_tokens": 533,
+  "total_tokens": 99320,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.98,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "6.4",
+   "element": "Pension settlement loss (2016) - text \"Special items of $7.3 included pension settlement losses of $6.4\"",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "7.3",
+   "element": "Special terminations, settlements, and curtailments (included above) - Pension Expense table 2016",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(6.4, 7.3)",
+ "answer_model": "87.67%",
+ "program_value": 0.8767123287671234,
+ "docfinqa_row": 634
+}

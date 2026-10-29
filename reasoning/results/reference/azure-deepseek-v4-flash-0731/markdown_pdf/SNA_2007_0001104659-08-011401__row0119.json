@@ -1,0 +1,50 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0119",
+ "format": "markdown_pdf",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what was the percentage change in the minority interest from 2005 to 2006",
+ "gold": "-32.4%",
+ "finqa_id": "SNA/2007/page_69.pdf-3",
+ "source_page": "page_69",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf/SNA_2007_0001104659-08-011401.md",
+ "doc_chars": 330376,
+ "prompt_chars": 330538,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 330376,
+ "original_chars": 330376,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 80490,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 349,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "5.7%",
+ "reasoning": "We need percentage change in minority interest from 2005 to 2006. Minority interests and equity earnings (loss), net of tax: 2005 -1.4, 2006 -3.7. But that line includes minority interests and equity earnings. The question says \"minority interest\" specifically. In Note 1, minority interests: 2005 -3.5, 2006 -3.7. Percentage change = (3.7-3.5)/3.5 = 0.2/3.5 = 5.714% increase. But note the sign: minority interests are negative (expense). The percentage change in the absolute value is 5.7%. The question likely expects that. Alternatively, if using the line \"Minority interests and equity earnings (loss), net of tax\" from -1.4 to -3.7, that's a change of -2.3, percentage change = ( -3.7 - (-1.4) ) / | -1.4 | = -2.3/1.4 = -164.3%? But that includes equity earnings. The question specifically says \"minority interest\" not \"minority interests and equity earnings\". In Note 1, minority interests are -3.5 in 2005 and -3.7 in 2006. So percentage change = (3.7-3.5)/3.5 = 5.714% increase. So answer 5.7% or 5.71%. The question asks \"percentage change\" - likely positive. I'll answer 5.7%.",
+ "raw_content": "<answer>5.7%</answer>",
+ "usage": {
+  "prompt_tokens": 80636,
+  "completion_tokens": 349,
+  "total_tokens": 80985,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 12.87,
+ "answer_tag_found": true,
+ "docfinqa_row": 119
+}

@@ -1,0 +1,74 @@
+{
+ "id": "MRO_2009_0001193125-10-042898__row0427",
+ "format": "markdown_pdf_plumber",
+ "key": "MRO_2009_0001193125-10-042898",
+ "question": "what was the change in receivables for recoverable costs from certain states , under programs to assist companies in clean-up efforts related to underground storage tanks between december 31 , 2009 and 2008 , in millions?",
+ "gold": "-1",
+ "finqa_id": "MRO/2009/page_139.pdf-4",
+ "source_page": "page_139",
+ "ticker": "MRO",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/markdown_pdf_plumber/MRO_2009_0001193125-10-042898.md",
+ "doc_chars": 621863,
+ "prompt_chars": 622173,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 621863,
+ "original_chars": 621863,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 152352,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 218,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-1",
+ "reasoning": "We need to find receivables for recoverable costs from certain states related to underground storage tanks. In Note 26 Commitments and Contingencies, environmental matters: \"Receivables for recoverable costs from certain states, under programs to assist companies in clean-up efforts related to underground storage tanks at retail marketing outlets, were $59 and $60 million at December 31, 2009 and 2008.\" So change = 59 - 60 = -1 million. The question asks \"what was the change ... between December 31, 2009 and 2008, in millions?\" So answer -1. Need to provide evidence and program.",
+ "raw_content": "<evidence>59 | Receivables for recoverable costs from certain states... at December 31, 2009 and 2008 (Note 26)\n60 | Receivables for recoverable costs from certain states... at December 31, 2009 and 2008 (Note 26)</evidence>\n<program>subtract(59, 60)</program>\n<answer>-1</answer>",
+ "usage": {
+  "prompt_tokens": 152685,
+  "completion_tokens": 218,
+  "total_tokens": 152903,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 12.59,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "59",
+   "element": "Receivables for recoverable costs from certain states... at December 31, 2009 and 2008 (Note 26)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "60",
+   "element": "Receivables for recoverable costs from certain states... at December 31, 2009 and 2008 (Note 26)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "subtract(59, 60)",
+ "answer_model": "-1",
+ "program_value": -1.0,
+ "docfinqa_row": 427
+}

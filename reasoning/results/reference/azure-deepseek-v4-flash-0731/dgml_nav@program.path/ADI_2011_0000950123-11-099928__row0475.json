@@ -1,0 +1,126 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0475",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what is the net change in the total investment from 2010 to 2011?",
+ "gold": "17720",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "ADI_2011_0000950123-11-099928.outline.txt",
+ "doc_source": "ADI_2011_0000950123-11-099928.dgml.xml",
+ "outline_chars": 98954,
+ "predicted_xpaths": [
+  "/chunk/ConsolidatedStatementOfCashFlows/InvestingActivities/InvestingCashFlowsCategory/table/ShortTermInvestmentPurchases",
+  "/chunk/ConsolidatedStatementOfCashFlows/InvestingActivities/InvestingCashFlowsCategory/table/ShortTermInvestmentMaturities",
+  "/chunk/ConsolidatedStatementOfCashFlows/InvestingActivities/InvestingCashFlowsCategory/table/ShortTermInvestmentSales",
+  "/chunk/ConsolidatedStatementOfCashFlows/InvestingActivities",
+  "/chunk/ConsolidatedStatementOfCashFlows/InvestingActivities/InvestingCashFlowsCategory"
+ ],
+ "r1_retried": true,
+ "r1_first_usage": {
+  "prompt_tokens": 24723,
+  "completion_tokens": 16000,
+  "total_tokens": 40723,
+  "audio_prompt_tokens": 0
+ },
+ "r1_reasoning_chars": 0,
+ "r1_usage": {
+  "prompt_tokens": 24741,
+  "completion_tokens": 28,
+  "total_tokens": 24769,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 24576
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/ConsolidatedStatementOfCashFlows/InvestingActivities/InvestingCashFlowsCategory/table/ShortTermInvestmentPurchases",
+  "/chunk/ConsolidatedStatementOfCashFlows/InvestingActivities/InvestingCashFlowsCategory/table/ShortTermInvestmentMaturities",
+  "/chunk/ConsolidatedStatementOfCashFlows/InvestingActivities/InvestingCashFlowsCategory/table/ShortTermInvestmentSales",
+  "/chunk/ConsolidatedStatementOfCashFlows/InvestingActivities",
+  "/chunk/ConsolidatedStatementOfCashFlows/InvestingActivities/InvestingCashFlowsCategory"
+ ],
+ "content_chars": 27204,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "-128579",
+ "reasoning": "We need to find net change in total investment from 2010 to 2011. The question likely refers to short-term available-for-sale investments. The cash flow statement shows purchases, maturities, sales. Net change in investments = purchases (outflow) + maturities (inflow) + sales (inflow). For 2011: purchases -4,289,304, maturities 3,436,284, sales 282,861. Net = -4,289,304 + 3,436,284 + 282,861 = -570,159. For 2010: purchases -3,478,025, maturities 2,801,727, sales 234,718. Net = -3,478,025 + 2,801,727 + 234,718 = -441,580. Net change from 2010 to 2011 = -570,159 - (-441,580) = -128,579. Alternatively, the question might ask for the change in total investment balance, but we only have cash flow. The net change in total investment from 2010 to 2011 is the difference in net cash flows from these investment activities. So answer -128,579. But check if there are other investments? The cash flow statement only shows short-term available-for-sale investments. So we compute.\n\nWe need to cite figures. Use the values as printed. For 2011: (4,289,304) is negative, 3,436,284, 282,861. For 2010: (3,478,025), 2,801,727, 234,718.\n\nCompute: net2011 = -4,289,304 + 3,436,284 + 282,861 = -570,159. net2010 = -3,478,025 + 2,801,727 + 234,718 = -441,580. Difference = -570,159 - (-441,580) = -128,579.\n\nWe'll provide evidence and program.",
+ "raw_content": "<evidence>\n(4,289,304) | /chunk/ConsolidatedStatementOfCashFlows/InvestingActivities/InvestingCashFlowsCategory/table/ShortTermInvestmentPurchases/InvestmentPurchaseAmount\n3,436,284 | /chunk/ConsolidatedStatementOfCashFlows/InvestingActivities/InvestingCashFlowsCategory/table/ShortTermInvestmentMaturities/InvestmentMaturityAmount\n282,861 | /chunk/ConsolidatedStatementOfCashFlows/InvestingActivities/InvestingCashFlowsCategory/table/ShortTermInvestmentSales/InvestmentSaleAmount\n(3,478,025) | /chunk/ConsolidatedStatementOfCashFlows/InvestingActivities/InvestingCashFlowsCategory/table/ShortTermInvestmentPurchases/InvestmentPurchaseAmount\n2,801,727 | /chunk/ConsolidatedStatementOfCashFlows/InvestingActivities/InvestingCashFlowsCategory/table/ShortTermInvestmentMaturities/InvestmentMaturityAmount\n234,718 | /chunk/ConsolidatedStatementOfCashFlows/InvestingActivities/InvestingCashFlowsCategory/table/ShortTermInvestmentSales/InvestmentSaleAmount\n</evidence>\n\n<program>\nsubtract(\n  add(add(-4289304, 3436284), 282861),\n  add(add(-3478025, 2801727), 234718)\n)\n</program>\n\n<answer>-128579</answer>",
+ "r2_usage": {
+  "prompt_tokens": 7030,
+  "completion_tokens": 741,
+  "total_tokens": 7771,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 7030,
+   "completion_tokens": 741,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "(4,289,304)",
+   "element": "chunk/ConsolidatedStatementOfCashFlows/InvestingActivities/InvestingCashFlowsCategory/table/ShortTermInvestmentPurchases/InvestmentPurchaseAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "3,436,284",
+   "element": "chunk/ConsolidatedStatementOfCashFlows/InvestingActivities/InvestingCashFlowsCategory/table/ShortTermInvestmentMaturities/InvestmentMaturityAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "282,861",
+   "element": "chunk/ConsolidatedStatementOfCashFlows/InvestingActivities/InvestingCashFlowsCategory/table/ShortTermInvestmentSales/InvestmentSaleAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "(3,478,025)",
+   "element": "chunk/ConsolidatedStatementOfCashFlows/InvestingActivities/InvestingCashFlowsCategory/table/ShortTermInvestmentPurchases/InvestmentPurchaseAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "2,801,727",
+   "element": "chunk/ConsolidatedStatementOfCashFlows/InvestingActivities/InvestingCashFlowsCategory/table/ShortTermInvestmentMaturities/InvestmentMaturityAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "234,718",
+   "element": "chunk/ConsolidatedStatementOfCashFlows/InvestingActivities/InvestingCashFlowsCategory/table/ShortTermInvestmentSales/InvestmentSaleAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract( add(add(-4289304, 3436284), 282861), add(add(-3478025, 2801727), 234718) )",
+ "answer_model": "-128579",
+ "program_value": -128579.0,
+ "elapsed_s": 39.25
+}

@@ -1,0 +1,74 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0423",
+ "format": "markdown_pdf",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "was was the total amount spent on stock repurchases in december 2012?",
+ "gold": "7662592",
+ "finqa_id": "AMT/2012/page_50.pdf-2",
+ "source_page": "page_50",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/markdown_pdf/AMT_2012_0001193125-13-077821.md",
+ "doc_chars": 534235,
+ "prompt_chars": 534393,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 534235,
+ "original_chars": 534235,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 121639,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 547,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "7662592",
+ "reasoning": "We need answer: total amount spent on stock repurchases in December 2012. From document: Issuer Purchases table: December 2012: 102,400 shares, average price $74.83, total? The table shows \"Total Number of Shares Purchased\" and \"Average Price Paid per Share\" but not dollar amount per month. However text: \"During the three months ended December 31, 2012, we repurchased 619,314 shares ... for an aggregate of approximately $46.0 million\". That is for quarter. For December specifically, we can compute: 102,400 * $74.83 = $7,662,592? But average price excludes commissions and fees. The question \"total amount spent on stock repurchases in december 2012\" likely from table: December 2012 row has average price $74.83 and shares 102,400. Multiply = 7,662,592. But note \"including commissions and fees\" for quarter aggregate. The table gives average price per share excluding commissions and fees. The question asks total amount spent, likely the product. Alternatively, the document says \"During the three months ended December 31, 2012, we repurchased 619,314 shares ... for an aggregate of approximately $46.0 million\" but that's quarter. For December specifically, we compute. Need evidence: 102,400 | December 2012 row, $74.83 | Average Price Paid per Share. Program multiply(102400, 74.83) = 7,662,592. But note the table's \"Approximate Dollar Value of Shares that May Yet be Purchased\" not relevant. Also there is text \"Between January 1, 2013 and January 21, 2013...\" not December. So answer $7,662,592. But question says \"total amount spent\" maybe including commissions and fees? The average price excludes commissions and fees, so product is purchase price excluding fees. The quarter aggregate includes commissions and fees. For December, no explicit total. We'll compute product. Final answer inside <answer>7662592</answer>? Or with dollar sign? The instruction: \"containing only the value itself with no explanation or units unless the question asks for them.\" So just number.",
+ "raw_content": "<evidence>\n102,400 | December 2012 row, Total Number of Shares Purchased\n$74.83 | December 2012 row, Average Price Paid per Share\n</evidence>\n<program>\nmultiply(102400, 74.83)\n</program>\n<answer>7662592</answer>",
+ "usage": {
+  "prompt_tokens": 121943,
+  "completion_tokens": 547,
+  "total_tokens": 122490,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 13.16,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "102,400",
+   "element": "December 2012 row, Total Number of Shares Purchased",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$74.83",
+   "element": "December 2012 row, Average Price Paid per Share",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(102400, 74.83)",
+ "answer_model": "7662592",
+ "program_value": 7662592.0,
+ "docfinqa_row": 423
+}

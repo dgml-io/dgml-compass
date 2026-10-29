@@ -1,0 +1,81 @@
+{
+ "id": "ZBH_2003_0000950137-04-001881__row0098",
+ "key": "ZBH_2003_0000950137-04-001881",
+ "question": "what is the change in inventories net in millions between 2002 and 2003?",
+ "gold": "270.1",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "ZBH_2003_0000950137-04-001881.outline.txt",
+ "doc_source": "ZBH_2003_0000950137-04-001881.dgml.xml",
+ "outline_chars": 52082,
+ "predicted_xpaths": [
+  "/chunk/FilingHeader/Inventories"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 3067,
+ "r1_usage": {
+  "prompt_tokens": 13269,
+  "completion_tokens": 739,
+  "total_tokens": 14008,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/FilingHeader/Inventories"
+ ],
+ "content_chars": 7875,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "270.1",
+ "reasoning": "We need answer change in inventories net between 2002 and 2003. From table: Inventories, net 2003 $527.7, 2002 $257.6. Change = 527.7 - 257.6 = 270.1. Need evidence figures.",
+ "raw_content": "<evidence>$ 527.7 | /chunk/FilingHeader/Inventories/Inventories/table/InventoryComponentLabel/InventoryComponentAmount\n$ 257.6 | /chunk/FilingHeader/Inventories/Inventories/table/InventoryComponentLabel/InventoryComponentAmount</evidence>\n\n<program>subtract(527.7, 257.6)</program>\n\n<answer>270.1</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2044,
+  "completion_tokens": 150,
+  "total_tokens": 2194,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 2044,
+   "completion_tokens": 150,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "$ 527.7",
+   "element": "chunk/FilingHeader/Inventories/Inventories/table/InventoryComponentLabel/InventoryComponentAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$ 257.6",
+   "element": "chunk/FilingHeader/Inventories/Inventories/table/InventoryComponentLabel/InventoryComponentAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(527.7, 257.6)",
+ "answer_model": "270.1",
+ "program_value": 270.1,
+ "elapsed_s": 4.4
+}

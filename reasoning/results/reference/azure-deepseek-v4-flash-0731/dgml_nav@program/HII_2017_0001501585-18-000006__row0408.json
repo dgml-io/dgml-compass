@@ -1,0 +1,58 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0408",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what portion of the equity compensation plan approved by security holders remains available for future issuance?",
+ "gold": "90.1%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "HII_2017_0001501585-18-000006.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation"
+ ],
+ "r1_reasoning_chars": 3062,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 22166,
+  "completion_tokens": 700,
+  "total_tokens": 22866,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation"
+ ],
+ "content_chars": 4675,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "4087587",
+ "reasoning": "We need to find the portion of the equity compensation plan approved by security holders that remains available for future issuance. The table shows for \"Equity compensation plans approved by security holders\": Number of Securities to be Issued Upon Exercise of Outstanding Options, Warrants and Rights = 448,859; Number of Securities Remaining Available for Future Issuance = 4,087,587. The question asks \"what portion\" - likely the fraction or percentage of the total plan? But the question wording: \"what portion of the equity compensation plan approved by security holders remains available for future issuance?\" Could be the number of securities remaining available, which is 4,087,587. Or it could be the ratio of available to total? The table has column (c) \"Number of Securities Remaining Available for Future Issuance Under Equity Compensation Plans (Excluding Securities Reflected in Column (a))\". So the answer is 4,087,587. But \"portion\" might mean fraction of total shares authorized? The table doesn't give total authorized, only outstanding and remaining. The question likely expects the number of securities remaining available. Let's read the question: \"what portion of the equity compensation plan approved by security holders remains available for future issuance?\" In SEC filings, this is often the number in column (c). So answer is 4,087,587.\n\nBut let's be careful: The question might ask for the portion as a fraction of the total plan (outstanding + available). But the table doesn't provide total authorized. The phrase \"portion\" could be interpreted as the amount. The document says \"Number of Securities Remaining Available for Future Issuance Under Equity Compensation Plans\" - that is the portion. So answer is 4,087,587.\n\nI'll provide evidence: 4,087,587 | EquityPlanSharesAvailable (for approved plans). Then program: 4087587.\n\nBut the question says \"what portion\" - maybe they want the fraction of the plan that remains available? The plan approved by security holders has outstanding 448,859 and available 4,087,587. The total plan size would be 448,859 + 4,087,587 = 4,536,446. The portion available is 4,087,587 / 4,536,446 ≈ 0.901. But the question doesn't ask for percentage, just \"what portion\". In financial documents, the \"portion\" often refers to the number of shares. The table explicitly labels column (c) as \"Number of Securities Remaining Available for Future Issuance\". So I think the answer is 4,087,587.\n\nLet's check the question: \"what portion of the equity compensation plan approved by security holders remains available for future issuance?\" It might be asking for the number of securities remaining available. The answer is 4,087,587.\n\nI'll output that.",
+ "raw_content": "<evidence>4,087,587 | EquityPlanSharesAvailable</evidence>\n<program>4087587</program>\n<answer>4,087,587</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1444,
+  "completion_tokens": 634,
+  "total_tokens": 2078,
+  "audio_prompt_tokens": 0
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "4,087,587",
+   "element": "EquityPlanSharesAvailable",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "4087587",
+ "answer_model": "4,087,587",
+ "program_value": 4087587.0,
+ "elapsed_s": 10.8,
+ "outline_source": "HII_2017_0001501585-18-000006.outline.txt",
+ "outline_chars": 86768
+}

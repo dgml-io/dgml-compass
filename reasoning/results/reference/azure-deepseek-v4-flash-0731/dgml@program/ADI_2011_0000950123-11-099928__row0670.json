@@ -1,0 +1,74 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0670",
+ "format": "dgml",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what is the percentage change in fair value of forward exchange contracts asset from 2010 to 2011?",
+ "gold": "-65.9%",
+ "finqa_id": "ADI/2011/page_50.pdf-1",
+ "source_page": "page_50",
+ "ticker": "ADI",
+ "fiscal_year": "2011",
+ "source_file": "data/docs/dgml/ADI_2011_0000950123-11-099928.dgml.xml",
+ "doc_chars": 682519,
+ "prompt_chars": 682706,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 682519,
+ "original_chars": 682519,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 156936,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 210,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-65.931643",
+ "reasoning": "We need percentage change in fair value of forward exchange contracts asset from 2010 to 2011. From Market Risk section: Fair value of forward exchange contracts asset: October 29, 2011: $2,472; October 30, 2010: $7,256. Percentage change = (2,472 - 7,256)/7,256 * 100 = -4,784/7,256 ≈ -65.93%. Need exact. Compute: 4784/7256 = 0.6593... So -65.93%. We'll provide evidence and program.",
+ "raw_content": "<evidence>\n$ 2,472 | ForwardExchangeContractFairValue (October 29, 2011)\n$ 7,256 | ForwardExchangeContractFairValue (October 30, 2010)\n</evidence>\n<program>multiply(divide(subtract(2472, 7256), 7256), 100)</program>\n<answer>-65.93%</answer>",
+ "usage": {
+  "prompt_tokens": 157245,
+  "completion_tokens": 210,
+  "total_tokens": 157455,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 157184
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.46,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 2,472",
+   "element": "ForwardExchangeContractFairValue (October 29, 2011)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$ 7,256",
+   "element": "ForwardExchangeContractFairValue (October 30, 2010)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(2472, 7256), 7256), 100)",
+ "answer_model": "-65.93%",
+ "program_value": -65.9316427783903,
+ "docfinqa_row": 670
+}

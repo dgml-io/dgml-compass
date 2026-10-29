@@ -1,0 +1,72 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0095",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what was the increase in long-term debt between 2004 and 2005 in thousands?",
+ "gold": "296048",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "AMT_2005_0001193125-06-054224.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/BalanceSheetData",
+  "/chunk/BalanceSheetData/table/LongTermObligations"
+ ],
+ "r1_reasoning_chars": 2864,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 28594,
+  "completion_tokens": 722,
+  "total_tokens": 29316,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/BalanceSheetData",
+  "/chunk/BalanceSheetData/table/LongTermObligations"
+ ],
+ "content_chars": 138472,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "319815",
+ "reasoning": "We need answer increase in long-term debt between 2004 and 2005 in thousands. Need identify long-term debt figures. In BalanceSheetData table: Long-term obligations, including current portion: values 3,613,429 (2005), 3,293,614 (2004), 3,359,731 (2003), 3,448,514 (2002), 3,561,960 (2001). So increase = 3,613,429 - 3,293,614 = 319,815. Need answer in thousands? The values are in thousands already. So increase is 319,815 thousand. Need evidence figures. Also maybe question says \"long-term debt\" but table says \"Long-term obligations, including current portion\". Use that. Compute subtract(3613429, 3293614) = 319815.",
+ "raw_content": "<evidence>3,613,429 | Long-term obligations, including current portion (2005)\n3,293,614 | Long-term obligations, including current portion (2004)</evidence>\n<program>subtract(3613429, 3293614)</program>\n<answer>319815</answer>",
+ "r2_usage": {
+  "prompt_tokens": 31186,
+  "completion_tokens": 245,
+  "total_tokens": 31431,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "3,613,429",
+   "element": "Long-term obligations, including current portion (2005)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "3,293,614",
+   "element": "Long-term obligations, including current portion (2004)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(3613429, 3293614)",
+ "answer_model": "319815",
+ "program_value": 319815.0,
+ "elapsed_s": 8.1,
+ "outline_source": "AMT_2005_0001193125-06-054224.outline.txt",
+ "outline_chars": 112419
+}

@@ -1,0 +1,74 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0485",
+ "format": "markdown_pdf_poppler",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what is the average repurchase price per share paid during 2006?",
+ "gold": "42.0",
+ "finqa_id": "SNA/2007/page_49.pdf-3",
+ "source_page": "page_49",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_poppler/SNA_2007_0001104659-08-011401.md",
+ "doc_chars": 416845,
+ "prompt_chars": 416998,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 416845,
+ "original_chars": 416845,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 79065,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 692,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "41.962564",
+ "reasoning": "We need answer average repurchase price per share paid during 2006. Document: \"Snap-on repurchased 2,616,618 shares of common stock for $109.8 million in 2006\" (MD&A and Note 14). Also \"repurchased over 2.6 million shares ... for $109.8 million\" in 2006. Average price = 109.8 million / 2,616,618 shares. Compute: 109,800,000 / 2,616,618 ≈ 41.96? Let's calculate precisely. 2,616,618 * 42 = 109,897,956. So 109,800,000 / 2,616,618 = 41.96? 109,800,000 / 2,616,618 = 41.96? Actually 2,616,618*41.96 = 109,793,? 2,616,618*41.96 = 2,616,618*40 + *1.96 = 104,664,720 + 5,128,571 = 109,793,291. So 41.96. More precisely 41.962? Let's compute: 109,800,000 / 2,616,618 = 41.962? Use division: 2,616,618 * 41.96 = 109,793,? 2,616,618*0.96=2,511,953.28, plus 104,664,720 = 107,176,673? Wait mistake: 2,616,618*40 = 104,664,720. *1.96 = 5,128,571.28. Sum = 109,793,291.28. Difference 6,708.72 / 2,616,618 = 0.00256. So 41.96256. So ~$41.96 per share. Need answer value only. Evidence: \"2,616,618 shares of common stock for $109.8 million in 2006\" from MD&A and Note 14. Program: divide(109.8, 2.616618) but units: 109.8 million / 2.616618 million shares = 41.96. Use figures as printed: 109.8 and 2,616,618? Need program exact. Use divide(109.8, 2.616618) because both in millions? 109.8 million / 2.616618 million shares = 41.96. So program divide(109.8, 2.616618). Answer $41.96? The question asks average repurchase price per share paid during 2006. Provide numeric value.",
+ "raw_content": "<evidence>\n109.8 | Snap-on repurchased 2,616,618 shares of common stock for $109.8 million in 2006 (MD&A and Note 14)\n2,616,618 | Snap-on repurchased 2,616,618 shares of common stock for $109.8 million in 2006 (MD&A and Note 14)\n</evidence>\n<program>divide(109.8, 2.616618)</program>\n<answer>41.96</answer>",
+ "usage": {
+  "prompt_tokens": 79368,
+  "completion_tokens": 692,
+  "total_tokens": 80060,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.54,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "109.8",
+   "element": "Snap-on repurchased 2,616,618 shares of common stock for $109.8 million in 2006 (MD&A and Note 14)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "2,616,618",
+   "element": "Snap-on repurchased 2,616,618 shares of common stock for $109.8 million in 2006 (MD&A and Note 14)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(109.8, 2.616618)",
+ "answer_model": "41.96",
+ "program_value": 41.9625638897233,
+ "docfinqa_row": 485
+}

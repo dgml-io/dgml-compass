@@ -1,0 +1,66 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0383",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "what portion of the total estimated future contingent acquisition obligation is due in the 12 months?",
+ "gold": "19.3%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "IPG_2008_0001193125-09-040141.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/NotesContinuationHeader/CommitmentsAndContingencies/ContingentAcquisitionObligations/ContingentAcquisitionPaymentSchedule",
+  "/chunk/NotesContinuationHeader/CommitmentsAndContingencies/ContingentAcquisitionObligations/table",
+  "/chunk/NotesContinuationHeader/CommitmentsAndContingencies/ContingentAcquisitionObligations"
+ ],
+ "r1_reasoning_chars": 2713,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 23070,
+  "completion_tokens": 714,
+  "total_tokens": 23784,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/NotesContinuationHeader/CommitmentsAndContingencies/ContingentAcquisitionObligations/ContingentAcquisitionPaymentSchedule",
+  "/chunk/NotesContinuationHeader/CommitmentsAndContingencies/ContingentAcquisitionObligations/table",
+  "/chunk/NotesContinuationHeader/CommitmentsAndContingencies/ContingentAcquisitionObligations"
+ ],
+ "content_chars": 17509,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "0.193102",
+ "reasoning": "We need answer portion of total estimated future contingent acquisition obligation due in 12 months. Need interpret. The table shows estimated future contingent acquisition obligations payable in cash. Total row: 2009 $76.7, 2010 $65.1, etc. Total $397.2. \"due in the 12 months\" likely 2009 amount $76.7. Portion = 76.7 / 397.2. Need compute. Also note there is total contingent acquisition payments 402.8 before less compensation. The question says \"total estimated future contingent acquisition obligation\" - likely the total after less cash compensation? The table's \"Total\" row is $397.2. The 2009 amount is $76.7. So portion = 76.7/397.2. Let's compute. 76.7/397.2 = 0.1931... Let's calculate precisely. 397.2 * 0.193 = 76.6596, so 0.1931. 76.7/397.2 = 0.193101... Let's do exact: 76.7 / 397.2 = 767/3972? Actually 76.7/397.2 = 767/3972 (multiply 10). 767/3972. 3972*0.193 = 766.596? Wait 3972*0.193 = 766.596? 3972*0.193 = 766.596? 3972*193/1000 = 766.596. So 767/3972 = 0.1931017. So about 19.3%. Need answer maybe as decimal or percentage? Question \"what portion\" - likely fraction. We can give 0.1931 or 19.3%. The instruction says final answer only value, no units unless asked. \"portion\" could be decimal. We'll provide 0.1931. Need evidence figures: 76.7 and 397.2 from table. Also maybe 2009 row. Use program divide(76.7, 397.2).",
+ "raw_content": "<evidence>76.7 | Total row, 2009 column</evidence>\n<evidence>397.2 | Total row, Total column</evidence>\n<program>divide(76.7, 397.2)</program>\n<answer>0.1931</answer>",
+ "r2_usage": {
+  "prompt_tokens": 4346,
+  "completion_tokens": 506,
+  "total_tokens": 4852,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "76.7",
+   "element": "Total row, 2009 column",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(76.7, 397.2)",
+ "answer_model": "0.1931",
+ "program_value": 0.19310171198388723,
+ "elapsed_s": 7.4,
+ "outline_source": "IPG_2008_0001193125-09-040141.outline.txt",
+ "outline_chars": 90097
+}

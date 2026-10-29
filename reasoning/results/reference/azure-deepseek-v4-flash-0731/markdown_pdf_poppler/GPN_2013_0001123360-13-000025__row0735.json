@@ -1,0 +1,53 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0735",
+ "format": "markdown_pdf_poppler",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what was the total number of grants were forfeited?",
+ "gold": "170 grants",
+ "finqa_id": "GPN/2013/page_87.pdf-4",
+ "source_page": "page_87",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/markdown_pdf_poppler/GPN_2013_0001123360-13-000025.md",
+ "doc_chars": 447391,
+ "prompt_chars": 447531,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 447391,
+ "original_chars": 447391,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 78474,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1190,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "91",
+ "reasoning": "We need answer: \"what was the total number of grants were forfeited?\" Need find in document. Likely restricted stock forfeited? The question ambiguous. In document, restricted stock table: Forfeited (79) in 2012, (91) in 2013. Stock options forfeited (72) in 2012, (72) in 2013. \"grants\" could refer to share-based awards? Need total number of grants forfeited? Maybe they ask total number of grants forfeited? Could be from restricted stock? Let's parse. The document has restricted stock activity: Non-vested at May 31, 2011 869; Granted 472; Vested (321); Forfeited (79); Non-vested at May 31, 2012 941; Granted 561; Vested (315); Forfeited (91); Non-vested at May 31, 2013 1,096. So forfeited restricted stock awards: 79 in 2012, 91 in 2013. Stock options: Forfeited (72) in 2012, (72) in 2013. Total forfeited across both? The question \"total number of grants were forfeited\" might refer to \"grants\" as in share awards? Could be total number of grants forfeited in fiscal 2013? Need context. The question likely from a financial document analysis: \"what was the total number of grants were forfeited?\" It might refer to restricted stock awards forfeited in fiscal 2013? The document says \"Forfeited (91)\" for restricted stock. But also stock options forfeited 72. The phrase \"grants\" could mean \"restricted stock awards\" or \"stock options\"? Let's examine. The question: \"what was the total number of grants were forfeited?\" No year specified. Could be asking for total number of grants forfeited across all share-based plans? The document has two tables: restricted stock and stock options. \"Grants\" might refer to \"restricted stock awards\" because they are called \"grants\" in text: \"Grants of restricted awards are subject to forfeiture...\" So \"grants\" likely restricted stock awards. The table shows forfeited 79 in 2012 and 91 in 2013. If asking total number of grants forfeited over the period? Could be sum 79+91=170? But question says \"were forfeited\" past tense, maybe total in fiscal 2013? Need infer.\n\nLet's read the question exactly: \"what was the total number of grants were forfeited?\" It might be from a QA dataset where answer is a number from document. The document has \"Forfeited\" rows. For restricted stock: 79 and 91. For stock options: 72 and 72. The question says \"grants\" not \"options\" or \"restricted stock\". In the text, \"Grants of restricted awards are subject to forfeiture...\" So \"grants\" likely refers to restricted stock awards. The total number of grants forfeited could be the sum of forfeited restricted stock awards over the two years? But the question doesn't specify period. Maybe they want the total number of grants forfeited in fiscal 2013? The document is annual report for fiscal 2013. The question likely asks for the total number of grants forfeited during the year ended May 31, 2013. In restricted stock table, forfeited in 2013 is 91. In stock options table, forfeited in 2013 is 72. But \"grants\" might include both? However, the term \"grants\" is used for restricted stock awards, not options. Options are \"options\". The question says \"grants\" not \"options\". So answer 91.\n\nBut let's check if there is any other mention of \"forfeited\" in document. In Note 11, restricted stock table: Forfeited (79) and (91). Stock options: Forfeited (72) and (72). Also in share-based compensation, \"forfeited\" appears. The question \"total number of grants were forfeited\" could be asking for the sum of all forfeitures across all equity awards? But \"grants\" might be a generic term for awards. The document says \"Grants of restricted awards are subject to forfeiture...\" So \"grants\" specifically refers to restricted stock awards. Also the table header \"Non-vested restricted stock awards\" includes \"Forfeited\". So the number of grants forfeited is 91 for fiscal 2013. If they ask total over both years, it would be 170. But the question doesn't say \"in fiscal 2013\" or \"during the year\". However, the document is a 10-K for fiscal year ended May 31, 2013, so likely they ask for that year. The phrase \"were forfeited\" could refer to the year. I'll answer 91.\n\nBut let's be careful: The question says \"total number of grants were forfeited\" - maybe they want the total number of grants forfeited across all plans in the year? The restricted stock table shows 91 forfeited in 2013. The stock options table shows 72 forfeited in 2013. If \"grants\" includes both, total would be 163. But the word \"grants\" is not used for options; options are \"options\". The text: \"Grants of restricted awards are subject to forfeiture...\" So \"grants\" = restricted stock awards. So answer 91.\n\nI'll provide final answer inside <answer>91</answer>.",
+ "raw_content": "<answer>91</answer>",
+ "usage": {
+  "prompt_tokens": 78614,
+  "completion_tokens": 1190,
+  "total_tokens": 79804,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 78336
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 13.38,
+ "answer_tag_found": true,
+ "docfinqa_row": 735
+}

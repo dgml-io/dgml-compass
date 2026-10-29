@@ -1,0 +1,72 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0095",
+ "format": "dgml_compact",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what was the increase in long-term debt between 2004 and 2005 in thousands?",
+ "gold": "296048",
+ "finqa_id": "AMT/2005/page_85.pdf-1",
+ "source_page": "page_85",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/dgml_compact/AMT_2005_0001193125-06-054224.dgml.txt",
+ "doc_chars": 570128,
+ "prompt_chars": 570292,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 570128,
+ "original_chars": 570128,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 127365,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 948,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "296048",
+ "reasoning": "We need answer increase in long-term debt between 2004 and 2005 in thousands. Need find long-term debt figures. In balance sheet: Long-term obligations 2005: 3,451,276; 2004: 3,155,228. But question says \"long-term debt\" maybe total long-term obligations including current portion? The balance sheet has \"Long-term obligations\" and \"Current portion of long-term obligations\". The selected financial data has \"Long-term obligations, including current portion\" 2005: 3,613,429; 2004: 3,293,614. The question \"increase in long-term debt between 2004 and 2005\" likely refers to long-term debt (total) from balance sheet? Need determine. The document has \"Long-term obligations\" line in balance sheet: 3,451,276 (2005) and 3,155,228 (2004). Also \"Current portion of long-term obligations\" 162,153 and 138,386. Total long-term obligations including current portion = 3,613,429 and 3,293,614. The question says \"long-term debt\" not \"long-term obligations\". In MD&A, \"total outstanding indebtedness of approximately $3.6 billion\" as of Dec 31 2005. The increase in long-term debt between 2004 and 2005 in thousands: If using total long-term obligations including current portion: 3,613,429 - 3,293,614 = 319,815. If using long-term obligations (non-current) only: 3,451,276 - 3,155,228 = 296,048. Which is asked? The question: \"what was the increase in long-term debt between 2004 and 2005 in thousands?\" In financial statements, \"Long-term obligations\" is a line item. But \"long-term debt\" often refers to total debt. The selected financial data has \"Long-term obligations, including current portion\" as a line. The balance sheet has \"Long-term obligations\" (non-current) and \"Current portion of long-term obligations\". The question likely expects the increase in the \"Long-term obligations\" line item from balance sheet? But they say \"long-term debt\" not \"long-term obligations\". Need infer from context. The document has \"Long-term obligations\" in balance sheet. The question asks \"increase in long-term debt between 2004 and 2005 in thousands\". Could be from balance sheet: Long-term obligations 2005: 3,451,276; 2004: 3,155,228. Increase = 296,048. But note that \"long-term debt\" might be the total of current and long-term. However, the balance sheet line is \"LONG-TERM OBLIGATIONS\" (non-current). The question says \"long-term debt\" not \"total debt\". I think they refer to the line item \"Long-term obligations\" in the balance sheet. But let's check if there is a \"Long-term debt\" line in the document. In the balance sheet, there is \"LONG-TERM OBLIGATIONS\" and \"Current portion of long-term obligations\". In the notes, \"Long-term debt\" appears in \"Long-term debt\" in the table of financing arrangements: \"Long-term debt\" is $3,451,276 and $3,155,228 (after subtracting current portion). Actually in note 7, table: \"Total | 3,613,429 | 3,293,614\" then \"Less current portion of other long-term obligations | (162,153) | (138,386)\" then \"Long-term debt | $3,451,276 | $3,155,228\". So \"Long-term debt\" is explicitly defined as the non-current portion. The question asks \"increase in long-term debt between 2004 and 2005\" - that would be 3,451,276 - 3,155,228 = 296,048. But the question says \"in thousands\" so answer 296048. Need provide evidence and program. Use figures: 3,451,276 and 3,155,228. Compute subtract. Final answer inside <answer>296048</answer>.",
+ "raw_content": "<evidence>3,451,276 | Long-term debt (2005)\n3,155,228 | Long-term debt (2004)\n</evidence>\n<program>subtract(3451276, 3155228)</program>\n<answer>296048</answer>",
+ "usage": {
+  "prompt_tokens": 127671,
+  "completion_tokens": 948,
+  "total_tokens": 128619,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 127488
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.62,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "3,451,276",
+   "element": "Long-term debt (2005)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "3,155,228",
+   "element": "Long-term debt (2004)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(3451276, 3155228)",
+ "answer_model": "296048",
+ "program_value": 296048.0,
+ "docfinqa_row": 95
+}

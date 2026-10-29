@@ -1,0 +1,71 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0402",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "what percentage of major facilities by square footage are leased as of december 28 , 2013?",
+ "gold": "15%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "INTC_2013_0000050863-14-000020.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/Report/UnresolvedStaffCommentsStatus/Report"
+ ],
+ "r1_reasoning_chars": 3888,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 25716,
+  "completion_tokens": 964,
+  "total_tokens": 26680,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 25600
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/Report/UnresolvedStaffCommentsStatus/Report"
+ ],
+ "content_chars": 4664,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "15.118397",
+ "reasoning": "We need answer percentage of major facilities by square footage leased as of Dec 28 2013. Table: Leased facilities total 8.3 million sq ft, Total facilities 54.9 million. Percentage = 8.3/54.9 *100. Need compute. Evidence: 8.3 | Leased facilities total, 54.9 | Total facilities total. Program divide(8.3,54.9)*100? But program only nested calls, can use multiply(divide(8.3,54.9),100). Need final answer numeric. Compute 8.3/54.9 = 0.151184... *100 = 15.1184%. So answer 15.1% maybe. Need exact? The question asks percentage, likely 15.1%. We'll provide value.",
+ "raw_content": "<evidence>8.3 | Leased facilities total\n54.9 | Total facilities total</evidence>\n<program>multiply(divide(8.3, 54.9), 100)</program>\n<answer>15.1</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1440,
+  "completion_tokens": 227,
+  "total_tokens": 1667,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "8.3",
+   "element": "Leased facilities total",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "54.9",
+   "element": "Total facilities total",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(8.3, 54.9), 100)",
+ "answer_model": "15.1",
+ "program_value": 15.118397085610201,
+ "elapsed_s": 5.68,
+ "outline_source": "INTC_2013_0000050863-14-000020.outline.txt",
+ "outline_chars": 102835
+}

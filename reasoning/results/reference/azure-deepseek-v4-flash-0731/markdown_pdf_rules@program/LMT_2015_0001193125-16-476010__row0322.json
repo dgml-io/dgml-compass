@@ -1,0 +1,74 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0322",
+ "format": "markdown_pdf_rules",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was the change in millions of total long-term debt net from 2014 to 2015?",
+ "gold": "9119",
+ "finqa_id": "LMT/2015/page_99.pdf-3",
+ "source_page": "page_99",
+ "ticker": "LMT",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_rules/LMT_2015_0001193125-16-476010.md",
+ "doc_chars": 501601,
+ "prompt_chars": 501768,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 501601,
+ "original_chars": 501601,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 108718,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 259,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "9119",
+ "reasoning": "We need answer change in total long-term debt net from 2014 to 2015. From balance sheet: long-term debt, net 2015 = 14,305? Wait balance sheet shows \"Long-term debt, net\" 14,305 in 2015 and 6,142 in 2014. But note 10 says total long-term debt, net $15,261 and $6,142. Balance sheet has current maturities of long-term debt 956 in 2015, and long-term debt, net 14,305. Total debt net = current maturities + long-term debt net = 956 + 14,305 = 15,261. So change = 15,261 - 6,142 = 9,119 million. Question \"total long-term debt net\" likely from note 10 total long-term debt, net. So answer 9,119.",
+ "raw_content": "<evidence>\n15,261 | Note 10 – Debt, Total long-term debt, net 2015\n6,142 | Note 10 – Debt, Total long-term debt, net 2014\n</evidence>\n<program>subtract(15261, 6142)</program>\n<answer>9,119</answer>",
+ "usage": {
+  "prompt_tokens": 109026,
+  "completion_tokens": 259,
+  "total_tokens": 109285,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.7,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "15,261",
+   "element": "Note 10 – Debt, Total long-term debt, net 2015",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "6,142",
+   "element": "Note 10 – Debt, Total long-term debt, net 2014",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "subtract(15261, 6142)",
+ "answer_model": "9,119",
+ "program_value": 9119.0,
+ "docfinqa_row": 322
+}

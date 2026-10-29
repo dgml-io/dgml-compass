@@ -1,0 +1,70 @@
+{
+ "id": "AMT_2016_0001053507-17-000009__row0725",
+ "key": "AMT_2016_0001053507-17-000009",
+ "question": "what is the net change in the balance of unrecognized tax benefits during 2016?",
+ "gold": "79437",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "AMT_2016_0001053507-17-000009.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/section/Financial/table"
+ ],
+ "r1_reasoning_chars": 6156,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 31490,
+  "completion_tokens": 1577,
+  "total_tokens": 33067,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/section/Financial/table"
+ ],
+ "content_chars": 6946,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "79437",
+ "reasoning": "We need net change in balance of unrecognized tax benefits during 2016. From rollforward: Balance at Jan 1 2016 = $28,114 (thousands). Balance at Dec 31 2016 = $107,551. Net change = 107,551 - 28,114 = 79,437 (thousands). Alternatively sum of additions and reductions: additions current year 82,912, prior year 0, FX -307, reductions -3,168. Sum = 82,912 - 307 - 3,168 = 79,437. So answer 79,437 (in thousands). The question asks \"net change in the balance\" likely in thousands as table says (in thousands). So answer 79,437. Need evidence: figures from rollforward table. Use values as printed: $ 28,114, $ 107,551. Program subtract(107551, 28114).",
+ "raw_content": "<evidence>28,114 | UnrecognizedTaxBenefitBeginningBalance: Balance at January 1\n107,551 | UnrecognizedTaxBenefitEndingBalance: Balance at December 31\n</evidence>\n<program>subtract(107551, 28114)</program>\n<answer>79,437</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2392,
+  "completion_tokens": 266,
+  "total_tokens": 2658,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "28,114",
+   "element": "UnrecognizedTaxBenefitBeginningBalance: Balance at January 1",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "107,551",
+   "element": "UnrecognizedTaxBenefitEndingBalance: Balance at December 31",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(107551, 28114)",
+ "answer_model": "79,437",
+ "program_value": 79437.0,
+ "elapsed_s": 8.59,
+ "outline_source": "AMT_2016_0001053507-17-000009.outline.txt",
+ "outline_chars": 122201
+}

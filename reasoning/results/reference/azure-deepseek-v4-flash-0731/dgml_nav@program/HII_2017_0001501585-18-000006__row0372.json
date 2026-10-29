@@ -1,0 +1,65 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0372",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what is the combined number of equity compensation plans approved by security holders",
+ "gold": "4536446",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "HII_2017_0001501585-18-000006.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation",
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation/ol/EquityCompensationPlanFootnote",
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation/table/EquityCompensationPlan"
+ ],
+ "r1_reasoning_chars": 6113,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 22159,
+  "completion_tokens": 1412,
+  "total_tokens": 23571,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation",
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation/ol/EquityCompensationPlanFootnote",
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation/table/EquityCompensationPlan"
+ ],
+ "content_chars": 8923,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "4536446",
+ "reasoning": "We need answer: \"combined number of equity compensation plans approved by security holders\" - likely number of securities? Wording ambiguous: \"combined number of equity compensation plans approved by security holders\" could mean number of plans? But table row \"Equity compensation plans approved by security holders\" has columns: Number of Securities to be Issued Upon Exercise of Outstanding Options, Warrants and Rights = 448,859; Weighted-Average Exercise Price = $0.00; Number of Securities Remaining Available for Future Issuance = 4,087,587. The question asks \"combined number of equity compensation plans approved by security holders\" - maybe they want total securities under approved plans? Combined number could be sum of securities to be issued and remaining available? Or just the number of plans? The table has a row for approved plans, with two numbers. \"combined number\" might mean total of column (a) and (c) for approved plans? Let's parse.\n\nQuestion: \"what is the combined number of equity compensation plans approved by security holders\" - Actually \"combined number of equity compensation plans\" - plans count? But table doesn't list count of plans, it lists securities. The row \"Equity compensation plans approved by security holders\" has 448,859 and 4,087,587. Combined number could be sum of those two = 4,536,446. But is that \"combined number of equity compensation plans\"? No, it's combined number of securities under approved plans. The question might be from a standard SEC filing question: \"what is the combined number of equity compensation plans approved by security holders\" - In the equity compensation plan table, there are rows for approved and not approved. The \"combined number\" might refer to the total number of securities to be issued upon exercise plus remaining available? Actually the table's \"Total\" row already gives 448,859 and 4,087,587. The question asks \"combined number of equity compensation plans approved by security holders\" - maybe they want the number of plans approved, which is 2? The footnote mentions 2012 Plan and 2011 Plan, both approved. But the table row \"Equity compensation plans approved by security holders\" is a category, not count. The question wording \"combined number of equity compensation plans approved by security holders\" - In many 10-K filings, the table has \"Equity compensation plans approved by security holders\" and \"Equity compensation plans not approved by security holders\". The question might ask \"what is the combined number of equity compensation plans approved by security holders\" meaning the total number of securities under approved plans? Actually \"combined number\" could be the sum of the two columns for that row: 448,859 + 4,087,587 = 4,536,446. But the question says \"combined number of equity compensation plans\" not \"securities\". Let's examine the exact phrasing: \"what is the combined number of equity compensation plans approved by security holders\" - It might be a question from a dataset where they ask for the \"combined number\" meaning the total number of securities available under approved plans? The table has \"Number of Securities to be Issued Upon Exercise of Outstanding Options, Warrants and Rights\" and \"Number of Securities Remaining Available for Future Issuance\". Combined number could be sum of those two for approved plans. The row \"Total\" also has same numbers because not approved are zero. So the combined number for approved plans is 448,859 + 4,087,587 = 4,536,446. But the question says \"combined number of equity compensation plans\" - maybe they want the number of plans, which is 2 (2011 and 2012). However, the table doesn't explicitly state count of plans, but footnote lists two plans. The question might be from a benchmark where they ask \"what is the combined number of equity compensation plans approved by security holders\" and the answer is the sum of the two columns? Let's think.\n\nThe phrase \"combined number\" often appears in SEC filings: \"The following table presents the equity securities available for issuance under our equity compensation plans...\" The table has columns (a), (b), (c). The question might be \"what is the combined number of equity compensation plans approved by security holders\" - Actually in the table, the row \"Equity compensation plans approved by security holders\" has two numbers: 448,859 and 4,087,587. The \"combined number\" could be the sum of those two, representing total shares under approved plans (outstanding + available). But the question says \"combined number of equity compensation plans\" not \"shares\". Could be a typo: \"combined number of equity compensation plans\" might mean \"combined number of securities under equity compensation plans approved by security holders\". The answer likely 4,536,446.\n\nLet's check the document: The table row \"Equity compensation plans approved by security holders\" has 448,859 and 4,087,587. The \"Total\" row also has same because not approved are dashes. So the combined number (sum) is 4,536,446. Alternatively, if they ask \"combined number of equity compensation plans\" meaning count of plans, the footnote says two plans: 2012 Plan and 2011 Plan. But the question says \"combined number of equity compensation plans approved by security holders\" - \"combined number\" could refer to the number of plans, which is 2. However, the table doesn't have a count column. The question might be from a dataset where they ask for the value in the row \"Equity compensation plans approved by security holders\" under column (a) or (c)? Let's read the question exactly: \"what is the combined number of equity compensation plans approved by security holders\" - It doesn't say \"securities\" or \"shares\". It says \"combined number of equity compensation plans\". That would be the number of plans, not shares. But the table doesn't list number of plans, it lists securities. The footnote mentions two plans. So the answer could be 2. But the phrase \"combined number\" might be a way to ask for the total of the two columns? Let's see if there is any other context.\n\nIn the table, the row \"Equity compensation plans approved by security holders\" is a category. The \"combined number\" might be the sum of the two numeric columns for that row. The question might be generated from a template: \"what is the combined number of equity compensation plans approved by security holders\" - Actually in many 10-Ks, the table has \"Equity compensation plans approved by security holders\" and \"Equity compensation plans not approved by security holders\". The \"combined number\" could refer to the total number of securities under both approved and not approved? But the question specifically says \"approved by security holders\". So it's just that row.\n\nLet's look at the numbers: 448,859 and 4,087,587. Sum = 4,536,446. That is a plausible answer. The question says \"combined number\" - could be \"combined number of securities\" but they omitted \"securities\". The answer likely 4,536,446.\n\nBut let's not jump. The question: \"what is the combined number of equity compensation plans approved by security holders\" - If I were to answer, I'd say the combined number of securities under approved plans is 4,536,446. But the phrase \"equity compensation plans\" is plural, and \"combined number\" might mean the total number of plans, which is 2. However, the table doesn't provide a count of plans, only securities. The footnote says \"Includes grants made under the ... 2012 Plan ... and the ... 2011 Plan ...\" So there are two plans. But the question asks \"combined number of equity compensation plans approved by security holders\" - that would be 2. But the table row \"Equity compensation plans approved by security holders\" is a category, not a count. The question might be from a benchmark where they ask for the sum of the two columns for that row. Let's see the typical SEC filing question: \"What is the combined number of equity compensation plans approved by security holders?\" Actually in the table, there is a column \"Number of Securities to be Issued Upon Exercise of Outstanding Options, Warrants and Rights\" and \"Number of Securities Remaining Available for Future Issuance\". The \"combined number\" could be the sum of these two for the approved plans. The question might be asking for the total number of securities under approved plans. The word \"combined\" suggests adding the two numbers. So I'll go with 4,536,446.\n\nBut let's verify: The row \"Equity compensation plans approved by security holders\" has 448,859 and 4,087,587. The row \"Total\" has same. So the combined number for approved plans is 4,536,446. The question says \"combined number of equity compensation plans approved by security holders\" - maybe they want the total number of securities available under approved plans, which is the sum. I'll answer that.\n\nI need to provide evidence: list figures used. I'll use 448,859 and 4,087,587 from the row. Then program add(448859, 4087587) = 4536446.\n\nLet's write final answer inside <answer>4536446</answer>. But ensure no commas? The question doesn't specify format. Usually numbers with commas are fine. I'll put 4536446.\n\nLet's produce evidence and program.",
+ "raw_content": "<evidence>448,859 | EquityPlanSharesToBeIssued (Equity compensation plans approved by security holders)</evidence>\n<evidence>4,087,587 | EquityPlanSharesAvailable (Equity compensation plans approved by security holders)</evidence>\n<program>add(448859, 4087587)</program>\n<answer>4536446</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2497,
+  "completion_tokens": 2067,
+  "total_tokens": 4564,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "448,859",
+   "element": "EquityPlanSharesToBeIssued (Equity compensation plans approved by security holders)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "add(448859, 4087587)",
+ "answer_model": "4536446",
+ "program_value": 4536446.0,
+ "elapsed_s": 14.08,
+ "outline_source": "HII_2017_0001501585-18-000006.outline.txt",
+ "outline_chars": 86768
+}

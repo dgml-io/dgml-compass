@@ -1,0 +1,109 @@
+{
+ "id": "UPS_2007_0001193125-08-043891__row0606",
+ "format": "markdown_pdf_poppler",
+ "key": "UPS_2007_0001193125-08-043891",
+ "question": "what percentage of the total expected cash outflow to satisfy contractual obligations and commitments as of december 31 , 2007 , is pension fundings?",
+ "gold": "12%",
+ "finqa_id": "UPS/2007/page_49.pdf-4",
+ "source_page": "page_49",
+ "ticker": "UPS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_poppler/UPS_2007_0001193125-08-043891.md",
+ "doc_chars": 420536,
+ "prompt_chars": 420774,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 420536,
+ "original_chars": 420536,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 75577,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 304,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "12.0275%",
+ "reasoning": "We need to find total expected cash outflow from commitments table and pension fundings. Table: Total row: Capital Leases 619, Operating Leases 1782, Debt Principal 10527, Debt Interest 8026, Purchase Commitments 3828, Pension Fundings 3465, Other Liabilities 562. Total = sum. Compute percentage = 3465 / total * 100. Let's compute sum: 619+1782=2401; +10527=12928; +8026=20954; +3828=24782; +3465=28247; +562=28809. Percentage = 3465/28809 * 100 ≈ 12.027... Let's compute precisely: 3465/28809 = 0.12027... *100 = 12.027%. So answer 12.03% maybe. Use exact figures.",
+ "raw_content": "<evidence>\n619 | Capital Leases Total\n1,782 | Operating Leases Total\n10,527 | Debt Principal Total\n8,026 | Debt Interest Total\n3,828 | Purchase Commitments Total\n3,465 | Pension Fundings Total\n562 | Other Liabilities Total\n</evidence>\n<program>divide(3465, add(add(add(add(add(619, 1782), 10527), 8026), 3828), add(3465, 562)))</program>\n<answer>12.03%</answer>",
+ "usage": {
+  "prompt_tokens": 75894,
+  "completion_tokens": 304,
+  "total_tokens": 76198,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.55,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "619",
+   "element": "Capital Leases Total",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "1,782",
+   "element": "Operating Leases Total",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "10,527",
+   "element": "Debt Principal Total",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "8,026",
+   "element": "Debt Interest Total",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "3,828",
+   "element": "Purchase Commitments Total",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "3,465",
+   "element": "Pension Fundings Total",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "562",
+   "element": "Other Liabilities Total",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(3465, add(add(add(add(add(619, 1782), 10527), 8026), 3828), add(3465, 562)))",
+ "answer_model": "12.03%",
+ "program_value": 0.12027491408934708,
+ "docfinqa_row": 606
+}

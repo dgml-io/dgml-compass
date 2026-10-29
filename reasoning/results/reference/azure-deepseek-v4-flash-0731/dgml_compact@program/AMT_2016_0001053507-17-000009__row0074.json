@@ -1,0 +1,72 @@
+{
+ "id": "AMT_2016_0001053507-17-000009__row0074",
+ "format": "dgml_compact",
+ "key": "AMT_2016_0001053507-17-000009",
+ "question": "what is the growth rate in the price of shares from the highest value during the quarter ended december 31 , 2016 and the closing price on february 17 , 2017?",
+ "gold": "-8.5%",
+ "finqa_id": "AMT/2016/page_49.pdf-3",
+ "source_page": "page_49",
+ "ticker": "AMT",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/dgml_compact/AMT_2016_0001053507-17-000009.dgml.txt",
+ "doc_chars": 615313,
+ "prompt_chars": 615560,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 615313,
+ "original_chars": 615313,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 137249,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 216,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-8.4512%",
+ "reasoning": "We need answer growth rate in price of shares from highest value during quarter ended Dec 31 2016 and closing price on Feb 17 2017. Need find highest value during quarter ended Dec 31 2016. From stock price table: Quarter ended December 31 2016 High $118.09, Low $99.72. Closing price on Feb 17 2017: $108.11 per share. Growth rate = (108.11 - 118.09)/118.09 = -8.45%? Let's compute. 108.11/118.09 = 0.9155, so -8.45%. Need answer maybe -8.45%. Use evidence.",
+ "raw_content": "<evidence>\n$118.09 | QuarterlyStockPriceRecord: Quarter ended December 31 | High\n$108.11 | ClosingSharePrice\n</evidence>\n\n<program>divide(subtract(108.11, 118.09), 118.09)</program>\n\n<answer>-8.45%</answer>",
+ "usage": {
+  "prompt_tokens": 137575,
+  "completion_tokens": 216,
+  "total_tokens": 137791,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.87,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$118.09",
+   "element": "QuarterlyStockPriceRecord: Quarter ended December 31 | High",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$108.11",
+   "element": "ClosingSharePrice",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(108.11, 118.09), 118.09)",
+ "answer_model": "-8.45%",
+ "program_value": -0.08451181302396481,
+ "docfinqa_row": 74
+}

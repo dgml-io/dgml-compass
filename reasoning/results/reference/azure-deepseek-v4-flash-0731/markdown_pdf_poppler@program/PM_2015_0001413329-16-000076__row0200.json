@@ -1,0 +1,67 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0200",
+ "format": "markdown_pdf_poppler",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the interest expense in 2015 assuming that all the debt is interest bearing debt , ( in billions ) ?",
+ "gold": "0.86",
+ "finqa_id": "PM/2015/page_85.pdf-3",
+ "source_page": "page_85",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_poppler/PM_2015_0001413329-16-000076.md",
+ "doc_chars": 669314,
+ "prompt_chars": 669511,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 669314,
+ "original_chars": 669314,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 116308,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 410,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1.132",
+ "reasoning": "We need answer interest expense 2015. From consolidated statements: Interest expense, net $1,008 million. But question: \"interest expense in 2015 assuming that all the debt is interest bearing debt, (in billions)?\" Hmm maybe they want interest expense gross? The document gives interest expense, net = 1,008 million. Also Note 14: Interest expense $1,132 million, interest income $124 million, net $1,008. The question says \"interest expense\" not net. Assuming all debt is interest bearing debt? That phrase might be irrelevant. They ask \"what is the interest expense in 2015 assuming that all the debt is interest bearing debt, (in billions)?\" Possibly they want interest expense from income statement? The income statement line is \"Interest expense, net\" 1,008. But note 14 gives \"Interest expense\" 1,132. The question says \"interest expense\" not net. So answer 1.132 billion? Let's check. The document: Note 14 Additional Information: Interest expense $1,132 million, Interest income (124), Interest expense, net $1,008. So interest expense gross is 1,132 million = 1.132 billion. The phrase \"assuming that all the debt is interest bearing debt\" might be a distractor. So answer 1.132. Need evidence: 1,132 | Note 14 Additional Information - Interest expense. Program: 1.132? Actually figure as printed is $1,132 million. Convert to billions: 1.132. Program: divide(1132, 1000). But the program uses figures as printed. So divide(1132, 1000). Answer inside <answer>1.132</answer>.",
+ "raw_content": "<evidence>\n1,132 | Note 14 Additional Information - Interest expense\n</evidence>\n<program>divide(1132, 1000)</program>\n<answer>1.132</answer>",
+ "usage": {
+  "prompt_tokens": 116620,
+  "completion_tokens": 410,
+  "total_tokens": 117030,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 116480
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.89,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,132",
+   "element": "Note 14 Additional Information - Interest expense",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(1132, 1000)",
+ "answer_model": "1.132",
+ "program_value": 1.132,
+ "docfinqa_row": 200
+}

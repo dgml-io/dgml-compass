@@ -1,0 +1,91 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0702",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "what was the percentage change in cash provided by operating activities from 2012 to 2013?",
+ "gold": "11%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "UNP_2014_0001193125-15-037518.outline.txt",
+ "doc_source": "UNP_2014_0001193125-15-037518.dgml.xml",
+ "outline_chars": 77599,
+ "predicted_xpaths": [
+  "/chunk/LiquidityAndCapitalResources/CashFlow"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 9537,
+ "r1_usage": {
+  "prompt_tokens": 19889,
+  "completion_tokens": 2141,
+  "total_tokens": 22030,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 19712
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/LiquidityAndCapitalResources/CashFlow"
+ ],
+ "content_chars": 23789,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "10.745009",
+ "reasoning": "We need percentage change from 2012 to 2013 for cash provided by operating activities. Figures: 2013: $6,823, 2012: $6,161. Percentage change = (6823-6161)/6161 * 100. Compute.",
+ "raw_content": "<evidence>$ 6,823 | /chunk/LiquidityAndCapitalResources/CashFlow/CashFlow/CashFlow/tr[2]/CashFlowAmount[2]\n$ 6,161 | /chunk/LiquidityAndCapitalResources/CashFlow/CashFlow/CashFlow/tr[2]/CashFlowAmount[3]</evidence>\n<program>multiply(divide(subtract(6823, 6161), 6161), 100)</program>",
+ "r2_usage": {
+  "prompt_tokens": 5496,
+  "completion_tokens": 161,
+  "total_tokens": 5657,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "prompt_tokens": 5496,
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "stop",
+   "prompt_tokens": 5496,
+   "completion_tokens": 161,
+   "got_answer": false
+  }
+ ],
+ "retried_degenerate": 1,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "$ 6,823",
+   "element": "chunk/LiquidityAndCapitalResources/CashFlow/CashFlow/CashFlow/tr[2]/CashFlowAmount[2]",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$ 6,161",
+   "element": "chunk/LiquidityAndCapitalResources/CashFlow/CashFlow/CashFlow/tr[2]/CashFlowAmount[3]",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(6823, 6161), 6161), 100)",
+ "answer_model": null,
+ "program_value": 10.745008927122221,
+ "elapsed_s": 29.61
+}

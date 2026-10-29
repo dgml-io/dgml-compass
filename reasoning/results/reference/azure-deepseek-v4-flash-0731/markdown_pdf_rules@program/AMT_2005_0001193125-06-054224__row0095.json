@@ -1,0 +1,72 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0095",
+ "format": "markdown_pdf_rules",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what was the increase in long-term debt between 2004 and 2005 in thousands?",
+ "gold": "296048",
+ "finqa_id": "AMT/2005/page_85.pdf-1",
+ "source_page": "page_85",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/markdown_pdf_rules/AMT_2005_0001193125-06-054224.md",
+ "doc_chars": 437061,
+ "prompt_chars": 437225,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 437061,
+ "original_chars": 437061,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 101793,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 146,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "319815",
+ "reasoning": "We need answer increase in long-term debt between 2004 and 2005 in thousands. From balance sheet: Long-term obligations, including current portion: 2005 $3,613,429; 2004 $3,293,614. Increase = 3,613,429 - 3,293,614 = 319,815. In thousands. Need evidence figures.",
+ "raw_content": "<evidence>3,613,429 | Long-term obligations, including current portion 2005\n3,293,614 | Long-term obligations, including current portion 2004</evidence>\n<program>subtract(3613429, 3293614)</program>\n<answer>319,815</answer>",
+ "usage": {
+  "prompt_tokens": 102099,
+  "completion_tokens": 146,
+  "total_tokens": 102245,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 13.41,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "3,613,429",
+   "element": "Long-term obligations, including current portion 2005",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "3,293,614",
+   "element": "Long-term obligations, including current portion 2004",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(3613429, 3293614)",
+ "answer_model": "319,815",
+ "program_value": 319815.0,
+ "docfinqa_row": 95
+}

@@ -1,0 +1,73 @@
+{
+ "id": "CMCSA_2015_0001193125-16-452423__row0912",
+ "format": "markdown_pdf_plumber",
+ "key": "CMCSA_2015_0001193125-16-452423",
+ "question": "what was the percentage of the capital expenditures incurred in our cable communications for customer premise equipment in 2015",
+ "gold": "52.6%",
+ "finqa_id": "CMCSA/2015/page_67.pdf-3",
+ "source_page": "page_67",
+ "ticker": "CMCSA",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_plumber/CMCSA_2015_0001193125-16-452423.md",
+ "doc_chars": 544523,
+ "prompt_chars": 544739,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 544523,
+ "original_chars": 544523,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 120058,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 194,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "52.5732%",
+ "reasoning": "We need answer percentage of capital expenditures incurred in cable communications for customer premise equipment in 2015. Need find figures. In MD&A capital expenditures table: Cable Communications segment capital expenditures 2015: total $7,034 million, customer premise equipment $3,698 million. Percentage = 3698/7034 = ? Compute. 3698/7034 = 0.5257... Let's calculate precisely. 7034*0.525 = 3692.85, remainder 5.15, /7034=0.000732, so 0.525732. So 52.6%. Need evidence figures. Also maybe \"capital expenditures incurred in our cable communications\" table. Use values.",
+ "raw_content": "<evidence>\n3,698 | Customer premise equipment\n7,034 | Total\n</evidence>\n<program>divide(3698, 7034)</program>\n<answer>52.6%</answer>",
+ "usage": {
+  "prompt_tokens": 120368,
+  "completion_tokens": 194,
+  "total_tokens": 120562,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 120320
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.35,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "3,698",
+   "element": "Customer premise equipment",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "7,034",
+   "element": "Total",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(3698, 7034)",
+ "answer_model": "52.6%",
+ "program_value": 0.5257321580892806,
+ "docfinqa_row": 912
+}

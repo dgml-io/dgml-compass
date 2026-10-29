@@ -1,0 +1,66 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0727",
+ "format": "markdown_pdf_plumber",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "what was the percentage change in fuel surcharge program freight revenue from 2013 to 2014?",
+ "gold": "8%",
+ "finqa_id": "UNP/2014/page_25.pdf-4",
+ "source_page": "page_25",
+ "ticker": "UNP",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf_plumber/UNP_2014_0001193125-15-037518.md",
+ "doc_chars": 359073,
+ "prompt_chars": 359253,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 359073,
+ "original_chars": 359073,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 86861,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 332,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "6",
+ "reasoning": "We need answer percentage change in fuel surcharge program freight revenue from 2013 to 2014. Document says: \"Our fuel surcharge programs generated freight revenues of $2.8 billion, $2.6 billion, and $2.6 billion in 2014, 2013, and 2012, respectively. Fuel surcharge in 2014 increased 6% driven by our 7% carloadings increase.\" So answer 6%. Need evidence figures: $2.8 billion, $2.6 billion, and 6% increase. Program: divide? Actually percentage change = (2.8-2.6)/2.6 = 0.2/2.6 = 7.69%? But document explicitly says increased 6%. Wait check: $2.8 vs $2.6 is 7.7% increase. But document says 6% driven by 7% carloadings. Hmm maybe rounding: $2.8 billion and $2.6 billion are rounded. The stated percentage change is 6%. The question asks \"what was the percentage change in fuel surcharge program freight revenue from 2013 to 2014?\" The document explicitly states \"Fuel surcharge in 2014 increased 6%\". So answer 6%. Use evidence: \"6%\" from text. Program: 6.",
+ "raw_content": "<evidence>\n6% | Fuel surcharge in 2014 increased 6% driven by our 7% carloadings increase\n</evidence>\n<program>6</program>\n<answer>6%</answer>",
+ "usage": {
+  "prompt_tokens": 87170,
+  "completion_tokens": 332,
+  "total_tokens": 87502,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 86272
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 15.68,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "6%",
+   "element": "Fuel surcharge in 2014 increased 6% driven by our 7% carloadings increase",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "6",
+ "answer_model": "6%",
+ "program_value": 6.0,
+ "docfinqa_row": 727
+}

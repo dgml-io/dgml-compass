@@ -1,0 +1,53 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0423",
+ "format": "markdown_pdf_poppler",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "was was the total amount spent on stock repurchases in december 2012?",
+ "gold": "7662592",
+ "finqa_id": "AMT/2012/page_50.pdf-2",
+ "source_page": "page_50",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/markdown_pdf_poppler/AMT_2012_0001193125-13-077821.md",
+ "doc_chars": 669235,
+ "prompt_chars": 669393,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 669235,
+ "original_chars": 669235,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 120190,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 899,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "7662592",
+ "reasoning": "We need to find total amount spent on stock repurchases in December 2012. The document mentions in Item 5, Issuer Purchases of Equity Securities, a table for the three months ended December 31, 2012. It shows monthly repurchases: October, November, December. For December, it shows 102,400 shares purchased at average price $74.83. But the question asks \"total amount spent on stock repurchases in december 2012\". The table gives the number of shares and average price, but the aggregate amount for December is not directly given. However, we can compute: 102,400 * $74.83 = $7,662,592? But the table also has a column \"Approximate Dollar Value of Shares that May Yet be Purchased\" which is not the amount spent. The text says \"During the three months ended December 31, 2012, we repurchased 619,314 shares of our common stock for an aggregate of approximately $46.0 million, including commissions and fees\". That is for the quarter. For December specifically, we have the number of shares and average price. But the question asks \"total amount spent on stock repurchases in december 2012\" - likely they want the dollar amount for December. The table gives average price per share, but that is excluding commissions and fees. The note says \"Average price per share is calculated using the aggregate price, excluding commissions and fees.\" So the actual amount spent including commissions and fees is not given for December alone. However, we can compute the product: 102,400 * $74.83 = $7,662,592. But is that the total amount? The question might expect that number. Alternatively, the document might have a different figure. Let's check the text: \"During the three months ended December 31, 2012, we repurchased 619,314 shares of our common stock for an aggregate of approximately $46.0 million, including commissions and fees\". That is for the quarter. For December, we have the shares and average price. The question specifically says \"in december 2012\" so we need the December figure. The table gives the number of shares and average price, so we can compute the aggregate price (excluding commissions) as 102,400 * $74.83 = $7,662,592. But the question might want the amount including commissions? The note says average price excludes commissions, so the actual cash outlay would be higher. However, the question does not specify including commissions. Typically, when they ask \"total amount spent on stock repurchases\", they might refer to the aggregate purchase price. In the quarterly summary, they say \"aggregate of approximately $46.0 million, including commissions and fees\". For December, we don't have that. But we can compute the product. Alternatively, maybe the document gives the total for December elsewhere? Let's search the document for \"December\" and \"repurchase\". The table is the only place. So the answer is likely 102,400 * $74.83 = $7,662,592. But we should check if there is any other mention. The text also says \"Between January 1, 2013 and January 21, 2013, we repurchased an additional 15,790 shares ... for an aggregate of $1.2 million\" - that's not December. So the answer is $7,662,592. However, the question might expect the amount in millions? It says \"total amount spent\" so we can give the number. But the document says \"approximately\" for the quarter. For December, we have exact numbers. So I'll compute: 102,400 * 74.83 = 7,662,592. So answer: 7662592. But let's double-check: 102,400 * 74.83 = 102,400 * 70 = 7,168,000; 102,400 * 4.83 = 494,592; total 7,662,592. Yes.\n\nBut wait, the question says \"was was the total amount spent\" - maybe a typo. I'll answer with the number.\n\nI'll put it in <answer> tags.",
+ "raw_content": "<answer>7662592</answer>",
+ "usage": {
+  "prompt_tokens": 120336,
+  "completion_tokens": 899,
+  "total_tokens": 121235,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 120064
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 13.61,
+ "answer_tag_found": true,
+ "docfinqa_row": 423
+}

@@ -1,0 +1,70 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0258",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "in 2014 what was the ratio of the aggregate notional amount of outstanding interest rate swaps to the outstanding foreign currency hedges",
+ "gold": "1.62",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "LMT_2014_0001193125-15-038681.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/Financial/CriticalAccountingPolicy/IncomeTax/DerivativeInstrumentDescription"
+ ],
+ "r1_reasoning_chars": 9378,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 16131,
+  "completion_tokens": 2196,
+  "total_tokens": 18327,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/Financial/CriticalAccountingPolicy/IncomeTax/DerivativeInstrumentDescription"
+ ],
+ "content_chars": 9589,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "1.616915",
+ "reasoning": "We need ratio: interest rate swaps / foreign currency hedges at Dec 31, 2014. Figures: $1.3 billion and $804 million. Need ratio = 1.3 / 0.804? But careful: $1.3 billion = 1300 million, $804 million. Ratio = 1300/804 = 1.6169... Or using billions: 1.3 / 0.804 = 1.6169. The question asks \"in 2014\" meaning as of Dec 31, 2014. So answer numeric ratio. Need provide evidence and program. Use figures as printed: $1.3 billion and $804 million. Program: divide(1.3, 0.804) but need exact? Could use 1300/804. The program should use figures as printed? The instruction says \"using figures as printed\" but they are strings with $ and billion. Better to use numeric values: 1.3 and 0.804? But 804 million = 0.804 billion. Or use 1300 and 804. The program must be exact. I'll use divide(1300, 804) because both in millions. But evidence: value as printed: $1.3 billion and $804 million. Program: divide(1300, 804). Compute: 1300/804 = 1.616915... Let's compute precisely: 804*1.6=1286.4, remainder 13.6, 13.6/804=0.016915, so 1.616915. Ratio ~1.62. The answer should be numeric. I'll put 1.6169 maybe. But the benchmark expects exact? It will execute program. So answer tag should contain the result of program? The instruction: \"Give your final answer inside <answer></answer> tags, containing only the value itself\". So I need to compute. I'll compute 1300/804 = 1.616915422885572. I'll put that. But maybe they want ratio as decimal. I'll put 1.6169. But to be safe, put exact fraction? The program will compute. The answer should be the value. I'll put 1.616915422885572.\n\nEvidence: \n$1.3 billion | DollarAmountValue (interest rate swaps at Dec 31, 2014)\n$804 million | DollarAmountValue (foreign currency hedges at Dec 31, 2014)\n\nProgram: divide(1300, 804)\n\nLet's write.",
+ "raw_content": "<evidence>\n$1.3 billion | DollarAmountValue (interest rate swaps at Dec 31, 2014)\n$804 million | DollarAmountValue (foreign currency hedges at Dec 31, 2014)\n</evidence>\n<program>divide(1300, 804)</program>\n<answer>1.616915422885572</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2192,
+  "completion_tokens": 617,
+  "total_tokens": 2809,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$1.3 billion",
+   "element": "DollarAmountValue (interest rate swaps at Dec 31, 2014)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$804 million",
+   "element": "DollarAmountValue (foreign currency hedges at Dec 31, 2014)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(1300, 804)",
+ "answer_model": "1.616915422885572",
+ "program_value": 1.6169154228855722,
+ "elapsed_s": 13.66,
+ "outline_source": "LMT_2014_0001193125-15-038681.outline.txt",
+ "outline_chars": 64445
+}

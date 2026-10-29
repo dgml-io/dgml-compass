@@ -1,0 +1,72 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0630",
+ "format": "markdown_pdf",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "what was the percentage growth from 2013 to 2014 in the total accounts payable and other current liabilities",
+ "gold": "7.03%",
+ "finqa_id": "UNP/2014/page_75.pdf-1",
+ "source_page": "page_75",
+ "ticker": "UNP",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf/UNP_2014_0001193125-15-037518.md",
+ "doc_chars": 332985,
+ "prompt_chars": 333182,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 332985,
+ "original_chars": 332985,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 78220,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 232,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "7.031756",
+ "reasoning": "We need percentage growth from 2013 to 2014 in total accounts payable and other current liabilities. From balance sheet: 2014 $3,303 million, 2013 $3,086 million. Growth = (3303-3086)/3086 = 217/3086 = 0.0703... = 7.03%. Need answer as percentage. Evidence: 3,303 | Accounts payable and other current liabilities (2014), 3,086 | same (2013). Program: divide(subtract(3303,3086),3086) then multiply by 100? The program should output the value. The question asks percentage growth, so answer 7.03% or 7.0%. We'll give 7.03.",
+ "raw_content": "<evidence>3,303 | Accounts payable and other current liabilities (2014)\n3,086 | Accounts payable and other current liabilities (2013)</evidence>\n<program>multiply(divide(subtract(3303, 3086), 3086), 100)</program>\n<answer>7.03</answer>",
+ "usage": {
+  "prompt_tokens": 78530,
+  "completion_tokens": 232,
+  "total_tokens": 78762,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 78080
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.07,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "3,303",
+   "element": "Accounts payable and other current liabilities (2014)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "3,086",
+   "element": "Accounts payable and other current liabilities (2013)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(3303, 3086), 3086), 100)",
+ "answer_model": "7.03",
+ "program_value": 7.031756318859365,
+ "docfinqa_row": 630
+}

@@ -1,0 +1,71 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0863",
+ "format": "markdown_pdf",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "what was the sum of the temporary differences between 2007 and 2009 in billions",
+ "gold": "9.8",
+ "finqa_id": "IP/2009/page_84.pdf-4",
+ "source_page": "page_84",
+ "ticker": "IP",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/markdown_pdf/IP_2009_0001193125-10-040916.md",
+ "doc_chars": 445162,
+ "prompt_chars": 445330,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 445162,
+ "original_chars": 445162,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 104101,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 575,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "7.2",
+ "reasoning": "We need answer question: \"what was the sum of the temporary differences between 2007 and 2009 in billions\". Need find relevant figures. Document mentions \"Deferred income taxes are not provided for temporary differences of approximately $3.5 billion, $2.6 billion and $3.7 billion as of December 31, 2009, 2008 and 2007, respectively, representing earnings of non-U.S. subsidiaries intended to be permanently reinvested.\" So temporary differences between 2007 and 2009? Sum of temporary differences between 2007 and 2009? Likely sum of the amounts for 2007 and 2009? Or difference between 2007 and 2009? Wording \"sum of the temporary differences between 2007 and 2009\" could mean add the temporary differences for 2007 and 2009. The document says \"temporary differences of approximately $3.5 billion, $2.6 billion and $3.7 billion as of December 31, 2009, 2008 and 2007\". So 2007 = $3.7 billion, 2009 = $3.5 billion. Sum = 7.2 billion. Or \"between 2007 and 2009\" could mean difference = 0.2 billion. But \"sum of the temporary differences between 2007 and 2009\" likely sum of the two years' temporary differences. Need check question phrasing: \"what was the sum of the temporary differences between 2007 and 2009 in billions\" - likely add 2007 and 2009 values. Let's read exact: \"Deferred income taxes are not provided for temporary differences of approximately $3.5 billion, $2.6 billion and $3.7 billion as of December 31, 2009, 2008 and 2007, respectively\". So sum of temporary differences between 2007 and 2009 = 3.7 + 3.5 = 7.2 billion. Answer 7.2.\n\nNeed provide evidence and program. Evidence: $3.5 billion | Note 10 Income Taxes (temporary differences 2009), $3.7 billion | Note 10 Income Taxes (temporary differences 2007). Program add(3.5, 3.7) = 7.2. Final answer inside <answer>7.2</answer>.",
+ "raw_content": "<evidence>\n$3.5 billion | Note 10 Income Taxes (temporary differences 2009)\n$3.7 billion | Note 10 Income Taxes (temporary differences 2007)\n</evidence>\n\n<program>add(3.5, 3.7)</program>\n\n<answer>7.2</answer>",
+ "usage": {
+  "prompt_tokens": 104407,
+  "completion_tokens": 575,
+  "total_tokens": 104982,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.36,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$3.5 billion",
+   "element": "Note 10 Income Taxes (temporary differences 2009)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$3.7 billion",
+   "element": "Note 10 Income Taxes (temporary differences 2007)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "add(3.5, 3.7)",
+ "answer_model": "7.2",
+ "program_value": 7.2,
+ "docfinqa_row": 863
+}

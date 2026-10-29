@@ -1,0 +1,53 @@
+{
+ "id": "CMCSA_2015_0001193125-16-452423__row0916",
+ "format": "markdown_pdf_poppler",
+ "key": "CMCSA_2015_0001193125-16-452423",
+ "question": "in 2015 what was the ratio of the nol carry forward for the federal to the foreign taxes",
+ "gold": "19.3%",
+ "finqa_id": "CMCSA/2015/page_112.pdf-4",
+ "source_page": "page_112",
+ "ticker": "CMCSA",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_poppler/CMCSA_2015_0001193125-16-452423.md",
+ "doc_chars": 702629,
+ "prompt_chars": 702806,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 702629,
+ "original_chars": 702629,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 125340,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 499,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.1929",
+ "reasoning": "We need to find the NOL carryforward for federal and foreign taxes in 2015. From the document, in Note 15 (Income Taxes) for Comcast, there is a table \"Components of Net Deferred Tax Liability\" that shows \"Net operating loss carryforwards\" as a deferred tax asset. But that is combined? Actually it says \"Net operating loss carryforwards\" as a single line. However, later in the text: \"As of December 31, 2015, we had federal net operating loss carryforwards of $135 million and various state net operating loss carryforwards that expire in periods through 2035. As of December 31, 2015, we also had foreign net operating loss carryforwards of $700 million that are related to the foreign operations of NBCUniversal, the majority of which expire in periods through 2025.\" So federal NOL = $135 million, foreign NOL = $700 million. The question asks: \"in 2015 what was the ratio of the nol carry forward for the federal to the foreign taxes\" So ratio = federal / foreign = 135 / 700 = 0.192857... approximately 0.1929. Or maybe they want the ratio as a fraction? The question says \"ratio of the nol carry forward for the federal to the foreign taxes\" so federal to foreign = 135:700, which simplifies to 27:140. But likely they want a decimal or fraction. The answer should be the value. I'll put 0.1929 or 27/140. Since the instruction says \"containing only the value itself\" without units, I'll put 0.1929. But to be precise, 135/700 = 0.192857... I'll put 0.1929. Or maybe they want the ratio as a fraction? The question says \"ratio\" so maybe they want \"27/140\" but that's not a single value. I'll put the decimal. Let me check if there is any other interpretation. The question: \"in 2015 what was the ratio of the nol carry forward for the federal to the foreign taxes\" So federal NOL to foreign NOL. Yes.\n\nThus answer: 0.1929 (or 27/140). I'll put 0.1929.",
+ "raw_content": "<answer>0.1929</answer>",
+ "usage": {
+  "prompt_tokens": 125491,
+  "completion_tokens": 499,
+  "total_tokens": 125990,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 125440
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.1,
+ "answer_tag_found": true,
+ "docfinqa_row": 916
+}

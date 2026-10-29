@@ -1,0 +1,50 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0014",
+ "format": "markdown_pdf_poppler",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "the combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable was what percent of the total ending balance as of november 28 2008?",
+ "gold": "11.0%",
+ "finqa_id": "ADBE/2008/page_89.pdf-3",
+ "source_page": "page_89",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_poppler/ADBE_2008_0000796343-09-000007.md",
+ "doc_chars": 561420,
+ "prompt_chars": 561730,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 561420,
+ "original_chars": 561420,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 96795,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 241,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "10.96",
+ "reasoning": "We need answer. Need find combined amount accrued interest and penalties related to tax positions taken on tax returns and included in non-current income taxes payable. Document says: \"As of November 28, 2008, the combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable was approximately $15.3 million.\" Total ending balance? \"Ending balance as of November 28, 2008 $139,549\" (gross liability for unrecognized tax benefits). But question: \"combined amount ... was what percent of the total ending balance as of november 28 2008?\" Total ending balance likely refers to gross liability for unrecognized tax benefits ending balance $139,549 thousand = $139.549 million. So percent = 15.3 / 139.549 *100 = 10.96% approx. Need answer value only. Let's compute: 15.3/139.549 = 0.10964 -> 10.96%. Could also be total ending balance of unrecognized tax benefits? Yes. Answer 10.96%.",
+ "raw_content": "<answer>10.96</answer>",
+ "usage": {
+  "prompt_tokens": 96966,
+  "completion_tokens": 241,
+  "total_tokens": 97207,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.32,
+ "answer_tag_found": true,
+ "docfinqa_row": 14
+}

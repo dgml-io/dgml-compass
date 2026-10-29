@@ -1,0 +1,50 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0202",
+ "format": "dgml",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "as a result of the sales of certain non-core towers and other assets what was the percent of the change in the recorded net losses from 2007 to 2008",
+ "gold": "47.9%",
+ "finqa_id": "AMT/2008/page_107.pdf-1",
+ "source_page": "page_107",
+ "ticker": "AMT",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml/AMT_2008_0001193125-09-039177.dgml.xml",
+ "doc_chars": 745300,
+ "prompt_chars": 745537,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 745300,
+ "original_chars": 745300,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 172559,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 241,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "47.9%",
+ "reasoning": "We need answer percent change in recorded net losses from sales of non-core towers and other assets from 2007 to 2008. Need find figures. In document: \"During the years ended December 31, 2008, 2007 and 2006 respectively, the Company recorded net losses associated with the sales of certain non-core towers and other assets, as well as impairment charges to write-down certain assets to net realizable value after an indicator of impairment had been identified. As a result, the Company recorded net losses and impairments of approximately $10.5 million, $7.1 million and $2.0 million for the years ended December 31, 2008, 2007 and 2006, respectively.\" So net losses 2008 = 10.5, 2007 = 7.1. Percent change = (10.5-7.1)/7.1 = 3.4/7.1 = 0.478873... = 47.887% increase. So answer 47.9% or 48%. Need final answer inside tags only value.",
+ "raw_content": "<answer>47.9%</answer>",
+ "usage": {
+  "prompt_tokens": 172722,
+  "completion_tokens": 241,
+  "total_tokens": 172963,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 13.89,
+ "answer_tag_found": true,
+ "docfinqa_row": 202
+}

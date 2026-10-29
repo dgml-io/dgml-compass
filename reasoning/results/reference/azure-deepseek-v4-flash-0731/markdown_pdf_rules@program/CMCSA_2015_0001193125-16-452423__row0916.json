@@ -1,0 +1,72 @@
+{
+ "id": "CMCSA_2015_0001193125-16-452423__row0916",
+ "format": "markdown_pdf_rules",
+ "key": "CMCSA_2015_0001193125-16-452423",
+ "question": "in 2015 what was the ratio of the nol carry forward for the federal to the foreign taxes",
+ "gold": "19.3%",
+ "finqa_id": "CMCSA/2015/page_112.pdf-4",
+ "source_page": "page_112",
+ "ticker": "CMCSA",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_rules/CMCSA_2015_0001193125-16-452423.md",
+ "doc_chars": 564207,
+ "prompt_chars": 564384,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 564207,
+ "original_chars": 564207,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 125792,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 217,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.192857",
+ "reasoning": "We need answer question: \"in 2015 what was the ratio of the nol carry forward for the federal to the foreign taxes\". Need parse. Document has income taxes note. Federal net operating loss carryforwards of $135 million and foreign net operating loss carryforwards of $700 million. Ratio federal to foreign = 135/700 = 0.192857... Need provide value. Also \"foreign taxes\" maybe foreign NOL carryforwards. The question says \"nol carry forward for the federal to the foreign taxes\" likely ratio of federal NOL carryforward to foreign NOL carryforward. Use figures: $135 million federal NOL, $700 million foreign NOL. Ratio = 135/700 = 0.192857... Could express as 0.193. Need evidence and program.",
+ "raw_content": "<evidence>\n135 | federal net operating loss carryforwards\n700 | foreign net operating loss carryforwards\n</evidence>\n<program>divide(135, 700)</program>\n<answer>0.192857</answer>",
+ "usage": {
+  "prompt_tokens": 126101,
+  "completion_tokens": 217,
+  "total_tokens": 126318,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 15.34,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "135",
+   "element": "federal net operating loss carryforwards",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "700",
+   "element": "foreign net operating loss carryforwards",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(135, 700)",
+ "answer_model": "0.192857",
+ "program_value": 0.19285714285714287,
+ "docfinqa_row": 916
+}

@@ -1,0 +1,88 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0322",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was the change in millions of total long-term debt net from 2014 to 2015?",
+ "gold": "9119",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "LMT_2015_0001193125-16-476010.outline.txt",
+ "doc_source": "LMT_2015_0001193125-16-476010.dgml.xml",
+ "outline_chars": 116705,
+ "predicted_xpaths": [
+  "/chunk/ConsolidatedBalanceSheets",
+  "/chunk/ConsolidatedBalanceSheets/table/LongTermDebtNetBalance",
+  "/chunk/ConsolidatedBalanceSheets/table"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 5560,
+ "r1_usage": {
+  "prompt_tokens": 28888,
+  "completion_tokens": 1378,
+  "total_tokens": 30266,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 28672
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/ConsolidatedBalanceSheets",
+  "/chunk/ConsolidatedBalanceSheets/table/LongTermDebtNetBalance",
+  "/chunk/ConsolidatedBalanceSheets/table"
+ ],
+ "content_chars": 201065,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "8163",
+ "reasoning": "We need to compute change in long-term debt net from 2014 to 2015. From balance sheet: Long-term debt, net: 2015 = 14,305; 2014 = 6,142. Change = 14,305 - 6,142 = 8,163. The question asks \"change in millions\" so answer 8163. Need to provide evidence and program.",
+ "raw_content": "<evidence>14,305 | /chunk/ConsolidatedBalanceSheets/table/LongTermDebtNetBalance/DebtPrincipalAmount\n6,142 | /chunk/ConsolidatedBalanceSheets/table/LongTermDebtNetBalance/DebtPrincipalAmount</evidence>\n<program>subtract(14305, 6142)</program>\n<answer>8163</answer>",
+ "r2_usage": {
+  "prompt_tokens": 46588,
+  "completion_tokens": 173,
+  "total_tokens": 46761,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 46588,
+   "completion_tokens": 173,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "14,305",
+   "element": "chunk/ConsolidatedBalanceSheets/table/LongTermDebtNetBalance/DebtPrincipalAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "6,142",
+   "element": "chunk/ConsolidatedBalanceSheets/table/LongTermDebtNetBalance/DebtPrincipalAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(14305, 6142)",
+ "answer_model": "8163",
+ "program_value": 8163.0,
+ "elapsed_s": 9.03
+}

@@ -1,0 +1,53 @@
+{
+ "id": "NCLH_2018_0001144204-19-010508__row0338",
+ "key": "NCLH_2018_0001144204-19-010508",
+ "question": "what is the percentage change in capital expenditures from 2017 to 2018?",
+ "gold": "33.3%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "NCLH_2018_0001144204-19-010508.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/RiskFactors/ManagementDiscussionAnalysis/LiquidityAndCapitalResources/FutureCapitalCommitments"
+ ],
+ "r1_reasoning_chars": 4076,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 19075,
+  "completion_tokens": 1008,
+  "total_tokens": 20083,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/RiskFactors/ManagementDiscussionAnalysis/LiquidityAndCapitalResources/FutureCapitalCommitments"
+ ],
+ "content_chars": 17107,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need percentage change in capital expenditures from 2017 to 2018. The document excerpts do not explicitly state \"capital expenditures\" amounts for 2017 and 2018. There is \"Net cash used in investing activities\" which is $1.5 billion in 2018 and $1.4 billion in 2017, but that's not capital expenditures; it includes payments for ships, improvements, etc. The question specifically asks capital expenditures. The document mentions \"capital expenditures\" in Future Capital Commitments but not historical amounts. There is \"Capitalized interest\" but not capex. The \"Sources and Uses of Cash\" section gives net cash used in investing activities, not capital expenditures. The contractual obligations table has ship construction contracts but not historical capex. So we don't have the actual capital expenditures figures for 2017 and 2018. The question asks percentage change, so we need both. Not found. So answer NOT_FOUND.\n\nBut let's double-check: The region includes \"Future Capital Commitments\" with anticipated capital expenditures for 2019-2021, not historical. The \"Sources and Uses of Cash\" gives investing cash flows, but that's not capital expenditures. The question might be interpreted as capital expenditures from cash flow statement, but the document doesn't label them as such. The investing activities description says \"primarily related to payments for the delivery of Norwegian Bliss, ships under construction, ship improvement projects, and shoreside projects.\" That is essentially capital expenditures, but the figure is $1.5 billion and $1.4 billion. However, the question asks \"capital expenditures\" specifically, and the document does not use that term for those amounts. In financial statements, capital expenditures are often part of investing activities, but the document does not explicitly state \"capital expenditures\" for those years. The \"Future Capital Commitments\" section says \"anticipated capital expenditures\" for future years, not historical. So we cannot compute percentage change.\n\nThus answer NOT_FOUND.\n\nBut let's be thorough: The question might be from a dataset where the answer is expected from the cash flow statement. The document excerpt includes \"Net cash used in investing activities was $1.5 billion in 2018 ... $1.4 billion in 2017\". If we treat that as capital expenditures, percentage change = (1.5-1.4)/1.4 = 0.0714 = 7.14%. But the question says \"capital expenditures\" not \"net cash used in investing activities\". The document does not label those as capital expenditures. Also, the investing activities include other items like proceeds from sales? But the description says primarily related to payments for ships, improvements, etc. It might be close. However, the instruction says \"Find the relevant figures in the document\" and \"the document does not contain enough information\" if not. The document does not contain a line item \"Capital expenditures\" for 2017 and 2018. So I should answer NOT_FOUND.\n\nBut let's see if there is any other mention: The \"Contractual Obligations\" table has \"Ship construction contracts\" but that's future commitments. The \"Future Capital Commitments\" has anticipated capital expenditures for future years. No historical.\n\nThus NOT_FOUND.\n\nI'll provide evidence: I see \"Net cash used in investing activities was $1.5 billion in 2018\" and \"$1.4 billion in 2017\" but those are not labeled capital expenditures. I'll cite them as evidence? The instruction says \"list every figure you use\" - if I don't use them, no need. But I might mention that they are not capital expenditures. The answer is NOT_FOUND.\n\nI'll write reasoning briefly.",
+ "raw_content": "<evidence>No explicit capital expenditure figures for 2017 and 2018 are present in the provided excerpts. The document mentions \"Net cash used in investing activities\" of $1.5 billion (2018) and $1.4 billion (2017), but these are not labeled as capital expenditures.</evidence>\n\n<program>NOT_FOUND</program>\n\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 4292,
+  "completion_tokens": 849,
+  "total_tokens": 5141,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 37.06,
+ "outline_source": "NCLH_2018_0001144204-19-010508.outline.txt",
+ "outline_chars": 75680
+}

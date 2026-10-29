@@ -1,0 +1,73 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0700",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "what was the percentage change in fuel surcharge program freight revenue from 2012 to 2013?",
+ "gold": "0%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "UNP_2014_0001193125-15-037518.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/ManagementDiscussionAndAnalysis/ResultsOfOperations/OperatingRevenues/FuelSurchargeRevenue",
+  "/chunk/ManagementDiscussionAndAnalysis/Executive/OperatingResults/ol/FreightRevenue/FuelSurchargeChangePercent"
+ ],
+ "r1_reasoning_chars": 2750,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 19891,
+  "completion_tokens": 679,
+  "total_tokens": 20570,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ManagementDiscussionAndAnalysis/ResultsOfOperations/OperatingRevenues/FuelSurchargeRevenue",
+  "/chunk/ManagementDiscussionAndAnalysis/Executive/OperatingResults/ol/FreightRevenue/FuelSurchargeChangePercent"
+ ],
+ "content_chars": 3921,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "0",
+ "reasoning": "We need percentage change from 2012 to 2013 for fuel surcharge revenue. Document says: fuel surcharge programs generated freight revenues of $2.8 billion, $2.6 billion, and $2.6 billion in 2014, 2013, and 2012, respectively. So 2013 = 2.6, 2012 = 2.6. Percentage change = (2.6-2.6)/2.6 = 0%. Also text says \"Fuel surcharge in 2013 essentially was flat versus 2012\". So answer 0%. Need evidence figures: $2.6 billion for 2013 and $2.6 billion for 2012. They are printed as FinancialAmount: $2.6 billion (twice? Actually the excerpt shows FinancialAmount: $2.8 billion, FinancialAmount: $2.6 billion, and span: $2.6 billion in 2014, 2013, 2012 respectively. So values: $2.6 billion for 2013, $2.6 billion for 2012. Use those. Program: divide(subtract(2.6, 2.6), 2.6) = 0. But percentage change is 0%. Need answer as percentage? The question asks \"what was the percentage change\" so answer 0% or 0.0? Usually percentage change is 0%. We'll output 0% inside tags. But benchmark expects numeric? It says value only, no units unless asked. The question asks percentage change, so likely \"0%\" or \"0\". We'll put 0%? The instruction: \"containing only the value itself with no explanation or units unless the question asks for them.\" It asks for percentage change, so unit is percent, but they might want number. Usually in these tasks, answer is numeric like 0.0. But to be safe, \"0%\" is a value with unit. The instruction says no units unless question asks for them. It asks \"percentage change\", so percent is implied. I'll put 0.0? Let's see. The program computes 0.0. I'll put 0.0. But maybe they expect \"0%\". The instruction says \"no explanation or units unless the question asks for them\" - the question asks \"what was the percentage change\", so the answer is a percentage, so including % is acceptable? But \"value itself\" - I'd put 0.0. Let's do 0.0.",
+ "raw_content": "<evidence>$2.6 billion | FinancialAmount (2013 fuel surcharge revenue)\n$2.6 billion | span (2012 fuel surcharge revenue)</evidence>\n<program>divide(subtract(2.6, 2.6), 2.6)</program>\n<answer>0.0</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1213,
+  "completion_tokens": 602,
+  "total_tokens": 1815,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$2.6 billion",
+   "element": "FinancialAmount (2013 fuel surcharge revenue)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$2.6 billion",
+   "element": "span (2012 fuel surcharge revenue)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(subtract(2.6, 2.6), 2.6)",
+ "answer_model": "0.0",
+ "program_value": 0.0,
+ "elapsed_s": 7.08,
+ "outline_source": "UNP_2014_0001193125-15-037518.outline.txt",
+ "outline_chars": 77599
+}

@@ -1,0 +1,74 @@
+{
+ "id": "CMCSA_2015_0001193125-16-452423__row0550",
+ "format": "markdown_pdf_plumber",
+ "key": "CMCSA_2015_0001193125-16-452423",
+ "question": "what was the change in unrecognized tax benefits from the end of 2013 to the end of 2014?",
+ "gold": "-530",
+ "finqa_id": "CMCSA/2015/page_112.pdf-1",
+ "source_page": "page_112",
+ "ticker": "CMCSA",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_plumber/CMCSA_2015_0001193125-16-452423.md",
+ "doc_chars": 544523,
+ "prompt_chars": 544701,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 544523,
+ "original_chars": 544523,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 120058,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 291,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-530",
+ "reasoning": "We need the change in unrecognized tax benefits from end of 2013 to end of 2014. From Comcast Note 15: Reconciliation of Unrecognized Tax Benefits: Balance, January 1 2014 = 1,701; Balance, December 31, 2014 = 1,171. Change = 1,171 - 1,701 = -530. Or from 2013 end to 2014 end. The table shows 2013 balance at Dec 31, 2013 = 1,701 (since 2014 beginning). 2014 ending = 1,171. So change = -530. The question asks \"change in unrecognized tax benefits from the end of 2013 to the end of 2014\" - likely decrease of 530. We'll provide -530. Evidence: 1,701 | Balance, January 1 (2014) ; 1,171 | Balance, December 31 (2014). Program: subtract(1171, 1701).",
+ "raw_content": "<evidence>\n1,701 | Balance, January 1 (2014) in Reconciliation of Unrecognized Tax Benefits\n1,171 | Balance, December 31 (2014) in Reconciliation of Unrecognized Tax Benefits\n</evidence>\n<program>\nsubtract(1171, 1701)\n</program>\n<answer>-530</answer>",
+ "usage": {
+  "prompt_tokens": 120370,
+  "completion_tokens": 291,
+  "total_tokens": 120661,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 120320
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.86,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,701",
+   "element": "Balance, January 1 (2014) in Reconciliation of Unrecognized Tax Benefits",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "1,171",
+   "element": "Balance, December 31 (2014) in Reconciliation of Unrecognized Tax Benefits",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "subtract(1171, 1701)",
+ "answer_model": "-530",
+ "program_value": -530.0,
+ "docfinqa_row": 550
+}

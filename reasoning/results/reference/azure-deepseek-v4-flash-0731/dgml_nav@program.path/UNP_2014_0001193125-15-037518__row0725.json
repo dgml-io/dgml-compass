@@ -1,0 +1,81 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0725",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "what was the percentage change in total expense for repairs and maintenance from 2012 to 2013?",
+ "gold": "10%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "UNP_2014_0001193125-15-037518.outline.txt",
+ "doc_source": "UNP_2014_0001193125-15-037518.dgml.xml",
+ "outline_chars": 77599,
+ "predicted_xpaths": [
+  "/chunk/RetirementPlans/PropertiesDisclosure/RepairsAndMaintenancePolicy"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 2062,
+ "r1_usage": {
+  "prompt_tokens": 19891,
+  "completion_tokens": 506,
+  "total_tokens": 20397,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/RetirementPlans/PropertiesDisclosure/RepairsAndMaintenancePolicy"
+ ],
+ "content_chars": 4266,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "9.52381",
+ "reasoning": "We need percentage change from 2012 to 2013. Figures: 2012 $2.1 billion, 2013 $2.3 billion. Percentage change = (2.3 - 2.1)/2.1 * 100. Need compute. Use figures as printed: $2.1 billion and $2.3 billion. We'll use 2.1 and 2.3. Program: multiply(divide(subtract(2.3, 2.1), 2.1), 100). Answer 9.5238... Need output value only.",
+ "raw_content": "<evidence>$2.3 billion | /chunk/RetirementPlans/PropertiesDisclosure/RepairsAndMaintenancePolicy/RepairsAndMaintenancePolicy/span\n$2.1 billion | /chunk/RetirementPlans/PropertiesDisclosure/RepairsAndMaintenancePolicy/RepairsAndMaintenancePolicy/RepairsAndMaintenanceExpenseAmount</evidence>\n<program>multiply(divide(subtract(2.3, 2.1), 2.1), 100)</program>\n<answer>9.523809523809524</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1198,
+  "completion_tokens": 250,
+  "total_tokens": 1448,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 1198,
+   "completion_tokens": 250,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "$2.3 billion",
+   "element": "chunk/RetirementPlans/PropertiesDisclosure/RepairsAndMaintenancePolicy/RepairsAndMaintenancePolicy/span",
+   "element_found": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$2.1 billion",
+   "element": "chunk/RetirementPlans/PropertiesDisclosure/RepairsAndMaintenancePolicy/RepairsAndMaintenancePolicy/RepairsAndMaintenanceExpenseAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "multiply(divide(subtract(2.3, 2.1), 2.1), 100)",
+ "answer_model": "9.523809523809524",
+ "program_value": 9.523809523809511,
+ "elapsed_s": 6.5
+}

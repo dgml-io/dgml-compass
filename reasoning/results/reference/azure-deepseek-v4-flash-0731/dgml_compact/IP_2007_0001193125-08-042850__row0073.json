@@ -1,0 +1,50 @@
+{
+ "id": "IP_2007_0001193125-08-042850__row0073",
+ "format": "dgml_compact",
+ "key": "IP_2007_0001193125-08-042850",
+ "question": "what percentage of industrial packaging sales where represented by european industrial packaging net sales in 2007?",
+ "gold": "21%",
+ "finqa_id": "IP/2007/page_31.pdf-1",
+ "source_page": "page_31",
+ "ticker": "IP",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml_compact/IP_2007_0001193125-08-042850.dgml.txt",
+ "doc_chars": 605788,
+ "prompt_chars": 605992,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 605788,
+ "original_chars": 605788,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 132330,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 209,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "20.6%",
+ "reasoning": "We need percentage: European Industrial Packaging net sales / Industrial Packaging net sales in 2007. From document: Industrial Packaging net sales 2007 = $5,245 million (from segment table). European Industrial Packaging net sales 2007 = $1.1 billion (from MD&A: \"EUROPEAN INDUSTRIAL PACKAGING net sales for 2007 were $1.1 billion\"). Also in segment table European sales by segment: Industrial Packaging 2007 = $1,078 million. So percentage = 1078 / 5245 = 0.2055... = 20.55%. Let's compute: 1078/5245 = 0.2055. So 20.6% approximately. The question asks \"what percentage of industrial packaging sales where represented by european industrial packaging net sales in 2007?\" So answer 20.6% or 20.55%. Use 20.6%.",
+ "raw_content": "<answer>20.6%</answer>",
+ "usage": {
+  "prompt_tokens": 132478,
+  "completion_tokens": 209,
+  "total_tokens": 132687,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.04,
+ "answer_tag_found": true,
+ "docfinqa_row": 73
+}

@@ -1,0 +1,72 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0119",
+ "format": "markdown_pdf_poppler",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what was the percentage change in the minority interest from 2005 to 2006",
+ "gold": "-32.4%",
+ "finqa_id": "SNA/2007/page_69.pdf-3",
+ "source_page": "page_69",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_poppler/SNA_2007_0001104659-08-011401.md",
+ "doc_chars": 416845,
+ "prompt_chars": 417007,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 416845,
+ "original_chars": 416845,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 79065,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 997,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "5.7143%",
+ "reasoning": "We need percentage change in minority interest from 2005 to 2006. The line \"Minority interests and equity earnings (loss), net of tax\" is given. But question says \"minority interest\" specifically. In the financial statements, there is a breakdown in Note 1: Minority interests of $3.7 million in 2006 and $3.5 million in 2005. Also the line \"Minority interests and equity earnings (loss), net of tax\" is -3.7 in 2006 and -1.4 in 2005. But that includes equity earnings. The question asks \"minority interest\" - likely the minority interests component. From Note 1: \"Minority interests of $3.7 million in 2006 and $3.5 million in 2005\" (they are negative? Actually the table shows Minority interests $ (4.9) in 2007, (3.7) in 2006, (3.5) in 2005). So minority interest (expense) is -3.7 in 2006 and -3.5 in 2005. Percentage change from 2005 to 2006: (3.7 - 3.5)/3.5 = 0.2/3.5 = 0.057142857... = 5.7142857% increase. But careful: the values are negative, but the magnitude change is 5.7% increase in expense. The question likely expects the percentage change in the minority interest amount. Since they are negative, the change from -3.5 to -3.7 is an increase in magnitude of 5.7%. Alternatively, if using the line \"Minority interests and equity earnings (loss), net of tax\" which is -3.7 and -1.4, that would be a huge change. But the question specifically says \"minority interest\" not \"minority interests and equity earnings\". So use the minority interests component from Note 1. Also the consolidated statement of earnings line is \"Minority interests and equity earnings (loss), net of tax\" - but the question says \"minority interest\" singular. So I'll use the Note 1 breakdown.\n\nEvidence: 3.7 | Minority interests (Note 1) ; 3.5 | Minority interests (Note 1) . Compute: (3.7 - 3.5)/3.5 = 0.057142857... = 5.7142857%. So answer 5.7% (or 5.71%). The question asks \"percentage change\" - likely as a percentage. I'll give 5.7% or 5.71%. I'll put 5.7% inside answer. But the instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for percentage change, so include % sign? It says \"no explanation or units unless the question asks for them\" - percentage is a unit? Typically they want the number. I'll put 5.7% or 5.71. I'll compute exactly: 0.2/3.5 = 0.057142857... = 5.7142857%. I'll put 5.7% or 5.71%. I'll put 5.7% as a rounded value. But to be precise, 5.7142857%. I'll put 5.7% inside answer. However, the benchmark might expect a number without %? The instruction says \"containing only the value itself\" - so maybe just 5.7. But the question asks \"percentage change\" so the value is a percentage. I'll put 5.7% inside answer. Let me check if there is any other interpretation. The line \"Minority interests and equity earnings (loss), net of tax\" is -3.7 in 2006 and -1.4 in 2005. That would be a change of -2.3, percentage change = (-3.7 - (-1.4))/|-1.4| = (-2.3)/1.4 = -164.3%? That seems unlikely. The question specifically says \"minority interest\" not \"minority interests and equity earnings\". So I'll use the Note 1 figure.\n\nThus answer: 5.7% (or 5.71%). I'll put 5.7% inside answer.",
+ "raw_content": "<evidence>3.7 | Minority interests (Note 1)\n3.5 | Minority interests (Note 1)</evidence>\n<program>divide(subtract(3.7, 3.5), 3.5)</program>\n<answer>5.7%</answer>",
+ "usage": {
+  "prompt_tokens": 79371,
+  "completion_tokens": 997,
+  "total_tokens": 80368,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 12.33,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "3.7",
+   "element": "Minority interests (Note 1)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "3.5",
+   "element": "Minority interests (Note 1)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(3.7, 3.5), 3.5)",
+ "answer_model": "5.7%",
+ "program_value": 0.0571428571428572,
+ "docfinqa_row": 119
+}

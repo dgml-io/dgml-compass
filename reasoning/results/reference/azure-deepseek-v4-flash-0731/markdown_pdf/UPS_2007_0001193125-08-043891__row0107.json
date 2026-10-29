@@ -1,0 +1,53 @@
+{
+ "id": "UPS_2007_0001193125-08-043891__row0107",
+ "format": "markdown_pdf",
+ "key": "UPS_2007_0001193125-08-043891",
+ "question": "what is the total cash inflow from the stock purchases of employees in 2007 , ( in millions ) ?",
+ "gold": "115.6",
+ "finqa_id": "UPS/2007/page_98.pdf-1",
+ "source_page": "page_98",
+ "ticker": "UPS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf/UPS_2007_0001193125-08-043891.md",
+ "doc_chars": 325407,
+ "prompt_chars": 325591,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 325407,
+ "original_chars": 325407,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 76236,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 722,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "115.56",
+ "reasoning": "We need answer: total cash inflow from stock purchases of employees in 2007, in millions. From document: \"Issuances of common stock\" in financing activities 2007 = $174 million. Also \"We received cash of $52, $30, and $21 million during 2007, 2006, and 2005, respectively, from option holders resulting from the exercise of stock options.\" But question \"stock purchases of employees\" could refer to employee stock purchase plan? The cash inflow from issuances of common stock includes stock award plans, option exercises, employee stock purchase plan. The document says \"Issuances of common stock\" in cash flow = 174. Also in Note 11: \"Employees purchased 1.8, 1.9, and 2.0 million shares at average prices of $64.20, $66.64, and $64.54 per share during 2007, 2006, and 2005, respectively.\" That would be 1.8 * 64.20 = 115.56 million. But question \"total cash inflow from the stock purchases of employees in 2007\" - likely refers to employee stock purchase plan? The cash inflow from employee stock purchases is the amount paid by employees for shares under the discounted employee stock purchase plan. That is 1.8 million shares * $64.20 = $115.56 million. But the cash flow statement \"Issuances of common stock\" includes all issuances, including option exercises and stock awards. The question specifically \"stock purchases of employees\" - could be the employee stock purchase plan. The document says \"Employees purchased 1.8, 1.9, and 2.0 million shares at average prices of $64.20, $66.64, and $64.54 per share during 2007, 2006, and 2005, respectively.\" So cash inflow = 1.8 * 64.20 = 115.56 million. But note that the purchase price is 90% of market, but the cash paid is the purchase price. So answer 115.56. However, the question says \"total cash inflow from the stock purchases of employees in 2007, (in millions)\" - could also be \"Issuances of common stock\" line in cash flow = 174. But that includes option exercises and other. The phrase \"stock purchases of employees\" likely refers to employee stock purchase plan. Let's check: In Note 11, \"Discounted Employee Stock Purchase Plan\" section: \"Employees purchased 1.8, 1.9, and 2.0 million shares at average prices of $64.20, $66.64, and $64.54 per share during 2007, 2006, and 2005, respectively.\" So cash inflow from that plan is 1.8*64.20 = 115.56. The question asks \"total cash inflow from the stock purchases of employees in 2007\" - that is exactly that. So answer 115.56. But the question says \"in millions\" so 115.56. However, the cash flow statement shows \"Issuances of common stock\" 174, which includes employee stock purchases, option exercises, and stock awards. But the question specifically \"stock purchases of employees\" - likely the employee stock purchase plan. I'll answer 115.56.",
+ "raw_content": "<answer>115.56</answer>",
+ "usage": {
+  "prompt_tokens": 76386,
+  "completion_tokens": 722,
+  "total_tokens": 77108,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 73728
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.31,
+ "answer_tag_found": true,
+ "docfinqa_row": 107
+}

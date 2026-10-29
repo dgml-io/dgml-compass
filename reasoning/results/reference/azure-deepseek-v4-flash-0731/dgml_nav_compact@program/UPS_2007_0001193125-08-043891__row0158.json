@@ -1,0 +1,72 @@
+{
+ "id": "UPS_2007_0001193125-08-043891__row0158",
+ "key": "UPS_2007_0001193125-08-043891",
+ "question": "what is the average expected dividend per share in 2007?",
+ "gold": "1.4",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "UPS_2007_0001193125-08-043891.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/PartII/SelectedFinancialData",
+  "/chunk/MarketForCommonEquity",
+  "/chunk/MarketForCommonEquity/DividendPolicy",
+  "/chunk/PartII/SelectedFinancialData/SelectedFinancialData/DividendPerShare",
+  "/chunk/MarketForCommonEquity/QuarterlyStockPrice"
+ ],
+ "r1_reasoning_chars": 18246,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 19625,
+  "completion_tokens": 4550,
+  "total_tokens": 24175,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/PartII/SelectedFinancialData",
+  "/chunk/MarketForCommonEquity",
+  "/chunk/MarketForCommonEquity/DividendPolicy",
+  "/chunk/PartII/SelectedFinancialData/SelectedFinancialData/DividendPerShare",
+  "/chunk/MarketForCommonEquity/QuarterlyStockPrice"
+ ],
+ "content_chars": 164999,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "1.68",
+ "reasoning": "We need answer: average expected dividend per share in 2007. The document gives dividends declared per share for 2007 as $1.68 in selected financial data. Also quarterly dividends declared in 2007: 0.42 each quarter, sum = 1.68. The question asks \"average expected dividend per share in 2007\" - likely the annual dividend per share declared in 2007 is $1.68. \"average expected\" might be ambiguous but likely they want the per-share dividend for 2007. The selected financial data says \"Dividends declared per share | $ 1.68\" for 2007. So answer 1.68.\n\nNeed evidence: list figures used. We'll cite $ 1.68 from DividendPerShare. Also quarterly 0.42 maybe not needed. The question says \"average expected dividend per share\" - maybe they want average of quarterly dividends? But quarterly are all 0.42, average 0.42. However \"dividend per share in 2007\" usually annual total. The phrase \"average expected\" might be from a different context? Let's read question: \"what is the average expected dividend per share in 2007?\" Could be asking for the average of expected dividends? The document has \"Dividends declared per share\" for 2007 = $1.68. Also quarterly dividends declared each 0.42. The average of quarterly dividends is 0.42, but that's not \"expected dividend per share\" - the annual total is 1.68. The word \"average\" might be a distractor. The selected financial data explicitly gives \"Dividends declared per share\" for 2007 as $1.68. So answer 1.68.\n\nWe'll provide evidence: $ 1.68 | DividendPerShare (Selected Financial Data). Program: 1.68.\n\nNeed final answer inside <answer>1.68</answer>.",
+ "raw_content": "<evidence>$ 1.68 | DividendPerShare (Selected Financial Data)</evidence>\n<program>1.68</program>\n<answer>1.68</answer>",
+ "r2_usage": {
+  "prompt_tokens": 38296,
+  "completion_tokens": 441,
+  "total_tokens": 38737,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 1.68",
+   "element": "DividendPerShare (Selected Financial Data)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "1.68",
+ "answer_model": "1.68",
+ "program_value": 1.68,
+ "elapsed_s": 25.97,
+ "outline_source": "UPS_2007_0001193125-08-043891.outline.txt",
+ "outline_chars": 77634
+}

@@ -1,0 +1,50 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0248",
+ "format": "markdown_pdf_plumber",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "what is the net change in the balance of liability related to employee separations during 2006?",
+ "gold": "-13636",
+ "finqa_id": "AMT/2008/page_107.pdf-4",
+ "source_page": "page_107",
+ "ticker": "AMT",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_plumber/AMT_2008_0001193125-09-039177.md",
+ "doc_chars": 448607,
+ "prompt_chars": 448791,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 448607,
+ "original_chars": 448607,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 105711,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 485,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-13,636",
+ "reasoning": "We need to find the net change in the balance of liability related to employee separations during 2006. From the document, there is a table in note 14 about merger related expense. It shows activity for employee separations. The table has columns: Liability as of Dec 31, 2005, 2006 Expense, 2006 Cash Payments, 2006 Other, Liability as of Dec 31, 2006, etc. The net change during 2006 would be the change from Dec 31, 2005 to Dec 31, 2006. The table shows: Liability as of Dec 31, 2005: $20,963 (in thousands). Then 2006 Expense: $496, 2006 Cash Payments: $(12,389), 2006 Other: $(1,743). So the ending balance for 2006 is computed as 20,963 + 496 - 12,389 - 1,743 = 7,327. That matches the table's \"Liability as of Dec 31, 2006\" which is $7,327. So the net change is 7,327 - 20,963 = -13,636 (in thousands). But the question asks \"net change in the balance of liability related to employee separations during 2006?\" So it's the change, which is -13,636 thousand, or -$13.636 million. But the answer should be the value. The question likely expects the net change, which is a decrease. We can give the number in thousands or as a dollar amount. The document uses thousands. So net change = -13,636 (in thousands). But the question might want the absolute change? It says \"net change\" so it's the difference. We'll provide -13,636. However, the instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So we put -13,636. But check if it's in thousands? The table is in thousands. So we can put -13,636. Alternatively, if they want the change in balance, it's a decrease of 13,636 thousand. I'll put -13,636.",
+ "raw_content": "<answer>-13,636</answer>",
+ "usage": {
+  "prompt_tokens": 105860,
+  "completion_tokens": 485,
+  "total_tokens": 106345,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 18.38,
+ "answer_tag_found": true,
+ "docfinqa_row": 248
+}

@@ -1,0 +1,85 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0475",
+ "format": "dgml",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what is the net change in the total investment from 2010 to 2011?",
+ "gold": "17720",
+ "finqa_id": "ADI/2011/page_81.pdf-2",
+ "source_page": "page_81",
+ "ticker": "ADI",
+ "fiscal_year": "2011",
+ "source_file": "data/docs/dgml/ADI_2011_0000950123-11-099928.dgml.xml",
+ "doc_chars": 682519,
+ "prompt_chars": 682673,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 682519,
+ "original_chars": 682519,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 156936,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 967,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "904694",
+ "reasoning": "We need answer question: \"what is the net change in the total investment from 2010 to 2011?\" Need identify \"total investment\" likely cash and cash equivalents and short-term investments? Or total investments? Need parse. The document has cash and cash equivalents and short-term investments. \"total investment\" might refer to \"cash and cash equivalents and short-term investments\" total. At October 29, 2011: cash and cash equivalents $1,405,100 and short-term investments $2,187,362, total $3,592,462 (thousands). At October 30, 2010: cash $1,070,000 and short-term investments $1,617,768, total $2,687,768. Net change = 3,592,462 - 2,687,768 = 904,694 (thousands). But question says \"total investment\" maybe \"total investments\" in balance sheet? There is \"Short-term investments\" and \"Other investments\" and \"Deferred compensation plan investments\". But likely \"total investment\" means cash and cash equivalents and short-term investments? The document says \"principal source of liquidity was $3,592.5 million of cash and cash equivalents and short-term investments.\" Also \"At October 29, 2011, cash and cash equivalents totaled $1,405.1 million.\" The question \"net change in the total investment from 2010 to 2011\" might refer to \"total investment\" as in \"cash and cash equivalents and short-term investments\" combined. Need compute.\n\nLet's find exact figures. Balance sheet: Cash and cash equivalents 2011 $1,405,100; 2010 $1,070,000. Short-term investments 2011 $2,187,362; 2010 $1,617,768. Total 2011 = 3,592,462; 2010 = 2,687,768. Difference = 904,694 (thousands). Alternatively \"total investment\" might be \"total assets\" no. Or \"total investments\" in fair value table? There is \"Total assets measured at fair value\" etc. But question likely from financial data: \"net change in the total investment\" maybe \"cash and cash equivalents and short-term investments\" because they call it \"principal source of liquidity\". The question wording \"total investment\" singular maybe \"total investment\" in \"cash and cash equivalents and short-term investments\" as a combined figure. Need answer in dollars? The document amounts in thousands. The question asks \"net change in the total investment from 2010 to 2011\" - likely in thousands? We should give value. Could be $904,694 thousand = $904.7 million. But need exact. Let's compute: 1,405,100 + 2,187,362 = 3,592,462. 1,070,000 + 1,617,768 = 2,687,768. Difference = 904,694. So answer 904,694 (thousands). But if they want in millions, 904.7? The question doesn't specify units. The document uses thousands. We'll give 904,694.\n\nNeed evidence: list figures used. Cash and cash equivalents 2011 $1,405,100; 2010 $1,070,000; Short-term investments 2011 $2,187,362; 2010 $1,617,768. Program: subtract(add(1405100, 2187362), add(1070000, 1617768)) = 904694.\n\nLet's ensure no other \"total investment\" definition. There is \"Total assets measured at fair value\" but not. There is \"cash and cash equivalents and short-term investments\" in MD&A: $3,592.5 million at 2011, and $1,170.5 held in US. For 2010, not given directly but balance sheet. So yes.\n\nFinal answer inside <answer>904,694</answer> (thousands). But maybe they want \"net change\" as increase. We'll put 904,694.",
+ "raw_content": "<evidence>\n$1,405,100 | Cash and cash equivalents 2011\n$1,070,000 | Cash and cash equivalents 2010\n$2,187,362 | Short-term investments 2011\n$1,617,768 | Short-term investments 2010\n</evidence>\n<program>subtract(add(1405100, 2187362), add(1070000, 1617768))</program>\n<answer>904,694</answer>",
+ "usage": {
+  "prompt_tokens": 157241,
+  "completion_tokens": 967,
+  "total_tokens": 158208,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 12.28,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$1,405,100",
+   "element": "Cash and cash equivalents 2011",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$1,070,000",
+   "element": "Cash and cash equivalents 2010",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$2,187,362",
+   "element": "Short-term investments 2011",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$1,617,768",
+   "element": "Short-term investments 2010",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(add(1405100, 2187362), add(1070000, 1617768))",
+ "answer_model": "904,694",
+ "program_value": 904694.0,
+ "docfinqa_row": 475
+}

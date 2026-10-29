@@ -1,0 +1,72 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0372",
+ "format": "markdown_pdf_plumber",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "what percentage of contractual obligations for future payments under existing debt and lease commitments and purchase obligations at december 31 , 2009 due in 2011 are maturities of long-term debt?",
+ "gold": "41%",
+ "finqa_id": "IP/2009/page_45.pdf-1",
+ "source_page": "page_45",
+ "ticker": "IP",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/markdown_pdf_plumber/IP_2009_0001193125-10-040916.md",
+ "doc_chars": 489910,
+ "prompt_chars": 490196,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 489910,
+ "original_chars": 489910,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 119893,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 135,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "40.7960%",
+ "reasoning": "We need answer percentage of contractual obligations due in 2011 that are maturities of long-term debt. From table: Maturities of long-term debt (a) 2011 $574. Total (d) 2011 $1,407. Percentage = 574/1407 = 40.795...% ≈ 40.8%. Need evidence figures.",
+ "raw_content": "<evidence>\n574 | Maturities of long-term debt (a) 2011\n1,407 | Total (d) 2011\n</evidence>\n\n<program>divide(574, 1407)</program>\n\n<answer>40.8%</answer>",
+ "usage": {
+  "prompt_tokens": 120218,
+  "completion_tokens": 135,
+  "total_tokens": 120353,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 14.31,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "574",
+   "element": "Maturities of long-term debt (a) 2011",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1,407",
+   "element": "Total (d) 2011",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(574, 1407)",
+ "answer_model": "40.8%",
+ "program_value": 0.4079601990049751,
+ "docfinqa_row": 372
+}

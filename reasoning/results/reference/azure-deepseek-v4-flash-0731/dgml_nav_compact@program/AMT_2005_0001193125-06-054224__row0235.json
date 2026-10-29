@@ -1,0 +1,74 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0235",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what was the percentage of the anticipated approximate tax refund in 2003 based on the nol $ 90.0 million .",
+ "gold": "23.7%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "AMT_2005_0001193125-06-054224.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/ManagementDiscussionAndAnalysis/ResultsOfOperations/IncomeTaxProvisionDiscussion",
+  "/chunk/ManagementDiscussionAndAnalysis/ResultsOfOperations/IncomeTaxProvisionDiscussion/FederalTaxRefundClaims",
+  "/chunk/ManagementDiscussionAndAnalysis/ResultsOfOperations/IncomeTaxProvisionDiscussion/EffectiveTaxRateDrivers"
+ ],
+ "r1_reasoning_chars": 7324,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 28608,
+  "completion_tokens": 1914,
+  "total_tokens": 30522,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ManagementDiscussionAndAnalysis/ResultsOfOperations/IncomeTaxProvisionDiscussion",
+  "/chunk/ManagementDiscussionAndAnalysis/ResultsOfOperations/IncomeTaxProvisionDiscussion/FederalTaxRefundClaims",
+  "/chunk/ManagementDiscussionAndAnalysis/ResultsOfOperations/IncomeTaxProvisionDiscussion/EffectiveTaxRateDrivers"
+ ],
+ "content_chars": 11436,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "23.684211",
+ "reasoning": "We need answer: percentage of anticipated approximate tax refund in 2003 based on the NOL $90.0 million. Need parse. Document: \"In June 2003 and October 2003, we filed federal income tax refund claims with the IRS relating to the carry back of $380.0 million of net operating losses generated prior to 2003, of which we initially anticipated receiving approximately $90.0 million.\" So percentage = 90.0 / 380.0 * 100 = 23.6842...%. Need answer. Evidence figures: $90.0 million, $380.0 million. Program: multiply(divide(90.0, 380.0), 100). But careful: question \"percentage of the anticipated approximate tax refund in 2003 based on the nol $ 90.0 million\" means what percentage of NOL was the anticipated refund? Yes 90/380. Answer 23.68% maybe. Need final inside <answer>23.68%</answer>? The question asks \"what was the percentage\" so include %? Usually value only. But instructions: \"containing only the value itself with no explanation or units unless the question asks for them.\" It asks percentage, so include %? Typically answer numeric with % sign. I'll put 23.68%.",
+ "raw_content": "<evidence>\n$90.0 million | MonetaryAmount\n$380.0 million | MonetaryAmount\n</evidence>\n<program>multiply(divide(90.0, 380.0), 100)</program>\n<answer>23.68%</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2958,
+  "completion_tokens": 333,
+  "total_tokens": 3291,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$90.0 million",
+   "element": "MonetaryAmount",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$380.0 million",
+   "element": "MonetaryAmount",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(90.0, 380.0), 100)",
+ "answer_model": "23.68%",
+ "program_value": 23.684210526315788,
+ "elapsed_s": 10.06,
+ "outline_source": "AMT_2005_0001193125-06-054224.outline.txt",
+ "outline_chars": 112419
+}

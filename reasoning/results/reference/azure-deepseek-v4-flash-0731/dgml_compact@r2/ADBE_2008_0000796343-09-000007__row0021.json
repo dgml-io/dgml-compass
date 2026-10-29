@@ -1,0 +1,53 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0021",
+ "format": "dgml_compact",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "what is the percentage change in the the gross liability for unrecognized tax benefits during 2008 compare to 2007?",
+ "gold": "-30.9%",
+ "finqa_id": "ADBE/2008/page_89.pdf-2",
+ "source_page": "page_89",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml_compact/ADBE_2008_0000796343-09-000007.dgml.txt",
+ "doc_chars": 545889,
+ "prompt_chars": 546093,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 545889,
+ "original_chars": 545889,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 114389,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 186,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-30.85%",
+ "reasoning": "We need to find the gross liability for unrecognized tax benefits at end of 2007 and 2008. From the document: In Note 8, under FIN 48 rollforward: Beginning balance as of December 1, 2007 was $201,808 (in thousands). Ending balance as of November 28, 2008 was $139,549. So the change is (139,549 - 201,808)/201,808 = -62,259/201,808 ≈ -0.3085, so -30.85%. The question asks \"percentage change in the gross liability for unrecognized tax benefits during 2008 compare to 2007?\" So it's the change from beginning to end of 2008. So answer: -30.85% (or approximately -31%). We'll put the value.",
+ "raw_content": "<answer>-30.85%</answer>",
+ "usage": {
+  "prompt_tokens": 114542,
+  "completion_tokens": 186,
+  "total_tokens": 114728,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 114432
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.05,
+ "answer_tag_found": true,
+ "docfinqa_row": 21
+}

@@ -1,0 +1,50 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0539",
+ "format": "markdown_pdf_rules",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "what would 2014 capital expenditures have been without the early buyout of the operating lease of the headquarters , in millions?",
+ "gold": "4510",
+ "finqa_id": "UNP/2014/page_35.pdf-1",
+ "source_page": "page_35",
+ "ticker": "UNP",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf_rules/UNP_2014_0001193125-15-037518.md",
+ "doc_chars": 326124,
+ "prompt_chars": 326342,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 326124,
+ "original_chars": 326124,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 75178,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 174,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "4085",
+ "reasoning": "We need answer. Need find 2014 capital expenditures and early buyout of headquarters operating lease. Document: cash capital investments total $4,346 million in 2014. Technology and other includes early buyout of headquarters building operating lease. In investing activities discussion: \"Higher capital investments, including the early buyout of the long-term operating lease of our headquarters building for approximately $261 million, drove the increase...\" Also \"Capital investments in 2014 also included $99 million for the early buyout of locomotives and freight cars under long-term operating leases\". Question: \"what would 2014 capital expenditures have been without the early buyout of the operating lease of the headquarters , in millions?\" So subtract $261 million from $4,346 = $4,085 million. Need answer only value.",
+ "raw_content": "<answer>4085</answer>",
+ "usage": {
+  "prompt_tokens": 75331,
+  "completion_tokens": 174,
+  "total_tokens": 75505,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.63,
+ "answer_tag_found": true,
+ "docfinqa_row": 539
+}

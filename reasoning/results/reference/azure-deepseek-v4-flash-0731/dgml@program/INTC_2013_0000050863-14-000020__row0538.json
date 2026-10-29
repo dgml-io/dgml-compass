@@ -1,0 +1,67 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0538",
+ "format": "dgml",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "what was the percentage change in diluted earnings per common share december 29 2012 and december 28 2013?",
+ "gold": "-11%",
+ "finqa_id": "INTC/2013/page_33.pdf-3",
+ "source_page": "page_33",
+ "ticker": "INTC",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/dgml/INTC_2013_0000050863-14-000020.dgml.xml",
+ "doc_chars": 868384,
+ "prompt_chars": 868579,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 868384,
+ "original_chars": 868384,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 202403,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 300,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-11.2676%",
+ "reasoning": "We need answer percentage change in diluted EPS from Dec 29 2012 to Dec 28 2013. From financial data: diluted EPS 2013 $1.89, 2012 $2.13. Change = (1.89-2.13)/2.13 = -0.24/2.13 = -0.112676... = -11.27%. Need answer as percentage change. Probably -11.3% or -11.27%. The question asks \"what was the percentage change in diluted earnings per common share december 29 2012 and december 28 2013?\" So compute. Evidence: $1.89 and $2.13. Program: divide(subtract(1.89, 2.13), 2.13). Answer -11.2676...%. Put inside <answer>-11.3%</answer> or -11.27%. Need exact? The benchmark executes program, so answer should be value. Probably -11.27% or -11.3%. We'll give -11.27%.",
+ "raw_content": "<evidence>$ 1.89 | Diluted earnings per common share 2013</evidence>\n<evidence>$ 2.13 | Diluted earnings per common share 2012</evidence>\n<program>divide(subtract(1.89, 2.13), 2.13)</program>\n<answer>-11.27%</answer>",
+ "usage": {
+  "prompt_tokens": 202715,
+  "completion_tokens": 300,
+  "total_tokens": 203015,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 202496
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.43,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 1.89",
+   "element": "Diluted earnings per common share 2013",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(1.89, 2.13), 2.13)",
+ "answer_model": "-11.27%",
+ "program_value": -0.11267605633802817,
+ "docfinqa_row": 538
+}

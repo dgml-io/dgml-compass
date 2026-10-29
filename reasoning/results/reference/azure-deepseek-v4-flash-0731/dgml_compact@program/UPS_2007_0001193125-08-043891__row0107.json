@@ -1,0 +1,66 @@
+{
+ "id": "UPS_2007_0001193125-08-043891__row0107",
+ "format": "dgml_compact",
+ "key": "UPS_2007_0001193125-08-043891",
+ "question": "what is the total cash inflow from the stock purchases of employees in 2007 , ( in millions ) ?",
+ "gold": "115.6",
+ "finqa_id": "UPS/2007/page_98.pdf-1",
+ "source_page": "page_98",
+ "ticker": "UPS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml_compact/UPS_2007_0001193125-08-043891.dgml.txt",
+ "doc_chars": 424830,
+ "prompt_chars": 425014,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 424830,
+ "original_chars": 424830,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93585,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 472,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "174",
+ "reasoning": "We need answer: total cash inflow from stock purchases of employees in 2007, in millions. Need find figures. In document, cash flow statement: \"Issuances of common stock\" 174 in 2007. Also \"Common stock issuances\" in equity rollforward? But cash inflow from employee stock purchases likely \"Issuances of common stock\" in financing activities = $174 million. Also \"We received cash of $52, $30, and $21 million during 2007, 2006, and 2005, respectively, from option holders resulting from the exercise of stock options.\" And employee stock purchase plan: employees purchased 1.8 million shares at average price $64.20 = ~$115.6 million. But question \"total cash inflow from the stock purchases of employees in 2007\" might refer to \"Issuances of common stock\" line in cash flow statement, which includes stock option exercises and employee stock purchase plan? Let's examine. The cash flow statement line \"Issuances of common stock\" 174, 164, 164. That is cash inflow from issuing common stock, likely from employee stock plans. The question says \"stock purchases of employees\" - could be \"Issuances of common stock\" in financing activities. Also note \"We received cash of $52 million from option holders\" and employee stock purchase plan purchases ~1.8 million shares at $64.20 = $115.56 million, sum ~$167.56, close to 174 but not exact. The cash flow statement line is 174. The question asks \"total cash inflow from the stock purchases of employees in 2007, (in millions)\" - likely the line \"Issuances of common stock\" = 174. Need answer 174. Let's verify. In cash flow statement: \"Issuances of common stock | 174 | 164 | 164\". That is the cash inflow from employee stock purchases. So answer 174.\n\nNeed provide evidence and program. Evidence: value 174 | element \"Issuances of common stock\" (in cash flow statement). Program: 174.",
+ "raw_content": "<evidence>174 | Issuances of common stock</evidence>\n<program>174</program>\n<answer>174</answer>",
+ "usage": {
+  "prompt_tokens": 93894,
+  "completion_tokens": 472,
+  "total_tokens": 94366,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 12.26,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "174",
+   "element": "Issuances of common stock",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "174",
+ "answer_model": "174",
+ "program_value": 174.0,
+ "docfinqa_row": 107
+}

@@ -1,0 +1,72 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0157",
+ "format": "markdown_pdf_rules",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "what percentage of major facilities by square footage are owned as of december 28 , 2013?",
+ "gold": "85%",
+ "finqa_id": "INTC/2013/page_29.pdf-1",
+ "source_page": "page_29",
+ "ticker": "INTC",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/markdown_pdf_rules/INTC_2013_0000050863-14-000020.md",
+ "doc_chars": 419421,
+ "prompt_chars": 419599,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 419421,
+ "original_chars": 419421,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 94700,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 117,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "84.881603",
+ "reasoning": "We need percentage of major facilities by square footage owned. Total owned 46.6, total 54.9. Percentage = 46.6/54.9*100. Compute. 46.6/54.9 = 0.8488... ~84.9%. Use figures.",
+ "raw_content": "<evidence>46.6 | Owned facilities total\n54.9 | Total facilities</evidence>\n<program>multiply(divide(46.6, 54.9), 100)</program>\n<answer>84.9%</answer>",
+ "usage": {
+  "prompt_tokens": 95007,
+  "completion_tokens": 117,
+  "total_tokens": 95124,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.18,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "46.6",
+   "element": "Owned facilities total",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "54.9",
+   "element": "Total facilities",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(46.6, 54.9), 100)",
+ "answer_model": "84.9%",
+ "program_value": 84.8816029143898,
+ "docfinqa_row": 157
+}

@@ -1,0 +1,50 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0069",
+ "format": "markdown_pdf",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what portion of the total investment is allocated to mutual funds in 2011?",
+ "gold": "65.1%",
+ "finqa_id": "ADI/2011/page_81.pdf-1",
+ "source_page": "page_81",
+ "ticker": "ADI",
+ "fiscal_year": "2011",
+ "source_file": "data/docs/markdown_pdf/ADI_2011_0000950123-11-099928.md",
+ "doc_chars": 351133,
+ "prompt_chars": 351296,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 351133,
+ "original_chars": 351133,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 80142,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 179,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "34.9%",
+ "reasoning": "We need answer: \"what portion of the total investment is allocated to mutual funds in 2011?\" Need find relevant figures. Document has deferred compensation plan investments: mutual funds $9,223, total $26,410 in 2011. Also other investments? \"total investment\" likely deferred compensation plan investments? The question says \"total investment\" maybe from table: Deferred Compensation Plan investments: money market funds $17,187, mutual funds $9,223, total $26,410. Portion = 9,223 / 26,410 = 0.3492... = 34.92%. But check if \"total investment\" refers to something else? There is also \"cash and cash equivalents and short-term investments\" but mutual funds only in deferred comp. So answer 34.9%.",
+ "raw_content": "<answer>34.9%</answer>",
+ "usage": {
+  "prompt_tokens": 80286,
+  "completion_tokens": 179,
+  "total_tokens": 80465,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.18,
+ "answer_tag_found": true,
+ "docfinqa_row": 69
+}

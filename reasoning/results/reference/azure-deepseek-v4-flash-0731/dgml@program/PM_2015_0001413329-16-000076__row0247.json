@@ -1,0 +1,74 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0247",
+ "format": "dgml",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the percentage increase in total accumulated other comprehensive losses from 2013 to 2014?",
+ "gold": "62.9%",
+ "finqa_id": "PM/2015/page_127.pdf-2",
+ "source_page": "page_127",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml/PM_2015_0001413329-16-000076.dgml.xml",
+ "doc_chars": 987218,
+ "prompt_chars": 987405,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 987218,
+ "original_chars": 987218,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 236868,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 576,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "62.9117%",
+ "reasoning": "We need percentage increase in total accumulated other comprehensive losses from 2013 to 2014. From Note 17: total accumulated other comprehensive losses: 2013: (4,190), 2014: (6,826). Percentage increase? Since it's a loss (negative), \"increase\" could mean magnitude increase. Typically percentage change = (new - old)/|old| * 100. Old = -4,190, new = -6,826. Change = -6,826 - (-4,190) = -2,636. Magnitude increase = 2,636 / 4,190 = 0.629... = 62.9%. Or if they ask percentage increase in total accumulated other comprehensive losses, they might mean the absolute value increase. Let's compute: 2636/4190 = 0.6291... = 62.9%. Alternatively, if they treat as negative numbers, percentage change = (new-old)/old = (-2636)/(-4190) = 0.6291 = 62.9% increase (since both negative, the ratio positive). So answer 62.9%. Need evidence: values from Note 17 table. Also maybe from balance sheet? But Note 17 gives exact. Use those.\n\nEvidence: -4,190 | AccumulatedOtherComprehensiveLoss 2013; -6,826 | AccumulatedOtherComprehensiveLoss 2014.\n\nProgram: divide(subtract(-6826, -4190), -4190) but careful with signs. Actually percentage increase = (new - old)/|old| * 100. Using absolute value denominator. But program should use figures as printed. We can do divide(subtract(-6826, -4190), -4190) = (-2636)/(-4190) = 0.6291. That's correct because both negative. So program: divide(subtract(-6826, -4190), -4190). Then answer as percentage 62.9%. But the question asks \"percentage increase\" so we output 62.9% or 62.9? Usually include % sign? The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for percentage increase, so include %? It says \"unless the question asks for them\" - it asks for percentage, so include % sign. I'll put 62.9%.",
+ "raw_content": "<evidence>\n-4,190 | AccumulatedOtherComprehensiveLoss 2013\n-6,826 | AccumulatedOtherComprehensiveLoss 2014\n</evidence>\n<program>\ndivide(subtract(-6826, -4190), -4190)\n</program>\n<answer>62.9%</answer>",
+ "usage": {
+  "prompt_tokens": 237175,
+  "completion_tokens": 576,
+  "total_tokens": 237751,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 237056
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.31,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "4,190",
+   "element": "AccumulatedOtherComprehensiveLoss 2013",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "6,826",
+   "element": "AccumulatedOtherComprehensiveLoss 2014",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(-6826, -4190), -4190)",
+ "answer_model": "62.9%",
+ "program_value": 0.6291169451073986,
+ "docfinqa_row": 247
+}

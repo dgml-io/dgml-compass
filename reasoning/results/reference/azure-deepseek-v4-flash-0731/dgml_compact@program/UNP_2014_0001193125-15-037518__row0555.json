@@ -1,0 +1,72 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0555",
+ "format": "dgml_compact",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "if the fuel surcharge grows by the same rate as in 2014what would expected 2015 revenues be in billions?",
+ "gold": "3.0",
+ "finqa_id": "UNP/2014/page_25.pdf-1",
+ "source_page": "page_25",
+ "ticker": "UNP",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/dgml_compact/UNP_2014_0001193125-15-037518.dgml.txt",
+ "doc_chars": 412541,
+ "prompt_chars": 412734,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 412541,
+ "original_chars": 412541,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 89337,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 284,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "2.968",
+ "reasoning": "We need answer question: \"if the fuel surcharge grows by the same rate as in 2014 what would expected 2015 revenues be in billions?\" Need find fuel surcharge revenue 2014 and growth rate. Document: fuel surcharge revenue $2.8 billion in 2014, $2.6 billion in 2013, $2.6 billion in 2012. Growth rate 2014 vs 2013: 6% (stated). So expected 2015 = 2.8 * 1.06 = 2.968 billion. Question asks \"expected 2015 revenues\" maybe fuel surcharge revenues? Wording: \"if the fuel surcharge grows by the same rate as in 2014 what would expected 2015 revenues be in billions?\" Likely fuel surcharge revenues. Use 2.8 * 1.06 = 2.968. Need evidence: $2.8 billion, 6%. Also maybe 2013 $2.6. Answer 2.968.",
+ "raw_content": "<evidence>\n$2.8 billion | FinancialAmount (fuel surcharge revenue 2014)\n6% | PercentageChange (fuel surcharge increase 2014 vs 2013)\n</evidence>\n<program>multiply(2.8, 1.06)</program>\n<answer>2.968</answer>",
+ "usage": {
+  "prompt_tokens": 89650,
+  "completion_tokens": 284,
+  "total_tokens": 89934,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 89600
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.4,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$2.8 billion",
+   "element": "FinancialAmount (fuel surcharge revenue 2014)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6%",
+   "element": "PercentageChange (fuel surcharge increase 2014 vs 2013)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(2.8, 1.06)",
+ "answer_model": "2.968",
+ "program_value": 2.968,
+ "docfinqa_row": 555
+}

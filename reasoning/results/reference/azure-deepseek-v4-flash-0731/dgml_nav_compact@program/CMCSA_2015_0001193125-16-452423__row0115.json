@@ -1,0 +1,67 @@
+{
+ "id": "CMCSA_2015_0001193125-16-452423__row0115",
+ "key": "CMCSA_2015_0001193125-16-452423",
+ "question": "what was the percentage cable distribution systems capital expenditures of the capital expenditures incurred in cable communications segment capital expenditures in 2015?",
+ "gold": "34%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "CMCSA_2015_0001193125-16-452423.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/CableNetworksOperatingCostsDiscussion/LiquidityAndCapitalResources/InvestingActivities/CapitalExpenditures/CableCapitalExpenditures"
+ ],
+ "r1_reasoning_chars": 4096,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 34069,
+  "completion_tokens": 938,
+  "total_tokens": 35007,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/CableNetworksOperatingCostsDiscussion/LiquidityAndCapitalResources/InvestingActivities/CapitalExpenditures/CableCapitalExpenditures"
+ ],
+ "content_chars": 3385,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "34.4612%",
+ "reasoning": "We need percentage: cable distribution system capex / total cable communications segment capex in 2015. Figures: 2,424 and 7,034. Compute 2424/7034 = 0.3446... = 34.46%. Need answer likely 34.5% or 34.46%. Use exact division.",
+ "raw_content": "<evidence>2,424 | CableCapitalExpenditures: Cable distribution system\n7,034 | CableCapitalExpenditures: Total</evidence>\n<program>divide(2424, 7034)</program>\n<answer>34.46%</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1100,
+  "completion_tokens": 128,
+  "total_tokens": 1228,
+  "audio_prompt_tokens": 0
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "2,424",
+   "element": "CableCapitalExpenditures: Cable distribution system",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "7,034",
+   "element": "CableCapitalExpenditures: Total",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(2424, 7034)",
+ "answer_model": "34.46%",
+ "program_value": 0.34461188512937163,
+ "elapsed_s": 7.87,
+ "outline_source": "CMCSA_2015_0001193125-16-452423.outline.txt",
+ "outline_chars": 134140
+}

@@ -1,0 +1,74 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0526",
+ "format": "markdown_pdf_poppler",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "in the number of securities to be issued what is the ratio of the stock rights from the 2012 plan to the 2011 plan included in these securities",
+ "gold": "1.06",
+ "finqa_id": "HII/2017/page_124.pdf-3",
+ "source_page": "page_124",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/markdown_pdf_poppler/HII_2017_0001501585-18-000006.md",
+ "doc_chars": 528384,
+ "prompt_chars": 528616,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 528384,
+ "original_chars": 528384,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 97412,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 230,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1.060465",
+ "reasoning": "We need answer ratio of stock rights from 2012 plan to 2011 plan included in securities to be issued. From Item 12 equity compensation plan info footnote: \"Of these shares, 27,123 were stock rights granted under the 2011 Plan. In addition, this number includes 28,763 stock rights, 3,075 restricted stock rights, and 389,898 restricted performance stock rights granted under the 2012 Plan, assuming target performance achievement.\" So stock rights from 2012 plan = 28,763. From 2011 plan = 27,123. Ratio = 28,763 / 27,123. Compute. 28763/27123 ≈ 1.06045. Need exact ratio maybe as decimal. Program divide(28763, 27123). Evidence figures.",
+ "raw_content": "<evidence>27,123 | Item 12 footnote (2011 Plan stock rights)\n28,763 | Item 12 footnote (2012 Plan stock rights)</evidence>\n<program>divide(28763, 27123)</program>\n<answer>1.06045</answer>",
+ "usage": {
+  "prompt_tokens": 97733,
+  "completion_tokens": 230,
+  "total_tokens": 97963,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.32,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "27,123",
+   "element": "Item 12 footnote (2011 Plan stock rights)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "28,763",
+   "element": "Item 12 footnote (2012 Plan stock rights)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(28763, 27123)",
+ "answer_model": "1.06045",
+ "program_value": 1.060465287763153,
+ "docfinqa_row": 526
+}

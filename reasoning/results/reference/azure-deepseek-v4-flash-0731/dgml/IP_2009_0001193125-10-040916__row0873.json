@@ -1,0 +1,50 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0873",
+ "format": "dgml",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "considering the years 2011-2012 , what is the variation observed in the lease obligations?",
+ "gold": "24",
+ "finqa_id": "IP/2009/page_45.pdf-3",
+ "source_page": "page_45",
+ "ticker": "IP",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/dgml/IP_2009_0001193125-10-040916.dgml.xml",
+ "doc_chars": 908141,
+ "prompt_chars": 908320,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 908141,
+ "original_chars": 908141,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 216559,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 360,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-24",
+ "reasoning": "The question asks: \"considering the years 2011-2012, what is the variation observed in the lease obligations?\"\n\nI need to find lease obligations for 2011 and 2012. Looking at the document, there's a table of \"Contractual obligations for future payments under existing debt and lease commitments and purchase obligations at December 31, 2009\" which shows lease obligations for 2010, 2011, 2012, etc.\n\nFrom the table:\n- Lease obligations: 2010: $177, 2011: $148, 2012: $124, 2013: $96, 2014: $79, Thereafter: $184\n\nSo for 2011 lease obligations = $148 million, for 2012 = $124 million.\n\nVariation from 2011 to 2012 = 124 - 148 = -24 million.\n\nThe question asks \"what is the variation observed in the lease obligations?\" considering years 2011-2012. So the variation is a decrease of $24 million.\n\nLet me double-check the table. In the \"Contractual Obligations\" table:\n- Lease obligations: 2010: 177, 2011: 148, 2012: 124, 2013: 96, 2014: 79, Thereafter: 184\n\nYes, so 2011 = 148, 2012 = 124. Variation = 124 - 148 = -24 million.\n\nThe answer should be -24 (or a decrease of 24 million).",
+ "raw_content": "The lease obligations were $148 million in 2011 and $124 million in 2012, a decrease of $24 million.\n\n<answer>-24</answer>",
+ "usage": {
+  "prompt_tokens": 216707,
+  "completion_tokens": 360,
+  "total_tokens": 217067,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 15.23,
+ "answer_tag_found": true,
+ "docfinqa_row": 873
+}

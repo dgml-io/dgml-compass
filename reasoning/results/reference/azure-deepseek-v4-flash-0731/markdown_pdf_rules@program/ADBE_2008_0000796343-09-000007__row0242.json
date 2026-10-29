@@ -1,0 +1,72 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0242",
+ "format": "markdown_pdf_rules",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "is the weighted average useful life ( years ) for purchased technology greater than localization?",
+ "gold": "yes",
+ "finqa_id": "ADBE/2008/page_74.pdf-2",
+ "source_page": "page_74",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_rules/ADBE_2008_0000796343-09-000007.md",
+ "doc_chars": 443328,
+ "prompt_chars": 443514,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 443328,
+ "original_chars": 443328,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 95226,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 329,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "3",
+ "reasoning": "We need answer question: is weighted average useful life (years) for purchased technology greater than localization? From Note 1 table: Purchased technology 4, Localization 1. So yes. Need provide evidence and program. Final answer inside <answer> tags only value? The question asks \"is ... greater than ...?\" So answer yes/no. Probably \"Yes\". Need evidence: value | element. Use figures 4 and 1. Program: greater? We have exp? No comparison function. But program must be exact nested calls over figures as printed. We can use subtract(4,1) positive? But program is executed by benchmark, so maybe they expect a value? The instruction: \"Give your final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So answer \"Yes\". Program: subtract(4,1) yields 3, but that's not the answer. The program is the computation. We can use subtract(4,1) to show difference. But the question is boolean. Maybe program can be subtract(4,1) and answer Yes. But they said \"A figure that is itself the answer is its own program.\" Here answer is comparison. We'll provide program as subtract(4,1) and answer Yes. Need evidence lines: \"4 | Purchased technology\" and \"1 | Localization\".",
+ "raw_content": "<evidence>\n4 | Purchased technology\n1 | Localization\n</evidence>\n<program>\nsubtract(4, 1)\n</program>\n<answer>Yes</answer>",
+ "usage": {
+  "prompt_tokens": 95529,
+  "completion_tokens": 329,
+  "total_tokens": 95858,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.06,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "4",
+   "element": "Purchased technology",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1",
+   "element": "Localization",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(4, 1)",
+ "answer_model": "Yes",
+ "program_value": 3.0,
+ "docfinqa_row": 242
+}

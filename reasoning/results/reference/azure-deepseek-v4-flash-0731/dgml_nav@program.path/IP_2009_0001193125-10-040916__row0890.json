@@ -1,0 +1,81 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0890",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "considering the years 2010-2011 , what is the percentual increase observed in the maturities of long-term debt?",
+ "gold": "88.81%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "IP_2009_0001193125-10-040916.outline.txt",
+ "doc_source": "IP_2009_0001193125-10-040916.dgml.xml",
+ "outline_chars": 127828,
+ "predicted_xpaths": [
+  "/chunk/DebtAndLinesOfCredit/DebtMaturitySchedule"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 2051,
+ "r1_usage": {
+  "prompt_tokens": 33558,
+  "completion_tokens": 548,
+  "total_tokens": 34106,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/DebtAndLinesOfCredit/DebtMaturitySchedule"
+ ],
+ "content_chars": 5528,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "88.815789",
+ "reasoning": "We need percentual increase from 2010 to 2011 in maturities of long-term debt. From first region: 2010 – $304 million; 2011 – $574 million. Percent increase = (574-304)/304 * 100. Compute: 574-304=270; 270/304=0.888157... *100=88.8157%. Need answer as value, likely 88.8% or 88.82%. The question asks \"percentual increase\" so answer numeric percent. We'll provide evidence figures.",
+ "raw_content": "<evidence>2010 – $304 million | /chunk/DebtAndLinesOfCredit/DebtMaturitySchedule/DebtMaturitySchedule/DebtMaturityAmount\n2011 – $574 million | /chunk/DebtAndLinesOfCredit/DebtMaturitySchedule/DebtMaturitySchedule/DebtMaturityAmount</evidence>\n<program>multiply(divide(subtract(574, 304), 304), 100)</program>\n<answer>88.81578947368421</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1759,
+  "completion_tokens": 233,
+  "total_tokens": 1992,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 1759,
+   "completion_tokens": 233,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "2010 – $304 million",
+   "element": "chunk/DebtAndLinesOfCredit/DebtMaturitySchedule/DebtMaturitySchedule/DebtMaturityAmount",
+   "element_found": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "2011 – $574 million",
+   "element": "chunk/DebtAndLinesOfCredit/DebtMaturitySchedule/DebtMaturitySchedule/DebtMaturityAmount",
+   "element_found": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(subtract(574, 304), 304), 100)",
+ "answer_model": "88.81578947368421",
+ "program_value": 88.81578947368422,
+ "elapsed_s": 5.79
+}

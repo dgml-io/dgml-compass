@@ -1,0 +1,81 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0459",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was the percentage change in total long-term debt net from 2014 to 2015?",
+ "gold": "148%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "LMT_2015_0001193125-16-476010.outline.txt",
+ "doc_source": "LMT_2015_0001193125-16-476010.dgml.xml",
+ "outline_chars": 116705,
+ "predicted_xpaths": [
+  "/chunk/ConsolidatedBalanceSheets"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 2639,
+ "r1_usage": {
+  "prompt_tokens": 28886,
+  "completion_tokens": 653,
+  "total_tokens": 29539,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ConsolidatedBalanceSheets"
+ ],
+ "content_chars": 188508,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "132.904591",
+ "reasoning": "We need percentage change in total long-term debt net from 2014 to 2015. From balance sheet: Long-term debt, net: 2015 = 14,305; 2014 = 6,142. Percentage change = (14,305 - 6,142)/6,142 * 100. Compute: difference = 8,163. Divide by 6,142 = 1.329... so 132.9% increase. Need answer as value, likely 132.9 or 133.0. Let's compute precisely: 8163/6142 = 1.3290... 6142*1.33=8168.86, so 1.3289. So 132.89%. We'll output 132.9. Need evidence and program.",
+ "raw_content": "<evidence>14,305 | /chunk/ConsolidatedBalanceSheets/ConsolidatedBalanceSheets/table/LongTermDebtNetBalance/DebtPrincipalAmount\n6,142 | /chunk/ConsolidatedBalanceSheets/ConsolidatedBalanceSheets/table/LongTermDebtNetBalance/DebtPrincipalAmount\n</evidence>\n<program>multiply(divide(subtract(14305, 6142), 6142), 100)</program>\n<answer>132.9</answer>",
+ "r2_usage": {
+  "prompt_tokens": 43302,
+  "completion_tokens": 285,
+  "total_tokens": 43587,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 43302,
+   "completion_tokens": 285,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "14,305",
+   "element": "chunk/ConsolidatedBalanceSheets/ConsolidatedBalanceSheets/table/LongTermDebtNetBalance/DebtPrincipalAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "6,142",
+   "element": "chunk/ConsolidatedBalanceSheets/ConsolidatedBalanceSheets/table/LongTermDebtNetBalance/DebtPrincipalAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(14305, 6142), 6142), 100)",
+ "answer_model": "132.9",
+ "program_value": 132.90459133832627,
+ "elapsed_s": 7.96
+}

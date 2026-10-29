@@ -1,0 +1,88 @@
+{
+ "id": "APD_2016_0001193125-16-773346__row0554",
+ "key": "APD_2016_0001193125-16-773346",
+ "question": "considering the years 2014-2016 , what was the average cash paid for interest?",
+ "gold": "117",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "APD_2016_0001193125-16-773346.outline.txt",
+ "doc_source": "APD_2016_0001193125-16-773346.dgml.xml",
+ "outline_chars": 118036,
+ "predicted_xpaths": [
+  "/chunk/Debt/ShortTermBorrowings/InterestPaidAmount"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 4452,
+ "r1_usage": {
+  "prompt_tokens": 29992,
+  "completion_tokens": 1134,
+  "total_tokens": 31126,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/Debt/ShortTermBorrowings/InterestPaidAmount"
+ ],
+ "content_chars": 1691,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "117",
+ "reasoning": "We need answer. Need compute average cash paid for interest over 2014-2016. Figures: 2016 $121.1, 2015 $97.5, 2014 $132.4. Average = (121.1+97.5+132.4)/3 = 351.0/3 = 117.0. Need evidence figures. Program divide(add(add(121.1,97.5),132.4),3). Need final answer inside tags only value. Also evidence lines.",
+ "raw_content": "<evidence>\n$121.1 | /chunk/Debt/ShortTermBorrowings/InterestPaidAmount/InterestPaidAmount\n$97.5 | /chunk/Debt/ShortTermBorrowings/InterestPaidAmount/InterestPaidAmount\n$132.4 | /chunk/Debt/ShortTermBorrowings/InterestPaidAmount/InterestPaidAmount\n</evidence>\n<program>divide(add(add(121.1, 97.5), 132.4), 3)</program>\n<answer>117.0</answer>",
+ "r2_usage": {
+  "prompt_tokens": 837,
+  "completion_tokens": 236,
+  "total_tokens": 1073,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 837,
+   "completion_tokens": 236,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "$121.1",
+   "element": "chunk/Debt/ShortTermBorrowings/InterestPaidAmount/InterestPaidAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$97.5",
+   "element": "chunk/Debt/ShortTermBorrowings/InterestPaidAmount/InterestPaidAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$132.4",
+   "element": "chunk/Debt/ShortTermBorrowings/InterestPaidAmount/InterestPaidAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(add(121.1, 97.5), 132.4), 3)",
+ "answer_model": "117.0",
+ "program_value": 117.0,
+ "elapsed_s": 8.08
+}

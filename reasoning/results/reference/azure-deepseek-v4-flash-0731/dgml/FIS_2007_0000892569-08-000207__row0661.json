@@ -1,0 +1,53 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0661",
+ "format": "dgml",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what percentage of total future minimum operating lease payments for leases with remaining terms greater than one year are due in 2009?",
+ "gold": "25%",
+ "finqa_id": "FIS/2007/page_94.pdf-1",
+ "source_page": "page_94",
+ "ticker": "FIS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml/FIS_2007_0000892569-08-000207.dgml.xml",
+ "doc_chars": 680888,
+ "prompt_chars": 681112,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 680888,
+ "original_chars": 680888,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 160676,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 299,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "25.32%",
+ "reasoning": "We need to find total future minimum operating lease payments for leases with remaining terms greater than one year, and the amount due in 2009. From the document, in the Commitments and Contingencies section, there is a table of future minimum operating lease payments. It shows: 2008: 83,382; 2009: 63,060; 2010: 35,269; 2011: 21,598; 2012: 14,860; Thereafter: 30,869; Total: 249,038. So total is 249,038 (in thousands). Due in 2009 is 63,060. Percentage = 63,060 / 249,038 * 100. Compute: 63,060 / 249,038 ≈ 0.2532, so 25.32%. Round to maybe 25.3% or 25.32%. The question asks \"what percentage\" so we can give a number. Let's compute precisely: 63,060 / 249,038 = 0.2532... Let's do division: 249,038 * 0.25 = 62,259.5, difference 800.5, so 0.0032*249,038 ≈ 797, so about 0.2532. So 25.32%. We'll put that.",
+ "raw_content": "<answer>25.32%</answer>",
+ "usage": {
+  "prompt_tokens": 160829,
+  "completion_tokens": 299,
+  "total_tokens": 161128,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 160768
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.7,
+ "answer_tag_found": true,
+ "docfinqa_row": 661
+}

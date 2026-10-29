@@ -1,0 +1,74 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0383",
+ "format": "markdown_pdf_poppler",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "what portion of the total estimated future contingent acquisition obligation is due in the 12 months?",
+ "gold": "19.3%",
+ "finqa_id": "IPG/2008/page_93.pdf-1",
+ "source_page": "page_93",
+ "ticker": "IPG",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_poppler/IPG_2008_0001193125-09-040141.md",
+ "doc_chars": 483678,
+ "prompt_chars": 483868,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 483678,
+ "original_chars": 483678,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 88848,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 143,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "19.6872%",
+ "reasoning": "We need answer portion due in 12 months = 2009 amount / total. From Note 16 table: 2009 $79.3, total $402.8. Portion = 79.3/402.8 = 0.19687... ~19.7%. Need answer value maybe 19.7%. Evidence figures.",
+ "raw_content": "<evidence>79.3 | Note 16 Contingent Acquisition Obligations table, 2009 column\n402.8 | Note 16 Contingent Acquisition Obligations table, Total column</evidence>\n<program>divide(79.3, 402.8)</program>\n<answer>19.7%</answer>",
+ "usage": {
+  "prompt_tokens": 89154,
+  "completion_tokens": 143,
+  "total_tokens": 89297,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 89088
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.9,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "79.3",
+   "element": "Note 16 Contingent Acquisition Obligations table, 2009 column",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "402.8",
+   "element": "Note 16 Contingent Acquisition Obligations table, Total column",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(79.3, 402.8)",
+ "answer_model": "19.7%",
+ "program_value": 0.19687189672293942,
+ "docfinqa_row": 383
+}

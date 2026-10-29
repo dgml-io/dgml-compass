@@ -1,0 +1,53 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0284",
+ "format": "markdown_pdf",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "what is the yearly amortization rate for the purchased technology?",
+ "gold": "25%",
+ "finqa_id": "ADBE/2008/page_74.pdf-1",
+ "source_page": "page_74",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf/ADBE_2008_0000796343-09-000007.md",
+ "doc_chars": 450108,
+ "prompt_chars": 450263,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 450108,
+ "original_chars": 450108,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 99248,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 419,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "25%",
+ "reasoning": "We need to find the yearly amortization rate for purchased technology. The document mentions purchased technology amortization. In Note 5, there is a table of expected amortization expense for purchased technology: fiscal 2009: $56,230, 2010: $8,244, 2011: $4,938, 2012: $3,388, 2013: $0, thereafter: $0. But the question asks for \"yearly amortization rate\" - perhaps it means the amortization expense per year? Or the rate as a percentage? The document says \"Purchased and other intangible assets are amortized over their estimated useful lives of 1 to 13 years.\" For purchased technology specifically, the weighted average useful life is 4 years (from Note 1 table: Purchased technology weighted average useful life 4 years). So the yearly amortization rate would be 1/4 = 25% per year. But the question might be asking for the annual amortization expense? The phrasing \"yearly amortization rate\" likely means the rate (percentage) at which it is amortized. Since the useful life is 4 years, the straight-line rate is 25% per year. However, the document also gives expected amortization expense for future years. But the question says \"yearly amortization rate\" - that is a rate, not an amount. So answer: 25% per year. But let's check if there is any other mention. In Note 5, the table shows expected amortization expense for purchased technology: 2009: 56,230; 2010: 8,244; etc. That is not a rate. The weighted average useful life is 4 years, so straight-line rate is 25%. So answer: 25% per year. But the question might be asking for the annual amortization expense? It says \"yearly amortization rate\" - rate implies percentage. So I'll answer 25%.",
+ "raw_content": "<answer>25%</answer>",
+ "usage": {
+  "prompt_tokens": 99388,
+  "completion_tokens": 419,
+  "total_tokens": 99807,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 99328
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.33,
+ "answer_tag_found": true,
+ "docfinqa_row": 284
+}

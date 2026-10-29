@@ -1,0 +1,88 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0257",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what were average backlog at year-end for mfc from 2013 to 2015 in millions?",
+ "gold": "14367",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "LMT_2015_0001193125-16-476010.outline.txt",
+ "doc_source": "LMT_2015_0001193125-16-476010.dgml.xml",
+ "outline_chars": 116705,
+ "predicted_xpaths": [
+  "/chunk/FilingPartDesignation/BusinessSegmentName"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 12516,
+ "r1_usage": {
+  "prompt_tokens": 28888,
+  "completion_tokens": 3121,
+  "total_tokens": 32009,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/FilingPartDesignation/BusinessSegmentName"
+ ],
+ "content_chars": 65529,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "14366.666667",
+ "reasoning": "We need answer average backlog at year-end for MFC from 2013 to 2015. Need find MFC backlog figures. In document, MFC segment table has Backlog at year-end: 2015 $15,500, 2014 $13,300, 2013 $14,300. Average = (15500+13300+14300)/3 = 43100/3 = 14366.666... in millions. Need output value. Probably 14366.7 or 14366.67. Question asks \"in millions\" so answer numeric. Need evidence list figures.",
+ "raw_content": "<evidence>$15,500 | /chunk/FilingPartDesignation/BusinessSegmentName/SegmentOperatingResults/BacklogAmount/BacklogAmount\n$13,300 | /chunk/FilingPartDesignation/BusinessSegmentName/SegmentOperatingResults/BacklogAmount/BacklogAmount\n$14,300 | /chunk/FilingPartDesignation/BusinessSegmentName/SegmentOperatingResults/BacklogAmount/BacklogAmount</evidence>\n<program>divide(add(add(15500, 13300), 14300), 3)</program>\n<answer>14366.67</answer>",
+ "r2_usage": {
+  "prompt_tokens": 14952,
+  "completion_tokens": 258,
+  "total_tokens": 15210,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 14952,
+   "completion_tokens": 258,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "$15,500",
+   "element": "chunk/FilingPartDesignation/BusinessSegmentName/SegmentOperatingResults/BacklogAmount/BacklogAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$13,300",
+   "element": "chunk/FilingPartDesignation/BusinessSegmentName/SegmentOperatingResults/BacklogAmount/BacklogAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$14,300",
+   "element": "chunk/FilingPartDesignation/BusinessSegmentName/SegmentOperatingResults/BacklogAmount/BacklogAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(add(15500, 13300), 14300), 3)",
+ "answer_model": "14366.67",
+ "program_value": 14366.666666666666,
+ "elapsed_s": 17.51
+}

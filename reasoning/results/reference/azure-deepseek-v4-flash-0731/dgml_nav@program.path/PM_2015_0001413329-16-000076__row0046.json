@@ -1,0 +1,76 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0046",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what was the average currency translation adjustments from 2013 to 2015 in millions?",
+ "gold": "-6806",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "PM_2015_0001413329-16-000076.outline.txt",
+ "doc_source": "PM_2015_0001413329-16-000076.dgml.xml",
+ "outline_chars": 156714,
+ "predicted_xpaths": [
+  "/chunk/ComprehensiveIncome/table/TotalOtherComprehensiveLosses",
+  "/chunk/ComprehensiveIncome/table/TotalOtherComprehensiveLosses/td",
+  "/chunk/ComprehensiveIncome/table/TotalComprehensiveEarnings"
+ ],
+ "r1_retried": true,
+ "r1_first_usage": {
+  "prompt_tokens": 39599,
+  "completion_tokens": 16000,
+  "total_tokens": 55599,
+  "audio_prompt_tokens": 0
+ },
+ "r1_reasoning_chars": 0,
+ "r1_usage": {
+  "prompt_tokens": 39617,
+  "completion_tokens": 20,
+  "total_tokens": 39637,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ComprehensiveIncome/table/TotalOtherComprehensiveLosses",
+  "/chunk/ComprehensiveIncome/table/TotalOtherComprehensiveLosses/td",
+  "/chunk/ComprehensiveIncome/table/TotalComprehensiveEarnings"
+ ],
+ "content_chars": 1659,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer average currency translation adjustments from 2013 to 2015. Need find figures. Document excerpts include comprehensive income table but not explicitly currency translation adjustments? Need search? The provided excerpts only show total other comprehensive losses, gains/losses recognized, transferred, total comprehensive earnings. No currency translation adjustments line. Maybe there is a table with components? The question asks average currency translation adjustments from 2013 to 2015. We need figures for each year. Not in excerpts. Could be in other part not provided. We should answer NOT_FOUND. But let's verify: The excerpts include \"Total other comprehensive losses\" and some lines but not currency translation. No enough info. So NOT_FOUND.\n\nNeed provide evidence? We can list figures? But if not found, maybe no evidence. The instruction says \"Before the answer, list every figure you use inside <evidence></evidence>\". If no figures used, empty. Then program? If NOT_FOUND, maybe no program. But final answer inside <answer>NOT_FOUND</answer>. Need reason briefly.",
+ "raw_content": "<evidence></evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 828,
+  "completion_tokens": 244,
+  "total_tokens": 1072,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 828,
+   "completion_tokens": 244,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 37.08
+}

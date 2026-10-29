@@ -1,0 +1,72 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0149",
+ "format": "markdown_pdf_plumber",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "what was the percent of the impairment charges to the net revenue in 2013",
+ "gold": "0.5%",
+ "finqa_id": "INTC/2013/page_33.pdf-2",
+ "source_page": "page_33",
+ "ticker": "INTC",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/markdown_pdf_plumber/INTC_2013_0000050863-14-000020.md",
+ "doc_chars": 427435,
+ "prompt_chars": 427597,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 427435,
+ "original_chars": 427435,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 98063,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 207,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.455339",
+ "reasoning": "We need answer percent of impairment charges to net revenue in 2013. Impairment charges? Could be restructuring and asset impairment charges $240 million. Net revenue $52,708 million. Percent = 240/52708 *100 = 0.4553...%. Need exact. Evidence: 240 | Restructuring and asset impairment charges (2013) from income statement; 52,708 | Net revenue. Compute divide(240,52708)*100? Program should be exact. Use multiply(divide(240,52708),100). Answer maybe 0.46% or 0.4553%. The question \"percent of the impairment charges to the net revenue\" likely 0.46%. Provide value.",
+ "raw_content": "<evidence>\n240 | Restructuring and asset impairment charges (2013)\n52,708 | Net revenue (2013)\n</evidence>\n<program>multiply(divide(240, 52708), 100)</program>\n<answer>0.46</answer>",
+ "usage": {
+  "prompt_tokens": 98368,
+  "completion_tokens": 207,
+  "total_tokens": 98575,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.47,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "240",
+   "element": "Restructuring and asset impairment charges (2013)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "52,708",
+   "element": "Net revenue (2013)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(240, 52708), 100)",
+ "answer_model": "0.46",
+ "program_value": 0.4553388479927146,
+ "docfinqa_row": 149
+}

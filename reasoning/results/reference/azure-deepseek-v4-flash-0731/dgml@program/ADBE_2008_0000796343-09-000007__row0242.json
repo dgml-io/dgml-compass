@@ -1,0 +1,74 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0242",
+ "format": "dgml",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "is the weighted average useful life ( years ) for purchased technology greater than localization?",
+ "gold": "yes",
+ "finqa_id": "ADBE/2008/page_74.pdf-2",
+ "source_page": "page_74",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml/ADBE_2008_0000796343-09-000007.dgml.xml",
+ "doc_chars": 800179,
+ "prompt_chars": 800365,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 800179,
+ "original_chars": 800179,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 183166,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 125,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1",
+ "reasoning": "We need answer question: is weighted average useful life (years) for purchased technology greater than localization? From document: Intangible assets table: Purchased technology 4, Localization 1. So yes. Need provide evidence and program. Answer inside <answer>yes</answer>? The question asks \"is ... greater than ...?\" So answer yes/no.",
+ "raw_content": "<evidence>\n4 | IntangibleAssetUsefulLife (Purchased technology)\n1 | IntangibleAssetUsefulLife (Localization)\n</evidence>\n<program>greater(4, 1)</program>\n<answer>yes</answer>",
+ "usage": {
+  "prompt_tokens": 183469,
+  "completion_tokens": 125,
+  "total_tokens": 183594,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 183296
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.75,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "4",
+   "element": "IntangibleAssetUsefulLife (Purchased technology)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "1",
+   "element": "IntangibleAssetUsefulLife (Localization)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "greater(4, 1)",
+ "answer_model": "yes",
+ "program_value": 1.0,
+ "docfinqa_row": 242
+}

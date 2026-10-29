@@ -1,0 +1,73 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0566",
+ "format": "dgml_compact",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "as of december 31 , 2008 , what was the percent of the maturities in 2012 of the aggregate carrying value of long-term debt , including capital leases",
+ "gold": "45.3%",
+ "finqa_id": "AMT/2008/page_94.pdf-1",
+ "source_page": "page_94",
+ "ticker": "AMT",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml_compact/AMT_2008_0001193125-09-039177.dgml.txt",
+ "doc_chars": 530448,
+ "prompt_chars": 530687,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 530448,
+ "original_chars": 530448,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 114721,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 937,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "45.297851",
+ "reasoning": "We need to find the aggregate carrying value of long-term debt including capital leases as of Dec 31, 2008, and the maturities in 2012. From the document, in the notes, there is a table \"Maturities—As of December 31, 2008, aggregate carrying value of long-term debt, including capital leases, for the next five years and thereafter are estimated to be (in thousands):\" with rows: 2009 $1,837; 2010 $60,989; 2011 $1,018; 2012 $1,962,822; 2013 $646; Thereafter $2,305,054; Total cash obligations $4,332,366; Unamortized discounts and premiums, net $780; Balance as of December 31, 2008 $4,333,146.\n\nThe question asks: \"as of december 31 , 2008 , what was the percent of the maturities in 2012 of the aggregate carrying value of long-term debt , including capital leases\"\n\nSo we need the percentage that 2012 maturities ($1,962,822) represent of the aggregate carrying value ($4,333,146). Compute: 1,962,822 / 4,333,146 * 100.\n\nLet's compute: 1,962,822 / 4,333,146 ≈ 0.4529? Let's do exact: 4,333,146 * 0.45 = 1,949,915.7; difference 12,906.3; /4,333,146 ≈ 0.00298; so 0.45298 -> 45.298%? Let's compute precisely: 1,962,822 / 4,333,146 = 0.45298... Let's do division: 4,333,146 * 0.453 = 1,962,? 4,333,146*0.45=1,949,915.7; *0.003=12,999.4; sum=1,962,915.1; so 0.453 gives 1,962,915.1, slightly above 1,962,822 by 93.1; so 0.45298 approx. So 45.298% -> 45.3% approximately.\n\nWe need to provide the answer as a number, likely percentage. The question asks \"what was the percent\" so answer should be a number like 45.3% or 45.30%. We'll put 45.3% inside <answer> tags.\n\nBut we need to list evidence figures. We'll cite the values from the table: 2012 $1,962,822 and Balance as of December 31, 2008 $4,333,146. Also maybe the total cash obligations? But the question says \"aggregate carrying value of long-term debt, including capital leases\" which is the balance as of Dec 31, 2008 $4,333,146. So we use that.\n\nWe'll write evidence lines.\n\nThen program: divide(1962822, 4333146) * 100? But the program expects nested calls. We can do multiply(divide(1962822, 4333146), 100). But the instruction says \"A figure that is itself the answer is its own program.\" We need to compute percentage. So program: multiply(divide(1962822, 4333146), 100). But we need to use the figures as printed. The figures are printed as $1,962,822 and $4,333,146. We'll use numbers without commas.\n\nWe'll output answer as 45.3% or 45.30? The question doesn't specify precision. We'll give 45.3%.\n\nLet's compute exactly: 1962822 / 4333146 = 0.45298... multiply by 100 = 45.298... So 45.3% rounded to one decimal.\n\nWe'll put 45.3% inside <answer>.",
+ "raw_content": "<evidence>\n$1,962,822 | Maturities 2012 (Maturities table)\n$4,333,146 | Balance as of December 31, 2008 (Maturities table)\n</evidence>\n<program>\nmultiply(divide(1962822, 4333146), 100)\n</program>\n<answer>45.3%</answer>",
+ "usage": {
+  "prompt_tokens": 115044,
+  "completion_tokens": 937,
+  "total_tokens": 115981,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 114944
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.02,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$1,962,822",
+   "element": "Maturities 2012 (Maturities table)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$4,333,146",
+   "element": "Balance as of December 31, 2008 (Maturities table)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "multiply(divide(1962822, 4333146), 100)",
+ "answer_model": "45.3%",
+ "program_value": 45.29785056861689,
+ "docfinqa_row": 566
+}

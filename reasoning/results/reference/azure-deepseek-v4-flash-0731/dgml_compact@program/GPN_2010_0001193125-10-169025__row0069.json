@@ -1,0 +1,84 @@
+{
+ "id": "GPN_2010_0001193125-10-169025__row0069",
+ "format": "dgml_compact",
+ "key": "GPN_2010_0001193125-10-169025",
+ "question": "what is the percentage change in the total fair value of non-vested shares from 2009 to 2010?",
+ "gold": "-4.1%",
+ "finqa_id": "GPN/2010/page_89.pdf-4",
+ "source_page": "page_89",
+ "ticker": "GPN",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/dgml_compact/GPN_2010_0001193125-10-169025.dgml.txt",
+ "doc_chars": 408017,
+ "prompt_chars": 408199,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 408017,
+ "original_chars": 408017,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 87247,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 336,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-6.4304%",
+ "reasoning": "We need percentage change in total fair value of non-vested shares from 2009 to 2010. The document has restricted stock table: Non-vested at May 31, 2009: 762 shares, weighted average grant-date fair value $42. Non-vested at May 31, 2010: 713 shares, weighted average $42. Total fair value = shares * weighted average. 2009: 762*42 = 32,004 (in thousands? shares in thousands, value in dollars, so total in thousands of dollars). 2010: 713*42 = 29,946. Percentage change = (29946 - 32004)/32004 = -2058/32004 = -0.0643 = -6.43%. So answer -6.43%. Need evidence: figures: 762, 42, 713, 42. Program: divide(subtract(multiply(713,42), multiply(762,42)), multiply(762,42)).",
+ "raw_content": "<evidence>\n762 | RestrictedStock: Non-vested at May 31, 2009\n42 | RestrictedStock: Weighted Average Grant-Date Fair Value (2009)\n713 | RestrictedStock: Non-vested at May 31, 2010\n42 | RestrictedStock: Weighted Average Grant-Date Fair Value (2010)\n</evidence>\n<program>divide(subtract(multiply(713, 42), multiply(762, 42)), multiply(762, 42))</program>\n<answer>-6.43%</answer>",
+ "usage": {
+  "prompt_tokens": 87559,
+  "completion_tokens": 336,
+  "total_tokens": 87895,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 23.53,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "762",
+   "element": "RestrictedStock: Non-vested at May 31, 2009",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "42",
+   "element": "RestrictedStock: Weighted Average Grant-Date Fair Value (2009)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "713",
+   "element": "RestrictedStock: Non-vested at May 31, 2010",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "42",
+   "element": "RestrictedStock: Weighted Average Grant-Date Fair Value (2010)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(multiply(713, 42), multiply(762, 42)), multiply(762, 42))",
+ "answer_model": "-6.43%",
+ "program_value": -0.06430446194225722,
+ "docfinqa_row": 69
+}

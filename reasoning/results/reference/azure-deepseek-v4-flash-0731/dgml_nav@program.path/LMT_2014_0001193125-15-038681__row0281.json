@@ -1,0 +1,83 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0281",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "what was the change in millions in backlog at year-end between 2013 and 2014?",
+ "gold": "-1600",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "LMT_2014_0001193125-15-038681.outline.txt",
+ "doc_source": "LMT_2014_0001193125-15-038681.dgml.xml",
+ "outline_chars": 64445,
+ "predicted_xpaths": [
+  "/chunk/PartDivision/PartDivision/BacklogDescription",
+  "/chunk/IncomeTaxExpenseSectionMarker/BusinessSegmentResultsOfOperations/BacklogDescription"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 3023,
+ "r1_usage": {
+  "prompt_tokens": 16118,
+  "completion_tokens": 750,
+  "total_tokens": 16868,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/PartDivision/PartDivision/BacklogDescription",
+  "/chunk/IncomeTaxExpenseSectionMarker/BusinessSegmentResultsOfOperations/BacklogDescription"
+ ],
+ "content_chars": 31350,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "-2100",
+ "reasoning": "We need to compute change in backlog between 2013 and 2014. Backlog at Dec 31, 2014: $80.5 billion, at Dec 31, 2013: $82.6 billion. Change = 80.5 - 82.6 = -2.1 billion. In millions, that's -2,100 million. The question asks \"change in millions\" so answer -2100. Need to cite figures. Evidence: $80.5 billion and $82.6 billion. Paths: /chunk/PartDivision/PartDivision/BacklogDescription/BacklogDescription/BacklogAmount (first one) and second. But we need exact paths. The region has BacklogDescription r=\"p\" containing BacklogAmount elements. We'll cite them. Program: subtract(80.5, 82.6) gives -2.1, but that's billions. To get millions, multiply by 1000? The question says \"in millions\" so we need to convert. The figures are in billions. So change in millions = (80.5 - 82.6) * 1000 = -2100. We'll use multiply(subtract(80.5, 82.6), 1000). But the program expects figures as printed, so we use 80.5 and 82.6. The answer should be -2100.",
+ "raw_content": "<evidence>\n$80.5 billion | /chunk/PartDivision/PartDivision/BacklogDescription/BacklogDescription/BacklogAmount\n$82.6 billion | /chunk/PartDivision/PartDivision/BacklogDescription/BacklogDescription/BacklogAmount\n</evidence>\n<program>\nmultiply(subtract(80.5, 82.6), 1000)\n</program>\n<answer>-2100</answer>",
+ "r2_usage": {
+  "prompt_tokens": 6998,
+  "completion_tokens": 392,
+  "total_tokens": 7390,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 6998,
+   "completion_tokens": 392,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "$80.5 billion",
+   "element": "chunk/PartDivision/PartDivision/BacklogDescription/BacklogDescription/BacklogAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$82.6 billion",
+   "element": "chunk/PartDivision/PartDivision/BacklogDescription/BacklogDescription/BacklogAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(subtract(80.5, 82.6), 1000)",
+ "answer_model": "-2100",
+ "program_value": -2099.9999999999945,
+ "elapsed_s": 6.4
+}

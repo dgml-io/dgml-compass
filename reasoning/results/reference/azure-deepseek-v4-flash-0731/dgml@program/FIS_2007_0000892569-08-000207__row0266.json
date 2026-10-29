@@ -1,0 +1,74 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0266",
+ "format": "dgml",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what portion of the future minimum operating lease payments is due in the next 12 months?",
+ "gold": "33.5%",
+ "finqa_id": "FIS/2007/page_94.pdf-2",
+ "source_page": "page_94",
+ "ticker": "FIS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml/FIS_2007_0000892569-08-000207.dgml.xml",
+ "doc_chars": 680888,
+ "prompt_chars": 681066,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 680888,
+ "original_chars": 680888,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 160676,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 194,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.334816",
+ "reasoning": "We need answer: portion of future minimum operating lease payments due in next 12 months. From document: operating leases future minimum payments: 2008: 83,382; total 249,038. Portion = 83,382 / 249,038. Compute. 83,382 / 249,038 ≈ 0.3348 = 33.48%. Need answer value. Probably percentage. Let's compute precisely: 249,038 * 0.335 = 83,427.73, so slightly less. 83,382/249,038 = 0.33481. So 33.5%. Use evidence.",
+ "raw_content": "<evidence>\n83,382 | OperatingLeaseCommitmentAmount (2008)\n249,038 | OperatingLeaseCommitmentAmount (Total)\n</evidence>\n<program>divide(83382, 249038)</program>\n<answer>0.3348</answer>",
+ "usage": {
+  "prompt_tokens": 160981,
+  "completion_tokens": 194,
+  "total_tokens": 161175,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 17.32,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "83,382",
+   "element": "OperatingLeaseCommitmentAmount (2008)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "249,038",
+   "element": "OperatingLeaseCommitmentAmount (Total)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(83382, 249038)",
+ "answer_model": "0.3348",
+ "program_value": 0.3348163734048619,
+ "docfinqa_row": 266
+}

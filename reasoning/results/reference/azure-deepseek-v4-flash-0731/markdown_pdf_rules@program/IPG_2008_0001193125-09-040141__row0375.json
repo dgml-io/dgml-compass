@@ -1,0 +1,74 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0375",
+ "format": "markdown_pdf_rules",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "what is the total percentage decrease in future contingent acquisition obligations payable in cash from 2009-2013?",
+ "gold": "1.56%",
+ "finqa_id": "IPG/2008/page_93.pdf-3",
+ "source_page": "page_93",
+ "ticker": "IPG",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_rules/IPG_2008_0001193125-09-040141.md",
+ "doc_chars": 363361,
+ "prompt_chars": 363564,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 363361,
+ "original_chars": 363361,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 87507,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 2553,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1.4342%",
+ "reasoning": "We need answer question: \"what is the total percentage decrease in future contingent acquisition obligations payable in cash from 2009-2013?\" Need interpret. We have table of contingent acquisition payments: 2009 79.3, 2010 66.4, 2011 103.7, 2012 75.3, 2013 75.9, Thereafter 2.2, Total 402.8. Also another table with total contingent acquisition payments 79.3, 66.4, 103.7, 75.3, 75.9, 2.2, 402.8. Question: \"total percentage decrease in future contingent acquisition obligations payable in cash from 2009-2013?\" Could mean decrease from 2009 to 2013? Or total percentage decrease over the period? Need parse. \"from 2009-2013\" likely compare 2009 amount to 2013 amount? Or total decrease from 2009 to 2013? Let's read exact: \"what is the total percentage decrease in future contingent acquisition obligations payable in cash from 2009-2013?\" The table shows amounts for years 2009-2013 and thereafter. \"total percentage decrease\" might mean the percentage decrease from 2009 to 2013? Or the cumulative decrease over the period? Need compute.\n\nWe have figures: 2009: 79.3, 2010: 66.4, 2011: 103.7, 2012: 75.3, 2013: 75.9. There is also \"Total contingent acquisition payments\" row. The question says \"future contingent acquisition obligations payable in cash from 2009-2013\" - maybe sum of 2009-2013? But \"total percentage decrease\" suggests compare first year to last year? Let's examine.\n\nThe table in Note 16: \"As of December 31, 2008, our estimated future contingent acquisition obligations payable in cash are as follows:\" with rows: Deferred acquisition payments, Put and call options with affiliates, Total contingent acquisition payments, Less cash compensation expense included above, Total. The \"Total contingent acquisition payments\" row: 2009 79.3, 2010 66.4, 2011 103.7, 2012 75.3, 2013 75.9, Thereafter 2.2, Total 402.8. The question asks \"total percentage decrease in future contingent acquisition obligations payable in cash from 2009-2013?\" Could be asking the percentage decrease from 2009 to 2013? That would be (75.9 - 79.3)/79.3 = -4.3% decrease? Actually decrease = (79.3-75.9)/79.3 = 4.29%. But \"total percentage decrease\" might be over the whole period? Or maybe the sum of 2009-2013 vs something? Let's see.\n\nMaybe they want the percentage decrease from the total in 2009 to the total in 2013? Or the percentage decrease in the total obligations from 2009 to 2013? The word \"total\" might refer to the \"Total contingent acquisition payments\" row. The phrase \"from 2009-2013\" could mean the years 2009 through 2013, i.e., the sum of those years? But \"percentage decrease\" needs two values. Could be comparing the sum of 2009-2011 vs 2012-2013? No.\n\nLet's read the question carefully: \"what is the total percentage decrease in future contingent acquisition obligations payable in cash from 2009-2013?\" It might be asking: Over the period 2009-2013, what is the total percentage decrease? That is, from the first year (2009) to the last year (2013), the percentage decrease. \"total\" might be to distinguish from annual. So compute (79.3 - 75.9)/79.3 = 3.4/79.3 = 0.042874... = 4.2875%. Round? The answer likely 4.3%. But let's verify if any other interpretation.\n\nAlternatively, \"total percentage decrease\" could mean the percentage decrease in the total amount from 2009 to 2013? The total amount for 2009-2013 is sum = 79.3+66.4+103.7+75.3+75.9 = 400.6. But there is no comparison. Maybe they want the percentage decrease from 2009 to 2013 in the \"Total contingent acquisition payments\" row. That is 4.3%.\n\nBut the question says \"future contingent acquisition obligations payable in cash\" - the table has \"Total contingent acquisition payments\" and then \"Less cash compensation expense included above\" to get \"Total\". The \"payable in cash\" might refer to the \"Total\" row after subtracting compensation? The table: \"Total contingent acquisition payments\" 79.3, 66.4, 103.7, 75.3, 75.9, 2.2, 402.8. \"Less cash compensation expense included above\" 2.6, 1.3, 0.7, 0.7, 0.3, —, 5.6. \"Total\" 76.7, 65.1, 103.0, 74.6, 75.6, 2.2, 397.2. The question says \"payable in cash\" - the row \"Total\" is the net cash payable after subtracting compensation. But the heading says \"estimated future contingent acquisition obligations payable in cash\" and the table has \"Total contingent acquisition payments\" and then \"Less cash compensation expense included above\" to get \"Total\". So the actual cash payable is the \"Total\" row. The question might refer to that row. So we need use the \"Total\" row: 2009 76.7, 2010 65.1, 2011 103.0, 2012 74.6, 2013 75.6. Then percentage decrease from 2009 to 2013 = (76.7 - 75.6)/76.7 = 1.1/76.7 = 0.01434 = 1.43%. That is a decrease of about 1.4%. Which one is correct?\n\nLet's read the text: \"The following table details the estimated liability with respect to our contingent acquisition obligations and the estimated amount that would be paid in the event of exercise at the earliest exercise date. ... As of December 31, 2008, our estimated future contingent acquisition obligations payable in cash are as follows:\" Then table with rows: Deferred acquisition payments, Put and call options with affiliates, Total contingent acquisition payments, Less cash compensation expense included above, Total. So the \"Total\" row is the net cash payable. The question says \"future contingent acquisition obligations payable in cash\" - that matches the \"Total\" row (after subtracting compensation). So we should use the \"Total\" row.\n\nBut the question says \"total percentage decrease\" - maybe they want the percentage decrease from 2009 to 2013 in the \"Total\" row. That is (76.7 - 75.6)/76.7 = 1.1/76.7 = 0.01434 = 1.434%. So answer ~1.4%.\n\nBut let's double-check: The \"Total contingent acquisition payments\" row includes cash compensation expense? The \"Less cash compensation expense included above\" subtracts amounts that are compensation, not acquisition obligations. So the \"Total\" row is the actual cash payable for acquisition obligations. The question specifically says \"payable in cash\" - so use the \"Total\" row.\n\nThus compute: 76.7 to 75.6 decrease = 1.1, percentage decrease = 1.1/76.7 = 0.01434 = 1.43%. If they want \"total percentage decrease\" maybe they want the percentage decrease from the sum of 2009-2013? No, that doesn't make sense.\n\nLet's see if there is any other interpretation: \"total percentage decrease in future contingent acquisition obligations payable in cash from 2009-2013\" could mean the percentage decrease in the total amount from 2009 to 2013? That is what we did. Or it could mean the percentage decrease over the entire period from 2009 to 2013, i.e., the total decrease as a percentage of the initial amount. Yes.\n\nSo answer 1.4% (or 1.43%). Need provide evidence and program.\n\nWe need list figures used: 76.7 (2009 Total), 75.6 (2013 Total). Also maybe 1.1? But we can compute.\n\nProgram: divide(subtract(76.7, 75.6), 76.7) = 0.01434... But the program should be exact using figures as printed. So subtract(76.7, 75.6) = 1.1, divide(1.1, 76.7) = 0.01434. The answer should be a percentage? The question asks \"total percentage decrease\" - so answer as a percentage, e.g., 1.4% or 1.43%. The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for percentage, so we can give \"1.4%\" or \"1.43%\". Usually they want numeric value. We'll give 1.4% or 1.43%. Let's compute exactly: 1.1/76.7 = 0.01434159... = 1.434%. So 1.43% if rounding to two decimals. The question says \"total percentage decrease\" - maybe they expect a number like 1.4. We'll put 1.4% or 1.43%. I'll put 1.43%.\n\nBut let's ensure we use the correct row. The \"Total\" row is the one after subtracting compensation. The question says \"payable in cash\" - yes.\n\nLet's also consider if they might want the percentage decrease from 2009 to 2013 in the \"Total contingent acquisition payments\" row (before subtracting compensation). That would be 4.3%. Which is more likely? The phrase \"payable in cash\" appears in the heading of the table, and the table's \"Total\" row is the net cash payable. The question says \"future contingent acquisition obligations payable in cash\" - that is the heading. So use the \"Total\" row.\n\nLet's read the exact text: \"As of December 31, 2008, our estimated future contingent acquisition obligations payable in cash are as follows:\" Then the table has rows. The \"Total\" row is the bottom line. So yes.\n\nThus answer 1.43%.\n\nWe need provide evidence: value | element. The element is the row label/heading. For 76.7, it's \"Total\" under 2009? Actually the table has columns 2009, 2010, etc. The row \"Total\" (the last row) has values. So we can cite \"Total | 2009\" and \"Total | 2013\". But the element name might be \"Total\" row. We'll write \"76.7 | Total (2009)\" and \"75.6 | Total (2013)\".\n\nProgram: divide(subtract(76.7, 75.6), 76.7)\n\nFinal answer inside <answer>1.43%</answer> or maybe 1.4%. I'll put 1.43%.\n\nLet's produce.",
+ "raw_content": "<evidence>\n76.7 | Total (2009)\n75.6 | Total (2013)\n</evidence>\n\n<program>\ndivide(subtract(76.7, 75.6), 76.7)\n</program>\n\n<answer>1.43%</answer>",
+ "usage": {
+  "prompt_tokens": 87816,
+  "completion_tokens": 2553,
+  "total_tokens": 90369,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 86272
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.37,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "76.7",
+   "element": "Total (2009)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "75.6",
+   "element": "Total (2013)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(subtract(76.7, 75.6), 76.7)",
+ "answer_model": "1.43%",
+ "program_value": 0.014341590612777164,
+ "docfinqa_row": 375
+}

@@ -1,0 +1,53 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0518",
+ "format": "markdown_pdf_poppler",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what is the value , in millions of dollars , of the total issuable stock in 2014?",
+ "gold": "162.2",
+ "finqa_id": "EW/2016/page_94.pdf-1",
+ "source_page": "page_94",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf_poppler/EW_2016_0001099800-17-000008.md",
+ "doc_chars": 414583,
+ "prompt_chars": 414753,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 414583,
+ "original_chars": 414583,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 71165,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 413,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "161.8",
+ "reasoning": "We need answer value in millions of dollars of total issuable stock in 2014. Need interpret. Document: \"total issuable stock\" maybe shares authorized? Or stock-based compensation? Let's parse. Question: \"what is the value , in millions of dollars , of the total issuable stock in 2014?\" Could refer to \"total issuable stock\" maybe from stock plans? In 2014, common stock issued under equity plans including tax benefits? In statement of stockholders' equity: 2014 common stock issued under equity plans, including tax benefits: $161.8 million? Actually line: \"Common stock issued under equity plans, including tax benefits 2.9 2.9 ... 158.9 ... 161.8\" So total value $161.8 million. But \"total issuable stock\" might mean shares authorized? Or \"total issuable\" maybe \"shares available for issuance\"? Need check.\n\nQuestion wording: \"what is the value , in millions of dollars , of the total issuable stock in 2014?\" Could be from \"Common stock issued under equity plans\" in 2014. The value is $161.8 million. But let's verify.\n\nMaybe \"total issuable stock\" refers to \"common stock issued\" in 2014? In balance sheet, common stock par value? No.\n\nLet's search document for \"issuable\" or \"issued\". There is \"Common stock issued under equity plans, including tax benefits\" in statement of stockholders' equity. For 2014, amount $161.8 million. Also \"Common stock, $1.00 par value, 350.0 shares authorized\" but not value.\n\nQuestion says \"total issuable stock in 2014\" maybe \"total issued stock\" value? In 2014, common stock issued under equity plans including tax benefits was $161.8 million. That is likely.\n\nLet's answer with $161.8.",
+ "raw_content": "<answer>161.8</answer>",
+ "usage": {
+  "prompt_tokens": 71315,
+  "completion_tokens": 413,
+  "total_tokens": 71728,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 71168
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.95,
+ "answer_tag_found": true,
+ "docfinqa_row": 518
+}

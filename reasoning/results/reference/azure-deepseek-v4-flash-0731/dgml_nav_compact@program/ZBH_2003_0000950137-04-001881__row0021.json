@@ -1,0 +1,74 @@
+{
+ "id": "ZBH_2003_0000950137-04-001881__row0021",
+ "key": "ZBH_2003_0000950137-04-001881",
+ "question": "what percent of inventory is ready for liquidation ( sale ) in 2003?",
+ "gold": "72.83%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "ZBH_2003_0000950137-04-001881.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/FilingHeader/Inventories",
+  "/chunk/FilingHeader/Inventories/InventoryReserveDescription",
+  "/chunk/FilingHeader/Inventories/InventoryEstimateChangeDescription"
+ ],
+ "r1_reasoning_chars": 3481,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 13265,
+  "completion_tokens": 849,
+  "total_tokens": 14114,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/FilingHeader/Inventories",
+  "/chunk/FilingHeader/Inventories/InventoryReserveDescription",
+  "/chunk/FilingHeader/Inventories/InventoryEstimateChangeDescription"
+ ],
+ "content_chars": 7990,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "72.825469",
+ "reasoning": "We need answer percent of inventory ready for liquidation (sale) in 2003. Need interpret. Inventory components: Finished goods, Raw materials and work in progress, Inventory step-up. \"Ready for liquidation (sale)\" likely finished goods? Or maybe \"ready for sale\" means finished goods. Need percent = finished goods / total inventory net? In 2003: Finished goods $384.3, total inventories net $527.7. Percent = 384.3/527.7*100. Compute. 384.3/527.7 = 0.7283... = 72.83%. Need maybe use gross? The question says \"what percent of inventory is ready for liquidation (sale)\" - likely finished goods as ready for sale. Let's compute exactly. 384.3/527.7 = 0.728254... 72.8254%. Round? Probably 72.8%. Need provide evidence figures. Use table values. Also note reserves? \"ready for liquidation\" might mean net realizable? But question likely from financial statement analysis: finished goods as ready for sale. Let's answer 72.8%.",
+ "raw_content": "<evidence>\n$ 384.3 | Finished goods (2003)\n$ 527.7 | Inventories, net (2003)\n</evidence>\n<program>multiply(divide(384.3, 527.7), 100)</program>\n<answer>72.8</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2159,
+  "completion_tokens": 303,
+  "total_tokens": 2462,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 384.3",
+   "element": "Finished goods (2003)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ 527.7",
+   "element": "Inventories, net (2003)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(384.3, 527.7), 100)",
+ "answer_model": "72.8",
+ "program_value": 72.82546901648664,
+ "elapsed_s": 5.96,
+ "outline_source": "ZBH_2003_0000950137-04-001881.outline.txt",
+ "outline_chars": 52082
+}

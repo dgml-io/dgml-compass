@@ -1,0 +1,53 @@
+{
+ "id": "NCLH_2018_0001144204-19-010508__row0887",
+ "format": "dgml_compact",
+ "key": "NCLH_2018_0001144204-19-010508",
+ "question": "how much did interest with libor change from year 1 to years 3-5?",
+ "gold": "the interest decreased 25.7% from year 1 to years 3-5",
+ "finqa_id": "NCLH/2018/page_64.pdf-4",
+ "source_page": "page_64",
+ "ticker": "NCLH",
+ "fiscal_year": "2018",
+ "source_file": "data/docs/dgml_compact/NCLH_2018_0001144204-19-010508.dgml.txt",
+ "doc_chars": 467893,
+ "prompt_chars": 468047,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 467893,
+ "original_chars": 467893,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 101327,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 829,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "57,255",
+ "reasoning": "We need answer question: \"how much did interest with libor change from year 1 to years 3-5?\" Need find relevant figures. Document has contractual obligations table with interest payments: Less than 1 year: 222,427; 1-3 years: 404,380; 3-5 years: 165,172; More than 5 years: 182,465. But question \"interest with libor change from year 1 to years 3-5\" maybe refers to interest rate risk? There is a statement: \"Based on our December 31, 2018 outstanding variable rate debt balance, a one percentage point increase in annual LIBOR interest rates would increase our annual interest expense by approximately $18.4 million excluding the effects of capitalization of interest.\" That is a sensitivity, not change from year 1 to years 3-5. Maybe question asks \"how much did interest with libor change from year 1 to years 3-5?\" Could be from contractual obligations table: interest payments in less than 1 year vs 3-5 years? But \"with libor\" maybe \"interest with LIBOR\" meaning variable rate debt? The document says \"Interest includes fixed and variable rates with LIBOR held constant as of December 31, 2018.\" So the interest amounts in contractual obligations are based on LIBOR held constant. The question: \"how much did interest with libor change from year 1 to years 3-5?\" Possibly asks difference between interest in less than 1 year and interest in 3-5 years? Or change from year 1 to years 3-5? The table has \"Less than 1 year\" = 222,427; \"3-5 years\" = 165,172. Difference = 57,255? But \"change\" could be decrease. Or maybe \"from year 1 to years 3-5\" means from the first year to the 3-5 year bucket. So answer 57,255 (in thousands) or $57.255 million. But need check if question asks \"how much did interest with libor change\" - maybe they want the change in interest expense due to LIBOR? There is also a statement: \"a one percentage point increase in annual LIBOR interest rates would increase our annual interest expense by approximately $18.4 million\" That is a change. But \"from year 1 to years 3-5\" doesn't match. Let's read question exactly: \"how much did interest with libor change from year 1 to years 3-5?\" Could be from a table of interest payments under contractual obligations, where interest is calculated with LIBOR held constant. The table has buckets: Less than 1 year, 1-3 years, 3-5 years, More than 5 years. So \"year 1\" is less than 1 year, \"years 3-5\" is 3-5 years. The change is difference between those two amounts. So compute 222,427 - 165,172 = 57,255 (in thousands). So answer $57,255 thousand or $57.255 million. The question asks \"how much did interest with libor change\" - likely the decrease. So answer 57,255 (in thousands) or $57.255 million. Since they ask \"how much\" without units, we can give number in thousands? The table is in thousands. So answer 57,255. But to be safe, give $57.255 million? The instruction: \"containing only the value itself with no explanation or units unless the question asks for them.\" So just number. But need decide if it's 57,255 or 57.255? The table amounts are in thousands, so 57,255 thousand = 57,255,000. But the question likely expects the number as in table. I'll put 57,255.",
+ "raw_content": "<answer>57,255</answer>",
+ "usage": {
+  "prompt_tokens": 101474,
+  "completion_tokens": 829,
+  "total_tokens": 102303,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 101376
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.04,
+ "answer_tag_found": true,
+ "docfinqa_row": 887
+}

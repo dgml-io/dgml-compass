@@ -1,0 +1,50 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0387",
+ "format": "markdown_pdf_poppler",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what is the percent change in the fair value per share between 2014 and 2016?",
+ "gold": "163%",
+ "finqa_id": "EW/2016/page_94.pdf-4",
+ "source_page": "page_94",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf_poppler/EW_2016_0001099800-17-000008.md",
+ "doc_chars": 414583,
+ "prompt_chars": 414749,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 414583,
+ "original_chars": 414583,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 71165,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 390,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "163.8%",
+ "reasoning": "We need to find fair value per share for 2014 and 2016. The document mentions fair value per share for options granted. In Note 13, there is a table for Option Awards: fair value per share for 2016, 2015, 2014. For 2016: $31.00, 2014: $11.75. The question asks percent change between 2014 and 2016. Compute (31.00 - 11.75)/11.75 * 100 = 19.25/11.75 = 1.6383... so 163.83% increase. But careful: \"fair value per share\" might refer to something else? The question says \"fair value per share\" without specifying. In the document, there is also \"fair value per share\" for ESPP subscriptions, but that is for ESPP. The most likely is the option awards fair value per share. Also note that the question says \"between 2014 and 2016\" meaning from 2014 to 2016. So percent change = (2016 - 2014)/2014 * 100. So answer is 163.8% approximately. But we need to give the value only. The instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So we put 163.8% or 163.83%? We'll compute precisely: (31.00 - 11.75) = 19.25; 19.25/11.75 = 1.63829787234; *100 = 163.829787234%. So we can put 163.8% or 163.83%. I'll put 163.8%.",
+ "raw_content": "<answer>163.8%</answer>",
+ "usage": {
+  "prompt_tokens": 71314,
+  "completion_tokens": 390,
+  "total_tokens": 71704,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 6.62,
+ "answer_tag_found": true,
+ "docfinqa_row": 387
+}

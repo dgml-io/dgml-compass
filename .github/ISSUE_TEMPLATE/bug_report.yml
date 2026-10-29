@@ -1,0 +1,62 @@
+name: Bug report
+description: Something in Model Compass (dgc) or the reasoning benchmark (dgr) doesn't work the way it should.
+title: "[Bug]: "
+labels:
+  - bug
+  - triage
+body:
+  - type: checkboxes
+    id: existing-issue
+    attributes:
+      label: Checked for existing issues
+      options:
+        - label: I searched open and closed issues and didn't find a duplicate
+          required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Model Compass (models/, dgc)
+        - Reasoning benchmark (reasoning/, dgr)
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: >
+        Steps to reproduce, what you expected, and what happened instead.
+        Include the exact command(s) you ran and the folder you ran them from.
+      placeholder: |
+        1. cd reasoning
+        2. uv run dgr reproduce
+
+        Expected: ...
+        Actual: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      value: |
+        - OS + version:
+        - Python version (`uv run python --version`):
+        - uv version (`uv --version`):
+        - Commit (`git rev-parse --short HEAD`):
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / traceback (optional)
+      render: shell
+    validations:
+      required: false

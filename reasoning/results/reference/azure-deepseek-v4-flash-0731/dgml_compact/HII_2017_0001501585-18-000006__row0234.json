@@ -1,0 +1,50 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0234",
+ "format": "dgml_compact",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what was the return on total assets during 2013?",
+ "gold": "4.2%",
+ "finqa_id": "HII/2017/page_47.pdf-1",
+ "source_page": "page_47",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/dgml_compact/HII_2017_0001501585-18-000006.dgml.txt",
+ "doc_chars": 553388,
+ "prompt_chars": 553525,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 553388,
+ "original_chars": 553388,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 114430,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 182,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "4.22%",
+ "reasoning": "We need return on total assets during 2013. ROA = Net earnings / Total assets. For 2013, from selected financial data: Net earnings 2013 = $261 million. Total assets 2013 = $6,190 million. So ROA = 261/6190 = 0.04216... = 4.22%. But question asks \"return on total assets\" - likely net income / average total assets? Usually ROA uses average total assets. But they might just use year-end. The document gives selected financial data for 2013. We have net earnings and total assets. If using average, we need 2012 total assets, not provided. So likely use year-end. Compute 261/6190 = 0.04216 = 4.22%. Answer as percentage.",
+ "raw_content": "<answer>4.22%</answer>",
+ "usage": {
+  "prompt_tokens": 114570,
+  "completion_tokens": 182,
+  "total_tokens": 114752,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.73,
+ "answer_tag_found": true,
+ "docfinqa_row": 234
+}

@@ -1,0 +1,53 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0247",
+ "format": "dgml",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the percentage increase in total accumulated other comprehensive losses from 2013 to 2014?",
+ "gold": "62.9%",
+ "finqa_id": "PM/2015/page_127.pdf-2",
+ "source_page": "page_127",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml/PM_2015_0001413329-16-000076.dgml.xml",
+ "doc_chars": 987218,
+ "prompt_chars": 987405,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 987218,
+ "original_chars": 987218,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 236868,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 202,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "62.9%",
+ "reasoning": "We need percentage increase in total accumulated other comprehensive losses from 2013 to 2014. From Note 17: total AOCL at 2013 = (4,190) million, 2014 = (6,826) million. Percentage increase? Since losses increased, percentage increase = (6,826 - 4,190)/4,190 * 100 = 2,636/4,190 = 0.6291 = 62.91%. But careful: \"percentage increase in total accumulated other comprehensive losses\" - losses are negative, but magnitude increased. Usually percentage increase in losses means increase in the absolute value. So 62.9%. Alternatively, if they mean change in the negative number, it's not a percentage increase but a decrease. The question says \"percentage increase in total accumulated other comprehensive losses\" - likely they want the increase in the loss amount. So answer 62.9%.",
+ "raw_content": "<answer>62.9%</answer>",
+ "usage": {
+  "prompt_tokens": 237016,
+  "completion_tokens": 202,
+  "total_tokens": 237218,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 236800
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.93,
+ "answer_tag_found": true,
+ "docfinqa_row": 247
+}

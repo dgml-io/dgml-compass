@@ -1,0 +1,75 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0108",
+ "format": "dgml",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "what is the percent of the square feet in owned facilities in other countries?",
+ "gold": "35.8%",
+ "finqa_id": "INTC/2013/page_29.pdf-3",
+ "source_page": "page_29",
+ "ticker": "INTC",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/dgml/INTC_2013_0000050863-14-000020.dgml.xml",
+ "doc_chars": 868384,
+ "prompt_chars": 868551,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 868384,
+ "original_chars": 868384,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 202403,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 243,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "35.83691",
+ "reasoning": "We need answer percent of square feet in owned facilities in other countries. Need find owned facilities table: Owned facilities: United States 29.9, Other Countries 16.7, Total 46.6. Percent = 16.7 / 46.6 * 100 = 35.836...%. Need answer likely 35.8%. Evidence: 16.7 | Owned facilities Other Countries; 46.6 | Owned facilities Total. Program divide(16.7,46.6) maybe multiply? The question asks percent, so answer value with %? They said no units unless asked. It asks percent, so include %? \"what is the percent\" so answer 35.8%. Program: multiply(divide(16.7,46.6),100). But program must use figures as printed. Use 16.7 and 46.6.",
+ "raw_content": "<evidence>\n16.7 | Owned facilities Other Countries\n46.6 | Owned facilities Total\n</evidence>\n<program>multiply(divide(16.7, 46.6), 100)</program>\n<answer>35.8%</answer>",
+ "usage": {
+  "prompt_tokens": 202705,
+  "completion_tokens": 243,
+  "total_tokens": 202948,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 24.42,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "16.7",
+   "element": "Owned facilities Other Countries",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "46.6",
+   "element": "Owned facilities Total",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "multiply(divide(16.7, 46.6), 100)",
+ "answer_model": "35.8%",
+ "program_value": 35.83690987124463,
+ "docfinqa_row": 108
+}

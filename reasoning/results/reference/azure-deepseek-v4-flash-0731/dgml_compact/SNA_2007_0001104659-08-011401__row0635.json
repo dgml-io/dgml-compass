@@ -1,0 +1,50 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0635",
+ "format": "dgml_compact",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "based on the cash dividends paid , how many common stock shares were outstanding?",
+ "gold": "58909091",
+ "finqa_id": "SNA/2007/page_49.pdf-2",
+ "source_page": "page_49",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml_compact/SNA_2007_0001104659-08-011401.dgml.txt",
+ "doc_chars": 428718,
+ "prompt_chars": 428888,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 428718,
+ "original_chars": 428718,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 97509,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 834,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "58,378,378",
+ "reasoning": "We need answer based on cash dividends paid, how many common stock shares were outstanding? Need infer from dividends paid per share and total dividends paid. Cash dividends paid in 2007 totaled $64.8 million, dividends paid per common share $1.11. So shares outstanding = 64.8 million / 1.11 = 58.378... million. But question says \"based on the cash dividends paid , how many common stock shares were outstanding?\" Could be asking number of shares outstanding? The document gives shares outstanding as of Dec 29, 2007: 57,429,139 shares, and as of Feb 15, 2008: 57,690,539. But \"based on the cash dividends paid\" suggests compute from dividends. Cash dividends paid in 2007 = $64.8 million, per share $1.11. 64.8/1.11 = 58.378378... million. But that's average? Actually dividends paid per share is $1.11 for the year, total paid $64.8M. So implied average shares = 58.38M. But the question might be asking \"how many common stock shares were outstanding?\" based on cash dividends paid. Could be the number of shares outstanding at year end? The document states 57,429,139 shares outstanding at Dec 29, 2007. But \"based on the cash dividends paid\" might be a trick: dividends paid total and per share gives number of shares that received dividends, which is approximately 58.4 million. However, the document explicitly gives shares outstanding. The question says \"based on the cash dividends paid , how many common stock shares were outstanding?\" So we should compute from dividends. Let's compute: $64.8 million / $1.11 = 58.378... million. But note dividends paid per share is $1.11, total dividends paid $64.8M. So 64.8/1.11 = 58.378378... So answer in shares: 58,378,378 approximately. But the document also says \"The number of shares of Common Stock ($1.00 par value) of the registrant was\" and \"SHARES OUTSTANDING AS OF FEBRUARY 15, 2008: 57,690,539 shares\" and \"At December 29, 2007, Snap-on had 57,429,139 shares of common stock outstanding.\" So there is a discrepancy. The question specifically says \"based on the cash dividends paid\" so we should use that. Let's verify: Cash dividends paid in 2007 totaled $64.8 million, and dividends paid per common share $1.11. So 64.8/1.11 = 58.378... million. But note that dividends paid per share is $1.11 for the year, but the number of shares outstanding changed during the year due to repurchases and issuances. The total dividends paid divided by per share gives weighted average shares outstanding for dividend purposes. So answer is approximately 58.4 million shares. But the question asks \"how many common stock shares were outstanding?\" Could be asking for the number of shares outstanding at the time of dividend payment? The document gives specific numbers. However, the phrasing \"based on the cash dividends paid\" indicates we should compute. Let's see if there is any other info: \"Cash dividends paid in 2007, 2006 and 2005 totaled $64.8 million, $63.6 million and $57.8 million, respectively.\" And \"Dividends paid per common share $1.11\" for 2007. So 64.8/1.11 = 58.378... So answer: 58,378,378 shares (approximately). But the question might expect the exact number from the document? It says \"based on the cash dividends paid\" so we compute. I'll provide the computed value.",
+ "raw_content": "<answer>58,378,378</answer>",
+ "usage": {
+  "prompt_tokens": 97652,
+  "completion_tokens": 834,
+  "total_tokens": 98486,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.06,
+ "answer_tag_found": true,
+ "docfinqa_row": 635
+}

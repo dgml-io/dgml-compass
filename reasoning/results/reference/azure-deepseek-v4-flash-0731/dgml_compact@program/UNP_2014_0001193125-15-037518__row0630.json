@@ -1,0 +1,72 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0630",
+ "format": "dgml_compact",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "what was the percentage growth from 2013 to 2014 in the total accounts payable and other current liabilities",
+ "gold": "7.03%",
+ "finqa_id": "UNP/2014/page_75.pdf-1",
+ "source_page": "page_75",
+ "ticker": "UNP",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/dgml_compact/UNP_2014_0001193125-15-037518.dgml.txt",
+ "doc_chars": 412541,
+ "prompt_chars": 412738,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 412541,
+ "original_chars": 412541,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 89337,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 436,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "7.031756",
+ "reasoning": "We need percentage growth from 2013 to 2014 in total accounts payable and other current liabilities. From note 13: 2014 total $3,303 million, 2013 $3,086 million. Growth = (3303-3086)/3086 = 217/3086 ≈ 0.0703 = 7.03%. Need exact percentage. Compute: 217/3086 = 0.070317... = 7.03%. The question asks \"percentage growth\" - likely answer as percent. We'll provide 7.03% or 7.0%. Use exact figure. Evidence: $3,303 | Total accounts payable and other current liabilities (2014), $3,086 | Total accounts payable and other current liabilities (2013). Program: divide(subtract(3303, 3086), 3086) * 100? But program should be nested calls. We can do multiply(divide(subtract(3303, 3086), 3086), 100). But the instruction says program is executed, so we can output the numeric value. We'll put 7.03. But they want value only, no units unless asked. The question asks percentage growth, so answer as 7.03%? They said \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what was the percentage growth\" - so include %? Typically they want number. I'll put 7.03. But to be safe, maybe 7.03%. The instruction says no units unless the question asks for them. It asks for percentage growth, so unit is percent. I'll put 7.03%.",
+ "raw_content": "<evidence>\n$ 3,303 | Total accounts payable and other current liabilities (2014)\n$ 3,086 | Total accounts payable and other current liabilities (2013)\n</evidence>\n<program>multiply(divide(subtract(3303, 3086), 3086), 100)</program>\n<answer>7.03%</answer>",
+ "usage": {
+  "prompt_tokens": 89647,
+  "completion_tokens": 436,
+  "total_tokens": 90083,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.88,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 3,303",
+   "element": "Total accounts payable and other current liabilities (2014)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ 3,086",
+   "element": "Total accounts payable and other current liabilities (2013)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(3303, 3086), 3086), 100)",
+ "answer_model": "7.03%",
+ "program_value": 7.031756318859365,
+ "docfinqa_row": 630
+}

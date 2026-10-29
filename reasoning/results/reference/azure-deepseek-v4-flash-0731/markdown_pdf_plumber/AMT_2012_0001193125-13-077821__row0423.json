@@ -1,0 +1,50 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0423",
+ "format": "markdown_pdf_plumber",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "was was the total amount spent on stock repurchases in december 2012?",
+ "gold": "7662592",
+ "finqa_id": "AMT/2012/page_50.pdf-2",
+ "source_page": "page_50",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/markdown_pdf_plumber/AMT_2012_0001193125-13-077821.md",
+ "doc_chars": 584045,
+ "prompt_chars": 584203,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 584045,
+ "original_chars": 584045,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 138337,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 611,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "7662592",
+ "reasoning": "We need to find total amount spent on stock repurchases in December 2012. The document has a table \"Issuer Purchases of Equity Securities\" for the three months ended December 31, 2012. It shows monthly data: October, November, December. For December 2012, it says: \"December 2012 102,400 $74.83 102,400 $1,256.1\" but that last column is \"Approximate Dollar Value of Shares that May Yet be Purchased Under the Plans or Programs\" not the amount spent. The amount spent is the aggregate purchase price. The table shows \"Total Number of Shares Purchased\" and \"Average Price Paid per Share\". For December, shares purchased = 102,400, average price = $74.83. So total spent = 102,400 * 74.83 = compute: 102,400 * 74.83 = 102,400*70 = 7,168,000; 102,400*4.83 = 494,592; sum = 7,662,592. But the question asks \"total amount spent on stock repurchases in december 2012?\" The table also gives \"Total Fourth Quarter\" but that's for the quarter. The question specifically asks December. So we compute 102,400 * 74.83 = 7,662,592. However, the document also mentions \"including commissions and fees\" in the narrative. The table says \"Average price per share is calculated using the aggregate price, excluding commissions and fees.\" So the amount spent excluding commissions and fees is 7,662,592. But the question might want the total amount including commissions? The narrative says \"we repurchased 619,314 shares ... for an aggregate of approximately $46.0 million, including commissions and fees\" for the quarter. For December, we have the average price excluding commissions. The question likely expects the dollar amount from the table. But the table doesn't directly give the total spent for December; it gives shares and average price. So we compute. Alternatively, the table has a column \"Approximate Dollar Value of Shares that May Yet be Purchased\" which is not the spent amount. So we compute.\n\nThus answer: 7,662,592. But we should check if there is any other mention. The narrative says \"During the three months ended December 31, 2012, we repurchased 619,314 shares ... for an aggregate of approximately $46.0 million, including commissions and fees.\" That's for the quarter. For December alone, we have the data. So we compute.\n\nThus final answer: 7,662,592. But the question asks \"total amount spent\" - maybe they want the number in dollars. We'll put it as a number.\n\nI'll put <answer>7662592</answer> (without commas).",
+ "raw_content": "<answer>7662592</answer>",
+ "usage": {
+  "prompt_tokens": 138483,
+  "completion_tokens": 611,
+  "total_tokens": 139094,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 20.26,
+ "answer_tag_found": true,
+ "docfinqa_row": 423
+}

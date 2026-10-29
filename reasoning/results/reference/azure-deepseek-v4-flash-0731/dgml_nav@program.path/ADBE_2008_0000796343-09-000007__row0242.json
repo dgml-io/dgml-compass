@@ -1,0 +1,91 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0242",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "is the weighted average useful life ( years ) for purchased technology greater than localization?",
+ "gold": "yes",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "ADBE_2008_0000796343-09-000007.outline.txt",
+ "doc_source": "ADBE_2008_0000796343-09-000007.dgml.xml",
+ "outline_chars": 99180,
+ "predicted_xpaths": [
+  "/chunk/ConsolidatedCashFlow/IntangibleAssetsPolicy/table/IntangibleAssetUsefulLife",
+  "/chunk/ConsolidatedCashFlow/IntangibleAssetsPolicy/IntangibleAssetsPolicy/IntangibleAssetUsefulLife"
+ ],
+ "r1_retried": true,
+ "r1_first_usage": {
+  "prompt_tokens": 25368,
+  "completion_tokens": 16000,
+  "total_tokens": 41368,
+  "audio_prompt_tokens": 0
+ },
+ "r1_reasoning_chars": 0,
+ "r1_usage": {
+  "prompt_tokens": 25386,
+  "completion_tokens": 16,
+  "total_tokens": 25402,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ConsolidatedCashFlow/IntangibleAssetsPolicy/table/IntangibleAssetUsefulLife",
+  "/chunk/ConsolidatedCashFlow/IntangibleAssetsPolicy/IntangibleAssetsPolicy/IntangibleAssetUsefulLife"
+ ],
+ "content_chars": 1827,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "1",
+ "reasoning": "We need to compare 4 vs 1. Answer yes. Provide evidence and program.",
+ "raw_content": "<evidence>4 | /chunk/ConsolidatedCashFlow/IntangibleAssetsPolicy/table/IntangibleAssetUsefulLife/Purchased technology\n1 | /chunk/ConsolidatedCashFlow/IntangibleAssetsPolicy/table/IntangibleAssetUsefulLife/Localization</evidence>\n<program>greater(4, 1)</program>\n<answer>true</answer>",
+ "r2_usage": {
+  "prompt_tokens": 825,
+  "completion_tokens": 103,
+  "total_tokens": 928,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 825,
+   "completion_tokens": 103,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "4",
+   "element": "chunk/ConsolidatedCashFlow/IntangibleAssetsPolicy/table/IntangibleAssetUsefulLife/Purchased technology",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "1",
+   "element": "chunk/ConsolidatedCashFlow/IntangibleAssetsPolicy/table/IntangibleAssetUsefulLife/Localization",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "greater(4, 1)",
+ "answer_model": "true",
+ "program_value": 1.0,
+ "elapsed_s": 35.16
+}

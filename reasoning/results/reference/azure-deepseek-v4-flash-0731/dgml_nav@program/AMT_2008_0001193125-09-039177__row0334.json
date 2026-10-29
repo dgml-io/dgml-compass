@@ -1,0 +1,55 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0334",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "what will be the balance of aggregate carrying value of long-term debt as of december 31 , 2009?",
+ "gold": "4331309",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "AMT_2008_0001193125-09-039177.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/NotesToFinancialStatementsContinuation/ConvertibleNoteDebtInstrument/table/LongTermDebtBalance",
+  "/chunk/NotesToFinancialStatementsContinuation/DocumentRunningHeader/LongTermObligations"
+ ],
+ "r1_reasoning_chars": 3964,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 24116,
+  "completion_tokens": 976,
+  "total_tokens": 25092,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/NotesToFinancialStatementsContinuation/ConvertibleNoteDebtInstrument/table/LongTermDebtBalance",
+  "/chunk/NotesToFinancialStatementsContinuation/DocumentRunningHeader/LongTermObligations"
+ ],
+ "content_chars": 8440,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer balance of aggregate carrying value of long-term debt as of Dec 31, 2009. Document excerpts show table as of Dec 31, 2008 and 2007. No 2009 data. The question asks 2009, but document only has 2008 and 2007. So NOT_FOUND. Need evidence? We can cite figures? But no 2009. We should output NOT_FOUND. But maybe \"will be\" future? The document is from 2008 annual report? It has 2008 and 2007. No 2009. So NOT_FOUND.",
+ "raw_content": "<evidence></evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2453,
+  "completion_tokens": 154,
+  "total_tokens": 2607,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 6.04,
+ "outline_source": "AMT_2008_0001193125-09-039177.outline.txt",
+ "outline_chars": 96437
+}

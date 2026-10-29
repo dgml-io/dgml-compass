@@ -1,0 +1,74 @@
+{
+ "id": "IP_2007_0001193125-08-042850__row0769",
+ "format": "markdown_pdf",
+ "key": "IP_2007_0001193125-08-042850",
+ "question": "in 2005 what was industrial packaging the profit margin",
+ "gold": "4.74%",
+ "finqa_id": "IP/2007/page_31.pdf-4",
+ "source_page": "page_31",
+ "ticker": "IP",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf/IP_2007_0001193125-08-042850.md",
+ "doc_chars": 437826,
+ "prompt_chars": 437970,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 437826,
+ "original_chars": 437826,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 103241,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 171,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.047351",
+ "reasoning": "We need answer: in 2005 what was industrial packaging the profit margin. Need find Industrial Packaging operating profit and sales for 2005. From document: Industry segment results table: Industrial Packaging 2005 Operating Profit $219, Sales $4,625 (in millions). Profit margin = 219/4625 = 0.04735... = 4.735%. Need answer value. Evidence: 219 | Industrial Packaging Operating Profit 2005; 4,625 | Industrial Packaging Sales 2005. Program divide(219, 4625). Final answer inside tags.",
+ "raw_content": "<evidence>219 | Industrial Packaging Operating Profit 2005\n4,625 | Industrial Packaging Sales 2005</evidence>\n<program>divide(219, 4625)</program>\n<answer>0.0474</answer>",
+ "usage": {
+  "prompt_tokens": 103540,
+  "completion_tokens": 171,
+  "total_tokens": 103711,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 103424
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.42,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "219",
+   "element": "Industrial Packaging Operating Profit 2005",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "4,625",
+   "element": "Industrial Packaging Sales 2005",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(219, 4625)",
+ "answer_model": "0.0474",
+ "program_value": 0.04735135135135135,
+ "docfinqa_row": 769
+}

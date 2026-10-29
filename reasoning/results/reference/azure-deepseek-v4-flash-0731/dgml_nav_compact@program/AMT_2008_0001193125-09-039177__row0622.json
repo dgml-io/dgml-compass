@@ -1,0 +1,72 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0622",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "what is the net change in the balance of liability related to employee separations during 2005?",
+ "gold": "-5781",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "AMT_2008_0001193125-09-039177.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/NotesToFinancialStatementsHeader/NoteNumber/ImpairmentsAndRestructuring/table/MergerRelatedLiabilityRollforward",
+  "/chunk/NotesToFinancialStatementsHeader/NoteNumber/ImpairmentsAndRestructuring/table",
+  "/chunk/NotesToFinancialStatementsHeader/NoteNumber/ImpairmentsAndRestructuring/table/MergerRelatedLiabilityRollforward/RestructuringLiabilityCategory",
+  "/chunk/NotesToFinancialStatementsHeader/NoteNumber/ImpairmentsAndRestructuring/table/MergerRelatedLiabilityRollforward/RestructuringLiability",
+  "/chunk/NotesToFinancialStatementsHeader/NoteNumber/ImpairmentsAndRestructuring/ImpairmentsAndRestructuringComponents"
+ ],
+ "r1_reasoning_chars": 3420,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 24110,
+  "completion_tokens": 882,
+  "total_tokens": 24992,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/NotesToFinancialStatementsHeader/NoteNumber/ImpairmentsAndRestructuring/table/MergerRelatedLiabilityRollforward",
+  "/chunk/NotesToFinancialStatementsHeader/NoteNumber/ImpairmentsAndRestructuring/table",
+  "/chunk/NotesToFinancialStatementsHeader/NoteNumber/ImpairmentsAndRestructuring/table/MergerRelatedLiabilityRollforward/RestructuringLiabilityCategory",
+  "/chunk/NotesToFinancialStatementsHeader/NoteNumber/ImpairmentsAndRestructuring/table/MergerRelatedLiabilityRollforward/RestructuringLiability",
+  "/chunk/NotesToFinancialStatementsHeader/NoteNumber/ImpairmentsAndRestructuring/ImpairmentsAndRestructuringComponents"
+ ],
+ "content_chars": 6642,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer net change in balance of liability related to employee separations during 2005. The table shows rollforward from Dec 31, 2005 to Dec 31, 2008. It starts with Liability as of December 31, 2005 = $20,963. There is no 2005 activity shown; the table covers 2006-2008. The question asks net change during 2005. The document likely doesn't have 2005 activity. However, maybe the liability as of Dec 31, 2005 is the ending balance after 2005 activity, but no beginning balance. The net change during 2005 would require beginning balance and activity. Not provided. So NOT_FOUND.\n\nBut let's check: The table header includes \"Liability as of December 31, 2005\" as first column. No 2005 expense/payments. So cannot compute net change during 2005. The question might be asking net change from beginning to end of 2005? But no beginning. So NOT_FOUND.\n\nNeed provide evidence figures? We can cite the liability as of Dec 31, 2005 = $20,963 but that's not enough. The answer NOT_FOUND.\n\nBut maybe the question is from a different context? The document excerpt only has rollforward starting at Dec 31, 2005. So no 2005 activity. So NOT_FOUND.\n\nI'll output NOT_FOUND.",
+ "raw_content": "<evidence>$ 20,963 | RestructuringLiability (Liability as of December 31, 2005)</evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2071,
+  "completion_tokens": 349,
+  "total_tokens": 2420,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 20,963",
+   "element": "RestructuringLiability (Liability as of December 31, 2005)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 11.22,
+ "outline_source": "AMT_2008_0001193125-09-039177.outline.txt",
+ "outline_chars": 96437
+}

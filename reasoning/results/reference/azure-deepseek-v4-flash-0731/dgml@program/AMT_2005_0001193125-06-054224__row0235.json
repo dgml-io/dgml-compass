@@ -1,0 +1,74 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0235",
+ "format": "dgml",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what was the percentage of the anticipated approximate tax refund in 2003 based on the nol $ 90.0 million .",
+ "gold": "23.7%",
+ "finqa_id": "AMT/2005/page_105.pdf-3",
+ "source_page": "page_105",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/dgml/AMT_2005_0001193125-06-054224.dgml.xml",
+ "doc_chars": 790211,
+ "prompt_chars": 790407,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 790211,
+ "original_chars": 790211,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 189615,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 208,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "23.6842%",
+ "reasoning": "We need answer question: \"what was the percentage of the anticipated approximate tax refund in 2003 based on the nol $ 90.0 million .\" Need find figures. Document mentions federal income tax refund claims relating to carry back of $380.0 million NOL, initially anticipated receiving approximately $90.0 million. Percentage = 90/380 = 23.6842%. Need answer percentage. Evidence: $380.0 million NOL, $90.0 million anticipated refund. Compute divide(90.0, 380.0) = 0.236842... as percentage 23.68%. Need final answer inside tags only value. Probably \"23.68%\" or \"23.7%\". Let's provide.",
+ "raw_content": "<evidence>\n$380.0 million | TaxCarryforwardAmount\n$90.0 million | MonetaryAmount\n</evidence>\n<program>divide(90.0, 380.0)</program>\n<answer>23.68%</answer>",
+ "usage": {
+  "prompt_tokens": 189928,
+  "completion_tokens": 208,
+  "total_tokens": 190136,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 189696
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 1.97,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$380.0 million",
+   "element": "TaxCarryforwardAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$90.0 million",
+   "element": "MonetaryAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(90.0, 380.0)",
+ "answer_model": "23.68%",
+ "program_value": 0.23684210526315788,
+ "docfinqa_row": 235
+}

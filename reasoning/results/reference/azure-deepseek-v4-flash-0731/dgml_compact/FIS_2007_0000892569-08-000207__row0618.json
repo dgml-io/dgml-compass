@@ -1,0 +1,53 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0618",
+ "format": "dgml_compact",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what percentage of total future minimum operating lease payments for leases with remaining terms greater than one year are due in 2010?",
+ "gold": "14%",
+ "finqa_id": "FIS/2007/page_94.pdf-4",
+ "source_page": "page_94",
+ "ticker": "FIS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml_compact/FIS_2007_0000892569-08-000207.dgml.txt",
+ "doc_chars": 463971,
+ "prompt_chars": 464195,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 463971,
+ "original_chars": 463971,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 101341,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 291,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "14.16%",
+ "reasoning": "We need to find total future minimum operating lease payments for leases with remaining terms greater than one year, and the amount due in 2010. From the document, in the notes (Note 16? Commitments and Contingencies, Leases), there is a table: Future minimum operating lease payments for leases with remaining terms greater than one year for each of the years in the five years ending December 31, 2012, and thereafter in the aggregate, are as follows (in thousands): 2008: 83,382; 2009: 63,060; 2010: 35,269; 2011: 21,598; 2012: 14,860; Thereafter: 30,869; Total: $249,038. So total = 249,038. 2010 = 35,269. Percentage = 35,269 / 249,038 * 100 ≈ 14.16%. Let's compute precisely: 35,269 / 249,038 = 0.14162... so 14.16%. The question asks \"what percentage of total future minimum operating lease payments for leases with remaining terms greater than one year are due in 2010?\" So answer is 14.16% (or 14.2%). We'll put the value inside <answer> tags.",
+ "raw_content": "<answer>14.16%</answer>",
+ "usage": {
+  "prompt_tokens": 101494,
+  "completion_tokens": 291,
+  "total_tokens": 101785,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 101376
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.39,
+ "answer_tag_found": true,
+ "docfinqa_row": 618
+}

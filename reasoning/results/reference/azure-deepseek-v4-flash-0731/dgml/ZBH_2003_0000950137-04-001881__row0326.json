@@ -1,0 +1,53 @@
+{
+ "id": "ZBH_2003_0000950137-04-001881__row0326",
+ "format": "dgml",
+ "key": "ZBH_2003_0000950137-04-001881",
+ "question": "what was the difference in operating profit for europe as a percentage of net sales between 2001 and 2003?",
+ "gold": "6.8%",
+ "finqa_id": "ZBH/2003/page_40.pdf-2",
+ "source_page": "page_40",
+ "ticker": "ZBH",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/dgml/ZBH_2003_0000950137-04-001881.dgml.xml",
+ "doc_chars": 492809,
+ "prompt_chars": 493004,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 492809,
+ "original_chars": 492809,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 114091,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 199,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "6.8",
+ "reasoning": "We need the operating profit margin for Europe in 2001 and 2003. From the document: \"Operating profit for Europe as a percentage of net sales increased to 24.4 percent in 2002 from 19.5 percent in 2001\" and later \"Operating profit for Europe as a percentage of net sales increased to 26.3 percent in 2003 from 24.4 percent in 2002.\" Actually the table shows: Europe 2003: 26.3%, 2002: 24.4%, 2001: 19.5%. So difference between 2001 and 2003 is 26.3 - 19.5 = 6.8 percentage points. The question asks \"difference in operating profit for europe as a percentage of net sales between 2001 and 2003\" - likely the absolute difference. So answer 6.8.",
+ "raw_content": "<answer>6.8</answer>",
+ "usage": {
+  "prompt_tokens": 114243,
+  "completion_tokens": 199,
+  "total_tokens": 114442,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 110592
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.01,
+ "answer_tag_found": true,
+ "docfinqa_row": 326
+}

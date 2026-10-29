@@ -1,0 +1,72 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0074",
+ "format": "markdown_pdf_plumber",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what portion of the adjusted consolidated cash flow for the twelve months ended december 31 , 2005 is related to tower cash flow?",
+ "gold": "105.0%",
+ "finqa_id": "AMT/2005/page_54.pdf-2",
+ "source_page": "page_54",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/markdown_pdf_plumber/AMT_2005_0001193125-06-054224.md",
+ "doc_chars": 493545,
+ "prompt_chars": 493763,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 493545,
+ "original_chars": 493545,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 121512,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 166,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.986804",
+ "reasoning": "We need answer portion of adjusted consolidated cash flow related to tower cash flow. Need figures: Tower Cash Flow for twelve months ended Dec 31 2005 = $524,804 (from table \"Less: Tower Cash Flow, for the twelve months ended December 31, 2005 (524,804)\"). Adjusted Consolidated Cash Flow = $531,822. Portion = 524,804 / 531,822. Compute.",
+ "raw_content": "<evidence>\n524,804 | Less: Tower Cash Flow, for the twelve months ended December 31, 2005\n531,822 | Adjusted Consolidated Cash Flow, for the twelve months ended December 31, 2005\n</evidence>\n<program>divide(524804, 531822)</program>\n<answer>0.9868</answer>",
+ "usage": {
+  "prompt_tokens": 121827,
+  "completion_tokens": 166,
+  "total_tokens": 121993,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.48,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "524,804",
+   "element": "Less: Tower Cash Flow, for the twelve months ended December 31, 2005",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "531,822",
+   "element": "Adjusted Consolidated Cash Flow, for the twelve months ended December 31, 2005",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(524804, 531822)",
+ "answer_model": "0.9868",
+ "program_value": 0.9868038554253115,
+ "docfinqa_row": 74
+}

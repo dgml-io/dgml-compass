@@ -1,0 +1,74 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0480",
+ "format": "dgml",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what percentage of the total cash purchase price net of cash acquired was represented by goodwill?",
+ "gold": "81%",
+ "finqa_id": "EW/2016/page_79.pdf-1",
+ "source_page": "page_79",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/dgml/EW_2016_0001099800-17-000008.dgml.xml",
+ "doc_chars": 575186,
+ "prompt_chars": 575373,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 575186,
+ "original_chars": 575186,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 133782,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 282,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "80.880975",
+ "reasoning": "We need answer question: \"what percentage of the total cash purchase price net of cash acquired was represented by goodwill?\" This likely refers to CardiAQ acquisition. In Note 7, purchase price allocation: Goodwill $258.9 million, Total cash purchase price net of cash acquired $320.1 million. Percentage = 258.9 / 320.1 * 100. Compute: 258.9/320.1 = 0.8088... = 80.88%. Need exact. Let's compute: 320.1 * 0.8 = 256.08, remainder 2.82, /320.1=0.00881, total 0.80881 = 80.88%. So answer 80.9% maybe. Use figures: Goodwill $258.9, Total cash purchase price net of cash acquired $320.1. Evidence lines. Program: multiply(divide(258.9, 320.1), 100). Final answer inside tags.",
+ "raw_content": "<evidence>\n258.9 | Goodwill (CardiAQ purchase price allocation)\n320.1 | Total cash purchase price, net of cash acquired (CardiAQ purchase price allocation)\n</evidence>\n<program>multiply(divide(258.9, 320.1), 100)</program>\n<answer>80.9</answer>",
+ "usage": {
+  "prompt_tokens": 134086,
+  "completion_tokens": 282,
+  "total_tokens": 134368,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 133888
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.98,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "258.9",
+   "element": "Goodwill (CardiAQ purchase price allocation)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "320.1",
+   "element": "Total cash purchase price, net of cash acquired (CardiAQ purchase price allocation)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(258.9, 320.1), 100)",
+ "answer_model": "80.9",
+ "program_value": 80.88097469540767,
+ "docfinqa_row": 480
+}

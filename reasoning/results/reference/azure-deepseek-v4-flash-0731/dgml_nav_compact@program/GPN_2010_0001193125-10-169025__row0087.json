@@ -1,0 +1,78 @@
+{
+ "id": "GPN_2010_0001193125-10-169025__row0087",
+ "key": "GPN_2010_0001193125-10-169025",
+ "question": "what was the total compensation expense for restricted stock recognized from 2008 to 2010",
+ "gold": "26.8",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "GPN_2010_0001193125-10-169025.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/NotesToFinancialStatementsContinuation/RestrictedStock",
+  "/chunk/NotesToFinancialStatementsContinuation/RestrictedStock/p"
+ ],
+ "r1_reasoning_chars": 3760,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 22302,
+  "completion_tokens": 959,
+  "total_tokens": 23261,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/NotesToFinancialStatementsContinuation/RestrictedStock",
+  "/chunk/NotesToFinancialStatementsContinuation/RestrictedStock/p"
+ ],
+ "content_chars": 8847,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "26.8",
+ "reasoning": "We need answer total compensation expense for restricted stock recognized from 2008 to 2010. Document says recognized compensation expense for restricted stock of $12.1 million, $9.0 million, and $5.7 million in years ended May 31, 2010, 2009 and 2008. So total = 12.1 + 9.0 + 5.7 = 26.8 million. Need answer value only. Evidence list figures.",
+ "raw_content": "<evidence>$12.1 million | EquityCompensationExpense\n$9.0 million | EquityCompensationExpense\n$5.7 million | EquityCompensationExpense</evidence>\n<program>add(add(12.1, 9.0), 5.7)</program>\n<answer>26.8</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2633,
+  "completion_tokens": 171,
+  "total_tokens": 2804,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$12.1 million",
+   "element": "EquityCompensationExpense",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$9.0 million",
+   "element": "EquityCompensationExpense",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$5.7 million",
+   "element": "EquityCompensationExpense",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "add(add(12.1, 9.0), 5.7)",
+ "answer_model": "26.8",
+ "program_value": 26.8,
+ "elapsed_s": 6.48,
+ "outline_source": "GPN_2010_0001193125-10-169025.outline.txt",
+ "outline_chars": 88725
+}

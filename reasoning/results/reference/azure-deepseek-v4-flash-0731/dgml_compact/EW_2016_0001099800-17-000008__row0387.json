@@ -1,0 +1,53 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0387",
+ "format": "dgml_compact",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what is the percent change in the fair value per share between 2014 and 2016?",
+ "gold": "163%",
+ "finqa_id": "EW/2016/page_94.pdf-4",
+ "source_page": "page_94",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/dgml_compact/EW_2016_0001099800-17-000008.dgml.txt",
+ "doc_chars": 387281,
+ "prompt_chars": 387447,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 387281,
+ "original_chars": 387281,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 83222,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 361,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "163.8%",
+ "reasoning": "The question asks for the percent change in the fair value per share between 2014 and 2016. This likely refers to the fair value per share of stock options granted, as shown in the Black-Scholes assumptions table.\n\nFrom the document:\n- Option Awards table: Fair value, per share: 2016: $31.00, 2015: $18.13, 2014: $11.75\n- ESPP table: Fair value, per share: 2016: $22.09, 2015: $15.59, 2014: $8.59\n\nThe question says \"the fair value per share\" - which one? The most prominent is the option awards fair value per share. Let me check the context. The question is ambiguous, but likely refers to the option awards fair value per share since that's the main \"fair value per share\" figure.\n\nPercent change from 2014 to 2016: (31.00 - 11.75) / 11.75 = 19.25 / 11.75 = 1.6383 = 163.83%\n\nLet me compute: 19.25 / 11.75 = 1.638297... so 163.83% increase.\n\nAlternatively, if it's ESPP: (22.09 - 8.59)/8.59 = 13.5/8.59 = 1.5716 = 157.16%\n\nThe question says \"the fair value per share\" - the option awards table has \"Fair value, per share\" explicitly. I'll go with that.\n\nAnswer: 163.8% (or approximately 164%).",
+ "raw_content": "<answer>163.8%</answer>",
+ "usage": {
+  "prompt_tokens": 83370,
+  "completion_tokens": 361,
+  "total_tokens": 83731,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 83200
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.43,
+ "answer_tag_found": true,
+ "docfinqa_row": 387
+}

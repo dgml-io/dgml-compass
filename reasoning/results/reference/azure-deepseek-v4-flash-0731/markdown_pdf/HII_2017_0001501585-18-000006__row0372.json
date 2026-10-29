@@ -1,0 +1,53 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0372",
+ "format": "markdown_pdf",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what is the combined number of equity compensation plans approved by security holders",
+ "gold": "4536446",
+ "finqa_id": "HII/2017/page_124.pdf-4",
+ "source_page": "page_124",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/markdown_pdf/HII_2017_0001501585-18-000006.md",
+ "doc_chars": 458663,
+ "prompt_chars": 458837,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 458663,
+ "original_chars": 458663,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 99639,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 398,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "2",
+ "reasoning": "We need to find the number of equity compensation plans approved by security holders. The document has a table \"Equity Compensation Plan Information\" with plan category. It shows \"Equity compensation plans approved by security holders\" with number of securities to be issued etc. But the question asks \"combined number of equity compensation plans approved by security holders\" - likely the count of plans, not securities. The table shows one row for approved plans, but there are two plans: 2011 and 2012. However, the table lists \"Equity compensation plans approved by security holders\" as a category, and the number of securities is 448,859. But the question asks \"combined number of equity compensation plans\" - meaning how many plans? The document mentions two plans: 2011 Plan and 2012 Plan. Both were approved by security holders? The 2011 Plan was approved by sole stockholder prior to spin-off, and 2012 Plan approved by stockholders. So combined number is 2. But the table shows one row for approved plans, but that's a category. The question might be asking for the number of plans, not securities. The text says \"The following table presents the equity securities available for issuance under our equity compensation plans\" and the table has a row for approved plans. But the question specifically says \"combined number of equity compensation plans approved by security holders\" - that is likely 2. However, the table shows \"Equity compensation plans approved by security holders\" as a single row, but that doesn't give a count. The document text says \"the 2011 Plan\" and \"the 2012 Plan\" both approved. So answer is 2.\n\nBut let's check if there are any other plans? The table also has \"Equity compensation plans not approved by security holders\" with zero. So combined number of approved plans is 2.\n\nThus answer: 2.",
+ "raw_content": "<answer>2</answer>",
+ "usage": {
+  "prompt_tokens": 99781,
+  "completion_tokens": 398,
+  "total_tokens": 100179,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 99584
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.62,
+ "answer_tag_found": true,
+ "docfinqa_row": 372
+}

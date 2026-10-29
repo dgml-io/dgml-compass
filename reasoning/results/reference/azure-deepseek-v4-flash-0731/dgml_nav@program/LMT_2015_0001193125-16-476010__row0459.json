@@ -1,0 +1,71 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0459",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was the percentage change in total long-term debt net from 2014 to 2015?",
+ "gold": "148%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "LMT_2015_0001193125-16-476010.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/ConsolidatedBalanceSheets"
+ ],
+ "r1_reasoning_chars": 3671,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 28886,
+  "completion_tokens": 900,
+  "total_tokens": 29786,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 28672
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/ConsolidatedBalanceSheets"
+ ],
+ "content_chars": 188508,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "132.904591",
+ "reasoning": "We need percentage change in total long-term debt net from 2014 to 2015. From balance sheet: Long-term debt, net: 2015 = 14,305; 2014 = 6,142. Percentage change = (14,305 - 6,142)/6,142 * 100. Compute: difference = 8,163. Divide by 6,142 = 1.329... so 132.9% increase. Need answer as value, probably percentage. The question asks \"what was the percentage change\" so answer should be number, maybe 132.9. We'll compute exactly: 8163/6142 = 1.329... Let's calculate: 6142*1.33 = 8168.86, so slightly less than 1.33. 8163/6142 = 1.329... Let's do precise: 6142*1.329 = 8162.718, so 1.32904. So 132.904%. We'll output 132.9 or 132.90. The program: divide(subtract(14305, 6142), 6142) gives 1.329... but question asks percentage change, so multiply by 100. The program should output the percentage value? The instruction: \"Give your final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what was the percentage change\" so answer should be a number, likely 132.9. The program should compute the percentage change as a number, e.g., multiply(divide(subtract(14305, 6142), 6142), 100). We'll do that.\n\nEvidence: 14,305 | Long-term debt, net (2015); 6,142 | Long-term debt, net (2014).",
+ "raw_content": "<evidence>14,305 | Long-term debt, net (2015)\n6,142 | Long-term debt, net (2014)</evidence>\n<program>multiply(divide(subtract(14305, 6142), 6142), 100)</program>\n<answer>132.9</answer>",
+ "r2_usage": {
+  "prompt_tokens": 43283,
+  "completion_tokens": 467,
+  "total_tokens": 43750,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "14,305",
+   "element": "Long-term debt, net (2015)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6,142",
+   "element": "Long-term debt, net (2014)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(14305, 6142), 6142), 100)",
+ "answer_model": "132.9",
+ "program_value": 132.90459133832627,
+ "elapsed_s": 8.27,
+ "outline_source": "LMT_2015_0001193125-16-476010.outline.txt",
+ "outline_chars": 116705
+}

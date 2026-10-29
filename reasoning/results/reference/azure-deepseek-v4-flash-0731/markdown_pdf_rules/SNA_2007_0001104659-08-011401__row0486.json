@@ -1,0 +1,53 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0486",
+ "format": "markdown_pdf_rules",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what is the roi in snap-on if the investment was made at the end of 2005 and sold at the end of 2007?",
+ "gold": "34.8%",
+ "finqa_id": "SNA/2007/page_29.pdf-2",
+ "source_page": "page_29",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_rules/SNA_2007_0001104659-08-011401.md",
+ "doc_chars": 336027,
+ "prompt_chars": 336217,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 336027,
+ "original_chars": 336027,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 81193,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 659,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "34.76%",
+ "reasoning": "We need ROI from end of 2005 to end of 2007. Need stock prices. From five-year stock performance graph: fiscal year end 2005 Snap-on value 146.97 (assuming $100 invested Dec 31, 2002). End 2007 value 198.05. So ROI = (198.05 - 146.97)/146.97 = 51.08/146.97 = 0.3476 = 34.76%. But question says \"investment was made at the end of 2005 and sold at the end of 2007\" - likely stock price? The graph gives total shareholder return assuming dividends reinvested. So ROI = 34.76%. Alternatively use per share prices: fiscal year-end per share price from selected data: 2005 $37.56? Wait table shows 2005 per share price $37.56? Actually in five-year data: fiscal year-end per share price: 2007 $48.13, 2006 $47.64, 2005 $37.56? Let's check: The table has columns 2007, 2006, 2005, 2004, 2003. It shows \"Fiscal year-end per share price\" row: 2007 $48.13, 2006 $47.64, 2005 $37.56? Actually the row: \"Fiscal year-end per share price\" values: 48.13, 47.64, 37.56? Wait the table shows: 2007 $48.13, 2006 $47.64, 2005 $37.56? Let's see: The row after \"Shareholders' equity per basic share\" is \"Fiscal year-end per share price\" with values: 48.13, 47.64, 37.56? Actually the numbers: 2007 48.13, 2006 47.64, 2005 37.56? But the graph shows 2005 146.97 and 2007 198.05. That's total return with dividends reinvested. If just price appreciation: (48.13-37.56)/37.56 = 10.57/37.56 = 0.2814 = 28.14%. But question says \"investment\" likely total return? The graph is total shareholder return. The question asks \"roi\" - return on investment. Typically ROI could be price appreciation plus dividends. The graph explicitly gives cumulative total shareholder return assuming dividends reinvested. So use that. End 2005 value 146.97, end 2007 198.05. ROI = (198.05-146.97)/146.97 = 34.76%. But check if end of 2005 is December 31, 2005, and end of 2007 is December 31, 2007. The graph uses fiscal year end assumed Dec 31. So answer 34.76%. Or maybe they want percentage. I'll put 34.76% inside answer.",
+ "raw_content": "<answer>34.76%</answer>",
+ "usage": {
+  "prompt_tokens": 81350,
+  "completion_tokens": 659,
+  "total_tokens": 82009,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 81152
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 6.67,
+ "answer_tag_found": true,
+ "docfinqa_row": 486
+}

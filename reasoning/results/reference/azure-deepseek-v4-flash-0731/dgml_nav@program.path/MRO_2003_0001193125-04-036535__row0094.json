@@ -1,0 +1,68 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0094",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "by what percentage did protect carrying values of excess inventories increase from 2002 to 2003?",
+ "gold": "39.0%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "MRO_2003_0001193125-04-036535.outline.txt",
+ "doc_source": "MRO_2003_0001193125-04-036535.dgml.xml",
+ "outline_chars": 159239,
+ "predicted_xpaths": [
+  "/chunk/NotesToFinancial/InventoryComposition",
+  "/chunk/NotesToFinancial/InventoryComposition/table"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 4140,
+ "r1_usage": {
+  "prompt_tokens": 40527,
+  "completion_tokens": 1057,
+  "total_tokens": 41584,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/NotesToFinancial/InventoryComposition",
+  "/chunk/NotesToFinancial/InventoryComposition/table"
+ ],
+ "content_chars": 22558,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer question. Need find relevant figures. The question: \"by what percentage did protect carrying values of excess inventories increase from 2002 to 2003?\" Wording \"protect carrying values of excess inventories\" likely typo? Maybe \"product carrying values of excess inventories\"? Need identify in document. The provided excerpts include inventory composition table with values for 2003 and 2002. But \"excess inventories\" maybe not in excerpt. There is no mention of \"excess inventories\" in the given regions. The inventory table shows total inventories, not excess. The question might be from a different part of document not provided. We need check if any figure about \"excess inventories\" appears. The excerpt has \"Liquid hydrocarbons and natural gas\", \"Refined products and merchandise\", \"Supplies and sundry items\", total. No \"excess\". Also \"protect carrying values\" maybe \"product carrying values\"? Hmm.\n\nLet's read question carefully: \"by what percentage did protect carrying values of excess inventories increase from 2002 to 2003?\" Could be \"by what percentage did product carrying values of excess inventories increase...\"? Actually \"protect\" might be \"product\" OCR error. \"excess inventories\" might be a line item in inventory note. But in the provided region, there is no \"excess inventories\". The inventory table has categories. Maybe \"excess inventories\" refers to \"Supplies and sundry items\"? No.\n\nMaybe the question is about \"excess inventories\" in a different note, e.g., \"Excess of current acquisition costs over LIFO inventory values\" - the LIFO reserve. The text says \"Current acquisition costs were estimated to exceed the above inventory values at December 31, 2003, by approximately $655 million.\" That is the excess of current costs over carrying values (LIFO). But question asks \"by what percentage did protect carrying values of excess inventories increase from 2002 to 2003?\" Hmm.\n\nLet's parse: \"protect carrying values of excess inventories\" maybe \"product carrying values of excess inventories\"? Actually \"excess inventories\" could be \"excess of inventories over LIFO cost\"? The LIFO reserve is the excess of current cost over LIFO carrying value. The question might ask: \"by what percentage did the carrying values of excess inventories increase from 2002 to 2003?\" But \"excess inventories\" not a standard term.\n\nMaybe the question is from a dataset where the answer is computed from inventory table: total inventories decreased from 1,984 to 1,953, so percentage change is negative. But question says \"increase\" - maybe they ask \"by what percentage did ... increase\" and the answer could be negative? But \"increase\" implies positive.\n\nLet's look at the inventory table: 2003 total $1,953, 2002 $1,984. That's a decrease of 31, percentage change = (1953-1984)/1984 = -1.56%. Not an increase.\n\nMaybe \"excess inventories\" refers to \"Supplies and sundry items\" which increased from 109 to 128, an increase of 19, percentage = 19/109 = 17.43%. But that's not \"excess inventories\".\n\nMaybe \"protect carrying values\" is \"product carrying values\" - \"product\" could be \"refined products and merchandise\" which decreased from 1,186 to 1,151, decrease.\n\nMaybe \"excess inventories\" is a line item in a different table not shown. The question might be from a financial statement where there is a line \"Excess inventories\" under \"Inventories\" with carrying values. But the provided excerpt does not contain that. The region is \"InventoryComposition\" and includes only the table. There is no \"excess\" line.\n\nLet's search the text for \"excess\" - only \"exceed\" in the LIFO sentence. \"Current acquisition costs were estimated to exceed the above inventory values at December 31, 2003, by approximately $655 million.\" That is the excess of current cost over carrying value. For 2002, no such figure given. So cannot compute percentage change.\n\nMaybe the question is \"by what percentage did product carrying values of excess inventories increase from 2002 to 2003?\" Could be \"product\" as in \"refined products and merchandise\" and \"excess inventories\" maybe \"excess\" is a typo for \"excess\" no.\n\nLet's consider the possibility that the question is about \"excess inventories\" in the context of LIFO liquidation? No.\n\nGiven the document excerpt, there is no figure for \"excess inventories\" carrying values for both years. The only inventory values are the categories. The question asks \"protect carrying values\" - maybe \"protect\" is \"product\" and \"excess\" is \"excess\" but no.\n\nMaybe the answer is NOT_FOUND because the document does not contain enough information. But we need be careful: The question might be a trick: \"by what percentage did protect carrying values of excess inventories increase from 2002 to 2003?\" The word \"protect\" might be \"product\" and \"excess inventories\" might be \"excess of inventories over LIFO\" i.e., the LIFO reserve. The LIFO reserve at 2003 is $655 million. At 2002, not given. So cannot compute.\n\nAlternatively, maybe \"excess inventories\" is a line in the balance sheet not in the excerpt. The excerpt only has note 12. The question might be from a different part of the 10-K. Since the provided regions are selected because they should contain the answer, but they don't, we should output NOT_FOUND.\n\nBut let's double-check the inventory table: It has \"Supplies and sundry items\" which could be considered \"excess inventories\"? No.\n\nMaybe \"protect carrying values\" is \"product carrying values\" and \"excess inventories\" is \"excess of inventories\" meaning the LIFO reserve. The LIFO reserve is the excess of current cost over LIFO carrying value. The text says \"Current acquisition costs were estimated to exceed the above inventory values at December 31, 2003, by approximately $655 million.\" That is the excess at 2003. For 2002, no such figure. So no.\n\nThus answer NOT_FOUND.\n\nBut the instruction says \"Reason briefly - at most 150 words - then answer.\" We need provide evidence and program. Since no figures, we can state not found. But we need list evidence? The instruction says \"Before the answer, list every figure you use inside <evidence></evidence>\". If we use none, we can leave empty? Probably we can say no figures. But we need provide program? If not found, maybe no program. The benchmark expects either a value or NOT_FOUND. We'll output NOT_FOUND.\n\nLet's craft final with evidence empty and program maybe not needed. But the instruction says \"Then give the computation inside <program></program> as nested calls over the figures as printed\". If not found, we can omit or put NOT_FOUND. I'll put <program>NOT_FOUND</program>? Actually the program is executed, so if not found, maybe no program. But to be safe, I'll put <program>NOT_FOUND</program>? The instruction says \"If the document does not contain enough information, put NOT_FOUND inside the tags.\" That refers to the answer tags. For program, we can leave empty? I'll just put <program></program> with nothing.\n\nBut we need evidence: \"list every figure you use\" - we use none. So <evidence></evidence>.\n\nLet's write final.",
+ "raw_content": "<evidence></evidence>\n<program></program>\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 5978,
+  "completion_tokens": 1646,
+  "total_tokens": 7624,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 5978,
+   "completion_tokens": 1646,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": null,
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 12.95
+}

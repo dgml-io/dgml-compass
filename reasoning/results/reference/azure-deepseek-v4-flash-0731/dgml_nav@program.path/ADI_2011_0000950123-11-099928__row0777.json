@@ -1,0 +1,83 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0777",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what was the percentage increase of total deferred compensation plan investments from 2010 to 2011?\\\\n",
+ "gold": "204%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "ADI_2011_0000950123-11-099928.outline.txt",
+ "doc_source": "ADI_2011_0000950123-11-099928.dgml.xml",
+ "outline_chars": 98954,
+ "predicted_xpaths": [
+  "/chunk/NotesToFinancial/DeferredCompensationPlanInvestments",
+  "/chunk/NotesToFinancial/DeferredCompensationPlanInvestments/table"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 1125,
+ "r1_usage": {
+  "prompt_tokens": 24732,
+  "completion_tokens": 293,
+  "total_tokens": 25025,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/NotesToFinancial/DeferredCompensationPlanInvestments",
+  "/chunk/NotesToFinancial/DeferredCompensationPlanInvestments/table"
+ ],
+ "content_chars": 70503,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "203.912543",
+ "reasoning": "We need answer percentage increase from 2010 to 2011 total deferred comp plan investments. From table: 2011 total $26,410, 2010 $8,690. Percentage increase = (26410-8690)/8690 *100 = 17720/8690 = 2.039... = 203.9%. Need compute. Use figures as printed. Evidence: $ 26,410 and $ 8,690. Program: multiply(divide(subtract(26410, 8690), 8690), 100). Need answer maybe 203.9%. Let's compute exactly: 17720/8690 = 2.039125... *100 = 203.9125%. So answer 203.9.",
+ "raw_content": "<evidence>$ 26,410 | /chunk/NotesToFinancial/DeferredCompensationPlanInvestments/table/DeferredCompensationPlanInvestments/InvestmentAmount\n$ 8,690 | /chunk/NotesToFinancial/DeferredCompensationPlanInvestments/table/DeferredCompensationPlanInvestments/InvestmentAmount</evidence>\n<program>multiply(divide(subtract(26410, 8690), 8690), 100)</program>\n<answer>203.9</answer>",
+ "r2_usage": {
+  "prompt_tokens": 17152,
+  "completion_tokens": 271,
+  "total_tokens": 17423,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 17152,
+   "completion_tokens": 271,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "$ 26,410",
+   "element": "chunk/NotesToFinancial/DeferredCompensationPlanInvestments/table/DeferredCompensationPlanInvestments/InvestmentAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$ 8,690",
+   "element": "chunk/NotesToFinancial/DeferredCompensationPlanInvestments/table/DeferredCompensationPlanInvestments/InvestmentAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(26410, 8690), 8690), 100)",
+ "answer_model": "203.9",
+ "program_value": 203.91254315304948,
+ "elapsed_s": 5.75
+}

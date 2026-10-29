@@ -1,0 +1,50 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0089",
+ "format": "dgml_compact",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "pursuant to the agreement , on march 30 , 2012 , what was the approximate price for each site the company purchased in thousands",
+ "gold": "189625",
+ "finqa_id": "AMT/2012/page_118.pdf-2",
+ "source_page": "page_118",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/dgml_compact/AMT_2012_0001193125-13-077821.dgml.txt",
+ "doc_chars": 684819,
+ "prompt_chars": 685036,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 684819,
+ "original_chars": 684819,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 147020,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 278,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "189.625",
+ "reasoning": "We need to find the price per site for the Vivo acquisition on March 30, 2012. The document says: \"On March 30, 2012, the Company purchased 800 communications sites for an aggregate purchase price of $151.7 million.\" So price per site = 151.7 million / 800 = 0.189625 million = 189.625 thousand. The question asks \"approximate price for each site the company purchased in thousands\". So answer is approximately 190 thousand. But let's compute exactly: 151.7/800 = 0.189625 million = 189.625 thousand. So answer 189.625 or approximately 190. The question says \"approximate price\" so we can give 190. But we should give the value in thousands. The answer should be a number. I'll put 189.625 or 190. Since it says approximate, I'll put 190. But let's check if there is any other info. The document says \"for an aggregate purchase price of $151.7 million\" for 800 sites. So per site = 151.7/800 = 0.189625 million = 189.625 thousand. So answer 189.625. I'll put 189.625.",
+ "raw_content": "<answer>189.625</answer>",
+ "usage": {
+  "prompt_tokens": 147176,
+  "completion_tokens": 278,
+  "total_tokens": 147454,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.72,
+ "answer_tag_found": true,
+ "docfinqa_row": 89
+}

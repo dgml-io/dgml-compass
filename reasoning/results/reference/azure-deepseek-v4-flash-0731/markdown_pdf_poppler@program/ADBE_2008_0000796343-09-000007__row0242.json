@@ -1,0 +1,74 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0242",
+ "format": "markdown_pdf_poppler",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "is the weighted average useful life ( years ) for purchased technology greater than localization?",
+ "gold": "yes",
+ "finqa_id": "ADBE/2008/page_74.pdf-2",
+ "source_page": "page_74",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_poppler/ADBE_2008_0000796343-09-000007.md",
+ "doc_chars": 561420,
+ "prompt_chars": 561606,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 561420,
+ "original_chars": 561420,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 96795,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 143,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1",
+ "reasoning": "We need answer question: is weighted average useful life for purchased technology greater than localization? From Note 1: table shows weighted average useful life (years): Purchased technology 4, Localization 1. So yes. Need provide evidence and program. Final answer inside <answer> tags with value only? The question asks \"is ... greater than ...?\" So answer yes/no. Probably \"Yes\". Need include evidence and program.",
+ "raw_content": "<evidence>\n4 | Weighted Average Useful Life (Years) - Purchased technology\n1 | Weighted Average Useful Life (Years) - Localization\n</evidence>\n\n<program>greater(4, 1)</program>\n\n<answer>Yes</answer>",
+ "usage": {
+  "prompt_tokens": 97099,
+  "completion_tokens": 143,
+  "total_tokens": 97242,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 6.67,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "4",
+   "element": "Weighted Average Useful Life (Years) - Purchased technology",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "1",
+   "element": "Weighted Average Useful Life (Years) - Localization",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "greater(4, 1)",
+ "answer_model": "Yes",
+ "program_value": 1.0,
+ "docfinqa_row": 242
+}

@@ -1,0 +1,53 @@
+{
+ "id": "APD_2016_0001193125-16-773346__row0554",
+ "format": "dgml",
+ "key": "APD_2016_0001193125-16-773346",
+ "question": "considering the years 2014-2016 , what was the average cash paid for interest?",
+ "gold": "117",
+ "finqa_id": "APD/2016/page_96.pdf-1",
+ "source_page": "page_96",
+ "ticker": "APD",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/dgml/APD_2016_0001193125-16-773346.dgml.xml",
+ "doc_chars": 924924,
+ "prompt_chars": 925091,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 924924,
+ "original_chars": 924924,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 222653,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 119,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "117.0",
+ "reasoning": "We need average cash paid for interest over 2014-2016. From document: \"Cash paid for interest, net of amounts capitalized, was $121.1 in 2016, $97.5 in 2015, and $132.4 in 2014.\" So average = (121.1+97.5+132.4)/3 = 351/3 = 117.0. Answer in millions? The question asks \"average cash paid for interest\" - likely in millions. Provide value.",
+ "raw_content": "<answer>117.0</answer>",
+ "usage": {
+  "prompt_tokens": 222800,
+  "completion_tokens": 119,
+  "total_tokens": 222919,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 222720
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.98,
+ "answer_tag_found": true,
+ "docfinqa_row": 554
+}

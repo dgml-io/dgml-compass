@@ -1,0 +1,72 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0108",
+ "format": "dgml_compact",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "what is the percent of the square feet in owned facilities in other countries?",
+ "gold": "35.8%",
+ "finqa_id": "INTC/2013/page_29.pdf-3",
+ "source_page": "page_29",
+ "ticker": "INTC",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/dgml_compact/INTC_2013_0000050863-14-000020.dgml.txt",
+ "doc_chars": 546358,
+ "prompt_chars": 546525,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 546358,
+ "original_chars": 546358,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 118559,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 879,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "35.83691",
+ "reasoning": "We need to find square feet in owned facilities in other countries and total owned facilities, then compute percentage. From document: \"Owned facilities1 | 29.9 | 16.7 | 46.6\" under table (Square Feet in Millions) | United States | Other Countries | Total. So owned facilities in other countries = 16.7, total owned = 46.6. Percent = 16.7/46.6 * 100. Compute: 16.7/46.6 = 0.358369... *100 = 35.8369... So about 35.8%. Need exact? The question asks \"what is the percent\" - likely answer as number. We'll compute precisely: 16.7/46.6 = 0.3583690987... *100 = 35.8369... So 35.84% if rounding to two decimals. But maybe they want exact fraction? The answer should be a value. We'll provide 35.84% or 35.8%? The document gives numbers to one decimal, so maybe 35.8%. But we can compute exactly: 16.7/46.6 = 167/466 = 0.358369... So 35.8369%. We'll put 35.84% or 35.8%? The question says \"percent\" - we can give 35.8% or 35.84%. I'll compute: 16.7/46.6 = 0.358369... *100 = 35.8369... So 35.84% if rounding to two decimals. But the input numbers have one decimal, so maybe 35.8% is fine. I'll provide 35.84% as more precise. But the instruction says \"Give your final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what is the percent\" - so we can give number without %? Usually they want the number. I'll give 35.84. But to be safe, I'll give 35.84%? The instruction says no units unless asked. The question asks \"percent\" so we can include %? It says \"no explanation or units unless the question asks for them.\" The question asks \"what is the percent\" - so the unit is percent, so we can include %? But typically they want just the number. I'll give 35.84. But let's see: The evidence: 16.7 | Owned facilities (Other Countries) and 46.6 | Owned facilities (Total). So program: divide(16.7, 46.6) * 100? But the program should be nested calls. We can do multiply(divide(16.7, 46.6), 100). But the program is executed by benchmark, so we need to use the figures as printed. The figures are 16.7 and 46.6. So program: multiply(divide(16.7, 46.6), 100). That gives 35.8369... So answer 35.84 (rounded). I'll put 35.84. But maybe they want exact fraction? I'll put 35.84. Let's check if there is any other interpretation: \"owned facilities in other countries\" - the table has \"Owned facilities1 | 29.9 | 16.7 | 46.6\" where columns are United States, Other Countries, Total. So yes.\n\nI'll provide evidence lines: 16.7 | Owned facilities (Other Countries) and 46.6 | Owned facilities (Total). But the element names? The document has \"FacilitySquareFootage\" for the table rows. The row label is \"Owned facilities1\". So I'll use that.\n\nNow answer.",
+ "raw_content": "<evidence>\n16.7 | Owned facilities1 (Other Countries)\n46.6 | Owned facilities1 (Total)\n</evidence>\n<program>multiply(divide(16.7, 46.6), 100)</program>\n<answer>35.84</answer>",
+ "usage": {
+  "prompt_tokens": 118861,
+  "completion_tokens": 879,
+  "total_tokens": 119740,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.75,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "16.7",
+   "element": "Owned facilities1 (Other Countries)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "46.6",
+   "element": "Owned facilities1 (Total)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(16.7, 46.6), 100)",
+ "answer_model": "35.84",
+ "program_value": 35.83690987124463,
+ "docfinqa_row": 108
+}

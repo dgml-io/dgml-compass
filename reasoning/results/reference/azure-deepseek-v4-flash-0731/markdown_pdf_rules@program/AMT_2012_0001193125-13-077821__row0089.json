@@ -1,0 +1,72 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0089",
+ "format": "markdown_pdf_rules",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "pursuant to the agreement , on march 30 , 2012 , what was the approximate price for each site the company purchased in thousands",
+ "gold": "189625",
+ "finqa_id": "AMT/2012/page_118.pdf-2",
+ "source_page": "page_118",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/markdown_pdf_rules/AMT_2012_0001193125-13-077821.md",
+ "doc_chars": 528023,
+ "prompt_chars": 528240,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 528023,
+ "original_chars": 528023,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 118377,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 353,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.189625",
+ "reasoning": "We need answer question: \"pursuant to the agreement , on march 30 , 2012 , what was the approximate price for each site the company purchased in thousands\"\n\nNeed find in document. There is Brazil—Vivo Acquisition: \"On March 30, 2012, the Company entered into a definitive agreement to purchase up to 1,500 towers from Vivo S.A. (“Vivo”). Pursuant to the agreement, on March 30, 2012, the Company purchased 800 communications sites for an aggregate purchase price of $151.7 million.\" So price per site = 151.7 million / 800 = 0.189625 million = 189.625 thousand. Approximate price per site in thousands = 189.625, maybe round to 190. Need answer value. Evidence: \"800 communications sites\" and \"$151.7 million\". Compute divide(151.7, 800) = 0.189625 million per site, in thousands = 189.625. But question asks \"approximate price for each site ... in thousands\" likely 190. Need provide exact? Let's compute: 151.7 million / 800 = 0.189625 million = 189.625 thousand. So answer 189.625. But maybe they want approximate, so 190. The instruction: give final answer inside tags containing only value. We'll put 189.625. Need evidence lines.",
+ "raw_content": "<evidence>\n800 communications sites | Brazil—Vivo Acquisition\n$151.7 million | Brazil—Vivo Acquisition\n</evidence>\n<program>divide(151.7, 800)</program>\n<answer>189.625</answer>",
+ "usage": {
+  "prompt_tokens": 118692,
+  "completion_tokens": 353,
+  "total_tokens": 119045,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 13.15,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "800 communications sites",
+   "element": "Brazil—Vivo Acquisition",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$151.7 million",
+   "element": "Brazil—Vivo Acquisition",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(151.7, 800)",
+ "answer_model": "189.625",
+ "program_value": 0.189625,
+ "docfinqa_row": 89
+}

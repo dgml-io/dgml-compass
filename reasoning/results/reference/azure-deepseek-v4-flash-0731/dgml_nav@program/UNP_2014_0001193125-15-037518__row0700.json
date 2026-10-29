@@ -1,0 +1,70 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0700",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "what was the percentage change in fuel surcharge program freight revenue from 2012 to 2013?",
+ "gold": "0%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "UNP_2014_0001193125-15-037518.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/ManagementDiscussionAndAnalysis/ResultsOfOperations/OperatingRevenues/FuelSurchargeRevenue",
+  "/chunk/ManagementDiscussionAndAnalysis/Executive/OperatingResults/ol/FreightRevenue/FuelSurchargeChangePercent"
+ ],
+ "r1_reasoning_chars": 2900,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 19891,
+  "completion_tokens": 689,
+  "total_tokens": 20580,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ManagementDiscussionAndAnalysis/ResultsOfOperations/OperatingRevenues/FuelSurchargeRevenue",
+  "/chunk/ManagementDiscussionAndAnalysis/Executive/OperatingResults/ol/FreightRevenue/FuelSurchargeChangePercent"
+ ],
+ "content_chars": 4909,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "0.0000%",
+ "reasoning": "We need percentage change from 2012 to 2013. Document says fuel surcharge revenues: 2014 $2.8B, 2013 $2.6B, 2012 $2.6B. So 2013 vs 2012: (2.6-2.6)/2.6 = 0%. Also text says \"Fuel surcharge in 2013 essentially was flat versus 2012\". So answer 0%. Need evidence figures: $2.6 billion for 2013, $2.6 billion for 2012. Element names? The region has FuelSurchargeRevenue element with FinancialAmounts. We'll cite. Program: divide(subtract(2.6, 2.6), 2.6) = 0. But percentage change is 0%. Need output as value? Probably 0% or 0. The question asks percentage change, so answer 0%. In tags.",
+ "raw_content": "<evidence>$2.6 billion | FinancialAmount (2013 fuel surcharge revenue)\n$2.6 billion | FinancialAmount (2012 fuel surcharge revenue)</evidence>\n<program>divide(subtract(2.6, 2.6), 2.6)</program>\n<answer>0%</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1392,
+  "completion_tokens": 270,
+  "total_tokens": 1662,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$2.6 billion",
+   "element": "FinancialAmount (2013 fuel surcharge revenue)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$2.6 billion",
+   "element": "FinancialAmount (2012 fuel surcharge revenue)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(2.6, 2.6), 2.6)",
+ "answer_model": "0%",
+ "program_value": 0.0,
+ "elapsed_s": 5.32,
+ "outline_source": "UNP_2014_0001193125-15-037518.outline.txt",
+ "outline_chars": 77599
+}

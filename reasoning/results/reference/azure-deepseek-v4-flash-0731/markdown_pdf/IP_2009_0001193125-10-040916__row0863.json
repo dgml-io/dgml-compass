@@ -1,0 +1,53 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0863",
+ "format": "markdown_pdf",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "what was the sum of the temporary differences between 2007 and 2009 in billions",
+ "gold": "9.8",
+ "finqa_id": "IP/2009/page_84.pdf-4",
+ "source_page": "page_84",
+ "ticker": "IP",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/markdown_pdf/IP_2009_0001193125-10-040916.md",
+ "doc_chars": 445162,
+ "prompt_chars": 445330,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 445162,
+ "original_chars": 445162,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 104101,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 529,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "9.8",
+ "reasoning": "We need answer question: \"what was the sum of the temporary differences between 2007 and 2009 in billions\". Need find relevant figures. Document mentions deferred taxes not provided for temporary differences of approximately $3.5 billion, $2.6 billion and $3.7 billion as of December 31, 2009, 2008 and 2007, respectively. Wait text: \"Deferred income taxes are not provided for temporary differences of approximately $3.5 billion, $2.6 billion and $3.7 billion as of December 31, 2009, 2008 and 2007, respectively.\" Actually in Note 10: \"Deferred income taxes are not provided for temporary differences of approximately $3.5 billion, $2.6 billion and $3.7 billion as of December 31, 2009, 2008 and 2007, respectively.\" So temporary differences: 2009 $3.5B, 2008 $2.6B, 2007 $3.7B. Sum between 2007 and 2009? \"between 2007 and 2009\" likely sum of 2007, 2008, 2009? Or difference between 2007 and 2009? The question: \"what was the sum of the temporary differences between 2007 and 2009 in billions\" Could mean sum of the temporary differences for years 2007, 2008, 2009? Or sum of differences between 2007 and 2009? Wording \"sum of the temporary differences between 2007 and 2009\" ambiguous. Likely they want sum of the amounts for those years: 3.5 + 2.6 + 3.7 = 9.8 billion. But \"between 2007 and 2009\" might mean the difference between 2007 and 2009? The phrase \"sum of the temporary differences\" suggests add them. Let's parse: \"what was the sum of the temporary differences between 2007 and 2009 in billions\" Could be \"temporary differences\" are the amounts not provided for. Sum across years 2007-2009 = 3.5+2.6+3.7=9.8. But check if \"between 2007 and 2009\" means from 2007 to 2009 inclusive. Yes.\n\nNeed answer only value inside tags. So <answer>9.8</answer>",
+ "raw_content": "<answer>9.8</answer>",
+ "usage": {
+  "prompt_tokens": 104248,
+  "completion_tokens": 529,
+  "total_tokens": 104777,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 104192
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.09,
+ "answer_tag_found": true,
+ "docfinqa_row": 863
+}

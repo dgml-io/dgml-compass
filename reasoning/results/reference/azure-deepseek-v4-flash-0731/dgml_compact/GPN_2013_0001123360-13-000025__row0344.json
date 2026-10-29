@@ -1,0 +1,50 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0344",
+ "format": "dgml_compact",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what was the average unrecognized compensation cost related to unvested restricted stock per year?",
+ "gold": "$ 13.4 million",
+ "finqa_id": "GPN/2013/page_87.pdf-2",
+ "source_page": "page_87",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/dgml_compact/GPN_2013_0001123360-13-000025.dgml.txt",
+ "doc_chars": 440691,
+ "prompt_chars": 440878,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 440691,
+ "original_chars": 440691,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93128,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 294,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "13.4",
+ "reasoning": "The question asks: \"what was the average unrecognized compensation cost related to unvested restricted stock per year?\"\n\nI need to find the unrecognized compensation cost related to unvested restricted stock. In the document, under \"Restricted Stock\" section, it says: \"As of May 31, 2013, there was $33.5 million of total unrecognized compensation cost related to unvested restricted stock awards that is expected to be recognized over a weighted average period of 2.5 years.\"\n\nThe question asks for \"average unrecognized compensation cost related to unvested restricted stock per year.\" This likely means the annual amount, i.e., $33.5 million / 2.5 years = $13.4 million per year.\n\nLet me compute: 33.5 / 2.5 = 13.4.\n\nSo the answer is $13.4 million per year.\n\nThe question says \"per year\" - so it's the annual average. The document states the total unrecognized cost is $33.5 million over a weighted average period of 2.5 years. So the average per year is 33.5/2.5 = 13.4 million.\n\nI'll provide the answer as 13.4 (in millions). The question doesn't specify units, but the document uses millions. I'll put 13.4.",
+ "raw_content": "<answer>13.4</answer>",
+ "usage": {
+  "prompt_tokens": 93274,
+  "completion_tokens": 294,
+  "total_tokens": 93568,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.62,
+ "answer_tag_found": true,
+ "docfinqa_row": 344
+}

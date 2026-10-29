@@ -1,0 +1,53 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0273",
+ "format": "dgml",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what was the return on total assets during 2014?",
+ "gold": "5.4%",
+ "finqa_id": "HII/2017/page_47.pdf-2",
+ "source_page": "page_47",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/dgml/HII_2017_0001501585-18-000006.dgml.xml",
+ "doc_chars": 733855,
+ "prompt_chars": 733992,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 733855,
+ "original_chars": 733855,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 164566,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 464,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "5.44%",
+ "reasoning": "We need return on total assets during 2014. ROA = Net earnings / Total assets. For 2014, from selected financial data: Net earnings 2014 = $338 million. Total assets 2014 = $6,239 million. ROA = 338/6239 = 0.05417... = 5.42%. But question asks \"return on total assets\" - likely net income / average total assets? Usually ROA uses average total assets. But document gives total assets at year-end. We have 2013 total assets = $6,190, 2014 = $6,239. Average = (6190+6239)/2 = 6214.5. ROA = 338/6214.5 = 0.05439 = 5.44%. Which one? The question says \"return on total assets during 2014\" - typically computed as net income / average total assets. But without explicit instruction, we can use year-end. However, in financial analysis, ROA often uses average. But the document may have a specific definition? Not given. We'll compute using average? Let's see if there is any mention. The document has selected financial data with total assets. No ROA given. We'll compute using average total assets as standard. But the question might expect simple ratio using year-end. Let's check: 2014 net earnings 338, total assets 6239. 338/6239 = 5.42%. Using average: 338/6214.5 = 5.44%. Which is more appropriate? The question says \"return on total assets\" - in accounting, ROA = Net Income / Average Total Assets. I'll use average. But the document gives total assets for each year, so we can compute average. Let's do that. 2013 total assets = 6190, 2014 = 6239. Average = 6214.5. 338/6214.5 = 0.05439 = 5.44%. I'll answer 5.44%. But to be safe, maybe they want percentage. I'll put 5.44%.",
+ "raw_content": "<answer>5.44%</answer>",
+ "usage": {
+  "prompt_tokens": 164706,
+  "completion_tokens": 464,
+  "total_tokens": 165170,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 164608
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.14,
+ "answer_tag_found": true,
+ "docfinqa_row": 273
+}

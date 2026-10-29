@@ -1,0 +1,81 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0363",
+ "format": "dgml_compact",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "for the vivo acquisition how many of the allowed towers were actually purchased under the final amended purchase agreement?",
+ "gold": "94%",
+ "finqa_id": "AMT/2012/page_118.pdf-4",
+ "source_page": "page_118",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/dgml_compact/AMT_2012_0001193125-13-077821.dgml.txt",
+ "doc_chars": 684819,
+ "prompt_chars": 685031,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 684819,
+ "original_chars": 684819,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 147020,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 318,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1692",
+ "reasoning": "We need answer: for Vivo acquisition, how many of allowed towers were actually purchased under final amended purchase agreement. Need find in document. Vivo acquisition: \"On March 30, 2012, the Company entered into a definitive agreement to purchase up to 1,500 towers from Vivo S.A. (\"Vivo\"). Pursuant to the agreement, on March 30, 2012, the Company purchased 800 communications sites... On June 30, 2012, the Company purchased the remaining 700 communications sites... In addition, the Company and Vivo amended the asset purchase agreement to allow for the acquisition of up to an additional 300 communications sites by the Company, subject to regulatory approval. On August 31, 2012, the Company purchased an additional 192 communications sites from Vivo...\" So total purchased = 800+700+192 = 1692. The question: \"for the vivo acquisition how many of the allowed towers were actually purchased under the final amended purchase agreement?\" Allowed towers under final amended purchase agreement: original 1,500 plus additional 300 = 1,800 allowed. Actually purchased = 800+700+192 = 1,692. So answer 1,692. Need evidence figures.",
+ "raw_content": "<evidence>\n800 | Vivo acquisition purchase first tranche\n700 | Vivo acquisition purchase second tranche\n192 | Vivo acquisition additional purchase\n</evidence>\n\n<program>add(add(800, 700), 192)</program>\n\n<answer>1692</answer>",
+ "usage": {
+  "prompt_tokens": 147327,
+  "completion_tokens": 318,
+  "total_tokens": 147645,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 147200
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.61,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "800",
+   "element": "Vivo acquisition purchase first tranche",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "700",
+   "element": "Vivo acquisition purchase second tranche",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "192",
+   "element": "Vivo acquisition additional purchase",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "add(add(800, 700), 192)",
+ "answer_model": "1692",
+ "program_value": 1692.0,
+ "docfinqa_row": 363
+}

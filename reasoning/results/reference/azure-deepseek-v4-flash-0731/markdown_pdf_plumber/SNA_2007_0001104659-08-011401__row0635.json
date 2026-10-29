@@ -1,0 +1,53 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0635",
+ "format": "markdown_pdf_plumber",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "based on the cash dividends paid , how many common stock shares were outstanding?",
+ "gold": "58909091",
+ "finqa_id": "SNA/2007/page_49.pdf-2",
+ "source_page": "page_49",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_plumber/SNA_2007_0001104659-08-011401.md",
+ "doc_chars": 371934,
+ "prompt_chars": 372104,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 371934,
+ "original_chars": 371934,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 94563,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 678,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "58,378,378",
+ "reasoning": "We need answer based on cash dividends paid. Need find cash dividends paid and per share to compute shares outstanding? Question: \"based on the cash dividends paid, how many common stock shares were outstanding?\" Likely use cash dividends paid total and per share. In document: Cash dividends paid in 2007, 2006 and 2005 totaled $64.8 million, $63.6 million and $57.8 million, respectively. Cash dividends paid per share $1.11, $1.08, $1.00. So shares = total dividends / per share. For 2007: 64.8 million / 1.11 = 58.378 million shares. But note \"cash dividends paid\" maybe based on shares outstanding during year. The question asks \"based on the cash dividends paid, how many common stock shares were outstanding?\" Could be for 2007. Compute 64.8/1.11 = 58.378378... million. But maybe they want number of shares outstanding at year end? The document states at December 29, 2007, 57,429,139 shares outstanding. But question specifically \"based on the cash dividends paid\" suggests compute from dividends. Need see if there is any other info. Cash dividends paid per share 1.11, total 64.8 million. So shares = 64.8/1.11 = 58.378 million. But note weighted-average basic shares outstanding was 57.9 million. The computed from dividends might be approximate. Let's calculate precisely: 64.8 million / 1.11 = 58.378378... million. But maybe use 2006: 63.6/1.08 = 58.8889 million. 2005: 57.8/1.00 = 57.8 million. The question singular \"how many common stock shares were outstanding?\" Probably for 2007. The document also says \"At December 29, 2007, Snap-on had 57,429,139 shares of common stock outstanding.\" But that is not based on dividends. The question says \"based on the cash dividends paid\" so use dividends. Need answer value only. Could be 58,378,378 shares. But let's check if there is any nuance: Cash dividends paid in 2007 totaled $64.8 million, per share $1.11. So 64.8/1.11 = 58.378... million. But note dividends paid per share is based on shares outstanding at record date? Actually total dividends paid divided by per share gives number of shares that received dividends, which may be average outstanding. The question likely expects that. So answer 58,378,378 (approximately). But maybe they want in millions? The question asks \"how many common stock shares were outstanding?\" So give number. 58,378,378. Let's compute: 64.8 / 1.11 = 58.378378378... So 58,378,378. But check if there is any rounding: 64.8 million / 1.11 = 58.378... million. So answer.\n\nNeed final inside <answer> tags.",
+ "raw_content": "<answer>58,378,378</answer>",
+ "usage": {
+  "prompt_tokens": 94707,
+  "completion_tokens": 678,
+  "total_tokens": 95385,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 94464
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.81,
+ "answer_tag_found": true,
+ "docfinqa_row": 635
+}

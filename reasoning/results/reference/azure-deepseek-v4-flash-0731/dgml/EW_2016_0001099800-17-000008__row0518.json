@@ -1,0 +1,53 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0518",
+ "format": "dgml",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what is the value , in millions of dollars , of the total issuable stock in 2014?",
+ "gold": "162.2",
+ "finqa_id": "EW/2016/page_94.pdf-1",
+ "source_page": "page_94",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/dgml/EW_2016_0001099800-17-000008.dgml.xml",
+ "doc_chars": 575186,
+ "prompt_chars": 575356,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 575186,
+ "original_chars": 575186,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 133782,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1863,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "128.9",
+ "reasoning": "We need answer value in millions of dollars of total issuable stock in 2014. Need interpret \"total issuable stock\" maybe from stock plans? Document mentions \"number of shares of common stock available for issuance under the Program was 107.8 million shares\" but that's 2016 amendment. \"total issuable stock in 2014\" maybe from balance sheet? Or \"common stock authorized\"? Let's parse question: \"what is the value , in millions of dollars , of the total issuable stock in 2014?\" Could refer to \"total issuable stock\" as in \"common stock issued\" or \"authorized\"? In 2014, balance sheet? The document has selected financial data for 2014: total assets etc. But \"total issuable stock\" might be from \"Stockholders' equity\" common stock? Or \"shares authorized\" 350.0 million par $1.00? Value would be $350 million? But question says \"in 2014\" maybe from \"Common stock, $1.00 par value, 350.0 shares authorized\" but that's as of 2016. In 2014, maybe \"authorized shares\" same? The document doesn't give 2014 balance sheet details except selected data. \"total issuable stock\" could be \"shares available for issuance under the Program\" in 2014? The Long-term Stock Incentive Program was amended in 2016; before that maybe number? Not given. Alternatively \"total issuable stock\" might be \"common stock issued\" in 2014? In statement of stockholders' equity, at Dec 31, 2014, common stock shares issued? It shows \"BALANCE AT DECEMBER 31, 2014\" with shares 128.9? Wait that's after stock split? Let's examine: The statement shows \"BALANCE AT DECEMBER 31, 2013\" shares 126.0, par $126.0. Then 2014 activity: common stock issued under equity plans 2.9 shares, par 2.9. So Dec 31, 2014 shares 128.9, par $128.9. But later in 2015 there was a stock split: \"Stock issued to effect stock split\" 108.2 shares, par 108.2, and treasury stock adjustment. So after split, Dec 31, 2015 shares 239.1. So in 2014, common stock issued was 128.9 million shares, par value $1.00, so value $128.9 million. But question says \"total issuable stock\" maybe \"total issued stock\"? The wording \"total issuable stock\" might be a typo for \"total issued stock\"? Or \"total issuable\" meaning \"authorized\"? Let's read question: \"what is the value , in millions of dollars , of the total issuable stock in 2014?\" Could be from \"Common stock, $1.00 par value, 350.0 shares authorized\" but that's not 2014. The document has \"Common stock, $1.00 par value, 350.0 shares authorized, 242.6 and 239.1 shares issued\" as of 2016/2015. For 2014, from statement of stockholders' equity, common stock issued was 128.9 shares (pre-split) with par value $128.9 million. But \"issuable\" might mean \"authorized\" which is 350.0 shares * $1 = $350 million. But that's not specific to 2014. The question asks \"in 2014\" so likely from the statement of stockholders' equity balance at Dec 31, 2014: common stock par value $128.9 million. But \"total issuable stock\" could be \"total issued stock\" (common stock issued). Let's see if there is any other mention of \"issuable\" in document. Search: \"issuable\" appears? The document has \"shares of common stock available for issuance under the Program was 107.8 million shares\" in 2016. \"authorized for issuance\" under ESPP 13.8 million shares. \"Nonemployee Directors Program\" 2.8 million shares. But \"total issuable stock in 2014\" might refer to \"shares available for issuance\" under stock plans? Not given for 2014. The question likely expects a number from financial statements. The phrase \"total issuable stock\" might be a mis-transcription of \"total issued stock\" or \"total stockholders' equity\"? Let's examine the question: \"what is the value , in millions of dollars , of the total issuable stock in 2014?\" Could be from a table \"Common stock\" in balance sheet? In 2014, the balance sheet is not presented, but selected financial data has \"Total assets\" etc. The statement of stockholders' equity gives common stock par value at Dec 31, 2014 as $128.9 million. That is the value of issued common stock. \"Issuable\" might be a typo for \"issued\". So answer $128.9.\n\nBut let's be careful: The question says \"total issuable stock\" not \"issued\". Could be \"total authorized stock\" which is 350.0 million shares * $1.00 = $350.0 million. But that is as of 2016, not 2014. The document says \"Common stock, $1.00 par value, 350.0 shares authorized\" in balance sheet as of Dec 31, 2016 and 2015. It doesn't state authorized in 2014. However, the certificate of incorporation may have been amended in 2013? The exhibit 3.1 is Amended and Restated Certificate of Incorporation dated May 16, 2013. So authorized shares likely 350.0 since then. But the question specifically \"in 2014\" might refer to the year 2014, and the value of total issuable stock could be the par value of authorized shares? But \"issuable\" means \"can be issued\" i.e., authorized but unissued? The total authorized is 350 million shares, par $1, so $350 million. But the question asks \"value, in millions of dollars, of the total issuable stock\" - that would be $350.0. However, the document does not explicitly state authorized shares in 2014, but it does state in the balance sheet for 2016 and 2015. Since the certificate was amended in 2013, it's reasonable. But the question might be from a dataset where the answer is in the document. Let's search for \"issuable\" in the document. The word \"issuable\" appears? I see \"shares of common stock available for issuance\" but not \"issuable\". The question might have been generated from a table with \"Common stock\" line. In the balance sheet, the line is \"Common stock, $1.00 par value, 350.0 shares authorized, 242.6 and 239.1 shares issued, and 211.6 and 215.4 shares outstanding, respectively\" with amounts 242.6 and 239.1. That is the value of issued stock, not authorized. The \"total issuable stock\" could be \"total issued stock\" (common stock issued) which is 242.6 in 2016, 239.1 in 2015. For 2014, from statement of stockholders' equity, common stock issued was 128.9 (pre-split) with par value $128.9. But after the stock split in 2015, the number of shares issued was adjusted. The balance sheet for 2015 shows 239.1 shares issued, which includes the split. For 2014, the statement shows 128.9 shares issued before split. So the value of issued common stock in 2014 was $128.9 million. The question says \"in 2014\" so that is likely the answer.\n\nLet's confirm from the statement of stockholders' equity: \"BALANCE AT DECEMBER 31, 2014\" row: Common Stock Shares 128.9, Par Value $128.9. Yes.\n\nThus answer: 128.9\n\nBut the question says \"total issuable stock\" - maybe \"issuable\" is a typo for \"issued\". I'll answer 128.9.\n\nIf it were \"authorized\" it would be 350.0, but that is not specific to 2014 and not called \"issuable\". The document uses \"authorized\" for that. So I'll go with 128.9.\n\nFinal answer inside <answer>128.9</answer>",
+ "raw_content": "<answer>128.9</answer>",
+ "usage": {
+  "prompt_tokens": 133931,
+  "completion_tokens": 1863,
+  "total_tokens": 135794,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 133888
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.3,
+ "answer_tag_found": true,
+ "docfinqa_row": 518
+}

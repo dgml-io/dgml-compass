@@ -1,0 +1,68 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0702",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "what was the percentage change in cash provided by operating activities from 2012 to 2013?",
+ "gold": "11%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "UNP_2014_0001193125-15-037518.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/ConsolidatedCashFlow"
+ ],
+ "r1_reasoning_chars": 3430,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 19889,
+  "completion_tokens": 820,
+  "total_tokens": 20709,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ConsolidatedCashFlow"
+ ],
+ "content_chars": 195295,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "10.745009",
+ "reasoning": "We need percentage change in cash provided by operating activities from 2012 to 2013. From cash flow statement: Cash provided by operating activities: 2013 = 6,823; 2012 = 6,161. Percentage change = (6823-6161)/6161 * 100. Compute: 662/6161 ≈ 0.10745 = 10.745%. Need answer as value, likely 10.7% or 10.75%. The question asks \"percentage change\" so answer numeric. We'll provide evidence and program.",
+ "raw_content": "<evidence>6,823 | Cash provided by operating activities (2013)\n6,161 | Cash provided by operating activities (2012)\n</evidence>\n<program>multiply(divide(subtract(6823, 6161), 6161), 100)</program>\n<answer>10.745</answer>",
+ "r2_usage": {
+  "prompt_tokens": 49242,
+  "completion_tokens": 188,
+  "total_tokens": 49430,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "6,823",
+   "element": "Cash provided by operating activities (2013)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6,161",
+   "element": "Cash provided by operating activities (2012)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(6823, 6161), 6161), 100)",
+ "answer_model": "10.745",
+ "program_value": 10.745008927122221,
+ "elapsed_s": 9.19,
+ "outline_source": "UNP_2014_0001193125-15-037518.outline.txt",
+ "outline_chars": 77599
+}

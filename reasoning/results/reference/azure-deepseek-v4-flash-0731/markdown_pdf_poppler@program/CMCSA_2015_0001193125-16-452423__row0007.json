@@ -1,0 +1,74 @@
+{
+ "id": "CMCSA_2015_0001193125-16-452423__row0007",
+ "format": "markdown_pdf_poppler",
+ "key": "CMCSA_2015_0001193125-16-452423",
+ "question": "what was the change in unrecognized tax benefits from the end of 2014 to the end of 2015?",
+ "gold": "-35",
+ "finqa_id": "CMCSA/2015/page_112.pdf-2",
+ "source_page": "page_112",
+ "ticker": "CMCSA",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_poppler/CMCSA_2015_0001193125-16-452423.md",
+ "doc_chars": 702629,
+ "prompt_chars": 702807,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 702629,
+ "original_chars": 702629,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 125340,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 199,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-35",
+ "reasoning": "We need answer change in unrecognized tax benefits from end 2014 to end 2015. Need find figures. Document has reconciliation of unrecognized tax benefits: Balance Jan 1 2015 $1,171, Balance Dec 31 2015 $1,136. Change = 1,136 - 1,171 = -35. Or from end 2014 to end 2015: end 2014 is $1,171, end 2015 $1,136. Change = -35. Need evidence figures. Also maybe \"unrecognized tax benefits\" in Note 15. Use values.",
+ "raw_content": "<evidence>\n$ 1,171 | Reconciliation of Unrecognized Tax Benefits, Balance, January 1\n$ 1,136 | Reconciliation of Unrecognized Tax Benefits, Balance, December 31\n</evidence>\n<program>subtract(1136, 1171)</program>\n<answer>-35</answer>",
+ "usage": {
+  "prompt_tokens": 125652,
+  "completion_tokens": 199,
+  "total_tokens": 125851,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.57,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 1,171",
+   "element": "Reconciliation of Unrecognized Tax Benefits, Balance, January 1",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$ 1,136",
+   "element": "Reconciliation of Unrecognized Tax Benefits, Balance, December 31",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "subtract(1136, 1171)",
+ "answer_model": "-35",
+ "program_value": -35.0,
+ "docfinqa_row": 7
+}

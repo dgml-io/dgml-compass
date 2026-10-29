@@ -1,0 +1,53 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0352",
+ "format": "markdown_pdf",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what is the net change of the total fair value balance of non-vested shares during 2013?",
+ "gold": "6820",
+ "finqa_id": "GPN/2013/page_87.pdf-3",
+ "source_page": "page_87",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/markdown_pdf/GPN_2013_0001123360-13-000025.md",
+ "doc_chars": 356315,
+ "prompt_chars": 356492,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 356315,
+ "original_chars": 356315,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 79134,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 624,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "6820",
+ "reasoning": "We need to find the net change of the total fair value balance of non-vested shares during 2013. The document has a table for non-vested restricted stock awards. It shows shares and weighted average grant-date fair value. The \"total fair value balance\" would be shares * weighted average fair value. We need the change from May 31, 2012 to May 31, 2013.\n\nFrom the table:\nNon-vested at May 31, 2012: 941 shares, weighted average fair value $44. So total fair value = 941 * 44 = 41,404 (in thousands? Actually shares in thousands, so 941,000 shares * $44 = $41,404,000)\nNon-vested at May 31, 2013: 1,096 shares, weighted average $44. So total = 1,096 * 44 = 48,224 (in thousands? 1,096,000 * 44 = $48,224,000)\n\nNet change = 48,224 - 41,404 = 6,820 (in thousands) = $6.82 million.\n\nBut the question asks \"net change of the total fair value balance\" - likely the change in the aggregate fair value of non-vested shares. So answer is $6,820 thousand or $6.82 million. The document uses thousands, so we can give 6,820 (in thousands) or 6.82 million. The question doesn't specify units, but we can give the number. Since the table shows shares in thousands, the total fair value is in thousands of dollars. So net change = 6,820 (thousands). Or we can say $6.82 million.\n\nLet's compute precisely: 941*44 = 41,404; 1,096*44 = 48,224; difference = 6,820. So answer: 6820 (in thousands) or 6.82 million. The question says \"net change of the total fair value balance\" - likely they want the dollar amount. I'll put 6820 (in thousands) or 6.82 million. Since the document uses thousands, I'll put 6820. But to be safe, I'll put 6.82 million. The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" So I'll put 6820? But that might be ambiguous. The question asks \"what is the net change\" - so a number. I'll put 6820 (in thousands) but without units. Actually, the document's table shows shares in thousands, so the total fair value is in thousands of dollars. So net change = 6,820 thousand dollars. I'll put 6820. But to be clear, I'll put 6820. Alternatively, 6.82 million. I'll put 6820.",
+ "raw_content": "<answer>6820</answer>",
+ "usage": {
+  "prompt_tokens": 79284,
+  "completion_tokens": 624,
+  "total_tokens": 79908,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 79104
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.74,
+ "answer_tag_found": true,
+ "docfinqa_row": 352
+}

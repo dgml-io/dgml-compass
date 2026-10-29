@@ -1,0 +1,88 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0840",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "what was the average weighted average common shares outstanding for diluted computations from 2012 to 2014",
+ "gold": "325.7",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "LMT_2014_0001193125-15-038681.outline.txt",
+ "doc_source": "LMT_2014_0001193125-15-038681.dgml.xml",
+ "outline_chars": 64445,
+ "predicted_xpaths": [
+  "/chunk/Financial/EarningsPerShare"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 1817,
+ "r1_usage": {
+  "prompt_tokens": 16119,
+  "completion_tokens": 452,
+  "total_tokens": 16571,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/Financial/EarningsPerShare"
+ ],
+ "content_chars": 71560,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "325.766667",
+ "reasoning": "We need average of diluted shares 2012-2014: 322.4, 326.5, 328.4. Average = (322.4+326.5+328.4)/3 = 977.3/3 = 325.766666... Need answer. Use figures as printed.",
+ "raw_content": "<evidence>322.4 | /chunk/Financial/EarningsPerShare/EarningsPerShare/table/EarningsPerShare/ShareCountValue\n326.5 | /chunk/Financial/EarningsPerShare/EarningsPerShare/table/EarningsPerShare/ShareCountValue\n328.4 | /chunk/Financial/EarningsPerShare/EarningsPerShare/table/EarningsPerShare/ShareCountValue</evidence>\n<program>divide(add(add(322.4, 326.5), 328.4), 3)</program>\n<answer>325.7666666666667</answer>",
+ "r2_usage": {
+  "prompt_tokens": 15703,
+  "completion_tokens": 196,
+  "total_tokens": 15899,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 15703,
+   "completion_tokens": 196,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "322.4",
+   "element": "chunk/Financial/EarningsPerShare/EarningsPerShare/table/EarningsPerShare/ShareCountValue",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "326.5",
+   "element": "chunk/Financial/EarningsPerShare/EarningsPerShare/table/EarningsPerShare/ShareCountValue",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "328.4",
+   "element": "chunk/Financial/EarningsPerShare/EarningsPerShare/table/EarningsPerShare/ShareCountValue",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(add(322.4, 326.5), 328.4), 3)",
+ "answer_model": "325.7666666666667",
+ "program_value": 325.76666666666665,
+ "elapsed_s": 4.19
+}

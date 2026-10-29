@@ -1,0 +1,53 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0372",
+ "format": "dgml",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what is the combined number of equity compensation plans approved by security holders",
+ "gold": "4536446",
+ "finqa_id": "HII/2017/page_124.pdf-4",
+ "source_page": "page_124",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/dgml/HII_2017_0001501585-18-000006.dgml.xml",
+ "doc_chars": 733855,
+ "prompt_chars": 734029,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 733855,
+ "original_chars": 733855,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 164566,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 180,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "2",
+ "reasoning": "We need to find the number of equity compensation plans approved by security holders. The document says \"Equity compensation plans approved by security holders\" in the table under Item 12. The table shows a row for that category, but it lists shares, not number of plans. However, the question asks for the combined number of equity compensation plans approved by security holders. The document mentions two plans: the 2011 Plan and the 2012 Plan. Both were approved by security holders. So the combined number is 2. But let's check if there are any other plans. The table says \"Equity compensation plans approved by security holders\" and then lists shares. The footnote says includes grants under 2012 Plan and 2011 Plan. So there are two plans. The question asks for the combined number, so answer is 2.",
+ "raw_content": "<answer>2</answer>",
+ "usage": {
+  "prompt_tokens": 164708,
+  "completion_tokens": 180,
+  "total_tokens": 164888,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 164608
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.14,
+ "answer_tag_found": true,
+ "docfinqa_row": 372
+}

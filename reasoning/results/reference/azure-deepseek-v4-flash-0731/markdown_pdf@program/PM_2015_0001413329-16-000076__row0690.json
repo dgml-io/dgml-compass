@@ -1,0 +1,74 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0690",
+ "format": "markdown_pdf",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what was the change in millions of trade receivables sold from 2014 to 2015?",
+ "gold": "768",
+ "finqa_id": "PM/2015/page_85.pdf-4",
+ "source_page": "page_85",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf/PM_2015_0001413329-16-000076.md",
+ "doc_chars": 504705,
+ "prompt_chars": 504870,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 504705,
+ "original_chars": 504705,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 122013,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 140,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1730",
+ "reasoning": "We need answer change in millions of trade receivables sold from 2014 to 2015. Document: \"Cumulative trade receivables sold for the years ended December 31, 2015 and 2014, were $3,299 million and $1,569 million, respectively.\" So change = 3299 - 1569 = 1730 million. Need evidence and program.",
+ "raw_content": "<evidence>3,299 | Note 23. Sale of Accounts Receivable\n1,569 | Note 23. Sale of Accounts Receivable</evidence>\n<program>subtract(3299, 1569)</program>\n<answer>1730</answer>",
+ "usage": {
+  "prompt_tokens": 122320,
+  "completion_tokens": 140,
+  "total_tokens": 122460,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 122112
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 1.95,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "3,299",
+   "element": "Note 23. Sale of Accounts Receivable",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "1,569",
+   "element": "Note 23. Sale of Accounts Receivable",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "subtract(3299, 1569)",
+ "answer_model": "1730",
+ "program_value": 1730.0,
+ "docfinqa_row": 690
+}

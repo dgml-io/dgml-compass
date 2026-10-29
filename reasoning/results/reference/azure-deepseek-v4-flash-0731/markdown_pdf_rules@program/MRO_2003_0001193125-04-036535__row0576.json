@@ -1,0 +1,65 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0576",
+ "format": "markdown_pdf_rules",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "what were total asphalt sales in millions for the three year period?",
+ "gold": "227",
+ "finqa_id": "MRO/2003/page_45.pdf-1",
+ "source_page": "page_45",
+ "ticker": "MRO",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/markdown_pdf_rules/MRO_2003_0001193125-04-036535.md",
+ "doc_chars": 450627,
+ "prompt_chars": 450784,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 450627,
+ "original_chars": 450627,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 105244,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "stop",
+   "completion_tokens": 1175,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 1,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer question: \"what were total asphalt sales in millions for the three year period?\" Need find asphalt sales figures. Document has refined product sales volumes, not sales dollars? Need identify \"asphalt sales\" maybe in Five-Year Operating Summary? There is \"Refined Product Sales Volumes\" by product, but not dollars. Also \"Refined Products Sales Volumes by Class of Trade\" percentages. Maybe \"Refined Product Sales\" table has volumes in thousands barrels per day for asphalt: 74, 75, 78 for 2003, 2002, 2001. But question asks \"total asphalt sales in millions\" - likely dollars? Need see if there is a table with asphalt sales in millions. Search document for \"asphalt\" occurrences. There is \"Asphalt\" in refined product yields, sales volumes, etc. Also \"MAP markets asphalt...\" No dollar sales. Maybe \"Refined Product Sales\" table gives volumes, not dollars. Could be \"Refined Products (dollars per barrel)\" average sales price, but not by product. There is \"Refined Products Sales Volumes\" in Five-Year Operating Summary: Asphalt 74, 75, 78 (thousands of barrels per day). To get total sales in millions, need multiply by price? Not given. Maybe question expects sum of asphalt sales volumes? But \"in millions\" suggests dollars. Could be \"total asphalt sales\" in millions of dollars? Not present. Let's examine document for any \"asphalt sales\" dollar amount. In \"Refined Product Sales\" table (page 15) volumes: Asphalt 74, 75, 78 (thousands of barrels per day). No dollars. In Five-Year Operating Summary, same. There is \"Refined Products (dollars per barrel) Average sales price $38.55, $32.26, $34.54\" but that's overall refined products, not asphalt. So cannot compute asphalt sales dollars. Maybe question asks \"total asphalt sales in millions\" meaning total volume in millions of barrels over three years? But \"sales\" typically volume? The table says \"Refined Product Sales\" volumes in thousands of barrels per day. To get total for three years, sum daily volumes? Not meaningful. Could be \"total asphalt sales\" in millions of dollars? Not available. Let's read question: \"what were total asphalt sales in millions for the three year period?\" Likely from a table that has \"Asphalt\" row with values in millions? But in document, asphalt appears in \"Refined Product Yields\" and \"Refined Product Sales\" with volumes. No dollar amounts. Maybe there is a table \"Refined Products Sales Volumes\" in Five-Year Operating Summary with Asphalt 74, 75, 78 (thousands of barrels per day). If you sum 74+75+78 = 227 thousand barrels per day. But \"in millions\" no.\n\nMaybe there is a \"Refined Product Sales\" table on page 15 that has \"Asphalt 74 75 78\" under \"Refined Product Sales\" (thousands of barrels per day). Not millions.\n\nCould be \"total asphalt sales\" refers to \"Asphalt\" in \"Refined Product Yields\" or \"Refined Product Sales\" but question asks \"in millions\" maybe they want sum of volumes in millions of barrels per day? No.\n\nLet's search for \"asphalt\" in document: \n- \"MAP also produces asphalt cements...\" \n- \"Refined Product Yields\" table: Asphalt 72 72 76 (thousands of barrels per day) for yields.\n- \"Refined Product Sales\" table: Asphalt 74 75 78 (thousands of barrels per day) for sales volumes.\n- \"Refined Products Sales Volumes by Class of Trade\" no.\n- Five-Year Operating Summary: \"Refined Product Sales Volumes\" Asphalt 74 75 78.\n- Also \"Refined Products (dollars per barrel) Average sales price\" overall.\n\nNo dollar sales for asphalt. So answer NOT_FOUND.\n\nBut let's be careful: The question might be from a different context? It asks \"total asphalt sales in millions for the three year period?\" Could be from a table that has \"Asphalt\" row with values in millions of dollars? In the document, there is a table \"Refined Product Sales\" with volumes in thousands of barrels per day. Not millions. There is also \"Refined Product Yields\" with volumes. No dollar.\n\nMaybe \"total asphalt sales\" means sum of \"Asphalt\" in \"Refined Product Sales\" table: 74+75+78 = 227 (thousands of barrels per day). But \"in millions\" no.\n\nCould be \"total asphalt sales\" in millions of gallons? No.\n\nGiven the instruction: If document does not contain enough information, put NOT_FOUND. So answer NOT_FOUND.\n\nBut let's double-check if there is any mention of \"asphalt sales\" in dollars. In \"Refined Product Sales\" table, the header says \"Refined Product Sales\" and units \"Thousands of Barrels per Day\". So not dollars. In \"Five-Year Operating Summary\" same. No dollar.\n\nThus answer NOT_FOUND.\n\nNeed provide evidence? The instruction says \"Before the answer, list every figure you use inside <evidence></evidence>\". Since we use no figures, we can omit? It says \"Cite only figures you actually read.\" We read none. So maybe no evidence. But we can state NOT_FOUND.\n\nFinal answer inside <answer>NOT_FOUND</answer>.",
+ "raw_content": "<answer>NOT_FOUND</answer>",
+ "usage": {
+  "prompt_tokens": 105544,
+  "completion_tokens": 1175,
+  "total_tokens": 106719,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 13.25,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": null,
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "docfinqa_row": 576
+}

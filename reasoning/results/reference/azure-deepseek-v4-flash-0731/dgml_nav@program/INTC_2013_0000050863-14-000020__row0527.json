@@ -1,0 +1,68 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0527",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "what was the percent of the change in the net revenues from dec . 282012 dec . 29 2013",
+ "gold": "-1.2%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "INTC_2013_0000050863-14-000020.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/ManagementDiscussionAnalysis/ManagementDiscussionAnalysis/TableOfContentsIndex/ResultsOfOperations"
+ ],
+ "r1_reasoning_chars": 6132,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 25725,
+  "completion_tokens": 1537,
+  "total_tokens": 27262,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ManagementDiscussionAnalysis/ManagementDiscussionAnalysis/TableOfContentsIndex/ResultsOfOperations"
+ ],
+ "content_chars": 24008,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "-1.1867%",
+ "reasoning": "We need answer percent change in net revenues from 2012 to 2013. Document gives net revenue 2013 $52,708, 2012 $53,341. Percent change = (52708-53341)/53341 = -633/53341 = -1.1867% ≈ -1.2% or -1%. The text says decreased by $633 million, or 1%. Need compute. Use figures.",
+ "raw_content": "<evidence>\n$ 52,708 | NetRevenue 2013\n$ 53,341 | NetRevenue 2012\n</evidence>\n<program>divide(subtract(52708, 53341), 53341)</program>\n<answer>-1.1867%</answer>",
+ "r2_usage": {
+  "prompt_tokens": 5684,
+  "completion_tokens": 155,
+  "total_tokens": 5839,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 52,708",
+   "element": "NetRevenue 2013",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$ 53,341",
+   "element": "NetRevenue 2012",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(52708, 53341), 53341)",
+ "answer_model": "-1.1867%",
+ "program_value": -0.011867044112408841,
+ "elapsed_s": 7.21,
+ "outline_source": "INTC_2013_0000050863-14-000020.outline.txt",
+ "outline_chars": 102835
+}

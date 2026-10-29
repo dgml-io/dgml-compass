@@ -1,0 +1,69 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0242",
+ "format": "markdown_pdf",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "is the weighted average useful life ( years ) for purchased technology greater than localization?",
+ "gold": "yes",
+ "finqa_id": "ADBE/2008/page_74.pdf-2",
+ "source_page": "page_74",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf/ADBE_2008_0000796343-09-000007.md",
+ "doc_chars": 450108,
+ "prompt_chars": 450294,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 450108,
+ "original_chars": 450108,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 99248,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 117,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1",
+ "reasoning": "We need answer question: is weighted average useful life (years) for purchased technology greater than localization? From Note 1 table: Purchased technology 4 years, Localization 1 year. So yes. Need provide evidence and program. Final answer inside <answer> tags only value? The question asks \"is ... greater than ...?\" So answer yes/no. Need include evidence and program.",
+ "raw_content": "<evidence>\n4 | Purchased technology\n1 | Localization\n</evidence>\n\n<program>greater(4, 1)</program>\n\n<answer>yes</answer>",
+ "usage": {
+  "prompt_tokens": 99551,
+  "completion_tokens": 117,
+  "total_tokens": 99668,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.23,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "4",
+   "element": "Purchased technology",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1",
+   "element": "Localization",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "greater(4, 1)",
+ "answer_model": "yes",
+ "program_value": 1.0,
+ "docfinqa_row": 242
+}

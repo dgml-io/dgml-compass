@@ -1,0 +1,81 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0057",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what was the percentage change in the cash dividends paid per common share from 2006 to 2007",
+ "gold": "2.7%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "SNA_2007_0001104659-08-011401.outline.txt",
+ "doc_source": "SNA_2007_0001104659-08-011401.dgml.xml",
+ "outline_chars": 89754,
+ "predicted_xpaths": [
+  "/chunk/FinancialConditionOverview/p/DividendPaymentRecord"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 2905,
+ "r1_usage": {
+  "prompt_tokens": 22374,
+  "completion_tokens": 677,
+  "total_tokens": 23051,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/FinancialConditionOverview/p/DividendPaymentRecord"
+ ],
+ "content_chars": 948,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "1.886792",
+ "reasoning": "We need answer percentage change in cash dividends paid per common share from 2006 to 2007. Need find figures. Excerpts: DividendPaymentRecord amounts $64.8 million, $63.6 million, $57.8 million respectively. Likely for 2007, 2006, 2005? Need per common share. Also announcement increased quarterly cash dividend by 11.1% to $0.30 per share. But question asks percentage change in cash dividends paid per common share from 2006 to 2007. Need compute from per share amounts. The excerpt may not have per share amounts for 2006 and 2007 directly. It has total dividends paid: $64.8M, $63.6M, $57.8M respectively. If those are cash dividends paid in 2007, 2006, 2005? Then percentage change = (64.8 - 63.6)/63.6 = 1.2/63.6 = 0.0188679 = 1.8868%. But question asks per common share, not total. However if number of shares constant? Not given. The announcement says quarterly dividend increased by 11.1% to $0.30 per share. That implies previous quarterly was $0.27? 0.30/1.111 = 0.27. But that's from Nov 2007 announcement, likely for 2008? Actually \"increased the quarterly cash dividend by 11.1% to $0.30 per share\" means from $0.27 to $0.30. But question asks from 2006 to 2007 cash dividends paid per common share. Need annual per share. Maybe the document has a table with dividends per share. The excerpt only shows total dividends paid. The percentage change in total dividends paid is 1.89%. But question specifically per common share. If number of shares changed, not same. Need see if there is any figure for per share. The excerpt includes \"DividendPerShare $0.30 per share\" but that's after increase. Not enough.\n\nLet's examine the region: It says \"The company paid cash dividends of $64.8 million, $63.6 million and $57.8 million, respectively. On November 1, 2007, the company announced that its Board increased the quarterly cash dividend by 11.1% to $0.30 per share (annualized $1.20 per share).\" The \"respectively\" likely refers to 2007, 2006, 2005. So total dividends paid in 2007 and 2006 are $64.8M and $63.6M. Percentage change = (64.8-63.6)/63.6 = 1.2/63.6 = 0.0188679245 = 1.8868%. But question asks per common share. If the number of shares outstanding changed, total dividends percentage may differ. However the document may not provide per share amounts for 2006 and 2007. The only per share figure is $0.30 after increase. The question asks \"percentage change in the cash dividends paid per common share from 2006 to 2007\". Could be derived from total dividends and shares? Not given. Maybe the document has a table with dividends per share in another excerpt not shown? The user says \"excerpts from one document, selected because they should contain the answer\". So the answer should be computable from these excerpts. The excerpts include total dividends paid and the announcement. Maybe the percentage change in total dividends paid is the same as per share if share count unchanged? But not stated. However the question specifically says \"per common share\" and the excerpt includes \"DividendPerShare $0.30 per share\" but that's not for 2006/2007. Could be that the cash dividends paid per common share in 2007 and 2006 are given elsewhere? The region only shows these. Let's read the region carefully:\n\n<region path=\"/chunk/FinancialConditionOverview/p/DividendPaymentRecord\">\n<DividendPaymentRecord>$64.8 million</DividendPaymentRecord>, \n</region>\n<region path=\"/chunk/FinancialConditionOverview/p/DividendPaymentRecord\">\n<DividendPaymentRecord>$63.6 million</DividendPaymentRecord> and \n</region>\n<region path=\"/chunk/FinancialConditionOverview/p/DividendPaymentRecord\">\n<DividendPaymentRecord>$57.8 million</DividendPaymentRecord>, respectively. On \n</region>\n<region path=\"/chunk/FinancialConditionOverview/p/DividendPaymentRecord\">\n<AnnouncementDate>November 1, 2007</AnnouncementDate>, the company announced that its Board increased the quarterly cash dividend by \n</region>\n<region path=\"/chunk/FinancialConditionOverview/p/DividendPaymentRecord\">\n<PercentageChange>11.1%</PercentageChange> to \n</region>\n<region path=\"/chunk/FinancialConditionOverview/p/DividendPaymentRecord\">\n<DividendPerShare>$0.30 per share</DividendPerShare> (\n</region>\n\nSo the document likely says: \"The company paid cash dividends of $64.8 million, $63.6 million and $57.8 million, respectively. On November 1, 2007, the company announced that its Board increased the quarterly cash dividend by 11.1% to $0.30 per share (annualized $1.20 per share).\" The question asks percentage change in cash dividends paid per common share from 2006 to 2007. The total dividends paid in 2007 and 2006 are $64.8M and $63.6M. If the number of shares outstanding is constant, the per share change equals total change. But is that assumption valid? The question likely expects using those totals. The percentage change = (64.8 - 63.6)/63.6 * 100 = 1.88679245%. Round to maybe 1.9%. But the question asks \"what was the percentage change\" - likely answer 1.9% or 1.89%. Need compute exactly.\n\nLet's compute: 64.8 - 63.6 = 1.2. 1.2 / 63.6 = 0.018867924528301886. As percentage = 1.8867924528301886%. So answer 1.8868% or 1.89%.\n\nBut wait: The announcement says increased quarterly cash dividend by 11.1% to $0.30 per share. That implies previous quarterly was $0.27. But that's from 2007 to 2008? Actually November 1, 2007 announcement for future dividend. The question asks from 2006 to 2007 cash dividends paid per common share. The total dividends paid in 2007 and 2006 are $64.8M and $63.6M. So percentage change is 1.89%. The per share might be different if share count changed. But the document doesn't give share counts. However the question says \"per common share\" and the excerpt includes \"DividendPerShare $0.30 per share\" but that's not for 2006/2007. Could there be a table with dividends per share for 2007, 2006, 2005? The region only shows total dividends. The user says \"excerpts from one document, selected because they should contain the answer\" - so the answer must be derivable from these excerpts. The only relevant figures are the total dividends. So we use those.\n\nBut let's double-check: The phrase \"cash dividends paid per common share\" might be in the document as a line item. The excerpt shows \"DividendPaymentRecord\" with amounts in millions. That is total cash dividends paid, not per share. The question asks per common share. If the document has a separate line for per share, it would be in the excerpt. But it's not. The only per share is $0.30 after increase. So maybe the answer is NOT_FOUND because we don't have per share amounts for 2006 and 2007. However the question might be from a financial statement where \"cash dividends paid per common share\" is a line item. The excerpt might be from a management discussion that gives total dividends and then the per share increase. But the question specifically asks percentage change in cash dividends paid per common share from 2006 to 2007. The total dividends paid percentage change is not necessarily per share. But if the number of shares outstanding is constant, it is. Did the document mention share count? Not in excerpt. So we cannot assume.\n\nLet's think: The question says \"cash dividends paid per common share\" - that is a per-share amount. The excerpt gives total cash dividends paid. The percentage change in total is 1.89%. But the per-share change could be different if shares outstanding changed. However the document might have a table with \"Dividends per common share\" for 2007, 2006, 2005. The excerpt doesn't show that. The user says \"excerpts from one document, selected because they should contain the answer\" - meaning the answer is in these excerpts. So perhaps the answer is indeed the percentage change in total dividends, and the question uses \"per common share\" loosely? Or maybe the total dividends paid are proportional to per share if share count constant. But we need to be careful.\n\nLet's read the region path: /chunk/FinancialConditionOverview/p/DividendPaymentRecord. It's a paragraph about dividend payment record. It likely says: \"The company paid cash dividends of $64.8 million, $63.6 million and $57.8 million, respectively. On November 1, 2007, the company announced that its Board increased the quarterly cash dividend by 11.1% to $0.30 per share (annualized $1.20 per share).\" The \"respectively\" refers to 2007, 2006, 2005. So the cash dividends paid in 2007 and 2006 are $64.8M and $63.6M. The percentage change is (64.8-63.6)/63.6 = 1.8868%. The question asks \"per common share\" but the total dividends are for all common shares. If the number of shares outstanding is the same, the per share change is the same. The document might not have changed share count significantly. But we don't know.\n\nMaybe the answer is simply 1.9% and the question expects that. Let's see if there is any other figure: The announcement says increased quarterly cash dividend by 11.1% to $0.30 per share. That is a change from $0.27 to $0.30, which is 11.1%. But that's from 2007 to 2008? Actually if the quarterly dividend was $0.27 in 2007 and increased to $0.30 in 2008, then the annual per share in 2007 was $1.08 and in 2008 $1.20. But the question asks from 2006 to 2007. The total dividends paid in 2007 and 2006 are $64.8M and $63.6M. The per share amounts would be total divided by shares. If shares outstanding changed, we need share counts. Not given.\n\nGiven the instruction: \"Find the relevant figures in the document and compute the answer.\" The relevant figures are the total dividends. The question says \"per common share\" but the document gives total. Perhaps the document also has a line \"Dividends per common share\" but it's not in the excerpt. The excerpt only shows these. So we have to use what's given. The percentage change in total dividends is the only computable percentage change. So answer 1.8868%.\n\nLet's compute exactly: 64.8 - 63.6 = 1.2. 1.2 / 63.6 = 0.018867924528301886. As percentage = 1.8867924528301886%. Round to 1.89% or 1.9%. The question asks \"what was the percentage change\" - usually answer as a number, maybe 1.9%. But we need to provide exact value. The program will compute. We'll use divide(subtract(64.8, 63.6), 63.6) * 100? The program expects nested calls. We can do multiply(divide(subtract(64.8, 63.6), 63.6), 100) to get percentage. But the answer should be the value, not necessarily with % sign. The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what was the percentage change\" - so the value is a percentage number. We can output 1.8867924528301886 or 1.89. The program will compute exactly. We'll use multiply(divide(subtract(64.8, 63.6), 63.6), 100) = 1.8867924528301886.\n\nBut wait: The figures are printed as \"$64.8 million\" and \"$63.6 million\". We need to extract the numeric values. In evidence, we list the figures as printed: \"$64.8 million\" and \"$63.6 million\". The program uses numbers 64.8 and 63.6.\n\nLet's check if there is any other interpretation: The \"respectively\" might refer to 2007, 2006, 2005? Or 2006, 2005, 2004? The question asks from 2006 to 2007. The order in the sentence is \"$64.8 million, $63.6 million and $57.8 million, respectively.\" Typically in financial reports, they list most recent first: 2007, 2006, 2005. So 2007 = 64.8, 2006 = 63.6. So change = (64.8-63.6)/63.6.\n\nIf it were 2006, 2005, 2004, then 2007 would not be there. But the announcement date is November 1, 2007, so the report is for 2007. So yes.\n\nThus answer is 1.8868%.\n\nLet's produce evidence and program.",
+ "raw_content": "<evidence>\n$64.8 million | /chunk/FinancialConditionOverview/p/DividendPaymentRecord/DividendPaymentRecord\n$63.6 million | /chunk/FinancialConditionOverview/p/DividendPaymentRecord/DividendPaymentRecord\n</evidence>\n\n<program>multiply(divide(subtract(64.8, 63.6), 63.6), 100)</program>\n\n<answer>1.8867924528301886</answer>",
+ "r2_usage": {
+  "prompt_tokens": 583,
+  "completion_tokens": 3170,
+  "total_tokens": 3753,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 583,
+   "completion_tokens": 3170,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "$64.8 million",
+   "element": "chunk/FinancialConditionOverview/p/DividendPaymentRecord/DividendPaymentRecord",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$63.6 million",
+   "element": "chunk/FinancialConditionOverview/p/DividendPaymentRecord/DividendPaymentRecord",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(64.8, 63.6), 63.6), 100)",
+ "answer_model": "1.8867924528301886",
+ "program_value": 1.886792452830182,
+ "elapsed_s": 14.3
+}

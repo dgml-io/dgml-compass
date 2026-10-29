@@ -1,0 +1,53 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0599",
+ "format": "markdown_pdf_poppler",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "what is the total value of the approved equity compensation plans in 2005 , in millions of dollars?",
+ "gold": "375.15",
+ "finqa_id": "CME/2010/page_123.pdf-5",
+ "source_page": "page_123",
+ "ticker": "CME",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/markdown_pdf_poppler/CME_2010_0001193125-11-050252.md",
+ "doc_chars": 524138,
+ "prompt_chars": 524326,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 524138,
+ "original_chars": 524138,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93767,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 422,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer question: \"what is the total value of the approved equity compensation plans in 2005 , in millions of dollars?\" Need find in document. The document is 10-K for CME Group. It mentions equity compensation plans. There is a table \"Equity Compensation Plan Information\" in Item 12. It lists number of securities to be issued upon exercise of outstanding options, weighted-average exercise price, and number remaining available. But question asks \"total value of the approved equity compensation plans in 2005\". Possibly refers to \"CME Group Inc. 2005 Director Stock Plan\" or \"Chicago Mercantile Exchange Holdings Inc. Amended and Restated Employee Stock Purchase Plan\" approved in 2005. But \"total value\" in millions? Need see if document gives value. The document mentions \"CME Group Inc. 2005 Director Stock Plan\" and \"Employee Stock Purchase Plan\" approved by shareholders at 2005 annual meeting. But no total value. Also \"In connection with our receipt of shareholder approval to increase the authorized shares under our Omnibus Stock Plan and our Director Stock Plan\" etc. No dollar value.\n\nMaybe question is from a different context? The document has \"Equity Compensation Plan Information\" table with columns: Number of securities to be issued upon exercise of outstanding options, weighted-average exercise price, number remaining available. It does not give dollar value. The question asks \"total value of the approved equity compensation plans in 2005\" - perhaps they want the value of the plans approved in 2005? The document does not provide that. So answer NOT_FOUND.\n\nBut let's double-check: The document mentions \"CME Group Inc. 2005 Director Stock Plan\" and \"Employee Stock Purchase Plan\" approved by shareholders at 2005 annual meeting. No dollar value. Also \"In connection with our receipt of shareholder approval to increase the authorized shares under our Omnibus Stock Plan and our Director Stock Plan\" etc. No dollar value.\n\nThus answer NOT_FOUND.",
+ "raw_content": "<answer>NOT_FOUND</answer>",
+ "usage": {
+  "prompt_tokens": 93917,
+  "completion_tokens": 422,
+  "total_tokens": 94339,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 93696
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.54,
+ "answer_tag_found": true,
+ "docfinqa_row": 599
+}

@@ -1,0 +1,75 @@
+{
+ "id": "IP_2007_0001193125-08-042850__row0683",
+ "format": "dgml",
+ "key": "IP_2007_0001193125-08-042850",
+ "question": "what percentage of industrial packaging sales where represented by european industrial packaging net sales in 2006?",
+ "gold": "20%",
+ "finqa_id": "IP/2007/page_31.pdf-2",
+ "source_page": "page_31",
+ "ticker": "IP",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml/IP_2007_0001193125-08-042850.dgml.xml",
+ "doc_chars": 914092,
+ "prompt_chars": 914296,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 914092,
+ "original_chars": 914092,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 217793,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 326,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "20.324873",
+ "reasoning": "We need percentage of European Industrial Packaging net sales in 2006 relative to Industrial Packaging sales in 2006. Need figures.\n\nFrom document: Industrial Packaging segment sales 2006: $4,925 million (in segment table). European Industrial Packaging net sales 2006: $1.0 billion? Actually text says \"EUROPEAN INDUSTRIAL PACKAGING net sales for 2007 were $1.1 billion, up from $1.0 billion in 2006 and $880 million in 2005.\" So 2006 = $1.0 billion = $1,000 million. Also there is a table \"European Sales by Industry Segment\" with Industrial Packaging 2006 = $1,001 million. That is more precise. Use that. Industrial Packaging sales 2006 = $4,925 million. Percentage = 1001/4925 * 100 = 20.32...%. Let's compute: 1001/4925 = 0.20325... = 20.33%. Need answer as percentage. Use evidence: 1,001 | EuropeanSegmentSales Industrial Packaging 2006; 4,925 | Industrial Packaging sales 2006. Program: multiply(divide(1001, 4925), 100).",
+ "raw_content": "<evidence>\n1,001 | EuropeanSegmentSales Industrial Packaging 2006\n4,925 | Industrial Packaging sales 2006\n</evidence>\n<program>multiply(divide(1001, 4925), 100)</program>\n<answer>20.33</answer>",
+ "usage": {
+  "prompt_tokens": 218100,
+  "completion_tokens": 326,
+  "total_tokens": 218426,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 14.57,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,001",
+   "element": "EuropeanSegmentSales Industrial Packaging 2006",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "4,925",
+   "element": "Industrial Packaging sales 2006",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "multiply(divide(1001, 4925), 100)",
+ "answer_model": "20.33",
+ "program_value": 20.324873096446698,
+ "docfinqa_row": 683
+}

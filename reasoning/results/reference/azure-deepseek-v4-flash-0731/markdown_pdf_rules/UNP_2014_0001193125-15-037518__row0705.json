@@ -1,0 +1,53 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0705",
+ "format": "markdown_pdf_rules",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "what was the percentage change in total expense for repairs and maintenance from 2013 to 2014?",
+ "gold": "4%",
+ "finqa_id": "UNP/2014/page_75.pdf-2",
+ "source_page": "page_75",
+ "ticker": "UNP",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf_rules/UNP_2014_0001193125-15-037518.md",
+ "doc_chars": 326124,
+ "prompt_chars": 326307,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 326124,
+ "original_chars": 326124,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 75178,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 163,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "4.35%",
+ "reasoning": "We need to find total expense for repairs and maintenance for 2013 and 2014. In the document, under Note 12 Properties, it says: \"Total expense for repairs and maintenance incurred was $2.4 billion for 2014, $2.3 billion for 2013, and $2.1 billion for 2012.\" So 2014 = 2.4 billion, 2013 = 2.3 billion. Percentage change = (2.4 - 2.3)/2.3 * 100 = 0.1/2.3 * 100 ≈ 4.3478%. So about 4.35%. The question asks for percentage change, so answer with that number.",
+ "raw_content": "<answer>4.35%</answer>",
+ "usage": {
+  "prompt_tokens": 75327,
+  "completion_tokens": 163,
+  "total_tokens": 75490,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 75264
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.16,
+ "answer_tag_found": true,
+ "docfinqa_row": 705
+}

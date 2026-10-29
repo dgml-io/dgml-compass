@@ -1,0 +1,72 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0242",
+ "format": "markdown_pdf_plumber",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "is the weighted average useful life ( years ) for purchased technology greater than localization?",
+ "gold": "yes",
+ "finqa_id": "ADBE/2008/page_74.pdf-2",
+ "source_page": "page_74",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_plumber/ADBE_2008_0000796343-09-000007.md",
+ "doc_chars": 913121,
+ "prompt_chars": 913307,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 913121,
+ "original_chars": 913121,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 209296,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 113,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "yes",
+ "reasoning": "We need answer question: is weighted average useful life (years) for purchased technology greater than localization? From Note 1 table: Purchased technology 4, Localization 1. So yes. Need provide evidence and program. Answer likely \"yes\" or \"true\". The question asks \"is ... greater than ...?\" So answer yes. Need include evidence values.",
+ "raw_content": "<evidence>\n4 | Purchased technology\n1 | Localization\n</evidence>\n\n<program>\ngt(4, 1)\n</program>\n\n<answer>yes</answer>",
+ "usage": {
+  "prompt_tokens": 209600,
+  "completion_tokens": 113,
+  "total_tokens": 209713,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 16.6,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "4",
+   "element": "Purchased technology",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1",
+   "element": "Localization",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "gt(4, 1)",
+ "answer_model": "yes",
+ "program_value": null,
+ "docfinqa_row": 242
+}

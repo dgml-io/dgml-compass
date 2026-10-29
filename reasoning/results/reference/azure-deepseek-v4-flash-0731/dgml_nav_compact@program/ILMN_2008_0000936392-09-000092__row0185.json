@@ -1,0 +1,76 @@
+{
+ "id": "ILMN_2008_0000936392-09-000092__row0185",
+ "key": "ILMN_2008_0000936392-09-000092",
+ "question": "what was the percentage change in the uncertain tax positions from 2007 to 2008?",
+ "gold": "11%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "ILMN_2008_0000936392-09-000092.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/PartDesignation/CriticalAccountingPolicies/ImpairmentOfManufacturingEquipmentDiscussion/IncomeTaxProvisionDiscussion/UncertainTaxPositionDisclosure",
+  "/chunk/section/AccountingPolicyDescription/NotesToFinancialStatementsHeader/UncertainTaxPositionDisclosure",
+  "/chunk/section/AccountingPolicyDescription/NotesToFinancialStatementsHeader/UncertainTaxPositionRollforward",
+  "/chunk/section/AccountingPolicyDescription/NotesToFinancialStatementsHeader/table/UncertainTaxPositionRollforward"
+ ],
+ "r1_reasoning_chars": 4113,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 19298,
+  "completion_tokens": 1011,
+  "total_tokens": 20309,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/PartDesignation/CriticalAccountingPolicies/ImpairmentOfManufacturingEquipmentDiscussion/IncomeTaxProvisionDiscussion/UncertainTaxPositionDisclosure",
+  "/chunk/section/AccountingPolicyDescription/NotesToFinancialStatementsHeader/UncertainTaxPositionDisclosure",
+  "/chunk/section/AccountingPolicyDescription/NotesToFinancialStatementsHeader/UncertainTaxPositionRollforward",
+  "/chunk/section/AccountingPolicyDescription/NotesToFinancialStatementsHeader/table/UncertainTaxPositionRollforward"
+ ],
+ "content_chars": 7151,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "11.236901",
+ "reasoning": "We need percentage change from 2007 to 2008. Figures: Balance at Dec 31, 2007 = $21,376 (thousands). Balance at Dec 28, 2008 = $23,778. Percentage change = (23778 - 21376)/21376 * 100. Compute.",
+ "raw_content": "<evidence>\n$ 21,376 | BalanceAtPeriodStart\n$ 23,778 | BalanceAtPeriodEnd\n</evidence>\n<program>multiply(divide(subtract(23778, 21376), 21376), 100)</program>",
+ "r2_usage": {
+  "prompt_tokens": 1961,
+  "completion_tokens": 124,
+  "total_tokens": 2085,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 21,376",
+   "element": "BalanceAtPeriodStart",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ 23,778",
+   "element": "BalanceAtPeriodEnd",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(23778, 21376), 21376), 100)",
+ "answer_model": null,
+ "program_value": 11.23690119760479,
+ "elapsed_s": 6.07,
+ "outline_source": "ILMN_2008_0000936392-09-000092.outline.txt",
+ "outline_chars": 79733
+}

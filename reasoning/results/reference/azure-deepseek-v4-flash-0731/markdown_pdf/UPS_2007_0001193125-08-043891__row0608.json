@@ -1,0 +1,53 @@
+{
+ "id": "UPS_2007_0001193125-08-043891__row0608",
+ "format": "markdown_pdf",
+ "key": "UPS_2007_0001193125-08-043891",
+ "question": "what portion of total expected cash outflow for capital leases is due in 2018?",
+ "gold": "17.4%",
+ "finqa_id": "UPS/2007/page_49.pdf-2",
+ "source_page": "page_49",
+ "ticker": "UPS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf/UPS_2007_0001193125-08-043891.md",
+ "doc_chars": 325407,
+ "prompt_chars": 325574,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 325407,
+ "original_chars": 325407,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 76236,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 191,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer question: \"what portion of total expected cash outflow for capital leases is due in 2018?\" Need find capital lease payments table. The document has commitments table in MD&A: \"Year Capital Leases ... 2008 $108, 2009 $73, 2010 $91, 2011 $31, 2012 $31, After 2012 $285, Total $619\". Also Note 8 has similar table: Capital Leases: 2008 $108, 2009 $73, 2010 $91, 2011 $31, 2012 $31, After 2012 $285, Total $619. But question asks \"due in 2018\" specifically. The table only gives \"After 2012\" aggregate, not individual years. So cannot determine 2018 amount. Thus NOT_FOUND.",
+ "raw_content": "<answer>NOT_FOUND</answer>",
+ "usage": {
+  "prompt_tokens": 76381,
+  "completion_tokens": 191,
+  "total_tokens": 76572,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 76288
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 1.87,
+ "answer_tag_found": true,
+ "docfinqa_row": 608
+}

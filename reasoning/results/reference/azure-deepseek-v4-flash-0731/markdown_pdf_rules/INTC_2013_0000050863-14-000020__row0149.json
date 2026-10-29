@@ -1,0 +1,50 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0149",
+ "format": "markdown_pdf_rules",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "what was the percent of the impairment charges to the net revenue in 2013",
+ "gold": "0.5%",
+ "finqa_id": "INTC/2013/page_33.pdf-2",
+ "source_page": "page_33",
+ "ticker": "INTC",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/markdown_pdf_rules/INTC_2013_0000050863-14-000020.md",
+ "doc_chars": 419421,
+ "prompt_chars": 419583,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 419421,
+ "original_chars": 419421,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 94700,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 442,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.46%",
+ "reasoning": "We need to find impairment charges in 2013 and net revenue in 2013. The document mentions restructuring and asset impairment charges of $240 million for 2013. Also, there are impairment charges on equity investments, but the question likely refers to the restructuring and asset impairment charges line item. The question says \"the percent of the impairment charges to the net revenue in 2013\". Net revenue 2013 is $52,708 million. Impairment charges: there is \"Restructuring and asset impairment charges\" of $240 million. Also there are other impairment charges like on equity investments, but those are not typically called \"impairment charges\" in the income statement line. The line item is \"Restructuring and asset impairment charges\". So percent = 240 / 52,708 * 100 = 0.4553...% approximately 0.46%. Let's compute: 240/52708 = 0.004553... so 0.4553%. The answer should be a percentage. The question asks \"what was the percent\" so we give the number. Probably 0.46% or 0.4553%. We'll give 0.46% or maybe 0.4553%. The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for percent, so we can give the number with % sign? It says \"no explanation or units unless the question asks for them.\" The question asks for percent, so we can include % sign. But to be safe, we can give the numeric value. Typically they want the percentage number. I'll give 0.46% or 0.4553%. Let's compute exactly: 240/52708 = 0.004553... so 0.4553%. I'll put 0.46% or 0.4553%. I'll put 0.46% as rounded. But maybe they want the exact fraction? The question says \"percent\" so we give the percentage. I'll put 0.46%.",
+ "raw_content": "<answer>0.46%</answer>",
+ "usage": {
+  "prompt_tokens": 94845,
+  "completion_tokens": 442,
+  "total_tokens": 95287,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.13,
+ "answer_tag_found": true,
+ "docfinqa_row": 149
+}

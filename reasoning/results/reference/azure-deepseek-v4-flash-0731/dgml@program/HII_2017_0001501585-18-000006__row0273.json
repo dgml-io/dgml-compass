@@ -1,0 +1,80 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0273",
+ "format": "dgml",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what was the return on total assets during 2014?",
+ "gold": "5.4%",
+ "finqa_id": "HII/2017/page_47.pdf-2",
+ "source_page": "page_47",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/dgml/HII_2017_0001501585-18-000006.dgml.xml",
+ "doc_chars": 733855,
+ "prompt_chars": 733992,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 733855,
+ "original_chars": 733855,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 164566,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "stop",
+   "completion_tokens": 295,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 1,
+ "ok": true,
+ "answer": "5.4175%",
+ "reasoning": "We need return on total assets during 2014. Return on assets = net earnings / total assets. For 2014, from selected financial data: Net earnings 2014 = 338, Total assets 2014 = 6,239. Also from table: 2014 net earnings 338, total assets 6,239. Return = 338/6239 = 0.05417... = 5.42%. Need answer as value? Probably percentage. The question asks \"what was the return on total assets during 2014?\" So answer 5.42% (or 0.0542). We'll provide numeric. Use figures: 338 and 6,239. Compute divide(338, 6239) = 0.05417. We'll output 5.42%? The instruction says no units unless asked. They ask return, likely percentage. We'll output 5.42% or 0.0542? Usually return on assets expressed as percentage. I'll output 5.42%. But need exact computation. divide(338, 6239) = 0.05417... So answer 5.42%.",
+ "raw_content": "<evidence>\n338 | Net earnings (loss) 2014\n6,239 | Total assets 2014\n</evidence>\n<program>divide(338, 6239)</program>\n<answer>5.42%</answer>",
+ "usage": {
+  "prompt_tokens": 164865,
+  "completion_tokens": 295,
+  "total_tokens": 165160,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 13.19,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "338",
+   "element": "Net earnings (loss) 2014",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6,239",
+   "element": "Total assets 2014",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(338, 6239)",
+ "answer_model": "5.42%",
+ "program_value": 0.05417534861355987,
+ "docfinqa_row": 273
+}

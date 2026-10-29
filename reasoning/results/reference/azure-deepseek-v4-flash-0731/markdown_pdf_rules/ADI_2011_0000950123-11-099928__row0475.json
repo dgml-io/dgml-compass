@@ -1,0 +1,50 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0475",
+ "format": "markdown_pdf_rules",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what is the net change in the total investment from 2010 to 2011?",
+ "gold": "17720",
+ "finqa_id": "ADI/2011/page_81.pdf-2",
+ "source_page": "page_81",
+ "ticker": "ADI",
+ "fiscal_year": "2011",
+ "source_file": "data/docs/markdown_pdf_rules/ADI_2011_0000950123-11-099928.md",
+ "doc_chars": 345770,
+ "prompt_chars": 345924,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 345770,
+ "original_chars": 345770,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 77039,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1280,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "904694",
+ "reasoning": "We need to find net change in total investment from 2010 to 2011. The document provides balance sheet data: total assets, but \"total investment\" likely refers to cash and cash equivalents plus short-term investments? Or maybe total investments? The question says \"total investment\" - could be cash and cash equivalents + short-term investments? Or maybe \"total assets\"? But the phrase \"total investment\" might refer to the sum of cash and cash equivalents and short-term investments. Let's check the document.\n\nIn the MD&A, they mention \"cash and cash equivalents and short-term investments\" as principal source of liquidity. At October 29, 2011, it was $3,592.5 million. At October 30, 2010? They don't give that directly, but we can compute from balance sheet: 2011: cash and cash equivalents 1,405,100 + short-term investments 2,187,362 = 3,592,462 (approx 3,592.5). 2010: cash 1,070,000 + short-term investments 1,617,768 = 2,687,768. So net change = 3,592,462 - 2,687,768 = 904,694 (in thousands). But the question says \"total investment\" - could also be \"total assets\"? But they ask \"net change in the total investment\" - likely they mean the total of cash and cash equivalents and short-term investments. Alternatively, maybe they mean \"total investments\" as in the line items? The balance sheet has \"Short-term investments\" and \"Other investments\" but not a single \"total investment\". The phrase \"total investment\" might be ambiguous. However, in the context of the document, they often refer to \"cash and cash equivalents and short-term investments\" as a combined figure. The question says \"total investment\" - could be that. Let's see if there is any other figure. The question: \"what is the net change in the total investment from 2010 to 2011?\" Possibly they want the change in total assets? But that is not called \"total investment\". The document has \"Total assets\" but not \"total investment\". I think it's the sum of cash and cash equivalents and short-term investments. Let's compute exactly: 2011: 1,405,100 + 2,187,362 = 3,592,462. 2010: 1,070,000 + 1,617,768 = 2,687,768. Difference = 904,694 (in thousands). So net change = $904,694 thousand = $904.694 million. But the question asks for the net change, so it could be positive. Alternatively, they might want the change in \"total investments\" which might include other investments? But other investments are small. The balance sheet has \"Other investments\" of 2,951 in 2011 and 1,317 in 2010. But that is not typically called \"total investment\". The phrase \"total investment\" is not used in the document. However, the MD&A says \"At October 29, 2011, our principal source of liquidity was $3,592.5 million of cash and cash equivalents and short-term investments.\" So that is a combined figure. So the net change is 904.7 million. But let's check if they ask for the net change in total investment, maybe they mean the change in total assets? But that is not called investment. I'll go with the cash and short-term investments.\n\nAlternatively, the question might be from a financial analysis perspective: \"total investment\" could be the sum of cash, short-term investments, and long-term investments? But there is no long-term investments line. There is \"Other investments\" which is small. So I think it's cash + short-term.\n\nLet's compute precisely: 2011: 1,405,100 + 2,187,362 = 3,592,462. 2010: 1,070,000 + 1,617,768 = 2,687,768. Difference = 904,694. So net change = 904,694 thousand dollars. The answer should be in the same units? The question doesn't specify units, but the document uses thousands. So we can give 904,694 (in thousands) or $904.7 million. But the instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So we should just put the number. Since the document uses thousands, we can put 904694. But to be safe, we can put 904,694. However, the question says \"net change\" - it's positive. So I'll put 904694.\n\nBut let's double-check if there is any other interpretation. The balance sheet has \"Total assets\" which is 5,277,635 in 2011 and 4,328,831 in 2010. That change is 948,804. But that is not called \"total investment\". The phrase \"total investment\" is not used. So I think it's the cash and short-term investments.\n\nAlternatively, maybe they mean \"total investments\" as in the sum of short-term investments and other investments? But that would be 2,187,362+2,951=2,190,313 in 2011 and 1,617,768+1,317=1,619,085 in 2010, change = 571,228. But that seems less likely.\n\nGiven the context, the MD&A explicitly mentions \"cash and cash equivalents and short-term investments\" as a combined liquidity figure. So I'll go with that.\n\nThus, net change = 904,694 (in thousands). I'll put 904694.\n\nBut wait, the question says \"total investment\" - maybe they mean the total of all investments including cash? Actually cash is not an investment, but they combine them. I think it's fine.\n\nI'll answer with 904694.",
+ "raw_content": "<answer>904694</answer>",
+ "usage": {
+  "prompt_tokens": 77185,
+  "completion_tokens": 1280,
+  "total_tokens": 78465,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.74,
+ "answer_tag_found": true,
+ "docfinqa_row": 475
+}

@@ -1,0 +1,85 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0387",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what is the percent change in the fair value per share between 2014 and 2016?",
+ "gold": "163%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "EW_2016_0001099800-17-000008.outline.txt",
+ "doc_source": "EW_2016_0001099800-17-000008.dgml.xml",
+ "outline_chars": 67317,
+ "predicted_xpaths": [
+  "/chunk/CommonStock/EmployeeAndDirectorStockPlans/OptionAwardValuationAssumptions/table",
+  "/chunk/CommonStock/EmployeeAndDirectorStockPlans/OptionAwardValuationAssumptions/table/OptionFairValuePerShare/td/FairValuePerShareAmount",
+  "/chunk/CommonStock/EmployeeAndDirectorStockPlans/OptionAwardValuationAssumptions/table/OptionFairValuePerShare"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 6140,
+ "r1_usage": {
+  "prompt_tokens": 17156,
+  "completion_tokens": 1661,
+  "total_tokens": 18817,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/CommonStock/EmployeeAndDirectorStockPlans/OptionAwardValuationAssumptions/table",
+  "/chunk/CommonStock/EmployeeAndDirectorStockPlans/OptionAwardValuationAssumptions/table/OptionFairValuePerShare/td/FairValuePerShareAmount",
+  "/chunk/CommonStock/EmployeeAndDirectorStockPlans/OptionAwardValuationAssumptions/table/OptionFairValuePerShare"
+ ],
+ "content_chars": 5696,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "163.829787",
+ "reasoning": "We need percent change from 2014 to 2016. Fair value per share: 2014 = $11.75, 2016 = $31.00. Percent change = (31.00 - 11.75)/11.75 * 100. Compute: 31 - 11.75 = 19.25. 19.25 / 11.75 = 1.63829787234. *100 = 163.829787234%. So about 163.83%. Need answer as value only. But question asks \"what is the percent change\" - likely answer as percentage. We'll provide numeric. Need evidence list figures. Use paths. The figures are in table. Path: /chunk/CommonStock/EmployeeAndDirectorStockPlans/OptionAwardValuationAssumptions/table/OptionFairValuePerShare/td/FairValuePerShareAmount. But there are multiple. We'll cite both. Also note the table has years. We'll cite the values as printed: $ 31.00 and $ 11.75. Program: multiply(divide(subtract(31.00, 11.75), 11.75), 100). But the figures as printed include \"$\" and spaces. We should use numeric values. The instruction says \"figures exactly as printed\" but for computation we can use numbers. We'll list \"$ 31.00\" and \"$ 11.75\". Program uses 31.00 and 11.75.",
+ "raw_content": "<evidence>$ 31.00 | /chunk/CommonStock/EmployeeAndDirectorStockPlans/OptionAwardValuationAssumptions/table/OptionFairValuePerShare/td/FairValuePerShareAmount\n$ 11.75 | /chunk/CommonStock/EmployeeAndDirectorStockPlans/OptionAwardValuationAssumptions/table/OptionFairValuePerShare/td/FairValuePerShareAmount</evidence>\n<program>multiply(divide(subtract(31.00, 11.75), 11.75), 100)</program>\n<answer>163.82978723404255</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1788,
+  "completion_tokens": 453,
+  "total_tokens": 2241,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 1788,
+   "completion_tokens": 453,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "$ 31.00",
+   "element": "chunk/CommonStock/EmployeeAndDirectorStockPlans/OptionAwardValuationAssumptions/table/OptionFairValuePerShare/td/FairValuePerShareAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$ 11.75",
+   "element": "chunk/CommonStock/EmployeeAndDirectorStockPlans/OptionAwardValuationAssumptions/table/OptionFairValuePerShare/td/FairValuePerShareAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(31.00, 11.75), 11.75), 100)",
+ "answer_model": "163.82978723404255",
+ "program_value": 163.82978723404256,
+ "elapsed_s": 7.89
+}

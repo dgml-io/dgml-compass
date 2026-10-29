@@ -1,0 +1,71 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0173",
+ "format": "dgml",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what portion of the adjusted consolidated cash flow for the twelve months ended december 31 , 2005 is related to non-tower cash flow?",
+ "gold": "-5.8%",
+ "finqa_id": "AMT/2005/page_54.pdf-1",
+ "source_page": "page_54",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/dgml/AMT_2005_0001193125-06-054224.dgml.xml",
+ "doc_chars": 790211,
+ "prompt_chars": 790433,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 790211,
+ "original_chars": 790211,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 189615,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1018,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-0.057508",
+ "reasoning": "We need to find adjusted consolidated cash flow and non-tower cash flow for twelve months ended Dec 31, 2005. From the document, in the \"Information Presented Pursuant to the Indentures...\" section, there is a table:\n\nTower Cash Flow, for the three months ended December 31, 2005: $139,590\nConsolidated Cash Flow, for the twelve months ended December 31, 2005: $498,266\nLess: Tower Cash Flow, for the twelve months ended December 31, 2005: (524,804)\nPlus: four times Tower Cash Flow, for the three months ended December 31, 2005: 558,360\nAdjusted Consolidated Cash Flow, for the twelve months ended December 31, 2005: $531,822\nNon-Tower Cash Flow, for the twelve months ended December 31, 2005: $(30,584)\n\nQuestion: what portion of the adjusted consolidated cash flow is related to non-tower cash flow? That is non-tower cash flow / adjusted consolidated cash flow. Non-tower cash flow is -30,584, adjusted consolidated cash flow is 531,822. So portion = -30,584 / 531,822 ≈ -0.0575 or -5.75%. The question asks \"what portion\" - likely a percentage. We'll compute exactly: -30584 / 531822 = -0.0575... Let's compute: 531822 * 0.0575 = 30579.765, so about -0.0575. We'll give as -5.75% or -0.0575. The answer should be a value. Probably -5.75% or -0.0575. The question says \"what portion\" - could be a fraction. We'll provide -0.0575 or -5.75%. Since they ask for portion, maybe fraction. We'll compute exactly: -30584/531822 = -0.0575... Let's do division: 30584/531822 = 0.0575... 531822*0.0575 = 30579.765, remainder 4.235, so 0.0575 + 4.235/531822 ≈ 0.0575 + 0.000008 = 0.057508. So -0.0575. We'll give -5.75% or -0.0575. The instruction: \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what portion\" - so a fraction or percentage. We'll give -0.0575 or -5.75%. I'll give -5.75%? But they said no units unless asked. \"portion\" could be a fraction. I'll give -0.0575. But maybe they expect percentage. The question says \"what portion\" - typically a fraction. I'll give -0.0575. But to be safe, I'll give -5.75%? The instruction says no units unless asked. \"portion\" doesn't ask for units. I'll give -0.0575. Let's compute exactly: -30584/531822 = -0.0575... I'll give -0.0575. But maybe they want a percentage. I'll give -5.75%? The instruction says \"containing only the value itself\" - so I'll give -0.0575. I'll check if there is any other interpretation: \"what portion of the adjusted consolidated cash flow ... is related to non-tower cash flow?\" That is non-tower / adjusted. Yes.\n\nEvidence: we need to list figures used. Non-Tower Cash Flow: $(30,584) from the table. Adjusted Consolidated Cash Flow: $531,822. We'll cite those.\n\nProgram: divide(-30584, 531822) but the figures as printed include parentheses? The document shows $(30,584) and $531,822. We'll use -30584 and 531822. So program: divide(-30584, 531822). But the instruction says \"a figure that is itself the answer is its own program.\" Here we compute. So program: divide(-30584, 531822). We'll put that.\n\nFinal answer: -0.0575 (or -5.75%). I'll put -0.0575.",
+ "raw_content": "<evidence>\n$(30,584) | Non-Tower Cash Flow, for the twelve months ended December 31, 2005\n$531,822 | Adjusted Consolidated Cash Flow, for the twelve months ended December 31, 2005\n</evidence>\n<program>divide(-30584, 531822)</program>\n<answer>-0.0575</answer>",
+ "usage": {
+  "prompt_tokens": 189931,
+  "completion_tokens": 1018,
+  "total_tokens": 190949,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 15.99,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$(30,584)",
+   "element": "Non-Tower Cash Flow, for the twelve months ended December 31, 2005",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$531,822",
+   "element": "Adjusted Consolidated Cash Flow, for the twelve months ended December 31, 2005",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(-30584, 531822)",
+ "answer_model": "-0.0575",
+ "program_value": -0.057507963190691624,
+ "docfinqa_row": 173
+}

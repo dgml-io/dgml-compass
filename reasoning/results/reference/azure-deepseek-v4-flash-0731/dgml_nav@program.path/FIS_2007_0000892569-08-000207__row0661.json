@@ -1,0 +1,84 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0661",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what percentage of total future minimum operating lease payments for leases with remaining terms greater than one year are due in 2009?",
+ "gold": "25%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "FIS_2007_0000892569-08-000207.outline.txt",
+ "doc_source": "FIS_2007_0000892569-08-000207.dgml.xml",
+ "outline_chars": 91339,
+ "predicted_xpaths": [
+  "/chunk/RegistrantName/ContingentLiabilityAmount/ConsolidatedFinancial/OperatingLeaseCommitmentAmount"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 3124,
+ "r1_usage": {
+  "prompt_tokens": 23045,
+  "completion_tokens": 768,
+  "total_tokens": 23813,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 23040
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/RegistrantName/ContingentLiabilityAmount/ConsolidatedFinancial/OperatingLeaseCommitmentAmount"
+ ],
+ "content_chars": 4844,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "25.321437",
+ "reasoning": "We need percentage: 2009 amount / total * 100. Figures: 2009 = 63,060; total = $249,038 (note dollar sign). Use 63060 / 249038 * 100. Compute.",
+ "raw_content": "<evidence>63,060 | /chunk/RegistrantName/ContingentLiabilityAmount/ConsolidatedFinancial/OperatingLeaseCommitmentAmount/OperatingLeaseCommitmentAmount/table/OperatingLeaseCommitmentAmount[2]/OperatingLeaseCommitmentAmount\n$249,038 | /chunk/RegistrantName/ContingentLiabilityAmount/ConsolidatedFinancial/OperatingLeaseCommitmentAmount/OperatingLeaseCommitmentAmount/table/OperatingLeaseCommitmentAmount[7]/OperatingLeaseCommitmentAmount</evidence>\n\n<program>multiply(divide(63060, 249038), 100)</program>",
+ "r2_usage": {
+  "prompt_tokens": 1438,
+  "completion_tokens": 192,
+  "total_tokens": 1630,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 1438,
+   "completion_tokens": 192,
+   "got_answer": false
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "63,060",
+   "element": "chunk/RegistrantName/ContingentLiabilityAmount/ConsolidatedFinancial/OperatingLeaseCommitmentAmount/OperatingLeaseCommitmentAmount/table/OperatingLeaseCommitmentAmount[2]/OperatingLeaseCommitmentAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$249,038",
+   "element": "chunk/RegistrantName/ContingentLiabilityAmount/ConsolidatedFinancial/OperatingLeaseCommitmentAmount/OperatingLeaseCommitmentAmount/table/OperatingLeaseCommitmentAmount[7]/OperatingLeaseCommitmentAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(63060, 249038), 100)",
+ "answer_model": null,
+ "program_value": 25.321436889149446,
+ "elapsed_s": 5.14
+}

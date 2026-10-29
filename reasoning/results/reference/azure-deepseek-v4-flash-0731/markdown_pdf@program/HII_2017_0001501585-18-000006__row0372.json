@@ -1,0 +1,74 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0372",
+ "format": "markdown_pdf",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what is the combined number of equity compensation plans approved by security holders",
+ "gold": "4536446",
+ "finqa_id": "HII/2017/page_124.pdf-4",
+ "source_page": "page_124",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/markdown_pdf/HII_2017_0001501585-18-000006.md",
+ "doc_chars": 458663,
+ "prompt_chars": 458837,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 458663,
+ "original_chars": 458663,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 99639,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 774,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "2",
+ "reasoning": "We need answer combined number of equity compensation plans approved by security holders. Document Item 12 table: \"Equity compensation plans approved by security holders\" row has number of securities to be issued 448,859, weighted avg exercise price $0.00, number remaining 4,087,587. But question asks \"combined number of equity compensation plans approved by security holders\" - likely number of plans? The table lists plan category: \"Equity compensation plans approved by security holders\" and \"not approved\". The combined number of plans? There are two plans: 2011 and 2012. But question wording \"combined number of equity compensation plans approved by security holders\" might refer to number of securities? Need parse. It says \"combined number of equity compensation plans approved by security holders\" - maybe asks total number of plans approved? The document says \"The following table presents the equity securities available for issuance under our equity compensation plans as of December 31, 2017.\" Table has rows. The question: \"what is the combined number of equity compensation plans approved by security holders\" - likely from table: \"Equity compensation plans approved by security holders\" row has number of securities to be issued upon exercise of outstanding options, warrants and rights: 448,859. But \"combined number\" might mean sum of column (a) and (c)? No, \"combined number of equity compensation plans\" - maybe number of plans? The table doesn't list count of plans. However text says \"2011 Plan\" and \"2012 Plan\" both approved by security holders. So combined number is 2. But question asks \"combined number of equity compensation plans approved by security holders\" - likely from Item 12 table: \"Equity compensation plans approved by security holders\" row. The number of securities to be issued is 448,859. But \"combined number\" could be sum of securities? Let's read question: \"what is the combined number of equity compensation plans approved by security holders\" - It might be asking for the number of plans, not securities. The document says \"The following table presents the equity securities available for issuance under our equity compensation plans as of December 31, 2017.\" The table has two categories: approved by security holders and not approved. The \"combined number\" might refer to the total number of securities under approved plans? But \"plans\" plural. The question says \"combined number of equity compensation plans approved by security holders\" - likely from a table where there are two plans: 2011 and 2012. The answer is 2. But need evidence. The document states \"the 2011 Plan\" and \"the 2012 Plan\" both approved by stockholders. Also Item 12 table footnote: \"Includes grants made under the Huntington Ingalls Industries, Inc. 2012 Long-Term Incentive Stock Plan (the \"2012 Plan\"), which was approved by our stockholders on May 2, 2012, and the Huntington Ingalls Industries, Inc. 2011 Long-Term Incentive Stock Plan (the \"2011 Plan\"), which was approved by the sole stockholder of HII prior to its spin-off from Northrop Grumman Corporation.\" So combined number of plans approved by security holders is 2. The question asks \"combined number of equity compensation plans approved by security holders\" - answer 2.\n\nNeed provide evidence and program. Evidence: \"2012 Plan\" and \"2011 Plan\" from footnote. Program: add(1,1) or just 2. Since answer is 2.",
+ "raw_content": "<evidence>\n2012 Plan | Item 12 footnote\n2011 Plan | Item 12 footnote\n</evidence>\n<program>add(1, 1)</program>\n<answer>2</answer>",
+ "usage": {
+  "prompt_tokens": 99940,
+  "completion_tokens": 774,
+  "total_tokens": 100714,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 98560
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.79,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "2012 Plan",
+   "element": "Item 12 footnote",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "2011 Plan",
+   "element": "Item 12 footnote",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "add(1, 1)",
+ "answer_model": "2",
+ "program_value": 2.0,
+ "docfinqa_row": 372
+}

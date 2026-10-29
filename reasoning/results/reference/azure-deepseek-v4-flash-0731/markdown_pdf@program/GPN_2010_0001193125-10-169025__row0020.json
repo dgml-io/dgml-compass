@@ -1,0 +1,72 @@
+{
+ "id": "GPN_2010_0001193125-10-169025__row0020",
+ "format": "markdown_pdf",
+ "key": "GPN_2010_0001193125-10-169025",
+ "question": "in 2010 what was the percent of the income tax benefit to the stock based compensation cost",
+ "gold": "34.8%",
+ "finqa_id": "GPN/2010/page_87.pdf-3",
+ "source_page": "page_87",
+ "ticker": "GPN",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/markdown_pdf/GPN_2010_0001193125-10-169025.md",
+ "doc_chars": 321931,
+ "prompt_chars": 322111,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 321931,
+ "original_chars": 321931,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 73426,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 211,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "34.80663",
+ "reasoning": "We need answer: \"in 2010 what was the percent of the income tax benefit to the stock based compensation cost\". Need find figures. In Note 11: Share-based compensation cost $18.1 million, income tax benefit $6.3 million for 2010. Percent = 6.3/18.1 *100 = 34.806...? Compute: 6.3/18.1 = 0.348066... = 34.81%. Need evidence figures. Use exact as printed: $18.1 and $6.3 (in millions). Program: multiply(divide(6.3, 18.1), 100). Answer with percent value.",
+ "raw_content": "<evidence>\n$18.1 | Share-based compensation cost (Note 11)\n$6.3 | Income tax benefit (Note 11)\n</evidence>\n\n<program>multiply(divide(6.3, 18.1), 100)</program>\n\n<answer>34.81%</answer>",
+ "usage": {
+  "prompt_tokens": 73733,
+  "completion_tokens": 211,
+  "total_tokens": 73944,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.56,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$18.1",
+   "element": "Share-based compensation cost (Note 11)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$6.3",
+   "element": "Income tax benefit (Note 11)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(6.3, 18.1), 100)",
+ "answer_model": "34.81%",
+ "program_value": 34.80662983425414,
+ "docfinqa_row": 20
+}

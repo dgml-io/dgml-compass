@@ -1,0 +1,74 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0863",
+ "format": "dgml",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "what was the sum of the temporary differences between 2007 and 2009 in billions",
+ "gold": "9.8",
+ "finqa_id": "IP/2009/page_84.pdf-4",
+ "source_page": "page_84",
+ "ticker": "IP",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/dgml/IP_2009_0001193125-10-040916.dgml.xml",
+ "doc_chars": 908141,
+ "prompt_chars": 908309,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 908141,
+ "original_chars": 908141,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 216559,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 438,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "7.2",
+ "reasoning": "We need answer question: \"what was the sum of the temporary differences between 2007 and 2009 in billions\". Need interpret. Document has \"Deferred income taxes are not provided for temporary differences of approximately $3.5 billion, $2.6 billion and $3.7 billion as of December 31, 2009, 2008 and 2007, respectively, representing earnings of non-U.S. subsidiaries intended to be permanently reinvested.\" So temporary differences between 2007 and 2009? Sum of temporary differences between 2007 and 2009? Likely sum of the amounts for 2007 and 2009? \"between 2007 and 2009\" could mean sum of 2007 and 2009? Or difference between 2007 and 2009? The question: \"what was the sum of the temporary differences between 2007 and 2009 in billions\" - The document lists temporary differences for 2009, 2008, 2007: $3.5, $2.6, $3.7 billion. Sum of temporary differences between 2007 and 2009? Could be sum of 2007 and 2009 = 3.7 + 3.5 = 7.2 billion. Or \"between 2007 and 2009\" might mean the range? But \"sum\" suggests add 2007 and 2009. Need check exact wording: \"what was the sum of the temporary differences between 2007 and 2009 in billions\" - likely asks sum of the temporary differences for 2007 and 2009. So answer 7.2. Need evidence: values from document. Use evidence lines. Program add(3.7, 3.5) = 7.2.",
+ "raw_content": "<evidence>\n3.5 | UndistributedForeignEarningsAmount (2009)\n3.7 | UndistributedForeignEarningsAmount (2007)\n</evidence>\n<program>add(3.7, 3.5)</program>\n<answer>7.2</answer>",
+ "usage": {
+  "prompt_tokens": 216865,
+  "completion_tokens": 438,
+  "total_tokens": 217303,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 22.67,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "3.5",
+   "element": "UndistributedForeignEarningsAmount (2009)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "3.7",
+   "element": "UndistributedForeignEarningsAmount (2007)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "add(3.7, 3.5)",
+ "answer_model": "7.2",
+ "program_value": 7.2,
+ "docfinqa_row": 863
+}

@@ -1,0 +1,70 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0590",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "what is the difference in estimated future benefit payments for retiree medical and life insurance plans between 2015 and 2016 , in millions?",
+ "gold": "10",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "LMT_2014_0001193125-15-038681.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/SegmentFinancial/PostretirementPlans/PlanAssetsOverview/PensionContributionsAndBenefits/ExpectedBenefitPaymentSchedule",
+  "/chunk/SegmentFinancial/PostretirementPlans/PlanAssetsOverview/PensionContributionsAndBenefits/table/ExpectedBenefitPaymentAmount"
+ ],
+ "r1_reasoning_chars": 10745,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 16136,
+  "completion_tokens": 2631,
+  "total_tokens": 18767,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/SegmentFinancial/PostretirementPlans/PlanAssetsOverview/PensionContributionsAndBenefits/ExpectedBenefitPaymentSchedule",
+  "/chunk/SegmentFinancial/PostretirementPlans/PlanAssetsOverview/PensionContributionsAndBenefits/table/ExpectedBenefitPaymentAmount"
+ ],
+ "content_chars": 4064,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "10",
+ "reasoning": "We need answer difference between 2015 and 2016 for retiree medical and life insurance plans. Table: 2015=190, 2016=200. Difference = 10. Need evidence and program.",
+ "raw_content": "<evidence>190 | Retiree medical and life insurance plans 2015\n200 | Retiree medical and life insurance plans 2016</evidence>\n<program>subtract(200, 190)</program>\n<answer>10</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1346,
+  "completion_tokens": 100,
+  "total_tokens": 1446,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "190",
+   "element": "Retiree medical and life insurance plans 2015",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "200",
+   "element": "Retiree medical and life insurance plans 2016",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(200, 190)",
+ "answer_model": "10",
+ "program_value": 10.0,
+ "elapsed_s": 13.34,
+ "outline_source": "LMT_2014_0001193125-15-038681.outline.txt",
+ "outline_chars": 64445
+}

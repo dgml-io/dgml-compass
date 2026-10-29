@@ -1,0 +1,53 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0405",
+ "format": "markdown_pdf_plumber",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "what is the percentage change in the the outstanding debt under the 3.00% ( 3.00 % ) notes from 2007 to 2008?",
+ "gold": "-53.0%",
+ "finqa_id": "AMT/2008/page_94.pdf-3",
+ "source_page": "page_94",
+ "ticker": "AMT",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_plumber/AMT_2008_0001193125-09-039177.md",
+ "doc_chars": 448607,
+ "prompt_chars": 448805,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 448607,
+ "original_chars": 448607,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 105711,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 245,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-53.0%",
+ "reasoning": "We need to find the outstanding debt under 3.00% notes in 2007 and 2008. From the document, in note 6, there is a table of long-term obligations. It shows for 3.00% convertible notes: 2008: $161,893 (in thousands) and 2007: $344,568. Also in the text: \"As of December 31, 2008 and 2007, the outstanding debt under the 3.00% Notes was $161.9 million ($162.2 million principal amount) and $344.6 million, net of $0.3 million and $0.4 million discount, respectively.\" So the carrying values are 161.9 and 344.6 million. The question asks for percentage change in outstanding debt from 2007 to 2008. So compute (161.9 - 344.6)/344.6 * 100 = (-182.7)/344.6 * 100 ≈ -53.0%. So percentage change is -53.0% (decrease). We'll answer with the value.",
+ "raw_content": "<answer>-53.0%</answer>",
+ "usage": {
+  "prompt_tokens": 105874,
+  "completion_tokens": 245,
+  "total_tokens": 106119,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 105728
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.1,
+ "answer_tag_found": true,
+ "docfinqa_row": 405
+}

@@ -1,0 +1,88 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0744",
+ "format": "dgml",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "what was the difference in operating margin between 2012 and 2013?",
+ "gold": ".1%",
+ "finqa_id": "LMT/2014/page_50.pdf-3",
+ "source_page": "page_50",
+ "ticker": "LMT",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/dgml/LMT_2014_0001193125-15-038681.dgml.xml",
+ "doc_chars": 698763,
+ "prompt_chars": 698918,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 698763,
+ "original_chars": 698763,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 156682,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 480,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.005344",
+ "reasoning": "We need the operating margin for 2012 and 2013. The document gives operating margins for segments, but the question likely refers to consolidated operating margin. We have net sales and operating profit for 2012 and 2013. From Selected Financial Data: 2013 net sales $45,358, operating profit $4,505; 2012 net sales $47,182, operating profit $4,434. Operating margin = operating profit / net sales. Compute difference: 2013 margin = 4505/45358 = 0.09932... 2012 margin = 4434/47182 = 0.09398... Difference = 0.00534... = 0.534 percentage points. Alternatively, the question might ask for difference in operating margin between 2012 and 2013, i.e., 2013 minus 2012. We'll compute.\n\nEvidence: 4,505 | Operating profit 2013; 45,358 | Net sales 2013; 4,434 | Operating profit 2012; 47,182 | Net sales 2012.\n\nProgram: subtract(divide(4505, 45358), divide(4434, 47182)) = 0.00534... We'll output as decimal. The answer should be the value, likely 0.0053 or 0.53%. The question asks \"difference in operating margin\" - could be in percentage points. We'll give 0.0053 (or 0.53%). Since no units asked, we'll give the decimal. But the benchmark expects exact computation. We'll provide the program and answer.\n\nLet's compute precisely: 4505/45358 = 0.099319... 4434/47182 = 0.093977... difference = 0.005342... So answer 0.005342. We'll output that.",
+ "raw_content": "<evidence>\n4,505 | Operating profit 2013\n45,358 | Net sales 2013\n4,434 | Operating profit 2012\n47,182 | Net sales 2012\n</evidence>\n<program>subtract(divide(4505, 45358), divide(4434, 47182))</program>\n<answer>0.005342</answer>",
+ "usage": {
+  "prompt_tokens": 156985,
+  "completion_tokens": 480,
+  "total_tokens": 157465,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 156928
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.44,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "4,505",
+   "element": "Operating profit 2013",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "45,358",
+   "element": "Net sales 2013",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "4,434",
+   "element": "Operating profit 2012",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "47,182",
+   "element": "Net sales 2012",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(divide(4505, 45358), divide(4434, 47182))",
+ "answer_model": "0.005342",
+ "program_value": 0.005344441246040305,
+ "docfinqa_row": 744
+}

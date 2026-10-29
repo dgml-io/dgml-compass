@@ -1,0 +1,67 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0284",
+ "format": "markdown_pdf_plumber",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "what is the yearly amortization rate for the purchased technology?",
+ "gold": "25%",
+ "finqa_id": "ADBE/2008/page_74.pdf-1",
+ "source_page": "page_74",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_plumber/ADBE_2008_0000796343-09-000007.md",
+ "doc_chars": 913121,
+ "prompt_chars": 913276,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 913121,
+ "original_chars": 913121,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 209296,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 169,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "25.0000%",
+ "reasoning": "We need answer: yearly amortization rate for purchased technology. Need find in document. Purchased technology amortization? Note 5: purchased technology useful life 4 years (weighted average useful life). Amortization expense? \"Purchased and other intangible assets are amortized over estimated useful lives of 1 to 13 years.\" Purchased technology useful life 4 years. Yearly amortization rate = 1/4 = 25%. Need evidence: \"Purchased technology 4\" from table. Also maybe \"Weighted Average Useful Life (Years) Purchased technology 4\". So answer 25%.",
+ "raw_content": "<evidence>\nPurchased technology | 4 | Weighted Average Useful Life (Years)\n</evidence>\n<program>divide(1, 4)</program>\n<answer>25%</answer>",
+ "usage": {
+  "prompt_tokens": 209596,
+  "completion_tokens": 169,
+  "total_tokens": 209765,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 209408
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.11,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "Purchased technology",
+   "element": "4 | Weighted Average Useful Life (Years)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(1, 4)",
+ "answer_model": "25%",
+ "program_value": 0.25,
+ "docfinqa_row": 284
+}

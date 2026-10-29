@@ -1,0 +1,53 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0722",
+ "format": "markdown_pdf_poppler",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "what was map's 3 year growth of gasoline production?",
+ "gold": "3.7%",
+ "finqa_id": "MRO/2003/page_45.pdf-3",
+ "source_page": "page_45",
+ "ticker": "MRO",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/markdown_pdf_poppler/MRO_2003_0001193125-04-036535.md",
+ "doc_chars": 683926,
+ "prompt_chars": 684067,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 683926,
+ "original_chars": 683926,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 107524,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 645,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-2.41%",
+ "reasoning": "We need to find MAP's gasoline production growth over 3 years. The document provides refined product yields for 2003, 2002, 2001. Gasoline yields: 2003: 567, 2002: 581, 2001: 581 (thousands of barrels per day). Growth over 3 years? Typically 3-year growth means from 2001 to 2003? Or maybe from 2000? But we have 2001, 2002, 2003. The question says \"3 year growth\" likely from 2001 to 2003. Compute percentage change: (567-581)/581 = -14/581 ≈ -2.41%. Or maybe they want absolute change? The question asks \"what was map's 3 year growth of gasoline production?\" So answer as percentage. Let's compute: -2.41% or -2.4%. But check if they mean from 2000? We have 2000 in five-year summary: gasoline yield 2000 was 552? Actually in five-year summary, 2000 gasoline yield is 552? Wait, the five-year summary shows 2000: 552? Let's check: In the five-year operating summary, refined product yields for 2000: gasoline 552? Actually the table shows: 2003: 567, 2002: 581, 2001: 581, 2000: 552, 1999: 566. So 3-year growth from 2000 to 2003 would be (567-552)/552 = 15/552 ≈ 2.72%. But the question says \"3 year growth\" - typically means over the last 3 years, i.e., from 2001 to 2003? Or from 2000 to 2003? The document provides 2001, 2002, 2003 in the main table. The question might be from a financial analysis perspective. Since they ask \"map's 3 year growth\" likely from 2001 to 2003. But let's see if there is any explicit mention. The question is straightforward. I'll compute from 2001 to 2003: (567-581)/581 = -2.41%. If they want absolute change, it's -14 thousand bpd. But the question says \"growth\" so likely percentage. I'll answer with percentage. However, the instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So I'll put -2.4% or -2.41%. But check if they want a number like -14? The question says \"growth\" so percentage is typical. I'll put -2.4%. But to be precise, -2.41%. Let me compute exactly: 567-581 = -14, -14/581 = -0.024096... = -2.41%. So answer: -2.41%.",
+ "raw_content": "<answer>-2.41%</answer>",
+ "usage": {
+  "prompt_tokens": 107665,
+  "completion_tokens": 645,
+  "total_tokens": 108310,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 107520
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.84,
+ "answer_tag_found": true,
+ "docfinqa_row": 722
+}

@@ -1,0 +1,83 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0284",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "what is the yearly amortization rate for the purchased technology?",
+ "gold": "25%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "ADBE_2008_0000796343-09-000007.outline.txt",
+ "doc_source": "ADBE_2008_0000796343-09-000007.dgml.xml",
+ "outline_chars": 99180,
+ "predicted_xpaths": [
+  "/chunk/TableOfContentsMarker/OtherAssets/AcquiredRightsAmortizationPolicy",
+  "/chunk/TableOfContentsMarker/OtherAssets/AcquiredRightsAmortizationPolicy/IntangibleUsefulLifeRange"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 2645,
+ "r1_usage": {
+  "prompt_tokens": 25360,
+  "completion_tokens": 676,
+  "total_tokens": 26036,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/TableOfContentsMarker/OtherAssets/AcquiredRightsAmortizationPolicy",
+  "/chunk/TableOfContentsMarker/OtherAssets/AcquiredRightsAmortizationPolicy/IntangibleUsefulLifeRange"
+ ],
+ "content_chars": 7996,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need to find yearly amortization rate for purchased technology. The document says acquired rights to use technology are amortized over estimated useful lives of 5 to 15 years. That gives a range of rates: 1/5 = 20% to 1/15 ≈ 6.67%. But question asks \"the yearly amortization rate\" singular. Perhaps they want the rate implied by straight-line over useful life? The document says \"amortized on a straight-line basis over the estimated useful lives up to fifteen years.\" But the policy says 5 to 15 years. Maybe they want the rate for the capitalized licensing rights? The question: \"what is the yearly amortization rate for the purchased technology?\" Could be asking for the percentage per year. Since it's straight-line over useful life, the rate is 1/useful life. But useful life is a range. Maybe they want the rate based on the average? Or maybe they want the rate for the specific purchased technology? The document mentions \"estimated useful lives up to fifteen years\" for the capitalized licensing rights. But the general policy says 5 to 15 years. The question might be asking for the annual amortization rate as a percentage. Without a specific useful life, we cannot compute a single rate. However, the document says \"amortized over their estimated useful lives of 5 to 15 years.\" That gives a range. The question might expect the rate as a fraction: 1/5 to 1/15, but that's not a single number. Perhaps they want the rate for the capitalized licensing rights which are amortized over \"up to fifteen years\" - so the rate would be 1/15 ≈ 6.67% if we take the maximum life. But the policy says 5 to 15 years, so the rate could be between 6.67% and 20%. The question asks \"the yearly amortization rate\" - maybe they want the rate for the purchased technology as a whole? The document doesn't give a specific rate. Let's read the question carefully: \"what is the yearly amortization rate for the purchased technology?\" It might be asking for the percentage of cost amortized each year. Since it's straight-line, the rate is 1/useful life. The useful life is given as a range. Perhaps they want the rate based on the midpoint? Or maybe they want the rate for the specific capitalized licensing rights which are amortized over \"up to fifteen years\" - so the rate is 1/15 = 6.666...%. But the policy says 5 to 15 years, so the company uses a range. The question might be from a dataset where the answer is the range? But the instruction says \"compute the answer\" and \"give final answer inside <answer></answer> tags, containing only the value itself\". So it expects a numeric value. Perhaps they want the annual amortization rate as a percentage? Let's see if there is any other figure. The document mentions \"amortized on a straight-line basis over the estimated useful lives up to fifteen years.\" That suggests the rate is 1/15 = 6.67% per year. But the policy says 5 to 15 years, so the rate could be 20% if 5 years. The question might be ambiguous. However, the question says \"for the purchased technology\" - the purchased technology refers to \"acquired rights to use technology\". The policy says they are amortized over 5 to 15 years. So the yearly amortization rate is between 1/15 and 1/5. But the question asks for \"the yearly amortization rate\" - maybe they want the rate as a fraction, like 1/15? Or maybe they want the rate for the specific capitalized licensing rights? The document says \"will be amortized on a straight-line basis over the estimated useful lives up to fifteen years.\" That suggests the maximum life is 15 years, so the minimum rate is 1/15. But the policy says 5 to 15, so the rate could be higher. Since the question doesn't specify which life, perhaps they want the rate based on the range? But the answer must be a single value. Maybe they want the annual amortization rate as a percentage of the cost, which is 1/useful life. If we take the midpoint of 5 and 15, that's 10 years, rate = 10%. But that's not stated. Let's look at the evidence: the only relevant figure is the useful life range. The question might be asking for the rate as a percentage, and the answer could be \"6.67% to 20%\" but that's not a single value. The instruction says \"If the document does not contain enough information, put NOT_FOUND\". So perhaps the document does not specify a single rate, only a range. So the answer is NOT_FOUND. But let's double-check: maybe there is a specific rate mentioned elsewhere? The document only says \"5 to 15 years\". No specific rate. So I think the answer is NOT_FOUND because the yearly amortization rate is not a single number; it depends on the specific useful life chosen within the range. The question asks \"what is the yearly amortization rate\" - if it's straight-line, the rate is 1/life. Since life is a range, the rate is a range. So not enough information to give a single value. Therefore, NOT_FOUND.\n\nBut wait, the question might be interpreted as \"what is the annual amortization rate\" meaning the percentage of cost amortized each year. If the useful life is 5 to 15 years, the rate is between 6.67% and 20%. But the question asks for \"the\" rate, implying a specific one. The document doesn't specify which life is used for the purchased technology. So NOT_FOUND.\n\nI'll answer NOT_FOUND. But let's see if there is any other figure like \"amortized over 15 years\" specifically for the purchased technology. The text says \"amortized over their estimated useful lives of 5 to 15 years.\" That's the policy. The other text says \"will be amortized on a straight-line basis over the estimated useful lives up to fifteen years.\" That's for the capitalized licensing rights. So the maximum is 15 years. But the rate could be 1/15 if they use the maximum. However, the policy says 5 to 15, so they might use a shorter life. The question doesn't specify which. So I think NOT_FOUND.\n\nI'll provide evidence: the useful life range. Then answer NOT_FOUND.\n\nBut the instruction says \"list every figure you use\" - I'll list the range. Then program: since no computation, I'll just put NOT_FOUND.\n\nLet's write.",
+ "raw_content": "<evidence>5 to 15 years | /chunk/TableOfContentsMarker/OtherAssets/AcquiredRightsAmortizationPolicy/IntangibleUsefulLifeRange</evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2184,
+  "completion_tokens": 1478,
+  "total_tokens": 3662,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "prompt_tokens": 2184,
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "stop",
+   "prompt_tokens": 2184,
+   "completion_tokens": 1478,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 1,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "5 to 15 years",
+   "element": "chunk/TableOfContentsMarker/OtherAssets/AcquiredRightsAmortizationPolicy/IntangibleUsefulLifeRange",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 38.43
+}

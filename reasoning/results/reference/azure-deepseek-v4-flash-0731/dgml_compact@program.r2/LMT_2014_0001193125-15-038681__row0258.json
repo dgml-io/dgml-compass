@@ -1,0 +1,74 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0258",
+ "format": "dgml_compact",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "in 2014 what was the ratio of the aggregate notional amount of outstanding interest rate swaps to the outstanding foreign currency hedges",
+ "gold": "1.62",
+ "finqa_id": "LMT/2014/page_77.pdf-3",
+ "source_page": "page_77",
+ "ticker": "LMT",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/dgml_compact/LMT_2014_0001193125-15-038681.dgml.txt",
+ "doc_chars": 524480,
+ "prompt_chars": 524706,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 524480,
+ "original_chars": 524480,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 107424,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 530,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1.616915",
+ "reasoning": "We need the ratio of aggregate notional amount of outstanding interest rate swaps to outstanding foreign currency hedges in 2014. From document: \"The aggregate notional amount of our outstanding interest rate swaps at December 31, 2014 and 2013 was $1.3 billion and $1.2 billion. The aggregate notional amount of our outstanding foreign currency hedges at December 31, 2014 and 2013 was $804 million and $1.0 billion.\" So 2014: interest rate swaps $1.3 billion, foreign currency hedges $804 million. Ratio = 1.3 / 0.804 = 1.6169... Need exact figures as printed: $1.3 billion and $804 million. Use divide(1.3, 0.804) but careful: figures as printed are \"$1.3 billion\" and \"$804 million\". We can express as 1.3 and 0.804. Or use 1300/804. The program should use figures as printed? The instruction: \"list every figure you use inside <evidence> ... value exactly as printed\". So evidence: $1.3 billion | ... and $804 million | ... Then program: divide(1.3, 0.804) or divide(1300, 804). Both same. Use divide(1.3, 0.804). Compute: 1.3 / 0.804 = 1.616915... Let's compute precisely: 0.804 * 1.6 = 1.2864, remainder 0.0136, 0.0136/0.804=0.016915... so 1.616915. Answer likely 1.62 or 1.6169. The question asks \"what was the ratio\" - no units. Provide numeric value. We'll give 1.6169 maybe. But final answer inside <answer> tags only value. We'll put 1.6169.",
+ "raw_content": "<evidence>$1.3 billion | The aggregate notional amount of our outstanding interest rate swaps at December 31, 2014 and 2013 was $1.3 billion and $1.2 billion.\n$804 million | The aggregate notional amount of our outstanding foreign currency hedges at December 31, 2014 and 2013 was $804 million and $1.0 billion.</evidence>\n<program>divide(1.3, 0.804)</program>\n<answer>1.6169</answer>",
+ "usage": {
+  "prompt_tokens": 107738,
+  "completion_tokens": 530,
+  "total_tokens": 108268,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.06,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$1.3 billion",
+   "element": "The aggregate notional amount of our outstanding interest rate swaps at December 31, 2014 and 2013 was $1.3 billion and $1.2 billion.",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$804 million",
+   "element": "The aggregate notional amount of our outstanding foreign currency hedges at December 31, 2014 and 2013 was $804 million and $1.0 billion.",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(1.3, 0.804)",
+ "answer_model": "1.6169",
+ "program_value": 1.616915422885572,
+ "docfinqa_row": 258
+}

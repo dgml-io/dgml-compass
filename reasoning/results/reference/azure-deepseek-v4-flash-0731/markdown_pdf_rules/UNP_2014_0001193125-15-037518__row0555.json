@@ -1,0 +1,53 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0555",
+ "format": "markdown_pdf_rules",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "if the fuel surcharge grows by the same rate as in 2014what would expected 2015 revenues be in billions?",
+ "gold": "3.0",
+ "finqa_id": "UNP/2014/page_25.pdf-1",
+ "source_page": "page_25",
+ "ticker": "UNP",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf_rules/UNP_2014_0001193125-15-037518.md",
+ "doc_chars": 326124,
+ "prompt_chars": 326317,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 326124,
+ "original_chars": 326124,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 75178,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 413,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "2.968",
+ "reasoning": "We need answer question: \"if the fuel surcharge grows by the same rate as in 2014 what would expected 2015 revenues be in billions?\" Need find fuel surcharge revenue 2014 and growth rate. Document: fuel surcharge revenue $2.8 billion in 2014, $2.6 billion in 2013, $2.6 billion in 2012. 2014 increased 6% driven by 7% carloadings increase. So growth rate 2014 v 2013 = 6%. If same rate, 2015 expected fuel surcharge = 2.8 * 1.06 = 2.968 billion. But question says \"expected 2015 revenues\" maybe total revenues? It says \"if the fuel surcharge grows by the same rate as in 2014 what would expected 2015 revenues be in billions?\" Ambiguous: \"revenues\" might refer to fuel surcharge revenues? The phrasing: \"if the fuel surcharge grows by the same rate as in 2014 what would expected 2015 revenues be\" likely fuel surcharge revenue. Need compute 2.8 * 1.06 = 2.968 billion. But check: 2014 fuel surcharge revenue $2.8 billion, 2013 $2.6 billion, increase 6% (2.8/2.6 = 1.0769, but they say 6% due to rounding? Actually 2.8 vs 2.6 is 7.7%, but they state 6% increase. Maybe exact numbers not given. Use stated growth rate 6%. So 2.8*1.06=2.968. Answer in billions: 2.968. But question says \"expected 2015 revenues\" maybe total operating revenues? No, \"fuel surcharge grows\" so fuel surcharge revenue. Provide final answer inside tags with value only.",
+ "raw_content": "<answer>2.968</answer>",
+ "usage": {
+  "prompt_tokens": 75332,
+  "completion_tokens": 413,
+  "total_tokens": 75745,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 75264
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.04,
+ "answer_tag_found": true,
+ "docfinqa_row": 555
+}

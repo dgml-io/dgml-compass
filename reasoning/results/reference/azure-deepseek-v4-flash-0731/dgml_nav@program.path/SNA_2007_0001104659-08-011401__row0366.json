@@ -1,0 +1,68 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0366",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what was the percentage change in the in pretax losses related to foreign exchange transactions in 2007",
+ "gold": "41.7%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "SNA_2007_0001104659-08-011401.outline.txt",
+ "doc_source": "SNA_2007_0001104659-08-011401.dgml.xml",
+ "outline_chars": 89754,
+ "predicted_xpaths": [
+  "/chunk/MarketRiskDisclosure/MarketCreditEconomicRisk/ForeignCurrencyRiskManagement/ForeignCurrencyRiskDescription",
+  "/chunk/MarketRiskDisclosure/MarketCreditEconomicRisk/ForeignCurrencyRiskManagement"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 14079,
+ "r1_usage": {
+  "prompt_tokens": 22372,
+  "completion_tokens": 3323,
+  "total_tokens": 25695,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/MarketRiskDisclosure/MarketCreditEconomicRisk/ForeignCurrencyRiskManagement/ForeignCurrencyRiskDescription",
+  "/chunk/MarketRiskDisclosure/MarketCreditEconomicRisk/ForeignCurrencyRiskManagement"
+ ],
+ "content_chars": 10788,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer percentage change in pretax losses related to foreign exchange transactions in 2007. Need find figures in document excerpts. The excerpts provided are market risk disclosure, not income statement. They mention foreign currency risk but no pretax losses figures. Maybe there is a table elsewhere? The question asks \"percentage change in the in pretax losses related to foreign exchange transactions in 2007\" likely from financial statements, maybe note about foreign currency transactions. But given excerpts, no such figures. Need search within provided regions. There is no mention of pretax losses. So NOT_FOUND. But let's ensure: The document excerpt includes \"Snap-on's financial position and results of operations have not been materially affected by such events to date.\" No numbers. So answer NOT_FOUND.\n\nNeed provide evidence? If no figures, maybe no evidence. But instruction says list every figure you use. We use none. So evidence empty. Program? If NOT_FOUND, maybe no program. But final answer inside tags NOT_FOUND.",
+ "raw_content": "<evidence></evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2360,
+  "completion_tokens": 233,
+  "total_tokens": 2593,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 2360,
+   "completion_tokens": 233,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 13.37
+}

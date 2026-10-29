@@ -1,0 +1,74 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0614",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what portion of the equity compensation plan approved by security holders is to be issued upon the exercise of options warrants and rights?",
+ "gold": "9.9%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "HII_2017_0001501585-18-000006.outline.txt",
+ "doc_source": "HII_2017_0001501585-18-000006.dgml.xml",
+ "outline_chars": 86768,
+ "predicted_xpaths": [
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 1566,
+ "r1_usage": {
+  "prompt_tokens": 22180,
+  "completion_tokens": 380,
+  "total_tokens": 22560,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation"
+ ],
+ "content_chars": 4675,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "448859",
+ "reasoning": "We need to answer: \"what portion of the equity compensation plan approved by security holders is to be issued upon the exercise of options warrants and rights?\" The table shows for \"Equity compensation plans approved by security holders\" the number of securities to be issued upon exercise of outstanding options, warrants and rights is 448,859. The question asks \"what portion\" - likely the number itself, or maybe the portion of total? The wording \"what portion\" could mean the amount. The table has a row for approved plans with 448,859. The total row also has 448,859. So the portion is 448,859. The question might be asking for the number of securities to be issued upon exercise, which is 448,859. We'll provide that.\n\nEvidence: 448,859 from /chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation/EquityCompensationPlanInformation/table/EquityCompensationPlan[3]/EquityPlanSharesToBeIssued (the row for approved plans). Actually the path: The region has a table with rows. The row with category \"Equity compensation plans approved by security holders\" has EquityPlanSharesToBeIssued = 448,859. We'll cite that.\n\nProgram: just the figure.\n\nAnswer: 448859 (no commas).",
+ "raw_content": "<evidence>448,859 | /chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation/EquityCompensationPlanInformation/table/EquityCompensationPlan[3]/EquityPlanSharesToBeIssued</evidence>\n<program>448859</program>\n<answer>448859</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1477,
+  "completion_tokens": 346,
+  "total_tokens": 1823,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 1477,
+   "completion_tokens": 346,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "448,859",
+   "element": "chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation/EquityCompensationPlanInformation/table/EquityCompensationPlan[3]/EquityPlanSharesToBeIssued",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "448859",
+ "answer_model": "448859",
+ "program_value": 448859.0,
+ "elapsed_s": 7.08
+}

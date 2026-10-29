@@ -1,0 +1,53 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0767",
+ "format": "markdown_pdf_plumber",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "hard assets were what percent of the brazilian purchase price , as finally determined?",
+ "gold": "14.3%",
+ "finqa_id": "AMT/2012/page_118.pdf-3",
+ "source_page": "page_118",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/markdown_pdf_plumber/AMT_2012_0001193125-13-077821.md",
+ "doc_chars": 584045,
+ "prompt_chars": 584220,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 584045,
+ "original_chars": 584045,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 138337,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 475,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "14.27%",
+ "reasoning": "We need answer question: \"hard assets were what percent of the brazilian purchase price, as finally determined?\" Need find in document. Brazil Acquisition: purchase price $585.3 million (final). Allocation: property and equipment $83,539 thousand, intangible assets $368,000, etc. \"hard assets\" likely property and equipment? Or maybe tangible assets? Need compute percent of purchase price. Purchase price final $585.3 million. Property and equipment $83,539 thousand = $83.539 million. Percent = 83.539 / 585.3 *100 = 14.27% approx. But maybe \"hard assets\" includes property and equipment plus non-current assets? Let's see. The question says \"hard assets were what percent of the brazilian purchase price, as finally determined?\" In context, \"hard assets\" might refer to property and equipment. In the table, final purchase price allocation: current assets 9,922; non-current assets 71,529; property and equipment 83,539; intangible assets 368,000; current liabilities -5,536; other non-current liabilities -38,519; net assets 488,935; goodwill 96,395. Total consideration = 585,330? Actually purchase price $585.3 million. So property and equipment / purchase price = 83,539/585,300 = 14.27%. But maybe \"hard assets\" means tangible assets (property and equipment + non-current assets? Non-current assets might be other tangible? Let's see note: non-current assets 71,529 includes? In Brazil acquisition, non-current assets 71,529 (final) vs preliminary 98,047. Could be prepaid ground leases etc. But \"hard assets\" typically means property and equipment. The question likely from a financial analysis: \"hard assets were what percent of the Brazilian purchase price, as finally determined?\" So answer 14.3% or 14.27%. Need provide value only. Let's compute precisely: 83,539 / 585,300 = 0.14273 = 14.27%. But check if purchase price final is $585.3 million (585,300 thousand). Yes. So answer 14.27%.",
+ "raw_content": "<answer>14.27%</answer>",
+ "usage": {
+  "prompt_tokens": 138483,
+  "completion_tokens": 475,
+  "total_tokens": 138958,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 138240
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.99,
+ "answer_tag_found": true,
+ "docfinqa_row": 767
+}

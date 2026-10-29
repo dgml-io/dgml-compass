@@ -1,0 +1,69 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0173",
+ "format": "markdown_pdf",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what portion of the adjusted consolidated cash flow for the twelve months ended december 31 , 2005 is related to non-tower cash flow?",
+ "gold": "-5.8%",
+ "finqa_id": "AMT/2005/page_54.pdf-1",
+ "source_page": "page_54",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/markdown_pdf/AMT_2005_0001193125-06-054224.md",
+ "doc_chars": 443446,
+ "prompt_chars": 443668,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 443446,
+ "original_chars": 443446,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 103998,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 245,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-0.057508",
+ "reasoning": "We need answer portion of adjusted consolidated cash flow related to non-tower cash flow. Need figures: Adjusted Consolidated Cash Flow $531,822; Non-Tower Cash Flow $(30,584). Portion = non-tower / adjusted = -30,584 / 531,822 = -0.0575... So about -5.75%. Need exact? Question \"what portion\" likely ratio. Compute -30584/531822 = -0.057508... Let's compute precisely. 531,822 * 0.0575 = 30,579.765, so 30,584/531,822 = 0.057508. So -5.75%. Answer as decimal? Probably -0.0575 or -5.75%. Need final value only. Use evidence.",
+ "raw_content": "<evidence>\n$531,822 | Adjusted Consolidated Cash Flow, for the twelve months ended December 31, 2005\n$(30,584) | Non-Tower Cash Flow, for the twelve months ended December 31, 2005\n</evidence>\n\n<program>divide(-30584, 531822)</program>\n\n<answer>-0.0575</answer>",
+ "usage": {
+  "prompt_tokens": 104314,
+  "completion_tokens": 245,
+  "total_tokens": 104559,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.58,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$531,822",
+   "element": "Adjusted Consolidated Cash Flow, for the twelve months ended December 31, 2005",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$(30,584)",
+   "element": "Non-Tower Cash Flow, for the twelve months ended December 31, 2005",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(-30584, 531822)",
+ "answer_model": "-0.0575",
+ "program_value": -0.057507963190691624,
+ "docfinqa_row": 173
+}

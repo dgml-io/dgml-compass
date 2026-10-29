@@ -1,0 +1,59 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0468",
+ "format": "dgml",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "in november 2015 what was the percent of the discounts and debt issuance costs to the long-term debt november 2015 notes in millions",
+ "gold": "1.42%",
+ "finqa_id": "LMT/2015/page_99.pdf-4",
+ "source_page": "page_99",
+ "ticker": "LMT",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml/LMT_2015_0001193125-16-476010.dgml.xml",
+ "doc_chars": 868444,
+ "prompt_chars": 868665,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 868444,
+ "original_chars": 868444,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 194482,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "stop",
+   "completion_tokens": 911,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 1,
+ "ok": true,
+ "answer": "1.43%",
+ "reasoning": "We need answer question: \"in november 2015 what was the percent of the discounts and debt issuance costs to the long-term debt november 2015 notes in millions\"\n\nWe need find November 2015 Notes issued $7.0 billion, received net proceeds $6.9 billion. Discounts and debt issuance costs = $0.1 billion = $100 million? Actually $7.0B - $6.9B = $0.1B = $100 million. Percent = 100/7000 = 1.4286%? But question asks \"percent of the discounts and debt issuance costs to the long-term debt november 2015 notes in millions\" Maybe they want percentage? Let's parse.\n\nDocument: \"On November 23, 2015, we issued $7.0 billion of notes (the November 2015 Notes) in a registered public offering. We received net proceeds of $6.9 billion from the offering, after deducting discounts and debt issuance costs...\" So discounts and costs = $0.1 billion = $100 million. Percent = 100/7000 = 1.428571...% or 1.43%. But question wording: \"what was the percent of the discounts and debt issuance costs to the long-term debt november 2015 notes in millions\" Might be asking for the amount in millions? \"percent\" maybe \"amount\"? Let's read: \"in november 2015 what was the percent of the discounts and debt issuance costs to the long-term debt november 2015 notes in millions\" Could be \"what was the percent of the discounts and debt issuance costs to the long-term debt\" i.e., percentage. But \"in millions\" suggests amount. The phrase \"percent of the discounts and debt issuance costs to the long-term debt\" might mean \"what was the percentage that discounts and debt issuance costs represent of the long-term debt?\" So answer 1.43%? Or maybe they want $100 million? Let's compute.\n\nNovember 2015 Notes: $7,000 million. Net proceeds $6,900 million. Discounts and costs = $100 million. Percent = 100/7000 = 1.4286%. So answer maybe 1.43%. But question says \"in millions\" - maybe they want \"100\" as in $100 million. But \"percent\" suggests percentage. Let's see if there is any other mention: \"debt issuance costs\" in Note 10: \"We received net proceeds of $6.9 billion from the offering, after deducting discounts and debt issuance costs\". Also in Note 3: \"We also incurred approximately $48 million in costs associated with issuing the $7.0 billion November 2015 Notes used to repay...\" That's $48 million in costs. But that's not the discount? The difference between $7.0B and $6.9B is $100M. The $48M is specifically costs associated with issuing. But the question says \"discounts and debt issuance costs\" - that is the $100M. So percent = 100/7000 = 1.43%. But \"in millions\" might be asking for the amount in millions: 100. Let's read exact: \"in november 2015 what was the percent of the discounts and debt issuance costs to the long-term debt november 2015 notes in millions\" Could be a typo: \"what was the percent of the discounts and debt issuance costs to the long-term debt november 2015 notes in millions\" Maybe they want \"what was the percent\" and \"in millions\" refers to the amounts. The answer should be a percentage. I'll answer 1.43% or 1.4%. But let's be precise: 100/7000 = 1.428571...% so 1.43%.\n\nBut check if there is any other \"discounts and debt issuance costs\" for November 2015 Notes specifically? In Note 10, total long-term debt: \"Less: unamortized discounts and deferred financing costs (1,035)\" for all debt. But for November 2015 Notes, net proceeds $6.9B from $7.0B. So discount and issuance costs = $0.1B. So percent = 1.43%.\n\nI'll answer with percentage.",
+ "raw_content": "<answer>1.43%</answer>",
+ "usage": {
+  "prompt_tokens": 194639,
+  "completion_tokens": 911,
+  "total_tokens": 195550,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 194560
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.17,
+ "answer_tag_found": true,
+ "docfinqa_row": 468
+}

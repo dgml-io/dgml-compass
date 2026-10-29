@@ -1,0 +1,53 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0767",
+ "format": "dgml_compact",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "hard assets were what percent of the brazilian purchase price , as finally determined?",
+ "gold": "14.3%",
+ "finqa_id": "AMT/2012/page_118.pdf-3",
+ "source_page": "page_118",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/dgml_compact/AMT_2012_0001193125-13-077821.dgml.txt",
+ "doc_chars": 684819,
+ "prompt_chars": 684994,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 684819,
+ "original_chars": 684819,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 147020,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 414,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "14.3%",
+ "reasoning": "We need to find the Brazilian purchase price and hard assets. The question: \"hard assets were what percent of the brazilian purchase price, as finally determined?\" Hard assets likely means property and equipment (tangible assets) as a percentage of the purchase price. In the Brazil acquisition note, we have final purchase price allocation. The purchase price was $585.3 million (after adjustments). The final allocation table shows: Property and equipment $83,539 (in thousands) and total fair value of net assets acquired $488,935, but purchase price is the consideration. Actually the purchase price is the aggregate purchase consideration paid. The table shows \"Final Purchase Price Allocation\" with property and equipment $83,539. But the purchase price is $585.3 million. However, the table shows \"Fair value of net assets acquired\" and \"Goodwill\" separately. The purchase price is the sum of net assets acquired plus goodwill. In the table, they show \"Fair value of net assets acquired\" and \"Goodwill\" as separate lines. The purchase price is the total consideration. In the text: \"the purchase price was reduced to $585.3 million\". The table shows final allocation: Property and equipment $83,539 (in thousands) = $83.539 million. So hard assets (property and equipment) as a percentage of purchase price = 83.539 / 585.3 * 100 = approximately 14.27%. But we need to confirm if \"hard assets\" means property and equipment. The question says \"hard assets\" which likely refers to tangible assets like property and equipment. In the allocation, property and equipment is the tangible asset. So compute: 83,539 / 585,300 = 0.1427 = 14.27%. But let's check if there is any other interpretation. The document says \"Property and equipment\" in the allocation. So answer is about 14.3%. We'll give the value.",
+ "raw_content": "<answer>14.3%</answer>",
+ "usage": {
+  "prompt_tokens": 147165,
+  "completion_tokens": 414,
+  "total_tokens": 147579,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 146944
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.92,
+ "answer_tag_found": true,
+ "docfinqa_row": 767
+}

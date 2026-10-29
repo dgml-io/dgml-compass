@@ -1,0 +1,99 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0046",
+ "format": "markdown_pdf_rules",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what was the average currency translation adjustments from 2013 to 2015 in millions?",
+ "gold": "-6806",
+ "finqa_id": "PM/2015/page_127.pdf-4",
+ "source_page": "page_127",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_rules/PM_2015_0001413329-16-000076.md",
+ "doc_chars": 492980,
+ "prompt_chars": 493153,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 492980,
+ "original_chars": 492980,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 115067,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1331,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-1962.666667",
+ "reasoning": "We need answer question: \"what was the average currency translation adjustments from 2013 to 2015 in millions?\" Need find figures. Document has consolidated statements of comprehensive earnings: for years ended Dec 31, 2015, 2014, 2013. \"Change in currency translation adjustments: Unrealized gains (losses), net of income taxes of ($143) in 2015, ($161) in 2014 and $227 in 2013\" amounts: 2015 (2,248), 2014 (1,746), 2013 (1,876) with parentheses? Actually table: \"Unrealized gains (losses), net of income taxes of ($143) in 2015, ($161) in 2014 and $227 in 2013 **(2,248)** (1,746) (1,876)\" So values: 2015 -2,248; 2014 -1,746; 2013 -1,876. Also \"(Gains)/losses transferred to earnings, net of income taxes of $- in 2015, $- in 2014 and $- in 2013 **(1)** (5) (12)\" So total currency translation adjustments? The question \"average currency translation adjustments from 2013 to 2015\" likely average of the change in currency translation adjustments (unrealized gains/losses) maybe including transferred? Need interpret. The line \"Change in currency translation adjustments:\" includes two components. The total change in currency translation adjustments is sum of unrealized and transferred. For 2015: -2,248 + (-1) = -2,249? 2014: -1,746 + (-5) = -1,751; 2013: -1,876 + (-12) = -1,888. But the question says \"currency translation adjustments\" likely refers to the line item \"Change in currency translation adjustments\" which includes both. However the document also has \"Accumulated other comprehensive losses\" with currency translation adjustments? Need see. The question asks \"average currency translation adjustments from 2013 to 2015 in millions\" - likely average of the annual changes. Need compute average of the three values. Which values? The statement of comprehensive earnings shows \"Change in currency translation adjustments:\" with two sub-lines. The total change in currency translation adjustments is the sum. But the question might refer to the \"Change in currency translation adjustments\" as a whole. Let's read exact: In consolidated statements of comprehensive earnings:\n\nOther comprehensive earnings (losses), net of income taxes:\n\nChange in currency translation adjustments:\n\nUnrealized gains (losses), net of income taxes of ($143) in 2015, ($161) in 2014 and $227 in 2013 **(2,248)** (1,746) (1,876)\n\n(Gains)/losses transferred to earnings, net of income taxes of $- in 2015, $- in 2014 and $- in 2013 **(1)** (5) (12)\n\nSo the \"Change in currency translation adjustments\" is the sum of these two lines. The question \"average currency translation adjustments from 2013 to 2015\" could be asking for the average of the \"Change in currency translation adjustments\" amounts. Need compute average of -2,249, -1,751, -1,888? Let's compute: sum = -2,249 + (-1,751) = -4,000; plus -1,888 = -5,888; average = -5,888/3 = -1,962.666... So approximately -1,962.7 million. But if only unrealized gains/losses: -2,248, -1,746, -1,876 sum = -5,870 average = -1,956.666... Which one is intended? The question says \"currency translation adjustments\" not \"unrealized gains (losses) on currency translation\". In the statement, the heading \"Change in currency translation adjustments:\" includes both. So likely use total change. Also note the amounts are in millions. Need provide answer inside <answer> tags. Also need evidence and program. We'll list figures: -2,248, -1,746, -1,876, -1, -5, -12. Then program: average = divide(add(add(-2248, -1746), add(-1876, add(-1, add(-5, -12)))), 3)? Better compute sum of all six? Actually total per year: 2015 = -2248 + (-1) = -2249; 2014 = -1746 + (-5) = -1751; 2013 = -1876 + (-12) = -1888. Sum = -5888. Average = -5888/3 = -1962.666... So program: divide(add(add(-2249, -1751), -1888), 3) but we need use figures as printed. We can use add(-2248, -1) etc. Program: divide(add(add(add(-2248, -1), add(-1746, -5)), add(-1876, -12)), 3). That yields -5888/3 = -1962.6667. Answer should be -1962.7? The question asks \"in millions\" so value -1962.7 (or -1,962.7). We'll put -1962.7. Need ensure no units. Final answer inside <answer> tags.",
+ "raw_content": "<evidence>\n-2,248 | Unrealized gains (losses) on currency translation adjustments, 2015\n-1,746 | Unrealized gains (losses) on currency translation adjustments, 2014\n-1,876 | Unrealized gains (losses) on currency translation adjustments, 2013\n-1 | (Gains)/losses transferred to earnings, 2015\n-5 | (Gains)/losses transferred to earnings, 2014\n-12 | (Gains)/losses transferred to earnings, 2013\n</evidence>\n\n<program>\ndivide(add(add(add(-2248, -1), add(-1746, -5)), add(-1876, -12)), 3)\n</program>\n\n<answer>-1962.7</answer>",
+ "usage": {
+  "prompt_tokens": 115372,
+  "completion_tokens": 1331,
+  "total_tokens": 116703,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 27.12,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "2,248",
+   "element": "Unrealized gains (losses) on currency translation adjustments, 2015",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "1,746",
+   "element": "Unrealized gains (losses) on currency translation adjustments, 2014",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "1,876",
+   "element": "Unrealized gains (losses) on currency translation adjustments, 2013",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "1",
+   "element": "(Gains)/losses transferred to earnings, 2015",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "5",
+   "element": "(Gains)/losses transferred to earnings, 2014",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "12",
+   "element": "(Gains)/losses transferred to earnings, 2013",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(add(add(add(-2248, -1), add(-1746, -5)), add(-1876, -12)), 3)",
+ "answer_model": "-1962.7",
+ "program_value": -1962.6666666666667,
+ "docfinqa_row": 46
+}

@@ -1,0 +1,75 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0147",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was the average backlog at year-end from 2013 to 2015",
+ "gold": "197000",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "LMT_2015_0001193125-16-476010.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/FilingPartDesignation/StockMarketInformation/SelectedFinancialData"
+ ],
+ "r1_reasoning_chars": 3277,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 28879,
+  "completion_tokens": 810,
+  "total_tokens": 29689,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/FilingPartDesignation/StockMarketInformation/SelectedFinancialData"
+ ],
+ "content_chars": 34755,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "87582.333333",
+ "reasoning": "We need average backlog at year-end 2013, 2014, 2015. From table: Backlog row: 2015 $99,600, 2014 $80,547, 2013 $82,600. Average = (99600+80547+82600)/3. Compute: 99600+80547=180147; +82600=262747; /3=87582.333... So answer 87582.333... Need provide value. Probably in millions? The table says in millions. Question asks \"what was the average backlog at year-end from 2013 to 2015\" likely in millions. We'll output 87582.333... maybe round? The question doesn't specify units. We'll output 87582.33 or 87582.333. Need exact program. Use divide(add(add(99600,80547),82600),3). Evidence: list figures.",
+ "raw_content": "<evidence>\n$99,600 | BacklogAmount (2015)\n$80,547 | BacklogSelectedData (2014)\n$82,600 | BacklogSelectedData (2013)\n</evidence>\n<program>divide(add(add(99600, 80547), 82600), 3)</program>\n<answer>87582.3333333333</answer>",
+ "r2_usage": {
+  "prompt_tokens": 8435,
+  "completion_tokens": 278,
+  "total_tokens": 8713,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$99,600",
+   "element": "BacklogAmount (2015)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$80,547",
+   "element": "BacklogSelectedData (2014)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$82,600",
+   "element": "BacklogSelectedData (2013)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(add(99600, 80547), 82600), 3)",
+ "answer_model": "87582.3333333333",
+ "program_value": 87582.33333333333,
+ "elapsed_s": 8.23,
+ "outline_source": "LMT_2015_0001193125-16-476010.outline.txt",
+ "outline_chars": 116705
+}

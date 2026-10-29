@@ -1,0 +1,73 @@
+{
+ "id": "NCLH_2018_0001144204-19-010508__row0905",
+ "format": "markdown_pdf",
+ "key": "NCLH_2018_0001144204-19-010508",
+ "question": "what percent of long-term debt was paid off in 2021?",
+ "gold": "38.6%",
+ "finqa_id": "NCLH/2018/page_97.pdf-3",
+ "source_page": "page_97",
+ "ticker": "NCLH",
+ "fiscal_year": "2018",
+ "source_file": "data/docs/markdown_pdf/NCLH_2018_0001144204-19-010508.md",
+ "doc_chars": 382420,
+ "prompt_chars": 382561,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 382420,
+ "original_chars": 382420,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 88879,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 468,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "38.5730%",
+ "reasoning": "We need answer: \"what percent of long-term debt was paid off in 2021?\" Need find figures. Long-term debt scheduled principal repayments as of Dec 31 2018: 2021 amount $2,549,621 (in thousands). Total long-term debt? The question \"what percent of long-term debt was paid off in 2021?\" Likely refers to scheduled principal repayments in 2021 as percentage of total long-term debt. Total long-term debt including current portion? In balance sheet: Long-term debt total $6,492,091 (including current portion) as of Dec 31 2018. Or scheduled principal repayments total $6,609,866 (includes capital leases, excludes deferred financing fees). The table \"scheduled principal repayments on long-term debt including capital lease obligations\" total $6,609,866. 2021 amount $2,549,621. Percent = 2,549,621 / 6,609,866 = 38.57%. Alternatively using total debt $6,492,091 gives 39.27%. Which is correct? Question \"what percent of long-term debt was paid off in 2021?\" The document has \"The following are scheduled principal repayments on long-term debt including capital lease obligations as of December 31, 2018 for each of the next five years\" with 2021 $2,549,621 and total $6,609,866. So percent of long-term debt (scheduled repayments) paid in 2021 = 2,549,621 / 6,609,866. Compute: 2,549,621 / 6,609,866 ≈ 0.38573 = 38.57%. Need answer value only. Evidence: 2,549,621 | scheduled principal repayments 2021; 6,609,866 | Total scheduled principal repayments. Program divide(2549621, 6609866).",
+ "raw_content": "<evidence>\n2,549,621 | Scheduled principal repayments 2021\n6,609,866 | Total scheduled principal repayments\n</evidence>\n\n<program>\ndivide(2549621, 6609866)\n</program>\n\n<answer>38.57%</answer>",
+ "usage": {
+  "prompt_tokens": 89180,
+  "completion_tokens": 468,
+  "total_tokens": 89648,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 89088
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.62,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "2,549,621",
+   "element": "Scheduled principal repayments 2021",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6,609,866",
+   "element": "Total scheduled principal repayments",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(2549621, 6609866)",
+ "answer_model": "38.57%",
+ "program_value": 0.3857296048059068,
+ "docfinqa_row": 905
+}

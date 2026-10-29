@@ -1,0 +1,50 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0149",
+ "format": "dgml",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "what was the percent of the impairment charges to the net revenue in 2013",
+ "gold": "0.5%",
+ "finqa_id": "INTC/2013/page_33.pdf-2",
+ "source_page": "page_33",
+ "ticker": "INTC",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/dgml/INTC_2013_0000050863-14-000020.dgml.xml",
+ "doc_chars": 868384,
+ "prompt_chars": 868546,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 868384,
+ "original_chars": 868384,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 202403,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 437,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.46%",
+ "reasoning": "We need to find impairment charges and net revenue in 2013. The question: \"what was the percent of the impairment charges to the net revenue in 2013\". Likely refers to restructuring and asset impairment charges? Or maybe impairment charges on equity investments? The document mentions \"Restructuring and asset impairment charges\" of $240 million in 2013. Also \"impairment charges\" on equity investments? But the phrasing \"impairment charges\" might refer to the line item \"Restructuring and asset impairment charges\" which is $240 million. Net revenue 2013 is $52,708 million. So percent = 240/52708 * 100 ≈ 0.455%. Let's compute: 240/52708 = 0.004553... so 0.4553%. The question says \"the percent of the impairment charges to the net revenue\" - likely that. Alternatively, there are also \"impairment charges\" on equity investments? But the line item is \"Restructuring and asset impairment charges\". The question might be from a financial analysis context. I'll compute that.\n\nAnswer: 0.46% (rounded). But the question asks for the percent, so maybe give as a number. I'll put 0.46% or 0.455%. The document gives exact numbers. I'll compute precisely: 240/52708 = 0.004553... so 0.4553%. I'll put 0.46% if rounding. But the instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for percent, so include %? It says \"no explanation or units unless the question asks for them.\" The question asks \"what was the percent\" so include % sign. I'll put 0.46% or 0.455%. I'll put 0.46% as a reasonable rounding. But to be precise, I'll put 0.4553%? The answer should be a number. I'll put 0.46%.",
+ "raw_content": "<answer>0.46%</answer>",
+ "usage": {
+  "prompt_tokens": 202548,
+  "completion_tokens": 437,
+  "total_tokens": 202985,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 16.43,
+ "answer_tag_found": true,
+ "docfinqa_row": 149
+}

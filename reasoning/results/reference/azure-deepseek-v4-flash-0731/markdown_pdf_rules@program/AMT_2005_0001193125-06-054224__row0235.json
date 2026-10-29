@@ -1,0 +1,71 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0235",
+ "format": "markdown_pdf_rules",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what was the percentage of the anticipated approximate tax refund in 2003 based on the nol $ 90.0 million .",
+ "gold": "23.7%",
+ "finqa_id": "AMT/2005/page_105.pdf-3",
+ "source_page": "page_105",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/markdown_pdf_rules/AMT_2005_0001193125-06-054224.md",
+ "doc_chars": 437061,
+ "prompt_chars": 437257,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 437061,
+ "original_chars": 437061,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 101793,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 178,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "23.6842%",
+ "reasoning": "We need answer: \"what was the percentage of the anticipated approximate tax refund in 2003 based on the nol $ 90.0 million .\" Need find figures. Document mentions in 2003 filed refund claims relating to carry back of $380.0 million NOL, initially anticipated receiving approximately $90.0 million. Percentage = 90/380 = 23.6842%. Need evidence figures. Use 90.0 million and 380.0 million. Answer percentage.",
+ "raw_content": "<evidence>\n$380.0 million | Management’s Discussion and Analysis – Income Tax (Provision) Benefit\n$90.0 million | Management’s Discussion and Analysis – Income Tax (Provision) Benefit\n</evidence>\n\n<program>\ndivide(90.0, 380.0)\n</program>\n\n<answer>23.68%</answer>",
+ "usage": {
+  "prompt_tokens": 102106,
+  "completion_tokens": 178,
+  "total_tokens": 102284,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.92,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$380.0 million",
+   "element": "Management’s Discussion and Analysis – Income Tax (Provision) Benefit",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$90.0 million",
+   "element": "Management’s Discussion and Analysis – Income Tax (Provision) Benefit",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(90.0, 380.0)",
+ "answer_model": "23.68%",
+ "program_value": 0.23684210526315788,
+ "docfinqa_row": 235
+}

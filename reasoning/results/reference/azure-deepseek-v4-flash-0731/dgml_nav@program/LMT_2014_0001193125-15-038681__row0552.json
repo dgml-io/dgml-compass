@@ -1,0 +1,82 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0552",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "in 2014 what was the ratio of the estimated future benefit payments due in 2015 compared to the amount after 2020",
+ "gold": "0.15",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "LMT_2014_0001193125-15-038681.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/SegmentFinancial/PostretirementPlans/PlanAssetsOverview/PensionContributionsAndBenefits/ExpectedBenefitPaymentSchedule"
+ ],
+ "r1_reasoning_chars": 2183,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 16133,
+  "completion_tokens": 542,
+  "total_tokens": 16675,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/SegmentFinancial/PostretirementPlans/PlanAssetsOverview/PensionContributionsAndBenefits/ExpectedBenefitPaymentSchedule"
+ ],
+ "content_chars": 2553,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "0.156401",
+ "reasoning": "We need answer ratio of estimated future benefit payments due in 2015 compared to amount after 2020. Need interpret \"amount after 2020\" likely 2020-2024? The table has 2020-2024. Need ratio 2015 / 2020-2024. But there are two rows: qualified defined benefit pension plans and retiree medical. Question \"estimated future benefit payments\" maybe total? Need determine. The table presents estimated future benefit payments for both plans. \"in 2014 what was the ratio of the estimated future benefit payments due in 2015 compared to the amount after 2020\" Could be total payments? Need sum 2015: 2070+190=2260. After 2020: 13430+1020=14450. Ratio = 2260/14450 = 0.1564... Or maybe only qualified? The question says \"estimated future benefit payments\" without specifying plan. The table has two rows. Usually \"estimated future benefit payments\" includes both. Need compute ratio. Let's read: \"The following table presents estimated future benefit payments, which reflect expected future employee service, as of December 31, 2014 (in millions):\" Then table with rows. So total estimated future benefit payments = sum of both rows. So 2015 total = 2070+190=2260. After 2020 = 2020-2024 total = 13430+1020=14450. Ratio = 2260/14450. Simplify? 2260/14450 = 226/1445 = 0.156401... Could also be \"amount after 2020\" meaning beyond 2020? The table only has 2020-2024, no later. So use that.\n\nNeed provide evidence figures. Use exact printed values: $2,070, 190, $13,430, 1,020. Note dollar signs. Program: divide(add(2070,190), add(13430,1020)). Need answer numeric maybe 0.1564. The question asks \"what was the ratio\" so answer as decimal. Could also express as fraction? Usually ratio. We'll output decimal.\n\nNeed ensure no units. Final answer inside <answer>0.1564</answer> maybe more precision. Let's compute exactly: 2260/14450 = 0.156401384... So 0.1564.\n\nNeed evidence lines with element names. Element names? The table rows are ExpectedBenefitPaymentAmount. We'll cite values with row labels. Use \"Qualified defined benefit pension plans\" and \"Retiree medical and life insurance plans\" as elements? The instruction: \"element is the name of the DGML element it sits in (for a document without element names, the row label or heading next to it).\" So use row labels. Evidence: $2,070 | Qualified defined benefit pension plans (2015); 190 | Retiree medical and life insurance plans (2015); $13,430 | Qualified defined benefit pension plans (2020-2024); 1,020 | Retiree medical and life insurance plans (2020-2024). Also maybe header.\n\nNeed program exact.",
+ "raw_content": "<evidence>$2,070 | Qualified defined benefit pension plans (2015)\n190 | Retiree medical and life insurance plans (2015)\n$13,430 | Qualified defined benefit pension plans (2020-2024)\n1,020 | Retiree medical and life insurance plans (2020-2024)</evidence>\n<program>divide(add(2070, 190), add(13430, 1020))</program>\n<answer>0.1564</answer>",
+ "r2_usage": {
+  "prompt_tokens": 947,
+  "completion_tokens": 779,
+  "total_tokens": 1726,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$2,070",
+   "element": "Qualified defined benefit pension plans (2015)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "190",
+   "element": "Retiree medical and life insurance plans (2015)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$13,430",
+   "element": "Qualified defined benefit pension plans (2020-2024)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1,020",
+   "element": "Retiree medical and life insurance plans (2020-2024)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(2070, 190), add(13430, 1020))",
+ "answer_model": "0.1564",
+ "program_value": 0.156401384083045,
+ "elapsed_s": 6.5,
+ "outline_source": "LMT_2014_0001193125-15-038681.outline.txt",
+ "outline_chars": 64445
+}

@@ -1,0 +1,59 @@
+name: Feature request
+description: Propose a new sweep, model, metric, condition or an improvement to the benchmarks.
+title: "[Feature]: "
+labels:
+  - enhancement
+  - triage
+body:
+  - type: checkboxes
+    id: existing-issue
+    attributes:
+      label: Checked for existing issues
+      options:
+        - label: I searched open and closed issues and didn't find a duplicate
+          required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Model Compass (models/, dgc)
+        - Reasoning benchmark (reasoning/, dgr)
+        - Not sure / spans both
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: Lead with the need, not the solution — what can't you measure or reproduce today?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: How you'd imagine this working, and any alternatives you've already tried.
+    validations:
+      required: false
+
+  - type: textarea
+    id: numbers
+    attributes:
+      label: Impact on published numbers (optional)
+      description: >
+        Fill this in if the change would move a published number (a metric, a scoring rule, a prompt,
+        a rendering): which numbers, and why the new definition is the right one.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      options:
+        - label: I'd be willing to submit a PR for this
+          required: false

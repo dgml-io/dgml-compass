@@ -1,0 +1,72 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0149",
+ "format": "markdown_pdf",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "what was the percent of the impairment charges to the net revenue in 2013",
+ "gold": "0.5%",
+ "finqa_id": "INTC/2013/page_33.pdf-2",
+ "source_page": "page_33",
+ "ticker": "INTC",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/markdown_pdf/INTC_2013_0000050863-14-000020.md",
+ "doc_chars": 435630,
+ "prompt_chars": 435792,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 435630,
+ "original_chars": 435630,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 102659,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 373,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.455339",
+ "reasoning": "We need answer percent of impairment charges to net revenue in 2013. Impairment charges? Could be restructuring and asset impairment charges $240 million. Or impairments on equity investments? Question says \"the impairment charges\" likely from income statement: Restructuring and asset impairment charges $240. Net revenue 52,708. Percent = 240/52708 = 0.4553%. Need compute. Evidence: 240 | Restructuring and asset impairment charges; 52,708 | Net revenue. Program divide(240, 52708) maybe multiply by 100? The question asks percent, so answer value as percent. Usually give number like 0.46%? Need exact. 240/52708 = 0.004553... = 0.4553%. The answer should be value only, no units unless asks. It asks percent, so include %? The instruction: \"containing only the value itself with no explanation or units unless the question asks for them.\" It asks \"what was the percent\", so include percent sign? Typically answer numeric with %? We'll put 0.46% or 0.4553%. Need exact from program. Program: divide(240, 52708) gives 0.004553... If answer expects percent, maybe multiply by 100: multiply(divide(240, 52708), 100) = 0.4553. The question asks \"percent\", so answer 0.4553. But final answer inside tags only value. I'll put 0.4553.",
+ "raw_content": "<evidence>\n240 | Restructuring and asset impairment charges\n52,708 | Net revenue\n</evidence>\n\n<program>multiply(divide(240, 52708), 100)</program>\n\n<answer>0.4553</answer>",
+ "usage": {
+  "prompt_tokens": 102963,
+  "completion_tokens": 373,
+  "total_tokens": 103336,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 12.34,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "240",
+   "element": "Restructuring and asset impairment charges",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "52,708",
+   "element": "Net revenue",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(240, 52708), 100)",
+ "answer_model": "0.4553",
+ "program_value": 0.4553388479927146,
+ "docfinqa_row": 149
+}

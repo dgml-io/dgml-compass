@@ -1,0 +1,81 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0840",
+ "format": "markdown_pdf_rules",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "what was the average weighted average common shares outstanding for diluted computations from 2012 to 2014",
+ "gold": "325.7",
+ "finqa_id": "LMT/2014/page_77.pdf-1",
+ "source_page": "page_77",
+ "ticker": "LMT",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf_rules/LMT_2014_0001193125-15-038681.md",
+ "doc_chars": 436977,
+ "prompt_chars": 437172,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 436977,
+ "original_chars": 436977,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 95659,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 334,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "325.766667",
+ "reasoning": "We need average of weighted average common shares outstanding for diluted computations for 2012, 2013, 2014. From Note 2: 2014: 322.4, 2013: 326.5, 2012: 328.4. Average = (322.4+326.5+328.4)/3 = 977.3/3 = 325.766666... So answer 325.77 (or 325.8). Need exact? The question asks average weighted average common shares outstanding for diluted computations from 2012 to 2014. Use figures as printed. Program: divide(add(322.4, 326.5, 328.4), 3) but add only takes two? The instruction says add(a,b) etc. We can nest: divide(add(add(322.4, 326.5), 328.4), 3). Evidence: list each figure with element. Element is \"Note 2 – Earnings Per Share\" or table row. We'll cite.",
+ "raw_content": "<evidence>\n322.4 | Note 2 – Earnings Per Share, weighted average common shares outstanding for diluted computations 2014\n326.5 | Note 2 – Earnings Per Share, weighted average common shares outstanding for diluted computations 2013\n328.4 | Note 2 – Earnings Per Share, weighted average common shares outstanding for diluted computations 2012\n</evidence>\n\n<program>\ndivide(add(add(322.4, 326.5), 328.4), 3)\n</program>\n\n<answer>325.77</answer>",
+ "usage": {
+  "prompt_tokens": 95967,
+  "completion_tokens": 334,
+  "total_tokens": 96301,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 95744
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.92,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "322.4",
+   "element": "Note 2 – Earnings Per Share, weighted average common shares outstanding for diluted computations 2014",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "326.5",
+   "element": "Note 2 – Earnings Per Share, weighted average common shares outstanding for diluted computations 2013",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "328.4",
+   "element": "Note 2 – Earnings Per Share, weighted average common shares outstanding for diluted computations 2012",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(add(add(322.4, 326.5), 328.4), 3)",
+ "answer_model": "325.77",
+ "program_value": 325.76666666666665,
+ "docfinqa_row": 840
+}

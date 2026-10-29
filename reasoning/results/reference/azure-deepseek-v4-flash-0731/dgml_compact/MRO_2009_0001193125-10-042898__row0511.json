@@ -1,0 +1,53 @@
+{
+ "id": "MRO_2009_0001193125-10-042898__row0511",
+ "format": "dgml_compact",
+ "key": "MRO_2009_0001193125-10-042898",
+ "question": "by how much did contingent rental liability decrease from 2007 to 2009?",
+ "gold": "-42.4%",
+ "finqa_id": "MRO/2009/page_139.pdf-3",
+ "source_page": "page_139",
+ "ticker": "MRO",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/dgml_compact/MRO_2009_0001193125-10-042898.dgml.txt",
+ "doc_chars": 697881,
+ "prompt_chars": 698041,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 697881,
+ "original_chars": 697881,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 153188,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 212,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "14",
+ "reasoning": "The question asks: \"by how much did contingent rental liability decrease from 2007 to 2009?\"\n\nI need to find contingent rental expense or liability figures. The document mentions \"Contingent rental\" in the operating lease rental expense table:\n\n\"Operating lease rental expense was:\n(In millions) | 2009 | 2008 | 2007\nMinimum rental(a) | $ 238 | $ 245 | $ 209\nContingent rental | 19 | 22 | 33\nNet rental expense | $ 257 | $ 267 | $ 242\"\n\nSo contingent rental was 33 in 2007 and 19 in 2009. Decrease = 33 - 19 = 14 million.\n\nThe question says \"contingent rental liability\" but the table shows \"Contingent rental\" expense. The decrease from 2007 to 2009 is 33 - 19 = 14.\n\nSo the answer is 14 (million dollars).",
+ "raw_content": "<answer>14</answer>",
+ "usage": {
+  "prompt_tokens": 153333,
+  "completion_tokens": 212,
+  "total_tokens": 153545,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 153088
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.36,
+ "answer_tag_found": true,
+ "docfinqa_row": 511
+}

@@ -1,0 +1,53 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0069",
+ "format": "dgml",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what portion of the total investment is allocated to mutual funds in 2011?",
+ "gold": "65.1%",
+ "finqa_id": "ADI/2011/page_81.pdf-1",
+ "source_page": "page_81",
+ "ticker": "ADI",
+ "fiscal_year": "2011",
+ "source_file": "data/docs/dgml/ADI_2011_0000950123-11-099928.dgml.xml",
+ "doc_chars": 682519,
+ "prompt_chars": 682682,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 682519,
+ "original_chars": 682519,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 156936,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 254,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "34.9%",
+ "reasoning": "We need to find the portion of total investment allocated to mutual funds in 2011. The document mentions deferred compensation plan investments: mutual funds. In Note 7, deferred compensation plan investments: money market funds and mutual funds. Total deferred compensation plan investments = $26,410 thousand. Mutual funds = $9,223 thousand. But the question says \"total investment\" - could refer to total investments? Or specifically deferred compensation plan investments? The question: \"what portion of the total investment is allocated to mutual funds in 2011?\" Likely refers to the deferred compensation plan investments, as that's where mutual funds are mentioned. Alternatively, could be total investments including cash equivalents and short-term investments? But those are not broken down into mutual funds. The only mutual funds are in deferred compensation plan investments. So portion = 9,223 / 26,410 = 0.3492... = 34.92%. But the question asks \"portion\" - could be percentage. Let's compute: 9223/26410 = 0.3492... = 34.92%. Or maybe they want the fraction? The answer should be a value. I'll provide percentage.",
+ "raw_content": "<answer>34.9%</answer>",
+ "usage": {
+  "prompt_tokens": 157080,
+  "completion_tokens": 254,
+  "total_tokens": 157334,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 155648
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.75,
+ "answer_tag_found": true,
+ "docfinqa_row": 69
+}

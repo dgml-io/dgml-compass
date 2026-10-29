@@ -1,0 +1,67 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0485",
+ "format": "markdown_pdf",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what is the average repurchase price per share paid during 2006?",
+ "gold": "42.0",
+ "finqa_id": "SNA/2007/page_49.pdf-3",
+ "source_page": "page_49",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf/SNA_2007_0001104659-08-011401.md",
+ "doc_chars": 330376,
+ "prompt_chars": 330529,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 330376,
+ "original_chars": 330376,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 80490,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 351,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "41.962564",
+ "reasoning": "We need answer average repurchase price per share paid during 2006. Document: \"Snap-on repurchased 2,616,618 shares of common stock for $109.8 million in 2006\" and \"repurchased over 2.6 million shares ... for $109.8 million\". Average = 109.8 million / 2,616,618 shares = 109,800,000 / 2,616,618 ≈ 41.96. Need exact? Let's compute: 109.8e6 / 2,616,618 = 41.96. Also in Item 5: \"During 2007, the company repurchased 1,860,000 shares ... average $50.77\" but 2006 not given directly. So compute. Evidence: \"2,616,618 shares of common stock for $109.8 million in 2006\" from MD&A. Also \"repurchase over 2.6 million shares of Snap-on common stock for $109.8 million\" in cash flows section. Use exact figures. Program: divide(109.8, 2.616618) in millions? Actually 109.8 million / 2.616618 million shares = 41.96. So divide(109.8, 2.616618). Answer ~41.96. Need final answer inside tags only value.",
+ "raw_content": "<evidence>2,616,618 shares of common stock for $109.8 million in 2006 | Management’s Discussion and Analysis</evidence>\n<program>divide(109.8, 2.616618)</program>\n<answer>41.96</answer>",
+ "usage": {
+  "prompt_tokens": 80792,
+  "completion_tokens": 351,
+  "total_tokens": 81143,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 80640
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.99,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "2,616,618 shares of common stock for $109.8 million in 2006",
+   "element": "Management’s Discussion and Analysis",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(109.8, 2.616618)",
+ "answer_model": "41.96",
+ "program_value": 41.9625638897233,
+ "docfinqa_row": 485
+}

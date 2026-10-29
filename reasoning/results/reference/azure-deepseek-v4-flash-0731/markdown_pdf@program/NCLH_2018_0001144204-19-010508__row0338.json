@@ -1,0 +1,72 @@
+{
+ "id": "NCLH_2018_0001144204-19-010508__row0338",
+ "format": "markdown_pdf",
+ "key": "NCLH_2018_0001144204-19-010508",
+ "question": "what is the percentage change in capital expenditures from 2017 to 2018?",
+ "gold": "33.3%",
+ "finqa_id": "NCLH/2018/page_64.pdf-2",
+ "source_page": "page_64",
+ "ticker": "NCLH",
+ "fiscal_year": "2018",
+ "source_file": "data/docs/markdown_pdf/NCLH_2018_0001144204-19-010508.md",
+ "doc_chars": 382420,
+ "prompt_chars": 382581,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 382420,
+ "original_chars": 382420,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 88879,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 272,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "14.1801%",
+ "reasoning": "We need percentage change in capital expenditures from 2017 to 2018. Capital expenditures likely \"Additions to property and equipment, net\" from cash flow statements. 2018: $1,566,796 thousand; 2017: $1,372,214 thousand. Percentage change = (1,566,796 - 1,372,214)/1,372,214 = 194,582/1,372,214 ≈ 0.1418 = 14.18%. Need exact. Compute: 194,582 / 1,372,214 = 0.1418... Let's calculate precisely: 1,372,214 * 0.14 = 192,110. 194,582-192,110=2,472. 2,472/1,372,214=0.0018. So 0.1418 = 14.18%. Answer as percentage.",
+ "raw_content": "<evidence>\n1,566,796 | Additions to property and equipment, net (2018)\n1,372,214 | Additions to property and equipment, net (2017)\n</evidence>\n<program>\ndivide(subtract(1566796, 1372214), 1372214)\n</program>\n<answer>14.18%</answer>",
+ "usage": {
+  "prompt_tokens": 89183,
+  "completion_tokens": 272,
+  "total_tokens": 89455,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.04,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,566,796",
+   "element": "Additions to property and equipment, net (2018)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1,372,214",
+   "element": "Additions to property and equipment, net (2017)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(1566796, 1372214), 1372214)",
+ "answer_model": "14.18%",
+ "program_value": 0.1418014974340737,
+ "docfinqa_row": 338
+}

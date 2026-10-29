@@ -1,0 +1,59 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0473",
+ "format": "markdown_pdf_poppler",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what is the yearly interest expense incurred from the $ 375 million note with a fixed rate?",
+ "gold": "11.3",
+ "finqa_id": "ADI/2011/page_50.pdf-2",
+ "source_page": "page_50",
+ "ticker": "ADI",
+ "fiscal_year": "2011",
+ "source_file": "data/docs/markdown_pdf_poppler/ADI_2011_0000950123-11-099928.md",
+ "doc_chars": 465742,
+ "prompt_chars": 465922,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 465742,
+ "original_chars": 465742,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 78562,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "stop",
+   "completion_tokens": 818,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 1,
+ "ok": true,
+ "answer": "$11,250,000",
+ "reasoning": "We need answer yearly interest expense from $375 million note with fixed rate. There are two notes: 5.0% senior unsecured notes due 2014 and 3.0% due 2016. Question says \"the $375 million note with a fixed rate\" - both are fixed rate. But likely refers to 5.0% note? Or 3.0%? Need identify. The document mentions interest expense total $19,146 in 2011. But question asks yearly interest expense incurred from the $375 million note with a fixed rate. Which one? \"the $375 million note with a fixed rate\" - both have fixed rates. But maybe they mean the 5.0% note? The 5.0% note was swapped to variable, so effectively not fixed? Actually the 5.0% note has fixed rate but swapped to floating. The 3.0% note is fixed rate not hedged. The question says \"with a fixed rate\" - perhaps they want the interest expense on the 3.0% note? Or the 5.0% note? Let's parse.\n\nThe document: \"On June 30, 2009, we issued $375 million aggregate principal amount of 5.0% senior unsecured notes due July 1, 2014 ... We swapped the fixed interest portion of these Notes for a variable interest rate based on the three-month LIBOR plus 2.05%\". So the 5.0% note has a fixed coupon but swapped to variable. The 3.0% note issued April 4, 2011 is fixed rate, not hedged. The question: \"what is the yearly interest expense incurred from the $375 million note with a fixed rate?\" Could be asking for the interest expense on the 3.0% note? But \"the $375 million note with a fixed rate\" - both have fixed rates, but one is swapped. Maybe they refer to the 3.0% note because it is fixed rate (not swapped). The yearly interest expense would be 3% of $375 million = $11.25 million per year. But note issued April 4, 2011, so fiscal 2011 interest expense would be partial year. The question says \"yearly interest expense\" - likely annual interest expense, i.e., 3% * 375M = $11.25M. Alternatively, if they mean the 5.0% note, the fixed rate is 5.0%, so $18.75M per year, but that is swapped to variable, so actual interest expense is variable. The question specifically says \"with a fixed rate\" - maybe they want the fixed rate coupon interest expense. But the 5.0% note has a fixed rate of 5.0% but the interest expense is based on variable due to swap. The 3.0% note is fixed rate and not hedged. So answer likely $11.25 million.\n\nLet's check if any other mention: In MD&A, interest expense total $19,146 for 2011. That includes interest on 5.0% notes (variable after swap), 3.0% notes, term loan, etc. But question asks specifically from the $375 million note with a fixed rate. The 3.0% note has fixed rate 3.0%. So yearly interest = $375,000,000 * 3% = $11,250,000. The document states \"3.0% senior unsecured notes due April 15, 2016\" with semi-annual fixed interest payments. So answer $11,250,000 or $11.25 million.\n\nNeed give final answer inside <answer> tags. Probably just value. Since question asks \"what is the yearly interest expense\" - answer in dollars. Use $11,250,000.",
+ "raw_content": "<answer>$11,250,000</answer>",
+ "usage": {
+  "prompt_tokens": 78710,
+  "completion_tokens": 818,
+  "total_tokens": 79528,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 78592
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.11,
+ "answer_tag_found": true,
+ "docfinqa_row": 473
+}

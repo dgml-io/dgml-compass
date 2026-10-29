@@ -1,0 +1,86 @@
+{
+ "id": "GPN_2010_0001193125-10-169025__row0069",
+ "format": "markdown_pdf",
+ "key": "GPN_2010_0001193125-10-169025",
+ "question": "what is the percentage change in the total fair value of non-vested shares from 2009 to 2010?",
+ "gold": "-4.1%",
+ "finqa_id": "GPN/2010/page_89.pdf-4",
+ "source_page": "page_89",
+ "ticker": "GPN",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/markdown_pdf/GPN_2010_0001193125-10-169025.md",
+ "doc_chars": 321931,
+ "prompt_chars": 322113,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 321931,
+ "original_chars": 321931,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 73426,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 522,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-6.4304%",
+ "reasoning": "We need to find total fair value of non-vested shares at 2009 and 2010. The table shows non-vested shares and weighted average grant-date fair value. For 2009: shares 762 thousand, weighted average fair value $42. For 2010: shares 713 thousand, weighted average $42. Total fair value = shares * fair value. 2009: 762*42 = 32,004 (thousands? Actually shares in thousands, fair value in dollars, so total in thousands of dollars). 2010: 713*42 = 29,946. Percentage change = (29,946 - 32,004)/32,004 = -2,058/32,004 = -0.0643 = -6.43%. So answer -6.43% or -6.4%. Need to compute exactly. Use figures: 762, 42, 713, 42. Program: divide(subtract(multiply(713,42), multiply(762,42)), multiply(762,42)). But we need to use figures as printed. The table shows \"762\" and \"42\" for 2009, \"713\" and \"42\" for 2010. So program: divide(subtract(multiply(713,42), multiply(762,42)), multiply(762,42)). That gives -0.0643. Answer as percentage? The question asks \"percentage change\" so we can give -6.43% or -6.4%. Usually they want the value, maybe -6.43%. We'll put -6.43% inside answer. But instructions: \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for percentage change, so include % sign? It says \"unless the question asks for them\" - it asks for percentage change, so include % sign. We'll put -6.43%.",
+ "raw_content": "<evidence>\n762 | Non-vested at May 31, 2009 (shares)\n42 | Weighted Average Grant-Date FairValue (2009)\n713 | Non-vested at May 31, 2010 (shares)\n42 | Weighted Average Grant-Date FairValue (2010)\n</evidence>\n<program>\ndivide(subtract(multiply(713, 42), multiply(762, 42)), multiply(762, 42))\n</program>\n<answer>-6.43%</answer>",
+ "usage": {
+  "prompt_tokens": 73738,
+  "completion_tokens": 522,
+  "total_tokens": 74260,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.89,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "762",
+   "element": "Non-vested at May 31, 2009 (shares)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "42",
+   "element": "Weighted Average Grant-Date FairValue (2009)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "713",
+   "element": "Non-vested at May 31, 2010 (shares)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "42",
+   "element": "Weighted Average Grant-Date FairValue (2010)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(subtract(multiply(713, 42), multiply(762, 42)), multiply(762, 42))",
+ "answer_model": "-6.43%",
+ "program_value": -0.06430446194225722,
+ "docfinqa_row": 69
+}

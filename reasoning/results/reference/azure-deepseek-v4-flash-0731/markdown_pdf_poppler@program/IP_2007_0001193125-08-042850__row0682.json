@@ -1,0 +1,108 @@
+{
+ "id": "IP_2007_0001193125-08-042850__row0682",
+ "format": "markdown_pdf_poppler",
+ "key": "IP_2007_0001193125-08-042850",
+ "question": "what percentage of december 31 , 2007 , total future minimum commitments under existing non-cancelable operating leases and purchase obligations were due to lease obligations for the year of 2008?",
+ "gold": "7%",
+ "finqa_id": "IP/2007/page_75.pdf-2",
+ "source_page": "page_75",
+ "ticker": "IP",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_poppler/IP_2007_0001193125-08-042850.md",
+ "doc_chars": 614779,
+ "prompt_chars": 615064,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 614779,
+ "original_chars": 614779,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 105105,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 693,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "2.70324",
+ "reasoning": "We need answer percentage. Need figures: total future minimum commitments under existing non-cancelable operating leases and purchase obligations at Dec 31 2007. From Note 10: table: In millions 2008 2009 2010 2011 2012 Thereafter. Lease obligations $136, $116, $101, $84, $67, $92. Purchase obligations $1,953, $294, $261, $235, $212, $1,480. Total $2,089, $410, $362, $319, $279, $1,572. Question: what percentage of December 31, 2007 total future minimum commitments under existing non-cancelable operating leases and purchase obligations were due to lease obligations for the year 2008? So total commitments = sum all years? \"total future minimum commitments\" likely total of all years = sum of Total row: 2,089+410+362+319+279+1,572 = let's compute: 2089+410=2499, +362=2861, +319=3180, +279=3459, +1572=5031. Lease obligations for 2008 = 136. Percentage = 136 / 5031 * 100 = 2.703...% ~2.7%. Alternatively could be \"for the year 2008\" as portion of total commitments for 2008? But question says \"what percentage of December 31, 2007, total future minimum commitments ... were due to lease obligations for the year of 2008?\" That is lease 2008 / total all commitments. Need compute. Use figures: 136 and total 5031. Evidence: 136 | Lease obligations 2008; 2,089 | Total 2008; 410 | Total 2009; 362 | Total 2010; 319 | Total 2011; 279 | Total 2012; 1,572 | Total Thereafter. Program: divide(136, add(2089, add(410, add(362, add(319, add(279, 1572))))) *100? Program must be exact. We can do multiply(divide(136, add(...)), 100). But answer likely numeric percentage. Let's compute precisely: 5031, 136/5031=0.027032... *100=2.7032%. So answer 2.7% maybe. Need final inside <answer>2.7%</answer>. But instructions: \"Give final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" Question asks percentage, so include %? Usually value with % sign. I'll put 2.7%.",
+ "raw_content": "<evidence>\n136 | Lease obligations 2008\n2,089 | Total 2008\n410 | Total 2009\n362 | Total 2010\n319 | Total 2011\n279 | Total 2012\n1,572 | Total Thereafter\n</evidence>\n\n<program>\nmultiply(divide(136, add(2089, add(410, add(362, add(319, add(279, 1572)))))), 100)\n</program>\n\n<answer>2.7%</answer>",
+ "usage": {
+  "prompt_tokens": 105432,
+  "completion_tokens": 693,
+  "total_tokens": 106125,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 105216
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.06,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "136",
+   "element": "Lease obligations 2008",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "2,089",
+   "element": "Total 2008",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "410",
+   "element": "Total 2009",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "362",
+   "element": "Total 2010",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "319",
+   "element": "Total 2011",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "279",
+   "element": "Total 2012",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "1,572",
+   "element": "Total Thereafter",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.14285714285714285,
+ "program_model": "multiply(divide(136, add(2089, add(410, add(362, add(319, add(279, 1572)))))), 100)",
+ "answer_model": "2.7%",
+ "program_value": 2.703239912542238,
+ "docfinqa_row": 682
+}

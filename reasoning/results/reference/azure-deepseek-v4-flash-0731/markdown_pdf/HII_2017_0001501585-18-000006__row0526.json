@@ -1,0 +1,53 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0526",
+ "format": "markdown_pdf",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "in the number of securities to be issued what is the ratio of the stock rights from the 2012 plan to the 2011 plan included in these securities",
+ "gold": "1.06",
+ "finqa_id": "HII/2017/page_124.pdf-3",
+ "source_page": "page_124",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/markdown_pdf/HII_2017_0001501585-18-000006.md",
+ "doc_chars": 458663,
+ "prompt_chars": 458895,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 458663,
+ "original_chars": 458663,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 99639,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 367,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "28,763:27,123",
+ "reasoning": "We need answer question. Need find in document. \"in the number of securities to be issued what is the ratio of the stock rights from the 2012 plan to the 2011 plan included in these securities\"\n\nWe need parse. Item 12 Equity Compensation Plan Information table. Column (a) Number of Securities to be Issued Upon Exercise of Outstanding Options, Warrants and Rights = 448,859. Footnote (1): \"Of these shares, 27,123 were stock rights granted under the 2011 Plan. In addition, this number includes 28,763 stock rights, 3,075 restricted stock rights, and 389,898 restricted performance stock rights granted under the 2012 Plan, assuming target performance achievement.\"\n\nSo stock rights from 2012 plan = 28,763. From 2011 plan = 27,123. Ratio of 2012 to 2011 = 28,763 / 27,123. Compute ratio. 28,763 / 27,123 ≈ 1.06045. Let's calculate precisely. 27,123*1.06 = 28,750.38. Difference 12.62 / 27,123 = 0.000465. So 1.060465. Ratio maybe 28,763:27,123. Question \"what is the ratio of the stock rights from the 2012 plan to the 2011 plan included in these securities\" So answer ratio as decimal or fraction? Likely 28,763 to 27,123. Need final answer inside tags only value. Could be \"28,763:27,123\" or \"1.06\". The question asks ratio, so provide ratio.",
+ "raw_content": "<answer>28,763:27,123</answer>",
+ "usage": {
+  "prompt_tokens": 99800,
+  "completion_tokens": 367,
+  "total_tokens": 100167,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 99584
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.21,
+ "answer_tag_found": true,
+ "docfinqa_row": 526
+}

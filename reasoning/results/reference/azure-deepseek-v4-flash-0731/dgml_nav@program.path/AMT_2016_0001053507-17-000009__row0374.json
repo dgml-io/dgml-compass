@@ -1,0 +1,83 @@
+{
+ "id": "AMT_2016_0001053507-17-000009__row0374",
+ "key": "AMT_2016_0001053507-17-000009",
+ "question": "on february 17 , 2017 , what was the company's market capitalization as reported on the nyse.\\\\n\\\\n",
+ "gold": "46184055450.1",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "AMT_2016_0001053507-17-000009.outline.txt",
+ "doc_source": "AMT_2016_0001053507-17-000009.dgml.xml",
+ "outline_chars": 122201,
+ "predicted_xpaths": [
+  "/chunk/MarketForCommonEquity",
+  "/chunk/MarketForCommonEquity/StockHoldersOfRecord"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 1609,
+ "r1_usage": {
+  "prompt_tokens": 31511,
+  "completion_tokens": 430,
+  "total_tokens": 31941,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/MarketForCommonEquity",
+  "/chunk/MarketForCommonEquity/StockHoldersOfRecord"
+ ],
+ "content_chars": 157510,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "46184055450.07",
+ "reasoning": "We need market cap = closing price * shares outstanding. Figures: $108.11 per share, 427,195,037 shares. Multiply.",
+ "raw_content": "<evidence>$108.11 | /chunk/MarketForCommonEquity/StockHoldersOfRecord/ClosingSharePrice\n427,195,037 | /chunk/MarketForCommonEquity/StockHoldersOfRecord/CommonSharesOutstanding</evidence>\n<program>multiply(108.11, 427195037)</program>",
+ "r2_usage": {
+  "prompt_tokens": 38049,
+  "completion_tokens": 105,
+  "total_tokens": 38154,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 38049,
+   "completion_tokens": 105,
+   "got_answer": false
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "$108.11",
+   "element": "chunk/MarketForCommonEquity/StockHoldersOfRecord/ClosingSharePrice",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "427,195,037",
+   "element": "chunk/MarketForCommonEquity/StockHoldersOfRecord/CommonSharesOutstanding",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(108.11, 427195037)",
+ "answer_model": null,
+ "program_value": 46184055450.07,
+ "elapsed_s": 6.81
+}

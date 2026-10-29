@@ -1,0 +1,53 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0235",
+ "format": "markdown_pdf_poppler",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what was the percentage of the anticipated approximate tax refund in 2003 based on the nol $ 90.0 million .",
+ "gold": "23.7%",
+ "finqa_id": "AMT/2005/page_105.pdf-3",
+ "source_page": "page_105",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/markdown_pdf_poppler/AMT_2005_0001193125-06-054224.md",
+ "doc_chars": 538102,
+ "prompt_chars": 538298,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 538102,
+ "original_chars": 538102,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 103343,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 568,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "23.68%",
+ "reasoning": "We need to find the percentage of the anticipated approximate tax refund in 2003 based on the NOL $90.0 million. The question: \"what was the percentage of the anticipated approximate tax refund in 2003 based on the nol $ 90.0 million .\" It seems to ask: what percentage was the anticipated refund ($90.0 million) of the NOL amount? The NOL amount is $380.0 million. So percentage = 90/380 = 23.6842% approximately. But the question phrasing: \"percentage of the anticipated approximate tax refund in 2003 based on the nol $ 90.0 million\" might be asking: what percentage of the NOL was the refund? Or maybe it asks: what was the percentage of the anticipated refund relative to the NOL? The document says: \"In June 2003 and October 2003, we filed federal income tax refund claims with the IRS relating to the carry back of $380.0 million of net operating losses generated prior to 2003, of which we initially anticipated receiving approximately $90.0 million.\" So the refund is $90M, NOL is $380M. So percentage = 90/380 = 23.68%. But the question says \"based on the nol $ 90.0 million\" - that might be a typo. It says \"based on the nol $ 90.0 million\" - maybe they mean the NOL is $90.0 million? But the document says NOL is $380M. Let's read carefully: \"what was the percentage of the anticipated approximate tax refund in 2003 based on the nol $ 90.0 million .\" Possibly they want the percentage of the refund relative to the NOL, but they wrote \"nol $ 90.0 million\" incorrectly. Actually the refund is $90M, the NOL is $380M. So percentage = 90/380 = 23.68%. Alternatively, if they meant the refund is $90M and they ask what percentage of the NOL is that? Yes. So answer: 23.68% or approximately 23.7%. But let's check if there is any other mention. The document also says later: \"we revised our estimate of the net realizable value of our federal income tax refund claims and anticipate receiving a refund of approximately $65.0 million\" but that's later. The question specifically says \"in 2003\" and \"$90.0 million\" so it's the initial estimate. So percentage = 90/380 = 0.236842... = 23.68%. I'll give that.",
+ "raw_content": "<answer>23.68%</answer>",
+ "usage": {
+  "prompt_tokens": 103498,
+  "completion_tokens": 568,
+  "total_tokens": 104066,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 103424
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.03,
+ "answer_tag_found": true,
+ "docfinqa_row": 235
+}

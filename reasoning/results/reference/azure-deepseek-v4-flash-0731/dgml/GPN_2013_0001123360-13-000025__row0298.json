@@ -1,0 +1,53 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0298",
+ "format": "dgml",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what is the percentage change in the expected minimum payments from 2014 to 2015?",
+ "gold": "-18.7%",
+ "finqa_id": "GPN/2013/page_92.pdf-2",
+ "source_page": "page_92",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/dgml/GPN_2013_0001123360-13-000025.dgml.xml",
+ "doc_chars": 611417,
+ "prompt_chars": 611587,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 611417,
+ "original_chars": 611417,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 141594,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 258,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-18.74%",
+ "reasoning": "The question asks: \"what is the percentage change in the expected minimum payments from 2014 to 2015?\"\n\nWe need to find the expected minimum payments for 2014 and 2015. This likely refers to the future minimum lease payments table in Note 15—Commitments and Contingencies, under \"Leases\".\n\nFrom the document:\n\"Future minimum lease payments for all non-cancelable operating leases at May 31, 2013 were as follows:\"\n- 2014: $11,057\n- 2015: $8,985\n\nPercentage change from 2014 to 2015 = (8,985 - 11,057) / 11,057 * 100 = (-2,072) / 11,057 * 100 = -18.74%\n\nSo the percentage change is approximately -18.74%.\n\nLet me double-check if there's another table with \"expected minimum payments\" - could be the debt maturity schedule? But the question says \"expected minimum payments\" which sounds like lease payments. The lease table is titled \"Future minimum lease payments\". That fits.\n\nSo answer: -18.74% (or approximately -18.7%).",
+ "raw_content": "<answer>-18.74%</answer>",
+ "usage": {
+  "prompt_tokens": 141741,
+  "completion_tokens": 258,
+  "total_tokens": 141999,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 141568
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.02,
+ "answer_tag_found": true,
+ "docfinqa_row": 298
+}

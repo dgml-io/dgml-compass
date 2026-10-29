@@ -1,0 +1,66 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0575",
+ "format": "markdown_pdf_rules",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "what is the yearly amortization rate for the trademarks?",
+ "gold": "20%",
+ "finqa_id": "ADBE/2008/page_74.pdf-4",
+ "source_page": "page_74",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_rules/ADBE_2008_0000796343-09-000007.md",
+ "doc_chars": 443328,
+ "prompt_chars": 443473,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 443328,
+ "original_chars": 443328,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 95226,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 370,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "20.0000%",
+ "reasoning": "We need answer: \"what is the yearly amortization rate for the trademarks?\" Need find in document. Trademarks useful life? In Note 1: intangible assets amortized over estimated useful lives 1 to 13 years. Table: Weighted Average Useful Life (Years): Purchased technology 4, Localization 1, Trademarks 5, Customer contracts and relationships 6, Other intangibles 3. So yearly amortization rate for trademarks is 1/5 = 20% per year. But question asks \"yearly amortization rate\" maybe 5 years? Need compute rate = 1/5 = 0.2 or 20%. Need evidence: \"Trademarks 5\" from table. Program: divide(1,5) = 0.2. Answer likely 20% or 0.2. The question asks \"yearly amortization rate\" - give value. We'll put 20%? The instruction says no units unless asked. It asks rate, so 20% is fine. But final answer inside tags only value. Could be 0.2. Let's provide 20%? The benchmark may expect numeric. Use 0.2? The document says useful life 5 years, so yearly amortization rate = 1/5 = 0.2 = 20%. I'll answer 20%? The instruction: \"containing only the value itself with no explanation or units unless the question asks for them.\" Rate is a unit? Percent is unit. But question asks rate, so percent is appropriate. I'll put 20%.",
+ "raw_content": "<evidence>5 | Trademarks (Weighted Average Useful Life table)</evidence>\n<program>divide(1, 5)</program>\n<answer>20%</answer>",
+ "usage": {
+  "prompt_tokens": 95524,
+  "completion_tokens": 370,
+  "total_tokens": 95894,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 95488
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.79,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "5",
+   "element": "Trademarks (Weighted Average Useful Life table)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(1, 5)",
+ "answer_model": "20%",
+ "program_value": 0.2,
+ "docfinqa_row": 575
+}

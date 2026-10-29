@@ -1,0 +1,81 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0555",
+ "format": "markdown_pdf_rules",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "if the fuel surcharge grows by the same rate as in 2014what would expected 2015 revenues be in billions?",
+ "gold": "3.0",
+ "finqa_id": "UNP/2014/page_25.pdf-1",
+ "source_page": "page_25",
+ "ticker": "UNP",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf_rules/UNP_2014_0001193125-15-037518.md",
+ "doc_chars": 326124,
+ "prompt_chars": 326317,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 326124,
+ "original_chars": 326124,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 75178,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1025,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "2.968",
+ "reasoning": "We need answer question: \"if the fuel surcharge grows by the same rate as in 2014 what would expected 2015 revenues be in billions?\" Need find fuel surcharge revenue 2014 and 2013, growth rate, then apply to 2015? The question says \"if the fuel surcharge grows by the same rate as in 2014 what would expected 2015 revenues be in billions?\" Likely fuel surcharge revenues 2014 $2.8 billion, 2013 $2.6 billion. Growth rate = (2.8-2.6)/2.6 = 0.076923... = 7.6923%. Then expected 2015 fuel surcharge = 2.8 * (1+0.076923) = 3.0153846 billion. But question says \"expected 2015 revenues\" maybe total revenues? Or fuel surcharge revenues? Wording: \"if the fuel surcharge grows by the same rate as in 2014 what would expected 2015 revenues be in billions?\" Could be asking fuel surcharge revenue in 2015. Need parse. The document says fuel surcharge revenue $2.8 billion in 2014, $2.6 billion in 2013. Growth rate 6%? Actually text says \"Our fuel surcharge increased 6% versus 2013\" but numbers 2.8 vs 2.6 is 7.7%? Wait check: In Item 7: \"Our fuel surcharge programs generated freight revenues of $2.8 billion, $2.6 billion, and $2.6 billion in 2014, 2013, and 2012, respectively. Fuel surcharge in 2014 increased 6% driven by our 7% carloadings increase.\" But 2.8/2.6 = 1.0769, so 7.7%. Maybe rounding? They say 6% perhaps because exact numbers not shown. The question says \"if the fuel surcharge grows by the same rate as in 2014\" meaning use the growth rate from 2014 (which is 6% per text) to project 2015. So expected 2015 fuel surcharge = 2.8 * 1.06 = 2.968 billion. But question asks \"expected 2015 revenues\" maybe total revenues? Need determine.\n\nLet's read question: \"if the fuel surcharge grows by the same rate as in 2014what would expected 2015 revenues be in billions?\" It might be asking: If fuel surcharge grows at same rate as in 2014, what would expected 2015 revenues be? Could be total revenues? But \"fuel surcharge\" is part of freight revenues. The question likely expects compute fuel surcharge revenue for 2015. The phrase \"expected 2015 revenues\" might refer to fuel surcharge revenues. Need answer in billions.\n\nWe need use figures: fuel surcharge revenue 2014 $2.8 billion, 2013 $2.6 billion. Growth rate = (2.8-2.6)/2.6 = 0.076923. But document states increased 6% (rounded). Which to use? The question says \"same rate as in 2014\" - the rate as reported is 6%. So use 6%. Then 2.8 * 1.06 = 2.968 billion. If using exact numbers, 2.8*(2.8/2.6)=3.01538. But the document explicitly says \"increased 6%\". So likely answer 2.968 billion. But question asks \"in billions\" so 2.968.\n\nLet's check if there is any other mention: In Chairman's letter: \"total dividends declared for 2014 growing 29 percent\" etc. Not relevant.\n\nNeed provide evidence: value | element. The figures: $2.8 billion and $2.6 billion from Item 7 Results of Operations - Operating Revenues paragraph. Also 6% from same. We'll cite.\n\nProgram: multiply(2.8, 1.06) = 2.968. Or add(2.8, multiply(2.8, 0.06)). Use exact.\n\nFinal answer inside <answer>2.968</answer> (no units). But question says \"in billions\" so just number.\n\nLet's produce.",
+ "raw_content": "<evidence>\n$2.8 billion | Fuel surcharge revenue 2014 (Item 7 – Operating Revenues)\n$2.6 billion | Fuel surcharge revenue 2013 (Item 7 – Operating Revenues)\n6% | Fuel surcharge increase in 2014 (Item 7 – Operating Revenues)\n</evidence>\n\n<program>\nmultiply(2.8, 1.06)\n</program>\n\n<answer>2.968</answer>",
+ "usage": {
+  "prompt_tokens": 75491,
+  "completion_tokens": 1025,
+  "total_tokens": 76516,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 28.36,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$2.8 billion",
+   "element": "Fuel surcharge revenue 2014 (Item 7 – Operating Revenues)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$2.6 billion",
+   "element": "Fuel surcharge revenue 2013 (Item 7 – Operating Revenues)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "6%",
+   "element": "Fuel surcharge increase in 2014 (Item 7 – Operating Revenues)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(2.8, 1.06)",
+ "answer_model": "2.968",
+ "program_value": 2.968,
+ "docfinqa_row": 555
+}

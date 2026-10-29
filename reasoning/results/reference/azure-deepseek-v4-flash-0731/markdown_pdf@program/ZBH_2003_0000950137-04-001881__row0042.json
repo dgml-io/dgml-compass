@@ -1,0 +1,69 @@
+{
+ "id": "ZBH_2003_0000950137-04-001881__row0042",
+ "format": "markdown_pdf",
+ "key": "ZBH_2003_0000950137-04-001881",
+ "question": "what percent increase did inventories receive between 2002 and 2003?",
+ "gold": "104.85%",
+ "finqa_id": "ZBH/2003/page_58.pdf-1",
+ "source_page": "page_58",
+ "ticker": "ZBH",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/markdown_pdf/ZBH_2003_0000950137-04-001881.md",
+ "doc_chars": 278753,
+ "prompt_chars": 278910,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 278753,
+ "original_chars": 278753,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 62949,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 165,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "104.8525%",
+ "reasoning": "We need answer percent increase inventories between 2002 and 2003. From balance sheet: Inventories, net 2003 $527.7, 2002 $257.6. Percent increase = (527.7-257.6)/257.6 = 270.1/257.6 = 1.0485... = 104.85%. Need answer. Evidence figures.",
+ "raw_content": "<evidence>\n$ 527.7 | Inventories, net (Consolidated Balance Sheets 2003)\n$ 257.6 | Inventories, net (Consolidated Balance Sheets 2002)\n</evidence>\n\n<program>\ndivide(subtract(527.7, 257.6), 257.6)\n</program>\n\n<answer>104.85%</answer>",
+ "usage": {
+  "prompt_tokens": 63251,
+  "completion_tokens": 165,
+  "total_tokens": 63416,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.4,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 527.7",
+   "element": "Inventories, net (Consolidated Balance Sheets 2003)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ 257.6",
+   "element": "Inventories, net (Consolidated Balance Sheets 2002)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(527.7, 257.6), 257.6)",
+ "answer_model": "104.85%",
+ "program_value": 1.048524844720497,
+ "docfinqa_row": 42
+}

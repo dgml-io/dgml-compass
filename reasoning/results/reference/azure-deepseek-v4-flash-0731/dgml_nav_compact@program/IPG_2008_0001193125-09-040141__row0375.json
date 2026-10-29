@@ -1,0 +1,74 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0375",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "what is the total percentage decrease in future contingent acquisition obligations payable in cash from 2009-2013?",
+ "gold": "1.56%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "IPG_2008_0001193125-09-040141.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/NotesContinuationHeader/CommitmentsAndContingencies/ContingentAcquisitionObligations",
+  "/chunk/NotesContinuationHeader/CommitmentsAndContingencies/ContingentAcquisitionObligations/ContingentAcquisitionPaymentSchedule"
+ ],
+ "r1_reasoning_chars": 1669,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 23078,
+  "completion_tokens": 446,
+  "total_tokens": 23524,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/NotesContinuationHeader/CommitmentsAndContingencies/ContingentAcquisitionObligations",
+  "/chunk/NotesContinuationHeader/CommitmentsAndContingencies/ContingentAcquisitionObligations/ContingentAcquisitionPaymentSchedule"
+ ],
+ "content_chars": 12685,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "1.434159",
+ "reasoning": "We need answer. Need compute percentage decrease in future contingent acquisition obligations payable in cash from 2009-2013. Need interpret: \"total percentage decrease\" from 2009 to 2013? The table has total contingent acquisition payments by year: 2009 79.3, 2013 75.9. But \"payable in cash\" maybe total row after less compensation? The table \"Total contingent acquisition payments\" and \"Less cash compensation expense included above\" then \"Total\" = cash obligations? The question says \"future contingent acquisition obligations payable in cash\" from 2009-2013. Likely use \"Total\" row: 2009 $76.7, 2013 $75.6. Percentage decrease = (76.7 - 75.6)/76.7 *100 = 1.1/76.7 = 1.434...%. Need compute. But maybe \"from 2009-2013\" means over the period? Could be total obligations in 2009 vs 2013. Need check. The table shows estimated future contingent acquisition obligations payable in cash as of Dec 31 2008, by year. The \"Total\" row after less cash compensation is the cash payable. So percentage decrease from 2009 to 2013 = (76.7-75.6)/76.7 = 0.011433... = 1.43%. Need provide evidence figures. Use 76.7 and 75.6. Program: divide(subtract(76.7, 75.6), 76.7) maybe multiply by 100? The question asks percentage decrease, so answer as percentage number. Usually output value maybe 1.43. Need include %? The instruction says value only no units unless asked. It asks \"what is the total percentage decrease\" so answer should be percentage value, maybe 1.43. We'll output 1.43. Need evidence lines.",
+ "raw_content": "<evidence>\n$76.7 | Total contingent acquisition payments 2009 (after less cash compensation)\n$75.6 | Total contingent acquisition payments 2013 (after less cash compensation)\n</evidence>\n<program>multiply(divide(subtract(76.7, 75.6), 76.7), 100)</program>\n<answer>1.43</answer>",
+ "r2_usage": {
+  "prompt_tokens": 3172,
+  "completion_tokens": 489,
+  "total_tokens": 3661,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$76.7",
+   "element": "Total contingent acquisition payments 2009 (after less cash compensation)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$75.6",
+   "element": "Total contingent acquisition payments 2013 (after less cash compensation)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(subtract(76.7, 75.6), 76.7), 100)",
+ "answer_model": "1.43",
+ "program_value": 1.4341590612777164,
+ "elapsed_s": 9.1,
+ "outline_source": "IPG_2008_0001193125-09-040141.outline.txt",
+ "outline_chars": 90097
+}

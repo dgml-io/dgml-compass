@@ -1,0 +1,73 @@
+{
+ "id": "NCLH_2018_0001144204-19-010508__row0905",
+ "format": "markdown_pdf_rules",
+ "key": "NCLH_2018_0001144204-19-010508",
+ "question": "what percent of long-term debt was paid off in 2021?",
+ "gold": "38.6%",
+ "finqa_id": "NCLH/2018/page_97.pdf-3",
+ "source_page": "page_97",
+ "ticker": "NCLH",
+ "fiscal_year": "2018",
+ "source_file": "data/docs/markdown_pdf_rules/NCLH_2018_0001144204-19-010508.md",
+ "doc_chars": 405139,
+ "prompt_chars": 405280,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 405139,
+ "original_chars": 405139,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 95784,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1098,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "38.5730%",
+ "reasoning": "We need answer: \"what percent of long-term debt was paid off in 2021?\" Need interpret. From document, long-term debt scheduled principal repayments as of Dec 31 2018: 2021 amount $2,549,621 (thousands). Total long-term debt? The table \"Total debt\" $6,492,091 (in thousands) as of Dec 31 2018. But question \"what percent of long-term debt was paid off in 2021?\" Likely scheduled principal repayments in 2021 as percentage of total long-term debt. Compute 2,549,621 / 6,492,091 = 0.3927... = 39.27%. Need check if \"long-term debt\" includes current portion? Total debt includes current portion. The scheduled repayments table total $6,609,866 which includes interest? Actually table \"scheduled principal repayments on long-term debt including capital lease obligations\" amounts sum to 6,609,866, which is total debt including capital leases? But total debt in balance sheet is 6,492,091 (net of discounts? Actually long-term debt table shows total debt 6,492,091, which includes capital lease and license obligations 39,524. The scheduled principal repayments table total 6,609,866, which is gross principal? Note long-term debt includes discount and premiums aggregating $0.4 million and capital leases. So scheduled principal repayments total 6,609,866. The question \"what percent of long-term debt was paid off in 2021?\" Could be based on scheduled principal repayments in 2021 divided by total long-term debt at Dec 31 2018. Which denominator? The scheduled principal repayments table itself gives total $6,609,866. So 2,549,621 / 6,609,866 = 38.57%. But the balance sheet long-term debt including current portion is 6,492,091. Which is \"long-term debt\"? The question likely from financial data: \"what percent of long-term debt was paid off in 2021?\" The scheduled principal repayments table shows 2021 amount. The total long-term debt in balance sheet is 6,492,091. But the scheduled repayments table total is 6,609,866 because it includes capital lease obligations and excludes deferred financing fees? Actually note: \"Long-term debt includes discount and premiums aggregating $0.4 million and capital leases. Long-term debt excludes deferred financing fees which are a direct deduction from the carrying value of the related debt liability in the consolidated balance sheets.\" The scheduled principal repayments table is \"scheduled principal repayments on long-term debt including capital lease obligations\" and total 6,609,866. The balance sheet long-term debt (including current) is 6,492,091, which is net of deferred financing fees and discounts? The difference is about 117,775. So the scheduled principal repayments total is the gross contractual principal. The question \"what percent of long-term debt was paid off in 2021?\" likely means: In 2021, scheduled principal repayments are $2,549,621 out of total long-term debt (contractual) $6,609,866. So percent = 2,549,621 / 6,609,866 = 38.57%. But need check if \"paid off\" means the amount due in 2021 as percentage of total long-term debt at end of 2018. The document has \"The following are scheduled principal repayments on long-term debt including capital lease obligations as of December 31, 2018 for each of the next five years\" with 2021 amount. So yes.\n\nLet's compute precisely: 2,549,621 / 6,609,866 = 0.3857... Let's calculate: 6,609,866 * 0.385 = 2,544,798. Difference 4,823. 4,823/6,609,866=0.00073. So 0.38573 = 38.573%. So answer 38.57% (or 38.6%). Need provide evidence and program. Evidence: value 2,549,621 | scheduled principal repayments 2021; 6,609,866 | Total scheduled principal repayments. Program: divide(2549621, 6609866). Final answer inside <answer>38.57%</answer> or maybe 38.6%. The question asks \"what percent\" so include percent. Use exact value.\n\nNeed ensure no other interpretation: \"paid off in 2021\" could be from long-term debt table: 2021 maturity? The long-term debt table shows maturities through 2021 for several facilities: Revolving loan facility, Term Loan A, Term Loan B, 4.75% notes. The scheduled principal repayments table gives 2021 amount. So yes.\n\nLet's produce.",
+ "raw_content": "<evidence>\n2,549,621 | Scheduled principal repayments 2021\n6,609,866 | Total scheduled principal repayments\n</evidence>\n\n<program>divide(2549621, 6609866)</program>\n\n<answer>38.57%</answer>",
+ "usage": {
+  "prompt_tokens": 96085,
+  "completion_tokens": 1098,
+  "total_tokens": 97183,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 96000
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 15.17,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "2,549,621",
+   "element": "Scheduled principal repayments 2021",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6,609,866",
+   "element": "Total scheduled principal repayments",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(2549621, 6609866)",
+ "answer_model": "38.57%",
+ "program_value": 0.3857296048059068,
+ "docfinqa_row": 905
+}

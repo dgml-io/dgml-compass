@@ -1,0 +1,70 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0690",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what was the change in millions of trade receivables sold from 2014 to 2015?",
+ "gold": "768",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "PM_2015_0001413329-16-000076.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/DebtAndLiquidity/SaleOfAccountsReceivable",
+  "/chunk/ContingentLiabilityDescription/Contingencies/AccountsReceivableSale"
+ ],
+ "r1_reasoning_chars": 1566,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 39603,
+  "completion_tokens": 414,
+  "total_tokens": 40017,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/DebtAndLiquidity/SaleOfAccountsReceivable",
+  "/chunk/ContingentLiabilityDescription/Contingencies/AccountsReceivableSale"
+ ],
+ "content_chars": 11088,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "1730",
+ "reasoning": "We need the change in millions of trade receivables sold from 2014 to 2015. The document gives cumulative trade receivables sold for years ended Dec 31, 2015 and 2014: $3,299 million and $1,569 million. Change = 3299 - 1569 = 1730. The question asks \"change in millions of trade receivables sold\" - likely the increase. So answer 1730. Need evidence and program.",
+ "raw_content": "<evidence>\n$3,299 million | CumulativeReceivablesSoldAmount (2015)\n$1,569 million | CumulativeReceivablesSoldAmount (2014)\n</evidence>\n<program>subtract(3299, 1569)</program>\n<answer>1730</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2888,
+  "completion_tokens": 159,
+  "total_tokens": 3047,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$3,299 million",
+   "element": "CumulativeReceivablesSoldAmount (2015)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$1,569 million",
+   "element": "CumulativeReceivablesSoldAmount (2014)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(3299, 1569)",
+ "answer_model": "1730",
+ "program_value": 1730.0,
+ "elapsed_s": 5.96,
+ "outline_source": "PM_2015_0001413329-16-000076.outline.txt",
+ "outline_chars": 156714
+}

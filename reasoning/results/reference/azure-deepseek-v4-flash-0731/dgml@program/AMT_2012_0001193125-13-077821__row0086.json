@@ -1,0 +1,74 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0086",
+ "format": "dgml",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "for the quarter december 31 , 2012 what was the percent of the total number of shares purchased in december",
+ "gold": "16.5%",
+ "finqa_id": "AMT/2012/page_50.pdf-1",
+ "source_page": "page_50",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/dgml/AMT_2012_0001193125-13-077821.dgml.xml",
+ "doc_chars": 945867,
+ "prompt_chars": 946063,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 945867,
+ "original_chars": 945867,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 220539,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 233,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "16.534424",
+ "reasoning": "We need answer: \"for the quarter december 31, 2012 what was the percent of the total number of shares purchased in december\". Need find table: Issuer Purchases of Equity Securities. During three months ended Dec 31, 2012, repurchased 619,314 shares. December 2012: 102,400 shares. Percent = 102400 / 619314 * 100. Compute. 102400/619314 = 0.16534... = 16.53%. Need evidence figures. Use values as printed: 102,400 and 619,314. Program divide(102400, 619314) then multiply? The program should be exact. Use multiply(divide(102400, 619314), 100). Answer maybe 16.5%.",
+ "raw_content": "<evidence>\n102,400 | ShareRepurchaseQuantity (December 2012 row)\n619,314 | ShareRepurchaseQuantity (Total Fourth Quarter)\n</evidence>\n<program>multiply(divide(102400, 619314), 100)</program>\n<answer>16.53%</answer>",
+ "usage": {
+  "prompt_tokens": 220850,
+  "completion_tokens": 233,
+  "total_tokens": 221083,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 89.61,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "102,400",
+   "element": "ShareRepurchaseQuantity (December 2012 row)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "619,314",
+   "element": "ShareRepurchaseQuantity (Total Fourth Quarter)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(102400, 619314), 100)",
+ "answer_model": "16.53%",
+ "program_value": 16.534423571887604,
+ "docfinqa_row": 86
+}

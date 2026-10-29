@@ -1,0 +1,53 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0624",
+ "format": "dgml",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "in 2005 what was the percentage of the federal nol set to expire between 2016 to 2020",
+ "gold": "18.4%",
+ "finqa_id": "AMT/2005/page_105.pdf-1",
+ "source_page": "page_105",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/dgml/AMT_2005_0001193125-06-054224.dgml.xml",
+ "doc_chars": 790211,
+ "prompt_chars": 790385,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 790211,
+ "original_chars": 790211,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 189615,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 239,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "18.4%",
+ "reasoning": "We need to find the federal NOL expirations. In the document, under Income Taxes note 13, there is a table of net operating loss carryforwards expiration. It shows for federal: 2006-2010: $5,248; 2011-2015: $10,012; 2016-2020: $397,691; 2021-2025: $1,744,552; total $2,157,503. The question asks: \"in 2005 what was the percentage of the federal nol set to expire between 2016 to 2020\". So we need the percentage of federal NOL expiring 2016-2020 relative to total federal NOL. That is 397,691 / 2,157,503 = approximately 18.43%. Let's compute: 397,691 / 2,157,503 = 0.1843... So about 18.4%. The question asks for percentage, so answer 18.4% or 18.43%. We'll give the value.",
+ "raw_content": "<answer>18.4%</answer>",
+ "usage": {
+  "prompt_tokens": 189768,
+  "completion_tokens": 239,
+  "total_tokens": 190007,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 189696
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.71,
+ "answer_tag_found": true,
+ "docfinqa_row": 624
+}

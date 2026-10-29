@@ -1,0 +1,63 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0618",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "was was the total amount spent on stock repurchases in the fourth quarter?",
+ "gold": "45984064",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "AMT_2012_0001193125-13-077821.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/MarketForCommonEquityAndRepurchases/ShareRepurchaseQuantity/table",
+  "/chunk/MarketForCommonEquityAndRepurchases/ShareRepurchaseQuantity"
+ ],
+ "r1_reasoning_chars": 12358,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 33123,
+  "completion_tokens": 2849,
+  "total_tokens": 35972,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/MarketForCommonEquityAndRepurchases/ShareRepurchaseQuantity/table",
+  "/chunk/MarketForCommonEquityAndRepurchases/ShareRepurchaseQuantity"
+ ],
+ "content_chars": 15935,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "approximately $46.0 million",
+ "reasoning": "We need answer total amount spent on stock repurchases in Q4. Document says \"During the three months ended December 31, 2012, we repurchased 619,314 shares ... for an aggregate of approximately $46.0 million, including commissions and fees\". So answer $46.0 million. Need evidence figures. Use AggregatePaymentAmount approximately $46.0 million. Program: just that figure.",
+ "raw_content": "<evidence>approximately $46.0 million | AggregatePaymentAmount</evidence>\n<program>approximately $46.0 million</program>\n<answer>approximately $46.0 million</answer>",
+ "r2_usage": {
+  "prompt_tokens": 4388,
+  "completion_tokens": 128,
+  "total_tokens": 4516,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "approximately $46.0 million",
+   "element": "AggregatePaymentAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "approximately $46.0 million",
+ "answer_model": "approximately $46.0 million",
+ "program_value": null,
+ "elapsed_s": 15.02,
+ "outline_source": "AMT_2012_0001193125-13-077821.outline.txt",
+ "outline_chars": 129453
+}

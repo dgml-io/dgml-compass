@@ -1,0 +1,69 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0777",
+ "format": "markdown_pdf_poppler",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what was the percentage increase of total deferred compensation plan investments from 2010 to 2011?\\\\n",
+ "gold": "204%",
+ "finqa_id": "ADI/2011/page_81.pdf-3",
+ "source_page": "page_81",
+ "ticker": "ADI",
+ "fiscal_year": "2011",
+ "source_file": "data/docs/markdown_pdf_poppler/ADI_2011_0000950123-11-099928.md",
+ "doc_chars": 465742,
+ "prompt_chars": 465933,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 465742,
+ "original_chars": 465742,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 78562,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 554,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "203.912543",
+ "reasoning": "We need to find deferred compensation plan investments for 2010 and 2011. From Note 7: Deferred Compensation Plan investments: 2011: $26,410, 2010: $8,690. Percentage increase = (26,410 - 8,690)/8,690 * 100. Compute: difference = 17,720. Divide by 8,690 = 2.039... so 203.9% increase. Let's compute exactly: 17,720 / 8,690 = 2.039... 8,690*2 = 17,380, remainder 340, 340/8690 = 0.0391, so 2.0391, so 203.91%. The question asks \"percentage increase\" so answer as a number, likely 203.9% or 204%. We'll give the value. Use evidence: 26,410 and 8,690 from Note 7. Program: divide(subtract(26410, 8690), 8690) * 100? But program should be exact. We can do multiply(divide(subtract(26410, 8690), 8690), 100) but the program expects nested calls. We'll output the percentage as a number. The answer should be the value itself. We'll put 203.9 or 204? The question says \"percentage increase\" so we can give 203.9% but the instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for percentage increase, so we can give the number without % sign? Typically they want the numeric value. We'll give 203.9. But to be precise, compute: (26410-8690)/8690 = 17720/8690 = 2.039... Let's compute exactly: 17720/8690 = 2.039... 8690*2.04 = 17727.6, so slightly less. 2.0391. So 203.91%. We'll give 203.9. Or maybe they want the ratio? The question says \"percentage increase\" so we give the percentage number. I'll put 203.9.",
+ "raw_content": "<evidence>\n26,410 | Deferred Compensation Plan investments (Note 7, 2011)\n8,690 | Deferred Compensation Plan investments (Note 7, 2010)\n</evidence>\n<program>\nmultiply(divide(subtract(26410, 8690), 8690), 100)\n</program>\n<answer>203.9</answer>",
+ "usage": {
+  "prompt_tokens": 78873,
+  "completion_tokens": 554,
+  "total_tokens": 79427,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 12.32,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "26,410",
+   "element": "Deferred Compensation Plan investments (Note 7, 2011)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "8,690",
+   "element": "Deferred Compensation Plan investments (Note 7, 2010)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(26410, 8690), 8690), 100)",
+ "answer_model": "203.9",
+ "program_value": 203.91254315304948,
+ "docfinqa_row": 777
+}

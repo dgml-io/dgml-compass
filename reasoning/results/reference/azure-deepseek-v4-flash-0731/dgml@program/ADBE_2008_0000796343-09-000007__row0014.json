@@ -1,0 +1,71 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0014",
+ "format": "dgml",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "the combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable was what percent of the total ending balance as of november 28 2008?",
+ "gold": "11.0%",
+ "finqa_id": "ADBE/2008/page_89.pdf-3",
+ "source_page": "page_89",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml/ADBE_2008_0000796343-09-000007.dgml.xml",
+ "doc_chars": 800179,
+ "prompt_chars": 800489,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 800179,
+ "original_chars": 800179,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 183166,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 616,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "10.967742",
+ "reasoning": "We need answer question. Need find figures. Question: \"the combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable was what percent of the total ending balance as of november 28 2008?\"\n\nNeed identify combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable. In document, there are two mentions: \"As of December 1, 2007, the combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable was approximately $42.8 million.\" And later: \"As of November 28, 2008, the combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable was approximately $15.3 million.\" Also \"total ending balance\" as of November 28 2008? Could be gross liability for unrecognized tax benefits at November 28, 2008 was $139.5 million exclusive of interest and penalties. But question says \"total ending balance\" maybe ending balance of unrecognized tax benefits rollforward: $139,549. Or \"total ending balance\" as of Nov 28 2008? Need determine. The question: \"the combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable was what percent of the total ending balance as of november 28 2008?\" Likely combined amount = $15.3 million. Total ending balance = gross liability for unrecognized tax benefits at Nov 28 2008 = $139.5 million (exclusive of interest and penalties). Percent = 15.3 / 139.5 * 100 = 10.9677...%. Need compute. But check if \"total ending balance\" refers to ending balance in FIN 48 rollforward: $139,549 (thousands) = $139.5 million. Yes. So percent = 15.3/139.5*100 = 10.9677419355. Round? Probably 11.0%. Need provide value. Use evidence figures: $15.3 million and $139.5 million. Program divide(15.3, 139.5) * 100? Use multiply(divide(15.3, 139.5), 100). Answer maybe 10.97%. Need final inside <answer>10.97%</answer> or 11.0%. The question asks \"what percent\" so include percent. We'll output 10.97%.",
+ "raw_content": "<evidence>\n$15.3 million | UnrecognizedTaxBenefitInterestAndPenalties\n$139.5 million | UnrecognizedTaxBenefitImpact\n</evidence>\n<program>multiply(divide(15.3, 139.5), 100)</program>\n<answer>10.97%</answer>",
+ "usage": {
+  "prompt_tokens": 183495,
+  "completion_tokens": 616,
+  "total_tokens": 184111,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 15.47,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$15.3 million",
+   "element": "UnrecognizedTaxBenefitInterestAndPenalties",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$139.5 million",
+   "element": "UnrecognizedTaxBenefitImpact",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(15.3, 139.5), 100)",
+ "answer_model": "10.97%",
+ "program_value": 10.967741935483872,
+ "docfinqa_row": 14
+}

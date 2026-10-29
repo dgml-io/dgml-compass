@@ -1,0 +1,50 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0069",
+ "format": "markdown_pdf_rules",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what portion of the total investment is allocated to mutual funds in 2011?",
+ "gold": "65.1%",
+ "finqa_id": "ADI/2011/page_81.pdf-1",
+ "source_page": "page_81",
+ "ticker": "ADI",
+ "fiscal_year": "2011",
+ "source_file": "data/docs/markdown_pdf_rules/ADI_2011_0000950123-11-099928.md",
+ "doc_chars": 345770,
+ "prompt_chars": 345933,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 345770,
+ "original_chars": 345770,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 77039,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 275,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "34.9%",
+ "reasoning": "We need to find the portion of total investment allocated to mutual funds in 2011. The document mentions deferred compensation plan investments: money market funds and mutual funds. Total deferred compensation plan investments in 2011: $26,410 thousand. Mutual funds: $9,223 thousand. So portion = 9,223 / 26,410 = 0.3492... = 34.92%. But the question says \"total investment\" - could refer to deferred compensation plan investments? Or maybe total investments overall? The document has \"Deferred compensation plan investments\" and \"Other investments\". But the question likely refers to the deferred compensation plan investments because that's where mutual funds are mentioned. Alternatively, maybe it's about the pension plan assets? The pension plan assets have unit trust funds, equities, fixed income, property, cash. But mutual funds are not explicitly listed there. The deferred compensation plan has mutual funds. So answer: 9,223 / 26,410 = 34.9% approximately. But the question asks \"what portion of the total investment is allocated to mutual funds in 2011?\" The total investment could be the total deferred compensation plan investments. So answer: 34.9% or 0.349. I'll provide the value as a percentage.",
+ "raw_content": "<answer>34.9%</answer>",
+ "usage": {
+  "prompt_tokens": 77183,
+  "completion_tokens": 275,
+  "total_tokens": 77458,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 6.23,
+ "answer_tag_found": true,
+ "docfinqa_row": 69
+}

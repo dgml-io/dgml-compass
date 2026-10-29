@@ -1,0 +1,81 @@
+{
+ "id": "GPN_2010_0001193125-10-169025__row0087",
+ "format": "markdown_pdf_rules",
+ "key": "GPN_2010_0001193125-10-169025",
+ "question": "what was the total compensation expense for restricted stock recognized from 2008 to 2010",
+ "gold": "26.8",
+ "finqa_id": "GPN/2010/page_89.pdf-3",
+ "source_page": "page_89",
+ "ticker": "GPN",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/markdown_pdf_rules/GPN_2010_0001193125-10-169025.md",
+ "doc_chars": 316684,
+ "prompt_chars": 316862,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 316684,
+ "original_chars": 316684,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 70390,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 212,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "26.8",
+ "reasoning": "We need answer total compensation expense for restricted stock recognized from 2008 to 2010. From note 11: \"We recognized compensation expense for restricted stock of $12.1 million, $9.0 million, and $5.7 million in the years ended May 31, 2010, 2009 and 2008.\" So sum = 12.1+9.0+5.7 = 26.8 million. Need evidence figures.",
+ "raw_content": "<evidence>\n$12.1 million | Note 11—Share-Based Awards and Options, restricted stock compensation expense fiscal 2010\n$9.0 million | Note 11—Share-Based Awards and Options, restricted stock compensation expense fiscal 2009\n$5.7 million | Note 11—Share-Based Awards and Options, restricted stock compensation expense fiscal 2008\n</evidence>\n\n<program>\nadd(add(12.1, 9.0), 5.7)\n</program>\n\n<answer>26.8</answer>",
+ "usage": {
+  "prompt_tokens": 70696,
+  "completion_tokens": 212,
+  "total_tokens": 70908,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 5.21,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$12.1 million",
+   "element": "Note 11—Share-Based Awards and Options, restricted stock compensation expense fiscal 2010",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$9.0 million",
+   "element": "Note 11—Share-Based Awards and Options, restricted stock compensation expense fiscal 2009",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$5.7 million",
+   "element": "Note 11—Share-Based Awards and Options, restricted stock compensation expense fiscal 2008",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "add(add(12.1, 9.0), 5.7)",
+ "answer_model": "26.8",
+ "program_value": 26.8,
+ "docfinqa_row": 87
+}

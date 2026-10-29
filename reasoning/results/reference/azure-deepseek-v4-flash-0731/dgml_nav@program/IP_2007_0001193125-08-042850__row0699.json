@@ -1,0 +1,68 @@
+{
+ "id": "IP_2007_0001193125-08-042850__row0699",
+ "key": "IP_2007_0001193125-08-042850",
+ "question": "what was the change in net sales in millions in 2007 in billions",
+ "gold": "0.3",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "IP_2007_0001193125-08-042850.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/UnresolvedStaffCommentsStatus/Financial/FiveYearFinancial"
+ ],
+ "r1_reasoning_chars": 7158,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 35269,
+  "completion_tokens": 1753,
+  "total_tokens": 37022,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/UnresolvedStaffCommentsStatus/Financial/FiveYearFinancial"
+ ],
+ "content_chars": 19856,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "-0.105",
+ "reasoning": "We need answer change in net sales in millions in 2007 in billions. Need compute change from 2006 to 2007. Net sales 2007 $21,890, 2006 $21,995. Change = 21,890 - 21,995 = -105 million. In billions = -0.105 billion. Question wording: \"what was the change in net sales in millions in 2007 in billions\" ambiguous. Likely ask change in net sales in 2007 in billions. So answer -0.105. Need evidence figures. Use values as printed: $21,890 and $21,995. Program subtract(21890, 21995) = -105, then divide by 1000? But question asks in billions, so -105 million = -0.105 billion. Program: divide(subtract(21890, 21995), 1000). But note figures are in millions, so change in millions is -105, in billions -0.105. Provide evidence lines.",
+ "raw_content": "<evidence>\n$21,890 | NetSalesAmount 2007\n$21,995 | NetSalesAmount 2006\n</evidence>\n<program>divide(subtract(21890, 21995), 1000)</program>\n<answer>-0.105</answer>",
+ "r2_usage": {
+  "prompt_tokens": 5815,
+  "completion_tokens": 277,
+  "total_tokens": 6092,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$21,890",
+   "element": "NetSalesAmount 2007",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$21,995",
+   "element": "NetSalesAmount 2006",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(21890, 21995), 1000)",
+ "answer_model": "-0.105",
+ "program_value": -0.105,
+ "elapsed_s": 10.99,
+ "outline_source": "IP_2007_0001193125-08-042850.outline.txt",
+ "outline_chars": 139969
+}

@@ -1,0 +1,53 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0486",
+ "format": "dgml_compact",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what is the roi in snap-on if the investment was made at the end of 2005 and sold at the end of 2007?",
+ "gold": "34.8%",
+ "finqa_id": "SNA/2007/page_29.pdf-2",
+ "source_page": "page_29",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml_compact/SNA_2007_0001104659-08-011401.dgml.txt",
+ "doc_chars": 428718,
+ "prompt_chars": 428908,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 428718,
+ "original_chars": 428718,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 97509,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 854,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "33.97%",
+ "reasoning": "We need ROI from end of 2005 to end of 2007. Need stock price at end of 2005 and end of 2007. From document: fiscal year-end per share price: 2005: $37.56, 2007: $48.13 (from Selected Financial Data). Also dividends paid per share: 2006: $1.08, 2007: $1.11. But ROI typically includes dividends if total return. The question says \"roi\" - likely total return including dividends. But it says \"if the investment was made at the end of 2005 and sold at the end of 2007\" - that's two years. Need to include dividends received during holding period. Dividends paid in 2006 and 2007: $1.08 + $1.11 = $2.19 per share. Initial price $37.56, final price $48.13. Total return = (48.13 + 2.19 - 37.56)/37.56 = (50.32 - 37.56)/37.56 = 12.76/37.56 = 0.3397 = 33.97%. But ROI might be simple price appreciation only? The question says \"roi\" - typically includes dividends. However, the document also has a five-year stock performance graph with total shareholder return assuming dividends reinvested. But we can compute directly. Alternatively, they might want ROI as (ending value - beginning value)/beginning value, without dividends. But the question says \"investment\" - usually includes dividends. Let's check if there is any explicit ROI figure. Not given. So compute.\n\nCheck: end of 2005 price: from Selected Financial Data: \"Fiscal year-end per share price\" 2005: $37.56, 2007: $48.13. Also from quarterly data, but that's fine. Dividends: 2006 $1.08, 2007 $1.11. So total dividends = $2.19. So ROI = (48.13 + 2.19 - 37.56)/37.56 = 12.76/37.56 = 0.3397 = 33.97%. If they want percentage, answer 33.97% or 0.34. But the instruction says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So just the number. Probably as a percentage? The question asks \"what is the roi\" - typically expressed as a percentage. I'll put 33.97% or 0.34? Usually ROI is a percentage. I'll put 33.97%. But check if they want decimal? I'll put 33.97%. Alternatively, if they ignore dividends, it's (48.13-37.56)/37.56 = 10.57/37.56 = 0.2814 = 28.14%. Which is more likely? The question says \"investment\" - in stocks, ROI often includes dividends. But the document has a \"Five-year Stock Performance Graph\" that shows total shareholder return assuming dividends reinvested. But the question specifically asks for ROI from end 2005 to end 2007. I think including dividends is correct. However, the question might be from a financial analysis context where ROI is simply price appreciation. Let's see if there is any mention of \"ROI\" in the document. Not directly. So we compute.\n\nI'll go with total return including dividends: 33.97%. But let's double-check the price at end of 2005: from Selected Financial Data: \"Fiscal year-end per share price\" 2005: $37.56, 2007: $48.13. Also from quarterly data: 2006 fourth quarter low? But that's fine.\n\nThus answer: 33.97% or 0.3397. I'll put 33.97%.",
+ "raw_content": "<answer>33.97%</answer>",
+ "usage": {
+  "prompt_tokens": 97666,
+  "completion_tokens": 854,
+  "total_tokens": 98520,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 97536
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.51,
+ "answer_tag_found": true,
+ "docfinqa_row": 486
+}

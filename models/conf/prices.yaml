@@ -1,0 +1,15 @@
+# Provider list prices in USD per million tokens, used by `dgc plan` and the budget cap.
+# A model missing here is planned as unpriced (its estimate is a floor of $0), so add every
+# model a spec uses. Check figures against the providers' pricing pages before relying on them;
+# observed spend has run ~2x these estimates for Haiku 5.5 and 20-25x for GPT-5.5 and Opus 5
+# labelers (docs/EXPERIMENTS.md).
+version: "2026-09-17"
+models:
+- {id: anthropic/claude-haiku-4-5, input_per_mtok: 1.0, output_per_mtok: 5.0}
+- {id: anthropic/claude-haiku-5-5, input_per_mtok: 0.1, output_per_mtok: 0.5}
+- {id: anthropic/claude-sonnet-4-6, input_per_mtok: 3.0, output_per_mtok: 15.0}
+- {id: anthropic/claude-sonnet-5, input_per_mtok: 2.0, output_per_mtok: 10.0}
+- {id: anthropic/claude-opus-5, input_per_mtok: 5.0, output_per_mtok: 25.0}
+- {id: gemini/gemini-3.1-flash-lite, input_per_mtok: 0.25, output_per_mtok: 1.5}
+- {id: gemini/gemini-3.6-flash, input_per_mtok: 0.75, output_per_mtok: 3.75}
+- {id: openai/gpt-5.5, input_per_mtok: 5.0, output_per_mtok: 30.0}

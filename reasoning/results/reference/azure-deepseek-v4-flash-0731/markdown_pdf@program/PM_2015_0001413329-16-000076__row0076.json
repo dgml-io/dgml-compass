@@ -1,0 +1,72 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0076",
+ "format": "markdown_pdf",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the percentage change in the weighted-average discount rate for u.s . pension plans from 2014 to 2015?",
+ "gold": "8.9%",
+ "finqa_id": "PM/2015/page_38.pdf-1",
+ "source_page": "page_38",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf/PM_2015_0001413329-16-000076.md",
+ "doc_chars": 504705,
+ "prompt_chars": 504904,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 504705,
+ "original_chars": 504705,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 122013,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 237,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "8.8608%",
+ "reasoning": "We need answer percentage change in weighted-average discount rate for U.S. pension plans from 2014 to 2015. Document: Critical Accounting Estimates: Weighted-average discount rate assumptions for pensions and postretirement plans: U.S. pension plans 2015 4.30%, 2014 3.95%. Percentage change = (4.30-3.95)/3.95 = 0.35/3.95 = 0.088607... = 8.86% increase. Need evidence figures. Program: divide(subtract(4.30,3.95),3.95). Answer value maybe 8.86% or 0.0886. Question asks percentage change, so give 8.86%? Inside tags only value. Use 8.86.",
+ "raw_content": "<evidence>\n4.30% | U.S. pension plans 2015\n3.95% | U.S. pension plans 2014\n</evidence>\n<program>divide(subtract(4.30, 3.95), 3.95)</program>\n<answer>8.86%</answer>",
+ "usage": {
+  "prompt_tokens": 122326,
+  "completion_tokens": 237,
+  "total_tokens": 122563,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.81,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "4.30%",
+   "element": "U.S. pension plans 2015",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "3.95%",
+   "element": "U.S. pension plans 2014",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(4.30, 3.95), 3.95)",
+ "answer_model": "8.86%",
+ "program_value": 0.08860759493670876,
+ "docfinqa_row": 76
+}

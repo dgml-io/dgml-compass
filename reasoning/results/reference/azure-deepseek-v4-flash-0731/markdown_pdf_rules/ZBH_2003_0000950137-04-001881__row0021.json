@@ -1,0 +1,50 @@
+{
+ "id": "ZBH_2003_0000950137-04-001881__row0021",
+ "format": "markdown_pdf_rules",
+ "key": "ZBH_2003_0000950137-04-001881",
+ "question": "what percent of inventory is ready for liquidation ( sale ) in 2003?",
+ "gold": "72.83%",
+ "finqa_id": "ZBH/2003/page_58.pdf-3",
+ "source_page": "page_58",
+ "ticker": "ZBH",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/markdown_pdf_rules/ZBH_2003_0000950137-04-001881.md",
+ "doc_chars": 274949,
+ "prompt_chars": 275106,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 274949,
+ "original_chars": 274949,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 61705,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 209,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "72.8%",
+ "reasoning": "We need to find percent of inventory ready for liquidation (sale) in 2003. The document has inventory breakdown: finished goods, raw materials and work in progress, inventory step-up. Finished goods are ready for sale. So percent = finished goods / total inventory. From Note 5: Finished goods $384.3, raw materials and work in progress $90.8, inventory step-up $52.6, total $527.7. So finished goods / total = 384.3 / 527.7 = 0.728... = 72.8%. But note inventory step-up is part of inventory, but it's a step-up from acquisition, not physical goods. The question asks \"ready for liquidation (sale)\" - finished goods are ready for sale. So answer 72.8%. But check if there is any other mention. The document says \"Inventories, net\" includes finished goods. So answer 72.8%.",
+ "raw_content": "<answer>72.8%</answer>",
+ "usage": {
+  "prompt_tokens": 61849,
+  "completion_tokens": 209,
+  "total_tokens": 62058,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 6.88,
+ "answer_tag_found": true,
+ "docfinqa_row": 21
+}

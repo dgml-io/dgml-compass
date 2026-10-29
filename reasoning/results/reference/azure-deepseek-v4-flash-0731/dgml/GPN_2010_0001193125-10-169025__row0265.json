@@ -1,0 +1,53 @@
+{
+ "id": "GPN_2010_0001193125-10-169025__row0265",
+ "format": "dgml",
+ "key": "GPN_2010_0001193125-10-169025",
+ "question": "what is the total fair value of non-vested shares as of may 31 , 2010?",
+ "gold": "29946",
+ "finqa_id": "GPN/2010/page_89.pdf-2",
+ "source_page": "page_89",
+ "ticker": "GPN",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/dgml/GPN_2010_0001193125-10-169025.dgml.xml",
+ "doc_chars": 590096,
+ "prompt_chars": 590255,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 590096,
+ "original_chars": 590096,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 139885,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 261,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "$29,946,000",
+ "reasoning": "We need to find total fair value of non-vested shares as of May 31, 2010. The document mentions restricted stock non-vested at May 31, 2010: shares 713 thousand, weighted average grant-date fair value $42. So total fair value = 713,000 * $42 = $29,946,000. But check if there are other non-vested shares? The question says \"non-vested shares\" likely refers to restricted stock. The table shows non-vested at May 31, 2010: 713 shares (in thousands) with weighted average grant-date fair value $42. So total fair value = 713 * 42 = 29,946 (in thousands) = $29,946,000. But the question asks \"total fair value\" - maybe they want in dollars. The document says \"share awards in thousands\" so 713 thousand shares. So answer $29,946,000. But let's confirm if there are other non-vested options? Options are not non-vested shares; they are options. The question says \"non-vested shares\" - likely restricted stock. So answer.",
+ "raw_content": "<answer>$29,946,000</answer>",
+ "usage": {
+  "prompt_tokens": 140035,
+  "completion_tokens": 261,
+  "total_tokens": 140296,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 139776
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.02,
+ "answer_tag_found": true,
+ "docfinqa_row": 265
+}

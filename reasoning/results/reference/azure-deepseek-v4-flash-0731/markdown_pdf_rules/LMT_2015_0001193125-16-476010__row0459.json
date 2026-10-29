@@ -1,0 +1,53 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0459",
+ "format": "markdown_pdf_rules",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was the percentage change in total long-term debt net from 2014 to 2015?",
+ "gold": "148%",
+ "finqa_id": "LMT/2015/page_99.pdf-2",
+ "source_page": "page_99",
+ "ticker": "LMT",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_rules/LMT_2015_0001193125-16-476010.md",
+ "doc_chars": 501601,
+ "prompt_chars": 501767,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 501601,
+ "original_chars": 501601,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 108718,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 359,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "148.5%",
+ "reasoning": "We need percentage change in total long-term debt net from 2014 to 2015. From balance sheet: long-term debt, net 2015 = 14,305? Actually balance sheet shows \"Long-term debt, net\" as 14,305? Wait, the balance sheet line: \"Long-term debt, net **14,305** 6,142\" for 2015 and 2014. But note 10 says total long-term debt, net $15,261 and $6,142. There is a discrepancy: balance sheet shows 14,305? Let's check: In the balance sheet, under liabilities: \"Long-term debt, net **14,305** 6,142\" but note 10 says \"Total long-term debt, net $15,261 $6,142\". Actually the balance sheet line might be \"Long-term debt, net\" but includes current maturities? The balance sheet has \"Current maturities of long-term debt 956\" and \"Long-term debt, net 14,305\". So total debt net = 956 + 14,305 = 15,261. So total long-term debt net (including current) is 15,261 in 2015 and 6,142 in 2014. The question says \"total long-term debt net\" - likely the total debt net from note 10. So percentage change = (15,261 - 6,142)/6,142 * 100 = 9,119/6,142 = 1.4847... = 148.47% increase. So answer 148.5% or 148.47%. We'll give numeric value.",
+ "raw_content": "<answer>148.5%</answer>",
+ "usage": {
+  "prompt_tokens": 108866,
+  "completion_tokens": 359,
+  "total_tokens": 109225,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 108800
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.86,
+ "answer_tag_found": true,
+ "docfinqa_row": 459
+}

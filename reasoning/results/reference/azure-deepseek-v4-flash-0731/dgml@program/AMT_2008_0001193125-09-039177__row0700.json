@@ -1,0 +1,76 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0700",
+ "format": "dgml",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "in 2006 what was percentage change in the employee separations liabilities",
+ "gold": "-65.1%",
+ "finqa_id": "AMT/2008/page_107.pdf-2",
+ "source_page": "page_107",
+ "ticker": "AMT",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml/AMT_2008_0001193125-09-039177.dgml.xml",
+ "doc_chars": 745300,
+ "prompt_chars": 745463,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 745300,
+ "original_chars": 745300,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 172559,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 369,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-65.0479%",
+ "reasoning": "We need answer: \"in 2006 what was percentage change in the employee separations liabilities\". Need find employee separations liabilities in 2006. Document has merger related liability table. It shows \"Employee separations\" row with columns: Liability as of Dec 31, 2005 = $20,963; 2006 Expense = $496; 2006 Cash Payments = $(12,389); Other = $(1,743); Liability as of Dec 31, 2006 = $7,327. So percentage change from 2005 to 2006? Question \"in 2006 what was percentage change in the employee separations liabilities\" likely change from beginning to end of 2006. Compute (7327-20963)/20963 = -13636/20963 = -0.6505... = -65.05%. Or maybe percentage change in liability during 2006. Need answer as percentage. Use figures: 20,963 and 7,327. Program: divide(subtract(7327, 20963), 20963) = -0.6505. Answer -65.05% or -65.1%. Need final inside <answer> tags only value. Probably -65.05%. Let's compute precisely: 20963-7327=13636; 13636/20963=0.6505. So -65.05%.",
+ "raw_content": "<evidence>\n20,963 | Liability as of December 31, 2005 (Employee separations)\n7,327 | Liability as of December 31, 2006 (Employee separations)\n</evidence>\n<program>divide(subtract(7327, 20963), 20963)</program>\n<answer>-65.05%</answer>",
+ "usage": {
+  "prompt_tokens": 172861,
+  "completion_tokens": 369,
+  "total_tokens": 173230,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 172800
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 6.1,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "20,963",
+   "element": "Liability as of December 31, 2005 (Employee separations)",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "7,327",
+   "element": "Liability as of December 31, 2006 (Employee separations)",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(subtract(7327, 20963), 20963)",
+ "answer_model": "-65.05%",
+ "program_value": -0.6504794161141058,
+ "docfinqa_row": 700
+}

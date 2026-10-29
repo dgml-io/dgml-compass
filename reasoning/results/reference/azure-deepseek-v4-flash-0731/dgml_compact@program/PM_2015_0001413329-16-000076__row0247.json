@@ -1,0 +1,78 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0247",
+ "format": "dgml_compact",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what is the percentage increase in total accumulated other comprehensive losses from 2013 to 2014?",
+ "gold": "62.9%",
+ "finqa_id": "PM/2015/page_127.pdf-2",
+ "source_page": "page_127",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml_compact/PM_2015_0001413329-16-000076.dgml.txt",
+ "doc_chars": 654685,
+ "prompt_chars": 654872,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 654685,
+ "original_chars": 654685,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 144584,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "stop",
+   "completion_tokens": 421,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 1,
+ "ok": true,
+ "answer": "62.911695",
+ "reasoning": "We need percentage increase in total accumulated other comprehensive losses from 2013 to 2014. From Note 17: total accumulated other comprehensive losses: 2013: (4,190), 2014: (6,826). Percentage increase? Since losses are negative, increase in magnitude? \"percentage increase in total accumulated other comprehensive losses\" likely means change from -4190 to -6826. Percentage increase = (new - old)/|old| *100 = (-6826 - (-4190))/4190 = (-2636)/4190 = -62.9%? That's a decrease? Actually losses increased (more negative). Usually \"increase in losses\" means increase in absolute value. The question says \"percentage increase in total accumulated other comprehensive losses\" - could be interpreted as increase in the loss amount (absolute value). From 4,190 to 6,826, increase = 2,636, percentage = 2,636/4,190 = 62.9%. But if they mean percentage change in the signed number, it's -62.9% (decrease). The wording \"increase\" suggests absolute increase. Let's compute: 6826/4190 = 1.629, so 62.9% increase. We'll answer 62.9%. Need evidence: figures from Note 17: 2013: (4,190), 2014: (6,826). Program: divide(subtract(6826, 4190), 4190) = 0.629... but we need percentage. We'll output 62.9%.",
+ "raw_content": "<evidence>\n(4,190) | AccumulatedOtherComprehensiveLoss: Total accumulated other comprehensive losses 2013\n(6,826) | AccumulatedOtherComprehensiveLoss: Total accumulated other comprehensive losses 2014\n</evidence>\n<program>multiply(divide(subtract(6826, 4190), 4190), 100)</program>\n<answer>62.9%</answer>",
+ "usage": {
+  "prompt_tokens": 144891,
+  "completion_tokens": 421,
+  "total_tokens": 145312,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 19.44,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "(4,190)",
+   "element": "AccumulatedOtherComprehensiveLoss: Total accumulated other comprehensive losses 2013",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "(6,826)",
+   "element": "AccumulatedOtherComprehensiveLoss: Total accumulated other comprehensive losses 2014",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(6826, 4190), 4190), 100)",
+ "answer_model": "62.9%",
+ "program_value": 62.911694510739856,
+ "docfinqa_row": 247
+}

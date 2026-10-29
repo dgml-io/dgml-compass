@@ -1,0 +1,67 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0725",
+ "format": "markdown_pdf_rules",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "what was the percentage change in total expense for repairs and maintenance from 2012 to 2013?",
+ "gold": "10%",
+ "finqa_id": "UNP/2014/page_75.pdf-3",
+ "source_page": "page_75",
+ "ticker": "UNP",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf_rules/UNP_2014_0001193125-15-037518.md",
+ "doc_chars": 326124,
+ "prompt_chars": 326307,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 326124,
+ "original_chars": 326124,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 75178,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 565,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.095238",
+ "reasoning": "We need percentage change in total expense for repairs and maintenance from 2012 to 2013. Document says: \"Total expense for repairs and maintenance incurred was $2.4 billion for 2014, $2.3 billion for 2013, and $2.1 billion for 2012.\" So 2013 = 2.3, 2012 = 2.1. Percentage change = (2.3-2.1)/2.1 = 0.2/2.1 = 0.095238... = 9.5238%. Need answer as percentage. Probably 9.5% or 9.52%. The question asks \"what was the percentage change\" - give value. We'll compute exactly: divide(subtract(2.3,2.1),2.1) = 0.095238... as decimal. But answer should be percentage. Usually they want number like 9.52. We'll provide 9.52%? The instruction says final answer inside tags containing only value itself with no explanation or units unless question asks. It asks percentage change, so include %? Typically they want numeric value. We'll put 9.52. But to be safe, maybe 9.5%? Let's compute: 0.2/2.1 = 0.095238095... = 9.5238%. So answer 9.52. We'll put 9.52. Evidence: \"2.3 billion for 2013\" and \"2.1 billion for 2012\" from Note 12. Also \"Total expense for repairs and maintenance incurred was $2.4 billion for 2014, $2.3 billion for 2013, and $2.1 billion for 2012.\" So evidence lines.\n\nProgram: divide(subtract(2.3, 2.1), 2.1) but figures as printed are \"2.3\" and \"2.1\" (in billions). Use those.\n\nFinal answer inside <answer>9.52</answer>.",
+ "raw_content": "<evidence>2.3 | Total expense for repairs and maintenance incurred was $2.4 billion for 2014, $2.3 billion for 2013, and $2.1 billion for 2012.</evidence>\n<evidence>2.1 | Total expense for repairs and maintenance incurred was $2.4 billion for 2014, $2.3 billion for 2013, and $2.1 billion for 2012.</evidence>\n<program>divide(subtract(2.3, 2.1), 2.1)</program>\n<answer>9.52</answer>",
+ "usage": {
+  "prompt_tokens": 75486,
+  "completion_tokens": 565,
+  "total_tokens": 76051,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 75264
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.53,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "2.3",
+   "element": "Total expense for repairs and maintenance incurred was $2.4 billion for 2014, $2.3 billion for 2013, and $2.1 billion for 2012.",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(subtract(2.3, 2.1), 2.1)",
+ "answer_model": "9.52",
+ "program_value": 0.09523809523809511,
+ "docfinqa_row": 725
+}

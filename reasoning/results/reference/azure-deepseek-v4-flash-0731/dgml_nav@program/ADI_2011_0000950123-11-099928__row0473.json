@@ -1,0 +1,65 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0473",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what is the yearly interest expense incurred from the $ 375 million note with a fixed rate?",
+ "gold": "11.3",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "ADI_2011_0000950123-11-099928.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/NotesToConsolidatedFinancial/FairValue/NotesToFinancial/SeniorNotesThreePercent"
+ ],
+ "r1_reasoning_chars": 6378,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 24725,
+  "completion_tokens": 1644,
+  "total_tokens": 26369,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/NotesToConsolidatedFinancial/FairValue/NotesToFinancial/SeniorNotesThreePercent"
+ ],
+ "content_chars": 1332,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "11.25",
+ "reasoning": "We need answer. Need compute yearly interest expense from $375 million note with fixed rate 3.0%. Yearly interest = principal * rate = 375 million * 3.0% = 11.25 million. Need evidence figures: $375 million, 3.0%. Program multiply(375, 0.03) maybe in millions. Need answer value only.",
+ "raw_content": "<evidence>$375 million | DebtPrincipalAmount\n3.0% | InterestRate</evidence>\n<program>multiply(375, 0.03)</program>\n<answer>11.25</answer>",
+ "r2_usage": {
+  "prompt_tokens": 702,
+  "completion_tokens": 124,
+  "total_tokens": 826,
+  "audio_prompt_tokens": 0
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$375 million",
+   "element": "DebtPrincipalAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "3.0%",
+   "element": "InterestRate",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(375, 0.03)",
+ "answer_model": "11.25",
+ "program_value": 11.25,
+ "elapsed_s": 8.39,
+ "outline_source": "ADI_2011_0000950123-11-099928.outline.txt",
+ "outline_chars": 98954
+}

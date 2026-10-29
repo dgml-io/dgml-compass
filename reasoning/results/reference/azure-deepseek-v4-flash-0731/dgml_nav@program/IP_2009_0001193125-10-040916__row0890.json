@@ -1,0 +1,68 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0890",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "considering the years 2010-2011 , what is the percentual increase observed in the maturities of long-term debt?",
+ "gold": "88.81%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "IP_2009_0001193125-10-040916.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/DebtAndLinesOfCredit/DebtMaturitySchedule"
+ ],
+ "r1_reasoning_chars": 2759,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 33558,
+  "completion_tokens": 696,
+  "total_tokens": 34254,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/DebtAndLinesOfCredit/DebtMaturitySchedule"
+ ],
+ "content_chars": 5528,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "88.815789",
+ "reasoning": "We need percentual increase from 2010 to 2011 in maturities of long-term debt. From first chunk: 2010 – $304 million; 2011 – $574 million. Percent increase = (574-304)/304 * 100. Compute.",
+ "raw_content": "<evidence>\n$304 million | DebtMaturityAmount (2010)\n$574 million | DebtMaturityAmount (2011)\n</evidence>\n<program>multiply(divide(subtract(574, 304), 304), 100)</program>\n<answer>88.8157894736842</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1740,
+  "completion_tokens": 125,
+  "total_tokens": 1865,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$304 million",
+   "element": "DebtMaturityAmount (2010)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$574 million",
+   "element": "DebtMaturityAmount (2011)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(574, 304), 304), 100)",
+ "answer_model": "88.8157894736842",
+ "program_value": 88.81578947368422,
+ "elapsed_s": 5.01,
+ "outline_source": "IP_2009_0001193125-10-040916.outline.txt",
+ "outline_chars": 127828
+}

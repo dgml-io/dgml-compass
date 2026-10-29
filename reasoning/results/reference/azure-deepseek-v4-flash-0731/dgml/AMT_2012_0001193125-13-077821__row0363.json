@@ -1,0 +1,53 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0363",
+ "format": "dgml",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "for the vivo acquisition how many of the allowed towers were actually purchased under the final amended purchase agreement?",
+ "gold": "94%",
+ "finqa_id": "AMT/2012/page_118.pdf-4",
+ "source_page": "page_118",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/dgml/AMT_2012_0001193125-13-077821.dgml.xml",
+ "doc_chars": 945867,
+ "prompt_chars": 946079,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 945867,
+ "original_chars": 945867,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 220539,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 252,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1,692",
+ "reasoning": "We need answer: for Vivo acquisition, how many of allowed towers were actually purchased under final amended purchase agreement. Document: \"Vivo Acquisition—On March 30, 2012, the Company entered into a definitive agreement to purchase up to 1,500 towers from Vivo S.A. (\"Vivo\"). Pursuant to the agreement, on March 30, 2012, the Company purchased 800 communications sites... On June 30, 2012, the Company purchased the remaining 700 communications sites... In addition, the Company and Vivo amended the asset purchase agreement to allow for the acquisition of up to an additional 300 communications sites by the Company, subject to regulatory approval. On August 31, 2012, the Company purchased an additional 192 communications sites from Vivo...\" So total purchased = 800+700+192 = 1692. The question: \"for the vivo acquisition how many of the allowed towers were actually purchased under the final amended purchase agreement?\" Allowed under final amended = up to 1,500 + additional 300 = 1,800. Actually purchased = 1,692. So answer 1,692.",
+ "raw_content": "<answer>1,692</answer>",
+ "usage": {
+  "prompt_tokens": 220687,
+  "completion_tokens": 252,
+  "total_tokens": 220939,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 217088
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.81,
+ "answer_tag_found": true,
+ "docfinqa_row": 363
+}

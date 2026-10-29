@@ -1,0 +1,69 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0021",
+ "format": "markdown_pdf",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "what is the percentage change in the the gross liability for unrecognized tax benefits during 2008 compare to 2007?",
+ "gold": "-30.9%",
+ "finqa_id": "ADBE/2008/page_89.pdf-2",
+ "source_page": "page_89",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf/ADBE_2008_0000796343-09-000007.md",
+ "doc_chars": 450108,
+ "prompt_chars": 450312,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 450108,
+ "original_chars": 450108,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 99248,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 727,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-30.8506%",
+ "reasoning": "We need answer percentage change in gross liability for unrecognized tax benefits during 2008 compare to 2007. Need figures. Document: Note 8 Summary FIN 48 Changes: Beginning balance as of December 1, 2007 $201,808 (in thousands). Ending balance as of November 28, 2008 $139,549. Also text says gross liability at Nov 28 2008 was $139.5 million, exclusive of interest and penalties. At adoption Dec 1 2007 gross liability was $218.4 million? Wait careful: \"Upon adoption, the gross liability for unrecognized tax benefits at December 1, 2007 was $218.4 million, exclusive of interest and penalties.\" But then Summary FIN 48 Changes table shows Beginning balance as of December 1, 2007 $201,808. There is discrepancy? Let's read. Note 8: \"The adoption of FIN 48 resulted in an increase of $3.9 million to both assets and unrecognized tax benefits... Upon adoption, the gross liability for unrecognized tax benefits at December 1, 2007 was $218.4 million, exclusive of interest and penalties. The total amount of gross FIN 48 liabilities included $57.7 million that relates to certain tax attributes from acquired companies... These liabilities from acquired companies are not recorded on our balance sheet because they are related to positions that have not yet been claimed on our income tax returns.\" Then \"Summary FIN 48 Changes\" table: Beginning balance as of December 1, 2007 $201,808. Ending balance $139,549. So the gross liability for unrecognized tax benefits in the rollforward is $201,808 beginning and $139,549 ending. The question: \"percentage change in the gross liability for unrecognized tax benefits during 2008 compare to 2007?\" Likely compare ending 2008 to beginning 2007? \"during 2008 compare to 2007\" means change from 2007 to 2008. Use beginning balance Dec 1 2007 (fiscal 2007 end? Actually fiscal 2007 ended Nov 30, 2007, so beginning of fiscal 2008 is Dec 1, 2007). So change = (139,549 - 201,808)/201,808 = -62,259/201,808 = -0.3085 = -30.85%. Need compute. Use figures as printed: 139,549 and 201,808. Program: divide(subtract(139549, 201808), 201808). Answer percentage change -30.85% (or -30.9%). Need evidence: value | element. Element names? The table \"Summary FIN 48 Changes\" has rows. Use \"Beginning balance as of December 1, 2007\" and \"Ending balance as of November 28, 2008\". Also maybe \"gross liability for unrecognized tax benefits at November 28, 2008 was $139.5 million\" but use exact numbers. Final answer inside tags only value.",
+ "raw_content": "<evidence>\n201,808 | Beginning balance as of December 1, 2007 (Summary FIN 48 Changes)\n139,549 | Ending balance as of November 28, 2008 (Summary FIN 48 Changes)\n</evidence>\n\n<program>\ndivide(subtract(139549, 201808), 201808)\n</program>\n\n<answer>-30.85%</answer>",
+ "usage": {
+  "prompt_tokens": 99560,
+  "completion_tokens": 727,
+  "total_tokens": 100287,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 14.34,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "201,808",
+   "element": "Beginning balance as of December 1, 2007 (Summary FIN 48 Changes)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "139,549",
+   "element": "Ending balance as of November 28, 2008 (Summary FIN 48 Changes)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(139549, 201808), 201808)",
+ "answer_model": "-30.85%",
+ "program_value": -0.308506104812495,
+ "docfinqa_row": 21
+}

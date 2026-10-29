@@ -1,0 +1,38 @@
+# dgml-compass settings profile. Use it with `dgc --profile local.yaml <command>`.
+# local.yaml is gitignored; the committed template is conf/profiles/local.example.yaml.
+#
+# Where each setting can come from, highest priority first:
+#   1. command-line flags        --runs-dir, --corpus-root, --work-dir, --budget-usd (plan/run)
+#   2. environment variables     DGC_<SETTING>, e.g. DGC_RUNS_DIR -- including those in .env
+#   3. this profile
+#   4. built-in defaults         see README.md
+# Unknown keys are an error. Relative paths resolve against the directory you run dgc from,
+# so prefer ~ or absolute paths. API keys do NOT go here: put them in .env (see .env.example).
+
+# dgml checkout that `dgc run` calls (`uv run dgml ...` inside it). Defaults to a dgml
+# checkout beside this repo (../../dgml from models/).
+# dgml_repo: ~/src/dgml
+
+# The corpus. Defaults to the bundled data/corpus; commit any other corpus before a
+# paid run (or pass --allow-dirty-corpus).
+# corpus_root: ~/src/my-corpus
+
+# Per-model token prices for plan estimates and the budget cap. Defaults to
+# conf/prices.yaml.
+# prices_file: ~/src/my-prices.yaml
+
+# One directory per run: manifest, cells, results, stored DGML, metrics/, grid/, report/.
+runs_dir: ~/compass-runs
+
+# dgml workspaces (OCR page text, usage.jsonl). Reference-free and economics scoring read
+# them, so keep this as long as you may re-score.
+work_dir: ~/compass-runs/.work
+
+# Draws generated at once (per-provider rate limits apply), and documents dgml transcribes at
+# once within a draw (`docset generate --max-parallel-calls`; a document's windows stay serial).
+max_parallel_cells: 4
+max_parallel_calls: 8
+
+# Hard spending cap in USD for one `dgc run`; the run stops submitting when reached.
+# A spec's budget_usd overrides it, and --budget-usd overrides both.
+budget_usd: 25

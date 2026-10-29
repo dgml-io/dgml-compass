@@ -1,0 +1,668 @@
+<title>Model Compass Field Guide</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: sticky section index on the left, one reading column; the pipeline strip is the interactive spine that every other section links back to. */
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --sunk:#eceef3; --line:#d7dbe4;
+  --fg:#18202c; --muted:#5a6475; --accent:#2b4fa8; --accent-soft:#e3e9f7;
+  --brass:#9a6a1c; --brass-soft:#f5ead6;
+  --ok:#2c7a4b; --warn:#a35d00; --bad:#b3261e;
+  --code-bg:#1b2230; --code-fg:#e4e8f0; --code-dim:#8b95a8; --code-key:#9fb7f2;
+  --display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
+  --body:"Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --r:6px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12161d; --surface:#1a2029; --sunk:#151a22; --line:#2c3441;
+  --fg:#e5e9f0; --muted:#9aa4b5; --accent:#8fa9ec; --accent-soft:#223152;
+  --brass:#d9a85a; --brass-soft:#3a2e1a;
+  --ok:#6cc790; --warn:#e3a14a; --bad:#f08077;
+  --code-bg:#0c1016; --code-fg:#e4e8f0; --code-dim:#7d889b; --code-key:#9fb7f2;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12161d; --surface:#1a2029; --sunk:#151a22; --line:#2c3441;
+  --fg:#e5e9f0; --muted:#9aa4b5; --accent:#8fa9ec; --accent-soft:#223152;
+  --brass:#d9a85a; --brass-soft:#3a2e1a;
+  --ok:#6cc790; --warn:#e3a14a; --bad:#f08077;
+  --code-bg:#0c1016; --code-fg:#e4e8f0; --code-dim:#7d889b; --code-key:#9fb7f2;
+  color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.55;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:0}
+.shell{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:200px minmax(0,1fr);gap:48px}
+nav.index{position:sticky;top:env(safe-area-inset-top, 0px);align-self:start;padding-top:40px;font-size:14px}
+nav.index a{display:block;color:var(--muted);text-decoration:none;padding:5px 0 5px 12px;border-left:2px solid var(--line)}
+nav.index a:hover,nav.index a:focus-visible{color:var(--fg);border-left-color:var(--accent)}
+nav.index .tag{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--brass);margin-bottom:10px;display:block}
+main{min-width:0;padding-block:40px 80px}
+section{padding-top:56px}
+section:first-child{padding-top:0}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.15;margin:0}
+h1{font-size:clamp(34px,5vw,52px);font-weight:700;letter-spacing:-.01em}
+h2{font-size:28px;font-weight:700;margin-bottom:8px}
+h3{font-size:19px;font-weight:600}
+p{margin:0;max-width:68ch}
+.lede{font-size:19px;color:var(--muted);margin-top:14px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--brass)}
+.sub{color:var(--muted);margin-bottom:24px}
+code,kbd{font-family:var(--mono);font-size:.86em}
+:not(pre)>code{background:var(--sunk);border:1px solid var(--line);padding:1px 5px;border-radius:4px;overflow-wrap:anywhere}
+a{color:var(--accent)}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* facts row */
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:28px}
+.facts div{background:var(--surface);padding:14px 16px;min-width:0}
+.facts dt{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.facts dd{margin:4px 0 0;font-family:var(--mono);font-size:15px;font-weight:600;overflow-wrap:anywhere}
+
+/* code blocks */
+.code{position:relative;background:var(--code-bg);color:var(--code-fg);border-radius:var(--r);margin-top:12px}
+.code pre{margin:0;padding:16px 18px;overflow-x:auto;font-family:var(--mono);font-size:13.5px;line-height:1.6}
+.code .c{color:var(--code-dim)}
+.code .k{color:var(--code-key)}
+.copy{position:absolute;top:8px;right:8px;background:transparent;color:var(--code-dim);border:1px solid #3a4456;border-radius:4px;font-family:var(--mono);font-size:11px;padding:3px 8px}
+.copy:hover{color:var(--code-fg);border-color:var(--code-dim)}
+
+/* tabs */
+.tabs{display:flex;flex-wrap:wrap;gap:4px;border-bottom:1px solid var(--line);margin-top:8px}
+.tabs button{background:none;border:0;border-bottom:2px solid transparent;padding:8px 12px;color:var(--muted);font-weight:600;font-size:15px;margin-bottom:-1px}
+.tabs button[aria-selected="true"]{color:var(--fg);border-bottom-color:var(--accent)}
+.steps{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:22px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:32px minmax(0,1fr);gap:14px;counter-increment:s}
+.steps li::before{content:counter(s);font-family:var(--mono);font-weight:600;font-size:13px;width:28px;height:28px;border-radius:50%;border:1px solid var(--accent);color:var(--accent);display:grid;place-items:center;margin-top:2px}
+.steps h3{font-size:17px}
+.steps p{color:var(--muted);font-size:15.5px;margin-top:2px}
+
+/* pipeline */
+.pipe{display:flex;flex-wrap:wrap;gap:0;margin-top:20px;align-items:stretch}
+.stage{position:relative;flex:1 1 120px;min-width:0;background:var(--surface);border:1px solid var(--line);padding:12px 12px 10px;text-align:left;color:var(--fg);margin:0 18px 10px 0;border-radius:var(--r)}
+.stage::after{content:"";position:absolute;right:-15px;top:50%;width:12px;height:2px;background:var(--line)}
+.stage:last-child::after{display:none}
+.stage .n{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.stage .t{font-family:var(--display);font-weight:700;font-size:17px;display:block;margin-top:2px}
+.stage .cmd{font-family:var(--mono);font-size:11.5px;color:var(--muted);display:block;margin-top:2px;overflow-wrap:anywhere}
+.stage.opt{border-style:dashed}
+.stage:hover{border-color:var(--accent)}
+.stage[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent)}
+.stage[aria-pressed="true"] .cmd{color:var(--accent)}
+.legend{display:flex;flex-wrap:wrap;gap:18px;font-size:13px;color:var(--muted);margin-top:4px}
+.legend span::before{content:"";display:inline-block;width:18px;height:10px;border:1px solid var(--muted);border-radius:2px;margin-right:6px;vertical-align:-1px}
+.legend .d::before{border-style:dashed}
+
+.detail{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px;margin-top:8px}
+.detail header{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:baseline;justify-content:space-between}
+.detail h3{font-size:24px}
+.cost{font-family:var(--mono);font-size:12px;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.cost.free{background:var(--accent-soft);color:var(--accent)}
+.cost.paid{background:var(--brass-soft);color:var(--brass)}
+.cols{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:28px;margin-top:18px}
+.detail h4{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:18px 0 6px;font-weight:600}
+.detail h4:first-child{margin-top:0}
+.detail ul{margin:0;padding-left:18px;font-size:15.5px}
+.detail li{margin:4px 0}
+.io{display:flex;flex-wrap:wrap;gap:6px}
+.io code{font-size:12.5px}
+.flags{width:100%;border-collapse:collapse;font-size:14.5px}
+.flags td{border-top:1px solid var(--line);padding:6px 8px 6px 0;vertical-align:top}
+.flags td:first-child{font-family:var(--mono);font-size:12.5px;white-space:nowrap;color:var(--accent)}
+.note{margin-top:16px;padding:10px 14px;background:var(--brass-soft);border-radius:4px;font-size:15px;max-width:none}
+
+/* command builder */
+.builder{display:grid;grid-template-columns:minmax(0,280px) minmax(0,1fr);gap:24px;margin-top:20px;align-items:start}
+.form{display:grid;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.form label{font-size:13px;font-weight:600;color:var(--muted);display:grid;gap:4px}
+select,input[type=text]{font:inherit;font-size:14px;font-family:var(--mono);padding:7px 9px;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--fg);width:100%;min-width:0}
+.check{display:flex!important;flex-direction:row;gap:8px;align-items:center;font-weight:400!important;color:var(--fg)!important;font-size:14.5px!important}
+.specnote{font-size:13.5px;color:var(--muted)}
+.builder .code{margin-top:0}
+
+/* run dir */
+.rundir{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;margin-top:20px;align-items:start}
+.tree{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 0;font-family:var(--mono);font-size:13px;overflow-x:auto}
+.tree button{display:flex;gap:8px;align-items:center;width:100%;background:none;border:0;text-align:left;color:var(--fg);padding:3px 14px;white-space:nowrap;font-family:var(--mono);font-size:13px}
+.tree button:hover{background:var(--sunk)}
+.tree button[aria-pressed="true"]{background:var(--accent-soft)}
+.tree .dir{color:var(--muted)}
+.tree .who{margin-left:auto;font-size:10.5px;color:var(--muted);padding-left:12px}
+.tree button.hit .who{color:var(--accent);font-weight:600}
+.tree button.hit{box-shadow:inset 3px 0 0 var(--accent)}
+.fileinfo{position:sticky;top:calc(env(safe-area-inset-top, 0px) + 16px);background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.fileinfo h3{font-family:var(--mono);font-size:15px;overflow-wrap:anywhere}
+.fileinfo p{font-size:15.5px;margin-top:8px}
+.fileinfo .by{font-size:13px;color:var(--muted);margin-top:12px}
+
+/* metrics */
+.fam{margin-top:16px}
+.famhead{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline}
+.scale{font-family:var(--mono);font-size:12px;padding:2px 8px;border-radius:99px;background:var(--sunk);border:1px solid var(--line)}
+.mgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:16px}
+.mcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;min-width:0}
+.mcard h3{font-size:16px}
+.mcard p,.mcard li{font-size:15px}
+.mcard ul{margin:6px 0 0;padding-left:18px}
+.mcard code{font-size:12px}
+.formula{font-family:var(--mono);font-size:12.5px;background:var(--sunk);padding:8px 10px;border-radius:4px;margin-top:8px;overflow-x:auto;white-space:pre}
+
+/* config */
+.ladder{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:6px;max-width:640px}
+.ladder li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:9px 12px;font-size:15px}
+.ladder li span:first-child{font-family:var(--mono);font-weight:600;color:var(--accent)}
+.tablewrap{overflow-x:auto;margin-top:16px;border:1px solid var(--line);border-radius:var(--r);background:var(--surface)}
+table.data{border-collapse:collapse;width:100%;font-size:14.5px;font-variant-numeric:tabular-nums}
+table.data th{text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+table.data td{padding:8px 12px;border-top:1px solid var(--line);vertical-align:top}
+table.data td code{font-size:12px;white-space:nowrap}
+table.data td.num{text-align:right;font-family:var(--mono);font-size:13px}
+
+/* modules */
+.mods{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:20px}
+.mod{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;min-width:0}
+.mod h3{font-family:var(--mono);font-size:14px}
+.mod p{font-size:14.5px;color:var(--muted);margin-top:4px}
+.mod ul{list-style:none;padding:0;margin:10px 0 0;font-size:13.5px}
+.mod li{padding:3px 0;border-top:1px dashed var(--line)}
+.mod li code{background:none;border:0;padding:0;color:var(--accent)}
+.mod button.stagelink{background:none;border:0;padding:0;color:var(--brass);font-size:12px;font-family:var(--mono);margin-top:10px}
+
+.bugs{counter-reset:b;list-style:none;padding:0;margin:16px 0 0;display:grid;gap:8px}
+.bugs li{counter-increment:b;display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;font-size:15px}
+.bugs li::before{content:counter(b);font-family:var(--mono);font-size:12px;color:var(--warn);font-weight:600;padding-top:2px}
+.exit{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:16px}
+.exit div{border:1px solid var(--line);border-radius:4px;padding:10px 12px;background:var(--surface);font-size:14px}
+.exit b{font-family:var(--mono);font-size:20px;display:block}
+.exit .e0 b{color:var(--ok)} .exit .e1 b{color:var(--bad)} .exit .e2 b{color:var(--warn)} .exit .e3 b{color:var(--brass)}
+
+@media (max-width: 900px){
+  .shell{grid-template-columns:minmax(0,1fr);gap:0}
+  nav.index{position:static;padding-top:24px;display:flex;flex-wrap:wrap;gap:4px 14px}
+  nav.index .tag{width:100%}
+  nav.index a{border-left:0;padding:2px 0}
+  .cols,.builder,.rundir,.mgrid{grid-template-columns:minmax(0,1fr)}
+  .mods{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fileinfo{position:static}
+}
+@media (max-width: 560px){
+  .facts,.exit{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mods{grid-template-columns:minmax(0,1fr)}
+  .stage{flex-basis:40%}
+  .detail{padding:18px}
+}
+@media (prefers-reduced-motion: no-preference){
+  .detail,.fileinfo{transition:border-color .2s}
+}
+</style>
+
+<div class="shell">
+<nav class="index" aria-label="Sections">
+  <span class="tag">models/ · dgc</span>
+  <a href="#overview">Overview</a>
+  <a href="#quickstart">Quickstart</a>
+  <a href="#workflow">Workflow</a>
+  <a href="#builder">Command builder</a>
+  <a href="#rundir">Run directory</a>
+  <a href="#metrics">Metrics</a>
+  <a href="#config">Configuration</a>
+  <a href="#specs">Sweeps</a>
+  <a href="#package">Package map</a>
+  <a href="#parity">Tests &amp; parity</a>
+</nav>
+
+<main>
+<section id="overview">
+  <span class="eyebrow">dgml-compass / models</span>
+  <h1>Model Compass field guide</h1>
+  <p class="lede">The <code>models/</code> folder holds the Model Compass experiment pipeline. It runs dgml over the reference corpus with different models in the transcribe and label slots, scores the DGML that comes out, and packages the evidence for <code>model-compass-proto</code>, which fits the registry tiers. It replaces <code>model-compass-automation</code> and reproduces its numbers.</p>
+  <dl class="facts">
+    <div><dt>Distribution</dt><dd>dgml-model-compass</dd></div>
+    <div><dt>Import</dt><dd>model_compass</dd></div>
+    <div><dt>Command</dt><dd>uv run dgc</dd></div>
+    <div><dt>Python</dt><dd>3.12 · uv project</dd></div>
+  </dl>
+  <p style="margin-top:20px">One experiment is a <b>spec</b> (YAML). A spec crosses its <b>axes</b> (for example the label model) with the selected <b>docsets</b>; each combination is a <b>cell</b>, and each cell is repeated as <b>draws</b>. A draw is one dgml generation over a small document sample, and everything downstream is measured per cell, docset and draw.</p>
+</section>
+
+<section id="quickstart">
+  <h2>Quickstart</h2>
+  <p class="sub">Every command runs from <code>models/</code>. Nothing here spends money until you pass <code>--yes</code> to <code>dgc run</code>.</p>
+  <div class="tabs" role="tablist" id="qsTabs">
+    <button role="tab" aria-selected="true" data-qs="setup">First setup</button>
+    <button role="tab" aria-selected="false" data-qs="smoke">Smoke test ($0)</button>
+    <button role="tab" aria-selected="false" data-qs="sweep">A real sweep</button>
+    <button role="tab" aria-selected="false" data-qs="recover">Resume &amp; reuse</button>
+  </div>
+  <div id="qsBody"></div>
+</section>
+
+<section id="workflow">
+  <h2>The pipeline</h2>
+  <p class="sub">Select a stage to see what it reads, what it writes and the rules it follows. The files each stage writes are also highlighted in the <a href="#rundir">run directory</a> below.</p>
+  <div class="pipe" id="pipe" role="group" aria-label="Pipeline stages"></div>
+  <div class="legend"><span>main path</span><span class="d">optional or alternative</span></div>
+  <div class="detail" id="detail" aria-live="polite"></div>
+</section>
+
+<section id="builder">
+  <h2>Command builder</h2>
+  <p class="sub">Pick a sweep and the options; the full sequence updates below and can be copied in one go.</p>
+  <div class="builder">
+    <div class="form">
+      <label for="bSpec">Spec
+        <select id="bSpec"></select>
+      </label>
+      <p class="specnote" id="bSpecNote"></p>
+      <label for="bRun">Run id (after <code>dgc run</code> prints it)
+        <input type="text" id="bRun" value="&lt;run_id&gt;" spellcheck="false">
+      </label>
+      <label class="check"><input type="checkbox" id="bProfile" checked> Use <code>--profile local.yaml</code></label>
+      <label class="check"><input type="checkbox" id="bDry" checked> Dry-run first</label>
+      <label class="check"><input type="checkbox" id="bHandoff"> Add the handoff step</label>
+    </div>
+    <div class="code"><button class="copy" data-copy="bOut">copy</button><pre id="bOut"></pre></div>
+  </div>
+</section>
+
+<section id="rundir">
+  <h2>Run directory</h2>
+  <p class="sub">Every <code>dgc run</code> writes one directory under <code>runs_dir</code>, named <code>YYYYMMDD-HHMMSS-&lt;hash&gt;</code>. The layout is the same as the source's, so runs made by <code>model-compass-automation</code> load unchanged. Select a file to see what it holds.</p>
+  <div class="rundir">
+    <div class="tree" id="tree" role="group" aria-label="Run directory files"></div>
+    <div class="fileinfo" id="fileinfo" aria-live="polite"></div>
+  </div>
+</section>
+
+<section id="metrics">
+  <h2>Metric families</h2>
+  <p class="sub">One record per (cell, docset, draw, family) in <code>metrics/&lt;cell_id&gt;.jsonl</code>. <b>Absent is not zero:</b> a metric that cannot be computed is listed in <code>absent</code> and has no value. Scales differ by family.</p>
+  <div class="tabs" role="tablist" id="famTabs"></div>
+  <div id="famBody" class="fam"></div>
+</section>
+
+<section id="config">
+  <h2>Configuration</h2>
+  <p class="sub">API keys live in <code>.env</code>; paths, parallelism and budget live in <code>local.yaml</code>. Both are gitignored, and templates are committed (<code>.env.example</code>, <code>conf/profiles/local.example.yaml</code>).</p>
+  <h3>Which value wins</h3>
+  <ol class="ladder">
+    <li><span>1</span><span>Command-line flags: <code>--runs-dir</code>, <code>--corpus-root</code>, <code>--work-dir</code>, and <code>--budget-usd</code> on <code>plan</code> and <code>run</code></span></li>
+    <li><span>2</span><span><code>DGC_&lt;SETTING&gt;</code> environment variables. A variable set in the shell beats the same one in <code>.env</code></span></li>
+    <li><span>3</span><span>The profile passed with <code>--profile local.yaml</code></span></li>
+    <li><span>4</span><span>Built-in defaults, which assume sibling checkouts in <code>~/src/dgmlio</code></span></li>
+  </ol>
+  <p style="margin-top:14px;font-size:15.5px;color:var(--muted)"><code>dgc</code> reads <code>./.env</code>, then <code>models/.env</code>, or only the file given with <code>--env-file</code>. It never overrides a variable that is already set, and it ignores empty values. With <code>-v</code> it logs the names it loaded, never the values.</p>
+  <div class="tablewrap">
+    <table class="data">
+      <thead><tr><th>local.yaml</th><th>Environment</th><th>Default</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td><code>dgml_repo</code></td><td><code>DGC_DGML_REPO</code></td><td><code>../dgml-1</code></td><td>dgml checkout; <code>dgc run</code> calls <code>uv run dgml</code> inside it</td></tr>
+        <tr><td><code>corpus_root</code></td><td><code>DGC_CORPUS_ROOT</code></td><td><code>../dgml_reference_data</code></td><td>Reference corpus. Commit it before a paid run, or pass <code>--allow-dirty-corpus</code></td></tr>
+        <tr><td><code>proto_repo</code></td><td><code>DGC_PROTO_REPO</code></td><td><code>../model-compass-proto</code></td><td>Read for model prices when planning; never written</td></tr>
+        <tr><td><code>runs_dir</code></td><td><code>DGC_RUNS_DIR</code></td><td><code>./runs</code></td><td>One directory per run; <code>-r</code> takes a run id here or any run path</td></tr>
+        <tr><td><code>work_dir</code></td><td><code>DGC_WORK_DIR</code></td><td><code>./.dgc/work</code></td><td>dgml workspaces (OCR, usage logs), needed to re-score reference-free and economics</td></tr>
+        <tr><td><code>max_parallel_cells</code></td><td><code>DGC_MAX_PARALLEL_CELLS</code></td><td class="num">4</td><td>Draws in flight, and the default for <code>score --workers</code></td></tr>
+        <tr><td><code>max_parallel_calls</code></td><td><code>DGC_MAX_PARALLEL_CALLS</code></td><td class="num">8</td><td>Documents dgml transcribes at once within a draw (<code>docset generate --max-parallel-calls</code>); a document's windows stay serial</td></tr>
+        <tr><td><code>budget_usd</code></td><td><code>DGC_BUDGET_USD</code></td><td class="num">25</td><td>Hard cap per <code>dgc run</code>. A spec's <code>budget_usd</code> beats it; the flag beats both</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h3 style="margin-top:28px">API keys</h3>
+  <p style="margin-top:6px;font-size:15.5px">dgml reads the keys itself; <code>dgc</code> only loads <code>.env</code> so dgml inherits it. You need keys only for the providers a spec uses: <code>ANTHROPIC_API_KEY</code> for <code>anthropic/claude-*</code>, <code>GEMINI_API_KEY</code> for <code>gemini/gemini-*</code>, <code>OPENAI_API_KEY</code> for <code>openai/gpt-*</code>. A missing key or empty credit makes those draws come back with no DGML; fix the key and run <code>dgc run --resume &lt;run_id&gt; --retry-empty --yes</code>.</p>
+</section>
+
+<section id="specs">
+  <h2>Sweeps</h2>
+  <p class="sub">Specs live in <code>specs/</code>. The current sweeps share one shape: the 15 gold docsets of orgs <code>z4ervk9ic0oo</code> (8) and <code>vlmh2bxtvkaa</code> (7) plus <code>correspondence/EmailBody</code>, 6 documents per docset, fixed sampling, 3 draws, seed 20260917, and <code>schema_tier: none</code>, <code>window_size: 10</code>, <code>text_mode: digital</code>.</p>
+  <div class="tablewrap">
+    <table class="data">
+      <thead><tr><th>Spec</th><th>Varies</th><th>Held</th><th>Plan ($)</th></tr></thead>
+      <tbody id="specRows"></tbody>
+    </table>
+  </div>
+  <p style="margin-top:12px;font-size:14.5px;color:var(--muted)">Plan figures are <code>dgc plan</code> on 2026-10-15 with proto's registry prices. The registry estimate is a floor; observed spend has been about 3× it. Archived Haiku 4.5 sweeps are in <code>specs/archive/haiku45/</code>, and the EmailBody transcriber specs (one per transcriber, 10 documents, <code>require_gold: true</code>) are in <code>specs/emailbody/</code>.</p>
+</section>
+
+<section id="package">
+  <h2>Package map</h2>
+  <p class="sub"><code>src/model_compass/</code>, by folder. Each card names the stage it serves; select the link to jump to that stage.</p>
+  <div class="mods" id="mods"></div>
+</section>
+
+<section id="parity">
+  <h2>Tests &amp; parity</h2>
+  <p class="sub">Parity with the source is the gate. Goldens are produced by running the source code read-only on copies of real runs (<code>scripts/make_golden_*.py</code>), and the tests compare against them.</p>
+  <div class="mgrid">
+    <div class="mcard"><h3>What is held equal</h3><ul>
+      <li>Scoring records on 4 real draws, to 1e-9</li>
+      <li><code>compass_grid.csv</code> byte-identical, plus the appended role-price columns</li>
+      <li>Handoff pack byte-identical</li>
+      <li>Planner output (cells, draws, prices) for all kept specs</li>
+      <li>All 36 source runs parse</li>
+    </ul></div>
+    <div class="mcard"><h3>Running them</h3>
+      <div class="code"><button class="copy" data-copy="testCmd">copy</button><pre id="testCmd">uv run pytest            <span class="c"># `corpus` tests skip without ../dgml_reference_data</span>
+uv run ruff format . &amp;&amp; uv run ruff check .</pre></div>
+      <p style="margin-top:10px;font-size:14.5px">A change that moves a number must say why in <code>docs/DECISIONS.md</code> and regenerate the goldens.</p>
+    </div>
+  </div>
+  <h3 style="margin-top:28px">Source behaviours kept for parity</h3>
+  <p style="margin-top:6px;font-size:15.5px;color:var(--muted)">These are known bugs in the source. Each is reproduced on purpose and pinned by a strict xfail test, so fixing one is a deliberate, recorded change (see <code>docs/CUTOVER.md</code>).</p>
+  <ol class="bugs">
+    <li><span><code>complex_*</code> extraction scores come out as zeros.</span></li>
+    <li><span><code>n_orphan_gold</code> counts documents the draw never sampled.</span></li>
+    <li><span>The label-model check reads <code>config.json</code> instead of <code>config.toml</code>.</span></li>
+    <li><span><code>missing_dgml_rate</code> is 0–1 in extraction but 0–100 in economics.</span></li>
+    <li><span>Resuming a run rewrites <code>events.jsonl</code>.</span></li>
+    <li><span>On resume, earlier draws are counted at $0.</span></li>
+    <li><span>The grid keys rows by label model first, so transcriber sweeps pool transcribers.</span></li>
+    <li><span><code>n_documents</code> is counted three times (per family), and so is report cost.</span></li>
+    <li><span>Archived legacy <code>.superseded-*</code> workspaces are imported.</span></li>
+    <li><span>The features named in SPEC §6.4 do not exist.</span></li>
+  </ol>
+  <h3 style="margin-top:28px">Exit codes</h3>
+  <div class="exit">
+    <div class="e0"><b>0</b>ok</div>
+    <div class="e1"><b>1</b>error</div>
+    <div class="e2"><b>2</b>findings: incomparable rows, a regression, corpus errors, nothing scored</div>
+    <div class="e3"><b>3</b>budget exceeded</div>
+  </div>
+</section>
+</main>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+function shell(src){ // highlight comments and the dgc verb
+  return src.split("\n").map(l=>{
+    const i=l.indexOf("#"); let a=l,b="";
+    if(i>=0 && (i===0||l[i-1]===" ")){a=l.slice(0,i);b=l.slice(i);}
+    a=esc(a).replace(/\b(dgc|uv|cp|cd)\b/g,'<span class="k">$1</span>');
+    return a+(b?'<span class="c">'+esc(b)+'</span>':"");
+  }).join("\n");
+}
+function codeBlock(src,id){return `<div class="code"><button class="copy" data-copy="${id}">copy</button><pre id="${id}">${shell(src)}</pre></div>`;}
+document.addEventListener("click",e=>{
+  const b=e.target.closest(".copy"); if(!b) return;
+  const pre=document.getElementById(b.dataset.copy); const text=pre.innerText;
+  const done=()=>{b.textContent="copied";setTimeout(()=>b.textContent="copy",1400)};
+  try{navigator.clipboard.writeText(text).then(done,()=>sel(pre));}catch(_){sel(pre)}
+});
+function sel(el){const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);}
+
+/* ---------- quickstart ---------- */
+const QS={
+ setup:[
+  ["Install","Python 3.12 and uv. This installs model_compass and the dgc command into models/.venv. Re-run it after pulling, and after the folder move from model-compass/ to models/.",
+   "cd dgml-compass/models\nuv sync\nuv run dgc --help"],
+  ["Add your API keys","Fill in the providers your specs use. Blank placeholders are ignored.",
+   "cp .env.example .env              # then edit: ANTHROPIC_API_KEY, GEMINI_API_KEY, OPENAI_API_KEY"],
+  ["Point at your checkouts","Paths to dgml-1, the reference corpus, proto and where runs go.",
+   "cp conf/profiles/local.example.yaml local.yaml   # then edit the paths"],
+  ["Check the corpus","Error findings stop paid runs, so check before planning anything.",
+   "uv run dgc -v --profile local.yaml corpus check"]],
+ smoke:[
+  ["Dry-run the rehearsal","The one spec that works on a clean clone. It uses the mini corpus committed in the tests, so it needs no corpus checkout, no keys and no spend.",
+   "DGC_CORPUS_ROOT=tests/fixtures/mini_corpus \\\n  uv run dgc run -e specs/rehearsal.yaml --dry-run"],
+  ["Look at what it wrote","A dry run writes a full run directory with cost estimates in place of results.",
+   "ls runs/                          # newest directory is the rehearsal\ncat runs/<run_id>/manifest.json"],
+  ["Run the tests","The whole suite runs offline.",
+   "uv run pytest && uv run ruff check ."]],
+ sweep:[
+  ["Price it","Cells × draws, each priced from proto's registry. An unpriced model is named, never priced at zero.",
+   "uv run dgc --profile local.yaml plan -e specs/compass-label-haiku55.yaml"],
+  ["Dry-run it","Writes the run directory with estimates and spends $0.",
+   "uv run dgc --profile local.yaml run -e specs/compass-label-haiku55.yaml --dry-run"],
+  ["Run it (paid)","Runs every draw under the budget cap. The command prints the run id.",
+   "uv run dgc --profile local.yaml run -e specs/compass-label-haiku55.yaml --yes"],
+  ["Score, aggregate, report","Metrics per draw, then the grid and its validity gates, then a Markdown report.",
+   "uv run dgc --profile local.yaml score     -r <run_id>\nuv run dgc --profile local.yaml aggregate -r <run_id>\nuv run dgc --profile local.yaml report    -r <run_id>"],
+  ["Hand off to proto","Build the evidence pack from the transcribe and label runs.",
+   "uv run dgc --profile local.yaml handoff -c conf/handoff/compass-haiku55.yaml \\\n    -r <transcribe_run> -r <label_run> -o handoff/$(date +%Y%m%d)"]],
+ recover:[
+  ["Finish an interrupted run","Executes only the draws that are missing.",
+   "uv run dgc run -e SPEC --resume <run_id> --yes"],
+  ["Re-run draws that produced no DGML","Typically after a provider key ran out of credit.",
+   "uv run dgc run -e SPEC --resume <run_id> --retry-empty --yes"],
+  ["Reuse paid draws from an earlier run","Seeds draw 00 of a new run, but only for cells whose documents match.",
+   "uv run dgc adopt -e SPEC --from <earlier_run_id> --dry-run\nuv run dgc adopt -e SPEC --from <earlier_run_id>\nuv run dgc run   -e SPEC --resume <new_run_id> --yes"],
+  ["Re-score without starting over","Keeps metric files that are already complete.",
+   "uv run dgc score -r <run_id> --resume --workers 4"]]
+};
+function renderQS(key){
+  $("#qsBody").innerHTML='<ol class="steps">'+QS[key].map((s,i)=>
+    `<li><div style="min-width:0"><h3>${s[0]}</h3><p>${s[1]}</p>${codeBlock(s[2],"qs-"+key+i)}</div></li>`).join("")+"</ol>";
+}
+$("#qsTabs").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
+  [...$("#qsTabs").children].forEach(x=>x.setAttribute("aria-selected",x===b));renderQS(b.dataset.qs);});
+renderQS("setup");
+
+/* ---------- pipeline ---------- */
+const STAGES=[
+ {id:"check",t:"Check",cmd:"corpus check",paid:false,
+  sum:"Validate the reference corpus before anything is planned.",
+  does:["Loads every docset under corpus_root with its gold references (*.ref.json, complex_ref.json, gold DGML).","Reports integrity findings with stable codes at three levels: ERROR, WARN, INFO. Nothing raises: a flawed corpus is the corpus we have.","Any ERROR exits 2, and paid runs refuse to start on a corpus with errors.","Paid runs also need the corpus and proto checkouts committed. --allow-dirty-corpus overrides that, and the run's provenance records the dirt."],
+  reads:["corpus_root","conf/corpus/shapes.yaml"],writes:["stdout only"],
+  flags:[["--dry-run","show what would be checked"]],
+  mods:["corpus/check.py","corpus/loader.py","corpus/refs.py","corpus/shapes.py"]},
+ {id:"plan",t:"Plan",cmd:"plan -e SPEC",paid:false,
+  sum:"Turn a spec into a priced, reviewable list of cells and draws.",
+  does:["Loads the spec (experiments/spec.py). Field names match the source, so old specs and run directories load.","Selects docsets with the corpus selector and crosses them with the axes. Each combination is a cell.","A cell id is a hash of org, docset, settings and seed only (prefix mca.cell.v1), so rewording a description or adding draws keeps the same cell.","Names every dropped docset or finished cell, and why.","Prices each draw from proto's registry.yaml with cost-model constants vendored from proto's costs.py; a test fails if they drift. An unpriced model is named, never priced at zero.","Several -e flags plan several specs together."],
+  reads:["spec YAML","corpus_root","proto_repo/registry.yaml"],writes:["stdout only"],
+  flags:[["-e SPEC","spec file, repeatable"],["--budget-usd","override the cap"],["--dry-run","same output; plan never spends"]],
+  mods:["experiments/spec.py","experiments/cells.py","experiments/plan.py","corpus/selector.py","corpus/sampling.py"],
+  note:"The registry estimate is a floor. Observed spend has been about 3× it."},
+ {id:"run",t:"Run",cmd:"run -e SPEC --yes",paid:true,
+  sum:"Execute every draw with dgml and leave a record that can be trusted.",
+  does:["The draw is the unit of execution. Each draw gets its own workspace under work_dir and its own document sample from its cell's docset.","Sampling: fixed takes the first N documents, gold first then by name, so every draw sees the same files and the spread is generation noise. random seeds each draw with dgml.sample.v1:<seed>:<org>/<docset>:<draw+1>, the same string dgml_evaluation uses.","Writes config.toml and calls uv run dgml docset generate inside dgml_repo, always with --debug so usage.jsonl exists for economics.","A per-document failure does not fail the batch; result.json keeps every per-document outcome. Every dgml call's stdout and stderr is kept under logs/.","Draws run in a pool of max_parallel_cells, rate limited per provider. Each reserves its estimate against the budget before starting and settles on measured cost. A reservation over the cap stops submission: in-flight draws finish, the rest are cancelled, and the run exits 3.","--dry-run writes the full run directory with estimates in place of results."],
+  reads:["spec","corpus_root","dgml_repo",".env keys"],writes:["manifest.json","cells.json","events.jsonl","prices.json","spec.resolved.yaml","cells/<cell>/draws/NN/*"],
+  flags:[["--yes","required to spend"],["--dry-run","write the run dir, $0"],["--resume RUN","run only the missing draws"],["--retry-empty","with --resume, re-run draws that produced no DGML"],["--budget-usd","cap for this run"],["--allow-dirty-corpus","run on an uncommitted corpus; recorded"]],
+  mods:["experiments/run.py","engine/generate.py","engine/dgml.py","engine/workspace.py","engine/usage.py","runs.py"]},
+ {id:"adopt",t:"Adopt",cmd:"adopt --from RUN",paid:false,opt:true,
+  sum:"Seed draw 00 of a new run with executions an earlier run already paid for.",
+  does:["An old single-draw run holds one execution per cell over the fixed selection; for a draws: N spec over the same selection, that execution is draw 00.","A cell is adopted only if it succeeded with DGML for every document (unless --allow-partial), uses no excluded model, and generated exactly the documents the new draw 00 would. This is checked against its sidecar, never assumed.","A multi-draw source hands over every completed draw that passes the same checks.","Then dgc run --resume finishes the remaining draws."],
+  reads:["spec","the earlier run directory"],writes:["a new run directory with adopted draws"],
+  flags:[["--from RUN","earlier run to adopt from"],["--allow-partial","adopt cells with missing DGML"],["--dry-run","show what would be adopted"]],
+  mods:["experiments/adopt.py"]},
+ {id:"score",t:"Score",cmd:"score -r RUN",paid:false,
+  sum:"Compute the metric families for every draw.",
+  does:["For each draw: load result.json; skip dry runs; find the workspace as recorded or re-rooted under work_dir; read the sidecar (mca-workspace.json) to know which documents it generated.","A draw without its sidecar is skipped (no_sidecar). Nothing is scored that cannot be joined to gold.","Gold covers only the documents the draw generated; under random sampling the docset is narrowed to the sidecar.","Extraction runs first so economics can use its F1. Without a workspace, reference-free and economics are absent with the warning no_workspace; extraction still scores from the DGML saved in the run.","Writes one record per (cell, docset, draw, family)."],
+  reads:["cells/*/draws/*","work_dir workspaces","corpus gold"],writes:["metrics/<cell_id>.jsonl"],
+  flags:[["--workers N","parallel cells (default max_parallel_cells, capped at CPUs)"],["--resume","keep complete metric files"],["--metric F","score only family F, repeatable"],["--dry-run","list what would be scored"]],
+  mods:["metrics/score.py","metrics/families.py","metrics/extraction.py","metrics/reference_free.py","metrics/economics.py","metrics/tree.py","metrics/tree_edit.py"]},
+ {id:"aggregate",t:"Aggregate",cmd:"aggregate -r RUN",paid:false,
+  sum:"Build the decision grid and decide which rows may be compared.",
+  does:["One row per (unit, shape, doc type, schema tier, config tier, model). The model is the label model when set, else the generation model.","Draws are averaged inside each docset first, then docset means are averaged with equal weight. Documents are never pooled and docsets are never weighted by size.","band_2se = 2·stdev(docset means)/√n. A single docset has no band; an empty group has a blank mean_quality, never 0.","Comparability gates go to validity.json: corpus_hash_mismatch, dgml_version_mismatch, repo_sha_mismatch, too_few_docsets (default 3), single_docset, mixed_cost_partial, missing_draws, partial_outcome, no_quality.","The grid keeps the source's columns in order and appends cost_per_page_{transcribe,label,pipeline}_usd."],
+  reads:["metrics/*.jsonl","manifest.json"],writes:["grid/compass_grid.csv","grid/validity.json"],
+  flags:[["--pivot shape","pivot the grid by a key"],["--quality-metric M","default individual_overlap_f1"],["--allow-mixed-provenance","aggregate across mismatched provenance"]],
+  mods:["aggregate/grid.py","aggregate/validity.py","stats.py"]},
+ {id:"report",t:"Report",cmd:"report -r RUN",paid:false,
+  sum:"Render a Markdown report and CSV tables from what the run already wrote.",
+  does:["Recomputes nothing: reads manifest.json, the grid and validity.json, so the same run always renders the same report.","Every missing artifact is named together with the command that produces it, rather than leaving a section out.","Exits 2 if the run is partial, unless --allow-partial."],
+  reads:["manifest.json","grid/*"],writes:["report/report.md","report/*.csv"],
+  flags:[["--allow-partial","report a partial run with exit 0"]],
+  mods:["report.py"]},
+ {id:"compare",t:"Compare",cmd:"compare A B",paid:false,opt:true,
+  sum:"A paired A/B test between two runs.",
+  does:["Joins the two grids on the group key and compares each matched group over the docsets both arms scored.","Gates run first. A failing gate suppresses the effect size entirely, because a number next to a warning still gets read as a number.","Paired docset bootstrap with 10,000 resamples (seed 0), plus a Wilcoxon (zsplit) p-value.","The verdict comes from the bootstrap interval, not the point estimate or the p-value. A regression exits 2."],
+  reads:["two run directories"],writes:["compare/ (with -o)"],
+  flags:[["-o DIR","write the comparison tables"]],
+  mods:["aggregate/compare.py"]},
+ {id:"handoff",t:"Handoff",cmd:"handoff -c ARMS -r RUN…",paid:false,
+  sum:"Package the evidence proto needs to fit the registry tiers.",
+  does:["Arms are data in conf/handoff/*.yaml: each arm selects cells by their settings, and each stage names the slot its arms vary. Arm keys are the names proto's evidence_check.py looks up.","grid_<stage>.csv has one row per (configuration, draw, org), gate-passing and full-coverage only, with the other slot held at its control.","facts.json holds the arm tables, the pooled noise floor and the counts evidence_check reads.","metrics.jsonl holds every MetricRecord of every pooled run verbatim, plus any legacy records.","Exits 2 if no grid rows came out."],
+  reads:["scored run directories","conf/handoff/*.yaml","legacy/ (optional)"],writes:["handoff/<date>/grid_<stage>.csv","facts.json","metrics.jsonl","handoff.json"],
+  flags:[["-c ARMS","conf/handoff/compass-haiku55.yaml"],["-r RUN","repeatable"],["--legacy DIR","output of dgc import-legacy"],["-o DIR","pack directory"]],
+  mods:["handoff/pack.py","handoff/arms.py","handoff/analysis.py","handoff/legacy.py"],
+  note:"dgc import-legacy --evaluation-root ../dgml_evaluation -o legacy/ converts dgml_evaluation's recorded metrics into MetricRecords with run_id legacy:<workspace>. It reads that tree and never executes it."}
+];
+let current="run";
+function renderPipe(){
+  $("#pipe").innerHTML=STAGES.map((s,i)=>`<button class="stage${s.opt?" opt":""}" data-id="${s.id}" aria-pressed="${s.id===current}"><span class="n">${String(i+1).padStart(2,"0")}</span><span class="t">${s.t}</span><span class="cmd">dgc ${esc(s.cmd)}</span></button>`).join("");
+}
+function renderDetail(){
+  const s=STAGES.find(x=>x.id===current);
+  $("#detail").innerHTML=`<header><h3>${s.t} <span style="font-family:var(--mono);font-size:15px;font-weight:400;color:var(--muted)">dgc ${esc(s.cmd)}</span></h3>
+   <span class="cost ${s.paid?"paid":"free"}">${s.paid?"spends money with --yes":"free · no model calls"}</span></header>
+   <p style="margin-top:6px">${esc(s.sum)}</p>
+   <div class="cols"><div><h4>How it works</h4><ul>${s.does.map(d=>`<li>${fmt(d)}</li>`).join("")}</ul>
+     ${s.note?`<p class="note">${fmt(s.note)}</p>`:""}</div>
+   <div><h4>Reads</h4><div class="io">${s.reads.map(r=>`<code>${esc(r)}</code>`).join("")}</div>
+   <h4>Writes</h4><div class="io">${s.writes.map(r=>`<code>${esc(r)}</code>`).join("")}</div>
+   <h4>Flags</h4><table class="flags">${s.flags.map(f=>`<tr><td>${esc(f[0])}</td><td>${esc(f[1])}</td></tr>`).join("")}</table>
+   <h4>Code</h4><div class="io">${s.mods.map(m=>`<code>${m}</code>`).join("")}</div></div></div>`;
+}
+function fmt(t){ // backtick-free: wrap identifier-looking tokens in code
+  return esc(t).replace(/\b([a-z_]+\.(?:json|jsonl|yaml|toml|csv|py|md)|[a-z]+_[a-z_{},]+|--[a-z-]+|dgml\.sample\.v1:[^ ,]+|mca\.cell\.v1)\b/g,"<code>$1</code>");
+}
+$("#pipe").addEventListener("click",e=>{const b=e.target.closest(".stage");if(!b)return;select(b.dataset.id);});
+function select(id){current=id;renderPipe();renderDetail();markTree();}
+
+/* ---------- command builder ---------- */
+const SPECS=[
+ ["compass-label-haiku55.yaml","Labeler sweep: six labelers, transcriber held at Haiku 5.5.","label"],
+ ["compass-transcribe-haiku55.yaml","Transcriber sweep: five transcribers, labeler held at Haiku 5.5.","transcribe"],
+ ["compass-label-gemini-haiku55.yaml","Haiku 5.5 labeler with the Gemini 3.6 Flash transcriber.","label"],
+ ["compass-transcribe-gpt55-haiku55.yaml","Haiku 5.5 transcriber with the GPT-5.5 labeler.","transcribe"],
+ ["compass-corpus-3x6-haiku55.yaml","Corpus-wide baseline, random sampling, .pdf only.",""],
+ ["compass-baseline-haiku55.yaml","Same-model pipeline baseline, thinking off.",""],
+ ["compass-baseline-haiku55-think.yaml","Same baseline with adaptive thinking.",""],
+ ["rehearsal.yaml","Pipeline smoke test over the mini corpus (set DGC_CORPUS_ROOT).",""]
+];
+$("#bSpec").innerHTML=SPECS.map((s,i)=>`<option value="${i}">${s[0]}</option>`).join("");
+function build(){
+  const s=SPECS[+$("#bSpec").value], run=$("#bRun").value.trim()||"<run_id>";
+  const p=$("#bProfile").checked?" --profile local.yaml":"";
+  const d="uv run dgc"+p, spec="specs/"+s[0];
+  $("#bSpecNote").textContent=s[1];
+  let L=[];
+  if(s[0]==="rehearsal.yaml") L.push("export DGC_CORPUS_ROOT=tests/fixtures/mini_corpus");
+  else L.push(`${d} corpus check`);
+  L.push(`${d} plan -e ${spec}`);
+  if($("#bDry").checked) L.push(`${d} run  -e ${spec} --dry-run`);
+  L.push(`${d} run  -e ${spec} --yes            # prints the run id`);
+  L.push("");
+  L.push(`${d} score     -r ${run}`);
+  L.push(`${d} aggregate -r ${run}`);
+  L.push(`${d} report    -r ${run}`);
+  if($("#bHandoff").checked){
+    L.push("");
+    L.push(`${d} handoff -c conf/handoff/compass-haiku55.yaml \\`);
+    L.push(`    -r <transcribe_run> -r <label_run> -o handoff/$(date +%Y%m%d)`);
+  }
+  $("#bOut").innerHTML=shell(L.join("\n"));
+}
+["bSpec","bRun","bProfile","bDry","bHandoff"].forEach(id=>document.getElementById(id).addEventListener("input",build));
+build();
+
+/* ---------- run directory ---------- */
+const TREE=[
+ [0,"runs/<run_id>/",null,"One directory per run, named by start time and a short hash. -r accepts the id or any path to it."],
+ [1,"manifest.json","run","The run record: the spec, provenance (corpus hash, dgml version, repo SHAs, dirty flags), budget, outcome and totals. Report and aggregate read it."],
+ [1,"spec.resolved.yaml","run","The spec exactly as executed, after defaults. Scoring reads this, never the spec file in specs/, so editing a spec later cannot change an old run's scores."],
+ [1,"cells.json","run","Every cell: its id, org, docset and settings."],
+ [1,"prices.json","run","The registry prices used to plan and settle this run, so cost figures stay reproducible after proto changes."],
+ [1,"events.jsonl","run","Append-only log of draw starts, finishes, budget reservations and settlements."],
+ [1,"cells/<cell_id>/draws/NN/",null,"One folder per draw (00, 01, 02…)."],
+ [2,"result.json","run","Every per-document outcome, soft errors included, plus measured cost and the recorded workspace path. Under --dry-run it carries the estimate instead."],
+ [2,"status.json","run","Whether the draw is complete. On resume a draw counts as done only if status.json says so and result.json exists."],
+ [2,"workspace/mca-workspace.json","run","The sidecar: which documents this draw generated and their docset ids. Scoring needs it to join output to gold; without it the draw is skipped."],
+ [2,"dgml/","run","The generated DGML per document, persisted in the run so extraction can be scored even without the workspace."],
+ [2,"logs/NNNN-<command>.*.log","run","stdout and stderr of every dgml invocation, successful or not."],
+ [1,"metrics/<cell_id>.jsonl","score","One MetricRecord per (cell, docset, draw, family): values, absent names and warnings."],
+ [1,"grid/compass_grid.csv","aggregate","The decision grid: one row per group key, with mean_quality, band_2se, costs and role prices."],
+ [1,"grid/validity.json","aggregate","Comparability gate results per grid row."],
+ [1,"report/report.md","report","The human-readable report, with CSV tables beside it."],
+ [0,"<work_dir>/<run_id>/…",null,"dgml workspaces, outside the run: OCR pages and usage.jsonl. Needed to re-score reference-free and economics. Moved scratch directories are found by re-rooting the recorded path under work_dir."]
+];
+let picked=7;
+function renderTree(){
+  $("#tree").innerHTML=TREE.map((n,i)=>{
+    const dir=n[1].endsWith("/");
+    return `<button data-i="${i}" aria-pressed="${i===picked}" style="padding-left:${14+n[0]*20}px"><span class="${dir?"dir":""}">${esc(n[1])}</span>${n[2]?`<span class="who">dgc ${n[2]}</span>`:""}</button>`;
+  }).join("");
+  const n=TREE[picked];
+  $("#fileinfo").innerHTML=`<h3>${esc(n[1])}</h3><p>${fmt(n[3])}</p>${n[2]?`<p class="by">Written by <b>dgc ${n[2]}</b>. <a href="#workflow" data-stage="${n[2]}">Show that stage</a></p>`:""}`;
+  markTree();
+}
+function markTree(){document.querySelectorAll("#tree button").forEach(b=>b.classList.toggle("hit",TREE[b.dataset.i][2]===current));}
+$("#tree").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;picked=+b.dataset.i;renderTree();});
+document.addEventListener("click",e=>{const a=e.target.closest("[data-stage]");if(!a)return;select(a.dataset.stage);});
+
+/* ---------- metrics ---------- */
+const FAM=[
+ {k:"extraction",t:"Extraction",scale:"0–100",file:"metrics/extraction.py",lead:"Agreement between values found in the generated DGML and the gold *.ref.json annotations.",
+  cards:[
+   ["Normalisation",["NFKC, then lower-case","tokens of \\w+(?:[.,]\\w+)*, so 1,250.00 stays one token","punctuation and • deleted, tokens joined by single spaces","the sentinel empty passes through; a gold #N suffix is never compared"]],
+   ["Predictions",["every text-bearing element becomes a value under every path suffix (C, B+C, A+B+C)","list items also offered without their lim marker","inline-only composites count as one value; dg:extraction content is split off first"]],
+   ["Overlap and scores",["overlap = longest common contiguous token run ÷ predicted length (precision) or gold length (recall)","greedy over a set: each prediction's best plus each gold value's best"],"P = mass / Σ max(|pred|,1)\nR = mass / Σ max(|gold|,1)\nF1 = 2PR / (P + R)"],
+   ["Tag choice",["each gold label picks the predicted tag with the best em_f1, else the best overlap_f1","individual_* chooses per document; global_* once per docset, so global ≤ individual","naming_penalty = value_only_overlap_recall − individual_overlap_recall","headline quality: individual_overlap_f1"]]]},
+ {k:"reference_free",t:"Reference-free",scale:"0–100",file:"metrics/reference_free.py",lead:"Measured without gold: is the tagging consistent, grounded in the page, and well structured? The dg: frame is transparent.",
+  cards:[
+   ["Consistency",["vocabulary_reuse_rate: % of tags used in at least 2 documents","mean_pairwise_jaccard and tag_inflation: absent for a single-document docset","synonym_rate: redundant names in complete-link clusters"],"consistency_score = clamp(0.4·reuse + 0.3·jaccard\n  + 0.15·(100−inflation) + 0.15·(100−synonym))"],
+   ["Grounding",["each text leaf's dg:origin boxes against the OCR words whose centre falls inside","grounded_leaf_rate, origin_text_match","out_of_bounds_rate (2% tolerance), degenerate_box_rate"]],
+   ["Structure",["dual_role_tags: used both as container and leaf","empty_containers, self_nesting, self_nesting_direct"],"defects_per_1k = 1000·(dual + empty + nesting)/elements\nstructural_score = max(0, 100·(1 − rate/400))"],
+   ["Needs the workspace",["reads OCR from the dgml workspace under work_dir","without it the family is absent with the warning no_workspace"]]]},
+ {k:"economics",t:"Economics",scale:"units ($, s, ×)",file:"metrics/economics.py",lead:"Cost, size, reliability and latency, from usage.jsonl and the output. Billed tokens and estimated tokens (chars/4, prefixed est_) never mix.",
+  cards:[
+   ["Cost",["cost_usd, cost_per_doc, cost_per_page","f1_per_dollar (uses individual_overlap_f1), f1_per_1k_tokens","tokens_per_doc, tokens_per_page"]],
+   ["Role prices (new here)",["transcribe calls go to the transcriber; label and links calls to the labeler","cost_per_page_pipeline only when one model fills both slots"],"cost_per_page_<role> = cost_usd × role share / pages"],
+   ["Size",["expansion_x = dgml_chars / source_chars (source = Σ word length + 1 over OCR pages)","origin_overhead_pct, chars_per_element, est_dgml_tokens"]],
+   ["Reliability and latency",["llm_failure_rate, missing_dgml_rate (0–100 here)","seconds_per_doc, seconds_per_page, call_p50_s, call_p95_s (nearest rank)","cost_partial: some spend can't be tied to a document, or a call is unpriced. It gates comparisons"]]]},
+ {k:"tree",t:"Tree",scale:"0–1",file:"metrics/tree.py · tree_edit.py",lead:"The predicted DGML tree against the gold DGML. Both are flattened to reading-order token streams, and one SequenceMatcher alignment feeds every metric.",
+  cards:[
+   ["Alignment",["a document pair below 0.5 is counted in n_unalignable and left out of the other means"],"alignable_fraction = 2·matched / (n_gold + n_pred)"],
+   ["Segmentation and labelling",["seg_ari, coseg_agreement, boundary_f1, chunk_jaccard_bag","label_ari, bcubed_{precision,recall,f1}: low precision means merged, low recall means split","tag_exact_agreement, tag_vocab_jaccard"]],
+   ["Edit distance",["Zhang–Shasha over elements; dg:* frames named","teds charges names and own-text distance, teds_struct names only, teds_shape neither","skipped above 2,500 elements per side"],"teds = 1 − TED / max(size)"],
+   ["Shape, grounding, level text",["depth_match, lca_depth_mae, path_suffix_cosine, leaf_order_tau","origin_iou_mean, origin_page_match","level_{precision,recall,f1}_dN for depth 1–3, matched by token Dice ≥ 0.5"]]]},
+ {k:"aggregate",t:"Grid & stats",scale:"per row",file:"aggregate/ · stats.py",lead:"How records become decision-grade numbers.",
+  cards:[
+   ["Grouping",["key: unit, shape, doc type, schema tier, config tier, model","model = label model when set, else generation model"]],
+   ["Averaging",["draws averaged within a docset, then docsets averaged unweighted","sd_between_docsets with ddof=1"],"band_2se = 2 · sd(docset means) / √n"],
+   ["Gates",["corpus_hash_mismatch, dgml_version_mismatch, repo_sha_mismatch","too_few_docsets (3), single_docset, mixed_cost_partial","missing_draws, partial_outcome, no_quality"]],
+   ["Compare",["paired docset bootstrap, 10,000 resamples, seed 0","Wilcoxon (zsplit) p-value for reference","verdict from the interval"]]]}
+];
+$("#famTabs").innerHTML=FAM.map((f,i)=>`<button role="tab" aria-selected="${i===0}" data-k="${f.k}">${f.t}</button>`).join("");
+function renderFam(k){
+  const f=FAM.find(x=>x.k===k);
+  $("#famBody").innerHTML=`<div class="famhead"><h3>${f.t}</h3><span class="scale">scale ${f.scale}</span><code>${f.file}</code></div>
+   <p style="margin-top:6px;font-size:15.5px;color:var(--muted)">${fmt(f.lead)}</p>
+   <div class="mgrid">${f.cards.map(c=>`<div class="mcard"><h3>${c[0]}</h3><ul>${c[1].map(x=>`<li>${fmt(x)}</li>`).join("")}</ul>${c[2]?`<div class="formula">${esc(c[2])}</div>`:""}</div>`).join("")}</div>`;
+}
+$("#famTabs").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
+  [...$("#famTabs").children].forEach(x=>x.setAttribute("aria-selected",x===b));renderFam(b.dataset.k);});
+renderFam("extraction");
+
+/* ---------- specs table ---------- */
+const SPECROWS=[
+ ["compass-transcribe-haiku55","transcriber: Haiku 5.5, Sonnet 5, Opus 5, Gemini 3.6 Flash, GPT-5.5","labeler Haiku 5.5","459.75"],
+ ["compass-label-haiku55","labeler: Haiku 5.5, Opus 5, Sonnet 5, Gemini 3.6 Flash, Gemini 3.1 Flash Lite, GPT-5.5","transcriber Haiku 5.5","42.98"],
+ ["compass-label-gemini-haiku55","labeler: Haiku 5.5","transcriber Gemini 3.6 Flash","25.44"],
+ ["compass-transcribe-gpt55-haiku55","transcriber: Haiku 5.5","labeler GPT-5.5","12.49"],
+ ["compass-corpus-3x6-haiku55","—, Haiku 5.5 in both slots","random sampling, .pdf only, seed 20260925","3.54"],
+ ["compass-baseline-haiku55","—, Haiku 5.5 in both slots, thinking off","fixed sampling","3.54"],
+ ["compass-baseline-haiku55-think","—, Haiku 5.5, adaptive thinking","as baseline","3.54"],
+ ["rehearsal","2 cheap models, 2 docsets, 1 draw","reference_free only","1.87"]
+];
+$("#specRows").innerHTML=SPECROWS.map(r=>`<tr><td><code>${r[0]}</code></td><td>${esc(r[1])}</td><td>${esc(r[2])}</td><td class="num">${r[3]}</td></tr>`).join("");
+
+/* ---------- package map ---------- */
+const MODS=[
+ ["cli.py · config.py","Entry point and settings. argparse commands, --profile, --env-file, .env loading, precedence.",[["cli.py","every dgc command, --dry-run everywhere"],["config.py","Settings, load_settings, load_dotenv"],["errors.py","exit codes 0/1/2/3"]],null],
+ ["corpus/","The reference corpus: loading, gold references, selection and sampling.",[["loader.py","docsets and documents"],["refs.py","*.ref.json, complex refs"],["selector.py","which docsets a spec takes"],["sampling.py","fixed and random draws"],["check.py","dgc corpus check"]],"check"],
+ ["experiments/","From spec to executed draws.",[["spec.py","spec model, source field names"],["cells.py","cells, draws, cell ids"],["plan.py","priced plan, resume state"],["run.py","local runner, budget"],["adopt.py","reuse paid draws"]],"plan"],
+ ["engine/","The dgml subprocess and what it leaves behind.",[["dgml.py","argv, payloads, error classes"],["generate.py","one draw's generation"],["workspace.py","dgml workspace files"],["usage.py","usage.jsonl reader"]],"run"],
+ ["metrics/","The four families and the scoring session.",[["score.py","score_run over a run dir"],["families.py","family dispatch"],["extraction.py · predictions.py","extraction"],["reference_free.py","reference-free"],["economics.py","economics"],["tree.py · tree_edit.py","tree"]],"score"],
+ ["aggregate/ · report.py","Grid, gates, A/B and the report.",[["grid.py","compass_grid.csv"],["validity.py","comparability gates"],["compare.py","paired bootstrap A/B"],["../report.py","report.md"]],"aggregate"],
+ ["handoff/","The evidence pack for proto.",[["arms.py","arms as data"],["analysis.py","per-stage grids, facts"],["pack.py","writes the pack"],["legacy.py","import dgml_evaluation"]],"handoff"],
+ ["runs.py · stats.py","Shared readers and statistics.",[["runs.py","read run dirs, locate workspaces"],["stats.py","means, SE, bootstrap"],["records.py · domain.py · ids.py","record types, ids"]],null],
+ ["specs/ · conf/ · tests/","Everything that is not code.",[["specs/","the sweeps, archive/, emailbody/"],["conf/corpus/shapes.yaml","document shapes"],["conf/handoff/*.yaml","proto's arms"],["tests/","unit, parity, end to end"],["scripts/","regenerate goldens"]],null]
+];
+$("#mods").innerHTML=MODS.map(m=>`<div class="mod"><h3>${m[0]}</h3><p>${m[1]}</p><ul>${m[2].map(x=>`<li><code>${x[0]}</code> ${esc(x[1])}</li>`).join("")}</ul>${m[3]?`<button class="stagelink" data-stage="${m[3]}" onclick="location.hash='workflow'">→ ${STAGES.find(s=>s.id===m[3]).t} stage</button>`:""}</div>`).join("");
+
+renderPipe();renderDetail();renderTree();
+</script>

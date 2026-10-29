@@ -1,0 +1,64 @@
+{
+ "id": "FIS_2007_0000892569-08-000207__row0266",
+ "key": "FIS_2007_0000892569-08-000207",
+ "question": "what portion of the future minimum operating lease payments is due in the next 12 months?",
+ "gold": "33.5%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "FIS_2007_0000892569-08-000207.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/RegistrantName/ContingentLiabilityAmount/ConsolidatedFinancial/OperatingLeaseCommitmentAmount/table"
+ ],
+ "r1_reasoning_chars": 1374,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 23031,
+  "completion_tokens": 351,
+  "total_tokens": 23382,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/RegistrantName/ContingentLiabilityAmount/ConsolidatedFinancial/OperatingLeaseCommitmentAmount/table"
+ ],
+ "content_chars": 2910,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "0.334816",
+ "reasoning": "We need answer portion of future minimum operating lease payments due in next 12 months. The table shows future minimum operating lease payments for years ending Dec 31, 2008, 2009, etc. The next 12 months from date? The document is as of Dec 31, 2007, so next 12 months is 2008: 83,382. Total future minimum operating lease payments = 249,038. Portion = 83,382 / 249,038. Need compute. Also note \"in thousands\" so figures are thousands. Portion = 0.3348... Let's compute exactly. 83,382 / 249,038. Let's calculate. 249,038 * 0.335 = 83,427.73, slightly high. 0.3348 gives 83,378? 249,038*0.3348 = 83,378? 249,038*0.33=82,182.54; *0.0048=1,195.38; sum=83,377.92. So 0.334816? Let's do precise. Use program divide(83382, 249038). The answer should be a number, likely decimal. The question asks \"what portion\" so fraction. We'll output decimal. Need evidence figures: 83,382 and 249,038. Also maybe 2008 row. Use exact printed values.",
+ "raw_content": "<evidence>83,382 | OperatingLeaseCommitmentAmount: 2008</evidence>\n<evidence>$249,038 | OperatingLeaseCommitmentAmount: Total</evidence>\n<program>divide(83382, 249038)</program>\n<answer>0.3348</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1022,
+  "completion_tokens": 364,
+  "total_tokens": 1386,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "83,382",
+   "element": "OperatingLeaseCommitmentAmount: 2008",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(83382, 249038)",
+ "answer_model": "0.3348",
+ "program_value": 0.3348163734048619,
+ "elapsed_s": 6.12,
+ "outline_source": "FIS_2007_0000892569-08-000207.outline.txt",
+ "outline_chars": 91339
+}

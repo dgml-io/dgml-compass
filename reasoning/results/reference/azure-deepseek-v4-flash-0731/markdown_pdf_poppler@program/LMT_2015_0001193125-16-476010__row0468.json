@@ -1,0 +1,74 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0468",
+ "format": "markdown_pdf_poppler",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "in november 2015 what was the percent of the discounts and debt issuance costs to the long-term debt november 2015 notes in millions",
+ "gold": "1.42%",
+ "finqa_id": "LMT/2015/page_99.pdf-4",
+ "source_page": "page_99",
+ "ticker": "LMT",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_poppler/LMT_2015_0001193125-16-476010.md",
+ "doc_chars": 575312,
+ "prompt_chars": 575533,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 575312,
+ "original_chars": 575312,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 107004,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 315,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1.428571",
+ "reasoning": "We need answer: \"in november 2015 what was the percent of the discounts and debt issuance costs to the long-term debt november 2015 notes in millions\"\n\nWe need find figures. November 2015 Notes issued $7.0 billion, net proceeds $6.9 billion, so discounts and debt issuance costs = $0.1 billion = $100 million. Percent = 100/7000 = 1.4286%. But question asks \"percent of the discounts and debt issuance costs to the long-term debt november 2015 notes in millions\" maybe percent = (discounts and costs)/(notes) *100. Need compute.\n\nEvidence: \"On November 23, 2015, we issued $7.0 billion of notes ... received net proceeds of $6.9 billion ... after deducting discounts and debt issuance costs\" So costs = 7.0 - 6.9 = 0.1 billion = 100 million. Percent = 100/7000*100 = 1.428571...%. Answer maybe 1.43%. Need provide inside <answer> only value. Also evidence list figures.\n\nLet's craft.",
+ "raw_content": "<evidence>\n$7.0 billion | November 2015 Notes issuance\n$6.9 billion | net proceeds from November 2015 Notes\n</evidence>\n\n<program>\nmultiply(divide(subtract(7.0, 6.9), 7.0), 100)\n</program>\n\n<answer>1.43</answer>",
+ "usage": {
+  "prompt_tokens": 107321,
+  "completion_tokens": 315,
+  "total_tokens": 107636,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 107264
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.46,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$7.0 billion",
+   "element": "November 2015 Notes issuance",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$6.9 billion",
+   "element": "net proceeds from November 2015 Notes",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(subtract(7.0, 6.9), 7.0), 100)",
+ "answer_model": "1.43",
+ "program_value": 1.4285714285714235,
+ "docfinqa_row": 468
+}

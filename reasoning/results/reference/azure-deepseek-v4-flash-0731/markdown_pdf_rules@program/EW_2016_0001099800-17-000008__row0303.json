@@ -1,0 +1,74 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0303",
+ "format": "markdown_pdf_rules",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what is the percentage difference in the fair value per share between 2014 and 2015?",
+ "gold": "54%",
+ "finqa_id": "EW/2016/page_94.pdf-2",
+ "source_page": "page_94",
+ "ticker": "EW",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf_rules/EW_2016_0001099800-17-000008.md",
+ "doc_chars": 314607,
+ "prompt_chars": 314780,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 314607,
+ "original_chars": 314607,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 69815,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 440,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "54.2979%",
+ "reasoning": "We need answer percentage difference in fair value per share between 2014 and 2015. Need identify what fair value per share? Likely stock option fair value per share? In document, under Option Awards: fair value per share 2016 $31.00, 2015 $18.13, 2014 $11.75. Question asks percentage difference between 2014 and 2015. Compute (18.13 - 11.75)/11.75 = 6.38/11.75 = 0.54298... = 54.3%. Or maybe ESPP fair value per share? 2015 $15.59, 2014 $8.59 difference = 7.00/8.59=81.5%. But question says \"fair value per share\" likely from option awards table. Need check context. The document has \"Fair value, per share\" under Option Awards and ESPP. Which one? The question likely refers to stock option fair value per share. It says \"the fair value per share between 2014 and 2015\" without specifying. In financial documents, \"fair value per share\" often for options. The table under Option Awards has \"Fair value, per share\" $18.13 (2015) and $11.75 (2014). So percentage difference = (18.13-11.75)/11.75 = 54.3%. Need provide evidence and program. Use figures as printed. Compute divide(subtract(18.13, 11.75), 11.75). Answer as percentage? The question asks \"what is the percentage difference\" so answer should be 54.3% or 54.30%. We'll put 54.3% inside answer.",
+ "raw_content": "<evidence>\n18.13 | Option Awards Fair value, per share 2015\n11.75 | Option Awards Fair value, per share 2014\n</evidence>\n<program>\ndivide(subtract(18.13, 11.75), 11.75)\n</program>\n<answer>54.3%</answer>",
+ "usage": {
+  "prompt_tokens": 70122,
+  "completion_tokens": 440,
+  "total_tokens": 70562,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 69888
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.36,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "18.13",
+   "element": "Option Awards Fair value, per share 2015",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "11.75",
+   "element": "Option Awards Fair value, per share 2014",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(subtract(18.13, 11.75), 11.75)",
+ "answer_model": "54.3%",
+ "program_value": 0.5429787234042552,
+ "docfinqa_row": 303
+}

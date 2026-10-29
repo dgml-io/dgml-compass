@@ -1,0 +1,74 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0219",
+ "format": "markdown_pdf_rules",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "what was the percent of the increase in the backlog from 2012 to 2013",
+ "gold": "13.3%",
+ "finqa_id": "LMT/2014/page_50.pdf-1",
+ "source_page": "page_50",
+ "ticker": "LMT",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf_rules/LMT_2014_0001193125-15-038681.md",
+ "doc_chars": 436977,
+ "prompt_chars": 437135,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 436977,
+ "original_chars": 436977,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 95659,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 554,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.36452",
+ "reasoning": "We need to find backlog figures for 2012 and 2013. From document: Backlog at December 31, 2014 was $80.5 billion, 2013 $82.6 billion, 2012 $82.3 billion? Actually in Item 6 Selected Financial Data: Backlog: 2014 $80,547, 2013 $82,600, 2012 $82,300. Also in MD&A: \"Backlog was approximately $80.5 billion, $82.6 billion and $82.3 billion at December 31, 2014, 2013 and 2012.\" So 2012 = 82.3, 2013 = 82.6. Increase = 82.6 - 82.3 = 0.3 billion. Percent increase = 0.3 / 82.3 * 100 = 0.3645...% approximately 0.36%. Use exact figures: 82.6 and 82.3. Compute: (82.6-82.3)/82.3 = 0.3/82.3 = 0.003645... = 0.3645%. So answer ~0.36%. Provide evidence: 82.6 | Backlog 2013, 82.3 | Backlog 2012. Program: divide(subtract(82.6, 82.3), 82.3) but that gives decimal, need percent? The question asks \"percent of the increase\" so answer as percentage. The program should output the value? The benchmark expects the numeric answer. Usually they want the percentage number, e.g., 0.3645. But we can give as 0.36%? The instruction: \"Give your final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what was the percent\" so we can give the number without % sign? Typically they want the percentage value. I'll provide 0.3645 or 0.36. Let's compute precisely: 0.3/82.3 = 0.0036452... *100 = 0.36452%. So answer 0.3645. I'll put 0.3645.",
+ "raw_content": "<evidence>\n82.6 | Backlog 2013\n82.3 | Backlog 2012\n</evidence>\n<program>multiply(divide(subtract(82.6, 82.3), 82.3), 100)</program>\n<answer>0.3645</answer>",
+ "usage": {
+  "prompt_tokens": 95965,
+  "completion_tokens": 554,
+  "total_tokens": 96519,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.06,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "82.6",
+   "element": "Backlog 2013",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "82.3",
+   "element": "Backlog 2012",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(subtract(82.6, 82.3), 82.3), 100)",
+ "answer_model": "0.3645",
+ "program_value": 0.36452004860266973,
+ "docfinqa_row": 219
+}

@@ -1,0 +1,50 @@
+{
+ "id": "UPS_2007_0001193125-08-043891__row0080",
+ "format": "dgml",
+ "key": "UPS_2007_0001193125-08-043891",
+ "question": "what is the total in millions of expected cash outflow to satisfy contractual obligations and commitments as of december 31 , 2007?",
+ "gold": "28809",
+ "finqa_id": "UPS/2007/page_49.pdf-1",
+ "source_page": "page_49",
+ "ticker": "UPS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml/UPS_2007_0001193125-08-043891.dgml.xml",
+ "doc_chars": 609845,
+ "prompt_chars": 610065,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 609845,
+ "original_chars": 609845,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 146117,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 429,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "28809",
+ "reasoning": "We need to find total expected cash outflow to satisfy contractual obligations and commitments as of Dec 31, 2007. The document has a table \"Contractual Obligations and Commitments\" in the MD&A section. It lists columns: Capital Leases, Operating Leases, Debt Principal, Debt Interest, Purchase Commitments, Pension Fundings, Other Liabilities. The total row gives totals. We need the sum of all these totals? The question asks \"total in millions of expected cash outflow to satisfy contractual obligations and commitments\". The table shows totals for each category. The sum of all categories would be the total expected cash outflow. Let's extract the totals from the table.\n\nFrom the table in the document (in the \"Contractual Obligations and Commitments\" section):\nTotal row: Capital Leases $619, Operating Leases $1,782, Debt Principal $10,527, Debt Interest $8,026, Purchase Commitments $3,828, Pension Fundings $3,465, Other Liabilities $562.\n\nSum = 619 + 1782 + 10527 + 8026 + 3828 + 3465 + 562 = let's compute.\n\n619+1782=2401\n+10527=12928\n+8026=20954\n+3828=24782\n+3465=28247\n+562=28809.\n\nSo total is 28,809 million. But note the table also includes \"Debt Interest\" which is part of contractual obligations. The question says \"expected cash outflow to satisfy contractual obligations and commitments\" - that includes all these categories. So answer is 28,809.\n\nCheck if there is any other table? The same table appears in Note 8 but only with capital leases, operating leases, debt principal, purchase commitments (no debt interest, pension fundings, other liabilities). But the MD&A table includes all. The question likely refers to the MD&A table. So answer 28,809.\n\nWe'll put in <answer>28809</answer>.",
+ "raw_content": "<answer>28809</answer>",
+ "usage": {
+  "prompt_tokens": 146271,
+  "completion_tokens": 429,
+  "total_tokens": 146700,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.49,
+ "answer_tag_found": true,
+ "docfinqa_row": 80
+}

@@ -1,0 +1,72 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0480",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what percentage of the total cash purchase price net of cash acquired was represented by goodwill?",
+ "gold": "81%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "EW_2016_0001099800-17-000008.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/GoodwillAmount",
+  "/chunk/GoodwillAmount/AcquisitionConsideration",
+  "/chunk/GoodwillAmount/AcquisitionConsideration/GoodwillAmount"
+ ],
+ "r1_reasoning_chars": 0,
+ "r1_retried": true,
+ "r1_usage": {
+  "prompt_tokens": 17168,
+  "completion_tokens": 20,
+  "total_tokens": 17188,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/GoodwillAmount",
+  "/chunk/GoodwillAmount/AcquisitionConsideration",
+  "/chunk/GoodwillAmount/AcquisitionConsideration/GoodwillAmount"
+ ],
+ "content_chars": 78436,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "80.880975",
+ "reasoning": "We need answer percentage. Need find figures: goodwill 258.9, total cash purchase price net of cash acquired 320.1. Compute 258.9/320.1*100. Need evidence.",
+ "raw_content": "<evidence>258.9 | Goodwill (CardiAQ purchase price allocation)\n320.1 | Total cash purchase price, net of cash acquired (CardiAQ purchase price allocation)</evidence>\n<program>multiply(divide(258.9, 320.1), 100)</program>",
+ "r2_usage": {
+  "prompt_tokens": 19842,
+  "completion_tokens": 107,
+  "total_tokens": 19949,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "258.9",
+   "element": "Goodwill (CardiAQ purchase price allocation)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "320.1",
+   "element": "Total cash purchase price, net of cash acquired (CardiAQ purchase price allocation)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(258.9, 320.1), 100)",
+ "answer_model": null,
+ "program_value": 80.88097469540767,
+ "elapsed_s": 43.52,
+ "outline_source": "EW_2016_0001099800-17-000008.outline.txt",
+ "outline_chars": 67317
+}

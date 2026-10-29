@@ -1,0 +1,53 @@
+{
+ "id": "GPN_2010_0001193125-10-169025__row0686",
+ "format": "dgml",
+ "key": "GPN_2010_0001193125-10-169025",
+ "question": "what is the percentage change in the after-tax share-based compensation cost from 2009 to 2010?",
+ "gold": "25.5%",
+ "finqa_id": "GPN/2010/page_87.pdf-2",
+ "source_page": "page_87",
+ "ticker": "GPN",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/dgml/GPN_2010_0001193125-10-169025.dgml.xml",
+ "doc_chars": 590096,
+ "prompt_chars": 590280,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 590096,
+ "original_chars": 590096,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 139885,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 408,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "25.5%",
+ "reasoning": "We need percentage change in after-tax share-based compensation cost from 2009 to 2010. Need to find share-based compensation cost and income tax benefit. In Note 11: table shows share-based compensation cost: 2010 $18.1, 2009 $14.6, 2008 $13.8 (in millions). Income tax benefit: 2010 $(6.3), 2009 $(5.2), 2008 $(4.9). After-tax cost = cost - tax benefit? Actually tax benefit reduces cost. So after-tax = cost - benefit (since benefit is negative? They show income tax benefit as negative? In table: Income tax benefit: $(6.3) for 2010, $(5.2) for 2009. So after-tax cost = 18.1 - 6.3 = 11.8? Or cost + benefit? Typically share-based compensation cost is pre-tax, tax benefit reduces tax expense, so after-tax cost = pre-tax cost - tax benefit. So 2010: 18.1 - 6.3 = 11.8; 2009: 14.6 - 5.2 = 9.4. Percentage change = (11.8 - 9.4)/9.4 = 2.4/9.4 = 0.2553... = 25.53%. But check if they want percentage change. Could be 25.5%. Let's compute precisely: 2.4/9.4 = 0.255319... ~25.5%. Alternatively if they consider after-tax as cost plus tax benefit? No, tax benefit is negative, so after-tax = cost - benefit. So answer 25.5%. But ensure no other figures. The question says \"after-tax share-based compensation cost\" - likely from Note 11. So answer 25.5%.",
+ "raw_content": "<answer>25.5%</answer>",
+ "usage": {
+  "prompt_tokens": 140035,
+  "completion_tokens": 408,
+  "total_tokens": 140443,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 139776
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 6.73,
+ "answer_tag_found": true,
+ "docfinqa_row": 686
+}

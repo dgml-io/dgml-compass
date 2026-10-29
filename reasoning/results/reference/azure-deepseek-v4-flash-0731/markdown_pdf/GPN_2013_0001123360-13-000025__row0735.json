@@ -1,0 +1,53 @@
+{
+ "id": "GPN_2013_0001123360-13-000025__row0735",
+ "format": "markdown_pdf",
+ "key": "GPN_2013_0001123360-13-000025",
+ "question": "what was the total number of grants were forfeited?",
+ "gold": "170 grants",
+ "finqa_id": "GPN/2013/page_87.pdf-4",
+ "source_page": "page_87",
+ "ticker": "GPN",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/markdown_pdf/GPN_2013_0001123360-13-000025.md",
+ "doc_chars": 356315,
+ "prompt_chars": 356455,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 356315,
+ "original_chars": 356315,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 79134,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 787,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "163,000",
+ "reasoning": "We need answer: \"what was the total number of grants were forfeited?\" Need find in document. Likely refers to share-based awards? There are forfeited numbers for restricted stock and stock options. Need total number of grants forfeited? Could be in fiscal 2013? The question ambiguous. Document has restricted stock forfeited 91 thousand shares in 2013, and stock options forfeited 72 thousand in 2013. Also 2012 restricted 79, options 72. \"total number of grants were forfeited\" maybe total across all? Need determine from context. The question likely asks from the document: \"what was the total number of grants were forfeited?\" Could be from stock option activity and restricted stock. Need sum? Let's parse.\n\nIn Note 11: Restricted stock table: Forfeited (91) in 2013. Stock options table: Forfeited (72) in 2013. So total forfeited in fiscal 2013 = 91+72 = 163 thousand. But question says \"grants\" maybe refers to \"grants\" as in share-based awards? Could be \"total number of grants were forfeited\" maybe from the tables. Need answer value. The document also has \"Forfeited\" in restricted stock and options. The question: \"what was the total number of grants were forfeited?\" No year specified. Could be for fiscal 2013? The document is annual report for fiscal 2013. Likely ask about fiscal 2013. So sum 91,000 + 72,000 = 163,000. But need check if there are other forfeitures? Also employee stock purchase plan? No. So answer 163,000 shares? The question says \"grants\" not \"shares\". But tables show shares in thousands. So total number of grants forfeited = 163 thousand shares? Actually \"grants\" could mean awards. The restricted stock table shows \"Forfeited\" 91 (in thousands). Stock options table shows \"Forfeited\" 72 (in thousands). So total 163 thousand. Need final answer inside <answer> tags. Probably just 163,000. But let's ensure no other forfeitures in other years? The question might be asking \"total number of grants were forfeited\" across all years? The document has three years: 2011, 2012, 2013. For restricted stock: 2011 forfeited 79? Actually table shows 2011? The table shows non-vested at May 31, 2011, then granted, vested, forfeited for 2012 and 2013. For 2011 not shown. Stock options: 2011 forfeited 72? The table shows 2011? It shows outstanding at May 31, 2011, then granted, forfeited, exercised for 2012 and 2013. So only 2012 and 2013. The question likely from a specific table? \"total number of grants were forfeited\" might refer to \"grants\" in the context of \"share-based awards\" and the total number of forfeited shares in fiscal 2013. I'll answer 163,000.\n\nBut let's read exact wording: \"what was the total number of grants were forfeited?\" Could be from a question about \"grants\" in the document. The document has \"Forfeited\" in restricted stock and stock options. The total number of grants forfeited in fiscal 2013 is 91 + 72 = 163 thousand. If they ask \"total number of grants\" maybe they want the sum of forfeited shares across all categories. So answer 163,000.\n\nNeed final answer inside <answer> tags.",
+ "raw_content": "<answer>163,000</answer>",
+ "usage": {
+  "prompt_tokens": 79273,
+  "completion_tokens": 787,
+  "total_tokens": 80060,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 79104
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.86,
+ "answer_tag_found": true,
+ "docfinqa_row": 735
+}

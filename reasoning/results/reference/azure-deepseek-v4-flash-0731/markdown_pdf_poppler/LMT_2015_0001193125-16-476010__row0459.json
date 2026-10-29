@@ -1,0 +1,50 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0459",
+ "format": "markdown_pdf_poppler",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was the percentage change in total long-term debt net from 2014 to 2015?",
+ "gold": "148%",
+ "finqa_id": "LMT/2015/page_99.pdf-2",
+ "source_page": "page_99",
+ "ticker": "LMT",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/markdown_pdf_poppler/LMT_2015_0001193125-16-476010.md",
+ "doc_chars": 575312,
+ "prompt_chars": 575478,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 575312,
+ "original_chars": 575312,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 107004,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 268,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "148.5%",
+ "reasoning": "We need percentage change in total long-term debt net from 2014 to 2015. From balance sheet: 2015 long-term debt net = 14,305? Wait balance sheet shows \"Long-term debt, net\" 14,305 in 2015 and 6,142 in 2014. But note 10 says total long-term debt, net $15,261 and $6,142. The balance sheet line \"Long-term debt, net\" is 14,305? Actually balance sheet shows \"Long-term debt, net\" 14,305 and 6,142. But note 10 says total long-term debt, net $15,261 and $6,142. There is also current maturities of long-term debt 956 in 2015. So total long-term debt net including current portion? The question says \"total long-term debt net\" - likely from note 10 which gives total long-term debt, net $15,261 and $6,142. Percentage change = (15261-6142)/6142 = 9119/6142 = 1.4847 = 148.47%. So answer 148.5% or 148.47%. Need to provide value only.",
+ "raw_content": "<answer>148.5%</answer>",
+ "usage": {
+  "prompt_tokens": 107153,
+  "completion_tokens": 268,
+  "total_tokens": 107421,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.11,
+ "answer_tag_found": true,
+ "docfinqa_row": 459
+}

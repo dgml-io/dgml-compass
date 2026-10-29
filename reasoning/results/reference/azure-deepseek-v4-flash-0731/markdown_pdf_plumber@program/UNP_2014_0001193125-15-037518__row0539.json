@@ -1,0 +1,72 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0539",
+ "format": "markdown_pdf_plumber",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "what would 2014 capital expenditures have been without the early buyout of the operating lease of the headquarters , in millions?",
+ "gold": "4510",
+ "finqa_id": "UNP/2014/page_35.pdf-1",
+ "source_page": "page_35",
+ "ticker": "UNP",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf_plumber/UNP_2014_0001193125-15-037518.md",
+ "doc_chars": 359073,
+ "prompt_chars": 359291,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 359073,
+ "original_chars": 359073,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 86861,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 249,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "4085",
+ "reasoning": "We need answer: 2014 capital expenditures without early buyout of headquarters operating lease. Document: cash capital investments total $4,346 million for 2014. Technology and other includes early buyout of headquarters building operating lease. In investing activities discussion: \"Higher capital investments, including the early buyout of the long-term operating lease of our headquarters building for approximately $261 million, drove the increase...\" Also \"Capital investments in 2014 also included $99 million for the early buyout of locomotives and freight cars under long-term operating leases\". The question specifically \"without the early buyout of the operating lease of the headquarters\" - so subtract $261 million from $4,346 = $4,085 million. Need evidence: 4,346 | Total cash capital investments; 261 | early buyout of headquarters building operating lease (in text). Program subtract(4346, 261) = 4085. Answer 4085.",
+ "raw_content": "<evidence>\n4,346 | Total cash capital investments\n261 | early buyout of the long-term operating lease of our headquarters building\n</evidence>\n<program>subtract(4346, 261)</program>\n<answer>4085</answer>",
+ "usage": {
+  "prompt_tokens": 87174,
+  "completion_tokens": 249,
+  "total_tokens": 87423,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.26,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "4,346",
+   "element": "Total cash capital investments",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "261",
+   "element": "early buyout of the long-term operating lease of our headquarters building",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(4346, 261)",
+ "answer_model": "4085",
+ "program_value": 4085.0,
+ "docfinqa_row": 539
+}

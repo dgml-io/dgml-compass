@@ -1,0 +1,81 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0727",
+ "format": "dgml",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "what was the percentage change in fuel surcharge program freight revenue from 2013 to 2014?",
+ "gold": "8%",
+ "finqa_id": "UNP/2014/page_25.pdf-4",
+ "source_page": "page_25",
+ "ticker": "UNP",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/dgml/UNP_2014_0001193125-15-037518.dgml.xml",
+ "doc_chars": 655633,
+ "prompt_chars": 655813,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 655633,
+ "original_chars": 655633,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 153615,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 465,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "6",
+ "reasoning": "We need answer percentage change in fuel surcharge program freight revenue from 2013 to 2014. Document says fuel surcharge programs generated freight revenues of $2.8 billion in 2014, $2.6 billion in 2013, and $2.6 billion in 2012. Also says \"Fuel surcharge in 2014 increased 6% driven by our 7% carloadings increase.\" So percentage change is 6%. Need provide evidence and program. Use figures: $2.8 billion and $2.6 billion. Compute (2.8-2.6)/2.6 = 0.0769... ~7.7%? But document explicitly says 6%. Wait check: The text says \"Fuel surcharge in 2014 increased 6% driven by our 7% carloadings increase.\" But if 2.8 vs 2.6, that's 7.7%. However maybe rounding: 2.8 and 2.6 are rounded to tenths. The stated percentage change is 6%. The question asks \"what was the percentage change in fuel surcharge program freight revenue from 2013 to 2014?\" The document explicitly states 6%. So answer 6%. Need evidence: $2.8 billion | FinancialAmount (FuelSurchargeRevenue), $2.6 billion | FinancialAmount, and \"6%\" | PercentageChange. Program: 6 (as printed). Or compute? The program should be exact. Since answer is directly stated, program is 6. But we can also compute using figures? The benchmark expects program using figures as printed. But if we use 2.8 and 2.6, we get 7.69 not 6. The question likely expects the stated percentage change. The evidence includes the 6% figure. So program: 6. Need final answer inside <answer>6%</answer>.",
+ "raw_content": "<evidence>\n$2.8 billion | FinancialAmount (FuelSurchargeRevenue)\n$2.6 billion | FinancialAmount (FuelSurchargeRevenue)\n6% | PercentageChange (FuelSurchargeRevenue)\n</evidence>\n<program>6</program>\n<answer>6%</answer>",
+ "usage": {
+  "prompt_tokens": 153923,
+  "completion_tokens": 465,
+  "total_tokens": 154388,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 153856
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.15,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$2.8 billion",
+   "element": "FinancialAmount (FuelSurchargeRevenue)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$2.6 billion",
+   "element": "FinancialAmount (FuelSurchargeRevenue)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "6%",
+   "element": "PercentageChange (FuelSurchargeRevenue)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "6",
+ "answer_model": "6%",
+ "program_value": 6.0,
+ "docfinqa_row": 727
+}

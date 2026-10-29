@@ -1,0 +1,75 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0113",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "what is the change in the balance of liability for all restructuring from 2006 to 2008 , ( in millions ) ?",
+ "gold": "-19",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "IPG_2008_0001193125-09-040141.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/NotesToFinancial/RestructuringAndReorganizationCharges/ReportingUnitsAmounts/RestructuringLiabilityRollforward",
+  "/chunk/NotesToFinancial/RestructuringAndReorganizationCharges/ReportingUnitsAmounts/table/RestructuringLiabilityRollforward",
+  "/chunk/NotesToFinancial/RestructuringAndReorganizationCharges/ReportingUnitsAmounts/table/RestructuringLiabilityBalance",
+  "/chunk/NotesToFinancial/RestructuringAndReorganizationCharges/ReportingUnitsAmounts/table/RestructuringLiabilityChange",
+  "/chunk/NotesToFinancial/RestructuringAndReorganizationCharges/ReportingUnitsAmounts/table/RestructuringLiabilityChange/RestructuringLiabilityAmount"
+ ],
+ "r1_reasoning_chars": 0,
+ "r1_retried": true,
+ "r1_usage": {
+  "prompt_tokens": 23104,
+  "completion_tokens": 28,
+  "total_tokens": 23132,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/NotesToFinancial/RestructuringAndReorganizationCharges/ReportingUnitsAmounts/RestructuringLiabilityRollforward",
+  "/chunk/NotesToFinancial/RestructuringAndReorganizationCharges/ReportingUnitsAmounts/table/RestructuringLiabilityRollforward",
+  "/chunk/NotesToFinancial/RestructuringAndReorganizationCharges/ReportingUnitsAmounts/table/RestructuringLiabilityBalance",
+  "/chunk/NotesToFinancial/RestructuringAndReorganizationCharges/ReportingUnitsAmounts/table/RestructuringLiabilityChange",
+  "/chunk/NotesToFinancial/RestructuringAndReorganizationCharges/ReportingUnitsAmounts/table/RestructuringLiabilityChange/RestructuringLiabilityAmount"
+ ],
+ "content_chars": 6238,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "-19",
+ "reasoning": "We need change in total liability from 2006 to 2008. Total at Dec 31 2006 = 31.8, at Dec 31 2008 = 12.8. Change = 12.8 - 31.8 = -19.0. Question asks \"change in the balance of liability ... from 2006 to 2008\" likely decrease of 19.0. Need answer in millions. Provide evidence figures.",
+ "raw_content": "<evidence>$ 31.8 | RestructuringLiabilityAmount (Liability at December 31, 2006, Total)\n$ 12.8 | RestructuringLiabilityAmount (Liability at December 31, 2008, Total)\n</evidence>\n<program>subtract(12.8, 31.8)</program>\n<answer>-19.0</answer>",
+ "r2_usage": {
+  "prompt_tokens": 2147,
+  "completion_tokens": 178,
+  "total_tokens": 2325,
+  "audio_prompt_tokens": 0
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 31.8",
+   "element": "RestructuringLiabilityAmount (Liability at December 31, 2006, Total)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ 12.8",
+   "element": "RestructuringLiabilityAmount (Liability at December 31, 2008, Total)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(12.8, 31.8)",
+ "answer_model": "-19.0",
+ "program_value": -19.0,
+ "elapsed_s": 51.82,
+ "outline_source": "IPG_2008_0001193125-09-040141.outline.txt",
+ "outline_chars": 90097
+}

@@ -1,0 +1,53 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0014",
+ "format": "markdown_pdf_plumber",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "the combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable was what percent of the total ending balance as of november 28 2008?",
+ "gold": "11.0%",
+ "finqa_id": "ADBE/2008/page_89.pdf-3",
+ "source_page": "page_89",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_plumber/ADBE_2008_0000796343-09-000007.md",
+ "doc_chars": 913121,
+ "prompt_chars": 913431,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 913121,
+ "original_chars": 913121,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 209296,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 551,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "10.96%",
+ "reasoning": "We need answer. Need find combined amount accrued interest and penalties related to tax positions taken on tax returns and included in non-current income taxes payable. Document says: \"As of November 28, 2008, the combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable was approximately $15.3 million.\" Total ending balance? \"ending balance as of November 28, 2008\" likely gross liability for unrecognized tax benefits? The question: \"the combined amount ... was what percent of the total ending balance as of november 28 2008?\" Need identify total ending balance. Could be \"gross liability for unrecognized tax benefits at November 28, 2008 of $139.5 million\" exclusive of interest and penalties. But combined amount is interest and penalties, not part of that gross liability. Or \"total ending balance\" might refer to non-current income taxes payable? Balance sheet shows long-term income taxes payable $123,182 thousand. But that includes unrecognized tax benefits plus interest? Let's parse.\n\nQuestion wording: \"the combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable was what percent of the total ending balance as of november 28 2008?\" It asks percent of total ending balance. Which total ending balance? Likely \"total ending balance\" of unrecognized tax benefits? The document has \"Summary FIN 48 Changes\" ending balance as of November 28, 2008 $139,549 (gross unrecognized tax benefits). Then later \"As of November 28, 2008, the combined amount of accrued interest and penalties related to tax positions taken on our tax returns and included in non-current income taxes payable was approximately $15.3 million.\" The question asks percent of total ending balance. Could be percent of the ending balance of unrecognized tax benefits? 15.3 / 139.549 = 10.96%. But note the $139.5 million is exclusive of interest and penalties. The question says \"total ending balance\" maybe refers to \"total ending balance\" in the FIN 48 summary, which is $139,549. So answer ~11.0%. Need compute: 15.3 / 139.549 = 0.10964 = 10.96%. If using millions: 15.3/139.5 = 10.97%. Need final answer inside tags only value. Probably \"10.96%\" or \"11%\". Let's ensure no units? Question asks percent, so include % sign.",
+ "raw_content": "<answer>10.96%</answer>",
+ "usage": {
+  "prompt_tokens": 209467,
+  "completion_tokens": 551,
+  "total_tokens": 210018,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 208896
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 19.8,
+ "answer_tag_found": true,
+ "docfinqa_row": 14
+}

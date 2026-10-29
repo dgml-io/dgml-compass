@@ -1,0 +1,74 @@
+{
+ "id": "MRO_2009_0001193125-10-042898__row0516",
+ "format": "markdown_pdf",
+ "key": "MRO_2009_0001193125-10-042898",
+ "question": "by what percentage did the average wti crude oil benchmark decrease from 2007 to 2009?",
+ "gold": "-14.3%",
+ "finqa_id": "MRO/2009/page_56.pdf-1",
+ "source_page": "page_56",
+ "ticker": "MRO",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/markdown_pdf/MRO_2009_0001193125-10-042898.md",
+ "doc_chars": 531860,
+ "prompt_chars": 532035,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 531860,
+ "original_chars": 531860,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 122109,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 224,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "14.2522%",
+ "reasoning": "We need answer percentage decrease average WTI crude oil benchmark from 2007 to 2009. Document gives WTI crude oil (Dollars per barrel): 2009 $62.09, 2008 $99.75, 2007 $72.41. Decrease from 2007 to 2009: (72.41 - 62.09)/72.41 = 10.32/72.41 = 0.1425... = 14.25%. Need compute. Evidence: 62.09 | Benchmark table, 72.41 | Benchmark table. Program divide(subtract(72.41, 62.09), 72.41). Answer percentage maybe 14.25%.",
+ "raw_content": "<evidence>\n62.09 | Benchmark table (WTI crude oil 2009)\n72.41 | Benchmark table (WTI crude oil 2007)\n</evidence>\n<program>divide(subtract(72.41, 62.09), 72.41)</program>\n<answer>14.25%</answer>",
+ "usage": {
+  "prompt_tokens": 122417,
+  "completion_tokens": 224,
+  "total_tokens": 122641,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 122368
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.01,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "62.09",
+   "element": "Benchmark table (WTI crude oil 2009)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "72.41",
+   "element": "Benchmark table (WTI crude oil 2007)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(subtract(72.41, 62.09), 72.41)",
+ "answer_model": "14.25%",
+ "program_value": 0.14252175113934532,
+ "docfinqa_row": 516
+}

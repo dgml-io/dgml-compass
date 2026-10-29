@@ -1,0 +1,73 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0327",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "what is the current ratio?",
+ "gold": "-0.85",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "EW_2016_0001099800-17-000008.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/LiquidityAndCapitalResources",
+  "/chunk/section/BalanceSheet"
+ ],
+ "r1_reasoning_chars": 2771,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 17128,
+  "completion_tokens": 631,
+  "total_tokens": 17759,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 16896
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/LiquidityAndCapitalResources",
+  "/chunk/section/BalanceSheet"
+ ],
+ "content_chars": 122481,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "4.206573",
+ "reasoning": "We need current ratio = current assets / current liabilities. From balance sheet: Total current assets 2,240.0; Total current liabilities 532.5. Compute 2240.0/532.5 = 4.20657... Let's compute precisely: 2240/532.5 = 4.206572769... Usually current ratio expressed as 4.21. Need answer value. The question asks \"what is the current ratio?\" So answer numeric. Use figures as printed: 2,240.0 and 532.5. Program: divide(2240.0, 532.5). Evidence: list figures.",
+ "raw_content": "<evidence>2,240.0 | Total current assets\n532.5 | Total current liabilities</evidence>\n<program>divide(2240.0, 532.5)</program>\n<answer>4.21</answer>",
+ "r2_usage": {
+  "prompt_tokens": 28533,
+  "completion_tokens": 185,
+  "total_tokens": 28718,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "2,240.0",
+   "element": "Total current assets",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "532.5",
+   "element": "Total current liabilities",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(2240.0, 532.5)",
+ "answer_model": "4.21",
+ "program_value": 4.206572769953052,
+ "elapsed_s": 6.06,
+ "outline_source": "EW_2016_0001099800-17-000008.outline.txt",
+ "outline_chars": 67317
+}

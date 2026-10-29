@@ -1,0 +1,74 @@
+{
+ "id": "IP_2007_0001193125-08-042850__row0683",
+ "format": "markdown_pdf_plumber",
+ "key": "IP_2007_0001193125-08-042850",
+ "question": "what percentage of industrial packaging sales where represented by european industrial packaging net sales in 2006?",
+ "gold": "20%",
+ "finqa_id": "IP/2007/page_31.pdf-2",
+ "source_page": "page_31",
+ "ticker": "IP",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_plumber/IP_2007_0001193125-08-042850.md",
+ "doc_chars": 478788,
+ "prompt_chars": 478992,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 478788,
+ "original_chars": 478788,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 118162,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 538,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "20.324873",
+ "reasoning": "We need to find European Industrial Packaging net sales in 2006 and total Industrial Packaging sales in 2006. From the document, in the \"EUROPEAN SALES BY INDUSTRY SEGMENT\" table: 2006 Industrial Packaging = 1,001 million. Total Industrial Packaging net sales in 2006 from \"NET SALES\" table: Industrial Packaging 2006 = 4,925 million. So percentage = 1001/4925 * 100. Compute: 1001/4925 = 0.20325... so 20.325%. Let's compute precisely: 1001/4925 = 0.203248... *100 = 20.3248%. Round to maybe 20.3%. The question asks \"what percentage\" - likely answer as a number. We'll provide 20.3% or 20.32%. Use exact division. We'll put evidence: 1,001 | European Industrial Packaging net sales 2006 (from European Sales by Industry Segment table) and 4,925 | Industrial Packaging net sales 2006 (from Net Sales table). Program: divide(1001, 4925) then multiply by 100? The program should be exact. We can do multiply(divide(1001, 4925), 100). But the instruction says \"nested calls over the figures as printed\" - we can use divide(1001, 4925) and then multiply? Actually we need to output the percentage value. The program can be multiply(divide(1001, 4925), 100). But the figures are printed as 1,001 and 4,925. We'll use those. So answer: 20.3248... We'll put inside <answer>20.3%</answer> or maybe 20.32%. The question doesn't specify rounding. Usually they expect a number. I'll give 20.3% but to be safe, give 20.32%. Let's compute exactly: 1001/4925 = 0.203248730964467... *100 = 20.3248730964467. So 20.32% if two decimals. I'll put 20.32%.",
+ "raw_content": "<evidence>\n1,001 | European Industrial Packaging net sales 2006 (European Sales by Industry Segment)\n4,925 | Industrial Packaging net sales 2006 (Net Sales)\n</evidence>\n<program>multiply(divide(1001, 4925), 100)</program>\n<answer>20.32%</answer>",
+ "usage": {
+  "prompt_tokens": 118469,
+  "completion_tokens": 538,
+  "total_tokens": 119007,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 18.79,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,001",
+   "element": "European Industrial Packaging net sales 2006 (European Sales by Industry Segment)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "4,925",
+   "element": "Industrial Packaging net sales 2006 (Net Sales)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(1001, 4925), 100)",
+ "answer_model": "20.32%",
+ "program_value": 20.324873096446698,
+ "docfinqa_row": 683
+}

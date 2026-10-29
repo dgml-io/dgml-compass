@@ -1,0 +1,53 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0614",
+ "format": "markdown_pdf_rules",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what portion of the equity compensation plan approved by security holders is to be issued upon the exercise of options warrants and rights?",
+ "gold": "9.9%",
+ "finqa_id": "HII/2017/page_124.pdf-1",
+ "source_page": "page_124",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/markdown_pdf_rules/HII_2017_0001501585-18-000006.md",
+ "doc_chars": 465382,
+ "prompt_chars": 465610,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 465382,
+ "original_chars": 465382,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 102037,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 298,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "448,859",
+ "reasoning": "We need to find the portion of equity compensation plan approved by security holders that is to be issued upon exercise of options, warrants, and rights. From the document, in Item 12, there is a table \"Equity Compensation Plan Information\" as of December 31, 2017. The table shows:\n\nPlan category: Equity compensation plans approved by security holders. Column (a) Number of securities to be issued upon exercise of outstanding options, warrants and rights: 448,859. Column (b) Weighted-average exercise price: $0.00. Column (c) Number of securities remaining available for future issuance: 4,087,587.\n\nThe question asks: \"what portion of the equity compensation plan approved by security holders is to be issued upon the exercise of options warrants and rights?\" That is the number in column (a) for that category. So the answer is 448,859. But the question might be asking for a portion (fraction) or the number? It says \"what portion\" - could be the number of securities. The phrasing \"portion\" might mean the amount. The table gives the number. So answer is 448,859.\n\nWe should output just the value. The question says \"Give the final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So we put 448859.",
+ "raw_content": "<answer>448,859</answer>",
+ "usage": {
+  "prompt_tokens": 102189,
+  "completion_tokens": 298,
+  "total_tokens": 102487,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 102144
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.13,
+ "answer_tag_found": true,
+ "docfinqa_row": 614
+}

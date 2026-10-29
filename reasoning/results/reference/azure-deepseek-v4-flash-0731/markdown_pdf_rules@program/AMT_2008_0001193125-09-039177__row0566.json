@@ -1,0 +1,73 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0566",
+ "format": "markdown_pdf_rules",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "as of december 31 , 2008 , what was the percent of the maturities in 2012 of the aggregate carrying value of long-term debt , including capital leases",
+ "gold": "45.3%",
+ "finqa_id": "AMT/2008/page_94.pdf-1",
+ "source_page": "page_94",
+ "ticker": "AMT",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_rules/AMT_2008_0001193125-09-039177.md",
+ "doc_chars": 413481,
+ "prompt_chars": 413720,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 413481,
+ "original_chars": 413481,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93036,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 628,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "45.297851",
+ "reasoning": "We need answer percent of maturities in 2012 of aggregate carrying value of long-term debt including capital leases as of Dec 31 2008. Need find figures. From note 6 maturities table: \"As of December 31, 2008, aggregate carrying value of long-term debt, including capital leases, for the next five years and thereafter are estimated to be (in thousands): 2009 $1,837; 2010 $60,989; 2011 $1,018; 2012 $1,962,822; 2013 $646; Thereafter $2,305,054; Total cash obligations $4,332,366; Unamortized discounts and premiums, net $780; Balance as of December 31, 2008 $4,333,146.\" The question: \"as of december 31 , 2008 , what was the percent of the maturities in 2012 of the aggregate carrying value of long-term debt , including capital leases\" So percent = 2012 maturities / aggregate carrying value? Aggregate carrying value is $4,333,146 (including unamortized discounts/premiums). But \"maturities in 2012\" from table is $1,962,822. Percent = 1,962,822 / 4,333,146 *100. Compute. 1,962,822 / 4,333,146 ≈ 0.45298? Let's calculate precisely. 4,333,146 *0.45 = 1,949,915.7. Difference 12,906.3. /4,333,146=0.002978. So 0.452978 = 45.2978%. So ~45.3%. Need answer value only. Evidence: list figures. Use program divide(1962822, 4333146) maybe multiply by 100? The program should compute answer as percent? The question asks percent, so program should output number maybe 45.2978. But instructions: \"Give final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" The question asks \"what was the percent\" so answer should be numeric percent. Program: multiply(divide(1962822, 4333146), 100) = 45.2978. Need evidence lines: 1,962,822 | Maturities table 2012; 4,333,146 | Balance as of December 31, 2008. Also maybe total cash obligations 4,332,366? But aggregate carrying value is 4,333,146. Use that.",
+ "raw_content": "<evidence>\n1,962,822 | Maturities table 2012\n4,333,146 | Balance as of December 31, 2008\n</evidence>\n<program>multiply(divide(1962822, 4333146), 100)</program>\n<answer>45.2978</answer>",
+ "usage": {
+  "prompt_tokens": 93359,
+  "completion_tokens": 628,
+  "total_tokens": 93987,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 14.91,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,962,822",
+   "element": "Maturities table 2012",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "4,333,146",
+   "element": "Balance as of December 31, 2008",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "multiply(divide(1962822, 4333146), 100)",
+ "answer_model": "45.2978",
+ "program_value": 45.29785056861689,
+ "docfinqa_row": 566
+}

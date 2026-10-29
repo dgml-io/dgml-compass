@@ -1,0 +1,74 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0069",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what portion of the total investment is allocated to mutual funds in 2011?",
+ "gold": "65.1%",
+ "format": "dgml_nav@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "doc_source": "ADI_2011_0000950123-11-099928.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/NotesToFinancial/DeferredCompensationPlanInvestments/DeferredCompensationPlanInvestmentsDescription",
+  "/chunk/NotesToFinancial/DeferredCompensationPlanInvestments/table",
+  "/chunk/NotesToFinancial/DeferredCompensationPlanInvestments/table/DeferredCompensationPlanInvestments"
+ ],
+ "r1_reasoning_chars": 0,
+ "r1_retried": true,
+ "r1_usage": {
+  "prompt_tokens": 24737,
+  "completion_tokens": 20,
+  "total_tokens": 24757,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 24576
+  }
+ },
+ "matched_xpaths": [
+  "/chunk/NotesToFinancial/DeferredCompensationPlanInvestments/DeferredCompensationPlanInvestmentsDescription",
+  "/chunk/NotesToFinancial/DeferredCompensationPlanInvestments/table",
+  "/chunk/NotesToFinancial/DeferredCompensationPlanInvestments/table/DeferredCompensationPlanInvestments"
+ ],
+ "content_chars": 5309,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "ok": true,
+ "answer": "0.349224",
+ "reasoning": "We need answer portion. Need figures: mutual funds 2011 = 9,223; total 2011 = 26,410. Portion = 9223/26410. Need compute. Evidence lines.",
+ "raw_content": "<evidence>9,223 | Mutual funds 2011 InvestmentAmount\n$ 26,410 | Total Deferred Compensation Plan investments 2011 InvestmentAmount</evidence>\n<program>divide(9223, 26410)</program>",
+ "r2_usage": {
+  "prompt_tokens": 1523,
+  "completion_tokens": 96,
+  "total_tokens": 1619,
+  "audio_prompt_tokens": 0
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "9,223",
+   "element": "Mutual funds 2011 InvestmentAmount",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$ 26,410",
+   "element": "Total Deferred Compensation Plan investments 2011 InvestmentAmount",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(9223, 26410)",
+ "answer_model": null,
+ "program_value": 0.3492237788716395,
+ "elapsed_s": 48.08,
+ "outline_source": "ADI_2011_0000950123-11-099928.outline.txt",
+ "outline_chars": 98954
+}

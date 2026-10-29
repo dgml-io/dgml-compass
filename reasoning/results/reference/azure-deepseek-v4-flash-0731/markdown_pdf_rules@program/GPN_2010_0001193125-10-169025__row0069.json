@@ -1,0 +1,86 @@
+{
+ "id": "GPN_2010_0001193125-10-169025__row0069",
+ "format": "markdown_pdf_rules",
+ "key": "GPN_2010_0001193125-10-169025",
+ "question": "what is the percentage change in the total fair value of non-vested shares from 2009 to 2010?",
+ "gold": "-4.1%",
+ "finqa_id": "GPN/2010/page_89.pdf-4",
+ "source_page": "page_89",
+ "ticker": "GPN",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/markdown_pdf_rules/GPN_2010_0001193125-10-169025.md",
+ "doc_chars": 316684,
+ "prompt_chars": 316866,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 316684,
+ "original_chars": 316684,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 70390,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 282,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-6.4304%",
+ "reasoning": "We need percentage change in total fair value of non-vested shares from 2009 to 2010. The table shows non-vested restricted stock awards: shares and weighted average grant-date fair value. Total fair value = shares * weighted average fair value. For 2009: 762 thousand shares * $42 = $32,004 thousand. For 2010: 713 thousand * $42 = $29,946 thousand. Percentage change = (29,946 - 32,004)/32,004 = -6.43% approximately. Need exact figures: 762, 42, 713, 42. Compute: 762*42=32004, 713*42=29946. Change = -2058/32004 = -0.0643 = -6.43%. Answer as percentage.",
+ "raw_content": "<evidence>\n762 | Non-vested at May 31, 2009\n42 | Weighted Average Grant-Date Fair Value (2009)\n713 | Non-vested at May 31, 2010\n42 | Weighted Average Grant-Date Fair Value (2010)\n</evidence>\n<program>divide(subtract(multiply(713, 42), multiply(762, 42)), multiply(762, 42))</program>\n<answer>-6.43%</answer>",
+ "usage": {
+  "prompt_tokens": 70702,
+  "completion_tokens": 282,
+  "total_tokens": 70984,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.82,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "762",
+   "element": "Non-vested at May 31, 2009",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "42",
+   "element": "Weighted Average Grant-Date Fair Value (2009)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "713",
+   "element": "Non-vested at May 31, 2010",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "42",
+   "element": "Weighted Average Grant-Date Fair Value (2010)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "divide(subtract(multiply(713, 42), multiply(762, 42)), multiply(762, 42))",
+ "answer_model": "-6.43%",
+ "program_value": -0.06430446194225722,
+ "docfinqa_row": 69
+}

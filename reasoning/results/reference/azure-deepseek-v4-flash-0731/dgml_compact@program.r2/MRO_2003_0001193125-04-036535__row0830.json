@@ -1,0 +1,59 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0830",
+ "format": "dgml_compact",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "for natural gas options in place to manage the price risk , what is the change in the percentage of the anticipated natural gas purchases hedged between the first quarter of 2004 and the second quarter of 2004?",
+ "gold": "10",
+ "finqa_id": "MRO/2003/page_84.pdf-1",
+ "source_page": "page_84",
+ "ticker": "MRO",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/dgml_compact/MRO_2003_0001193125-04-036535.dgml.txt",
+ "doc_chars": 625257,
+ "prompt_chars": 625556,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 625257,
+ "original_chars": 625257,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 138745,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 429,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-10 percentage points",
+ "reasoning": "We need answer change in percentage between Q1 2004 and Q2 2004. Document says: \"natural gas options are in place to manage the price risk associated with approximately 60% of the anticipated natural gas purchases for refinery use through the first quarter of 2004 and 50% through the second quarter of 2004.\" So change = 60% - 50% = 10 percentage points decrease. Need answer value. Probably \"10 percentage points\" or \"-10 percentage points\"? Question asks \"what is the change in the percentage ... between first quarter and second quarter?\" Could be decrease of 10 percentage points. We'll output 10 percentage points? They want value only. Likely \"10 percentage points\" or \"-10\". Let's see. The change from Q1 to Q2 is 60% to 50%, so change is -10 percentage points. But \"change\" could be absolute difference 10. We'll answer -10 percentage points? The question: \"what is the change in the percentage ... between the first quarter of 2004 and the second quarter of 2004?\" Usually change = second - first = -10. We'll output -10 percentage points. But they said no units unless asked. They ask percentage change? \"change in the percentage\" so answer could be \"10 percentage points\" or \"-10 percentage points\". I'll put -10 percentage points. But final answer inside tags only value. Maybe \"10 percentage points\" if they want magnitude. Let's read exact: \"for natural gas options in place to manage the price risk , what is the change in the percentage of the anticipated natural gas purchases hedged between the first quarter of 2004 and the second quarter of 2004?\" The document says approximately 60% through first quarter and 50% through second quarter. So change = 50-60 = -10 percentage points. I'll answer -10 percentage points. But they might expect \"10 percentage points\" as decrease. I'll put -10 percentage points.",
+ "raw_content": "<answer>-10 percentage points</answer>",
+ "usage": {
+  "prompt_tokens": 139076,
+  "completion_tokens": 429,
+  "total_tokens": 139505,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 11.37,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": null,
+ "answer_model": "-10 percentage points",
+ "program_value": null,
+ "docfinqa_row": 830
+}

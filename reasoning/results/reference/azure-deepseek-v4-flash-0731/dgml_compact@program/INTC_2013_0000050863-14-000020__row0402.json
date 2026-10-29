@@ -1,0 +1,78 @@
+{
+ "id": "INTC_2013_0000050863-14-000020__row0402",
+ "format": "dgml_compact",
+ "key": "INTC_2013_0000050863-14-000020",
+ "question": "what percentage of major facilities by square footage are leased as of december 28 , 2013?",
+ "gold": "15%",
+ "finqa_id": "INTC/2013/page_29.pdf-2",
+ "source_page": "page_29",
+ "ticker": "INTC",
+ "fiscal_year": "2013",
+ "source_file": "data/docs/dgml_compact/INTC_2013_0000050863-14-000020.dgml.txt",
+ "doc_chars": 546358,
+ "prompt_chars": 546537,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 546358,
+ "original_chars": 546358,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 118559,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "stop",
+   "completion_tokens": 429,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 1,
+ "ok": true,
+ "answer": "15.118397",
+ "reasoning": "We need percentage of major facilities by square footage that are leased. From properties table: Owned facilities total 46.6, Leased facilities total 8.3, Total 54.9. Leased percentage = 8.3 / 54.9 * 100 ≈ 15.118... Let's compute: 8.3 / 54.9 = 0.15118... = 15.12%. The question asks \"what percentage of major facilities by square footage are leased\". So answer 15.1% or 15.12%. We'll provide exact value. Use figures: 8.3 and 54.9. Program: divide(8.3, 54.9) then multiply by 100? The program should be exact. We can do multiply(divide(8.3, 54.9), 100). But the benchmark expects a number. We'll output 15.118... maybe round to 15.1%. The instruction: \"Give your final answer inside <answer></answer> tags, containing only the value itself with no explanation or units unless the question asks for them.\" So just 15.1? Or 15.12? Typically percentage. We'll compute precisely: 8.3/54.9 = 0.151184... *100 = 15.1184%. So answer 15.1% or 15.12%. I'll put 15.1. But to be safe, maybe 15.12. Let's compute exactly: 8.3 / 54.9 = 83/549 = 0.151184... So 15.1184%. I'll put 15.1. Evidence: 8.3 | Leased facilities total, 54.9 | Total facilities.",
+ "raw_content": "<evidence>\n8.3 | Leased facilities total\n54.9 | Total facilities\n</evidence>\n<program>multiply(divide(8.3, 54.9), 100)</program>\n<answer>15.1</answer>",
+ "usage": {
+  "prompt_tokens": 118866,
+  "completion_tokens": 429,
+  "total_tokens": 119295,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 118784
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 4.9,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "8.3",
+   "element": "Leased facilities total",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "54.9",
+   "element": "Total facilities",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(8.3, 54.9), 100)",
+ "answer_model": "15.1",
+ "program_value": 15.118397085610201,
+ "docfinqa_row": 402
+}

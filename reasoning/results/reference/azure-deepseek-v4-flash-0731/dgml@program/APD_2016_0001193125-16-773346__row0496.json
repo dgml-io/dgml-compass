@@ -1,0 +1,74 @@
+{
+ "id": "APD_2016_0001193125-16-773346__row0496",
+ "format": "dgml",
+ "key": "APD_2016_0001193125-16-773346",
+ "question": "considering the year 2016 , what is the short-term debt as a percent of total debt?",
+ "gold": "21%",
+ "finqa_id": "APD/2016/page_96.pdf-2",
+ "source_page": "page_96",
+ "ticker": "APD",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/dgml/APD_2016_0001193125-16-773346.dgml.xml",
+ "doc_chars": 924924,
+ "prompt_chars": 925096,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 924924,
+ "original_chars": 924924,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 222653,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 140,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "15.032449",
+ "reasoning": "We need answer: short-term debt as percent of total debt for 2016. Short-term borrowings = $935.8 million. Total debt = $6,225.2 million. Percent = 935.8 / 6225.2 * 100 = 15.03%. Need evidence figures.",
+ "raw_content": "<evidence>\n$935.8 | Short-term borrowings (Total Debt table, Note 15)\n$6,225.2 | Total Debt (Total Debt table, Note 15)\n</evidence>\n<program>multiply(divide(935.8, 6225.2), 100)</program>\n<answer>15.03</answer>",
+ "usage": {
+  "prompt_tokens": 222960,
+  "completion_tokens": 140,
+  "total_tokens": 223100,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 25.19,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$935.8",
+   "element": "Short-term borrowings (Total Debt table, Note 15)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$6,225.2",
+   "element": "Total Debt (Total Debt table, Note 15)",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(935.8, 6225.2), 100)",
+ "answer_model": "15.03",
+ "program_value": 15.032448756666453,
+ "docfinqa_row": 496
+}

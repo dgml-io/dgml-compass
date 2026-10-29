@@ -1,0 +1,72 @@
+{
+ "id": "LMT_2015_0001193125-16-476010__row0459",
+ "key": "LMT_2015_0001193125-16-476010",
+ "question": "what was the percentage change in total long-term debt net from 2014 to 2015?",
+ "gold": "148%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "LMT_2015_0001193125-16-476010.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/ConsolidatedBalanceSheets/table/LongTermDebtNetBalance"
+ ],
+ "r1_reasoning_chars": 2216,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 28886,
+  "completion_tokens": 552,
+  "total_tokens": 29438,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/ConsolidatedBalanceSheets/table/LongTermDebtNetBalance"
+ ],
+ "content_chars": 1696,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "132.904591",
+ "reasoning": "We need percentage change in total long-term debt net from 2014 to 2015. The region has LongTermDebtNetBalance with two DebtPrincipalAmount: 14,305 and 6,142. Need to know which is 2015 and which is 2014. Typically balance sheet shows current year first, then prior year. So 2015 = 14,305, 2014 = 6,142. Percentage change = (14,305 - 6,142)/6,142 * 100. Compute.",
+ "raw_content": "<evidence>14,305 | LongTermDebtNetBalance DebtPrincipalAmount (2015)\n6,142 | LongTermDebtNetBalance DebtPrincipalAmount (2014)</evidence>\n<program>multiply(divide(subtract(14305, 6142), 6142), 100)</program>\n<answer>132.9</answer>",
+ "r2_usage": {
+  "prompt_tokens": 789,
+  "completion_tokens": 189,
+  "total_tokens": 978,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "14,305",
+   "element": "LongTermDebtNetBalance DebtPrincipalAmount (2015)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "6,142",
+   "element": "LongTermDebtNetBalance DebtPrincipalAmount (2014)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(subtract(14305, 6142), 6142), 100)",
+ "answer_model": "132.9",
+ "program_value": 132.90459133832627,
+ "elapsed_s": 5.63,
+ "outline_source": "LMT_2015_0001193125-16-476010.outline.txt",
+ "outline_chars": 116705
+}

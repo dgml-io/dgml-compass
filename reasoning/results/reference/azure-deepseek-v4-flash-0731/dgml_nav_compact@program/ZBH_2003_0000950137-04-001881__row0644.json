@@ -1,0 +1,70 @@
+{
+ "id": "ZBH_2003_0000950137-04-001881__row0644",
+ "key": "ZBH_2003_0000950137-04-001881",
+ "question": "what is the change in finished goods in millions between 2002 and 2003?",
+ "gold": "177.6",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "ZBH_2003_0000950137-04-001881.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/FilingHeader/Inventories"
+ ],
+ "r1_reasoning_chars": 2068,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 13269,
+  "completion_tokens": 570,
+  "total_tokens": 13839,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/FilingHeader/Inventories"
+ ],
+ "content_chars": 6017,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "177.6",
+ "reasoning": "We need answer change in finished goods between 2002 and 2003. From table: Finished goods 2003 $384.3, 2002 $206.7. Change = 384.3 - 206.7 = 177.6. Need provide evidence and program.",
+ "raw_content": "<evidence>\n$ 384.3 | Finished goods 2003\n$ 206.7 | Finished goods 2002\n</evidence>\n<program>subtract(384.3, 206.7)</program>\n<answer>177.6</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1647,
+  "completion_tokens": 118,
+  "total_tokens": 1765,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 384.3",
+   "element": "Finished goods 2003",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$ 206.7",
+   "element": "Finished goods 2002",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(384.3, 206.7)",
+ "answer_model": "177.6",
+ "program_value": 177.60000000000002,
+ "elapsed_s": 4.69,
+ "outline_source": "ZBH_2003_0000950137-04-001881.outline.txt",
+ "outline_chars": 52082
+}

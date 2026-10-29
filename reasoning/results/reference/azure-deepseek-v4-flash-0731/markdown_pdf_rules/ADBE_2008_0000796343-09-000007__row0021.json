@@ -1,0 +1,50 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0021",
+ "format": "markdown_pdf_rules",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "what is the percentage change in the the gross liability for unrecognized tax benefits during 2008 compare to 2007?",
+ "gold": "-30.9%",
+ "finqa_id": "ADBE/2008/page_89.pdf-2",
+ "source_page": "page_89",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_rules/ADBE_2008_0000796343-09-000007.md",
+ "doc_chars": 443328,
+ "prompt_chars": 443532,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 443328,
+ "original_chars": 443328,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 95226,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 987,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-30.85%",
+ "reasoning": "We need to find the gross liability for unrecognized tax benefits at end of 2007 and 2008. From Note 8: \"The gross liability for unrecognized tax benefits at November 28, 2008 was $139.5 million, exclusive of interest and penalties.\" For 2007, we have \"Upon adoption, the gross liability for unrecognized tax benefits at December 1, 2007 was $218.4 million, exclusive of interest and penalties.\" But that is at adoption (start of fiscal 2008). The question asks \"during 2008 compare to 2007\" - likely comparing end of 2008 to end of 2007? But the document gives beginning balance as of Dec 1, 2007 (which is start of fiscal 2008) as $218.4 million. However, there is also a summary of changes: \"Beginning balance as of December 1, 2007 $ 201,808\" (in thousands) which is $201.8 million. That is the gross unrecognized tax benefits excluding interest? Actually the note says \"During fiscal 2008, our aggregate changes in our total gross amount of unrecognized tax benefits are summarized as follows: Beginning balance as of December 1, 2007 $ 201,808\" (in thousands). That is $201.8 million. The $218.4 million includes interest and penalties? The text says \"Upon adoption, the gross liability for unrecognized tax benefits at December 1, 2007 was $218.4 million, exclusive of interest and penalties.\" But then later they say \"The gross liability for unrecognized tax benefits at November 28, 2008 of $139.5 million is exclusive of interest and penalties.\" So both are exclusive of interest and penalties. But the beginning balance in the rollforward is $201.8 million, which is different. Possibly the $218.4 million includes something else? Let's read carefully: \"Upon adoption, the gross liability for unrecognized tax benefits at December 1, 2007 was $218.4 million, exclusive of interest and penalties.\" Then later: \"The gross liability for unrecognized tax benefits at November 28, 2008 of $139.5 million is exclusive of interest and penalties.\" And the rollforward shows beginning balance $201,808 (thousands) = $201.8 million. There is a discrepancy. Perhaps the $218.4 million includes the liability from acquired companies? Actually the text says: \"The total amount of gross FIN 48 liabilities included $57.7 million that relates to certain tax attributes from acquired companies, including Macromedia. These liabilities from acquired companies are not recorded on our balance sheet because they are related to positions that have not yet been claimed on our income tax returns.\" So the $218.4 million might be the total gross liability including those not recorded? But the rollforward beginning balance is $201.8 million which is the recorded amount? The question asks \"the gross liability for unrecognized tax benefits\" - likely the one reported on balance sheet. The rollforward gives beginning and ending. So we can compute percentage change from $201.8 million to $139.5 million. But the question says \"during 2008 compare to 2007\" - maybe they want the change from end of 2007 to end of 2008. End of 2007 is the same as beginning of 2008 (since fiscal year ends Nov 30, 2007). So beginning balance as of Dec 1, 2007 is the end of fiscal 2007. So we have $201.8 million at end of 2007 and $139.5 million at end of 2008. Percentage change = (139.5 - 201.8)/201.8 * 100 = (-62.3)/201.8 * 100 = -30.87% approximately. But we need to be precise. The numbers are in thousands: 201,808 and 139,549. So change = (139,549 - 201,808)/201,808 = -62,259/201,808 = -0.3085 = -30.85%. So answer is -30.85% or -30.9%. The question asks \"what is the percentage change\" - likely they want the percentage change, maybe negative. We'll provide the value. Ensure we use the correct numbers. The rollforward is the authoritative source. So answer: -30.85% (or -30.9%). We'll put the number without units? The question asks for percentage change, so we give the percentage. We'll put -30.85% inside tags.",
+ "raw_content": "<answer>-30.85%</answer>",
+ "usage": {
+  "prompt_tokens": 95379,
+  "completion_tokens": 987,
+  "total_tokens": 96366,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.49,
+ "answer_tag_found": true,
+ "docfinqa_row": 21
+}

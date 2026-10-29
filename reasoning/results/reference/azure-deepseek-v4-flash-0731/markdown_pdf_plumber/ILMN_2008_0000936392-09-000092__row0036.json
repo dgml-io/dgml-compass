@@ -1,0 +1,50 @@
+{
+ "id": "ILMN_2008_0000936392-09-000092__row0036",
+ "format": "markdown_pdf_plumber",
+ "key": "ILMN_2008_0000936392-09-000092",
+ "question": "during 2008 what was the share price of the warrants exercised\\\\n",
+ "gold": "7.47",
+ "finqa_id": "ILMN/2008/page_82.pdf-1",
+ "source_page": "page_82",
+ "ticker": "ILMN",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_plumber/ILMN_2008_0000936392-09-000092.md",
+ "doc_chars": 364727,
+ "prompt_chars": 364881,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 364727,
+ "original_chars": 364727,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 91437,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1577,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer: \"during 2008 what was the share price of the warrants exercised\" The question asks share price of warrants exercised. In document, warrants exercised in 2008: \"Warrants exercised 356 4 2,987\" in stockholder equity, and cash flow \"Proceeds from warrant exercises 2,991\". Also note 10: \"During the year ended December 28, 2008, there were 401,362 warrants exercised, resulting in cash proceeds to the Company of $3.0 million.\" That gives exercise price? Cash proceeds / number = ~$7.47? But question asks \"share price of the warrants exercised\" - ambiguous. Could be exercise price? The warrants exercised had exercise price? In table of warrants outstanding, there are warrants with exercise prices $7.27 and $10.91. The ones exercised in 2008 likely those with $7.27? Actually cash proceeds $3.0 million for 401,362 warrants = ~$7.47 per share. But note says \"resulting in cash proceeds to the Company of $3.0 million\" - that is exercise price times shares. So exercise price ~$7.47? But the table shows warrants with exercise price $7.27 and $10.91. The ones exercised might be a mix. The question \"share price of the warrants exercised\" might mean the exercise price per share. The document states \"Warrants exercised 356 4 2,987\" in thousands, so 356 thousand shares, $2,987 thousand proceeds, average $8.39? Wait 2,987/356 = 8.39. But note says 401,362 warrants exercised, cash proceeds $3.0 million. That gives 7.47. There is discrepancy because the stockholder equity table shows 356 (thousands) and 2,987 (thousands) = 8.39. The cash flow statement shows 2,991. The note says 401,362 and $3.0 million. So average ~$7.47. But question asks \"share price of the warrants exercised\" - likely the exercise price. The document does not explicitly give the exercise price of the warrants exercised in 2008. It gives exercise prices of outstanding warrants. The ones exercised might be from the Solexa warrants with exercise prices $7.27 or $10.91. The cash proceeds per share ~$7.47 suggests a mix. But the question might be asking for the \"share price\" meaning the market price at exercise? No, that's not given. The question says \"during 2008 what was the share price of the warrants exercised\" - could be interpreted as the exercise price per share. The document says \"Warrants exercised 356 4 2,987\" in the statement of stockholders' equity: 356 thousand shares, $4 par value, $2,987 thousand additional paid-in capital? Actually that line: \"Warrants exercised 356 4 2,987\" - shares 356, amount 4 (common stock par), additional paid-in capital 2,987. So total proceeds = 4+2,987 = 2,991 thousand. So average price = 2,991/356 = 8.40. But note says 401,362 warrants exercised, cash proceeds $3.0 million. That gives 7.47. There is inconsistency. The question likely expects the exercise price per share. The document does not explicitly state the exercise price of the warrants exercised. It only gives the total proceeds and number. So we can compute average exercise price = $2,991,000 / 356,000 = $8.40? Or using note: $3,000,000 / 401,362 = $7.47. But the question asks \"share price\" not \"exercise price\". Could be the market price at the time? Not given. So answer might be NOT_FOUND because the share price (market price) is not given. But the question says \"share price of the warrants exercised\" - in context of warrants, the \"share price\" might refer to the exercise price per share. The document gives the exercise prices of outstanding warrants, but not specifically which ones were exercised. However, the note says \"During the year ended December 28, 2008, there were 401,362 warrants exercised, resulting in cash proceeds to the Company of $3.0 million.\" That implies average exercise price ~$7.47. But the question asks \"what was the share price\" - could be the exercise price. I think the answer should be the average exercise price computed from the data. But the question might be a trick: the document does not provide the share price (market price) of the warrants exercised. It provides the exercise price. The wording \"share price of the warrants exercised\" is ambiguous. In financial context, \"share price\" usually means market price. The document does not give the market price at exercise. So NOT_FOUND.\n\nBut let's read the question exactly: \"during 2008 what was the share price of the warrants exercised\" - It might be asking for the exercise price per share. The document says \"Warrants exercised 356 4 2,987\" in the statement of stockholders' equity. That line shows shares, par value, and additional paid-in capital. The total proceeds = 2,991 thousand. So average price = 2,991/356 = 8.40. But the note says 401,362 warrants exercised, cash proceeds $3.0 million. That gives 7.47. Which is correct? The statement of stockholders' equity shows 356 thousand shares, but the note says 401,362. There is a discrepancy. Possibly the 356 thousand is net of something? Or the note includes warrants exercised from a different plan? The cash flow statement shows \"Proceeds from warrant exercises 2,991\" for 2008. So total cash proceeds $2,991 thousand. The number of warrants exercised per note is 401,362. So average price = 2,991,000 / 401,362 = 7.45. But the statement of stockholders' equity shows 356 thousand shares, which is inconsistent. Maybe the 356 is in thousands of shares, but the note says 401,362 warrants, which is 401 thousand. So the statement shows 356 thousand, but note says 401 thousand. That's a discrepancy. Possibly the statement includes only some? The question likely expects the exercise price from the note: $3.0 million / 401,362 = $7.47. But the question says \"share price\" not \"exercise price\". I think the answer is NOT_FOUND because the market price is not given.\n\nGiven the instruction: \"If the document does not contain enough information, put NOT_FOUND\". The document does not state the market price of the warrants at exercise. It only gives the exercise price (implied) and the number. So I'll answer NOT_FOUND.\n\nBut let's double-check: The question might be from a dataset where they expect the exercise price. The phrase \"share price of the warrants exercised\" could be interpreted as the price per share at which the warrants were exercised (i.e., exercise price). The document gives that indirectly. However, the question says \"share price\" not \"exercise price\". In common usage, \"share price\" is the market price. So NOT_FOUND.\n\nI'll answer NOT_FOUND.",
+ "raw_content": "<answer>NOT_FOUND</answer>",
+ "usage": {
+  "prompt_tokens": 91581,
+  "completion_tokens": 1577,
+  "total_tokens": 93158,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 14.19,
+ "answer_tag_found": true,
+ "docfinqa_row": 36
+}

@@ -1,0 +1,56 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0830",
+ "format": "dgml",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "for natural gas options in place to manage the price risk , what is the change in the percentage of the anticipated natural gas purchases hedged between the first quarter of 2004 and the second quarter of 2004?",
+ "gold": "10",
+ "finqa_id": "MRO/2003/page_84.pdf-1",
+ "source_page": "page_84",
+ "ticker": "MRO",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/dgml/MRO_2003_0001193125-04-036535.dgml.xml",
+ "doc_chars": 894793,
+ "prompt_chars": 895092,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": true,
+ "truncation": "head",
+ "kept_chars": 894683,
+ "original_chars": 1111982,
+ "kept_fraction": 0.8046,
+ "est_doc_tokens": 266687,
+ "est_kept_tokens": 211360,
+ "budget_tokens": 240000,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 281,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-10 percentage points",
+ "reasoning": "The question asks: \"for natural gas options in place to manage the price risk, what is the change in the percentage of the anticipated natural gas purchases hedged between the first quarter of 2004 and the second quarter of 2004?\"\n\nI need to find the relevant text. In the document, under \"RM&T Segment\" in the \"Quantitative and Qualitative Disclosures About Market Risk\" section, it says:\n\n\"Derivative instruments are used to mitigate the price risk between the time foreign and domestic crude oil and other feedstock purchases for refinery supply are priced and when they are actually refined into salable petroleum products. In addition, natural gas options are in place to manage the price risk associated with approximately 60% of the anticipated natural gas purchases for refinery use through the first quarter of 2004 and 50% through the second quarter of 2004.\"\n\nSo the percentage hedged in Q1 2004 is 60%, and in Q2 2004 is 50%. The change is 50% - 60% = -10 percentage points. The question asks for \"the change in the percentage\", so it's a decrease of 10 percentage points. I'll answer -10% or 10 percentage points decrease. The question says \"what is the change\", so I'll give -10 percentage points.",
+ "raw_content": "<answer>-10 percentage points</answer>",
+ "usage": {
+  "prompt_tokens": 211554,
+  "completion_tokens": 281,
+  "total_tokens": 211835,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 211456
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.7,
+ "answer_tag_found": true,
+ "docfinqa_row": 830
+}

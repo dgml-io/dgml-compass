@@ -1,0 +1,50 @@
+{
+ "id": "IP_2007_0001193125-08-042850__row0062",
+ "format": "markdown_pdf",
+ "key": "IP_2007_0001193125-08-042850",
+ "question": "what percentage of december 31 , 2007 , total future minimum commitments under existing non-cancelable operating leases and purchase obligations were due to purchase obligations for the year of 2008?",
+ "gold": "93%",
+ "finqa_id": "IP/2007/page_75.pdf-1",
+ "source_page": "page_75",
+ "ticker": "IP",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf/IP_2007_0001193125-08-042850.md",
+ "doc_chars": 437826,
+ "prompt_chars": 438114,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 437826,
+ "original_chars": 437826,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 103241,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 599,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "38.8",
+ "reasoning": "We need to find total future minimum commitments under existing non-ccancelable operating leases and purchase obligations at Dec 31, 2007. From Note 10: table shows for 2008: Lease obligations $136, Purchase obligations $1,953, Total $2,089. So purchase obligations for 2008 = $1,953. Total commitments for 2008 = $2,089. Percentage = 1953/2089 * 100 ≈ 93.49%. But question asks \"what percentage of December 31, 2007, total future minimum commitments under existing non-cancelable operating leases and purchase obligations were due to purchase obligations for the year of 2008?\" So we need percentage of total future minimum commitments (all years) that are purchase obligations for 2008? Or percentage of 2008 total that are purchase obligations? The phrasing: \"what percentage of December 31, 2007, total future minimum commitments under existing non-cancelable operating leases and purchase obligations were due to purchase obligations for the year of 2008?\" That could be interpreted as: Of the total future minimum commitments (all years) at Dec 31, 2007, what percentage is attributable to purchase obligations for 2008? But the total future minimum commitments across all years is sum of all years: 2008: 2089, 2009: 410, 2010: 362, 2011: 319, 2012: 279, Thereafter: 1572. Sum = 2089+410+362+319+279+1572 = 5031? Let's compute: 2089+410=2499, +362=2861, +319=3180, +279=3459, +1572=5031. So total = $5,031 million. Purchase obligations for 2008 = $1,953. Percentage = 1953/5031 * 100 ≈ 38.82%. But the question says \"total future minimum commitments under existing non-ccancelable operating leases and purchase obligations\" - that is the total of both. And \"were due to purchase obligations for the year of 2008\" - so we want the portion of that total that is purchase obligations for 2008. So answer ~38.8%. Alternatively, if they meant of the 2008 total, it would be 93.5%. But the phrasing \"of December 31, 2007, total future minimum commitments\" suggests the total across all years. So I'll go with 38.8%. Let's compute precisely: 1953/5031 = 0.38819... so 38.82%. I'll put 38.8% or 38.82%. The answer should be a number. I'll put 38.8.",
+ "raw_content": "<answer>38.8</answer>",
+ "usage": {
+  "prompt_tokens": 103408,
+  "completion_tokens": 599,
+  "total_tokens": 104007,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 9.32,
+ "answer_tag_found": true,
+ "docfinqa_row": 62
+}

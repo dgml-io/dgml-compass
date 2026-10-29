@@ -1,0 +1,139 @@
+{
+ "id": "IP_2007_0001193125-08-042850__row0722",
+ "format": "dgml_compact",
+ "key": "IP_2007_0001193125-08-042850",
+ "question": "at december 31 , 2007 , what was the percent of the total future minimum commitments under existing non-cancelable operat- ing leases for purchase obligations",
+ "gold": "72.1%",
+ "finqa_id": "IP/2007/page_75.pdf-3",
+ "source_page": "page_75",
+ "ticker": "IP",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml_compact/IP_2007_0001193125-08-042850.dgml.txt",
+ "doc_chars": 605788,
+ "prompt_chars": 606035,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 605788,
+ "original_chars": 605788,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 132330,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 523,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "88.1534%",
+ "reasoning": "We need answer percent of total future minimum commitments under existing non-cancelable operating leases for purchase obligations. Need find table in Note 10: \"At December 31, 2007, total future minimum commitments under existing non-cancelable operating leases and purchase obligations were as follows:\" table: Lease obligations and Purchase obligations. Total. Need percent of total that is purchase obligations. Table: In millions | 2008 | 2009 | 2010 | 2011 | 2012 | Thereafter. Lease obligations: 136,116,101,84,67,92. Purchase obligations (a): 1,953,294,261,235,212,1,480. Total: 2,089,410,362,319,279,1,572. Sum purchase = 1,953+294+261+235+212+1,480 = let's compute: 1953+294=2247; +261=2508; +235=2743; +212=2955; +1480=4435. Total = 2,089+410+362+319+279+1,572 = 2,089+410=2,499; +362=2,861; +319=3,180; +279=3,459; +1,572=5,031. Percent purchase = 4435/5031 = 0.8815... = 88.15%. Need answer percent. Question wording: \"what was the percent of the total future minimum commitments under existing non-cancelable operating leases for purchase obligations\" Means purchase obligations as percent of total. So 88.15%. Need evidence figures. Use exact printed values.",
+ "raw_content": "<evidence>\n1,953 | Purchase obligations 2008\n294 | Purchase obligations 2009\n261 | Purchase obligations 2010\n235 | Purchase obligations 2011\n212 | Purchase obligations 2012\n1,480 | Purchase obligations Thereafter\n2,089 | Total 2008\n410 | Total 2009\n362 | Total 2010\n319 | Total 2011\n279 | Total 2012\n1,572 | Total Thereafter\n</evidence>\n\n<program>divide(add(add(add(add(add(1953, 294), 261), 235), 212), 1480), add(add(add(add(add(2089, 410), 362), 319), 279), 1572))</program>\n\n<answer>88.15%</answer>",
+ "usage": {
+  "prompt_tokens": 132651,
+  "completion_tokens": 523,
+  "total_tokens": 133174,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 37.83,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,953",
+   "element": "Purchase obligations 2008",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "294",
+   "element": "Purchase obligations 2009",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "261",
+   "element": "Purchase obligations 2010",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "235",
+   "element": "Purchase obligations 2011",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "212",
+   "element": "Purchase obligations 2012",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1,480",
+   "element": "Purchase obligations Thereafter",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "2,089",
+   "element": "Total 2008",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "410",
+   "element": "Total 2009",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "362",
+   "element": "Total 2010",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "319",
+   "element": "Total 2011",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "279",
+   "element": "Total 2012",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "1,572",
+   "element": "Total Thereafter",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.4166666666666667,
+ "program_model": "divide(add(add(add(add(add(1953, 294), 261), 235), 212), 1480), add(add(add(add(add(2089, 410), 362), 319), 279), 1572))",
+ "answer_model": "88.15%",
+ "program_value": 0.881534486185649,
+ "docfinqa_row": 722
+}

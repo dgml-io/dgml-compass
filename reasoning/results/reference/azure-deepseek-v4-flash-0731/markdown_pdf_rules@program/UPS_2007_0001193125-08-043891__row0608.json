@@ -1,0 +1,74 @@
+{
+ "id": "UPS_2007_0001193125-08-043891__row0608",
+ "format": "markdown_pdf_rules",
+ "key": "UPS_2007_0001193125-08-043891",
+ "question": "what portion of total expected cash outflow for capital leases is due in 2018?",
+ "gold": "17.4%",
+ "finqa_id": "UPS/2007/page_49.pdf-2",
+ "source_page": "page_49",
+ "ticker": "UPS",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/markdown_pdf_rules/UPS_2007_0001193125-08-043891.md",
+ "doc_chars": 322003,
+ "prompt_chars": 322170,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 322003,
+ "original_chars": 322003,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 74229,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 356,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer: \"what portion of total expected cash outflow for capital leases is due in 2018?\" Need find capital lease obligations table. In document, commitments table has capital leases by year: 2008 $108, 2009 $73, 2010 $91, 2011 $31, 2012 $31, After 2012 $285, Total $619. But question asks due in 2018. The table only gives \"After 2012\" aggregate, not specific 2018. However there is note: \"These capital lease obligations have principal payments due at various dates from 2008 through 2021.\" But no breakdown by year beyond 2012. So cannot determine portion due in 2018. Also note 8 table has capital leases same. No 2018 figure. So answer NOT_FOUND.\n\nNeed evidence: list figures? We can cite \"After 2012 $285\" and \"Total $619\" but they don't give 2018. The question asks portion due in 2018, not available. So evidence maybe \"After 2012 285 | Capital Leases\" and \"Total 619 | Capital Leases\". But we don't use them. The instruction: \"Cite only figures you actually read.\" We read those. But final answer NOT_FOUND. Program? Since not found, no program? The instruction says give computation inside program, but if not found, maybe no program. We'll provide evidence and answer NOT_FOUND.",
+ "raw_content": "<evidence>\nAfter 2012 $285 | Capital Leases\nTotal $619 | Capital Leases\n</evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "usage": {
+  "prompt_tokens": 74533,
+  "completion_tokens": 356,
+  "total_tokens": 74889,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 74496
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.61,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "After 2012 $285",
+   "element": "Capital Leases",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "Total $619",
+   "element": "Capital Leases",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "docfinqa_row": 608
+}

@@ -1,0 +1,67 @@
+{
+ "id": "AON_2009_0001047469-10-001535__row0142",
+ "format": "markdown_pdf",
+ "key": "AON_2009_0001047469-10-001535",
+ "question": "what is the lowest segment operating income?",
+ "gold": "846",
+ "finqa_id": "AON/2009/page_46.pdf-2",
+ "source_page": "page_46",
+ "ticker": "AON",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/markdown_pdf/AON_2009_0001047469-10-001535.md",
+ "doc_chars": 401384,
+ "prompt_chars": 401517,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 401384,
+ "original_chars": 401384,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 94318,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 102,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "180",
+ "reasoning": "We need answer lowest segment operating income. Segments: Risk and Insurance Brokerage Services operating income 2009 900, 2008 846, 2007 954. Consulting 2009 203, 2008 208, 2007 180. Lowest is 180 (Consulting 2007). Need evidence figures.",
+ "raw_content": "<evidence>180 | Consulting segment operating income 2007</evidence>\n<program>180</program>\n<answer>180</answer>",
+ "usage": {
+  "prompt_tokens": 94613,
+  "completion_tokens": 102,
+  "total_tokens": 94715,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.78,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "180",
+   "element": "Consulting segment operating income 2007",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "180",
+ "answer_model": "180",
+ "program_value": 180.0,
+ "docfinqa_row": 142
+}

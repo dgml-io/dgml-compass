@@ -1,0 +1,72 @@
+{
+ "id": "MRO_2009_0001193125-10-042898__row0516",
+ "format": "dgml_compact",
+ "key": "MRO_2009_0001193125-10-042898",
+ "question": "by what percentage did the average wti crude oil benchmark decrease from 2007 to 2009?",
+ "gold": "-14.3%",
+ "finqa_id": "MRO/2009/page_56.pdf-1",
+ "source_page": "page_56",
+ "ticker": "MRO",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/dgml_compact/MRO_2009_0001193125-10-042898.dgml.txt",
+ "doc_chars": 697881,
+ "prompt_chars": 698056,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 697881,
+ "original_chars": 697881,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 153188,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 196,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "14.2522%",
+ "reasoning": "We need percentage decrease in average WTI crude oil benchmark from 2007 to 2009. From MD&A benchmark table: WTI crude oil 2009 $62.09, 2008 $99.75, 2007 $72.41. Decrease from 2007 to 2009: (72.41 - 62.09)/72.41 = 10.32/72.41 = 0.1425... = 14.25%. Need answer as percentage. Use figures.",
+ "raw_content": "<evidence>\n$62.09 | BenchmarkPrice: WTI crude oil (Dollars per barrel) 2009\n$72.41 | BenchmarkPrice: WTI crude oil (Dollars per barrel) 2007\n</evidence>\n<program>divide(subtract(72.41, 62.09), 72.41)</program>\n<answer>14.25%</answer>",
+ "usage": {
+  "prompt_tokens": 153496,
+  "completion_tokens": 196,
+  "total_tokens": 153692,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 21.22,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$62.09",
+   "element": "BenchmarkPrice: WTI crude oil (Dollars per barrel) 2009",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$72.41",
+   "element": "BenchmarkPrice: WTI crude oil (Dollars per barrel) 2007",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(72.41, 62.09), 72.41)",
+ "answer_model": "14.25%",
+ "program_value": 0.14252175113934532,
+ "docfinqa_row": 516
+}

@@ -1,0 +1,74 @@
+{
+ "id": "NCLH_2018_0001144204-19-010508__row0905",
+ "format": "dgml",
+ "key": "NCLH_2018_0001144204-19-010508",
+ "question": "what percent of long-term debt was paid off in 2021?",
+ "gold": "38.6%",
+ "finqa_id": "NCLH/2018/page_97.pdf-3",
+ "source_page": "page_97",
+ "ticker": "NCLH",
+ "fiscal_year": "2018",
+ "source_file": "data/docs/dgml/NCLH_2018_0001144204-19-010508.dgml.xml",
+ "doc_chars": 652616,
+ "prompt_chars": 652757,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 652616,
+ "original_chars": 652616,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 154094,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 608,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "38.5730%",
+ "reasoning": "We need answer question: \"what percent of long-term debt was paid off in 2021?\" Need find long-term debt scheduled principal repayments for 2021 and total long-term debt. From document, scheduled principal repayments on long-term debt as of Dec 31, 2018: 2021 amount $2,549,621 thousand. Total long-term debt? Total debt $6,492,091 thousand (including current portion). Or total long-term debt $5,810,873? The question \"long-term debt\" likely total debt including current portion? Scheduled repayments table total $6,609,866 (includes capital leases? Actually scheduled principal repayments on long-term debt including capital lease obligations, total $6,609,866). But the question \"what percent of long-term debt was paid off in 2021?\" Could mean scheduled principal repayment in 2021 as percentage of total long-term debt. Need determine denominator. The table \"scheduled principal repayments on long-term debt including capital lease obligations as of December 31, 2018\" shows 2021 amount $2,549,621 and total $6,609,866. So percent = 2,549,621 / 6,609,866 = 38.57%. Alternatively using total debt $6,492,091 gives 39.27%. But the table total is $6,609,866 which includes capital leases and discounts? The question says \"long-term debt\" - the table is specifically scheduled principal repayments on long-term debt. So use total from that table. Compute: 2,549,621 / 6,609,866 = 0.3857... = 38.57%. Let's compute precisely: 6,609,866 * 0.385 = 2,544,798; difference 4,823; /6,609,866=0.00073; so 0.38573 = 38.573%. So answer 38.6% maybe. Need provide evidence and program. Evidence: 2,549,621 | DebtMaturityAmount (2021 row), 6,609,866 | DebtMaturityAmount (Total row). Program: divide(2549621, 6609866). Final answer inside <answer>38.6%</answer> or maybe 38.57%. The question asks percent, so include %? The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" It asks \"what percent\" so include number maybe with % sign? Usually answer numeric. I'll put 38.6%.",
+ "raw_content": "<evidence>\n2,549,621 | DebtMaturityAmount (2021 row)\n6,609,866 | DebtMaturityAmount (Total row)\n</evidence>\n<program>divide(2549621, 6609866)</program>\n<answer>38.6%</answer>",
+ "usage": {
+  "prompt_tokens": 154395,
+  "completion_tokens": 608,
+  "total_tokens": 155003,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 154368
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.15,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "2,549,621",
+   "element": "DebtMaturityAmount (2021 row)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "6,609,866",
+   "element": "DebtMaturityAmount (Total row)",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(2549621, 6609866)",
+ "answer_model": "38.6%",
+ "program_value": 0.3857296048059068,
+ "docfinqa_row": 905
+}

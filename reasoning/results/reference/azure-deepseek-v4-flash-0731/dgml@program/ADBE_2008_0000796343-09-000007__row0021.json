@@ -1,0 +1,71 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0021",
+ "format": "dgml",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "what is the percentage change in the the gross liability for unrecognized tax benefits during 2008 compare to 2007?",
+ "gold": "-30.9%",
+ "finqa_id": "ADBE/2008/page_89.pdf-2",
+ "source_page": "page_89",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml/ADBE_2008_0000796343-09-000007.dgml.xml",
+ "doc_chars": 800179,
+ "prompt_chars": 800383,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 800179,
+ "original_chars": 800179,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 183166,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 909,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-30.8506%",
+ "reasoning": "We need answer percentage change in gross liability for unrecognized tax benefits during 2008 compare to 2007. Need find figures. Document has FIN 48 rollforward: Beginning balance as of December 1, 2007 = $201,808 (thousands). Ending balance as of November 28, 2008 = $139,549. Also mentions gross liability at Nov 28, 2008 $139.5 million exclusive of interest and penalties. Also at adoption Dec 1, 2007 gross liability $218.4 million? Wait there are two numbers: In Note 8 \"Upon adoption, the gross liability for unrecognized tax benefits at December 1, 2007 was $218.4 million, exclusive of interest and penalties.\" But rollforward beginning balance is $201,808. Need understand. The question: \"what is the percentage change in the gross liability for unrecognized tax benefits during 2008 compare to 2007?\" Likely use beginning and ending from rollforward: 201,808 to 139,549. Percentage change = (139,549 - 201,808)/201,808 = -62,259/201,808 = -0.3085 = -30.85%. But there is also $218.4 million at adoption. Which is correct? Let's examine. The rollforward table: Beginning balance as of December 1, 2007 $201,808. Then gross increases etc ending $139,549. The text says \"Upon adoption, the gross liability for unrecognized tax benefits at December 1, 2007 was $218.4 million, exclusive of interest and penalties. The total amount of gross FIN 48 liabilities included $57.7 million that relates to certain tax attributes from acquired companies, including Macromedia. These liabilities from acquired companies are not recorded on our balance sheet because they are related to positions that have not yet been claimed on our income tax returns.\" So the $218.4 includes $57.7 not recorded on balance sheet. The rollforward beginning balance $201,808 is the recorded gross liability? Actually the rollforward says \"Beginning balance as of December 1, 2007 $201,808\" and ending $139,549. The text later says \"The gross liability for unrecognized tax benefits at November 28, 2008 of $139.5 million is exclusive of interest and penalties.\" So the rollforward is the gross liability for unrecognized tax benefits (recorded). The question asks \"gross liability for unrecognized tax benefits during 2008 compare to 2007\" - likely use the rollforward beginning and ending. But \"compare to 2007\" could mean 2007 year-end? The 2007 year-end is November 30, 2007, which is the beginning balance for 2008 (December 1, 2007). So percentage change = (139,549 - 201,808)/201,808 = -30.85%. Need provide evidence and program. Use figures as printed: 201,808 and 139,549. Compute percentage change. Program: divide(subtract(139549, 201808), 201808) = -0.3085. Answer as percentage? The question asks \"what is the percentage change\" - likely give -30.85% or -30.9%. Need final answer inside tags only value. Probably -30.85% or -30.9%. Let's compute exactly: 139549 - 201808 = -62259. -62259 / 201808 = -0.30850... 201808*0.3085 = 62257.768, so -0.308506. So -30.85%. Use -30.85% or -30.9%. The answer should be value only, no units unless asked. They ask percentage change, so include % sign? Usually answer with number. I'll put -30.85%.",
+ "raw_content": "<evidence>\n201,808 | UnrecognizedTaxBenefitRollforward beginning balance as of December 1, 2007\n139,549 | UnrecognizedTaxBenefitRollforward ending balance as of November 28, 2008\n</evidence>\n<program>\ndivide(subtract(139549, 201808), 201808)\n</program>\n<answer>-30.85%</answer>",
+ "usage": {
+  "prompt_tokens": 183478,
+  "completion_tokens": 909,
+  "total_tokens": 184387,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 31.56,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "201,808",
+   "element": "UnrecognizedTaxBenefitRollforward beginning balance as of December 1, 2007",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "139,549",
+   "element": "UnrecognizedTaxBenefitRollforward ending balance as of November 28, 2008",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(139549, 201808), 201808)",
+ "answer_model": "-30.85%",
+ "program_value": -0.308506104812495,
+ "docfinqa_row": 21
+}

@@ -1,0 +1,53 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0439",
+ "format": "markdown_pdf_poppler",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "how much more , in percent , was spent on october shares than november shares?",
+ "gold": "1229%",
+ "finqa_id": "IPG/2008/page_21.pdf-1",
+ "source_page": "page_21",
+ "ticker": "IPG",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_poppler/IPG_2008_0001193125-09-040141.md",
+ "doc_chars": 483678,
+ "prompt_chars": 483845,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 483678,
+ "original_chars": 483678,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 88848,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 299,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1129.1%",
+ "reasoning": "We need answer percent more spent on October shares than November shares. Need find October and November purchases in repurchase table. October: 29,704 shares avg price $5.99 => spent = 29,704*5.99 = 177,? 29,704*5.99 = 29,704*6 - 29,704*0.01 = 178,224 - 297.04 = 177,926.96. November: 4,468 shares avg $3.24 => 4,468*3.24 = 4,468*3 + 4,468*0.24 = 13,404 + 1,072.32 = 14,476.32. Difference = 163,450.64. Percent more = difference / November *100 = 163,450.64 / 14,476.32 *100 = 11.29? Compute: 14,476.32 * 11 = 159,239.52, remainder 4,211.12, /14,476 = 0.291, so 11.291. So about 1129.1% more. But question \"how much more, in percent, was spent on october shares than november shares?\" Could mean percentage difference relative to November. Answer 1129.1%. Need final inside tags only value.",
+ "raw_content": "<answer>1129.1%</answer>",
+ "usage": {
+  "prompt_tokens": 88994,
+  "completion_tokens": 299,
+  "total_tokens": 89293,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 88832
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.85,
+ "answer_tag_found": true,
+ "docfinqa_row": 439
+}

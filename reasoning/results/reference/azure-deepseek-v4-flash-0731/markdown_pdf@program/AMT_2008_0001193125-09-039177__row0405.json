@@ -1,0 +1,71 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0405",
+ "format": "markdown_pdf",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "what is the percentage change in the the outstanding debt under the 3.00% ( 3.00 % ) notes from 2007 to 2008?",
+ "gold": "-53.0%",
+ "finqa_id": "AMT/2008/page_94.pdf-3",
+ "source_page": "page_94",
+ "ticker": "AMT",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf/AMT_2008_0001193125-09-039177.md",
+ "doc_chars": 417265,
+ "prompt_chars": 417463,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 417265,
+ "original_chars": 417265,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 94052,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 635,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-53.01566",
+ "reasoning": "We need percentage change in outstanding debt under 3.00% notes from 2007 to 2008. From note 6: 3.00% convertible notes: 2008 $161,893 (in thousands), 2007 $344,568. Also note 6 text: \"As of December 31, 2008 and 2007, the outstanding debt under the 3.00% Notes was $161.9 million ($162.2 million principal amount) and $344.6 million, net of $0.3 million and $0.4 million discount, respectively.\" So use carrying values: 161,893 and 344,568. Percentage change = (161,893 - 344,568)/344,568 = -182,675/344,568 = -0.5302... = -53.02%. So answer -53.0% or -53.02%. Need exact. Compute: 344,568 - 161,893 = 182,675. 182,675 / 344,568 = 0.53016... So -53.016%. We'll provide -53.0% maybe. The question asks percentage change, so answer with number. Use evidence: 161,893 | 3.00% convertible notes (2008) from note 6 table; 344,568 | 3.00% convertible notes (2007) from note 6 table. Program: divide(subtract(161893, 344568), 344568) = -0.53016. Multiply by 100? The program should output the value as printed? The program is executed, so we need to give the percentage as a number. Typically they expect the percentage change as a decimal or percent? The question says \"percentage change\" so answer as -53.0% or -0.53? Usually they want the value, e.g., -53.0. We'll put -53.0% inside answer? The instruction: \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for percentage change, so units are percent. So answer -53.0%. But to be safe, we can put -53.0. The program: multiply(divide(subtract(161893, 344568), 344568), 100) = -53.016. So answer -53.0. We'll put -53.0%? The instruction says no units unless asked, they ask percentage change so percent is appropriate. I'll put -53.0%.",
+ "raw_content": "<evidence>\n161,893 | 3.00% convertible notes (2008) - Note 6 Long-Term Obligations table\n344,568 | 3.00% convertible notes (2007) - Note 6 Long-Term Obligations table\n</evidence>\n<program>\nmultiply(divide(subtract(161893, 344568), 344568), 100)\n</program>\n<answer>-53.0%</answer>",
+ "usage": {
+  "prompt_tokens": 94373,
+  "completion_tokens": 635,
+  "total_tokens": 95008,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.07,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "161,893",
+   "element": "3.00% convertible notes (2008) - Note 6 Long-Term Obligations table",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "344,568",
+   "element": "3.00% convertible notes (2007) - Note 6 Long-Term Obligations table",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(subtract(161893, 344568), 344568), 100)",
+ "answer_model": "-53.0%",
+ "program_value": -53.015660188990275,
+ "docfinqa_row": 405
+}

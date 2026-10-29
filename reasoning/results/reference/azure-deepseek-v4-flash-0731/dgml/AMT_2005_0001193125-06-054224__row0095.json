@@ -1,0 +1,53 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0095",
+ "format": "dgml",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "what was the increase in long-term debt between 2004 and 2005 in thousands?",
+ "gold": "296048",
+ "finqa_id": "AMT/2005/page_85.pdf-1",
+ "source_page": "page_85",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/dgml/AMT_2005_0001193125-06-054224.dgml.xml",
+ "doc_chars": 790211,
+ "prompt_chars": 790375,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 790211,
+ "original_chars": 790211,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 189615,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 147,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "319,815",
+ "reasoning": "The question asks for the increase in long-term debt between 2004 and 2005 in thousands.\n\nFrom the balance sheet data:\nLong-term obligations, including current portion:\n2005: $3,613,429\n2004: $3,293,614\n\nIncrease = 3,613,429 - 3,293,614 = 319,815 (in thousands)\n\nThe question says \"long-term debt\" - the balance sheet line is \"Long-term obligations, including current portion\". The increase is 319,815 thousand.\n\nLet me verify: 3,613,429 - 3,293,614 = 319,815. Yes.",
+ "raw_content": "<answer>319,815</answer>",
+ "usage": {
+  "prompt_tokens": 189762,
+  "completion_tokens": 147,
+  "total_tokens": 189909,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 189696
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.33,
+ "answer_tag_found": true,
+ "docfinqa_row": 95
+}

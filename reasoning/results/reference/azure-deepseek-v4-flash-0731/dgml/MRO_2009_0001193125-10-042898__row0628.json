@@ -1,0 +1,56 @@
+{
+ "id": "MRO_2009_0001193125-10-042898__row0628",
+ "format": "dgml",
+ "key": "MRO_2009_0001193125-10-042898",
+ "question": "how much did net rental expense increase from 2007 to 2009?",
+ "gold": "6.2%",
+ "finqa_id": "MRO/2009/page_139.pdf-1",
+ "source_page": "page_139",
+ "ticker": "MRO",
+ "fiscal_year": "2009",
+ "source_file": "data/docs/dgml/MRO_2009_0001193125-10-042898.dgml.xml",
+ "doc_chars": 905450,
+ "prompt_chars": 905598,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": true,
+ "truncation": "head",
+ "kept_chars": 905340,
+ "original_chars": 1110151,
+ "kept_fraction": 0.8155,
+ "est_doc_tokens": 264731,
+ "est_kept_tokens": 212186,
+ "budget_tokens": 240000,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 189,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "The question asks: \"how much did net rental expense increase from 2007 to 2009?\"\n\nI need to find net rental expense for 2007 and 2009 in the document. The document is a 10-K for Marathon Oil Corporation. I need to look for rental expense figures.\n\nThe document was truncated, and I don't see a section on \"rental expense\" or \"net rental expense\" in the visible portion. The document contains many sections, but I don't see any mention of rental expense amounts.\n\nLet me search through the document for \"rental\" - I see \"rental\" mentioned in the context of \"rental\" but not as an expense figure. The document mentions \"operating lease obligations\" but not net rental expense.\n\nSince the document was truncated and I don't see the relevant figures, I should put NOT_FOUND.",
+ "raw_content": "<answer>NOT_FOUND</answer>",
+ "usage": {
+  "prompt_tokens": 212352,
+  "completion_tokens": 189,
+  "total_tokens": 212541,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 212224
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.95,
+ "answer_tag_found": true,
+ "docfinqa_row": 628
+}

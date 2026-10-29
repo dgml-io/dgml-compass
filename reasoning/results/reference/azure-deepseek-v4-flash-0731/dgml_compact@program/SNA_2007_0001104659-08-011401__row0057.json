@@ -1,0 +1,78 @@
+{
+ "id": "SNA_2007_0001104659-08-011401__row0057",
+ "format": "dgml_compact",
+ "key": "SNA_2007_0001104659-08-011401",
+ "question": "what was the percentage change in the cash dividends paid per common share from 2006 to 2007",
+ "gold": "2.7%",
+ "finqa_id": "SNA/2007/page_49.pdf-4",
+ "source_page": "page_49",
+ "ticker": "SNA",
+ "fiscal_year": "2007",
+ "source_file": "data/docs/dgml_compact/SNA_2007_0001104659-08-011401.dgml.txt",
+ "doc_chars": 428718,
+ "prompt_chars": 428899,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 428718,
+ "original_chars": 428718,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 97509,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "stop",
+   "completion_tokens": 369,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 1,
+ "ok": true,
+ "answer": "2.777778",
+ "reasoning": "We need percentage change in cash dividends paid per common share from 2006 to 2007. From document: \"Cash dividends paid per share\" in Selected Financial Data: 2007: 1.11, 2006: 1.08. Also in dividend table: 2007 $1.11, 2006 $1.08. Percentage change = (1.11 - 1.08)/1.08 = 0.03/1.08 = 0.027777... = 2.777...%. So answer ~2.78%. Need exact? The question asks percentage change. Compute: (1.11-1.08)/1.08 = 0.027777... = 2.78% (rounded). Could also be 2.8%. We'll give 2.78%. Evidence: 1.11 | Cash dividends paid per share (Selected Financial Data) and 1.08 | Cash dividends paid per share. Program: divide(subtract(1.11, 1.08), 1.08) * 100? But program should be exact nested calls. We can do multiply(divide(subtract(1.11, 1.08), 1.08), 100). But the benchmark expects value? The answer should be the percentage value, e.g., 2.78. We'll put 2.78.",
+ "raw_content": "<evidence>\n1.11 | Cash dividends paid per share (Selected Financial Data)\n1.08 | Cash dividends paid per share (Selected Financial Data)\n</evidence>\n<program>multiply(divide(subtract(1.11, 1.08), 1.08), 100)</program>\n<answer>2.78</answer>",
+ "usage": {
+  "prompt_tokens": 97818,
+  "completion_tokens": 369,
+  "total_tokens": 98187,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 50.29,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1.11",
+   "element": "Cash dividends paid per share (Selected Financial Data)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1.08",
+   "element": "Cash dividends paid per share (Selected Financial Data)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(1.11, 1.08), 1.08), 100)",
+ "answer_model": "2.78",
+ "program_value": 2.77777777777778,
+ "docfinqa_row": 57
+}

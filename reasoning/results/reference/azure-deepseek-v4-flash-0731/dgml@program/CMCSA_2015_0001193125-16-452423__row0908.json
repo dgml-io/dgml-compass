@@ -1,0 +1,79 @@
+{
+ "id": "CMCSA_2015_0001193125-16-452423__row0908",
+ "format": "dgml",
+ "key": "CMCSA_2015_0001193125-16-452423",
+ "question": "based on the review of the reconciliation of unrecognized tax benefits what was the change in 2014",
+ "gold": "530",
+ "finqa_id": "CMCSA/2015/page_112.pdf-3",
+ "source_page": "page_112",
+ "ticker": "CMCSA",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml/CMCSA_2015_0001193125-16-452423.dgml.xml",
+ "doc_chars": 907858,
+ "prompt_chars": 908045,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": true,
+ "truncation": "head",
+ "kept_chars": 907748,
+ "original_chars": 1078239,
+ "kept_fraction": 0.8419,
+ "est_doc_tokens": 250309,
+ "est_kept_tokens": 210513,
+ "budget_tokens": 240000,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 275,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-530",
+ "reasoning": "We need answer question: \"based on the review of the reconciliation of unrecognized tax benefits what was the change in 2014\". Need find reconciliation of unrecognized tax benefits. In document, Note 15 Income Taxes, \"Reconciliation of Unrecognized Tax Benefits\" table. It shows Balance, January 1 2014 = $1,701 million, Balance, December 31 2014 = $1,171 million. Change in 2014 = 1,171 - 1,701 = -530 million. Or maybe \"change\" means decrease of $530 million. Need provide value. The question: \"what was the change in 2014\" likely the net change. Use figures: Balance January 1 2014 $1,701, Balance December 31 2014 $1,171. Change = subtract(1171, 1701) = -530. Answer -530 (in millions). Need evidence list figures.",
+ "raw_content": "<evidence>\n$ 1,701 | Balance, January 1 (2014) in Reconciliation of Unrecognized Tax Benefits\n$ 1,171 | Balance, December 31 (2014) in Reconciliation of Unrecognized Tax Benefits\n</evidence>\n<program>subtract(1171, 1701)</program>\n<answer>-530</answer>",
+ "usage": {
+  "prompt_tokens": 210843,
+  "completion_tokens": 275,
+  "total_tokens": 211118,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 18.65,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$ 1,701",
+   "element": "Balance, January 1 (2014) in Reconciliation of Unrecognized Tax Benefits",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$ 1,171",
+   "element": "Balance, December 31 (2014) in Reconciliation of Unrecognized Tax Benefits",
+   "element_found": false,
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "subtract(1171, 1701)",
+ "answer_model": "-530",
+ "program_value": -530.0,
+ "docfinqa_row": 908
+}

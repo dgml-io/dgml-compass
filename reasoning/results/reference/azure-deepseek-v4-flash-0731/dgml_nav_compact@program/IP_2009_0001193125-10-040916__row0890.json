@@ -1,0 +1,70 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0890",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "considering the years 2010-2011 , what is the percentual increase observed in the maturities of long-term debt?",
+ "gold": "88.81%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "IP_2009_0001193125-10-040916.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/DebtAndLinesOfCredit/DebtMaturitySchedule"
+ ],
+ "r1_reasoning_chars": 3045,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 33558,
+  "completion_tokens": 762,
+  "total_tokens": 34320,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/DebtAndLinesOfCredit/DebtMaturitySchedule"
+ ],
+ "content_chars": 4769,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "88.815789",
+ "reasoning": "We need percentual increase from 2010 to 2011 in maturities of long-term debt. From first region: 2010 – $304 million; 2011 – $574 million. Percent increase = (574-304)/304 * 100. Compute.",
+ "raw_content": "<evidence>304 | DebtMaturityAmount (2010)\n574 | DebtMaturityAmount (2011)\n</evidence>\n<program>multiply(divide(subtract(574, 304), 304), 100)</program>",
+ "r2_usage": {
+  "prompt_tokens": 1580,
+  "completion_tokens": 108,
+  "total_tokens": 1688,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "304",
+   "element": "DebtMaturityAmount (2010)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "574",
+   "element": "DebtMaturityAmount (2011)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(574, 304), 304), 100)",
+ "answer_model": null,
+ "program_value": 88.81578947368422,
+ "elapsed_s": 6.24,
+ "outline_source": "IP_2009_0001193125-10-040916.outline.txt",
+ "outline_chars": 127828
+}

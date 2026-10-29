@@ -1,0 +1,72 @@
+{
+ "id": "IPG_2008_0001193125-09-040141__row0383",
+ "format": "markdown_pdf_rules",
+ "key": "IPG_2008_0001193125-09-040141",
+ "question": "what portion of the total estimated future contingent acquisition obligation is due in the 12 months?",
+ "gold": "19.3%",
+ "finqa_id": "IPG/2008/page_93.pdf-1",
+ "source_page": "page_93",
+ "ticker": "IPG",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/markdown_pdf_rules/IPG_2008_0001193125-09-040141.md",
+ "doc_chars": 363361,
+ "prompt_chars": 363551,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 363361,
+ "original_chars": 363361,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 87507,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 227,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.196872",
+ "reasoning": "We need answer: portion of total estimated future contingent acquisition obligation due in 12 months. From Note 16 table: Total contingent acquisition payments 402.8, 2009 79.3. Portion = 79.3/402.8. Need compute. Also maybe \"estimated future contingent acquisition obligations payable in cash\" total 402.8. Question \"total estimated future contingent acquisition obligation\" likely 402.8. Due in 12 months = 2009 = 79.3. Portion = 79.3/402.8 ≈ 0.19687... Let's compute exactly. 79.3/402.8 = 0.196872... ~19.7%. Need answer maybe as decimal or percent? Question \"what portion\" likely fraction. We'll give value. Use evidence.",
+ "raw_content": "<evidence>\n79.3 | Total contingent acquisition payments 2009\n402.8 | Total contingent acquisition payments Total\n</evidence>\n<program>divide(79.3, 402.8)</program>\n<answer>0.1969</answer>",
+ "usage": {
+  "prompt_tokens": 87812,
+  "completion_tokens": 227,
+  "total_tokens": 88039,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 87552
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.64,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "79.3",
+   "element": "Total contingent acquisition payments 2009",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "402.8",
+   "element": "Total contingent acquisition payments Total",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(79.3, 402.8)",
+ "answer_model": "0.1969",
+ "program_value": 0.19687189672293942,
+ "docfinqa_row": 383
+}

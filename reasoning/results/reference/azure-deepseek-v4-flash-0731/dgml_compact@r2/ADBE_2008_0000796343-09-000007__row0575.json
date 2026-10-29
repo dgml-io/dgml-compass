@@ -1,0 +1,50 @@
+{
+ "id": "ADBE_2008_0000796343-09-000007__row0575",
+ "format": "dgml_compact",
+ "key": "ADBE_2008_0000796343-09-000007",
+ "question": "what is the yearly amortization rate for the trademarks?",
+ "gold": "20%",
+ "finqa_id": "ADBE/2008/page_74.pdf-4",
+ "source_page": "page_74",
+ "ticker": "ADBE",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml_compact/ADBE_2008_0000796343-09-000007.dgml.txt",
+ "doc_chars": 545889,
+ "prompt_chars": 546034,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 545889,
+ "original_chars": 545889,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 114389,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 214,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "20%",
+ "reasoning": "The question asks for the yearly amortization rate for trademarks. I need to find the useful life of trademarks in the document.\n\nIn the \"Intangible Assets Policy\" section, there is a table:\n\"IntangibleAssetUsefulLife: Weighted Average Useful Life (Years)\nIntangibleAssetUsefulLife: Purchased technology | 4\nIntangibleAssetUsefulLife: Localization | 1\nIntangibleAssetUsefulLife: Trademarks | 5\nIntangibleAssetUsefulLife: Customer contracts and relationships | 6\nIntangibleAssetUsefulLife: Other intangibles | 3\"\n\nSo trademarks have a useful life of 5 years. The yearly amortization rate would be 1/5 = 20% per year.\n\nThe question asks for the \"yearly amortization rate\" - this is likely 20% (or 1/5). The document states the useful life is 5 years, so the amortization rate is 20% per year.",
+ "raw_content": "<answer>20%</answer>",
+ "usage": {
+  "prompt_tokens": 114528,
+  "completion_tokens": 214,
+  "total_tokens": 114742,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.48,
+ "answer_tag_found": true,
+ "docfinqa_row": 575
+}

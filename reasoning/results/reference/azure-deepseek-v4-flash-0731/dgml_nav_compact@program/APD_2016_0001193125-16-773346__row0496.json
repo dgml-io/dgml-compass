@@ -1,0 +1,57 @@
+{
+ "id": "APD_2016_0001193125-16-773346__row0496",
+ "key": "APD_2016_0001193125-16-773346",
+ "question": "considering the year 2016 , what is the short-term debt as a percent of total debt?",
+ "gold": "21%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "APD_2016_0001193125-16-773346.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/FinancingAndCapitalStructure/TotalDebtPosition"
+ ],
+ "r1_reasoning_chars": 6150,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 29994,
+  "completion_tokens": 1490,
+  "total_tokens": 31484,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/FinancingAndCapitalStructure/TotalDebtPosition"
+ ],
+ "content_chars": 3643,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer. Need find short-term debt and total debt for 2016. Document excerpt has total debt outstanding $6,225.2 at end 2016. Need short-term debt. Not explicitly in region? Maybe elsewhere? We have only excerpt. Need search? The question asks short-term debt as percent of total debt. In excerpt, no short-term debt figure. Maybe \"short-term debt\" appears in other chunk not provided? We have only TotalDebtPosition. Need see if any figure for short-term debt. The excerpt includes commercial paper? Versum exchange with commercial paper. But not total short-term debt. Could be in document not included. We need determine if enough info. Likely NOT_FOUND. But let's examine: Total debt outstanding $6,225.2. Short-term debt maybe \"current portion of long-term debt and short-term borrowings\" not in excerpt. No. So answer NOT_FOUND.\n\nNeed evidence? If not found, maybe no evidence. But instruction: list every figure used. We use none. Could mention total debt but not used. Final answer NOT_FOUND.",
+ "raw_content": "<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1210,
+  "completion_tokens": 240,
+  "total_tokens": 1450,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": null,
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 12.01,
+ "outline_source": "APD_2016_0001193125-16-773346.outline.txt",
+ "outline_chars": 118036
+}

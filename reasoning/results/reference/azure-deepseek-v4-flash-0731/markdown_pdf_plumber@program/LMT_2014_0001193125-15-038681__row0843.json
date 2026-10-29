@@ -1,0 +1,72 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0843",
+ "format": "markdown_pdf_plumber",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "what was the change in millions of the weighted average common shares outstanding for diluted computations from 2012 to 2013?",
+ "gold": "-1.9",
+ "finqa_id": "LMT/2014/page_77.pdf-4",
+ "source_page": "page_77",
+ "ticker": "LMT",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf_plumber/LMT_2014_0001193125-15-038681.md",
+ "doc_chars": 462533,
+ "prompt_chars": 462747,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 462533,
+ "original_chars": 462533,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 103588,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 149,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-1.9",
+ "reasoning": "We need the weighted average common shares outstanding for diluted computations for 2012 and 2013. From Note 2: 2012: 328.4, 2013: 326.5. Change = 326.5 - 328.4 = -1.9 million. The question asks \"change in millions\" - likely the difference. So answer -1.9.",
+ "raw_content": "<evidence>\n328.4 | Weighted average common shares outstanding for diluted computations (2012)\n326.5 | Weighted average common shares outstanding for diluted computations (2013)\n</evidence>\n<program>subtract(326.5, 328.4)</program>\n<answer>-1.9</answer>",
+ "usage": {
+  "prompt_tokens": 103900,
+  "completion_tokens": 149,
+  "total_tokens": 104049,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.34,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "328.4",
+   "element": "Weighted average common shares outstanding for diluted computations (2012)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "326.5",
+   "element": "Weighted average common shares outstanding for diluted computations (2013)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(326.5, 328.4)",
+ "answer_model": "-1.9",
+ "program_value": -1.8999999999999773,
+ "docfinqa_row": 843
+}

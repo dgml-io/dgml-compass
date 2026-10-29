@@ -1,0 +1,65 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0599",
+ "format": "dgml",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "what is the total value of the approved equity compensation plans in 2005 , in millions of dollars?",
+ "gold": "375.15",
+ "finqa_id": "CME/2010/page_123.pdf-5",
+ "source_page": "page_123",
+ "ticker": "CME",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/dgml/CME_2010_0001193125-11-050252.dgml.xml",
+ "doc_chars": 731824,
+ "prompt_chars": 732012,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 731824,
+ "original_chars": 731824,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 170125,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "stop",
+   "completion_tokens": 2444,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 1,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer question: \"what is the total value of the approved equity compensation plans in 2005 , in millions of dollars?\" Need find in document. It mentions \"2005 Director Stock Plan\" approved by shareholders at 2005 annual meeting. But \"total value of the approved equity compensation plans in 2005\" maybe refers to something else? Need parse. The document has equity compensation plan information table. It lists plans approved by security holders and not approved. But \"total value\" maybe not value but number of securities? Question asks \"total value ... in millions of dollars\" - maybe from \"CME Group Inc. 2005 Director Stock Plan\" has $75,000 annual award? Or \"2005 Director Stock Plan\" approved by shareholders at 2005 annual meeting. The total value of approved equity compensation plans in 2005? Could be \"In connection with our receipt of shareholder approval to increase the authorized shares under our Omnibus Stock Plan and our Director Stock Plan...\" Hmm.\n\nLet's search document for \"2005\" and \"approved\". There is \"The Employee Stock Purchase Plan and the 2005 Director Stock Plan were approved by shareholders at our 2005 annual meeting of shareholders.\" Also \"CME Group Inc. 2005 Director Stock Plan\" has reserved 125,000 Class A shares. But \"total value\" maybe not given. The question might be asking for \"total value of the approved equity compensation plans in 2005\" - perhaps from a table? There is a table \"Equity Compensation Plan Information\" with number of securities to be issued upon exercise, weighted-average exercise price, remaining available. But no dollar value.\n\nMaybe \"total value\" refers to \"aggregate market value of voting stock held by non-affiliates\" no.\n\nLet's read the question carefully: \"what is the total value of the approved equity compensation plans in 2005 , in millions of dollars?\" Could be asking for \"total value\" of plans approved in 2005? The document mentions \"2005 Director Stock Plan\" but no total value. Maybe there is a \"Director Stock Plan\" with $75,000 annual award, but that's per director.\n\nMaybe the question is from a benchmark where they expect a number from document. Let's search for \"approved\" in document. There is \"Equity compensation plans approved by security holders\" table with \"Number of Securities to be Issued Upon Exercise of Outstanding Options (a)\" = 1,211,143, weighted-average exercise price $308.10, and \"Number of Securities Remaining Available for Future Issuance\" = 5,156,223. The total value could be computed as number of securities * weighted-average exercise price? But that would be for outstanding options, not \"approved equity compensation plans in 2005\". Also \"in millions of dollars\" - multiply 1,211,143 * $308.10 = ~$373 million. But that's not \"approved equity compensation plans in 2005\".\n\nMaybe \"approved equity compensation plans in 2005\" refers to \"Employee Stock Purchase Plan and 2005 Director Stock Plan\" approved at 2005 annual meeting. The total value of these plans? The Director Stock Plan has $75,000 annual award, but no total. The ESPP has 40,000 shares reserved, but no value.\n\nAlternatively, \"total value of the approved equity compensation plans\" could be from \"CME Group Inc. 2005 Director Stock Plan\" - \"A total of 125,000 Class A shares have been reserved under this plan\" - value at some price? Not given.\n\nMaybe the question is asking for \"total value of the approved equity compensation plans in 2005\" meaning the aggregate market value of the voting stock held by non-affiliates as of June 30, 2010? No.\n\nLet's look for \"2005\" in document. There is \"2005 Director Stock Plan\" and \"2005 Long-Term Equity Plan\" (CBOT Holdings 2005 Long-Term Equity Incentive Plan). Also \"2005 annual meeting\". The question says \"approved equity compensation plans in 2005\" - plural? The document says \"The Employee Stock Purchase Plan and the 2005 Director Stock Plan were approved by shareholders at our 2005 annual meeting of shareholders.\" So two plans approved in 2005: ESPP and 2005 Director Stock Plan. What is their total value? The ESPP has 40,000 Class A shares reserved, Director Stock Plan has 125,000 Class A shares reserved. But value? Not given. Maybe \"total value\" refers to \"total compensation expense\" for these plans? Not.\n\nMaybe the question is from a different context: \"total value of the approved equity compensation plans in 2005\" might be a figure in the document like \"In 2005, the board approved ...\" Let's search for \"2005\" in the document text. I see \"2005 Director Stock Plan\" and \"2005 Long-Term Equity Plan\" (CBOT). Also \"2005 annual meeting\". Also \"In 2005, ...\" not.\n\nMaybe the question is asking for \"total value of the approved equity compensation plans\" as in the table \"Equity Compensation Plan Information\" - the \"Number of Securities to be Issued Upon Exercise of Outstanding Options\" for approved plans is 1,211,143, weighted-average exercise price $308.10. The total value (intrinsic value?) would be? But that's not \"in 2005\".\n\nLet's read the question: \"what is the total value of the approved equity compensation plans in 2005 , in millions of dollars?\" It might be a trick: The document does not contain enough information. The answer should be NOT_FOUND. But we need be careful.\n\nLet's examine the document for any mention of \"total value\" and \"2005\". There is a section \"Equity Compensation Plan Information\" with table. It lists \"Equity compensation plans approved by security holders\" with numbers. But no dollar value. The question might be asking for \"total value\" meaning \"total market value\" of shares reserved? Not given.\n\nMaybe there is a \"2005 Director Stock Plan\" with \"A total of 125,000 Class A shares have been reserved under this plan\" and \"approximately 34,000 shares have been awarded through December 31, 2010.\" No value.\n\nAlso \"Employee Stock Purchase Plan\" with \"A total of 40,000 Class A shares have been reserved\" and \"approximately 20,000 shares have been purchased.\" No value.\n\nThus no total value in millions.\n\nBut maybe \"approved equity compensation plans in 2005\" refers to \"CME Group Inc. 2005 Director Stock Plan\" and \"Employee Stock Purchase Plan\" - the total value could be the sum of \"annual expense\" for these? The ESPP annual expense is $0.1 million. The Director Stock Plan expense is $2.4 million in 2010, but not 2005. Not.\n\nAlternatively, \"total value of the approved equity compensation plans\" could be the \"aggregate market value of voting stock held by non-affiliates\" - no.\n\nLet's see if there is a figure like \"$75,000\" for director stock plan, but that's per director. Not total.\n\nThus likely NOT_FOUND.\n\nBut let's double-check: The question might be from a dataset where they ask \"what is the total value of the approved equity compensation plans in 2005\" and the answer is in the document as a number. Search for \"approved\" in document: There is \"Equity compensation plans approved by security holders\" table. The \"Number of Securities to be Issued Upon Exercise of Outstanding Options\" is 1,211,143, weighted-average exercise price $308.10. The product is 1,211,143 * 308.10 = 373,153,? Let's compute: 1,211,143 * 308.10 = 1,211,143*300 = 363,342,900; plus *8.10 = 9,810,258.3; total 373,153,158.3, i.e., $373.2 million. But that's not \"in 2005\". Also \"approved equity compensation plans\" includes both approved and not approved? The table has two rows: approved by security holders and not approved. The total for approved is 1,211,143 options. The question says \"approved equity compensation plans in 2005\" - maybe \"in 2005\" refers to the year the plans were approved? The 2005 Director Stock Plan and ESPP were approved in 2005. But the table doesn't separate by year.\n\nMaybe \"total value\" means \"total intrinsic value\" of options? Not.\n\nLet's search for \"2005\" in the document text: I see \"2005 Director Stock Plan\" multiple times, \"2005 Long-Term Equity Plan\" (CBOT), \"2005 annual meeting\". Also \"In 2005, ...\" not.\n\nMaybe there is a \"2005 Director Stock Plan\" with \"A total of 125,000 Class A shares have been reserved\" and \"approximately 34,000 shares have been awarded through December 31, 2010.\" The value of those shares at some price? Not.\n\nThus answer NOT_FOUND.\n\nBut let's be thorough: The question might be asking for \"total value of the approved equity compensation plans\" as in \"the aggregate market value of the voting stock held by non-affiliates\" - no.\n\nI'll answer NOT_FOUND.\n\nBut the instruction says \"If the document does not contain enough information, put NOT_FOUND inside the tags.\" So final answer <answer>NOT_FOUND</answer>.\n\nNeed provide evidence and program? The instruction says \"Before the answer, list every figure you use inside <evidence></evidence>... Then give computation inside <program></program>...\" If NOT_FOUND, we can still list evidence? We don't use any figures. So evidence empty? Probably we can put nothing. But the instruction says \"Cite only figures you actually read.\" We read none. So evidence empty. Program? If NOT_FOUND, no computation. But they expect program? The instruction says \"Then give the computation inside <program></program> as nested calls over the figures as printed... A figure that is itself the answer is its own program.\" For NOT_FOUND, we can omit or put NOT_FOUND? I'll put <program>NOT_FOUND</program>? But they said \"The program is executed by the benchmark, so it must be exact.\" Probably for NOT_FOUND, no program needed. But to be safe, I'll include empty program? The instruction says \"Give your final answer inside <answer></answer> tags, containing only the value itself...\" So I'll put <answer>NOT_FOUND</answer>. And before that, evidence and program. Since no figures, I'll put <evidence></evidence> and <program>NOT_FOUND</program>? But program should be exact. I'll just put <program>NOT_FOUND</program>? Hmm.\n\nLet's see typical format: They want evidence lines, then program, then answer. For NOT_FOUND, we can state no evidence. I'll do:\n\n<evidence></evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>\n\nBut the instruction says \"The program is executed by the benchmark, so it must be exact.\" If NOT_FOUND, maybe they don't execute. I'll keep it simple.\n\nLet's final.",
+ "raw_content": "<evidence></evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "usage": {
+  "prompt_tokens": 170433,
+  "completion_tokens": 2444,
+  "total_tokens": 172877,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 170240
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 68.84,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "docfinqa_row": 599
+}

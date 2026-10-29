@@ -1,0 +1,91 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0765",
+ "format": "dgml",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "for 2002 and 2003 , what is the average crack spread values?",
+ "gold": "3.5",
+ "finqa_id": "MRO/2003/page_84.pdf-4",
+ "source_page": "page_84",
+ "ticker": "MRO",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/dgml/MRO_2003_0001193125-04-036535.dgml.xml",
+ "doc_chars": 894793,
+ "prompt_chars": 894942,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": true,
+ "truncation": "head",
+ "kept_chars": 894683,
+ "original_chars": 1111982,
+ "kept_fraction": 0.8046,
+ "est_doc_tokens": 266687,
+ "est_kept_tokens": 211360,
+ "budget_tokens": 240000,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 560,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "0.0988",
+ "reasoning": "We need answer question: \"for 2002 and 2003, what is the average crack spread values?\" Need find crack spread in document. Search for \"crack spread\". In MD&A: \"The refining and wholesale marketing margin in 2003 averaged 6.0 cents per gallon, versus 2002 level of 3.9 cents.\" Also \"refining and wholesale marketing margin in 2002 averaged 3.9 cents per gallon, versus 2001 level of 11.7 cents.\" But question asks \"average crack spread values\" for 2002 and 2003. There is a table \"Refining and Wholesale Marketing Margin(g)(h)\" with values $0.0601, $0.0387, $0.1167 for 2003, 2002, 2001. That is per gallon. Also in MD&A: \"The refining and wholesale marketing margin in 2003 averaged 6.0 cents per gallon, versus 2002 level of 3.9 cents.\" So average crack spread values likely 6.0 cents and 3.9 cents. But question says \"crack spread\" specifically. In document, \"crack spread\" is defined as measure of difference between spot market gasoline and distillate prices and spot market crude costs. But the values given are refining and wholesale marketing margin, not exactly crack spread. However the question likely expects those numbers. Need provide answer inside <answer> tags. Probably \"2003: 6.0 cents per gallon; 2002: 3.9 cents per gallon\" or \"0.0601 and 0.0387\". Let's read exact: \"The refining and wholesale marketing margin in 2003 averaged 6.0 cents per gallon, versus 2002 level of 3.9 cents.\" Also table has $0.0601 and $0.0387. So answer: 2003: 6.0 cents/gallon, 2002: 3.9 cents/gallon. Need evidence list figures used. We'll cite from table and text.",
+ "raw_content": "<evidence>\n$0.0601 | Refining and Wholesale Marketing Margin 2003\n$0.0387 | Refining and Wholesale Marketing Margin 2002\n6.0 cents per gallon | Refining and wholesale marketing margin in 2003\n3.9 cents | Refining and wholesale marketing margin in 2002\n</evidence>\n<program>\nadd(0.0601, 0.0387)\n</program>\n<answer>2003: 6.0 cents per gallon; 2002: 3.9 cents per gallon</answer>",
+ "usage": {
+  "prompt_tokens": 211686,
+  "completion_tokens": 560,
+  "total_tokens": 212246,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 21.09,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$0.0601",
+   "element": "Refining and Wholesale Marketing Margin 2003",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "$0.0387",
+   "element": "Refining and Wholesale Marketing Margin 2002",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6.0 cents per gallon",
+   "element": "Refining and wholesale marketing margin in 2003",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "3.9 cents",
+   "element": "Refining and wholesale marketing margin in 2002",
+   "element_found": false,
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "add(0.0601, 0.0387)",
+ "answer_model": "2003: 6.0 cents per gallon; 2002: 3.9 cents per gallon",
+ "program_value": 0.0988,
+ "docfinqa_row": 765
+}

@@ -1,0 +1,81 @@
+{
+ "id": "CMCSA_2015_0001193125-16-452423__row0007",
+ "key": "CMCSA_2015_0001193125-16-452423",
+ "question": "what was the change in unrecognized tax benefits from the end of 2014 to the end of 2015?",
+ "gold": "-35",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "CMCSA_2015_0001193125-16-452423.outline.txt",
+ "doc_source": "CMCSA_2015_0001193125-16-452423.dgml.xml",
+ "outline_chars": 134140,
+ "predicted_xpaths": [
+  "/chunk/section/IncomeTax/UnrecognizedTaxBenefitRollforward"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 1234,
+ "r1_usage": {
+  "prompt_tokens": 34067,
+  "completion_tokens": 329,
+  "total_tokens": 34396,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/section/IncomeTax/UnrecognizedTaxBenefitRollforward"
+ ],
+ "content_chars": 12739,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "-35",
+ "reasoning": "We need to find the change in unrecognized tax benefits from end of 2014 to end of 2015. The rollforward table shows Balance, December 31 for 2015: $1,136 million, and for 2014: $1,171 million. The change is 1,136 - 1,171 = -35 million. The question asks \"what was the change\" - likely the amount, maybe negative. We'll provide -35. Need to cite figures: $1,136 and $1,171.",
+ "raw_content": "<evidence>$ 1,136 | /chunk/section/IncomeTax/UnrecognizedTaxBenefitRollforward/UnrecognizedTaxBenefitRollforward/table/UnrecognizedTaxBenefitRollforward[last]/FinancialAmount[1]\n$ 1,171 | /chunk/section/IncomeTax/UnrecognizedTaxBenefitRollforward/UnrecognizedTaxBenefitRollforward/table/UnrecognizedTaxBenefitRollforward[last]/FinancialAmount[2]</evidence>\n\n<program>subtract(1136, 1171)</program>\n\n<answer>-35</answer>",
+ "r2_usage": {
+  "prompt_tokens": 3323,
+  "completion_tokens": 243,
+  "total_tokens": 3566,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 3323,
+   "completion_tokens": 243,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "$ 1,136",
+   "element": "chunk/section/IncomeTax/UnrecognizedTaxBenefitRollforward/UnrecognizedTaxBenefitRollforward/table/UnrecognizedTaxBenefitRollforward[last]/FinancialAmount[1]",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$ 1,171",
+   "element": "chunk/section/IncomeTax/UnrecognizedTaxBenefitRollforward/UnrecognizedTaxBenefitRollforward/table/UnrecognizedTaxBenefitRollforward[last]/FinancialAmount[2]",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "subtract(1136, 1171)",
+ "answer_model": "-35",
+ "program_value": -35.0,
+ "elapsed_s": 4.91
+}

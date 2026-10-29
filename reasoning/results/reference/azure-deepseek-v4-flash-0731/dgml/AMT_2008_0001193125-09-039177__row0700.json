@@ -1,0 +1,53 @@
+{
+ "id": "AMT_2008_0001193125-09-039177__row0700",
+ "format": "dgml",
+ "key": "AMT_2008_0001193125-09-039177",
+ "question": "in 2006 what was percentage change in the employee separations liabilities",
+ "gold": "-65.1%",
+ "finqa_id": "AMT/2008/page_107.pdf-2",
+ "source_page": "page_107",
+ "ticker": "AMT",
+ "fiscal_year": "2008",
+ "source_file": "data/docs/dgml/AMT_2008_0001193125-09-039177.dgml.xml",
+ "doc_chars": 745300,
+ "prompt_chars": 745463,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 745300,
+ "original_chars": 745300,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 172559,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 229,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-65%",
+ "reasoning": "We need to find the percentage change in employee separations liabilities in 2006. The document has a table in note 14 about merger related expense. It shows liability as of Dec 31, 2005, 2006 expense, 2006 cash payments, other, liability as of Dec 31, 2006. The row for employee separations: Liability as of Dec 31, 2005 = $20,963; 2006 Expense = $496; 2006 Cash Payments = $(12,389); Other = $(1,743); Liability as of Dec 31, 2006 = $7,327. So the liability decreased from 20,963 to 7,327. Percentage change = (7,327 - 20,963)/20,963 = -13,636/20,963 ≈ -0.6505 = -65.05%. So about -65%. The question asks \"percentage change in the employee separations liabilities\" in 2006. So answer -65% or -65.05%.",
+ "raw_content": "<answer>-65%</answer>",
+ "usage": {
+  "prompt_tokens": 172702,
+  "completion_tokens": 229,
+  "total_tokens": 172931,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 172544
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.07,
+ "answer_tag_found": true,
+ "docfinqa_row": 700
+}

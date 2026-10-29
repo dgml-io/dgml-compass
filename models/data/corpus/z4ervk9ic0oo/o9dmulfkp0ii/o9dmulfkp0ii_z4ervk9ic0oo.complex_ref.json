@@ -1,0 +1,1019 @@
+{
+ "docset": "o9dmulfkp0ii",
+ "derived_from": "o9dmulfkp0ii_z4ervk9ic0oo.ref.json",
+ "spec_source": "curated",
+ "note": "ComplexType reference: groups of flat-ref answers that belong together (table rows / entities / itemized lists). Values are the flat ref's texts (token provenance stripped). Relations are document-verified: row instances must be token-local in the document's token stream AND (where a reference XML exists) co-occur inside one element; types failing the co-occurrence gate are dropped. Per file, a type maps to a list of instances, an explicit [] when the document genuinely has no instance of the type (predicting one there is an instance false-positive), or null when the gold could not be verified for that file (metrics must SKIP null, never treat it as empty). The flat ref is unchanged and remains the value-level gold.",
+ "types": {
+  "CategoryRow": {
+   "scope": "row",
+   "members": [
+    "Category+Name",
+    "Category+Price"
+   ]
+  },
+  "ExpertRecord": {
+   "scope": "row",
+   "members": [
+    "Experts+Name",
+    "Experts+Job"
+   ]
+  },
+  "TripInfo": {
+   "scope": "group",
+   "members": [
+    "Trip+Name",
+    "Tour+Duration",
+    "Trip+Price+Per+Person",
+    "Original+Trip+Price",
+    "Maximum+Guest+Number"
+   ]
+  },
+  "ItineraryList": {
+   "scope": "list",
+   "members": [
+    "Itinerary"
+   ]
+  }
+ },
+ "instances": {
+  "0p9sgvsg0a5j": {
+   "CategoryRow": [
+    {
+     "Category+Name": "Category 1 Classic Stateroom",
+     "Category+Price": "$ 14,995 ( was $ 16,495 )"
+    },
+    {
+     "Category+Name": "Category 2 Deluxe Stateroom",
+     "Category+Price": "$ 17,495 ( was $ 18,995 )"
+    },
+    {
+     "Category+Name": "Category 3 Prestige Stateroom",
+     "Category+Price": "$ 19,995 ( was $ 21,495 )"
+    },
+    {
+     "Category+Name": "Category 4 Deluxe Suite",
+     "Category+Price": "$ 25,995 ( was $ 27,495 )"
+    },
+    {
+     "Category+Name": "Category 5 Privilege Suite",
+     "Category+Price": "$ 28,495 ( was $ 29,995 )"
+    },
+    {
+     "Category+Name": "Category 6 Prestige Two - Room Suite",
+     "Category+Price": "$ 34,995 ( was $ 36,495 )"
+    },
+    {
+     "Category+Name": "Category 7 Grand Deluxe Suite",
+     "Category+Price": "$ 40,995 ( was $ 42,495 )"
+    },
+    {
+     "Category+Name": "Category 8 Owner ’s Suite",
+     "Category+Price": "$ 43,995 ( was $ 45,495 )"
+    }
+   ],
+   "ExpertRecord": [
+    {
+     "Experts+Name": "GERALDINE “JD” MASSYN",
+     "Experts+Job": "Expedition Leader"
+    },
+    {
+     "Experts+Name": "DR. APRIL BURT",
+     "Experts+Job": "Conservation Scientist"
+    }
+   ],
+   "TripInfo": [
+    {
+     "Trip+Name": "Cruising the Seychelles & Coastal Tanzania 2023",
+     "Tour+Duration": "14 days",
+     "Trip+Price+Per+Person": "$ 14,995",
+     "Original+Trip+Price": "$ 16,495",
+     "Maximum+Guest+Number": "148 guests"
+    }
+   ],
+   "ItineraryList": [
+    {
+     "Itinerary": [
+      "MAR 11 ARRIVE ZANZIBAR ISLANDS , TANZANIA",
+      "MAR 12 ZANZIBAR ISLAND | JEWEL OF THE OCEAN",
+      "MAR 13 PEMBA ISLAND | IDYLLIC CLOVE ISLAND",
+      "MAR 14 KILWA KISIWANI | ANCIENT SWAHILI RUINS",
+      "MAR 15 AT SEA | ACROSS THE EAST INDIAN OCEAN",
+      "MAR 16–17 ASSUMPTION ISLAND & ALDABRA ATOLL , SEYCHELLES | PARADISE ON EARTH",
+      "MAR 18 ASTOVE ISLAND | IMMACULATE ECOSYSTEM",
+      "MAR 19 FARQUHAR ATOLL | EXPLORING THE ALPHONSE ISLANDS",
+      "MAR 20 ST. FRANÇOIS ATOLL | BIRDING PARADISE OF SEYCHELLES",
+      "MAR 21 POIVRE & RÉMIRE ISLANDS | THE AMIRANTES ISLANDS",
+      "MAR 22 ARIDE & CURIEUSE ISLANDS | PROTECTED WONDERS",
+      "MAR 23 PRASLIN & LA DIGUE ISLANDS | THE INNER ISLANDS",
+      "MAR 24 DEPART MAHÉ , SEYCHELLES"
+     ]
+    }
+   ]
+  },
+  "8rhbjipxhuqz": {
+   "CategoryRow": [
+    {
+     "Category+Name": "Category 1 Classic Stateroom",
+     "Category+Price": "$ 15,995 ( was $ 17,995 )"
+    },
+    {
+     "Category+Name": "Category 2 Deluxe Stateroom",
+     "Category+Price": "$ 17,995 ( was $ 19,995 )"
+    },
+    {
+     "Category+Name": "Category 3 Prestige Stateroom",
+     "Category+Price": "$ 18,995 ( was $ 20,995 )"
+    },
+    {
+     "Category+Name": "Category 4 Deluxe Suite",
+     "Category+Price": "$ 28,495 ( was $ 30,495 )"
+    },
+    {
+     "Category+Name": "Category 5 Privilege Suite",
+     "Category+Price": "$ 30,995 ( was $ 32,995 )"
+    },
+    {
+     "Category+Name": "Category 6 Prestige Two - Room Suite",
+     "Category+Price": "$ 35,995 ( was $ 37,995 )"
+    },
+    {
+     "Category+Name": "Category 7 Grand Deluxe Suite",
+     "Category+Price": "$ 41,995 ( was $ 43,995 )"
+    },
+    {
+     "Category+Name": "Category 8 Owner ’s Suite",
+     "Category+Price": "$ 44,995 ( was $ 46,995 )"
+    }
+   ],
+   "ExpertRecord": [
+    {
+     "Experts+Name": "DR. MARK BRAZIL",
+     "Experts+Job": "Ornithology Lecturer"
+    },
+    {
+     "Experts+Name": "LORD CHARTRES",
+     "Experts+Job": "History & Cultural Lecturer"
+    }
+   ],
+   "TripInfo": [
+    {
+     "Trip+Name": "Cruising the Enchanted Isles : Scotland , Ireland & England 2022",
+     "Tour+Duration": "14 days",
+     "Trip+Price+Per+Person": "$ 15,995",
+     "Original+Trip+Price": "$ 17,995",
+     "Maximum+Guest+Number": "148 guests"
+    }
+   ],
+   "ItineraryList": [
+    {
+     "Itinerary": [
+      "AUG 26 EDINBURGH , SCOTLAND",
+      "AUG 27 EDINBURGH | EXCITING CAPITAL CITY",
+      "AUG 28 INVERGORDON | MAJESTIC SCOTTISH HIGH LANDS",
+      "AUG 29 ORKNEY ISLANDS | KIRKWALL & THE RING OF BRODGAR",
+      "AUG 30 OUTER HEBRIDES | PREHISTORIC WESTERN ISLES",
+      "AUG 31 OUTER HEBRIDES | SEA STACKS OF ST. KILDA",
+      "SEP 1 INNER HEBRIDES | GREEN JEWELS OF STAFFA & IONA",
+      "SEP 2 DONEGAL , IRELAND | UNSPOILED COAST",
+      "SEP 3 GALWAY | TRADITIONAL CITY & CLIFFS OF MOHER",
+      "SEP 4 SKELLIG MICHAEL | FANTASTIC PEAKS OF THE ATLANTIC",
+      "SEP 5 AT SEA | ACROSS THE CELTIC SEA",
+      "SEP 6 – 7 LONDON | CITY OF STRIKING LANDMARKS",
+      "SEP 8 DEPART LONDON"
+     ]
+    }
+   ]
+  },
+  "9fbkpur0r0yq": {
+   "CategoryRow": [
+    {
+     "Category+Name": "Category 1 Classic Stateroom",
+     "Category+Price": "$ 9,995 ( was $ 10,995 )"
+    },
+    {
+     "Category+Name": "Category 2 Deluxe Stateroom",
+     "Category+Price": "$ 12,495 ( was $ 13,495 )"
+    },
+    {
+     "Category+Name": "Category 3 Prestige Stateroom",
+     "Category+Price": "$ 14,495 ( was $ 15,495 )"
+    },
+    {
+     "Category+Name": "Category 4 Deluxe Suite",
+     "Category+Price": "$ 19,995 ( was $ 20,995 )"
+    },
+    {
+     "Category+Name": "Category 5 Privilege Suite",
+     "Category+Price": "$ 21,495 ( was $ 22,495 )"
+    },
+    {
+     "Category+Name": "Category 6 Prestige Two - Room Suite",
+     "Category+Price": "$ 27,495 ( was $ 28,495 )"
+    },
+    {
+     "Category+Name": "Category 7 Grand Deluxe Suite",
+     "Category+Price": "$ 33,995 ( was $ 34,995 )"
+    },
+    {
+     "Category+Name": "Category 8 Owner ’s Suite",
+     "Category+Price": "$ 36,995 ( was $ 37,995 )"
+    }
+   ],
+   "ExpertRecord": [
+    {
+     "Experts+Name": "LORD CHARTRES",
+     "Experts+Job": "History & Cultural Lecturer"
+    },
+    {
+     "Experts+Name": "PAUL CARTER",
+     "Experts+Job": "Cruise Director"
+    }
+   ],
+   "TripInfo": [
+    {
+     "Trip+Name": "European Coastal Cruise : Portugal , Spain & France 2023",
+     "Tour+Duration": "9 days",
+     "Trip+Price+Per+Person": "$ 12,495",
+     "Original+Trip+Price": "$ 13,495",
+     "Maximum+Guest+Number": "148 guests"
+    }
+   ],
+   "ItineraryList": [
+    {
+     "Itinerary": [
+      "APR 27 ARRIVE LISBON , PORTUGAL",
+      "APR 28 PORTO | OPULENT CITY ON THE RIO DOURO",
+      "APR 29 CEE & A CORUÑA , SPAIN | CAMINO DE SANTIAGO",
+      "APR 30 SANTANDER & BILBAO | SHIMMERING ART IN BASQUE COUNTRY",
+      "MAY 1 BORDEAUX , FRANCE | INTOXICATING FRENCH ART DE VIVRE",
+      "MAY 2 AT SEA | SAILING TOWARD THE BRITTANY COAST",
+      "MAY 3 SAINT - MALO | GATEWAY TO LE MONT SAINT - MICHEL",
+      "MAY 4 AT SEA | CRUISING THE ENGLISH CHANNEL",
+      "MAY 5 DEPART LONDON , ENGLAND"
+     ]
+    }
+   ]
+  },
+  "dfddbk8u7uqd": {
+   "CategoryRow": [
+    {
+     "Category+Name": "Category 1 Classic Stateroom",
+     "Category+Price": "$ 17,495 ( was $ 20,495 )"
+    },
+    {
+     "Category+Name": "Category 2 Deluxe Stateroom",
+     "Category+Price": "$ 19,495 ( was $ 22,495 )"
+    },
+    {
+     "Category+Name": "Category 3 Prestige Stateroom",
+     "Category+Price": "$ 20,495 ( was $ 23,495 )"
+    },
+    {
+     "Category+Name": "Category 4 Deluxe Suite",
+     "Category+Price": "$ 29,995 ( was $ 32,995 )"
+    },
+    {
+     "Category+Name": "Category 5 Privilege Suite",
+     "Category+Price": "$ 32,995 ( was $ 35,995 )"
+    },
+    {
+     "Category+Name": "Category 6 Prestige Two - Room Suite",
+     "Category+Price": "$ 37,995 ( was $ 40,995 )"
+    },
+    {
+     "Category+Name": "Category 7 Grand Deluxe Suite",
+     "Category+Price": "$ 44,995 ( was $ 47,995 )"
+    },
+    {
+     "Category+Name": "Category 8 Owner ’s Suite",
+     "Category+Price": "$ 48,495 ( was $ 51,495 )"
+    }
+   ],
+   "ExpertRecord": [
+    {
+     "Experts+Name": "DR. MARK BRAZIL",
+     "Experts+Job": "Natural History Lecturer"
+    },
+    {
+     "Experts+Name": "MIKE MURPHY",
+     "Experts+Job": "Dive Master"
+    }
+   ],
+   "TripInfo": [
+    {
+     "Trip+Name": "Indonesia Voyage : Komodo , Papua & Great Barrier Reef 2023",
+     "Tour+Duration": "17 days",
+     "Trip+Price+Per+Person": "$ 17,495",
+     "Original+Trip+Price": "$ 20,495",
+     "Maximum+Guest+Number": "148 guests"
+    }
+   ],
+   "ItineraryList": [
+    {
+     "Itinerary": [
+      "OCT 20 ARRIVE BALI , INDONESIA",
+      "OCT 21 BALI | EXQUISITE ISLAND OF THE GODS",
+      "OCT 22 BALI | TIMELESS BALINESE CITY OF DENPASAR",
+      "OCT 23–24 KOMODO NATIONAL PARK | HOME OF THE DRAGON",
+      "OCT 25 ALOR ISLAND | ISLAND OF A THOUSAND MOKOS",
+      "OCT 26 AT SEA | SPARKLING WATERS OF THE SOUTH PACIFIC",
+      "OCT 27–28 MALUKU ISLANDS | IDYLLIC SPICE ISLANDS",
+      "OCT 29 WEST PAPUA | SPECTACULAR UNDERSEA ECOSYSTEM",
+      "OCT 30 AT SEA | THE BEAUTY OF LUXURY EXPEDITION CRUISING",
+      "OCT 31 PAPUA | LAND OF A THOUSAND CULTURES",
+      "NOV 1–2 AT SEA | CRUISING TO AUSTRALIA",
+      "NOV 3 AT SEA | REFLECTING ON UNFORGETTABLE ADVENTURES",
+      "NOV 4 LIZARD ISLAND | THE GREAT BARRIER REEF",
+      "NOV 5 DEPART CAIRNS"
+     ]
+    }
+   ]
+  },
+  "e8tbmje4zk6d": {
+   "CategoryRow": [
+    {
+     "Category+Name": "Classic Stateroom - Category 1",
+     "Category+Price": "$ 11,995 ( was $ 13,995 )"
+    },
+    {
+     "Category+Name": "Deluxe Stateroom - Category 2",
+     "Category+Price": "$ 13,995 ( was $ 15,995 )"
+    },
+    {
+     "Category+Name": "Prestige Stateroom - Category 3",
+     "Category+Price": "$ 15,495 ( was $ 17,495 )"
+    },
+    {
+     "Category+Name": "Deluxe Suite - Category 4",
+     "Category+Price": "$ 22,995 ( was $ 24,995 )"
+    },
+    {
+     "Category+Name": "Privilege Suite - Category 5",
+     "Category+Price": "$ 25,495 ( was $ 27,495 )"
+    },
+    {
+     "Category+Name": "Prestige Two - Room Suite - Category 6",
+     "Category+Price": "$ 30,995 ( was $ 32,995 )"
+    },
+    {
+     "Category+Name": "Grand Deluxe Suite - Category 7",
+     "Category+Price": "$ 34,995 ( was $ 36,995 )"
+    },
+    {
+     "Category+Name": "Owner ’s Suite - Category 8",
+     "Category+Price": "$ 37,995 ( was $ 39,995 )"
+    }
+   ],
+   "ExpertRecord": [
+    {
+     "Experts+Name": "LECH WAŁĘSA",
+     "Experts+Job": "Guest Speaker"
+    },
+    {
+     "Experts+Name": "RON WIXMAN",
+     "Experts+Job": "History & Cultural Lecturer"
+    }
+   ],
+   "TripInfo": [
+    {
+     "Trip+Name": "Cruising Scandinavia & the Baltic Sea 2023",
+     "Tour+Duration": "10 days",
+     "Trip+Price+Per+Person": "$ 13,995",
+     "Original+Trip+Price": "$ 15,995",
+     "Maximum+Guest+Number": "148 guests"
+    }
+   ],
+   "ItineraryList": [
+    {
+     "Itinerary": [
+      "JUL 15 ARRIVE COPENHAGEN , DENMARK",
+      "JUL 16 AT SEA | SETTING SAIL",
+      "JUL 17 GDANSK , POLAND | HARBORSIDE HISTORY",
+      "JUL 18 KLAIPEDA , LITHUANIA | LITHUANIAN CHARM",
+      "JUL 19 RIGA , LATVIA | ART NOUVEAU CAPITAL",
+      "JUL 20 STOCKHOLM , SWEDEN | SCENIC ARCHIPELAGO",
+      "JUL 21 STOCKHOLM | BEAUTY ON THE WATER",
+      "JUL 22 TALLINN , ESTONIA | PICTURESQUE CAPITAL",
+      "JUL 23 HELSINKI , FINLAND | NATURE & ARCHITECTURE",
+      "JUL 24 DEPART HELSINKI"
+     ]
+    }
+   ]
+  },
+  "o5nrx5ag0kko": {
+   "CategoryRow": [
+    {
+     "Category+Name": "Classic Stateroom - Category 1",
+     "Category+Price": "$ 13,995 ( was $ 14,995 )"
+    },
+    {
+     "Category+Name": "Deluxe Stateroom - Category 2",
+     "Category+Price": "$ 15,495 ( was $ 16,495 )"
+    },
+    {
+     "Category+Name": "Prestige Stateroom - Category 3",
+     "Category+Price": "$ 16,995 ( was $ 17,995 )"
+    },
+    {
+     "Category+Name": "Deluxe Suite - Category 4",
+     "Category+Price": "$ 22,495 ( was $ 23,495 )"
+    },
+    {
+     "Category+Name": "Privilege Suite - Category 5",
+     "Category+Price": "$ 24,995 ( was $ 25,995 )"
+    },
+    {
+     "Category+Name": "Prestige Two - Room Suite - Category 6",
+     "Category+Price": "$ 29,995 ( was $ 30,995 )"
+    },
+    {
+     "Category+Name": "Grand Deluxe Suite - Category 7",
+     "Category+Price": "$ 36,495 ( was $ 37,495 )"
+    },
+    {
+     "Category+Name": "Owner 's Suite - Category 8",
+     "Category+Price": "$ 38,995 ( was $ 39,995 )"
+    }
+   ],
+   "ExpertRecord": [
+    {
+     "Experts+Name": "ANDREW COLEMAN",
+     "Experts+Job": "Photo Enrichment Coach"
+    },
+    {
+     "Experts+Name": "DR LUCA ZAVAGNO",
+     "Experts+Job": "History & Cultural Lecturer"
+    }
+   ],
+   "TripInfo": [
+    {
+     "Trip+Name": "Italy Cruise : Hidden Treasures from Florence to Venice 2022",
+     "Tour+Duration": "13 days",
+     "Trip+Price+Per+Person": "$ 15,495",
+     "Original+Trip+Price": "$ 16,495",
+     "Maximum+Guest+Number": "148 guests"
+    }
+   ],
+   "ItineraryList": [
+    {
+     "Itinerary": [
+      "SEP 13 ARRIVE FLORENCE , ITALY",
+      "SEP 14 FLORENCE | HEART OF THE RENAISSANCE",
+      "SEP 15 TUSCANY / LIVORNO | TUSCAN TREASURES",
+      "SEP 16 CORSICA , FRANCE | MOUNTAINOUS FRENCH ISLE",
+      "SEP 17 ROME , ITALY | THE ETERNAL CITY",
+      "SEP 18 LIPARI | DAY AT SEA",
+      "SEP 19 PALERMO | SICILY ’S CAPITAL",
+      "SEP 20 TAORMINA | EASTERN SICILY",
+      "SEP 21 AT SEA | A DAY AT LEISURE",
+      "SEP 22 PUGLIA | GARGANO ’S NATURAL SPLENDOR",
+      "SEP 23 THE MARCHES | HIDDEN BEAUTY",
+      "SEP 24 VENICE | CITY OF BRIDGES",
+      "SEP 25 DEPART VENICE"
+     ]
+    }
+   ]
+  },
+  "pyr7luqin0ib": {
+   "CategoryRow": [
+    {
+     "Category+Name": "Classic Stateroom - Category 1",
+     "Category+Price": "$ 19,495 ( was $ 23,495 )"
+    },
+    {
+     "Category+Name": "Deluxe Stateroom - Category 2",
+     "Category+Price": "$ 22,495 ( was $ 26,495 )"
+    },
+    {
+     "Category+Name": "Premier Stateroom - Category 3",
+     "Category+Price": "$ 23,995 ( was $ 27,995 )"
+    },
+    {
+     "Category+Name": "Prestige Suite - Category 4",
+     "Category+Price": "$ 33,995 ( was $ 37,995 )"
+    },
+    {
+     "Category+Name": "Premier Two - Room Suite - Category 5",
+     "Category+Price": "$ 40,495 ( was $ 44,495 )"
+    },
+    {
+     "Category+Name": "Privilege Two - Room Suite - Category 6",
+     "Category+Price": "$ 42,995 ( was $ 46,995 )"
+    },
+    {
+     "Category+Name": "Grand Deluxe Two - Room Suite - Category 7",
+     "Category+Price": "$ 48,495 ( was $ 52,495 )"
+    },
+    {
+     "Category+Name": "Grand Privilege Three - Room Suite - Category 8",
+     "Category+Price": "$ 55,995 ( was $ 59,995 )"
+    },
+    {
+     "Category+Name": "Owner 's Suite - Category 9",
+     "Category+Price": "$ 57,995 ( was $ 61,995 )"
+    }
+   ],
+   "ExpertRecord": [
+    {
+     "Experts+Name": "HELEN AHERN",
+     "Experts+Job": "Zodiac Driver & Naturalist Guide"
+    },
+    {
+     "Experts+Name": "KRISTIN WORNSON",
+     "Experts+Job": "Young Explorer 's Guide"
+    }
+   ],
+   "TripInfo": [
+    {
+     "Trip+Name": "Antarctica , South Georgia & Falklands : Holiday Voyage 2022",
+     "Tour+Duration": "18 days",
+     "Trip+Price+Per+Person": "19,495",
+     "Original+Trip+Price": "$ 23,495",
+     "Maximum+Guest+Number": "199 guests"
+    }
+   ],
+   "ItineraryList": [
+    {
+     "Itinerary": [
+      "DEC 19 ARRIVE BUENOS AIRES , ARGENTINA",
+      "DEC 20 BUENOS AIRES | EXPLORING THE CAPITAL CITY",
+      "DEC 21 USHUAIA | AT THE EDGE OF THE WORLD",
+      "DEC 22 AT SEA | RICHES OF THE SOUTHERN OCEAN",
+      "DEC 23 THE FALKLAND ISLANDS | HISTORIC OUTPOST",
+      "DEC 24 – 25 THE SOUTH ATLANTIC | HOLIDAY AT SEA",
+      "DEC 26 – 28 SOUTH GEORGIA | WILDLIFE HAVEN",
+      "DEC 29 - 30 SCOTIA SEA | LIFE ON THE SOUTHERN OCEAN",
+      "DEC 31 - JAN 2 ANTARCTICA | INCREDIBLE WHITE CONTINENT",
+      "JAN 3 – 4 DRAKE PASSAGE | REFLECTIONS AT SEA",
+      "JAN 5 DEPART USHUAIA"
+     ]
+    }
+   ]
+  },
+  "rcwc75wpykim": {
+   "CategoryRow": [
+    {
+     "Category+Name": "Classic Stateroom - Category 1",
+     "Category+Price": "$ 13,995 ( was $ 16,995 )"
+    },
+    {
+     "Category+Name": "Deluxe Stateroom - Category 2",
+     "Category+Price": "$ 15,995 ( was $ 18,995 )"
+    },
+    {
+     "Category+Name": "Premier Stateroom - Category 3",
+     "Category+Price": "$ 16,995 ( was $ 19,995 )"
+    },
+    {
+     "Category+Name": "Prestige Suite - Category 4",
+     "Category+Price": "$ 25,495 ( was $ 28,495 )"
+    },
+    {
+     "Category+Name": "Premier Two - Room Suite - Category 5",
+     "Category+Price": "$ 30,995 ( was $ 33,995 )"
+    },
+    {
+     "Category+Name": "Privilege Two - Room Suite - Category 6",
+     "Category+Price": "$ 32,995 ( was $ 35,995 )"
+    },
+    {
+     "Category+Name": "Grand Deluxe Two - Room Suite - Category 7",
+     "Category+Price": "$ 35,495 ( was $ 38,495 )"
+    },
+    {
+     "Category+Name": "Grand Privilege Three - Room Suite - Category 8",
+     "Category+Price": "$ 40,495 ( was $ 43,495 )"
+    },
+    {
+     "Category+Name": "Owner 's Suite - Category 9",
+     "Category+Price": "$ 42,995 ( was $ 45,995 )"
+    }
+   ],
+   "ExpertRecord": [
+    {
+     "Experts+Name": "DR . JAMES MCCLINTOCK",
+     "Experts+Job": "Climate Scientist"
+    },
+    {
+     "Experts+Name": "DR . PATRICIA SILVA RODRIGUEZ",
+     "Experts+Job": "Ornithologist"
+    }
+   ],
+   "TripInfo": [
+    {
+     "Trip+Name": "Antarctic Cruise Adventure 2023",
+     "Tour+Duration": "13 days",
+     "Trip+Price+Per+Person": "$ 13,995",
+     "Original+Trip+Price": "$ 16,995",
+     "Maximum+Guest+Number": "199 guests"
+    }
+   ],
+   "ItineraryList": [
+    {
+     "Itinerary": [
+      "DEC 10 ARRIVE BUENOS AIRES , ARGENTINA",
+      "DEC 11 BUENOS AIRES | VIBRANT LATIN AMERICAN CITY",
+      "DEC 12 USHUAIA | GATEWAY TO ANTARCTICA",
+      "DEC 13 – 14 DRAKE PASSAGE | LEGENDARY WATERS",
+      "DEC 15 – 19 ANTARCTICA | THE WHITE CONTINENT",
+      "DEC 20 – 21 DRAKE PASSAGE | MEMORABLE RETURN",
+      "DEC 22 DEPART USHUAIA"
+     ]
+    }
+   ]
+  },
+  "rzzqivyhc0m4": {
+   "CategoryRow": [
+    {
+     "Category+Name": "Category 1 Classic Stateroom",
+     "Category+Price": "$ 14,495 ( was $ 15,995 )"
+    },
+    {
+     "Category+Name": "Category 2 Deluxe Stateroom",
+     "Category+Price": "$ 17,495 ( was $ 18,995 )"
+    },
+    {
+     "Category+Name": "Category 3 Prestige Stateroom",
+     "Category+Price": "$ 19,495 ( was $ 20,995 )"
+    },
+    {
+     "Category+Name": "Category 4 Deluxe Suite",
+     "Category+Price": "$ 25,995 ( was $ 27,495 )"
+    },
+    {
+     "Category+Name": "Category 5 Privilege Suite",
+     "Category+Price": "$ 28,495 ( was $ 29,995 )"
+    },
+    {
+     "Category+Name": "Category 6 Prestige Two - Room Suite",
+     "Category+Price": "$ 35,995 ( was $ 37,495 )"
+    },
+    {
+     "Category+Name": "Category 7 Grand Deluxe Suite",
+     "Category+Price": "$ 41,495 ( was $ 42,995 )"
+    },
+    {
+     "Category+Name": "Category 8 Owner ’s Suite",
+     "Category+Price": "$ 44,495 ( was $ 45,995 )"
+    }
+   ],
+   "ExpertRecord": [
+    {
+     "Experts+Name": "BART PIGRAM",
+     "Experts+Job": "Aboriginal Culture Expert"
+    },
+    {
+     "Experts+Name": "BRAD CLIMPSON",
+     "Experts+Job": "Expedition Leader"
+    }
+   ],
+   "TripInfo": [
+    {
+     "Trip+Name": "Kimberley Cruise : Australia ’s Last Frontier 2023",
+     "Tour+Duration": "13 days",
+     "Trip+Price+Per+Person": "$ 17,495",
+     "Original+Trip+Price": "$ 18,995",
+     "Maximum+Guest+Number": "148 guests"
+    }
+   ],
+   "ItineraryList": [
+    {
+     "Itinerary": [
+      "MAY 12 – 13 ARRIVE BROOME , AUSTRALIA",
+      "MAY 14 BROOME | JEWEL IN THE WILDS",
+      "MAY 15 – 19 KIMBERLEY ’S WILD COAST | EXTRAORDINARY TIDES",
+      "MAY 20 VANSITTART BAY | MYSTERIOUS ANCIENT ROCK ART",
+      "MAY 21 KING GEORGE RIVER & FALLS | THE KING ’S TREASURE",
+      "MAY 22 WYNDHAM | GATEWAY TO NATURAL WONDERS",
+      "MAY 23 AT SEA & PULAU MEATIMIARANG , INDONESIA | CRUISING THE TIMOR SEA",
+      "MAY 24 DEPART DARWIN"
+     ]
+    }
+   ]
+  },
+  "tuz1jntrseqm": {
+   "CategoryRow": [
+    {
+     "Category+Name": "Category 1 - Classic Stateroom",
+     "Category+Price": "$ 35,495 ( was $ 39,495 )"
+    },
+    {
+     "Category+Name": "Category 2 - Deluxe Stateroom",
+     "Category+Price": "$ 39,995 ( was $ 43,995 )"
+    },
+    {
+     "Category+Name": "Category 3 - Premier Stateroom",
+     "Category+Price": "$ 42,995 ( was $ 46,995 )"
+    },
+    {
+     "Category+Name": "Category 4 - Superior Stateroom",
+     "Category+Price": "$ 44,995 ( was $ 48,995 )"
+    },
+    {
+     "Category+Name": "Category 5 - Prestige Suite",
+     "Category+Price": "$ 55,495 ( was $ 59,495 )"
+    },
+    {
+     "Category+Name": "Category 6 - Premier Two - Room Suite",
+     "Category+Price": "$ 65,495 ( was $ 69,495 )"
+    },
+    {
+     "Category+Name": "Category 7 - Prestige Two - Room Suite",
+     "Category+Price": "$ 67,995 ( was $ 71,995 )"
+    },
+    {
+     "Category+Name": "Category 8 - Owner 's Suite",
+     "Category+Price": "$ 82,995 ( was $ 86,995 )"
+    }
+   ],
+   "ExpertRecord": [
+    {
+     "Experts+Name": "LESLIE QAMMANIQ",
+     "Experts+Job": "Inuit Culture Expert"
+    },
+    {
+     "Experts+Name": "RUSSELL POTTER",
+     "Experts+Job": "Arctic History Lecturer"
+    }
+   ],
+   "TripInfo": [
+    {
+     "Trip+Name": "The Northwest Passage : From Greenland to the Bering Sea 2023",
+     "Tour+Duration": "25 days",
+     "Trip+Price+Per+Person": "$ 35,495",
+     "Original+Trip+Price": "$ 39,495",
+     "Maximum+Guest+Number": "199 guests"
+    }
+   ],
+   "ItineraryList": [
+    {
+     "Itinerary": [
+      "AUG 25 ARRIVE NEW YORK CITY , NEW YORK",
+      "AUG 26 KANGERLUSSUAQ | EDGE OF INDLANDSIS",
+      "AUG 27 – SEP 2 WESTERN GREENLAND | AMUNDSEN ’S BEGINNING",
+      "SEP 3 – 10 NUNAVUT | VAST CANADIAN ARCTIC ARCHIPELAGO",
+      "SEP 11–13 NORTHWEST TERRITORIES | REMOTE FRONTIER",
+      "SEP 14 HERSCHEL ISLAND | THE YUKON TERRITORY",
+      "SEP 15 – 17 BEAUFORT & BERING SEAS | WATERS OF THE WHITE WHALE",
+      "SEP 18 NOME , ALASKA | GOLD RUSH FEVER"
+     ]
+    }
+   ]
+  },
+  "uughlkwab0do": {
+   "CategoryRow": [
+    {
+     "Category+Name": "Category 1 Classic Stateroom",
+     "Category+Price": "$ 14,995 ( was $ 16,495 )"
+    },
+    {
+     "Category+Name": "Category 2 Deluxe Stateroom",
+     "Category+Price": "$ 17,495 ( was $ 18,995 )"
+    },
+    {
+     "Category+Name": "Category 3 Premier Stateroom",
+     "Category+Price": "$ 18,995 ( was $ 20,495 )"
+    },
+    {
+     "Category+Name": "Category 4 Superior Stateroom",
+     "Category+Price": "$ 22,495 ( was $ 23,995 )"
+    },
+    {
+     "Category+Name": "Category 5 Prestige Suite",
+     "Category+Price": "$ 29,995 ( was $ 31,495 )"
+    },
+    {
+     "Category+Name": "Category 6 Premier Two - Room Suite",
+     "Category+Price": "$ 37,995 ( was $ 39,495 )"
+    },
+    {
+     "Category+Name": "Category 7 Prestige Two - Room Suite",
+     "Category+Price": "$ 39,995 ( was $ 41,495 )"
+    },
+    {
+     "Category+Name": "Category 8 Owner ’s Suite",
+     "Category+Price": "$ 45,995 ( was $ 47,495 )"
+    }
+   ],
+   "ExpertRecord": [
+    {
+     "Experts+Name": "MICHELLE VALBERG",
+     "Experts+Job": "Photographer , Nikon Ambassador"
+    },
+    {
+     "Experts+Name": "COMMANDER SUSAN KILRAIN",
+     "Experts+Job": "Guest Lecturer"
+    }
+   ],
+   "TripInfo": [
+    {
+     "Trip+Name": "French Polynesia to Easter Island Expedition 2023",
+     "Tour+Duration": "14 days",
+     "Trip+Price+Per+Person": "$ 14,995",
+     "Original+Trip+Price": "$ 16,495",
+     "Maximum+Guest+Number": "199 guests"
+    }
+   ],
+   "ItineraryList": [
+    {
+     "Itinerary": [
+      "OCT 27 ARRIVE PAPEETE , TAHITI",
+      "OCT 28 FAKARAVA ATOLL | STUNNING TUAMOTUAN ATOLL",
+      "OCT 29 MAROKAU ATOLL | PEARL OF THE TUAMOTUS",
+      "OCT 30 AT SEA | CRUISING THE TUAMOTU ARCHIPELAGO",
+      "OCT 31 MANGAREVA ISLAND | STAR OF THE GAMBIER ISLANDS",
+      "NOV 1 AT SEA | SAILING THE SOUTH PACIFIC OCEAN",
+      "NOV 2 PITCAIRN ISLAND | LEGACY OF THE HMS ‘ BOUNTY ’",
+      "NOV 3 HENDERSON ISLAND | WILD , UNTOUCHED TREASURE",
+      "NOV 4 DUCIE ISLAND | BIRDER ’S PARADISE",
+      "NOV 5–6 AT SEA | THE VOYAGE TO EASTER ISLAND",
+      "NOV 7–8 EASTER ISLAND , CHILE | RAPA NUI NATIONAL PARK",
+      "NOV 9 DEPART EASTER ISLAND"
+     ]
+    }
+   ]
+  },
+  "wenmniqrreao": {
+   "CategoryRow": [
+    {
+     "Category+Name": "Category 1 Classic Stateroom",
+     "Category+Price": "$ 9,995 ( was $ 10,995 )"
+    },
+    {
+     "Category+Name": "Category 2 Deluxe Stateroom",
+     "Category+Price": "$ 11,495 ( was $ 12,495 )"
+    },
+    {
+     "Category+Name": "Category 3 Prestige Stateroom",
+     "Category+Price": "$ 13,495 ( was $ 14,495 )"
+    },
+    {
+     "Category+Name": "Category 4 Deluxe Suite",
+     "Category+Price": "$ 16,995 ( was $ 17,995 )"
+    },
+    {
+     "Category+Name": "Category 5 Privilege Suite",
+     "Category+Price": "$ 18,495 ( was $ 19,495 )"
+    },
+    {
+     "Category+Name": "Category 6 Prestige Two - Room Suite",
+     "Category+Price": "$ 24,995 ( was $ 25,995 )"
+    },
+    {
+     "Category+Name": "Category 7 Grand Deluxe Suite",
+     "Category+Price": "$ 28,995 ( was $ 29,995 )"
+    },
+    {
+     "Category+Name": "Category 8 Owner ’s Suite",
+     "Category+Price": "$ 31,995 ( was $ 32,995 )"
+    }
+   ],
+   "ExpertRecord": [
+    {
+     "Experts+Name": "DR LUCA ZAVAGNO",
+     "Experts+Job": "History & Cultural Lecturer"
+    },
+    {
+     "Experts+Name": "LISA WURZRAINER",
+     "Experts+Job": "Shore Excursion Manager"
+    }
+   ],
+   "TripInfo": [
+    {
+     "Trip+Name": "Adriatic Voyage : Croatia , Montenegro & Greece 2023",
+     "Tour+Duration": "8 days",
+     "Trip+Price+Per+Person": "$ 9,995",
+     "Original+Trip+Price": "$ 10,995",
+     "Maximum+Guest+Number": "148 guests"
+    }
+   ],
+   "ItineraryList": [
+    {
+     "Itinerary": [
+      "SEP 20 ARRIVE VENICE , ITALY",
+      "SEP 21 SPLIT , CROATIA | IMPERIAL SPLENDOR",
+      "SEP 22 KOTOR , MONTENEGRO | DALMATIAN GEMS",
+      "SEP 23 DUBROVNIK , CROATIA | MAGNIFICENT MEDIEVAL CITY",
+      "SEP 24 CORFU , GREECE | GREECE ’S EMERALD ISLAND",
+      "SEP 25 CEPHALONIA | NATURE ’S PARADISE",
+      "SEP 26 ITEA | GATEWAY TO DELPHI",
+      "SEP 27 DEPART ATHENS"
+     ]
+    }
+   ]
+  },
+  "zymp8zv9dek4": {
+   "CategoryRow": [
+    {
+     "Category+Name": "Category 1 - Classic Stateroom",
+     "Category+Price": "$ 20,995 ( was $ 22,995 )"
+    },
+    {
+     "Category+Name": "Category 2 - Deluxe Stateroom",
+     "Category+Price": "$ 23,495 ( was $ 25,495 )"
+    },
+    {
+     "Category+Name": "Category 3 - Premier Stateroom",
+     "Category+Price": "$ 24,495 ( was $ 26,495 )"
+    },
+    {
+     "Category+Name": "Category 4 - Superior Stateroom",
+     "Category+Price": "$ 30,495 ( was $ 32,495 )"
+    },
+    {
+     "Category+Name": "Category 5 - Prestige Suite",
+     "Category+Price": "$ 35,995 ( was $ 37,995 )"
+    },
+    {
+     "Category+Name": "Category 6 - Premier Two - Room Suite",
+     "Category+Price": "$ 45,495 ( was $ 47,495 )"
+    },
+    {
+     "Category+Name": "Category 7 - Prestige Two - Room Suite",
+     "Category+Price": "$ 47,995 ( was $ 49,995 )"
+    },
+    {
+     "Category+Name": "Category 8 - Owner 's Suite",
+     "Category+Price": "$ 54,995 ( was $ 56,995 )"
+    }
+   ],
+   "ExpertRecord": [
+    {
+     "Experts+Name": "MARK EDWARD HARRIS",
+     "Experts+Job": "Photo Enrichment Coach"
+    },
+    {
+     "Experts+Name": "SIMON RICKARD",
+     "Experts+Job": "Japanese Gardens Lecturer"
+    }
+   ],
+   "TripInfo": [
+    {
+     "Trip+Name": "Wonders of Japan Cruise : Cherry Blossom Season 2023",
+     "Tour+Duration": "14 days",
+     "Trip+Price+Per+Person": "$ 45,495",
+     "Original+Trip+Price": "$ 47,495",
+     "Maximum+Guest+Number": "199 guests"
+    }
+   ],
+   "ItineraryList": [
+    {
+     "Itinerary": [
+      "MAR 29 ARRIVE OSAKA , JAPAN",
+      "MAR 30 OSAKA | CULTURAL WONDERS",
+      "MAR 31 OSAKA | THE ADVENTURE BEGINS",
+      "APR 1 TAKAMATSU | EXPLORE YOUR WAY",
+      "APR 2 HIROSHIMA & MIYAJIMA | MEMORIALS & SHRINES",
+      "APR 3 UWAJIMA | SEASIDE SPLENDOR",
+      "APR 4 KARATSU | ANCIENT TRADING POST",
+      "APR 5 GYEONGJU , SOUTH KOREA | KOREAN CAPITAL",
+      "APR 6 MATSUE , JAPAN | VERDANT GARDENS",
+      "APR 7 KANAZAWA | IMMERSION INTO THE ARTS",
+      "APR 8 SADO-GA-SHIMA | KODO TAIKO DRUMMERS",
+      "APR 9 AT SEA | HOKKAIDO ISLAND CRUISING",
+      "APR 10 OTARU | HISTORIC CANALS",
+      "APR 11 DEPART SAPPORO"
+     ]
+    }
+   ]
+  }
+ },
+ "validation": {
+  "CategoryRow": {
+   "files": 13,
+   "instances": 106,
+   "empty_files": 0,
+   "dropped_files": 0,
+   "xml_checked": 34,
+   "xml_ok": 34,
+   "accepted": true
+  },
+  "ExpertRecord": {
+   "files": 13,
+   "instances": 26,
+   "empty_files": 0,
+   "dropped_files": 0,
+   "xml_checked": 8,
+   "xml_ok": 7,
+   "accepted": true
+  },
+  "TripInfo": {
+   "files": 13,
+   "instances": 13,
+   "empty_files": 0,
+   "dropped_files": 0,
+   "xml_checked": 0,
+   "xml_ok": 0,
+   "accepted": true
+  },
+  "ItineraryList": {
+   "files": 13,
+   "instances": 13,
+   "empty_files": 0,
+   "dropped_files": 0,
+   "xml_checked": 0,
+   "xml_ok": 0,
+   "accepted": true
+  }
+ }
+}

@@ -1,0 +1,81 @@
+{
+ "id": "LMT_2014_0001193125-15-038681__row0472",
+ "format": "markdown_pdf_plumber",
+ "key": "LMT_2014_0001193125-15-038681",
+ "question": "what was the average of company 401 ( k ) match total for the three years ended 2014 , in millions?",
+ "gold": "383",
+ "finqa_id": "LMT/2014/page_91.pdf-1",
+ "source_page": "page_91",
+ "ticker": "LMT",
+ "fiscal_year": "2014",
+ "source_file": "data/docs/markdown_pdf_plumber/LMT_2014_0001193125-15-038681.md",
+ "doc_chars": 462533,
+ "prompt_chars": 462721,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 462533,
+ "original_chars": 462533,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 103588,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 158,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "382.666667",
+ "reasoning": "We need answer average of company 401(k) match total for three years ended 2014. Document says \"Our contributions were $385 million in 2014, $383 million in 2013 and $380 million in 2012\" under Defined Contribution Plans. Average = (385+383+380)/3 = 1148/3 = 382.666... in millions. Need answer value only. Evidence list figures.",
+ "raw_content": "<evidence>\n385 | Defined Contribution Plans contributions 2014\n383 | Defined Contribution Plans contributions 2013\n380 | Defined Contribution Plans contributions 2012\n</evidence>\n<program>divide(add(385, add(383, 380)), 3)</program>\n<answer>382.6666667</answer>",
+ "usage": {
+  "prompt_tokens": 103900,
+  "completion_tokens": 158,
+  "total_tokens": 104058,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 103680
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.05,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "385",
+   "element": "Defined Contribution Plans contributions 2014",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "383",
+   "element": "Defined Contribution Plans contributions 2013",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "380",
+   "element": "Defined Contribution Plans contributions 2012",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(add(385, add(383, 380)), 3)",
+ "answer_model": "382.6666667",
+ "program_value": 382.6666666666667,
+ "docfinqa_row": 472
+}

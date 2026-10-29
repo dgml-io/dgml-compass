@@ -1,0 +1,72 @@
+{
+ "id": "EW_2016_0001099800-17-000008__row0325",
+ "key": "EW_2016_0001099800-17-000008",
+ "question": "how much goodwill does the company have as a % (  % ) of current assets?",
+ "gold": "921%",
+ "format": "dgml_nav_compact@program",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "doc_source": "EW_2016_0001099800-17-000008.dgml.xml",
+ "predicted_xpaths": [
+  "/chunk/GoodwillAmount",
+  "/chunk/section/BalanceSheet"
+ ],
+ "r1_reasoning_chars": 1936,
+ "r1_retried": false,
+ "r1_usage": {
+  "prompt_tokens": 17152,
+  "completion_tokens": 454,
+  "total_tokens": 17606,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/GoodwillAmount",
+  "/chunk/section/BalanceSheet"
+ ],
+ "content_chars": 41855,
+ "widen": 0,
+ "siblings": 3,
+ "hier": null,
+ "schema_first": false,
+ "ok": true,
+ "answer": "27.950893",
+ "reasoning": "We need to compute goodwill as % of current assets. From balance sheet: Goodwill (Note 8) = $626.1 million at Dec 31, 2016. Total current assets = $2,240.0 million. Percentage = 626.1 / 2240.0 * 100. Compute: 626.1 / 2240 = 0.2795... *100 = 27.95%. Let's compute precisely: 626.1 / 2240 = 0.27950892857, *100 = 27.9509%. So about 27.95%. The question asks \"how much goodwill does the company have as a % ( % ) of current assets?\" So answer 27.95% or 27.95. We'll provide value. Need evidence: Goodwill amount and current assets. Use figures as printed: Goodwill $626.1, Total current assets $2,240.0. Program: multiply(divide(626.1, 2240.0), 100). But the program expects exact figures as printed, maybe with commas? Use 626.1 and 2240.0. The answer should be numeric, likely 27.95. Let's compute exactly: 626.1/2240 = 0.2795089285714286, *100 = 27.95089285714286. Round to two decimals? The question says as a % ( % ) so maybe 27.95%. We'll output 27.95.",
+ "raw_content": "<evidence>\n626.1 | Goodwill (Note 8) (Balance Sheet)\n2,240.0 | Total current assets (Balance Sheet)\n</evidence>\n<program>multiply(divide(626.1, 2240.0), 100)</program>\n<answer>27.95</answer>",
+ "r2_usage": {
+  "prompt_tokens": 10633,
+  "completion_tokens": 387,
+  "total_tokens": 11020,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "626.1",
+   "element": "Goodwill (Note 8) (Balance Sheet)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "2,240.0",
+   "element": "Total current assets (Balance Sheet)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(626.1, 2240.0), 100)",
+ "answer_model": "27.95",
+ "program_value": 27.950892857142858,
+ "elapsed_s": 8.38,
+ "outline_source": "EW_2016_0001099800-17-000008.outline.txt",
+ "outline_chars": 67317
+}

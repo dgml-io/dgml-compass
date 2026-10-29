@@ -1,0 +1,50 @@
+{
+ "id": "AMT_2016_0001053507-17-000009__row0725",
+ "format": "markdown_pdf",
+ "key": "AMT_2016_0001053507-17-000009",
+ "question": "what is the net change in the balance of unrecognized tax benefits during 2016?",
+ "gold": "79437",
+ "finqa_id": "AMT/2016/page_125.pdf-1",
+ "source_page": "page_125",
+ "ticker": "AMT",
+ "fiscal_year": "2016",
+ "source_file": "data/docs/markdown_pdf/AMT_2016_0001053507-17-000009.md",
+ "doc_chars": 486538,
+ "prompt_chars": 486706,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 486538,
+ "original_chars": 486538,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 115908,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 400,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "79437",
+ "reasoning": "We need to find the net change in unrecognized tax benefits during 2016. From note 12, there is a reconciliation of unrecognized tax benefits. The table shows:\n\nBalance at January 1, 2016: $28,114 (in thousands)\nAdditions based on tax positions related to the current year: $82,912\nAdditions for tax positions of prior years: $0\nForeign currency: $(307)\nReduction as a result of the lapse of statute of limitations and effective settlements: $(3,168)\nBalance at December 31, 2016: $107,551\n\nNet change = ending - beginning = 107,551 - 28,114 = 79,437 (in thousands). But the question asks \"net change in the balance of unrecognized tax benefits during 2016?\" So it's 79,437 thousand dollars. The answer should be the value. Probably in thousands, but the question doesn't specify units. The document uses thousands. So answer: 79,437 (in thousands). But we should give the value without units unless asked. The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" So we put 79437. But careful: the numbers are in thousands, so the actual dollar amount is $79,437,000. But the question likely expects the number as reported. Usually in such contexts, they want the number in thousands. The question says \"net change in the balance\" so we can give 79,437. Alternatively, if they want in dollars, it's 79,437,000. But the document uses thousands, so I'll give 79437. Let's check: The reconciliation shows beginning 28,114, ending 107,551, so net change = 79,437. That is the net increase. So answer: 79437.",
+ "raw_content": "<answer>79437</answer>",
+ "usage": {
+  "prompt_tokens": 116054,
+  "completion_tokens": 400,
+  "total_tokens": 116454,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.11,
+ "answer_tag_found": true,
+ "docfinqa_row": 725
+}

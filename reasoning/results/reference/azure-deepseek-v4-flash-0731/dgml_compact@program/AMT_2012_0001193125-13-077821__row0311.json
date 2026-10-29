@@ -1,0 +1,90 @@
+{
+ "id": "AMT_2012_0001193125-13-077821__row0311",
+ "format": "dgml_compact",
+ "key": "AMT_2012_0001193125-13-077821",
+ "question": "what was the total reclassification of oci into income , in millions , during the years ended december 31 , 2012 , 2011 and 2010?",
+ "gold": "0.7",
+ "finqa_id": "AMT/2012/page_144.pdf-2",
+ "source_page": "page_144",
+ "ticker": "AMT",
+ "fiscal_year": "2012",
+ "source_file": "data/docs/dgml_compact/AMT_2012_0001193125-13-077821.dgml.txt",
+ "doc_chars": 684819,
+ "prompt_chars": 685037,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 684819,
+ "original_chars": 684819,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 147020,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "length",
+   "completion_tokens": 8192,
+   "got_answer": false
+  },
+  {
+   "temperature": 0.3,
+   "finish_reason": "stop",
+   "completion_tokens": 2122,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 1,
+ "ok": true,
+ "answer": "1.97",
+ "reasoning": "We need answer total reclassification of OCI into income during 2012, 2011, 2010. Need find figures. The document has OCI impact table: for derivatives, amounts reclassified from accumulated OCI into income (effective portion) for each year: 2012: $1,340 (thousands? table says in thousands? It says (in thousands) maybe). Also reclassification of unrealized losses on cash flow hedges to net income in comprehensive income statement: 2012: 1,132 (net of tax), 2011: 225, 2010: 118. Also reclassification of unrealized losses on available-for-sale securities to net income: 2012: 495, 2011: 0, 2010: 0? Also reclassifications due to REIT Conversion? But question \"total reclassification of OCI into income\" likely from statement of comprehensive income: reclassification of unrealized losses on cash flow hedges to net income, and reclassification of unrealized losses on available-for-sale securities to net income. Also maybe reclassification of unrealized losses on available-for-sale securities to net income. The question says \"total reclassification of oci into income , in millions , during the years ended december 31 , 2012 , 2011 and 2010?\" Need sum for each year? It asks \"total reclassification ... during the years ...\" Could be asking for total across all three years? Or for each year? Wording: \"what was the total reclassification of oci into income , in millions , during the years ended december 31 , 2012 , 2011 and 2010?\" Likely asks for total amount (sum) across those years. Need compute.\n\nFrom consolidated statements of comprehensive income:\n- Reclassification of unrealized losses on cash flow hedges to net income, net of taxes: 2012: 1,132; 2011: 225; 2010: 118 (in thousands)\n- Reclassification of unrealized losses on available-for-sale securities to net income: 2012: 495; 2011: —; 2010: — (in thousands)\nAlso maybe reclassification of unrealized losses on available-for-sale securities to net income in 2012: 495. Also there is \"Reclassifications due to REIT Conversion\" in 2011: (1,752) but that's not into income? It's OCI reclassification due to REIT conversion, not income. The question says \"reclassification of OCI into income\" so likely only those two items.\n\nAlso note in note 11, derivative OCI impact table shows amounts reclassified from accumulated OCI into income (effective portion) for interest rate swaps: 2012: $1,340; 2011: $2,205; 2010: $18,294 (in thousands). But those are gross before tax? The statement of comprehensive income shows net of tax amounts: 1,132, 225, 118. Which one is \"reclassification of OCI into income\"? The question likely refers to the statement of comprehensive income line items \"Reclassification of unrealized losses on cash flow hedges to net income\" and \"Reclassification of unrealized losses on available-for-sale securities to net income\". The note 11 table shows amounts reclassified from accumulated OCI into income (effective portion) for derivatives: 1,340, 2,205, 18,294 (in thousands). But those are before tax? The statement of comprehensive income shows net of tax. The question says \"total reclassification of oci into income\" without specifying net of tax. Could be from statement of comprehensive income, which lists reclassification items. The question asks \"in millions\" so we need convert thousands to millions. The statement of comprehensive income amounts are in thousands. So sum for each year? Let's parse.\n\nThe question: \"what was the total reclassification of oci into income , in millions , during the years ended december 31 , 2012 , 2011 and 2010?\" It might be asking for the total amount of reclassifications out of OCI into income for each of those years, perhaps combined. The phrase \"during the years ended ... 2012, 2011 and 2010\" suggests sum over those three years.\n\nWe need identify figures. In the statement of comprehensive income:\n- Reclassification of unrealized losses on cash flow hedges to net income, net of taxes of $208, $74 and $75, respectively: 1,132, 225, 118\n- Reclassification of unrealized losses on available-for-sale securities to net income: 495, —, —\nAlso there is \"Reclassifications due to REIT Conversion\" in 2011: (1,752) but that's not into income? It's a reclassification within OCI due to REIT conversion, not to income. So exclude.\n\nThus total reclassification into income for each year:\n2012: 1,132 + 495 = 1,627 (thousands)\n2011: 225 + 0 = 225\n2010: 118 + 0 = 118\nSum = 1,627 + 225 + 118 = 1,970 (thousands) = 1.97 million.\n\nBut note the note 11 table shows amounts reclassified from accumulated OCI into income (effective portion) for interest rate swaps: 2012: $1,340; 2011: $2,205; 2010: $18,294 (in thousands). These are before tax? The statement of comprehensive income shows net of tax. The question might be asking for total reclassification of OCI into income, which could be the gross amounts from the derivative note. But the statement of comprehensive income is the primary source. The question says \"total reclassification of oci into income\" - in the statement of comprehensive income, there are two line items: \"Reclassification of unrealized losses on cash flow hedges to net income\" and \"Reclassification of unrealized losses on available-for-sale securities to net income\". So sum those.\n\nLet's check the numbers: In the statement of comprehensive income, the line \"Reclassification of unrealized losses on cash flow hedges to net income, net of taxes of $208, $74 and $75, respectively\" has values 1,132, 225, 118. The line \"Reclassification of unrealized losses on available-for-sale securities to net income\" has 495, —, —. So total reclassification into income for each year: 2012: 1,132+495=1,627; 2011: 225; 2010: 118. Sum = 1,970 thousand = 1.97 million.\n\nBut the question asks \"in millions\" so answer 1.97. However, need be careful: The statement of comprehensive income amounts are in thousands. So 1,970 thousands = 1.97 million. The answer should be 1.97.\n\nBut let's double-check if there are other reclassifications: \"Reclassifications due to REIT Conversion\" in 2011: (1,752) is a reclassification within OCI, not to income. Also \"Reclassification of unrealized losses on available-for-sale securities to net income\" in 2012: 495. So yes.\n\nThus final answer 1.97.\n\nWe need provide evidence and program. Evidence: list figures used. We'll cite the values from the statement of comprehensive income. The element names? The document has \"ComprehensiveIncomeAmount\" for those lines. We'll list them.\n\nProgram: add(1132, 495) for 2012, add(225, 0) for 2011, add(118, 0) for 2010, then add those sums. Or simply add(1132, 495, 225, 118) but program only supports binary? It says nested calls using add(a,b). So add(add(add(1132,495),225),118) = 1970. Then convert to millions? The question asks in millions, so 1970 thousands = 1.97 million. The program should output the value in millions? The benchmark expects the answer value. We can output 1.97. But the program should compute the raw sum in thousands? The question asks in millions, so we need divide by 1000. So program: divide(add(add(add(1132,495),225),118), 1000) = 1.97. But the figures are in thousands, so dividing by 1000 gives millions. Yes.\n\nEvidence: list each figure with element. The element names are \"ComprehensiveIncomeAmount\" for those lines. We'll list:\n1,132 | ComprehensiveIncomeAmount (Reclassification of unrealized losses on cash flow hedges to net income, 2012)\n495 | ComprehensiveIncomeAmount (Reclassification of unrealized losses on available-for-sale securities to net income, 2012)\n225 | ComprehensiveIncomeAmount (Reclassification of unrealized losses on cash flow hedges to net income, 2011)\n118 | ComprehensiveIncomeAmount (Reclassification of unrealized losses on cash flow hedges to net income, 2010)\n\nWe'll provide.\n\nFinal answer inside <answer>1.97</answer>.",
+ "raw_content": "<evidence>\n1,132 | ComprehensiveIncomeAmount (Reclassification of unrealized losses on cash flow hedges to net income, 2012)\n495 | ComprehensiveIncomeAmount (Reclassification of unrealized losses on available-for-sale securities to net income, 2012)\n225 | ComprehensiveIncomeAmount (Reclassification of unrealized losses on cash flow hedges to net income, 2011)\n118 | ComprehensiveIncomeAmount (Reclassification of unrealized losses on cash flow hedges to net income, 2010)\n</evidence>\n\n<program>\ndivide(add(add(add(1132, 495), 225), 118), 1000)\n</program>\n\n<answer>1.97</answer>",
+ "usage": {
+  "prompt_tokens": 147342,
+  "completion_tokens": 2122,
+  "total_tokens": 149464,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 52.72,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "1,132",
+   "element": "ComprehensiveIncomeAmount (Reclassification of unrealized losses on cash flow hedges to net income, 2012)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "495",
+   "element": "ComprehensiveIncomeAmount (Reclassification of unrealized losses on available-for-sale securities to net income, 2012)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "225",
+   "element": "ComprehensiveIncomeAmount (Reclassification of unrealized losses on cash flow hedges to net income, 2011)",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "118",
+   "element": "ComprehensiveIncomeAmount (Reclassification of unrealized losses on cash flow hedges to net income, 2010)",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(add(add(1132, 495), 225), 118), 1000)",
+ "answer_model": "1.97",
+ "program_value": 1.97,
+ "docfinqa_row": 311
+}

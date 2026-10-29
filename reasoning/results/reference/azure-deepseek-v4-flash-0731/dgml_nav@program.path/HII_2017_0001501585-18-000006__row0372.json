@@ -1,0 +1,74 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0372",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "what is the combined number of equity compensation plans approved by security holders",
+ "gold": "4536446",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "HII_2017_0001501585-18-000006.outline.txt",
+ "doc_source": "HII_2017_0001501585-18-000006.dgml.xml",
+ "outline_chars": 86768,
+ "predicted_xpaths": [
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 9343,
+ "r1_usage": {
+  "prompt_tokens": 22159,
+  "completion_tokens": 1973,
+  "total_tokens": 24132,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation"
+ ],
+ "content_chars": 4675,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "448859",
+ "reasoning": "We need to find the combined number of equity compensation plans approved by security holders. The table shows a row for \"Equity compensation plans approved by security holders\" with number of securities to be issued upon exercise of outstanding options, warrants and rights: 448,859. But the question asks \"combined number of equity compensation plans approved by security holders\" - that might be the number of plans, not securities. However, the table lists categories, not counts of plans. The question might be asking for the number of securities? Or the number of plans? The wording \"combined number of equity compensation plans approved by security holders\" could be interpreted as the total number of plans, but the table doesn't list a count of plans. It lists securities. The row \"Equity compensation plans approved by security holders\" has 448,859 securities to be issued. The question might be asking for that number. But \"combined number\" might refer to the total of securities? Let's read carefully: \"what is the combined number of equity compensation plans approved by security holders\" - that is ambiguous. Could be asking for the number of plans, but the table doesn't provide a count of plans. It provides securities. The footnote mentions two plans: 2012 Plan and 2011 Plan. So there are two plans approved by security holders. But the question says \"combined number\" - maybe they want the total number of plans? The table row \"Equity compensation plans approved by security holders\" is a category, not a count. The question might be from a standard SEC filing question: \"What is the total number of securities to be issued upon exercise of outstanding options, warrants and rights under equity compensation plans approved by security holders?\" But the question says \"combined number of equity compensation plans\" - that is odd. Could be a typo? Let's check the document: The table has a row for \"Equity compensation plans approved by security holders\" with 448,859 in column (a). The question asks \"combined number of equity compensation plans approved by security holders\" - maybe they want the number of plans, which is 2? But the document doesn't explicitly state a count. The footnote says \"Includes grants made under the 2012 Plan ... and the 2011 Plan ...\" So there are two plans. But the question might be asking for the number of securities, not plans. The phrase \"combined number\" might refer to the total number of securities from all approved plans. The row \"Total\" also shows 448,859. So the answer is 448,859. However, the question says \"equity compensation plans approved by security holders\" - that is the category. The number in that row is 448,859. So I'll answer 448,859.\n\nBut let's be precise: The question: \"what is the combined number of equity compensation plans approved by security holders\" - if it's asking for the number of plans, it's 2. But the document doesn't give a numeric count of plans, only mentions two plans. The table row is a category, not a count. The question might be from a benchmark that expects the number of securities. I'll check the evidence: The row has 448,859. The total row also has 448,859. So the combined number (total) is 448,859. I'll go with that.\n\nI'll cite the figure: 448,859 from the row \"Equity compensation plans approved by security holders\" under column (a). The path is /chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation/EquityCompensationPlanInformation/table/EquityCompensationPlan[3]/EquityPlanSharesToBeIssued? Actually the table structure: There are multiple EquityCompensationPlan rows. The third row (after header and column reference) is the approved plans row. The value is 448,859. I'll cite that.\n\nI'll answer 448,859.",
+ "raw_content": "<evidence>448,859 | /chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation/EquityCompensationPlanInformation/table/EquityCompensationPlan[3]/EquityPlanSharesToBeIssued</evidence>\n<program>448859</program>\n<answer>448859</answer>",
+ "r2_usage": {
+  "prompt_tokens": 1456,
+  "completion_tokens": 888,
+  "total_tokens": 2344,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 768
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 1456,
+   "completion_tokens": 888,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "448,859",
+   "element": "chunk/PartIII/SecurityOwnership/EquityCompensationPlanInformation/EquityCompensationPlanInformation/table/EquityCompensationPlan[3]/EquityPlanSharesToBeIssued",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "448859",
+ "answer_model": "448859",
+ "program_value": 448859.0,
+ "elapsed_s": 14.83
+}

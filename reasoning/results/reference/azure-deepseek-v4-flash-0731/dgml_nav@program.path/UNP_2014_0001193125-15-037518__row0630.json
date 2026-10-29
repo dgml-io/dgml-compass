@@ -1,0 +1,83 @@
+{
+ "id": "UNP_2014_0001193125-15-037518__row0630",
+ "key": "UNP_2014_0001193125-15-037518",
+ "question": "what was the percentage growth from 2013 to 2014 in the total accounts payable and other current liabilities",
+ "gold": "7.03%",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "UNP_2014_0001193125-15-037518.outline.txt",
+ "doc_source": "UNP_2014_0001193125-15-037518.dgml.xml",
+ "outline_chars": 77599,
+ "predicted_xpaths": [
+  "/chunk/RetirementPlans/AccountsPayableAndCurrentLiabilities/AccountsPayableAndCurrentLiabilities/AccountsPayableTotal",
+  "/chunk/RetirementPlans/AccountsPayableAndCurrentLiabilities"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 2910,
+ "r1_usage": {
+  "prompt_tokens": 19894,
+  "completion_tokens": 673,
+  "total_tokens": 20567,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/RetirementPlans/AccountsPayableAndCurrentLiabilities/AccountsPayableAndCurrentLiabilities/AccountsPayableTotal",
+  "/chunk/RetirementPlans/AccountsPayableAndCurrentLiabilities"
+ ],
+ "content_chars": 44142,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "7.031756",
+ "reasoning": "We need percentage growth from 2013 to 2014 in total accounts payable and other current liabilities. The table shows total accounts payable and other current liabilities: 2014 = $3,303, 2013 = $3,086. Growth = (3303-3086)/3086 = 217/3086 = 0.0703... = 7.03%. Need answer as percentage. Probably 7.03% or 7.0%. Let's compute exactly: 217/3086 = 0.070317... *100 = 7.0317%. So answer 7.03%. Use evidence figures.",
+ "raw_content": "<evidence>\n$ 3,303 | /chunk/RetirementPlans/AccountsPayableAndCurrentLiabilities/AccountsPayableAndCurrentLiabilities/AccountsPayableTotal/AccountsPayableTotalAmount\n$ 3,086 | /chunk/RetirementPlans/AccountsPayableAndCurrentLiabilities/AccountsPayableAndCurrentLiabilities/AccountsPayableTotal/AccountsPayableTotalAmount\n</evidence>\n<program>multiply(divide(subtract(3303, 3086), 3086), 100)</program>\n<answer>7.03</answer>",
+ "r2_usage": {
+  "prompt_tokens": 10884,
+  "completion_tokens": 262,
+  "total_tokens": 11146,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 10884,
+   "completion_tokens": 262,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [
+  {
+   "value": "$ 3,303",
+   "element": "chunk/RetirementPlans/AccountsPayableAndCurrentLiabilities/AccountsPayableAndCurrentLiabilities/AccountsPayableTotal/AccountsPayableTotalAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  },
+  {
+   "value": "$ 3,086",
+   "element": "chunk/RetirementPlans/AccountsPayableAndCurrentLiabilities/AccountsPayableAndCurrentLiabilities/AccountsPayableTotal/AccountsPayableTotalAmount",
+   "element_found": true,
+   "verified": true,
+   "verified_by": "element"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "multiply(divide(subtract(3303, 3086), 3086), 100)",
+ "answer_model": "7.03",
+ "program_value": 7.031756318859365,
+ "elapsed_s": 7.78
+}

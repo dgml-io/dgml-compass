@@ -1,0 +1,78 @@
+{
+ "id": "PM_2015_0001413329-16-000076__row0417",
+ "format": "dgml_compact",
+ "key": "PM_2015_0001413329-16-000076",
+ "question": "what was the average total accumulated other comprehensive losses from 2013 to 2015 in millions?",
+ "gold": "-6806",
+ "finqa_id": "PM/2015/page_127.pdf-3",
+ "source_page": "page_127",
+ "ticker": "PM",
+ "fiscal_year": "2015",
+ "source_file": "data/docs/dgml_compact/PM_2015_0001413329-16-000076.dgml.txt",
+ "doc_chars": 654685,
+ "prompt_chars": 654870,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 654685,
+ "original_chars": 654685,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 144584,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 186,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-6806",
+ "reasoning": "We need answer average total accumulated other comprehensive losses from 2013 to 2015. From Note 17: total accumulated other comprehensive losses: 2015 -9,402; 2014 -6,826; 2013 -4,190. Average = (-9402 + -6826 + -4190)/3 = -20418/3 = -6806. Need answer in millions.",
+ "raw_content": "<evidence>\n-9,402 | AccumulatedOtherComprehensiveLoss: Total accumulated other comprehensive losses 2015\n-6,826 | AccumulatedOtherComprehensiveLoss: Total accumulated other comprehensive losses 2014\n-4,190 | AccumulatedOtherComprehensiveLoss: Total accumulated other comprehensive losses 2013\n</evidence>\n<program>divide(add(-9402, add(-6826, -4190)), 3)</program>\n<answer>-6806</answer>",
+ "usage": {
+  "prompt_tokens": 144891,
+  "completion_tokens": 186,
+  "total_tokens": 145077,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 144640
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.84,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "9,402",
+   "element": "AccumulatedOtherComprehensiveLoss: Total accumulated other comprehensive losses 2015",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "6,826",
+   "element": "AccumulatedOtherComprehensiveLoss: Total accumulated other comprehensive losses 2014",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "4,190",
+   "element": "AccumulatedOtherComprehensiveLoss: Total accumulated other comprehensive losses 2013",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(add(-9402, add(-6826, -4190)), 3)",
+ "answer_model": "-6806",
+ "program_value": -6806.0,
+ "docfinqa_row": 417
+}

@@ -1,0 +1,73 @@
+{
+ "id": "CME_2010_0001193125-11-050252__row0630",
+ "format": "dgml_compact",
+ "key": "CME_2010_0001193125-11-050252",
+ "question": "whats is the percentage of equity compensation plans that were not approved by security holders?",
+ "gold": "0.491%",
+ "finqa_id": "CME/2010/page_123.pdf-1",
+ "source_page": "page_123",
+ "ticker": "CME",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/dgml_compact/CME_2010_0001193125-11-050252.dgml.txt",
+ "doc_chars": 521543,
+ "prompt_chars": 521728,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 521543,
+ "original_chars": 521543,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 112341,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 465,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "49.1159%",
+ "reasoning": "We need answer percentage of equity compensation plans not approved by security holders. Need find table in Item 12. Table shows equity compensation plans approved by security holders: 1,211,143 shares, not approved: 5,978 shares, total 1,217,121. Question \"percentage of equity compensation plans that were not approved by security holders\" likely percentage of shares? Or number of plans? The table lists \"Number of Securities to be Issued Upon Exercise of Outstanding Options\" for approved and not approved. The question says \"percentage of equity compensation plans\" but likely means percentage of outstanding options under plans not approved. Need compute 5,978 / 1,217,121 * 100. Let's compute. 5978 / 1217121 ≈ 0.00491 = 0.491%. So about 0.49%. Need provide answer. Evidence: 5,978 | Equity compensation plans not approved by security holders; 1,217,121 | Total. Program divide(5978, 1217121) * 100? But program only nested calls, can use multiply(divide(5978, 1217121), 100). But answer should be value. Let's compute precisely: 5978 / 1217121 = 0.004911... *100 = 0.4911%. So answer 0.49% or 0.491%. The question asks \"percentage\" so include %? The instruction says final answer inside tags containing only value itself no explanation or units unless question asks. It asks percentage, so include number maybe with %? Usually answer numeric. I'll put 0.49%? But \"only the value itself\" - maybe 0.49. But to be safe, include 0.49%? The instruction says no units unless question asks for them. It asks \"what is the percentage\" so unit is percentage, so include %? I'll put 0.49%.",
+ "raw_content": "<evidence>\n5,978 | Equity compensation plans not approved by security holders\n1,217,121 | Total\n</evidence>\n<program>multiply(divide(5978, 1217121), 100)</program>\n<answer>0.49%</answer>",
+ "usage": {
+  "prompt_tokens": 112644,
+  "completion_tokens": 465,
+  "total_tokens": 113109,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 112384
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 3.69,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "5,978",
+   "element": "Equity compensation plans not approved by security holders",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "1,217,121",
+   "element": "Total",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.5,
+ "program_model": "multiply(divide(5978, 1217121), 100)",
+ "answer_model": "0.49%",
+ "program_value": 0.49115905485157185,
+ "docfinqa_row": 630
+}

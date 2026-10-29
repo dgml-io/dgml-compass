@@ -1,0 +1,72 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0722",
+ "format": "markdown_pdf_rules",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "what was map's 3 year growth of gasoline production?",
+ "gold": "3.7%",
+ "finqa_id": "MRO/2003/page_45.pdf-3",
+ "source_page": "page_45",
+ "ticker": "MRO",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/markdown_pdf_rules/MRO_2003_0001193125-04-036535.md",
+ "doc_chars": 450627,
+ "prompt_chars": 450768,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 450627,
+ "original_chars": 450627,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 105244,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 818,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "-2.4096%",
+ "reasoning": "We need answer question: \"what was map's 3 year growth of gasoline production?\" Need find MAP gasoline production. In document, there is \"Refined Product Yields\" table for MAP: Gasoline 567, 581, 581 for 2003, 2002, 2001 (thousands barrels per day). 3 year growth likely from 2001 to 2003? Or maybe 2003 vs 2001? Need compute growth. \"3 year growth\" could mean over three years, from 2001 to 2003. Growth = (567-581)/581 = -14/581 = -2.41%? Or maybe from 2000? But table only 2003,2002,2001. The question says \"map's 3 year growth of gasoline production\" - likely percentage change over the three-year period from 2001 to 2003. Need compute. Use figures: 567 and 581. Growth = (567-581)/581 = -14/581 = -0.024096... = -2.41%. Or maybe they want absolute change? \"growth\" usually percentage. Need answer value. Let's compute exactly: 14/581 = 0.024096... = -2.4096%. So answer -2.4% or -2.41%. But need be careful: \"3 year growth\" might mean average annual growth? Could be CAGR over 3 years? But we only have 2001,2002,2003. If 3-year growth from 2001 to 2003 is 2 years? Actually 2001 to 2003 is two years. But \"3 year growth\" might refer to the three-year period 2001-2003, i.e., change over that period. Usually \"3-year growth\" means growth over 3 years, from start to end. Here start 2001, end 2003. So percentage change = (567-581)/581 = -2.41%. Alternatively, if they want average annual growth rate over 3 years? But we don't have 2000. So likely just change from 2001 to 2003. Let's check document: \"Refined Product Yields\" table has 2003, 2002, 2001. So yes.\n\nNeed provide evidence: value | element. The element is \"Refined Product Yields\" table row Gasoline. Figures: 567, 581, 581. Use subtract(567,581) / 581. Program: divide(subtract(567,581),581). Answer -0.024096... but likely as percentage? The question asks \"what was map's 3 year growth of gasoline production?\" So answer should be percentage. Usually give as -2.4% or -2.41%. The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for growth, so percentage is appropriate. I'll put -2.4% or -2.41%. Let's compute exact: 14/581 = 0.0240963855, so -2.4096%. I'll put -2.41%.\n\nNeed evidence lines: 567 | Refined Product Yields - Gasoline 2003; 581 | Refined Product Yields - Gasoline 2001; maybe 581 | 2002. But only need 567 and 581. Also note \"MAP's gasoline production\" is in \"Refined Product Yields\" table under MAP. So evidence.\n\nFinal answer inside <answer> tags.",
+ "raw_content": "<evidence>567 | Refined Product Yields - Gasoline 2003\n581 | Refined Product Yields - Gasoline 2001</evidence>\n<program>divide(subtract(567, 581), 581)</program>\n<answer>-2.41%</answer>",
+ "usage": {
+  "prompt_tokens": 105543,
+  "completion_tokens": 818,
+  "total_tokens": 106361,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 105472
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 8.88,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "567",
+   "element": "Refined Product Yields - Gasoline 2003",
+   "verified": true,
+   "verified_by": "label"
+  },
+  {
+   "value": "581",
+   "element": "Refined Product Yields - Gasoline 2001",
+   "verified": true,
+   "verified_by": "label"
+  }
+ ],
+ "citation_verified": 1.0,
+ "program_model": "divide(subtract(567, 581), 581)",
+ "answer_model": "-2.41%",
+ "program_value": -0.024096385542168676,
+ "docfinqa_row": 722
+}

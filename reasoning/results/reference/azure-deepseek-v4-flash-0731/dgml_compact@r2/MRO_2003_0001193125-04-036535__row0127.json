@@ -1,0 +1,50 @@
+{
+ "id": "MRO_2003_0001193125-04-036535__row0127",
+ "format": "dgml_compact",
+ "key": "MRO_2003_0001193125-04-036535",
+ "question": "what were total distillates sales in millions for the three year period ? 365 346 345",
+ "gold": "1056",
+ "finqa_id": "MRO/2003/page_45.pdf-2",
+ "source_page": "page_45",
+ "ticker": "MRO",
+ "fiscal_year": "2003",
+ "source_file": "data/docs/dgml_compact/MRO_2003_0001193125-04-036535.dgml.txt",
+ "doc_chars": 625257,
+ "prompt_chars": 625431,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 625257,
+ "original_chars": 625257,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 138745,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 1089,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1056",
+ "reasoning": "We need answer total distillates sales in millions for three year period. The question: \"what were total distillates sales in millions for the three year period ? 365 346 345\" It seems they want sum? The numbers 365, 346, 345 are thousands of barrels per day for 2003, 2002, 2001 from refined product sales table. But question says \"total distillates sales in millions\" maybe sum? Need compute? The document shows distillates sales volumes in thousands of barrels per day: 365, 346, 345. But \"in millions\" might refer to gallons? Actually table says (Thousands of Barrels per Day) for refined product sales. The question asks \"total distillates sales in millions for the three year period ? 365 346 345\" Possibly they want sum of those three numbers? 365+346+345 = 1056. But units? The question says \"in millions\" but the numbers are thousands of barrels per day. Maybe they want total sales in millions of gallons? Let's examine. The document has \"Refined Product Sales\" table with volumes in thousands of barrels per day. Distillates row: 365, 346, 345. The question might be asking \"what were total distillates sales in millions for the three year period ?\" with the numbers given as hint. Could be they want sum of those three numbers? But \"in millions\" might be a misinterpretation. Alternatively, they might want the total distillates sales in millions of gallons? But we don't have conversion. The question includes \"365 346 345\" which are the values. So likely they want the sum: 1056. But let's check if there is any other mention of distillates sales in millions. The document has \"Refined Product Sales\" table with volumes in thousands of barrels per day. Also \"Refined product sales volumes (excluding matching buy/sell transactions) totaled 19.8 billion gallons (1,293,000 bpd)\" but that's total. For distillates specifically, we have 365, 346, 345 thousand bpd. To get total over three years in millions of barrels? Multiply by 365 days? But question says \"in millions\" maybe they want sum of the three numbers as given. The phrasing: \"what were total distillates sales in millions for the three year period ? 365 346 345\" It might be a fill-in-the-blank: the answer is the sum? Or they want the three numbers? The question ends with \"? 365 346 345\" which might be the answer options? Actually the user wrote: \"Question: what were total distillates sales in millions for the three year period ? 365 346 345\" That could be the question and then the numbers are the values from the table. They might be asking to compute total, so sum = 1056. But \"in millions\" - the table is in thousands of barrels per day, not millions. However, the question might be from a dataset where they expect the sum of those three numbers. Let's see if there is any other context. The document is a 10-K. The table \"Refined Product Sales\" has \"Distillates\" row: 365, 346, 345. The question asks \"total distillates sales in millions for the three year period\" - maybe they want the sum of the three annual figures, which would be 1056 (thousands of barrels per day? Actually if you sum daily rates over three years, that doesn't make sense as total sales. But maybe they want the sum of the three numbers as a simple arithmetic. The question includes the numbers as a hint, so likely they want 1056. Alternatively, they might want the average? But \"total\" suggests sum.\n\nLet's read the question carefully: \"what were total distillates sales in millions for the three year period ? 365 346 345\" It might be that the answer is the three numbers themselves? But \"total\" implies a single number. Possibly they want the sum: 365+346+345 = 1056. But the units are thousands of barrels per day, not millions. However, the question says \"in millions\" - maybe they want the total in millions of gallons? But we don't have conversion. The document also has \"Refined product sales volumes (excluding matching buy/sell transactions) totaled 19.8 billion gallons (1,293,000 bpd)\" for 2003. For distillates, we could compute total gallons over three years? But that would require daily rates and days. The question likely expects a simple sum of the three numbers given. Since the user provided the numbers, they probably want the sum.\n\nI'll answer 1056. But let's double-check if there is any other table with distillates in millions. The \"Refined Product Yields\" table also has distillates: 284, 285, 286 (thousands of barrels per day) but that's yields, not sales. The sales table has 365, 346, 345. So sum = 1056.\n\nThus final answer: 1056.",
+ "raw_content": "<answer>1056</answer>",
+ "usage": {
+  "prompt_tokens": 138894,
+  "completion_tokens": 1089,
+  "total_tokens": 139983,
+  "audio_prompt_tokens": 0
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 13.48,
+ "answer_tag_found": true,
+ "docfinqa_row": 127
+}

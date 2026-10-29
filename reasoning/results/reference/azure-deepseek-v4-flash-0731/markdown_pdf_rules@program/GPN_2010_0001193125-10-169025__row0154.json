@@ -1,0 +1,74 @@
+{
+ "id": "GPN_2010_0001193125-10-169025__row0154",
+ "format": "markdown_pdf_rules",
+ "key": "GPN_2010_0001193125-10-169025",
+ "question": "what is the after-tax share-based compensation cost in 2010?",
+ "gold": "11.8",
+ "finqa_id": "GPN/2010/page_87.pdf-1",
+ "source_page": "page_87",
+ "ticker": "GPN",
+ "fiscal_year": "2010",
+ "source_file": "data/docs/markdown_pdf_rules/GPN_2010_0001193125-10-169025.md",
+ "doc_chars": 316684,
+ "prompt_chars": 316833,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 316684,
+ "original_chars": 316684,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 70390,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 183,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "11.8",
+ "reasoning": "We need after-tax share-based compensation cost in 2010. Document: Note 11: Share-based compensation cost $18.1 million, income tax benefit $(6.3) million. After-tax = 18.1 - 6.3 = 11.8 million. Figures: $18.1 and $(6.3) from Note 11 table. Compute subtract(18.1, 6.3) = 11.8. Answer 11.8 (in millions).",
+ "raw_content": "<evidence>\n$18.1 | Note 11—Share-Based Awards and Options, Share-based compensation cost 2010\n$(6.3) | Note 11—Share-Based Awards and Options, Income tax benefit 2010\n</evidence>\n<program>subtract(18.1, 6.3)</program>\n<answer>11.8</answer>",
+ "usage": {
+  "prompt_tokens": 70691,
+  "completion_tokens": 183,
+  "total_tokens": 70874,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 7.52,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "$18.1",
+   "element": "Note 11—Share-Based Awards and Options, Share-based compensation cost 2010",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "$(6.3)",
+   "element": "Note 11—Share-Based Awards and Options, Income tax benefit 2010",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "subtract(18.1, 6.3)",
+ "answer_model": "11.8",
+ "program_value": 11.8,
+ "docfinqa_row": 154
+}

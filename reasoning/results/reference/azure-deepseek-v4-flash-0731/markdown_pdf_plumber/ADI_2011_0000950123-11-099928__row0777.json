@@ -1,0 +1,53 @@
+{
+ "id": "ADI_2011_0000950123-11-099928__row0777",
+ "format": "markdown_pdf_plumber",
+ "key": "ADI_2011_0000950123-11-099928",
+ "question": "what was the percentage increase of total deferred compensation plan investments from 2010 to 2011?\\\\n",
+ "gold": "204%",
+ "finqa_id": "ADI/2011/page_81.pdf-3",
+ "source_page": "page_81",
+ "ticker": "ADI",
+ "fiscal_year": "2011",
+ "source_file": "data/docs/markdown_pdf_plumber/ADI_2011_0000950123-11-099928.md",
+ "doc_chars": 392657,
+ "prompt_chars": 392848,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 392657,
+ "original_chars": 392657,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 93158,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 350,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "203.9%",
+ "reasoning": "We need to find deferred compensation plan investments for 2010 and 2011. From the balance sheet: \"Deferred compensation plan investments\" under Other Assets: 2011: 26,410; 2010: 8,690. Also in Note 7: total deferred compensation plan investments: 2011: 26,410, 2010: 8,690. Percentage increase = (26,410 - 8,690)/8,690 * 100 = 17,720/8,690 = 2.039... so 203.9% increase. But question asks \"percentage increase\" so answer 203.9% or 204%. Let's compute precisely: 17720/8690 = 2.0391... so 203.91%. Round to maybe 204%. The answer should be a number, likely percentage. The question says \"percentage increase\" so we give the percentage value. I'll put 203.9% or 204%. Since they want value only, I'll put 203.9. But they might expect a number without %? The instruction says \"containing only the value itself with no explanation or units unless the question asks for them.\" The question asks for percentage increase, so we can include %? It says \"unless the question asks for them\" - it asks for percentage, so we can include % sign. But to be safe, I'll put 203.9% or 204%. I'll compute exactly: 17720/8690 = 2.039126... so 203.9126%. I'll put 203.9%.",
+ "raw_content": "<answer>203.9%</answer>",
+ "usage": {
+  "prompt_tokens": 93309,
+  "completion_tokens": 350,
+  "total_tokens": 93659,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 93184
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 2.98,
+ "answer_tag_found": true,
+ "docfinqa_row": 777
+}

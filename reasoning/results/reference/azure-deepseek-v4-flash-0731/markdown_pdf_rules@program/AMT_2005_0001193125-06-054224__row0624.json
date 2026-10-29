@@ -1,0 +1,74 @@
+{
+ "id": "AMT_2005_0001193125-06-054224__row0624",
+ "format": "markdown_pdf_rules",
+ "key": "AMT_2005_0001193125-06-054224",
+ "question": "in 2005 what was the percentage of the federal nol set to expire between 2016 to 2020",
+ "gold": "18.4%",
+ "finqa_id": "AMT/2005/page_105.pdf-1",
+ "source_page": "page_105",
+ "ticker": "AMT",
+ "fiscal_year": "2005",
+ "source_file": "data/docs/markdown_pdf_rules/AMT_2005_0001193125-06-054224.md",
+ "doc_chars": 437061,
+ "prompt_chars": 437235,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 437061,
+ "original_chars": 437061,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 101793,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 185,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "18.432929",
+ "reasoning": "We need answer percentage of federal NOL expiring 2016-2020 in 2005. From note 13: table federal NOL carryforwards by expiration. 2016 to 2020: $397,691 thousand. Total federal $2,157,503 thousand. Percentage = 397,691 / 2,157,503 *100. Compute. 397,691 / 2,157,503 ≈ 0.18433 = 18.43%. Need answer. Evidence: figures.",
+ "raw_content": "<evidence>\n397,691 | Federal NOL expiring 2016 to 2020 (in thousands)\n2,157,503 | Total federal NOL carryforwards (in thousands)\n</evidence>\n\n<program>\nmultiply(divide(397691, 2157503), 100)\n</program>\n\n<answer>18.43%</answer>",
+ "usage": {
+  "prompt_tokens": 102105,
+  "completion_tokens": 185,
+  "total_tokens": 102290,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 101888
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 1.94,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "397,691",
+   "element": "Federal NOL expiring 2016 to 2020 (in thousands)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "2,157,503",
+   "element": "Total federal NOL carryforwards (in thousands)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "multiply(divide(397691, 2157503), 100)",
+ "answer_model": "18.43%",
+ "program_value": 18.432929177850507,
+ "docfinqa_row": 624
+}

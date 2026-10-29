@@ -1,0 +1,66 @@
+{
+ "id": "IP_2009_0001193125-10-040916__row0863",
+ "key": "IP_2009_0001193125-10-040916",
+ "question": "what was the sum of the temporary differences between 2007 and 2009 in billions",
+ "gold": "9.8",
+ "format": "dgml_nav@program.path",
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "words/0.379",
+ "outline_source": "IP_2009_0001193125-10-040916.outline.txt",
+ "doc_source": "IP_2009_0001193125-10-040916.dgml.xml",
+ "outline_chars": 127828,
+ "predicted_xpaths": [
+  "/chunk/IncomeTax/DeferredTaxComponents"
+ ],
+ "r1_retried": false,
+ "r1_reasoning_chars": 1333,
+ "r1_usage": {
+  "prompt_tokens": 33543,
+  "completion_tokens": 342,
+  "total_tokens": 33885,
+  "audio_prompt_tokens": 0
+ },
+ "matched_xpaths": [
+  "/chunk/IncomeTax/DeferredTaxComponents"
+ ],
+ "content_chars": 15701,
+ "widen": 0,
+ "siblings": 3,
+ "ok": true,
+ "answer": "NOT_FOUND",
+ "reasoning": "We need answer question. Need parse. \"sum of the temporary differences between 2007 and 2009 in billions\" Hmm document has deferred tax components for 2009 and 2008 only, not 2007. Also \"temporary differences\" maybe deferred tax assets/liabilities? But question asks between 2007 and 2009. The excerpt has income tax payments 2009,2008,2007; effective tax rate reconciliation 2009,2008,2007; deferred tax components only 2009 and 2008. No 2007 deferred tax components. So cannot compute. Need NOT_FOUND. But let's be careful: \"temporary differences\" might refer to deferred tax assets/liabilities? The table \"tax effects of significant temporary differences\" for 2009 and 2008. No 2007. So answer NOT_FOUND.",
+ "raw_content": "<evidence></evidence>\n<program>NOT_FOUND</program>\n<answer>NOT_FOUND</answer>",
+ "r2_usage": {
+  "prompt_tokens": 4415,
+  "completion_tokens": 208,
+  "total_tokens": 4623,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "prompt_tokens": 4415,
+   "completion_tokens": 208,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "finish_reason": "stop",
+ "answer_mode": "cite+path+program",
+ "citations": [],
+ "citation_verified": null,
+ "program_model": "NOT_FOUND",
+ "answer_model": "NOT_FOUND",
+ "program_value": null,
+ "elapsed_s": 181.76
+}

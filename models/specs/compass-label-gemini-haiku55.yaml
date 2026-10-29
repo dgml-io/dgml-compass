@@ -1,0 +1,38 @@
+# Does the labeler result depend on the transcriber? Haiku 5.5 labeling
+# Gemini 3.6 Flash transcriptions; pairs with compass-label-haiku55.
+#
+# Runs over the 9 bundled docsets (data/corpus), 6 documents each, 3 draws.
+# Price it first: dgc plan -e specs/compass-label-gemini-haiku55.yaml
+name: compass-label-gemini-haiku55
+description: Haiku 5.5 labeler over Gemini 3.6 Flash transcriptions.
+corpus:
+  docsets:
+    include:
+    - z4ervk9ic0oo/8frgx7rlbew3
+    - z4ervk9ic0oo/hcqfkilviuq3
+    - z4ervk9ic0oo/i0ycfsrfx0av
+    - z4ervk9ic0oo/nqkh1hkhhkaf
+    - z4ervk9ic0oo/qve3rqreikmn
+    - z4ervk9ic0oo/uzruqpzkyugz
+    - z4ervk9ic0oo/vg52pfjb0wbf
+    - z4ervk9ic0oo/yrrrq1d5kili
+    - z4ervk9ic0oo/o9dmulfkp0ii
+  max_files_per_docset: 6
+  sampling: fixed
+  require_gold: false
+axes:
+  generation.label_model:
+  - anthropic/claude-haiku-5-5
+fixed:
+  generation.model: gemini/gemini-3.6-flash
+  schema_tier: none
+  window_size: 10
+  text_mode: digital
+draws: 3
+metrics:
+- extraction
+- reference_free
+- economics
+- tree
+budget_usd: 50
+seed: 20260917

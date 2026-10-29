@@ -1,0 +1,74 @@
+{
+ "id": "HII_2017_0001501585-18-000006__row0526",
+ "format": "markdown_pdf_rules",
+ "key": "HII_2017_0001501585-18-000006",
+ "question": "in the number of securities to be issued what is the ratio of the stock rights from the 2012 plan to the 2011 plan included in these securities",
+ "gold": "1.06",
+ "finqa_id": "HII/2017/page_124.pdf-3",
+ "source_page": "page_124",
+ "ticker": "HII",
+ "fiscal_year": "2017",
+ "source_file": "data/docs/markdown_pdf_rules/HII_2017_0001501585-18-000006.md",
+ "doc_chars": 465382,
+ "prompt_chars": 465614,
+ "model": "azure/DeepSeek-V4-Flash-0731",
+ "api_base": "Azure OpenAI deployment DeepSeek-V4-Flash-0731",
+ "client": "raw",
+ "provider": "azure",
+ "reasoning_effort": "low",
+ "temperature": 0.0,
+ "top_p": null,
+ "tokenizer": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "truncated": false,
+ "kept_chars": 465382,
+ "original_chars": 465382,
+ "kept_fraction": 1.0,
+ "est_doc_tokens": 102037,
+ "attempts_log": [
+  {
+   "temperature": 0.0,
+   "finish_reason": "stop",
+   "completion_tokens": 242,
+   "got_answer": true
+  }
+ ],
+ "retried_degenerate": 0,
+ "ok": true,
+ "answer": "1.060465",
+ "reasoning": "We need answer ratio of stock rights from 2012 plan to 2011 plan included in securities to be issued. Need find figures. In Item 12 equity compensation plan info footnote: \"Of these shares, 27,123 were stock rights granted under the 2011 Plan. In addition, this number includes 28,763 stock rights, 3,075 restricted stock rights, and 389,898 restricted performance stock rights granted under the 2012 Plan, assuming target performance achievement.\" So stock rights from 2012 plan = 28,763. From 2011 plan = 27,123. Ratio = 28,763 / 27,123. Compute. 28763/27123 ≈ 1.06045. Need exact ratio maybe as decimal. Program divide(28763, 27123). Evidence list values.",
+ "raw_content": "<evidence>\n27,123 | Footnote to Equity Compensation Plan Information table (2011 Plan stock rights)\n28,763 | Footnote to Equity Compensation Plan Information table (2012 Plan stock rights)\n</evidence>\n\n<program>divide(28763, 27123)</program>\n\n<answer>1.06045</answer>",
+ "usage": {
+  "prompt_tokens": 102357,
+  "completion_tokens": 242,
+  "total_tokens": 102599,
+  "audio_prompt_tokens": 0,
+  "prompt_tokens_details": {
+   "cached_tokens": 256
+  }
+ },
+ "finish_reason": "stop",
+ "elapsed_s": 10.74,
+ "answer_tag_found": true,
+ "answer_mode": "cite+program",
+ "citations": [
+  {
+   "value": "27,123",
+   "element": "Footnote to Equity Compensation Plan Information table (2011 Plan stock rights)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  },
+  {
+   "value": "28,763",
+   "element": "Footnote to Equity Compensation Plan Information table (2012 Plan stock rights)",
+   "value_in_text": true,
+   "verified": false,
+   "verified_by": null
+  }
+ ],
+ "citation_verified": 0.0,
+ "program_model": "divide(28763, 27123)",
+ "answer_model": "1.06045",
+ "program_value": 1.060465287763153,
+ "docfinqa_row": 526
+}
