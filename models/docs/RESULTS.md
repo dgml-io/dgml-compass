@@ -327,6 +327,17 @@ range is price per token. Putting a frontier model in the labeler slot costs abo
 putting it in the transcriber slot does (Opus 5: +$0.77 per document as labeler, +$0.43 as
 transcriber), and only the labeler slot buys quality.
 
+Per docset the cost range is wider. On Commercial Leases (22 pages per document), the
+transcriber sweep (`compass-transcribe-haiku55`, `cells.csv`) gives:
+
+| pipeline | quality | draw SD | cost/doc | relative cost |
+|---|---:|---:|---:|---:|
+| Haiku 5.5 → Haiku 5.5 | 93.4 | 1.5 | $0.045 | 1× |
+| Opus 5 → Haiku 5.5 | 94.3 | 3.0 | $1.330 | 30× |
+
+The best-scoring pipeline of the sweep on this docset costs 30× the cheapest for 0.9 points,
+less than either draw SD.
+
 ![Quality against cost per document for each pipeline above: the labeler buys quality as cost rises, the transcriber does not](../figures/quality_cost.svg)
 
 The table above as a figure, with ± 2 SE bars between docsets (`dgc figure` redraws it from
@@ -338,7 +349,9 @@ The table above as a figure, with ± 2 SE bars between docsets (`dgc figure` red
    Opus 5 and GPT-5.5 changes quality by half a point; labeler choice changes it by 6.6 points
    between Haiku 5.5 and GPT-5.5, and by 29 down to Flash Lite.
 2. **Haiku 5.5 as transcriber is free quality.** Same quality as the frontier transcribers at
-   $0.02–0.03 per document of transcription.
+   $0.02–0.03 per document of transcription. On Commercial Leases, Haiku 5.5 in both roles
+   scores 93.4 at $0.045 per document against 94.3 at $1.33 for the sweep's best (§6): 30×
+   cheaper.
 3. **The labeler ladder is Haiku 5.5 (79) → Sonnet 5 (83) → Opus 5 (85) → GPT-5.5 (86)**, at
    $0.02 → $0.28 → $0.79 → $1.42 per document. Sonnet 5 buys most of the gain for a tenth of the
    top price. The three frontier labelers are statistically contested on this corpus.

@@ -1,4 +1,4 @@
-"""The shipped numbers: report.py and provenance.py must keep reproducing the README's tables from
+"""The shipped numbers: report.py and provenance.py must keep reproducing the tables of docs/RESULTS.md from
 results/reference/. If a scoring rule, the row logic or the citation check changes, this notices."""
 import os
 import subprocess
@@ -10,7 +10,7 @@ ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 MODEL = 'azure-deepseek-v4-flash-0731'
 N = {'dev': 122, 'test': 111}
 
-# row -> correct answers (prec+computed), as in the README and report.py
+# row -> correct answers (prec+computed), as in docs/RESULTS.md and report.py
 ACCURACY = {
     'dev': {
         'DGML, full read': 72, 'DGML compact, full read': 75,
@@ -38,7 +38,7 @@ ACCURACY = {
         'DGML compact, full read, run 2': 77, 'DGML compact, full read, program prompt, run 2': 78,
     },
 }
-# row -> (traceable %, gold-figure traceable %, traceable per 1M tokens), as in the README
+# row -> (traceable %, gold-figure traceable %, traceable per 1M tokens), as in docs/RESULTS.md
 TRACEABLE = {
     'dev': {'DGML navigation, path citations + compact fallback (10 q)': (82, 79, 31.2),
             'DGML navigation + compact fallback (12 q)': (64, 66, 26.9),
@@ -86,7 +86,7 @@ def test_traceability_reproduces(split):
 
 def test_tokens_count_every_call_retries_included():
     """Gross tokens include the retried calls (full-read and navigation call-2 retries from attempts_log,
-    the lost first navigation call estimated at its cap): pinned on three README rows."""
+    the lost first navigation call estimated at its cap): pinned on three rows of docs/RESULTS.md."""
     rows = {}
     for line in _run(['-m', 'dgml_reasoning.report', '--model', MODEL, '--split', 'dev', '--markdown']).splitlines():
         if line.startswith('| ') and not line.startswith('| condition'):
