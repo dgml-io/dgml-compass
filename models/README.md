@@ -1,14 +1,17 @@
 # Model Compass: picking the models for your pipeline
 
-dgml uses one model to transcribe a document and one to label it. Model Compass runs dgml over
-9 public docsets (forms, contracts, clinical protocols, leases and more) with different models
-in each role, scores the DGML against gold annotations, and reports quality, consistency and
-cost, to find the most cost-efficient models for the pipeline, for each need.
+**Up to 30× cheaper to create DGML.** Model Compass finds the optimal models that turn your
+documents into DGML: on commercial leases, 93.4 F1 at $0.045 per document, against 94.3 F1 at
+$1.33 for the best-scoring pipeline.
+
+dgml uses one model to transcribe a document and one to label it. Model Compass ran 7 sweeps
+over 9 public docsets, for example forms, contracts, clinical protocols and leases, to find the
+most cost-efficient models for the pipeline, for each need. It scores the DGML against gold
+annotations and reports quality, consistency and cost.
 
 ## Results
 
-Seven sweeps; F1 is field values against gold, mean of the 9 docsets
-([docs/RESULTS.md](docs/RESULTS.md) §6-7):
+F1 is field values against gold, mean of the 9 docsets ([docs/RESULTS.md](docs/RESULTS.md) §6-7):
 
 | Need | Transcriber → labeler | F1 | $/doc |
 |---|---|---:|---:|
@@ -16,18 +19,15 @@ Seven sweeps; F1 is field values against gold, mean of the 9 docsets
 | Balanced | Haiku 5.5 → Sonnet 5 | 83 | 0.28 |
 | Best | Haiku 5.5 → GPT-5.5 | 86 | 1.42 |
 
-- **Spend on the labeler.** Haiku 5.5 transcribes as well as Sonnet 5, Opus 5 and GPT-5.5
-  (78.3-78.8) at 1/9 to 1/20 of their cost.
-- **Up to 30× cheaper.** On commercial leases, Haiku 5.5 in both roles scores 93.4 F1 at $0.045
-  per document, against 94.3 at $1.33 for the best-scoring pipeline.
+Haiku 5.5 is the most cost-effective transcriber tested so far: it matches Sonnet 5, Opus 5 and
+GPT-5.5 (78.3-78.8) at 1/9 to 1/20 of their cost, so spend on the labeler.
 
 ![Quality against cost per document for each transcriber-labeler pipeline: the labeler buys quality as cost rises, the transcriber does not](figures/quality_cost.svg)
 
-`dgc figure` redraws it from `results/reference/`. This folder is a self-contained uv project:
-the package `model_compass` with the command `dgc`, the corpus in `data/`, the sweeps in
-`specs/`, their results in `results/reference/`; experiments in
-[docs/EXPERIMENTS.md](docs/EXPERIMENTS.md), metrics in [docs/METRICS.md](docs/METRICS.md).
-Every command below runs from this folder.
+`dgc figure` redraws it from `results/reference/`. This folder is a self-contained uv project
+(`model_compass`, command `dgc`): corpus in `data/`, sweeps in `specs/`, results in
+`results/reference/`, [experiments](docs/EXPERIMENTS.md), [metrics](docs/METRICS.md). Every
+command below runs from this folder.
 
 ## Install
 
