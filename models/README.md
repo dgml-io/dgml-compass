@@ -1,9 +1,9 @@
-# Model Compass: picking your pipeline
+# Model Compass: picking the models for your pipeline
 
 dgml uses one model to transcribe a document and one to label it. Model Compass runs dgml over
 9 public docsets (forms, contracts, clinical protocols, leases and more) with different models
 in each role, scores the DGML against gold annotations, and reports quality, consistency and
-cost, to find the most cost-efficient pair for each need.
+cost, to find the most cost-efficient models for the pipeline, for each need.
 
 ## Results
 

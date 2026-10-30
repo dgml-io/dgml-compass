@@ -19,7 +19,7 @@ and README; run each project's commands from its own folder.
 | Folder | Question | Runs over | Needs |
 |---|---|---|---|
 | [`reasoning/`](reasoning/README.md): **DGML vs markdown: traceable reasoning** | An agent reads a filing as DGML or as markdown converted from the same PDF: does each figure it reasons from point to one exact place in the document? | 30 SEC 10-K filings, 233 DocFinQA questions | nothing to rescore: offline, from the shipped answers |
-| [`models/`](models/README.md): **Model Compass: picking your pipeline** | Which models should transcribe and label documents into DGML, by quality, consistency and cost? | 9 public docsets (205 documents with gold DGML and field values) | a dgml checkout and provider keys for new runs; scoring and reports need neither |
+| [`models/`](models/README.md): **Model Compass: picking the models for your pipeline** | Which models should transcribe and label documents into DGML, by quality, consistency and cost? | 9 public docsets (205 documents with gold DGML and field values) | a dgml checkout and provider keys for new runs; scoring and reports need neither |
 
 ## Why: markdown was built for humans
 
@@ -48,13 +48,13 @@ It is a Python package, `dgml_reasoning`, with the CLI `dgr` (reproduce, renderi
 provenance, figure, run); `uv run dgr reproduce` rebuilds every number in its RESULTS.md without a
 key.
 
-## 2. Model Compass: picking your pipeline (`models/`)
+## 2. Model Compass: picking the models for your pipeline (`models/`)
 
 dgml uses one model to transcribe a document and one to label it, and the right choice can
 differ from one kind of document to another. Model Compass ran 7 sweeps of models from OpenAI,
 Google and Anthropic through both roles over 9 public docsets, scored the DGML against gold
 annotations, and reports quality, draw-to-draw noise, tokens and cost, to find the most
-cost-efficient pair for each need:
+cost-efficient models for the pipeline, for each need:
 
 | Need | Transcriber → labeler | F1 | $/doc |
 |---|---|---:|---:|
