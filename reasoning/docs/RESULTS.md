@@ -28,12 +28,16 @@ Each segment is one system, from its dev point (blue) to its test point (orange)
 hollow points markdown from the same PDF. `dgr figure` redraws it from the shipped answers.
 
 - **Even a full DGML read is traceable about twice as often as markdown.** The model copies an
-  element name that exists in the filing. Asked for the change in HII's unamortized debt issuance costs, it cites
-  `$8 million | DebtIssuanceCostAmount`: one element, in a filing where the number 8 appears 91 times
-  ("$8 million" 10 times).
-- **Citing the element's path makes it more traceable still.** A name can repeat in a filing; a path
-  (`value | /chunk/.../DebtIssuanceCostAmount`) separates the elements that share it. DGML navigation
-  with path citations reaches 82-85%, at the same accuracy.
+  element name that exists in the filing. Asked for the change in HII's unamortized debt
+  issuance costs, it cites `$8 million | DebtIssuanceCostAmount`: one element, in a filing where
+  the number 8 appears 91 times ("$8 million" 10 times).
+- **Citing the element's path makes it more traceable still.** A name can repeat in a filing; a
+  path separates the elements that share it. With path citations the same figure is cited as
+  `$8 million | /chunk/IncomeTaxes/Debt/CreditFacilityAvailability/DebtIssuanceCostAmount` (the
+  answer repeats the last tag, which counts once): of the four `DebtIssuanceCostAmount` elements
+  in the filing, the path leads to the two under `CreditFacilityAvailability`, and the value to
+  the one that holds $8 million. DGML navigation with path citations reaches 82-85%, at the same
+  accuracy.
 - **A markdown citation is no more traceable than searching the number.** Most markdown citations that
   fail name a label that is not in the filing: a paraphrased row label, or a section heading far from
   the figure. For the same question the markdown answer cites `Note 14: Debt - unamortized debt
