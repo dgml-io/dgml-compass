@@ -25,7 +25,7 @@ Open a [GitHub Issue](../../issues) with a clear description of the problem, the
 
 A change that moves a published number (a metric, a scoring rule, a prompt, a rendering) says why,
 and regenerates what pins it: `models/docs/DECISIONS.md` and the goldens in `models/`, the
-README numbers and their tests in `reasoning/`. Every document added to a corpus must be public.
+`docs/RESULTS.md` numbers and their tests in `reasoning/`. Every document added to a corpus must be public.
 
 ### Development setup
 The two projects are independent, each with its own `pyproject.toml`; run commands from the

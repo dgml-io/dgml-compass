@@ -19,12 +19,13 @@ reports and comparisons. `reasoning/` is a separate benchmark (DGML vs PDF markd
 - Don't commit; end each task with a proposed commit message (no attribution lines).
 - Every task ends green: `uv run ruff check . && uv run pytest` in each project touched.
 - In `reasoning/`, the prompt texts, scoring rules, citation resolution and renderings are the
-  benchmark: its tests pin its README's main numbers, and the renderings must match
+  benchmark: its tests pin the main numbers of its `docs/RESULTS.md`, and the renderings must match
   `data/renderings.sha256`. A paid run is `dgr run <experiment> --yes`, with only the
   parameters recorded in `configs/experiments.json`.
 - Docs budget: `models/README.md` ≤150 lines, `models/docs/` METRICS, EXPERIMENTS, DECISIONS,
-  RESULTS. The root README stays a short map of the two projects. Docstrings only where the
-  "why" is not obvious.
+  RESULTS; `reasoning/README.md` with its results in `reasoning/docs/RESULTS.md`. Each README opens
+  with its headline results; the full tables live in its `docs/RESULTS.md`. The root README
+  stays a short map of the two projects. Docstrings only where the "why" is not obvious.
 
 ## Layout (paths under `models/`)
 - `src/model_compass/`: `cli.py` (`dgc`), `experiments/` (spec, cells, plan, manifest,
@@ -56,4 +57,5 @@ reports and comparisons. `reasoning/` is a separate benchmark (DGML vs PDF markd
   one JSON per answer
 - `scripts/`: `build_renderings.sh` (the PDF converters, pinned, under `uv run --with`),
   `check_renderings.py`, `make_markdown_pdf*.py`, `regenerate_dgml.sh`
-- `tests/`: pin the README's numbers (accuracy, traceability, tokens)
+- `docs/RESULTS.md`: every result (traceable citations, accuracy and tokens, the citing prompt)
+- `tests/`: pin the numbers of `docs/RESULTS.md` (accuracy, traceability, tokens)

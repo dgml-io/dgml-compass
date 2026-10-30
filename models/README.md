@@ -1,19 +1,33 @@
-# Model Compass
+# Model Compass: picking your pipeline
 
-Which models should fill dgml's transcribe and label roles? Model Compass runs dgml over a
-reference corpus with different models in each role, scores the DGML that comes out against
-gold annotations, and reports quality, consistency and cost per model.
+dgml uses one model to transcribe a document and one to label it. Model Compass runs dgml over
+9 public docsets (forms, contracts, clinical protocols, leases and more) with different models
+in each role, scores the DGML against gold annotations, and reports quality, consistency and
+cost, to find the most cost-efficient pair for each need.
 
-This folder is a self-contained uv project: the package `model_compass` with the command
-`dgc`, a bundled corpus of 9 public docsets in `data/`, the sweeps in `specs/` and their
-reference results in `results/reference/`. Every command below runs from this folder. The
-results are in [docs/RESULTS.md](docs/RESULTS.md), the experiments in
-[docs/EXPERIMENTS.md](docs/EXPERIMENTS.md) and the metric definitions in
-[docs/METRICS.md](docs/METRICS.md).
+## Results
+
+Seven sweeps; F1 is field values against gold, mean of the 9 docsets
+([docs/RESULTS.md](docs/RESULTS.md) §6-7):
+
+| Need | Transcriber → labeler | F1 | $/doc |
+|---|---|---:|---:|
+| Volume | Haiku 5.5 → Haiku 5.5 | 79 | 0.02 |
+| Balanced | Haiku 5.5 → Sonnet 5 | 83 | 0.28 |
+| Best | Haiku 5.5 → GPT-5.5 | 86 | 1.42 |
+
+- **Spend on the labeler.** Haiku 5.5 transcribes as well as Sonnet 5, Opus 5 and GPT-5.5
+  (78.3-78.8) at 1/9 to 1/20 of their cost.
+- **Up to 30× cheaper.** On commercial leases, Haiku 5.5 in both roles scores 93.4 F1 at $0.045
+  per document, against 94.3 at $1.33 for the best-scoring pipeline.
 
 ![Quality against cost per document for each transcriber-labeler pipeline: the labeler buys quality as cost rises, the transcriber does not](figures/quality_cost.svg)
 
-`dgc figure` redraws it from `results/reference/`.
+`dgc figure` redraws it from `results/reference/`. This folder is a self-contained uv project:
+the package `model_compass` with the command `dgc`, the corpus in `data/`, the sweeps in
+`specs/`, their results in `results/reference/`; experiments in
+[docs/EXPERIMENTS.md](docs/EXPERIMENTS.md), metrics in [docs/METRICS.md](docs/METRICS.md).
+Every command below runs from this folder.
 
 ## Install
 
@@ -47,12 +61,10 @@ uv run dgc -v --profile local.yaml plan -e specs/compass-label-haiku55.yaml
 ```
 
 Precedence, highest first: command-line flags (`--runs-dir`, `--corpus-root`, `--work-dir`
-go before the command; `--budget-usd` goes after `plan` or `run`, as in
-`dgc plan -e SPEC --budget-usd 5`), `DGC_<SETTING>` environment variables (the shell beats
-`.env`), the `--profile` file, built-in defaults. `dgc` reads `./.env`, then `models/.env`, or
-only the file given with `--env-file`. Empty values in `.env` are ignored (an empty `DGC_*`
-exported in the shell is not); `-v` logs which variable names were loaded, never their values.
-Unknown keys in `local.yaml` are an error.
+before the command, `--budget-usd` after `plan` or `run`), `DGC_<SETTING>` variables (the
+shell beats `.env`), the `--profile` file, defaults. `dgc` reads `./.env`, then `models/.env`,
+or only `--env-file`; empty values in `.env` are ignored. Unknown keys in `local.yaml` are an
+error.
 
 | Setting (`local.yaml`) | Environment | Default | Purpose |
 |---|---|---|---|
@@ -106,26 +118,22 @@ the same corpus.
 - **Reusing paid draws:** `dgc adopt -e SPEC --from <old_run>` seeds draw 00 of a new run from
   earlier single-draw runs whose documents match.
 
-Exit codes: 0 ok, 1 error (including `aggregate` with nothing scored), 2 findings
-(non-comparable rows, a regression, corpus errors, `score` scoring nothing, `report` without a
-grid), 3 budget exceeded. `adopt` exits 0 even when it adopts nothing. On the bundled corpus
-`aggregate` and `compare` usually exit 2, because some shapes have too few docsets. Reading
-the results: [docs/EXPERIMENTS.md](docs/EXPERIMENTS.md#reading-the-results).
+Exit codes: 0 ok, 1 error, 2 findings (non-comparable rows, a regression, corpus errors),
+3 budget exceeded; on the bundled corpus `aggregate` and `compare` usually exit 2, because
+some shapes have too few docsets. Reading the results:
+[docs/EXPERIMENTS.md](docs/EXPERIMENTS.md#reading-the-results).
 
 ## Layout
 
 ```
-src/model_compass/   cli, experiments/ (spec, plan, run, adopt), engine/ (dgml_cli,
-                     workspace, generate, usage), corpus/, metrics/ (families, tree/),
-                     scoring, aggregate/ (grid, render, validity, compare, stats), report, runs,
-                     reference and match_reference (dgc sweep, dgc reference), figure
+src/model_compass/   cli, experiments/, engine/ (the dgml CLI adapter), corpus/, metrics/,
+                     scoring, aggregate/, report, runs, reference (dgc sweep, dgc reference), figure
 data/                the bundled corpus and its shape map (data/README.md)
 specs/               the sweeps (docs/EXPERIMENTS.md)
 conf/                prices.yaml, the settings profile template
 results/reference/   the reference results of the sweeps, one directory per spec
 figures/             quality_cost.svg, drawn from them by `dgc figure`
-tests/               unit, golden and end-to-end tests; packages mirror src/ (corpus/,
-                     metrics/, experiments/, aggregate/), shared fixtures/ and golden/
+tests/               unit, golden and end-to-end tests, mirroring src/
 scripts/             regenerate goldens; re-record dgml CLI fixtures; import an earlier run
 docs/                RESULTS, METRICS, EXPERIMENTS, DECISIONS; model-compass-guide.html
 pyproject.toml       the package, its dev tools and their settings (pytest, ruff); uv.lock

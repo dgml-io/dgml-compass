@@ -1,7 +1,7 @@
 """dgr: the reasoning-and-provenance benchmark, DGML vs PDF markdown. Run it from reasoning/.
 
   offline, no key, no model call
-    dgr reproduce [--tests]      build the renderings, then every table of the README, both splits
+    dgr reproduce [--tests]      build the renderings, then every table of docs/RESULTS.md, both splits
     dgr renderings [dgml|markdown]   build the renderings from data/ (scripts/build_renderings.sh)
     dgr report [--split S] [--markdown]   accuracy and tokens per row (report.py)
     dgr provenance [--split S]   traceable citations per row (provenance.py)
