@@ -1,13 +1,11 @@
 # Model Compass: picking the models for your pipeline
 
 **Up to 30× cheaper to create DGML.** Model Compass finds the optimal models that turn your
-documents into DGML: on commercial leases, 93.4 F1 at $0.045 per document, against 94.3 F1 at
-$1.33 for the best-scoring pipeline.
+documents into DGML: 93.4 F1 at $0.045 per document, against 94.3 F1 at $1.33.
 
 dgml uses one model to transcribe a document and one to label it. Model Compass ran 7 sweeps
-over 9 public docsets, for example forms, contracts, clinical protocols and leases, to find the
-most cost-efficient models for the pipeline, for each need. It scores the DGML against gold
-annotations and reports quality, consistency and cost.
+over 9 public docsets, for example forms, contracts, clinical protocols and leases, scoring the
+DGML against gold, to find the most cost-efficient models for the pipeline, for each need.
 
 ## Results
 
@@ -20,7 +18,9 @@ F1 is field values against gold, mean of the 9 docsets ([docs/RESULTS.md](docs/R
 | Best | Haiku 5.5 → GPT-5.5 | 86 | 1.42 |
 
 Haiku 5.5 is the most cost-effective transcriber tested so far: it matches Sonnet 5, Opus 5 and
-GPT-5.5 (78.3-78.8) at 1/9 to 1/20 of their cost, so spend on the labeler.
+GPT-5.5 (78.3-78.8) at 1/9 to 1/20 of their cost, so spend on the labeler. Up to 30× is on
+commercial leases: Haiku 5.5 in both roles scores 93.4 F1 at $0.045 per document, against 94.3
+at $1.33 for the best-scoring pipeline ([§6](docs/RESULTS.md#6-cost-and-tokens)).
 
 ![Quality against cost per document for each transcriber-labeler pipeline: the labeler buys quality as cost rises, the transcriber does not](figures/quality_cost.svg)
 
